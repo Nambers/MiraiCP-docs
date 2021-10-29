@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['vector_730',['vector',['../a00202.html#a25f9325ba587eee5f4245dbd85decfa7',1,'MiraiCP::MessageChain']]],
-  ['vectortostring_731',['VectorToString',['../a00050.html#acce8980d1f75a02665bfc2a4bdbbaf86',1,'MiraiCP::Tools']]]
+  ['warning_0',['warning',['../a00069.html#a19b06047f8959a3bfb100c0006767c83',1,'MiraiCP::Logger_interface']]],
+  ['what_1',['what',['../a00097.html#a5cf9d0f31e0310e96ef5982c5d6f9d2b',1,'MiraiCP::MiraiCPException::what()'],['../a00101.html#a2618bb814ec82028695be3abd4cf99bc',1,'MiraiCP::UploadException::what()'],['../a00105.html#aaff59b26340d4e21844da202b49069a2',1,'MiraiCP::IllegalStateException::what()'],['../a00109.html#a7fcccef8f13f51bb10af8be41e8f8ee3',1,'MiraiCP::APIException::what()'],['../a00113.html#afa2d2ea33069d665afb7f768f427ec60',1,'MiraiCP::BotException::what()'],['../a00121.html#a96e149e42187ca9172525ffb25e5c7c7',1,'MiraiCP::MuteException::what()'],['../a00125.html#a2c1b6a899535e0b42695df6b64ee1d55',1,'MiraiCP::MemberException::what()'],['../a00129.html#ade3a3e44c65ae076edbef7b851fbf64d',1,'MiraiCP::FriendException::what()'],['../a00133.html#a9f2c7e927a20ea5548121da35b02eb52',1,'MiraiCP::GroupException::what()'],['../a00137.html#a2578d751e1bf46f1e6f0c259d60875e5',1,'MiraiCP::RecallException::what()'],['../a00141.html#a33db11ecd0cf50b369863e0bbdd0fd8e',1,'MiraiCP::RemoteAssetException::what()'],['../a00145.html#a527967697b467f4ef777a9b7b92e232c',1,'MiraiCP::IllegalArgumentException::what()'],['../a00149.html#aa1cf44d57a9a9e1c839f284687c494f0',1,'MiraiCP::TimeOutException::what()']]]
 ];

@@ -1,7 +1,10 @@
 var a00154 =
 [
-    [ "PlainText", "a00154.html#af0ffa277c961cde9e5fc0ecc23ff224c", null ],
-    [ "PlainText", "a00154.html#a76de73df323ad93c427f73f6794981df", null ],
-    [ "toMiraiCode", "a00154.html#a2cbc08df42d84ad5c50e2dae680c0eb4", null ],
-    [ "content", "a00154.html#aeabb4af1d95cc8983124c3ca04a3a590", null ]
+    [ "SingleMessage", "a00154.html#a1e645ecfc57a7b630290d88e7cc9ae39", null ],
+    [ "getKey", "a00154.html#a02de0179d4a665d29ca9350be9f1e63e", null ],
+    [ "toMiraiCode", "a00154.html#ade93b603f22f584ada2a003c9e523b89", null ],
+    [ "content", "a00154.html#a7ebcc9775985874bb7a09bd1d8274a24", null ],
+    [ "messageType", "a00154.html#a2a13572e7b80e2ff8933c13b3417a656", null ],
+    [ "prefix", "a00154.html#a207f61ebfd79e0ae18833f2edf954595", null ],
+    [ "type", "a00154.html#a80942452883a814f0462e451982ffd39", null ]
 ];

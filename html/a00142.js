@@ -1,7 +1,7 @@
 var a00142 =
 [
-    [ "TimeOutException", "a00142.html#a76c21b90257e3210947844ebeba803ae", null ],
-    [ "raise", "a00142.html#a60dfccc925c7052944fdf55523a8b08b", null ],
-    [ "what", "a00142.html#aa1cf44d57a9a9e1c839f284687c494f0", null ],
-    [ "description", "a00142.html#a0021736917abbcd9e637c02b7a6eb981", null ]
+    [ "IllegalArgumentException", "a00142.html#a0dd810504dbce3135348662e6ac54d7d", null ],
+    [ "basicRaise", "a00142.html#a21dc02dd30f7e1cf2f2b7fc1a5c35639", null ],
+    [ "what", "a00142.html#a527967697b467f4ef777a9b7b92e232c", null ],
+    [ "description", "a00142.html#a67fd5f888d7491a9346b4f158979a14c", null ]
 ];

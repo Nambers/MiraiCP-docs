@@ -1,8 +1,7 @@
 var a00118 =
 [
-    [ "MemberException", "a00118.html#a5fe0af2d4811ff09963a4422cf41578f", null ],
-    [ "raise", "a00118.html#addaab4ce625cfd7dfcad4b8cef4f3955", null ],
-    [ "what", "a00118.html#a2c1b6a899535e0b42695df6b64ee1d55", null ],
-    [ "description", "a00118.html#aa70d73799afd9965f158270325be670f", null ],
-    [ "type", "a00118.html#a32a0b93bf08e4e75fca08458c6fa5164", null ]
+    [ "MuteException", "a00118.html#a137503052f9c8d99c3bc71b5c96a994b", null ],
+    [ "basicRaise", "a00118.html#a5d6305d9a2d3daddd422d68f2b2aa89d", null ],
+    [ "what", "a00118.html#a96e149e42187ca9172525ffb25e5c7c7", null ],
+    [ "description", "a00118.html#a432c38718f008b010d1af27f6c452828", null ]
 ];

@@ -1,6 +1,12 @@
 var a00017 =
 [
-    [ "func", "a00017.html#a2f5a0b296fa851091b92244aa5da103a", null ],
-    [ "onDisable", "a00017.html#a6a8d17ca0478ca5e5e061c280faa8791", null ],
-    [ "onEnable", "a00017.html#af6b40412027c7beb9eb51bbfed51aff6", null ]
+    [ "PluginConfig", "a00017.html#afb34e8565a6e4ebebf24be6d0699db47", null ],
+    [ "serialize", "a00017.html#a074fac12f573e3ec8ea2bb2bced66f08", null ],
+    [ "serialize2string", "a00017.html#af92596a34de37970ec76538dc2817e98", null ],
+    [ "author", "a00017.html#aa0bfa133837b7525db6c952b6de7e80b", null ],
+    [ "description", "a00017.html#a0806f447d15ba6ae118230f6fc95535c", null ],
+    [ "id", "a00017.html#a9cf0aa83030884a81856bf2f748aede8", null ],
+    [ "name", "a00017.html#a100c48a6d40d59ada74a767b4572d51b", null ],
+    [ "time", "a00017.html#a211601f8e911adc42c99e07a904963e9", null ],
+    [ "version", "a00017.html#a8facb0a391626e527d52370ce7d14edb", null ]
 ];

@@ -1,10 +1,25 @@
 var a00242 =
 [
-    [ "AnnouncementParams", "a00242.html#ad9cd7b9ca38c4268c6f625034107a584", null ],
-    [ "serializeToJson", "a00242.html#ac87021b1e71d8d3334c4d197813924bc", null ],
-    [ "pinned", "a00242.html#a1045432e9f2c822b1150bc278e99de05", null ],
-    [ "requireConfirm", "a00242.html#a2641ceb16f0da11938027e7bf67c5c8a", null ],
-    [ "send2new", "a00242.html#af941b1ec8148c2675bcad7a6a10a53f5", null ],
-    [ "showEditCard", "a00242.html#a92569e1952f8f1668db0df430928da8e", null ],
-    [ "showPopup", "a00242.html#ab80e896e8ac632e75f5d5e98dff79a97", null ]
+    [ "AnnouncementParams", "a00246.html", "a00246" ],
+    [ "file_short_info", "a00262.html", "a00262" ],
+    [ "GroupSetting", "a00258.html", "a00258" ],
+    [ "OfflineAnnouncement", "a00254.html", "a00254" ],
+    [ "OnlineAnnouncement", "a00250.html", "a00250" ],
+    [ "Group", "a00242.html#a1ce0c636b49c2872f22802d99f2c6aee", null ],
+    [ "Group", "a00242.html#a8e3040a60fd31298dd76d6826db96d77", null ],
+    [ "getAnnouncementsList", "a00242.html#a110fc00ab79ff6d5aaa982bce0aa3320", null ],
+    [ "getFile", "a00242.html#a2e1464a675909e57c0f90f423ced6ba6", null ],
+    [ "getFileById", "a00242.html#a82a003e35392616fdc2c835e40a0da94", null ],
+    [ "getFileList", "a00242.html#a79625d05dee216af55cc536551df9139", null ],
+    [ "getFileListString", "a00242.html#a1436c06a9c7f2e8b6e3a7ae315f6625b", null ],
+    [ "getMember", "a00242.html#a7169ddd9d035640c1b52e9e54827b4e9", null ],
+    [ "getMemberList", "a00242.html#a319a7d3248ab74f87278b1b8baa79704", null ],
+    [ "getOwner", "a00242.html#a68d2db296925efbdc4383f3069341ff5", null ],
+    [ "MemberListToString", "a00242.html#a7e4a285e03aac96ef4152d852958329d", null ],
+    [ "quit", "a00242.html#ab3841cf6fc014bf9cd69e6ae7f371691", null ],
+    [ "refreshInfo", "a00242.html#a1725ec29f1193c8a77d8850553e48176", null ],
+    [ "sendFile", "a00242.html#a031e763226fdb9cd495fca3ee85a90d3", null ],
+    [ "sendVoice", "a00242.html#a9c88a83240cc15fbdaec9b88e2a136e4", null ],
+    [ "updateSetting", "a00242.html#ac44c205d4b7daf18bf972a57860fc254", null ],
+    [ "setting", "a00242.html#a0076eeb69e08e5dee4399e424645a333", null ]
 ];

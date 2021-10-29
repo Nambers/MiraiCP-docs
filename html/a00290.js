@@ -1,8 +1,12 @@
 var a00290 =
 [
-    [ "MemberLeaveEvent", "a00290.html#acbd646bf783ca8d03b8b0a48e3a37cb7", null ],
-    [ "group", "a00290.html#ab693afc3bdbfddc1ae88caf9ee052d54", null ],
-    [ "memberid", "a00290.html#ab1908decaccb41ea3bc74836dff63246", null ],
-    [ "operaterid", "a00290.html#aade41087ec629e2632628919d9df79fe", null ],
-    [ "type", "a00290.html#ad28ac4243630eab3bf7d65a737cac9ca", null ]
+    [ "NewFriendRequestEvent", "a00290.html#aa7a60db5331de88e29455d07a6d9ccca", null ],
+    [ "accept", "a00290.html#a3d29da472ac4174b407aee787e86827f", null ],
+    [ "operation0", "a00290.html#a4f9fb01d7ab66dcd2a49d9aee10ec73f", null ],
+    [ "reject", "a00290.html#ae3b323c20ed1d729885e8f4a0af888a5", null ],
+    [ "fromgroupid", "a00290.html#a9d75cbeeaf4d484676bfc7090baa4b9b", null ],
+    [ "fromid", "a00290.html#a6c987dc795e5e1893caef8370bf6dfee", null ],
+    [ "message", "a00290.html#a914502cfd8ab0db7ea570240f0bb56e5", null ],
+    [ "nick", "a00290.html#aac9936ee444a019ef2c988a4ed369b55", null ],
+    [ "source", "a00290.html#a4b48f29f9ac4443abf0a76590690a897", null ]
 ];

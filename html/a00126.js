@@ -1,7 +1,7 @@
 var a00126 =
 [
-    [ "GroupException", "a00126.html#a69406b3c0673d48da8a30fd2ecccb5b7", null ],
-    [ "raise", "a00126.html#a88fd83bbdfde981f8835d47802473845", null ],
-    [ "what", "a00126.html#a9f2c7e927a20ea5548121da35b02eb52", null ],
-    [ "description", "a00126.html#a0125e21ddd8ccc54caa832db6fd34a0c", null ]
+    [ "FriendException", "a00126.html#a1e21d9765a85c1458d0c00f0a0cdaa2b", null ],
+    [ "basicRaise", "a00126.html#a3e6ab6ac0d65d9b074a42b6fd3347b2a", null ],
+    [ "what", "a00126.html#ade3a3e44c65ae076edbef7b851fbf64d", null ],
+    [ "description", "a00126.html#a846c704c8bb712f2c97879ba47cc9453", null ]
 ];

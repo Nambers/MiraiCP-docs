@@ -1,15 +1,13 @@
 var searchData=
 [
-  ['offlineannouncement_647',['OfflineAnnouncement',['../a00250.html#a01236de68a15c8de48ffeecc47f7d422',1,'MiraiCP::Group::OfflineAnnouncement']]],
-  ['ondisable_648',['onDisable',['../a00086.html#a3ecc2c479d1ca6785e7cdcb0738c1597',1,'MiraiCP::CPPPlugin']]],
-  ['onenable_649',['onEnable',['../a00086.html#ad3d1188d089ab0fc945475f988c64fa7',1,'MiraiCP::CPPPlugin']]],
-  ['onlineannouncement_650',['OnlineAnnouncement',['../a00246.html#ae7b3c5f6cbb8874f93e286529e624fdb',1,'MiraiCP::Group::OnlineAnnouncement']]],
-  ['onlineaudio_651',['OnlineAudio',['../a00182.html#a6019cb1d4607f359565eee4b8b5cca33',1,'MiraiCP::OnlineAudio']]],
-  ['operate_652',['operate',['../a00322.html#a90d97aa3d25b1fa9307c31027a11678a',1,'MiraiCP::MemberJoinRequestEvent']]],
-  ['operation0_653',['operation0',['../a00278.html#aaa8a5b402523bf41976df960226d09ba',1,'MiraiCP::GroupInviteEvent::operation0()'],['../a00282.html#a4f9fb01d7ab66dcd2a49d9aee10ec73f',1,'MiraiCP::NewFriendRequestEvent::operation0()']]],
-  ['operator_2b_654',['operator+',['../a00062.html#aced348510d8532bf2a101cd50a9fae19',1,'MiraiCP::MiraiCode::operator+(MiraiCodeable *a)'],['../a00062.html#aa2296db186d60e6ccf5cd46448eced94',1,'MiraiCP::MiraiCode::operator+(const std::string &amp;a)'],['../a00062.html#a03a38b9280bf4ec1039a1c7a1efd136f',1,'MiraiCP::MiraiCode::operator+(const MiraiCode &amp;a)'],['../a00062.html#ad5d0dd8566b6d330a35f7fca5c20c1ab',1,'MiraiCP::MiraiCode::operator+(MiraiCode *a)'],['../a00202.html#ab5cf15dca40340c84f964177e541a7cb',1,'MiraiCP::MessageChain::operator+()']]],
-  ['operator_2d_3e_655',['operator-&gt;',['../a00206.html#aeea029644b9ae6508f7c4e17f9b2840e',1,'MiraiCP::MessageChain::Message']]],
-  ['operator_3d_656',['operator=',['../a00062.html#aeaf7872f9614cc0e86e5b1e8caf85ee4',1,'MiraiCP::MiraiCode']]],
-  ['operator_3d_3d_657',['operator==',['../a00210.html#acd114e9348802cffec7ca9e1687d4e0c',1,'MiraiCP::Contact::operator==()'],['../a00262.html#a75247962e7030cccc0013e3658573db2',1,'MiraiCP::Bot::operator==(const Contact &amp;c) const'],['../a00262.html#a2eccb558dd0dfe6adbd2245fd8ca5ca4',1,'MiraiCP::Bot::operator==(const Bot &amp;b) const']]],
-  ['operator_5b_5d_658',['operator[]',['../a00202.html#a0b57f5b468532d936ea04ddd09e5a9a1',1,'MiraiCP::MessageChain']]]
+  ['p_0',['p',['../a00069.html#a03e193b2ae9547c7bcac58ebe54a1aee',1,'MiraiCP::Logger_interface::p(const std::string &amp;before)'],['../a00069.html#ad8d901efeb218b61f5675bb3e1d4454b',1,'MiraiCP::Logger_interface::p(std::string before, T val, T1... val1)'],['../a00069.html#ad2ee47ce944326b82b58713776aea84f',1,'MiraiCP::Logger_interface::p(std::string before, MiraiCodeable &amp;val, T... val1)'],['../a00209.html#a9079d232b9ecf716b29cd2251dd74443',1,'MiraiCP::MessageChain::p(std::vector&lt; Message &gt; *v)'],['../a00209.html#a8159825beb8632d6b58a5b9410fdd3ef',1,'MiraiCP::MessageChain::p(std::vector&lt; Message &gt; *v, T1 h, T2... args)'],['../a00209.html#a404b4535fa633f86f84c3145f646e8c2',1,'MiraiCP::MessageChain::p(std::vector&lt; Message &gt; *v, std::string h, T2... args)'],['../a00209.html#a4342d4f86773621fd48fc120cc44d5a0',1,'MiraiCP::MessageChain::p(std::vector&lt; Message &gt; *v, const char *h, T2... args)']]],
+  ['plaintext_1',['PlainText',['../a00161.html#af0ffa277c961cde9e5fc0ecc23ff224c',1,'MiraiCP::PlainText::PlainText(const SingleMessage &amp;sg)'],['../a00161.html#a76de73df323ad93c427f73f6794981df',1,'MiraiCP::PlainText::PlainText(const T &amp;a)'],['../a00161.html#a3303b55347652cde92b8ab489cd0f781',1,'MiraiCP::PlainText::PlainText(const std::string &amp;text)']]],
+  ['pluginconfig_2',['PluginConfig',['../a00017.html#afb34e8565a6e4ebebf24be6d0699db47',1,'MiraiCP::PluginConfig']]],
+  ['plugindisable_3',['PluginDisable',['../a00005.html#a506a34a4d2049669f5d37ac29ebf2068',1,'miraiCP.cpp']]],
+  ['pluginlogger_4',['PluginLogger',['../a00085.html#a91bffeaf24b473d9bd2db8ede443f03d',1,'MiraiCP::PluginLogger']]],
+  ['plus_5',['plus',['../a00065.html#a016fbece8589f03516f5a92a8a3cb177',1,'MiraiCP::MiraiCode::plus(MiraiCodeable *a)'],['../a00065.html#acfec7789b210c8a082f0dc93c21f8ed7',1,'MiraiCP::MiraiCode::plus(const std::string &amp;a)'],['../a00193.html#a6d3851415c16a7976def77a81a9b38d6',1,'MiraiCP::RemoteFile::plus()'],['../a00209.html#a2598eb83d655813bd3f3de9b424f7e91',1,'MiraiCP::MessageChain::plus(const T &amp;a)'],['../a00209.html#acea9bdf6bbb29b757d34306c968fc12c',1,'MiraiCP::MessageChain::plus(const MessageSource &amp;ms)']]],
+  ['print_6',['print',['../a00045.html#a6a371cbb4bb95101f5355b32efbe0629',1,'MiraiCP::ThreadManager::StackTracer']]],
+  ['privatemessageevent_7',['PrivateMessageEvent',['../a00285.html#aad1f069d4e65a59adbe04f707896c8e5',1,'MiraiCP::PrivateMessageEvent']]],
+  ['publishto_8',['publishTo',['../a00257.html#ac5e2613306079cce18866fa1f2809357',1,'MiraiCP::Group::OfflineAnnouncement']]],
+  ['push_9',['push',['../a00045.html#a711f846d659640dfc1cbe01ec9667d47',1,'MiraiCP::ThreadManager::StackTracer']]]
 ];

@@ -1,7 +1,7 @@
 var a00098 =
 [
-    [ "IllegalStateException", "a00098.html#a08986de2386eb21ca973f3afe268b0fe", null ],
-    [ "raise", "a00098.html#a3eeca7c221561811bb3cfac3ade364ba", null ],
-    [ "what", "a00098.html#aaff59b26340d4e21844da202b49069a2", null ],
-    [ "description", "a00098.html#ad7635e2bb8ed90e1d506bfe15e32e68f", null ]
+    [ "UploadException", "a00098.html#a2f07f4e4746291c81828019979f9ce2c", null ],
+    [ "basicRaise", "a00098.html#aadd1490d0ef4bf4bf27737c45970e819", null ],
+    [ "what", "a00098.html#a2618bb814ec82028695be3abd4cf99bc", null ],
+    [ "description", "a00098.html#a905ce9a31dd5a7cfc4f986fdf51c6b4f", null ]
 ];

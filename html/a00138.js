@@ -1,7 +1,6 @@
 var a00138 =
 [
-    [ "IllegalArgumentException", "a00138.html#a0dd810504dbce3135348662e6ac54d7d", null ],
-    [ "raise", "a00138.html#a3b467f87fe512ad2f1ac07edb86f9d84", null ],
-    [ "what", "a00138.html#a527967697b467f4ef777a9b7b92e232c", null ],
-    [ "description", "a00138.html#a67fd5f888d7491a9346b4f158979a14c", null ]
+    [ "RemoteAssetException", "a00138.html#aa425bceb3cb0dc52adfa36d7cf27dd22", null ],
+    [ "what", "a00138.html#a33db11ecd0cf50b369863e0bbdd0fd8e", null ],
+    [ "description", "a00138.html#a1630d13e8691e8327d2d15511ab2c5b4", null ]
 ];

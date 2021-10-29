@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['handler_462',['Handler',['../a00070.html',1,'MiraiCP::Logger_interface']]]
+  ['handler_0',['Handler',['../a00073.html',1,'MiraiCP::Logger_interface']]]
 ];

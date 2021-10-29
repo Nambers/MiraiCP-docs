@@ -1,5 +1,6 @@
 var a00334 =
 [
-    [ "f", "a00334.html#a91f2b848e61116fc54b5c1a839d08fa2", null ],
-    [ "next", "a00334.html#acd5f610d65fa78c821614a93059bdd24", null ]
+    [ "MiraiCPExceptionEvent", "a00334.html#afd30bd6b1fff4e0ac6b94dd31e965631", null ],
+    [ "getException", "a00334.html#a90e01efbe49872e7233c3185fe2dd93f", null ],
+    [ "exceptionPtr", "a00334.html#a762a554cc588634317c6be8791ace0f2", null ]
 ];

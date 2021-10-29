@@ -1,7 +1,8 @@
 var a00198 =
 [
-    [ "UnSupportMessage", "a00198.html#a23b8cc40f52162400793ef2dc9c592be", null ],
-    [ "UnSupportMessage", "a00198.html#a6be0a774db3dc14967b31ab49e057454", null ],
-    [ "toMiraiCode", "a00198.html#a911faf12ad83185a3f321c227461d636", null ],
-    [ "content", "a00198.html#af86b9fe4b82fa42f24e7a4f8038fb650", null ]
+    [ "downloadtime", "a00198.html#ab383b9e879584636a0fc4555b330f760", null ],
+    [ "lastmodifytime", "a00198.html#a8597f745a6869003efa097519bf34148", null ],
+    [ "size", "a00198.html#a35cc1f23bf34db4184696833b12e4605", null ],
+    [ "uploaderid", "a00198.html#accf1835e308104bde941d72053d5c5a7", null ],
+    [ "uploadtime", "a00198.html#ab5f94fd436b08eb8963d7c5d8d4907b4", null ]
 ];

@@ -4,9 +4,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiraiCP: 取群文件信息</title>
+<title>MiraiCP: 在事件中构建Member对象</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -40,21 +40,22 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.9.1 -->
+<!-- 制作者 Doxygen 1.9.2 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'搜索','.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
   initMenu('',true,false,'search.php','搜索');
   $(document).ready(function() { init_search(); });
 });
-/* @license-end */</script>
+/* @license-end */
+</script>
 <div id="main-nav"></div>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
@@ -68,7 +69,7 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(document).ready(function(){initNavTree('a00372.html',''); initResizable(); });
 /* @license-end */
 </script>
@@ -88,33 +89,26 @@ $(document).ready(function(){initNavTree('a00372.html',''); initResizable(); });
 </div>
 
 <div class="header">
-  <div class="headertitle">
-<div class="title">取群文件信息</div>  </div>
+  <div class="headertitle"><div class="title">在事件中构建Member对象</div></div>
 </div><!--header-->
 <div class="contents">
-<p>取群文件信息,会自动搜索子目录 </p><dl class="params"><dt>参数</dt><dd>
+<p >构建群成员对象 </p><dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">path-群文件路径(不带文件名)</td><td></td></tr>
-    <tr><td class="paramname">id-文件id,可空，空则为用路径查找(此时路径要带文件名)</td><td></td></tr>
+    <tr><td class="paramname">qqid</td><td>该成员q号 </td></tr>
+    <tr><td class="paramname">groupid</td><td>所在群号 </td></tr>
+    <tr><td class="paramname">botid</td><td>机器人id</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section attention"><dt>注意</dt><dd>因为群文件允许重名文件存在的特性，该查找并不可靠，只能返回重名文件中的其中一个文件 </dd></dl>
-<dl class="section see"><dt>参见</dt><dd>RemoteFile</dd></dl>
-<div class="fragment"><div class="line"><span class="comment">//根据qq群远程路径(不带文件名)和文件id, 文件id可以在上传返回的RemoteFile类型中获得, 会在子目录中查找如果当前目录未找到</span></div>
-<div class="line"><span class="comment">//根据qq群远程路径(带文件名)找, 不过由于qq群文件允许同名文件这一特性, 返回的文件为群文件中同名文件中随机一个(不可靠)</span></div>
-<div class="line">Event::processor.registerEvent([](GroupMessageEvent e) {</div>
-<div class="line">   e.group.SendMsg(e.group.getFile(<span class="stringliteral">&quot;/&quot;</span>, <span class="keywordtype">id</span>).name());</div>
-<div class="line">   e.group.SendMsg(e.group.getFile(<span class="stringliteral">&quot;/test.txt&quot;</span>).name());</div>
-<div class="line">   e.group.SendMsg(e.group.getFileListString(<span class="stringliteral">&quot;/&quot;</span>));</div>
-<div class="line">   });</div>
-</div><!-- fragment --></div><!-- contents -->
+<div class="fragment"><div class="line">Member(this.sender.id, <span class="keyword">this</span>.group.id, <span class="keyword">this</span>.bot.id)</div>
+</div><!-- fragment --><div class="fragment"></div><!-- fragment --><p>对象 </p>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">生成于 2021年 十月 25日 星期一 19:13:20 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">生成于 2021年 十月 29日 星期五 08:31:19 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
 <script type="text/javascript">

@@ -1,12 +1,7 @@
 var a00282 =
 [
-    [ "NewFriendRequestEvent", "a00282.html#aa7a60db5331de88e29455d07a6d9ccca", null ],
-    [ "accept", "a00282.html#a3d29da472ac4174b407aee787e86827f", null ],
-    [ "operation0", "a00282.html#a4f9fb01d7ab66dcd2a49d9aee10ec73f", null ],
-    [ "reject", "a00282.html#ae3b323c20ed1d729885e8f4a0af888a5", null ],
-    [ "fromgroupid", "a00282.html#a9d75cbeeaf4d484676bfc7090baa4b9b", null ],
-    [ "fromid", "a00282.html#a6c987dc795e5e1893caef8370bf6dfee", null ],
-    [ "message", "a00282.html#a914502cfd8ab0db7ea570240f0bb56e5", null ],
-    [ "nick", "a00282.html#aac9936ee444a019ef2c988a4ed369b55", null ],
-    [ "source", "a00282.html#a4b48f29f9ac4443abf0a76590690a897", null ]
+    [ "PrivateMessageEvent", "a00282.html#aad1f069d4e65a59adbe04f707896c8e5", null ],
+    [ "nextMessage", "a00282.html#ab41568e80d9f079a6b32f3c00e2d5caf", null ],
+    [ "message", "a00282.html#a8a85d06adc5634099288001409e51de0", null ],
+    [ "sender", "a00282.html#aa2ba8dfb74a6324a1a6ef5774d6ee793", null ]
 ];

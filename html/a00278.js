@@ -1,12 +1,9 @@
 var a00278 =
 [
-    [ "GroupInviteEvent", "a00278.html#a9c76e0f986edef4d3915204a07085d11", null ],
-    [ "accept", "a00278.html#a4bf0e4e07c53b18199364809dcd55a41", null ],
-    [ "operation0", "a00278.html#aaa8a5b402523bf41976df960226d09ba", null ],
-    [ "reject", "a00278.html#a894c391c2fc60b08a2918f188da33d5b", null ],
-    [ "groupid", "a00278.html#ad0d2dad878885d82c78e5ef79efa9945", null ],
-    [ "groupName", "a00278.html#a578c8a027cb9f1574fba3de4b3646fc0", null ],
-    [ "inviterid", "a00278.html#a9e48a48c1429b8739da6e91cb8a04819", null ],
-    [ "inviterNick", "a00278.html#abf7cb41022c0cf81725c2925507f1d58", null ],
-    [ "source", "a00278.html#affaff17057d8b347a51ba2516f529596", null ]
+    [ "GroupMessageEvent", "a00278.html#a69a261b515fcfafc599a649684cea695", null ],
+    [ "nextMessage", "a00278.html#a7fce40bb7fe8d9ba4ae104702357c01c", null ],
+    [ "senderNextMessage", "a00278.html#a066d0cca32597ad3a3e1e7807be4249a", null ],
+    [ "group", "a00278.html#abac98c5b1373ad6c8483f9978952c553", null ],
+    [ "message", "a00278.html#a722dc1ca031c471c953c710367067ae7", null ],
+    [ "sender", "a00278.html#acd0e90e4fb7862986215aae7e47cb2d6", null ]
 ];

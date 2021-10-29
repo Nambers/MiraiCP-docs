@@ -1,15 +1,10 @@
 var a00246 =
 [
-    [ "OnlineAnnouncement", "a00246.html#ae7b3c5f6cbb8874f93e286529e624fdb", null ],
-    [ "deleteThis", "a00246.html#a04aaabd735ed542b313a8df2a3fd9ecb", null ],
-    [ "deserializeFromJson", "a00246.html#a770ced89858f479e4c8b13d7c3ea5d66", null ],
-    [ "botid", "a00246.html#a507cd3e23d5d5204b0deaa6b1c6cad3c", null ],
-    [ "confirmNum", "a00246.html#af210882e3d89a4843c05c92ca7c83dd1", null ],
-    [ "content", "a00246.html#afbc4d030c34bf815a8b8466cc0661f61", null ],
-    [ "fid", "a00246.html#a24d4711f1da5a6f5e952b77e198b0f3f", null ],
-    [ "groupid", "a00246.html#a73fcfc8f32a547eaa9704afa706c5a38", null ],
-    [ "imageid", "a00246.html#a562cac2ea3788ef5268396101b08e7de", null ],
-    [ "params", "a00246.html#a0be35844059d66dc274fcf84de90e368", null ],
-    [ "publicationTime", "a00246.html#a60b71b2b35023e7774485f696c0c84f7", null ],
-    [ "senderid", "a00246.html#a020798c5d023b56bdf62fd08ad4dce7f", null ]
+    [ "AnnouncementParams", "a00246.html#ad9cd7b9ca38c4268c6f625034107a584", null ],
+    [ "serializeToJson", "a00246.html#ac87021b1e71d8d3334c4d197813924bc", null ],
+    [ "pinned", "a00246.html#a1045432e9f2c822b1150bc278e99de05", null ],
+    [ "requireConfirm", "a00246.html#a2641ceb16f0da11938027e7bf67c5c8a", null ],
+    [ "send2new", "a00246.html#af941b1ec8148c2675bcad7a6a10a53f5", null ],
+    [ "showEditCard", "a00246.html#a92569e1952f8f1668db0df430928da8e", null ],
+    [ "showPopup", "a00246.html#ab80e896e8ac632e75f5d5e98dff79a97", null ]
 ];

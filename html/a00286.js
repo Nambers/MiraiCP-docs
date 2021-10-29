@@ -1,8 +1,12 @@
 var a00286 =
 [
-    [ "MemberJoinEvent", "a00286.html#a073cb4162b0f02a4497e9ea6912399d5", null ],
-    [ "group", "a00286.html#a1f879c48cc7b54fa387853b5330b0caf", null ],
-    [ "inviterid", "a00286.html#a3342fd9e038a616a272ae8de9599ad31", null ],
-    [ "member", "a00286.html#aa1a42b944df9f40fc96629a1c5687f01", null ],
-    [ "type", "a00286.html#a96ecc208a289c8a567f0148bfa46a2a0", null ]
+    [ "GroupInviteEvent", "a00286.html#a9c76e0f986edef4d3915204a07085d11", null ],
+    [ "accept", "a00286.html#a4bf0e4e07c53b18199364809dcd55a41", null ],
+    [ "operation0", "a00286.html#aaa8a5b402523bf41976df960226d09ba", null ],
+    [ "reject", "a00286.html#a894c391c2fc60b08a2918f188da33d5b", null ],
+    [ "groupid", "a00286.html#ad0d2dad878885d82c78e5ef79efa9945", null ],
+    [ "groupName", "a00286.html#a578c8a027cb9f1574fba3de4b3646fc0", null ],
+    [ "inviterid", "a00286.html#a9e48a48c1429b8739da6e91cb8a04819", null ],
+    [ "inviterNick", "a00286.html#abf7cb41022c0cf81725c2925507f1d58", null ],
+    [ "source", "a00286.html#affaff17057d8b347a51ba2516f529596", null ]
 ];
