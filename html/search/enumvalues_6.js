@@ -1,9 +1,11 @@
 var searchData=
 [
-  ['querybfl_0',['QueryBFL',['../a00057.html#a1bc3c425340774687507c1683967231ba31dd0933ace955b1ea7b89004278f08f',1,'MiraiCP::Config']]],
-  ['querybgl_1',['QueryBGL',['../a00057.html#a1bc3c425340774687507c1683967231ba661258dbd64d4f211d183f8840600897',1,'MiraiCP::Config']]],
-  ['queryimgurl_2',['QueryImgUrl',['../a00057.html#a1bc3c425340774687507c1683967231ba0904f8f67855f53d41ced94261bac9bf',1,'MiraiCP::Config']]],
-  ['querym_3',['QueryM',['../a00057.html#a1bc3c425340774687507c1683967231baba31848e9c490d06f24e81b19f86b3a9',1,'MiraiCP::Config']]],
-  ['queryml_4',['QueryML',['../a00057.html#a1bc3c425340774687507c1683967231bae7f62bcea0b0360e61c40bd6bb9e2d12',1,'MiraiCP::Config']]],
-  ['queryowner_5',['QueryOwner',['../a00057.html#a1bc3c425340774687507c1683967231bad8fea5d74fa89962ce1d8550329bec60',1,'MiraiCP::Config']]]
+  ['memberjoinevent_0',['MemberJoinEvent',['../a00116.html#a9978cdf5158c8fc2ed93dbd7bbf3efb5a4c81fe8c10224e20a48be9b2d2a6d752',1,'MiraiCP']]],
+  ['memberjoinrequest_1',['MemberJoinRequest',['../a00124.html#a1bc3c425340774687507c1683967231ba70940a528ddf113fd74e126fd9312aa4',1,'MiraiCP::Config']]],
+  ['memberjoinrequestevent_2',['MemberJoinRequestEvent',['../a00116.html#a9978cdf5158c8fc2ed93dbd7bbf3efb5af710a97e309651df52edbefd8db7f666',1,'MiraiCP']]],
+  ['memberleaveevent_3',['MemberLeaveEvent',['../a00116.html#a9978cdf5158c8fc2ed93dbd7bbf3efb5a3efd48b743abf03ca7ca38abe584f7e2',1,'MiraiCP']]],
+  ['miraicpevent_4',['MiraiCPEvent',['../a00116.html#a9978cdf5158c8fc2ed93dbd7bbf3efb5abf5d94fcdcf585821900f60157a29cf9',1,'MiraiCP']]],
+  ['miraicpexceptionevent_5',['MiraiCPExceptionEvent',['../a00116.html#a9978cdf5158c8fc2ed93dbd7bbf3efb5af3dfeb621d756effa3acc2ac355d0803',1,'MiraiCP']]],
+  ['modifyadmin_6',['ModifyAdmin',['../a00124.html#a1bc3c425340774687507c1683967231bab62371a56fe2b2eff75737a30dec6a84',1,'MiraiCP::Config']]],
+  ['mutem_7',['MuteM',['../a00124.html#a1bc3c425340774687507c1683967231ba386e882f3843aea28f19121af259b6dd',1,'MiraiCP::Config']]]
 ];

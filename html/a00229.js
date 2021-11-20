@@ -1,9 +1,5 @@
 var a00229 =
 [
-    [ "ForwardNode", "a00229.html#ada3e9737ac2aa1aec3b21b25ba71499a", null ],
-    [ "ForwardNode", "a00229.html#a6e427571dccbd7eb01c36c8ba8701d04", null ],
-    [ "id", "a00229.html#aac9506f6f578dc8de861a9464d20d19f", null ],
-    [ "message", "a00229.html#a9bde6f3b69c345c19f95e376ab8c5b3f", null ],
-    [ "name", "a00229.html#a7564b161096bb6dd4fd630caab3b73d0", null ],
-    [ "time", "a00229.html#a9ef434816573015641514797f94835ab", null ]
+    [ "APIException", "a00229.html#a4d7a7e2f7c45f39a082580e885ee4f03", null ],
+    [ "description", "a00229.html#a8a227a2e1494b35e2e5456ade77066b3", null ]
 ];

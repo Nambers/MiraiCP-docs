@@ -1,4 +1,4 @@
 var namespaces_dup =
 [
-    [ "MiraiCP", "a00013.html", "a00013" ]
+    [ "MiraiCP", "a00116.html", "a00116" ]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['operation_5fset_0',['operation_set',['../a00057.html#a1bc3c425340774687507c1683967231b',1,'MiraiCP::Config']]]
+  ['eventtypes_0',['eventTypes',['../a00116.html#a9978cdf5158c8fc2ed93dbd7bbf3efb5',1,'MiraiCP']]]
 ];

@@ -1,11 +1,14 @@
 var a00213 =
 [
-    [ "Message", "a00213.html#a6764fd0612611792dbb55df25f937c1a", null ],
-    [ "Message", "a00213.html#afe2538f33d2579ab463fcbb8cf6ab7fa", null ],
-    [ "get", "a00213.html#af1044c05c6d34d951c8b4cb470d09bfe", null ],
-    [ "get", "a00213.html#a70f442a288d90316cfe0e8a5252fa1f8", null ],
-    [ "getPtr", "a00213.html#a03f4750c077322a5332dfc98e22cfe06", null ],
-    [ "operator->", "a00213.html#a52745258b99312e9e9d04ae9dbdc5505", null ],
-    [ "type", "a00213.html#ae110eef981b54bd49c0807f8f29dcc3f", null ],
-    [ "content", "a00213.html#a4dc4f2ad7ed693e783e2aa9df3eec951", null ]
+    [ "ExceptionBroadcasting", "a00217.html", "a00217" ],
+    [ "MiraiCPException", "a00213.html#aca349af0fd62091d36b931b92865abf9", null ],
+    [ "append", "a00213.html#a608c417ae1f1b136d4ac3d1de52c922d", null ],
+    [ "basicRaise", "a00213.html#af3506f36eb4f62d3564797134930bf12", null ],
+    [ "getExceptionType", "a00213.html#a695d59ea28062035336ef97c8bf0a3db", null ],
+    [ "raise", "a00213.html#afdc939e2ca0635420943682e989fac86", null ],
+    [ "what", "a00213.html#ab68dab6d384ab2c70dbab9fd0c0e6a60", null ],
+    [ "exceptionType", "a00213.html#ac035bea84e49e0bf2beb43319f47ded6", null ],
+    [ "filename", "a00213.html#af9baaab2ba0e1c5769530c2c5ee90d07", null ],
+    [ "lineNum", "a00213.html#a3d36cd2998c5f98f0dbab05e6c2b77b8", null ],
+    [ "re", "a00213.html#ac0f5bf6c04a2dc3ddb62aed37807d2cd", null ]
 ];

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['kick_0',['kick',['../a00241.html#a41d74518afb5a4fa400ddaa5ca452ba3',1,'MiraiCP::Member']]],
-  ['koperation_1',['koperation',['../a00057.html#aeb0b127e14f16be6eed62f7d2c61eee2',1,'MiraiCP::Config']]]
+  ['kick_0',['kick',['../a00344.html#af0f9ebe2fc57cdd042e8f360a593fff8',1,'MiraiCP::Member']]],
+  ['koperation_1',['koperation',['../a00124.html#a22d2ec34277e0d8d4684528d7bee621e',1,'MiraiCP::Config']]]
 ];

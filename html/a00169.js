@@ -1,5 +1,7 @@
 var a00169 =
 [
-    [ "AtAll", "a00169.html#aa19455c0291e5f1ebe7f6ed85b6cdea6", null ],
-    [ "toMiraiCode", "a00169.html#a0b99f7dc0cd4d328e7105a34395c8019", null ]
+    [ "BotJoinGroupEvent", "a00169.html#a52f6947edde412772cc67609f9414b61", null ],
+    [ "group", "a00169.html#ad3643d9978133be026420f1d71594ec7", null ],
+    [ "inviterid", "a00169.html#aec3b3e13b9dedba8e0a06ae45b146e51", null ],
+    [ "type", "a00169.html#afecd637a84090e12fa5721074711c05d", null ]
 ];

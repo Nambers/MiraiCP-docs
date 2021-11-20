@@ -4,9 +4,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiraiCP: 在事件中构建Member对象</title>
+<title>MiraiCP: MiraiCP::LowLevelAPI类 参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -24,6 +24,7 @@
 <script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
 </head>
 <body>
+<a href="https://github.com/Nambers/MiraiCP" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#64CEAA; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
@@ -31,7 +32,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MiraiCP
-   &#160;<span id="projectnumber">v2.7.1-dev-1</span>
+   &#160;<span id="projectnumber">v2.8.0</span>
    </div>
    <div id="projectbrief">MiraiCP api document</div>
   </td>
@@ -40,21 +41,22 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.9.1 -->
+<!-- 制作者 Doxygen 1.9.2 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'搜索','.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
   initMenu('',true,false,'search.php','搜索');
   $(document).ready(function() { init_search(); });
 });
-/* @license-end */</script>
+/* @license-end */
+</script>
 <div id="main-nav"></div>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
@@ -68,7 +70,7 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(document).ready(function(){initNavTree('a00336.html',''); initResizable(); });
 /* @license-end */
 </script>
@@ -88,35 +90,466 @@ $(document).ready(function(){initNavTree('a00336.html',''); initResizable(); });
 </div>
 
 <div class="header">
-  <div class="headertitle">
-<div class="title">在事件中构建Member对象</div>  </div>
+  <div class="summary">
+<a href="#nested-classes">类</a> &#124;
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="a00333.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">MiraiCP::LowLevelAPI类 参考</div></div>
 </div><!--header-->
 <div class="contents">
-<p>构建群成员对象 </p><dl class="params"><dt>参数</dt><dd>
+
+<p>较底层api  
+ <a href="a00336.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="a00062_source.html">LowLevelAPI.h</a>&gt;</code></p>
+<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> MiraiCP::LowLevelAPI 的协作图:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="a00334.png" border="0" usemap="#a_mirai_c_p_1_1_low_level_a_p_i_coll__map" alt="Collaboration graph"/></div>
+<map name="a_mirai_c_p_1_1_low_level_a_p_i_coll__map" id="a_mirai_c_p_1_1_low_level_a_p_i_coll__map">
+<area shape="rect" title="较底层api" alt="" coords="5,5,216,317"/>
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00340.html">info</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">每个对象的必有信息  <a href="a00340.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:a5b4156f0bbbdbf6284fbe4ab59978c86"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00336.html#a5b4156f0bbbdbf6284fbe4ab59978c86">send0</a> (const std::string &amp;content, <a class="el" href="a00128.html">Contact</a> *c, int retryTime, bool miraicode, JNIEnv *env, const std::string &amp;errorInfo=&quot;&quot;)</td></tr>
+<tr class="memdesc:a5b4156f0bbbdbf6284fbe4ab59978c86"><td class="mdescLeft">&#160;</td><td class="mdescRight">抽象封装底层发送信息接口  <a href="a00336.html#a5b4156f0bbbdbf6284fbe4ab59978c86">更多...</a><br /></td></tr>
+<tr class="separator:a5b4156f0bbbdbf6284fbe4ab59978c86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69d9455b09cce9b2eb887749b6ae8aa6"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00336.html#a69d9455b09cce9b2eb887749b6ae8aa6">getInfoSource</a> (<a class="el" href="a00128.html">Contact</a> *c, JNIEnv *env=<a class="el" href="a00436.html#a365e1740117b0fb9d5990855a26dba4f">ThreadManager::getEnv</a>())</td></tr>
+<tr class="memdesc:a69d9455b09cce9b2eb887749b6ae8aa6"><td class="mdescLeft">&#160;</td><td class="mdescRight">取该联系人的一些信息  <a href="a00336.html#a69d9455b09cce9b2eb887749b6ae8aa6">更多...</a><br /></td></tr>
+<tr class="separator:a69d9455b09cce9b2eb887749b6ae8aa6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2d09eec39d12deca9c3353e8b64aecd"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00336.html#ad2d09eec39d12deca9c3353e8b64aecd">uploadImg0</a> (const std::string &amp;path, <a class="el" href="a00128.html">Contact</a> *c, JNIEnv *env=<a class="el" href="a00436.html#a365e1740117b0fb9d5990855a26dba4f">ThreadManager::getEnv</a>())</td></tr>
+<tr class="memdesc:ad2d09eec39d12deca9c3353e8b64aecd"><td class="mdescLeft">&#160;</td><td class="mdescRight">上传图片  <a href="a00336.html#ad2d09eec39d12deca9c3353e8b64aecd">更多...</a><br /></td></tr>
+<tr class="separator:ad2d09eec39d12deca9c3353e8b64aecd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39064f9c2b148b3a3061f818bf237215"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="a00340.html">info</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00336.html#a39064f9c2b148b3a3061f818bf237215">info0</a> (const std::string &amp;source)</td></tr>
+<tr class="separator:a39064f9c2b148b3a3061f818bf237215"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p >较底层api </p>
+
+<p class="definition">在文件 <a class="el" href="a00062_source.html">LowLevelAPI.h</a> 第 <a class="el" href="a00062_source.html#l00025">25</a> 行定义.</p>
+</div><h2 class="groupheader">成员函数说明</h2>
+<a id="a69d9455b09cce9b2eb887749b6ae8aa6" name="a69d9455b09cce9b2eb887749b6ae8aa6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69d9455b09cce9b2eb887749b6ae8aa6">&#9670;&nbsp;</a></span>getInfoSource()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static std::string MiraiCP::LowLevelAPI::getInfoSource </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00128.html">Contact</a> *&#160;</td>
+          <td class="paramname"><em>c</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">JNIEnv *&#160;</td>
+          <td class="paramname"><em>env</em> = <code><a class="el" href="a00436.html#a365e1740117b0fb9d5990855a26dba4f">ThreadManager::getEnv</a>()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>取该联系人的一些信息 </p>
+<dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">qqid</td><td>该成员q号 </td></tr>
-    <tr><td class="paramname">groupid</td><td>所在群号 </td></tr>
-    <tr><td class="paramname">botid</td><td>机器人id</td></tr>
+    <tr><td class="paramname">c</td><td>该联系人Contact指针 </td></tr>
   </table>
   </dd>
 </dl>
-<div class="fragment"><div class="line">Member(this.sender.id, <span class="keyword">this</span>.group.id, <span class="keyword">this</span>.bot.id)</div>
-</div><!-- fragment --><div class="fragment"></div><!-- fragment --><p>对象 </p>
+<dl class="section return"><dt>返回</dt><dd>json格式字符串，待解析 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="a00062_source.html">LowLevelAPI.h</a> 第 <a class="el" href="a00062_source.html#l00039">39</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>                                                                                               {</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>            <a class="code hl_typedef" href="a00116.html#ac0a8a1bade77a57eeb1d94cfacfb75ce">nlohmann::json</a> j;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>            j[<span class="stringliteral">&quot;source&quot;</span>] = c-&gt;serializationToString();</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            <span class="keywordflow">return</span> <a class="code hl_function" href="a00124.html#a22d2ec34277e0d8d4684528d7bee621e">Config::koperation</a>(<a class="code hl_enumvalue" href="a00124.html#a1bc3c425340774687507c1683967231ba1117a41d69693010f5c5029f1eb2afe6">Config::RefreshInfo</a>, j, env);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        }</div>
+<div class="ttc" id="aa00116_html_ac0a8a1bade77a57eeb1d94cfacfb75ce"><div class="ttname"><a href="a00116.html#ac0a8a1bade77a57eeb1d94cfacfb75ce">MiraiCP::json</a></div><div class="ttdeci">nlohmann::json json</div><div class="ttdef"><b>Definition:</b> <a href="a00008_source.html#l00025">Config.h:25</a></div></div>
+<div class="ttc" id="aa00124_html_a1bc3c425340774687507c1683967231ba1117a41d69693010f5c5029f1eb2afe6"><div class="ttname"><a href="a00124.html#a1bc3c425340774687507c1683967231ba1117a41d69693010f5c5029f1eb2afe6">MiraiCP::Config::RefreshInfo</a></div><div class="ttdeci">@ RefreshInfo</div><div class="ttdoc">查询信息接口</div><div class="ttdef"><b>Definition:</b> <a href="a00008_source.html#l00043">Config.h:43</a></div></div>
+<div class="ttc" id="aa00124_html_a22d2ec34277e0d8d4684528d7bee621e"><div class="ttname"><a href="a00124.html#a22d2ec34277e0d8d4684528d7bee621e">MiraiCP::Config::koperation</a></div><div class="ttdeci">static std::string koperation(operation_set type, nlohmann::json &amp;data, JNIEnv *=ThreadManager::getEnv(), bool catchErr=true, const std::string &amp;errorInfo=&quot;&quot;)</div><div class="ttdoc">调用mirai操作</div><div class="ttdef"><b>Definition:</b> <a href="a00005_source.html#l00043">Config.cpp:43</a></div></div>
+</div><!-- fragment --><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> 函数调用图:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="a00336_a69d9455b09cce9b2eb887749b6ae8aa6_cgraph.png" border="0" usemap="#aa00336_a69d9455b09cce9b2eb887749b6ae8aa6_cgraph" alt=""/></div>
+<map name="aa00336_a69d9455b09cce9b2eb887749b6ae8aa6_cgraph" id="aa00336_a69d9455b09cce9b2eb887749b6ae8aa6_cgraph">
+<area shape="rect" title="取该联系人的一些信息" alt="" coords="5,203,155,244"/>
+<area shape="rect" href="a00124.html#a22d2ec34277e0d8d4684528d7bee621e" title="调用mirai操作" alt="" coords="212,155,392,182"/>
+<area shape="rect" href="a00128.html#a4110a518868dde98108de31624d1def1" title=" " alt="" coords="203,232,401,273"/>
+<area shape="rect" href="a00444.html#a3edca5ea268b6b1c023810b928701f55" title=" " alt="" coords="463,105,635,131"/>
+<area shape="rect" href="a00444.html#ad2e5e5b78f6b79428bca2e9b44ac8265" title=" " alt="" coords="463,155,635,182"/>
+<area shape="rect" href="a00316.html#a418fad5b082009c5e40871d3cd88cacf" title="发送警告(warning级日志)" alt="" coords="696,97,867,139"/>
+<area shape="rect" href="a00436.html#a365e1740117b0fb9d5990855a26dba4f" title="取env,如果不存在重新获取" alt="" coords="915,97,1080,139"/>
+<area shape="rect" href="a00316.html#aaeeaa321f40dd6bf2c653459248fd747" title="日志底层实现封装" alt="" coords="1568,89,1739,131"/>
+<area shape="rect" href="a00316.html#a03e193b2ae9547c7bcac58ebe54a1aee" title=" " alt="" coords="1560,181,1747,207"/>
+<area shape="rect" href="a00436.html#a11837c8fea64ee75bea0bcd1ea56de9c" title="获取线程id." alt="" coords="1344,40,1509,81"/>
+<area shape="rect" href="a00436.html#abd1025cb50143b1aa60b55d79ec2b370" title="判断该线程id是否包含在线程池里" alt="" coords="1128,131,1293,172"/>
+<area shape="rect" href="a00436.html#a29f1a55d4cb7b78045fd3f2566c59dcc" title=" " alt="" coords="1128,65,1293,107"/>
+<area shape="rect" href="a00316.html#af487216ad90334b62a970ad6e5a796a4" title="发送普通(info级日志)" alt="" coords="1341,131,1512,172"/>
+<area shape="rect" href="a00128.html#ad3a3c8b42a812af24e45e797217c5cea" title="序列化到json对象" alt="" coords="449,253,648,279"/>
+<area shape="rect" href="a00128.html#ac257ebdd1591ea5acf6e045abf28ecba" title="所属bot" alt="" coords="703,214,860,241"/>
+<area shape="rect" href="a00128.html#a9133845dcf5eab2000a3867964972ea5" title="当type为3的时候存在，否则为0，可以看作补充id" alt="" coords="696,265,867,291"/>
+<area shape="rect" href="a00128.html#a1f208ae0f09c367c90c2e079e63048db" title="id在全部情况存在" alt="" coords="712,315,851,342"/>
+<area shape="rect" href="a00128.html#a7187f3ae0c1b2be31502498d6c97fa87" title="群名称，群成员群名片，或好友昵称" alt="" coords="698,367,865,408"/>
+<area shape="rect" href="a00128.html#ae861b52ebe6311825d4e352e99fd286c" title="当前对象类型" alt="" coords="704,163,859,190"/>
+</map>
+</div>
+<div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-2-trigger" src="closed.png" alt="+"/> 这是这个函数的调用关系图:</div>
+<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-2-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="a00336_a69d9455b09cce9b2eb887749b6ae8aa6_icgraph.png" border="0" usemap="#aa00336_a69d9455b09cce9b2eb887749b6ae8aa6_icgraph" alt=""/></div>
+<map name="aa00336_a69d9455b09cce9b2eb887749b6ae8aa6_icgraph" id="aa00336_a69d9455b09cce9b2eb887749b6ae8aa6_icgraph">
+<area shape="rect" title="取该联系人的一些信息" alt="" coords="491,62,640,103"/>
+<area shape="rect" href="a00288.html#adcb6e1cb9a54ef532d9996d9c240b4c4" title="刷新当前对象信息" alt="" coords="258,12,437,39"/>
+<area shape="rect" href="a00292.html#a432d6ad6e92a9018c4788195b2d62f05" title="刷新群聊信息" alt="" coords="258,69,437,96"/>
+<area shape="rect" href="a00344.html#a0b970ea112ffd72534c1a98843bd6636" title="重新获取(刷新)群成员信息" alt="" coords="252,132,443,159"/>
+<area shape="rect" href="a00288.html#a442b5aa59578a5effe83ac2b586ddccf" title="构建好友对象" alt="" coords="27,5,183,32"/>
+<area shape="rect" href="a00292.html#acf740d39fec857eda1becaad8abb4244" title=" " alt="" coords="27,56,182,83"/>
+<area shape="rect" href="a00292.html#a702f1db818c85c3b03b427d8be704acc" title="更新群设置, 即覆盖服务器上的群设置" alt="" coords="5,107,204,133"/>
+<area shape="rect" href="a00344.html#a3f4426f778803585de253508cd40e17c" title=" " alt="" coords="15,157,194,184"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a39064f9c2b148b3a3061f818bf237215" name="a39064f9c2b148b3a3061f818bf237215"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a39064f9c2b148b3a3061f818bf237215">&#9670;&nbsp;</a></span>info0()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00340.html">LowLevelAPI::info</a> MiraiCP::LowLevelAPI::info0 </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>source</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >获取每个对象必有信息 </p><dl class="section see"><dt>参见</dt><dd><a class="el" href="a00340.html" title="每个对象的必有信息">LowLevelAPI::info</a> </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="a00059_source.html">LowLevelAPI.cpp</a> 第 <a class="el" href="a00059_source.html#l00029">29</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>                                                              {</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        info re;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        <a class="code hl_define" href="a00101.html#a10e0f2260bfde013500e04ba0d77a9fb">ErrorHandle</a>(source, <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <a class="code hl_typedef" href="a00116.html#ac0a8a1bade77a57eeb1d94cfacfb75ce">nlohmann::json</a> j = nlohmann::json::parse(source);</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        re.avatarUrl = j[<span class="stringliteral">&quot;avatarUrl&quot;</span>];</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        re.nickornamecard = j[<span class="stringliteral">&quot;nickornamecard&quot;</span>];</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        <span class="keywordflow">return</span> re;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    }</div>
+<div class="ttc" id="aa00101_html_a10e0f2260bfde013500e04ba0d77a9fb"><div class="ttname"><a href="a00101.html#a10e0f2260bfde013500e04ba0d77a9fb">ErrorHandle</a></div><div class="ttdeci">#define ErrorHandle(x, y)</div><div class="ttdef"><b>Definition:</b> <a href="a00101_source.html#l00020">ThreadManager.h:20</a></div></div>
+</div><!-- fragment --><div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-3-trigger" src="closed.png" alt="+"/> 这是这个函数的调用关系图:</div>
+<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-3-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="a00336_a39064f9c2b148b3a3061f818bf237215_icgraph.png" border="0" usemap="#aa00336_a39064f9c2b148b3a3061f818bf237215_icgraph" alt=""/></div>
+<map name="aa00336_a39064f9c2b148b3a3061f818bf237215_icgraph" id="aa00336_a39064f9c2b148b3a3061f818bf237215_icgraph">
+<area shape="rect" title=" " alt="" coords="693,99,843,141"/>
+<area shape="rect" href="a00120.html#a9424e9d17f3daa1c517a482aaedbe826" title="刷新bot信息" alt="" coords="469,31,631,57"/>
+<area shape="rect" href="a00288.html#adcb6e1cb9a54ef532d9996d9c240b4c4" title="刷新当前对象信息" alt="" coords="461,81,639,108"/>
+<area shape="rect" href="a00292.html#a432d6ad6e92a9018c4788195b2d62f05" title="刷新群聊信息" alt="" coords="461,132,639,159"/>
+<area shape="rect" href="a00344.html#a0b970ea112ffd72534c1a98843bd6636" title="重新获取(刷新)群成员信息" alt="" coords="455,208,645,235"/>
+<area shape="rect" href="a00120.html#a717a5ccc1e5be516c5caacf9ce937b61" title=" " alt="" coords="238,31,377,57"/>
+<area shape="rect" href="a00120.html#a6b0ebecc9de3fdf10852b341c88561c0" title="头像下载链接" alt="" coords="5,5,160,32"/>
+<area shape="rect" href="a00120.html#a14f2c875a64bf63c487be2f45454f517" title="昵称" alt="" coords="19,56,147,83"/>
+<area shape="rect" href="a00288.html#a442b5aa59578a5effe83ac2b586ddccf" title="构建好友对象" alt="" coords="229,81,385,108"/>
+<area shape="rect" href="a00292.html#acf740d39fec857eda1becaad8abb4244" title=" " alt="" coords="230,132,385,159"/>
+<area shape="rect" href="a00292.html#a702f1db818c85c3b03b427d8be704acc" title="更新群设置, 即覆盖服务器上的群设置" alt="" coords="208,183,407,209"/>
+<area shape="rect" href="a00344.html#a3f4426f778803585de253508cd40e17c" title=" " alt="" coords="218,233,397,260"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a5b4156f0bbbdbf6284fbe4ab59978c86" name="a5b4156f0bbbdbf6284fbe4ab59978c86"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b4156f0bbbdbf6284fbe4ab59978c86">&#9670;&nbsp;</a></span>send0()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string MiraiCP::LowLevelAPI::send0 </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>content</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="a00128.html">Contact</a> *&#160;</td>
+          <td class="paramname"><em>c</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>retryTime</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>miraicode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">JNIEnv *&#160;</td>
+          <td class="paramname"><em>env</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>errorInfo</em> = <code>&quot;&quot;</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>抽象封装底层发送信息接口 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">content</td><td>信息字符串 </td></tr>
+    <tr><td class="paramname">c</td><td>目标Contact指针 </td></tr>
+    <tr><td class="paramname">miraicode</td><td>是否为miraicode格式 </td></tr>
+    <tr><td class="paramname">env</td><td>JNIEnv </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd></dd></dl>
+
+<p class="definition">在文件 <a class="el" href="a00059_source.html">LowLevelAPI.cpp</a> 第 <a class="el" href="a00059_source.html#l00018">18</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>                                                               {</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        <a class="code hl_typedef" href="a00116.html#ac0a8a1bade77a57eeb1d94cfacfb75ce">nlohmann::json</a> j;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        <a class="code hl_typedef" href="a00116.html#ac0a8a1bade77a57eeb1d94cfacfb75ce">nlohmann::json</a> tmp;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        tmp[<span class="stringliteral">&quot;content&quot;</span>] = content;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        tmp[<span class="stringliteral">&quot;contact&quot;</span>] = c-&gt;serialization();</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        j[<span class="stringliteral">&quot;source&quot;</span>] = tmp.dump();</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        j[<span class="stringliteral">&quot;miraiCode&quot;</span>] = miraicode;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        j[<span class="stringliteral">&quot;retryTime&quot;</span>] = retryTime;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="a00124.html#a22d2ec34277e0d8d4684528d7bee621e">Config::koperation</a>(<a class="code hl_enumvalue" href="a00124.html#a1bc3c425340774687507c1683967231bacdf0600adf4945c8ae7493fdcfd5fad6">Config::Send</a>, j, env, <span class="keyword">true</span>, errorInfo);</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    }</div>
+<div class="ttc" id="aa00124_html_a1bc3c425340774687507c1683967231bacdf0600adf4945c8ae7493fdcfd5fad6"><div class="ttname"><a href="a00124.html#a1bc3c425340774687507c1683967231bacdf0600adf4945c8ae7493fdcfd5fad6">MiraiCP::Config::Send</a></div><div class="ttdeci">@ Send</div><div class="ttdoc">发送信息</div><div class="ttdef"><b>Definition:</b> <a href="a00008_source.html#l00041">Config.h:41</a></div></div>
+</div><!-- fragment --><div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-4-trigger" src="closed.png" alt="+"/> 函数调用图:</div>
+<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-4-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="a00336_a5b4156f0bbbdbf6284fbe4ab59978c86_cgraph.png" border="0" usemap="#aa00336_a5b4156f0bbbdbf6284fbe4ab59978c86_cgraph" alt=""/></div>
+<map name="aa00336_a5b4156f0bbbdbf6284fbe4ab59978c86_cgraph" id="aa00336_a5b4156f0bbbdbf6284fbe4ab59978c86_cgraph">
+<area shape="rect" title="抽象封装底层发送信息接口" alt="" coords="5,208,155,249"/>
+<area shape="rect" href="a00124.html#a22d2ec34277e0d8d4684528d7bee621e" title="调用mirai操作" alt="" coords="212,131,392,158"/>
+<area shape="rect" href="a00128.html#ad3a3c8b42a812af24e45e797217c5cea" title="序列化到json对象" alt="" coords="203,274,401,301"/>
+<area shape="rect" href="a00444.html#a3edca5ea268b6b1c023810b928701f55" title=" " alt="" coords="449,81,621,107"/>
+<area shape="rect" href="a00444.html#ad2e5e5b78f6b79428bca2e9b44ac8265" title=" " alt="" coords="449,131,621,158"/>
+<area shape="rect" href="a00316.html#a418fad5b082009c5e40871d3cd88cacf" title="发送警告(warning级日志)" alt="" coords="669,99,840,140"/>
+<area shape="rect" href="a00436.html#a365e1740117b0fb9d5990855a26dba4f" title="取env,如果不存在重新获取" alt="" coords="888,99,1053,140"/>
+<area shape="rect" href="a00316.html#aaeeaa321f40dd6bf2c653459248fd747" title="日志底层实现封装" alt="" coords="1541,89,1712,131"/>
+<area shape="rect" href="a00316.html#a03e193b2ae9547c7bcac58ebe54a1aee" title=" " alt="" coords="1533,181,1720,207"/>
+<area shape="rect" href="a00436.html#a11837c8fea64ee75bea0bcd1ea56de9c" title="获取线程id." alt="" coords="1317,40,1483,81"/>
+<area shape="rect" href="a00436.html#abd1025cb50143b1aa60b55d79ec2b370" title="判断该线程id是否包含在线程池里" alt="" coords="1101,131,1267,172"/>
+<area shape="rect" href="a00436.html#a29f1a55d4cb7b78045fd3f2566c59dcc" title=" " alt="" coords="1101,65,1267,107"/>
+<area shape="rect" href="a00316.html#af487216ad90334b62a970ad6e5a796a4" title="发送普通(info级日志)" alt="" coords="1315,131,1485,172"/>
+<area shape="rect" href="a00128.html#ac257ebdd1591ea5acf6e045abf28ecba" title="所属bot" alt="" coords="457,299,614,326"/>
+<area shape="rect" href="a00128.html#a9133845dcf5eab2000a3867964972ea5" title="当type为3的时候存在，否则为0，可以看作补充id" alt="" coords="450,350,621,377"/>
+<area shape="rect" href="a00128.html#a1f208ae0f09c367c90c2e079e63048db" title="id在全部情况存在" alt="" coords="466,401,605,427"/>
+<area shape="rect" href="a00128.html#a7187f3ae0c1b2be31502498d6c97fa87" title="群名称，群成员群名片，或好友昵称" alt="" coords="452,183,619,224"/>
+<area shape="rect" href="a00128.html#ae861b52ebe6311825d4e352e99fd286c" title="当前对象类型" alt="" coords="458,249,613,275"/>
+</map>
+</div>
+<div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-5-trigger" src="closed.png" alt="+"/> 这是这个函数的调用关系图:</div>
+<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-5-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="a00336_a5b4156f0bbbdbf6284fbe4ab59978c86_icgraph.png" border="0" usemap="#aa00336_a5b4156f0bbbdbf6284fbe4ab59978c86_icgraph" alt=""/></div>
+<map name="aa00336_a5b4156f0bbbdbf6284fbe4ab59978c86_icgraph" id="aa00336_a5b4156f0bbbdbf6284fbe4ab59978c86_icgraph">
+<area shape="rect" title="抽象封装底层发送信息接口" alt="" coords="764,49,913,90"/>
+<area shape="rect" href="a00128.html#a3d996647aa0ed54723982007937043d4" title=" " alt="" coords="527,56,716,83"/>
+<area shape="rect" href="a00128.html#ada7726d259050ba1cfb2803c55e5088f" title=" " alt="" coords="289,5,453,32"/>
+<area shape="rect" href="a00128.html#a075114376e789adc282a88d778740a55" title="发送MiraiCode信息" alt="" coords="264,56,479,83"/>
+<area shape="rect" href="a00128.html#abf2e266b124e932dd2f49915b0733df9" title="发送纯文本信息" alt="" coords="280,107,463,133"/>
+<area shape="rect" href="a00128.html#aab5369a58feffb6fa48a86f3ad8a483d" title="发送一条Message @detail 支持" alt="" coords="5,5,216,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ad2d09eec39d12deca9c3353e8b64aecd" name="ad2d09eec39d12deca9c3353e8b64aecd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2d09eec39d12deca9c3353e8b64aecd">&#9670;&nbsp;</a></span>uploadImg0()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static std::string MiraiCP::LowLevelAPI::uploadImg0 </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="a00128.html">Contact</a> *&#160;</td>
+          <td class="paramname"><em>c</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">JNIEnv *&#160;</td>
+          <td class="paramname"><em>env</em> = <code><a class="el" href="a00436.html#a365e1740117b0fb9d5990855a26dba4f">ThreadManager::getEnv</a>()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>上传图片 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>本地地址 </td></tr>
+    <tr><td class="paramname">c</td><td>上传的对象 </td></tr>
+    <tr><td class="paramname">env</td><td>JNIEnv </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>string 待解析json </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="a00062_source.html">LowLevelAPI.h</a> 第 <a class="el" href="a00062_source.html#l00053">53</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>                                                                                           {</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>            <a class="code hl_typedef" href="a00116.html#ac0a8a1bade77a57eeb1d94cfacfb75ce">nlohmann::json</a> j;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>            j[<span class="stringliteral">&quot;fileName&quot;</span>] = path;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>            j[<span class="stringliteral">&quot;source&quot;</span>] = c-&gt;serializationToString();</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>            <span class="keywordflow">return</span> <a class="code hl_function" href="a00124.html#a22d2ec34277e0d8d4684528d7bee621e">Config::koperation</a>(<a class="code hl_enumvalue" href="a00124.html#a1bc3c425340774687507c1683967231ba6acdff5cbcaa5a5e315c7dfe7fc9cc0c">Config::UploadImg</a>, j, env);</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        }</div>
+<div class="ttc" id="aa00124_html_a1bc3c425340774687507c1683967231ba6acdff5cbcaa5a5e315c7dfe7fc9cc0c"><div class="ttname"><a href="a00124.html#a1bc3c425340774687507c1683967231ba6acdff5cbcaa5a5e315c7dfe7fc9cc0c">MiraiCP::Config::UploadImg</a></div><div class="ttdeci">@ UploadImg</div><div class="ttdoc">上传图片</div><div class="ttdef"><b>Definition:</b> <a href="a00008_source.html#l00045">Config.h:45</a></div></div>
+</div><!-- fragment --><div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-6-trigger" src="closed.png" alt="+"/> 函数调用图:</div>
+<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-6-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="a00336_ad2d09eec39d12deca9c3353e8b64aecd_cgraph.png" border="0" usemap="#aa00336_ad2d09eec39d12deca9c3353e8b64aecd_cgraph" alt=""/></div>
+<map name="aa00336_ad2d09eec39d12deca9c3353e8b64aecd_cgraph" id="aa00336_ad2d09eec39d12deca9c3353e8b64aecd_cgraph">
+<area shape="rect" title="上传图片" alt="" coords="5,203,155,244"/>
+<area shape="rect" href="a00124.html#a22d2ec34277e0d8d4684528d7bee621e" title="调用mirai操作" alt="" coords="212,155,392,182"/>
+<area shape="rect" href="a00128.html#a4110a518868dde98108de31624d1def1" title=" " alt="" coords="203,232,401,273"/>
+<area shape="rect" href="a00444.html#a3edca5ea268b6b1c023810b928701f55" title=" " alt="" coords="463,105,635,131"/>
+<area shape="rect" href="a00444.html#ad2e5e5b78f6b79428bca2e9b44ac8265" title=" " alt="" coords="463,155,635,182"/>
+<area shape="rect" href="a00316.html#a418fad5b082009c5e40871d3cd88cacf" title="发送警告(warning级日志)" alt="" coords="696,97,867,139"/>
+<area shape="rect" href="a00436.html#a365e1740117b0fb9d5990855a26dba4f" title="取env,如果不存在重新获取" alt="" coords="915,97,1080,139"/>
+<area shape="rect" href="a00316.html#aaeeaa321f40dd6bf2c653459248fd747" title="日志底层实现封装" alt="" coords="1568,89,1739,131"/>
+<area shape="rect" href="a00316.html#a03e193b2ae9547c7bcac58ebe54a1aee" title=" " alt="" coords="1560,181,1747,207"/>
+<area shape="rect" href="a00436.html#a11837c8fea64ee75bea0bcd1ea56de9c" title="获取线程id." alt="" coords="1344,40,1509,81"/>
+<area shape="rect" href="a00436.html#abd1025cb50143b1aa60b55d79ec2b370" title="判断该线程id是否包含在线程池里" alt="" coords="1128,131,1293,172"/>
+<area shape="rect" href="a00436.html#a29f1a55d4cb7b78045fd3f2566c59dcc" title=" " alt="" coords="1128,65,1293,107"/>
+<area shape="rect" href="a00316.html#af487216ad90334b62a970ad6e5a796a4" title="发送普通(info级日志)" alt="" coords="1341,131,1512,172"/>
+<area shape="rect" href="a00128.html#ad3a3c8b42a812af24e45e797217c5cea" title="序列化到json对象" alt="" coords="449,253,648,279"/>
+<area shape="rect" href="a00128.html#ac257ebdd1591ea5acf6e045abf28ecba" title="所属bot" alt="" coords="703,214,860,241"/>
+<area shape="rect" href="a00128.html#a9133845dcf5eab2000a3867964972ea5" title="当type为3的时候存在，否则为0，可以看作补充id" alt="" coords="696,265,867,291"/>
+<area shape="rect" href="a00128.html#a1f208ae0f09c367c90c2e079e63048db" title="id在全部情况存在" alt="" coords="712,315,851,342"/>
+<area shape="rect" href="a00128.html#a7187f3ae0c1b2be31502498d6c97fa87" title="群名称，群成员群名片，或好友昵称" alt="" coords="698,367,865,408"/>
+<area shape="rect" href="a00128.html#ae861b52ebe6311825d4e352e99fd286c" title="当前对象类型" alt="" coords="704,163,859,190"/>
+</map>
+</div>
+<div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-7-trigger" src="closed.png" alt="+"/> 这是这个函数的调用关系图:</div>
+<div id="dynsection-7-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-7-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="a00336_ad2d09eec39d12deca9c3353e8b64aecd_icgraph.png" border="0" usemap="#aa00336_ad2d09eec39d12deca9c3353e8b64aecd_icgraph" alt=""/></div>
+<map name="aa00336_ad2d09eec39d12deca9c3353e8b64aecd_icgraph" id="aa00336_ad2d09eec39d12deca9c3353e8b64aecd_icgraph">
+<area shape="rect" title="上传图片" alt="" coords="241,5,391,47"/>
+<area shape="rect" href="a00128.html#a3def9cf371629ad7fc8a5414b0a9d92d" title="上传本地图片，务必要用绝对路径 由于mirai要区分图片发送对象，所以使用本函数上传的图片只能发到群" alt="" coords="5,13,193,39"/>
+</map>
+</div>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li><a class="el" href="a00062_source.html">LowLevelAPI.h</a></li>
+<li><a class="el" href="a00059_source.html">LowLevelAPI.cpp</a></li>
+</ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">生成于 2021年 九月 19日 星期日 23:28:15 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="navelem"><a class="el" href="a00116.html">MiraiCP</a></li><li class="navelem"><a class="el" href="a00336.html">LowLevelAPI</a></li>
+    <li class="footer">生成于 2021年 十一月 20日 星期六 20:15:54 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
 <script type="text/javascript">
-            $(document).ready(function(){
-                toggleButton = document.createElement('doxygen-awesome-dark-mode-toggle')
-                toggleButton.title = "Toggle Light/Dark Mode"
-                document.getElementById("MSearchBox").parentNode.appendChild(toggleButton)
-            })
+            $(function() {
+			  toggleButton = document.createElement('doxygen-awesome-dark-mode-toggle')
+			  toggleButton.title = "Toggle Light/Dark Mode"
+			  $(document).ready(function(){
+				document.getElementById("MSearchBox").parentNode.appendChild(toggleButton)
+			  })
+			  $(window).resize(function(){
+				document.getElementById("MSearchBox").parentNode.appendChild(toggleButton)
+			  })
+			})
         </script>
     </body>
 </html>

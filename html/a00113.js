@@ -1,7 +1,7 @@
 var a00113 =
 [
-    [ "BotException", "a00113.html#a75b0bbe29eeabfa5237d7a99d6b24f0e", null ],
-    [ "basicRaise", "a00113.html#ac6ab9866508ad95b133daf490fcf7056", null ],
-    [ "what", "a00113.html#afa2d2ea33069d665afb7f768f427ec60", null ],
-    [ "description", "a00113.html#a6e92043e958d13a3066396ec9092268e", null ]
+    [ "enrollPlugin", "a00113.html#a12d27be6730af4fc321ac1eb231db281", null ],
+    [ "enrollPlugin0", "a00113.html#ad5dfcfb8bbf110c31ac8a5288f395bba", null ],
+    [ "schedule", "a00113.html#a3c5e8fb0077be3fb7c9216bc99d67a7e", null ],
+    [ "MiraiCPVersion", "a00113.html#ae471c96f73a019b792a82629b6bdfdf5", null ]
 ];

@@ -1,7 +1,7 @@
 var a00098 =
 [
-    [ "UploadException", "a00098.html#a2f07f4e4746291c81828019979f9ce2c", null ],
-    [ "basicRaise", "a00098.html#aadd1490d0ef4bf4bf27737c45970e819", null ],
-    [ "what", "a00098.html#a2618bb814ec82028695be3abd4cf99bc", null ],
-    [ "description", "a00098.html#a905ce9a31dd5a7cfc4f986fdf51c6b4f", null ]
+    [ "MiraiCP::ThreadManager", "a00425.html", "a00425" ],
+    [ "MiraiCP::ThreadManager::ThreadInfo", "a00429.html", "a00429" ],
+    [ "ErrorHandle", "a00098.html#a10e0f2260bfde013500e04ba0d77a9fb", null ],
+    [ "MiraiCPThrow", "a00098.html#a05895baa03633917e58dcb7228229097", null ]
 ];

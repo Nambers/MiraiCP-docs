@@ -1,5 +1,5 @@
 var a00225 =
 [
-    [ "avatarUrl", "a00225.html#a037b8d06c116200bdb37de924401ef46", null ],
-    [ "nickornamecard", "a00225.html#abc3f2c3176f05d64751446e8760595df", null ]
+    [ "IllegalStateException", "a00225.html#a08986de2386eb21ca973f3afe268b0fe", null ],
+    [ "description", "a00225.html#ad7635e2bb8ed90e1d506bfe15e32e68f", null ]
 ];

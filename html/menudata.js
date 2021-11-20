@@ -24,14 +24,14 @@
 */
 var menudata={children:[
 {text:"首页",url:"index.html"},
-{text:"模块",url:"modules.html"},
 {text:"命名空间",url:"namespaces.html",children:[
 {text:"命名空间列表",url:"namespaces.html"},
 {text:"命名空间成员",url:"namespacemembers.html",children:[
 {text:"全部",url:"namespacemembers.html"},
 {text:"函数",url:"namespacemembers_func.html"},
 {text:"变量",url:"namespacemembers_vars.html"},
-{text:"类型定义",url:"namespacemembers_type.html"}]}]},
+{text:"类型定义",url:"namespacemembers_type.html"},
+{text:"枚举",url:"namespacemembers_enum.html"}]}]},
 {text:"类",url:"annotated.html",children:[
 {text:"类列表",url:"annotated.html"},
 {text:"类索引",url:"classes.html"},

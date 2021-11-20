@@ -1,10 +1,8 @@
 var a00157 =
 [
-    [ "SingleMessage", "a00157.html#a1e645ecfc57a7b630290d88e7cc9ae39", null ],
-    [ "getKey", "a00157.html#a02de0179d4a665d29ca9350be9f1e63e", null ],
-    [ "toMiraiCode", "a00157.html#ade93b603f22f584ada2a003c9e523b89", null ],
-    [ "content", "a00157.html#a7ebcc9775985874bb7a09bd1d8274a24", null ],
-    [ "messageType", "a00157.html#a3fbf4e209a236ba91885d9523d0163a2", null ],
-    [ "prefix", "a00157.html#a207f61ebfd79e0ae18833f2edf954595", null ],
-    [ "type", "a00157.html#a80942452883a814f0462e451982ffd39", null ]
+    [ "MemberJoinEvent", "a00157.html#a073cb4162b0f02a4497e9ea6912399d5", null ],
+    [ "group", "a00157.html#a1f879c48cc7b54fa387853b5330b0caf", null ],
+    [ "inviterid", "a00157.html#a3342fd9e038a616a272ae8de9599ad31", null ],
+    [ "member", "a00157.html#aa1a42b944df9f40fc96629a1c5687f01", null ],
+    [ "type", "a00157.html#a96ecc208a289c8a567f0148bfa46a2a0", null ]
 ];

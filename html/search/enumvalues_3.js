@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['kickm_0',['KickM',['../a00057.html#a1bc3c425340774687507c1683967231ba514d8030f7853defda3dc5808177784c',1,'MiraiCP::Config']]]
+  ['error_0',['error',['../a00116.html#a9978cdf5158c8fc2ed93dbd7bbf3efb5acb5e100e5a9a3e7f6d1fd97512215282',1,'MiraiCP']]]
 ];

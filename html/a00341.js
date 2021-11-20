@@ -1,13 +1,16 @@
 var a00341 =
 [
-    [ "Node", "a00345.html", "a00345" ],
-    [ "NodeHandle", "a00349.html", "a00349" ],
-    [ "e", "a00341.html#a7fe3c103a5bd76b9f294984251f8536f", null ],
-    [ "type", "a00341.html#ac47933ea0de7261867b516e641e42c5a", null ],
-    [ "Event", "a00341.html#a95642b7acb713795fd5fe9ac284154ef", null ],
-    [ "broadcast", "a00341.html#a2a9c8d7996f69ee9666cea7f573d520e", null ],
-    [ "id", "a00341.html#a546bbcb33bec161fb5977447ddf7c344", null ],
-    [ "registerEvent", "a00341.html#a0b8c9683d3568a13b07423425912143d", null ],
-    [ "processor", "a00341.html#ab78af8afd9a5121e7ed0a1d7237f2b20", null ],
-    [ "vec", "a00341.html#a0de72a7d07cec2d80034177d224bb476", null ]
+    [ "Member", "a00341.html#a3f4426f778803585de253508cd40e17c", null ],
+    [ "Member", "a00341.html#a077555680a65e4ff7da00e45e7808a33", null ],
+    [ "at", "a00341.html#ace4950bd9191fdf90ecba764c870f90e", null ],
+    [ "getPermission", "a00341.html#a27ef4633b6c6f0634c56cac0b66b6a4d", null ],
+    [ "kick", "a00341.html#af0f9ebe2fc57cdd042e8f360a593fff8", null ],
+    [ "modifyAdmin", "a00341.html#abb6fd404cff37f4a4eb1fec72d020359", null ],
+    [ "mute", "a00341.html#aedac5c32572eeaf5e480c1ad116e38f7", null ],
+    [ "refreshInfo", "a00341.html#a0b970ea112ffd72534c1a98843bd6636", null ],
+    [ "sendNudge", "a00341.html#ad1ee31adb9f9c6b776c537502331b7a1", null ],
+    [ "sendVoice", "a00341.html#aef3c35f83cb76a2f757bbbd8a909a251", null ],
+    [ "unMute", "a00341.html#a85a04539c2573a665b1abf5ce9f32856", null ],
+    [ "isAnonymous", "a00341.html#a02c93da6f71f701f384aceef3746c9c2", null ],
+    [ "permission", "a00341.html#a348c726624fb4fe3e1d419f32f51031a", null ]
 ];

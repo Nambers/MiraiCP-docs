@@ -1,6 +1,6 @@
 var a00185 =
 [
-    [ "QuoteReply", "a00185.html#a92e6c154936b9341964f10830844348e", null ],
-    [ "toMiraiCode", "a00185.html#a9b7099d0697ffd22fd35f91739105440", null ],
-    [ "source", "a00185.html#aa52b963186458663241016c751162769", null ]
+    [ "NudgeEvent", "a00185.html#a4357682e0b2c43665cafe1be9e928587", null ],
+    [ "from", "a00185.html#a6b41c32519408428cb6fc302bf24b970", null ],
+    [ "target", "a00185.html#af4e172354f69ce65c8d8d2cd1f188cca", null ]
 ];

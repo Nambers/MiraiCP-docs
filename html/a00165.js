@@ -1,7 +1,11 @@
 var a00165 =
 [
-    [ "At", "a00165.html#ab5b225ea67cf995d13b384ec622c86e7", null ],
-    [ "At", "a00165.html#a3e12195fc4d9ae026ec8a438a368342a", null ],
-    [ "toMiraiCode", "a00165.html#abaa95fab044eebb3e355da0040c0bfa7", null ],
-    [ "target", "a00165.html#a4c451a3d12d38f6a83d425cab2d2aa25", null ]
+    [ "RecallEvent", "a00165.html#a8f34646f10c6059226357b96876cec3e", null ],
+    [ "authorid", "a00165.html#a38902ca6a35385461d1ebfd9dd5fe4c0", null ],
+    [ "groupid", "a00165.html#a224023cbc9f1e0e70e0c200e098a70e1", null ],
+    [ "ids", "a00165.html#ab921c8f46196c000301a49580c9c8731", null ],
+    [ "internalids", "a00165.html#a286b52d1fc395cffeb19867d174e8fa4", null ],
+    [ "operatorid", "a00165.html#abe1179293996af8fe9474805e125f748", null ],
+    [ "time", "a00165.html#afcf05164400a14a598aba4de6566b66c", null ],
+    [ "type", "a00165.html#ac986c53d844263a8af1ddf3e767e3a0c", null ]
 ];

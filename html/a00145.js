@@ -1,7 +1,7 @@
 var a00145 =
 [
-    [ "IllegalArgumentException", "a00145.html#a0dd810504dbce3135348662e6ac54d7d", null ],
-    [ "basicRaise", "a00145.html#a21dc02dd30f7e1cf2f2b7fc1a5c35639", null ],
-    [ "what", "a00145.html#a527967697b467f4ef777a9b7b92e232c", null ],
-    [ "description", "a00145.html#a67fd5f888d7491a9346b4f158979a14c", null ]
+    [ "PrivateMessageEvent", "a00145.html#aad1f069d4e65a59adbe04f707896c8e5", null ],
+    [ "nextMessage", "a00145.html#aacd6904aaab5ca0ba5e6a47711f9fb79", null ],
+    [ "message", "a00145.html#a8a85d06adc5634099288001409e51de0", null ],
+    [ "sender", "a00145.html#aa2ba8dfb74a6324a1a6ef5774d6ee793", null ]
 ];

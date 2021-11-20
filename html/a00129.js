@@ -1,7 +1,9 @@
 var a00129 =
 [
-    [ "FriendException", "a00129.html#a1e21d9765a85c1458d0c00f0a0cdaa2b", null ],
-    [ "basicRaise", "a00129.html#a3e6ab6ac0d65d9b074a42b6fd3347b2a", null ],
-    [ "what", "a00129.html#ade3a3e44c65ae076edbef7b851fbf64d", null ],
-    [ "description", "a00129.html#a846c704c8bb712f2c97879ba47cc9453", null ]
+    [ "CPPPlugin", "a00129.html#a8757991e0396faf72a9e0ad06caa53f4", null ],
+    [ "onDisable", "a00129.html#a3ecc2c479d1ca6785e7cdcb0738c1597", null ],
+    [ "onEnable", "a00129.html#ad3d1188d089ab0fc945475f988c64fa7", null ],
+    [ "config", "a00129.html#a4ca2c5ec7d04d258a2da1ce7cdb09a75", null ],
+    [ "plugin", "a00129.html#a5bfd48cf68b997a48e04d141d831f6d3", null ],
+    [ "pluginLogger", "a00129.html#a77d8d4ed65a3beb60410f0659bf9aedf", null ]
 ];

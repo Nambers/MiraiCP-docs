@@ -1,9 +1,9 @@
 var a00281 =
 [
-    [ "GroupMessageEvent", "a00281.html#a69a261b515fcfafc599a649684cea695", null ],
-    [ "nextMessage", "a00281.html#a7fce40bb7fe8d9ba4ae104702357c01c", null ],
-    [ "senderNextMessage", "a00281.html#a066d0cca32597ad3a3e1e7807be4249a", null ],
-    [ "group", "a00281.html#abac98c5b1373ad6c8483f9978952c553", null ],
-    [ "message", "a00281.html#a722dc1ca031c471c953c710367067ae7", null ],
-    [ "sender", "a00281.html#acd0e90e4fb7862986215aae7e47cb2d6", null ]
+    [ "OnlineForwardedMessage", "a00281.html#a623848fdcd4af723a433e7f03c45d32f", null ],
+    [ "deserializationFromMessageSourceJson", "a00281.html#a0903dc41fb44391da9dcc6a60bdf6ea7", null ],
+    [ "toMiraiCode", "a00281.html#a3eee9d12679e20cc08750853ec7655e7", null ],
+    [ "nodelist", "a00281.html#a3fcb5073c4ec3f07fb918cf2055cc40c", null ],
+    [ "origin", "a00281.html#a75805d847603df24ade1c924ee288249", null ],
+    [ "resourceId", "a00281.html#a5106f13692786b4713ba1c6a9fac6be3", null ]
 ];

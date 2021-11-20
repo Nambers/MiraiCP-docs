@@ -1,10 +1,10 @@
 var searchData=
 [
-  ['bot_0',['Bot',['../a00269.html',1,'MiraiCP']]],
-  ['botevent_1',['BotEvent',['../a00277.html',1,'MiraiCP']]],
-  ['botexception_2',['BotException',['../a00113.html',1,'MiraiCP']]],
-  ['botisbeingmutedexception_3',['BotIsBeingMutedException',['../a00117.html',1,'MiraiCP']]],
-  ['botjoingroupevent_4',['BotJoinGroupEvent',['../a00309.html',1,'MiraiCP']]],
-  ['botleaveevent_5',['BotLeaveEvent',['../a00329.html',1,'MiraiCP']]],
-  ['botonlineevent_6',['BotOnlineEvent',['../a00321.html',1,'MiraiCP']]]
+  ['bot_0',['Bot',['../a00120.html',1,'MiraiCP']]],
+  ['botevent_1',['BotEvent',['../a00140.html',1,'MiraiCP']]],
+  ['botexception_2',['BotException',['../a00236.html',1,'MiraiCP']]],
+  ['botisbeingmutedexception_3',['BotIsBeingMutedException',['../a00240.html',1,'MiraiCP']]],
+  ['botjoingroupevent_4',['BotJoinGroupEvent',['../a00172.html',1,'MiraiCP']]],
+  ['botleaveevent_5',['BotLeaveEvent',['../a00192.html',1,'MiraiCP']]],
+  ['botonlineevent_6',['BotOnlineEvent',['../a00184.html',1,'MiraiCP']]]
 ];

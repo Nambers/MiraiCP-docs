@@ -1,8 +1,15 @@
 var a00297 =
 [
-    [ "MemberJoinEvent", "a00297.html#a073cb4162b0f02a4497e9ea6912399d5", null ],
-    [ "group", "a00297.html#a1f879c48cc7b54fa387853b5330b0caf", null ],
-    [ "inviterid", "a00297.html#a3342fd9e038a616a272ae8de9599ad31", null ],
-    [ "member", "a00297.html#aa1a42b944df9f40fc96629a1c5687f01", null ],
-    [ "type", "a00297.html#a96ecc208a289c8a567f0148bfa46a2a0", null ]
+    [ "OnlineAnnouncement", "a00297.html#ae7b3c5f6cbb8874f93e286529e624fdb", null ],
+    [ "deleteThis", "a00297.html#a04aaabd735ed542b313a8df2a3fd9ecb", null ],
+    [ "deserializeFromJson", "a00297.html#aabba022ccb2e4c5e8b14beaee17f0979", null ],
+    [ "botid", "a00297.html#a507cd3e23d5d5204b0deaa6b1c6cad3c", null ],
+    [ "confirmNum", "a00297.html#af210882e3d89a4843c05c92ca7c83dd1", null ],
+    [ "content", "a00297.html#afbc4d030c34bf815a8b8466cc0661f61", null ],
+    [ "fid", "a00297.html#a24d4711f1da5a6f5e952b77e198b0f3f", null ],
+    [ "groupid", "a00297.html#a73fcfc8f32a547eaa9704afa706c5a38", null ],
+    [ "imageid", "a00297.html#a562cac2ea3788ef5268396101b08e7de", null ],
+    [ "params", "a00297.html#a0be35844059d66dc274fcf84de90e368", null ],
+    [ "publicationTime", "a00297.html#a60b71b2b35023e7774485f696c0c84f7", null ],
+    [ "senderid", "a00297.html#a020798c5d023b56bdf62fd08ad4dce7f", null ]
 ];

@@ -1,6 +1,6 @@
 var a00137 =
 [
-    [ "RecallException", "a00137.html#ab70029a99574b211c34b4f1ee042572e", null ],
-    [ "what", "a00137.html#a2578d751e1bf46f1e6f0c259d60875e5", null ],
-    [ "description", "a00137.html#a9a0251d9ef9f5dcfdd49191e8f4e74cc", null ]
+    [ "BotEvent", "a00137.html#aac97ce1eea8254b11b1d427cb53e4d5e", null ],
+    [ "bot", "a00137.html#a48e9bf99cfedf6627c89de58f19fdb88", null ],
+    [ "botlogger", "a00137.html#a0ac8dff80b65054aecebc9ca15c4c633", null ]
 ];

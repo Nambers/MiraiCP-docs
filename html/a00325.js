@@ -1,6 +1,6 @@
 var a00325 =
 [
-    [ "NudgeEvent", "a00325.html#a4357682e0b2c43665cafe1be9e928587", null ],
-    [ "from", "a00325.html#a6b41c32519408428cb6fc302bf24b970", null ],
-    [ "target", "a00325.html#af4e172354f69ce65c8d8d2cd1f188cca", null ]
+    [ "IdLogger", "a00325.html#a50eb2703023973190ae65a949011166f", null ],
+    [ "log0", "a00325.html#a89017629370efaa9bc2d3012b9bd5682", null ],
+    [ "id", "a00325.html#a0780713691dbbe27226d2c4c6c13d226", null ]
 ];

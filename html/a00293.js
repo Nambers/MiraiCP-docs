@@ -1,12 +1,10 @@
 var a00293 =
 [
-    [ "NewFriendRequestEvent", "a00293.html#aa7a60db5331de88e29455d07a6d9ccca", null ],
-    [ "accept", "a00293.html#a3d29da472ac4174b407aee787e86827f", null ],
-    [ "operation0", "a00293.html#a4f9fb01d7ab66dcd2a49d9aee10ec73f", null ],
-    [ "reject", "a00293.html#ae3b323c20ed1d729885e8f4a0af888a5", null ],
-    [ "fromgroupid", "a00293.html#a9d75cbeeaf4d484676bfc7090baa4b9b", null ],
-    [ "fromid", "a00293.html#a6c987dc795e5e1893caef8370bf6dfee", null ],
-    [ "message", "a00293.html#a914502cfd8ab0db7ea570240f0bb56e5", null ],
-    [ "nick", "a00293.html#aac9936ee444a019ef2c988a4ed369b55", null ],
-    [ "source", "a00293.html#a4b48f29f9ac4443abf0a76590690a897", null ]
+    [ "AnnouncementParams", "a00293.html#ad9cd7b9ca38c4268c6f625034107a584", null ],
+    [ "serializeToJson", "a00293.html#ac87021b1e71d8d3334c4d197813924bc", null ],
+    [ "pinned", "a00293.html#a1045432e9f2c822b1150bc278e99de05", null ],
+    [ "requireConfirm", "a00293.html#a2641ceb16f0da11938027e7bf67c5c8a", null ],
+    [ "send2new", "a00293.html#af941b1ec8148c2675bcad7a6a10a53f5", null ],
+    [ "showEditCard", "a00293.html#a92569e1952f8f1668db0df430928da8e", null ],
+    [ "showPopup", "a00293.html#ab80e896e8ac632e75f5d5e98dff79a97", null ]
 ];

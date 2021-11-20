@@ -1,6 +1,6 @@
 var a00197 =
 [
-    [ "md5", "a00197.html#ad0293f9419de31e1debe34fe84a38efc", null ],
-    [ "sha1", "a00197.html#a028dd19b1da21857fec0a606c4370427", null ],
-    [ "url", "a00197.html#ae5ef128eb690329fceda096ddb1d3004", null ]
+    [ "MiraiCPExceptionEvent", "a00197.html#afd30bd6b1fff4e0ac6b94dd31e965631", null ],
+    [ "getException", "a00197.html#a90e01efbe49872e7233c3185fe2dd93f", null ],
+    [ "exceptionPtr", "a00197.html#a762a554cc588634317c6be8791ace0f2", null ]
 ];
