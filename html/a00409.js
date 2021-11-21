@@ -1,17 +1,13 @@
 var a00409 =
 [
-    [ "Dinfo", "a00413.html", "a00413" ],
-    [ "Finfo", "a00417.html", "a00417" ],
-    [ "RemoteFile", "a00409.html#a42e9c8d14e1da508881201dbd46d54e1", null ],
-    [ "deserializeFromString", "a00409.html#a86d0f3d9b2d7ef5aab70d377297528fc", null ],
-    [ "plus", "a00409.html#a6d3851415c16a7976def77a81a9b38d6", null ],
-    [ "serializeToString", "a00409.html#a037f0b6bb7ad3900335080fc4f219618", null ],
-    [ "toMiraiCode", "a00409.html#a8359964c95887f7003d55f4116837765", null ],
-    [ "dinfo", "a00409.html#a0ec43d0292be1775f3ebc6d897726901", null ],
-    [ "finfo", "a00409.html#a7d3dbb40c7b3b993f440bbd48bc7ec6f", null ],
-    [ "id", "a00409.html#a8e4443d5a31bd8a4e986a133596a4503", null ],
-    [ "internalid", "a00409.html#a7271af23428cf4ad419a053b9860b63e", null ],
-    [ "name", "a00409.html#ab349943782949b60cd117b5fc8b645e2", null ],
-    [ "path", "a00409.html#a45e59bd87a0e03109431f08432f85168", null ],
-    [ "size", "a00409.html#a9b15694dd4c005204268d161fd4760f1", null ]
+    [ "OnlineAudio", "a00409.html#a6019cb1d4607f359565eee4b8b5cca33", null ],
+    [ "operator==", "a00409.html#adf77a906cd6705425a28ab4483c634b5", null ],
+    [ "toMiraiCode", "a00409.html#a489558aac1aa115a829c273ba71ace54", null ],
+    [ "type", "a00409.html#ab55cc2add22064ea6437677abc6d2555", null ],
+    [ "codec", "a00409.html#afe96592ba24d9c3f1887c7668d788c97", null ],
+    [ "filename", "a00409.html#a9cf8841f7297be7d0b8404aeaf1727a1", null ],
+    [ "length", "a00409.html#a963774ddebf115bebd86386cb84a5117", null ],
+    [ "md5", "a00409.html#a403a5a5837bbf02f5e0c5a4327f51ff3", null ],
+    [ "size", "a00409.html#a06c764f6c1f6f65def69fcfe378ebef1", null ],
+    [ "url", "a00409.html#aedf31534944297bea3c997cc49329443", null ]
 ];

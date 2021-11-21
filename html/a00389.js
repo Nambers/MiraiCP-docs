@@ -1,8 +1,6 @@
 var a00389 =
 [
-    [ "Image", "a00389.html#ac8cc0c437b9a121148bff00e906b079c", null ],
-    [ "Image", "a00389.html#a96926ef90fc6925d7d2f24605d7b9fbf", null ],
-    [ "queryURL", "a00389.html#a85cac0afdb1d2965d97bcb05bb7b72a1", null ],
-    [ "toMiraiCode", "a00389.html#a10cd01f40a86dcd051722cc50baa2003", null ],
-    [ "id", "a00389.html#ac6a67525ab64646c9068bc98bd58e796", null ]
+    [ "AtAll", "a00389.html#aa19455c0291e5f1ebe7f6ed85b6cdea6", null ],
+    [ "toMiraiCode", "a00389.html#a0b99f7dc0cd4d328e7105a34395c8019", null ],
+    [ "type", "a00389.html#ac3a9e58d6562b04ed3eaefb26d137a9a", null ]
 ];

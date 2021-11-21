@@ -1,6 +1,9 @@
 var a00277 =
 [
-    [ "ForwardedMessage", "a00277.html#a5ede8cbc0849ad8f0b716f3581db967d", null ],
-    [ "sendTo", "a00277.html#a088e7c45a7354edca612ba1ae2e2a5a9", null ],
-    [ "sendmsg", "a00277.html#aa99a2f4399b53a576e6db44d08e11af8", null ]
+    [ "ForwardedNode", "a00277.html#a0f2ebb57417b9f07c2d834774b59bd97", null ],
+    [ "ForwardedNode", "a00277.html#a7458e61bc049d68ffcc08f5c30486112", null ],
+    [ "id", "a00277.html#aaaa85af6ea1bea84767d5352fdc2c907", null ],
+    [ "message", "a00277.html#acb5969070d29271a128fc95d5b503fc0", null ],
+    [ "name", "a00277.html#a7c1ccf827b401b609cfc8481909019e7", null ],
+    [ "time", "a00277.html#ac5f4d270eb51284f2f25051aaf1545f7", null ]
 ];

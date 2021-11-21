@@ -1,6 +1,6 @@
 var a00137 =
 [
-    [ "BotEvent", "a00137.html#aac97ce1eea8254b11b1d427cb53e4d5e", null ],
-    [ "bot", "a00137.html#a48e9bf99cfedf6627c89de58f19fdb88", null ],
-    [ "botlogger", "a00137.html#a0ac8dff80b65054aecebc9ca15c4c633", null ]
+    [ "MiraiCPEvent", "a00137.html#ac85886499f0138dbdd661dea59c7596d", null ],
+    [ "~MiraiCPEvent", "a00137.html#a42d37c121315a51870afcc0b9306675a", null ],
+    [ "getEventType", "a00137.html#a6deb635e597ec46bcf41f60f79c1b015", null ]
 ];

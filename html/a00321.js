@@ -1,6 +1,5 @@
 var a00321 =
 [
-    [ "Logger", "a00321.html#a0707bf07c1d709abf854a3592fb2f1f0", null ],
-    [ "log0", "a00321.html#aa7d5bc92441f2e2f5d3b16771e4e8a30", null ],
-    [ "logger", "a00321.html#a268fd602157c3fa49616a8872c82bfb1", null ]
+    [ "action", "a00321.html#aea306ee2e14936202c9a814a15e0d0bc", null ],
+    [ "enable", "a00321.html#a0fda6ed76658ebaa758e801a72b3d946", null ]
 ];

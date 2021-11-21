@@ -1,8 +1,13 @@
 var a00157 =
 [
-    [ "MemberJoinEvent", "a00157.html#a073cb4162b0f02a4497e9ea6912399d5", null ],
-    [ "group", "a00157.html#a1f879c48cc7b54fa387853b5330b0caf", null ],
-    [ "inviterid", "a00157.html#a3342fd9e038a616a272ae8de9599ad31", null ],
-    [ "member", "a00157.html#aa1a42b944df9f40fc96629a1c5687f01", null ],
-    [ "type", "a00157.html#a96ecc208a289c8a567f0148bfa46a2a0", null ]
+    [ "NewFriendRequestEvent", "a00157.html#aa7a60db5331de88e29455d07a6d9ccca", null ],
+    [ "accept", "a00157.html#abf7029978268eea4f28877b749ccbbd0", null ],
+    [ "getEventType", "a00157.html#a65e15394f6ff46484645b4cc5ace8176", null ],
+    [ "operation0", "a00157.html#a113900b854bd92448127adda43f393db", null ],
+    [ "reject", "a00157.html#ac184af60bcab8fdf381aea3b3a3ac0d1", null ],
+    [ "fromgroupid", "a00157.html#a9d75cbeeaf4d484676bfc7090baa4b9b", null ],
+    [ "fromid", "a00157.html#a6c987dc795e5e1893caef8370bf6dfee", null ],
+    [ "message", "a00157.html#a914502cfd8ab0db7ea570240f0bb56e5", null ],
+    [ "nick", "a00157.html#aac9936ee444a019ef2c988a4ed369b55", null ],
+    [ "source", "a00157.html#a4b48f29f9ac4443abf0a76590690a897", null ]
 ];

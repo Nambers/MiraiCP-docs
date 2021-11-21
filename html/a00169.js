@@ -1,7 +1,12 @@
 var a00169 =
 [
-    [ "BotJoinGroupEvent", "a00169.html#a52f6947edde412772cc67609f9414b61", null ],
-    [ "group", "a00169.html#ad3643d9978133be026420f1d71594ec7", null ],
-    [ "inviterid", "a00169.html#aec3b3e13b9dedba8e0a06ae45b146e51", null ],
-    [ "type", "a00169.html#afecd637a84090e12fa5721074711c05d", null ]
+    [ "RecallEvent", "a00169.html#a8f34646f10c6059226357b96876cec3e", null ],
+    [ "getEventType", "a00169.html#a92fafd0fb13e8ac020d52cbf46722979", null ],
+    [ "authorid", "a00169.html#a38902ca6a35385461d1ebfd9dd5fe4c0", null ],
+    [ "groupid", "a00169.html#a224023cbc9f1e0e70e0c200e098a70e1", null ],
+    [ "ids", "a00169.html#ab921c8f46196c000301a49580c9c8731", null ],
+    [ "internalids", "a00169.html#a286b52d1fc395cffeb19867d174e8fa4", null ],
+    [ "operatorid", "a00169.html#abe1179293996af8fe9474805e125f748", null ],
+    [ "time", "a00169.html#afcf05164400a14a598aba4de6566b66c", null ],
+    [ "type", "a00169.html#ac986c53d844263a8af1ddf3e767e3a0c", null ]
 ];

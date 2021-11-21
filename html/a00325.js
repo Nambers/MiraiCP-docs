@@ -1,6 +1,6 @@
 var a00325 =
 [
-    [ "IdLogger", "a00325.html#a50eb2703023973190ae65a949011166f", null ],
-    [ "log0", "a00325.html#a89017629370efaa9bc2d3012b9bd5682", null ],
-    [ "id", "a00325.html#a0780713691dbbe27226d2c4c6c13d226", null ]
+    [ "Logger", "a00325.html#a0707bf07c1d709abf854a3592fb2f1f0", null ],
+    [ "log0", "a00325.html#aa7d5bc92441f2e2f5d3b16771e4e8a30", null ],
+    [ "logger", "a00325.html#a268fd602157c3fa49616a8872c82bfb1", null ]
 ];

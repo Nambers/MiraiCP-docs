@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiraiCP: 设置loggerhandler的action</title>
+<title>MiraiCP: 发送信息</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MiraiCP
-   &#160;<span id="projectnumber">v2.8.0-RC</span>
+   &#160;<span id="projectnumber">v2.8.0</span>
    </div>
    <div id="projectbrief">MiraiCP api document</div>
   </td>
@@ -90,29 +90,25 @@ $(document).ready(function(){initNavTree('a00451.html',''); initResizable(); });
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">设置loggerhandler的action</div></div>
+  <div class="headertitle"><div class="title">发送信息</div></div>
 </div><!--header-->
 <div class="contents">
-<p >设置loggerhandler的action </p><dl class="params"><dt>参数</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">action</td><td>执行的操作 </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section see"><dt>参见</dt><dd>Logger::handler</dd></dl>
-<div class="fragment"><div class="line"> <a id="a0" name="a0"></a><a class="code hl_variable" href="a00113.html#a526fbb267bd3e2b072b85c1f502e14cf">Logger::logger</a>.<a id="a1" name="a1"></a><a class="code hl_function" href="a00313.html#aa3e0ad0c5771cee4583b577981105114">registerHandle</a>([](std::string content, <span class="keywordtype">int</span> level){</div>
-<div class="line">    \\do some things</div>
-<div class="line">});</div>
-<div class="ttc" id="aa00113_html_a526fbb267bd3e2b072b85c1f502e14cf"><div class="ttname"><a href="a00113.html#a526fbb267bd3e2b072b85c1f502e14cf">MiraiCP::logger</a></div><div class="ttdeci">Logger *const logger</div><div class="ttdef"><b>Definition:</b> <a href="a00053_source.html#l00024">Logger.cpp:24</a></div></div>
-<div class="ttc" id="aa00313_html_aa3e0ad0c5771cee4583b577981105114"><div class="ttname"><a href="a00313.html#aa3e0ad0c5771cee4583b577981105114">MiraiCP::Logger_interface::registerHandle</a></div><div class="ttdeci">void registerHandle(Action action)</div><div class="ttdef"><b>Definition:</b> <a href="a00053_source.html#l00036">Logger.cpp:36</a></div></div>
-</div><!-- fragment --><div class="fragment"></div><!-- fragment --><p>的action </p>
-</div><!-- contents -->
+<p >group, friend, member的父类</p>
+<p >以群聊信息为例 </p><div class="fragment"><div class="line">Event::processor.registerEvent&lt;<a class="code hl_enumvalue" href="a00117.html#a9978cdf5158c8fc2ed93dbd7bbf3efb5af85aaa2127f5b4f45bd92e1987105005">GroupMessageEvent</a>&gt;([](<a class="code hl_enumvalue" href="a00117.html#a9978cdf5158c8fc2ed93dbd7bbf3efb5af85aaa2127f5b4f45bd92e1987105005">GroupMessageEvent</a> e){</div>
+<div class="line"><span class="comment">// 发送MessageChain</span></div>
+<div class="line">e.group.sendMessage(e.message);</div>
+<div class="line"><span class="comment">// 发送SingleMessaeg</span></div>
+<div class="line">e.group.sendMessage(PlainText(<span class="stringliteral">&quot;a&quot;</span>));</div>
+<div class="line">e.group.sendMessaeg(e.sender.at(), PlainText(<span class="stringliteral">&quot;&quot;</span>), Face(5)));</div>
+<div class="line">}</div>
+<div class="ttc" id="aa00117_html_a9978cdf5158c8fc2ed93dbd7bbf3efb5af85aaa2127f5b4f45bd92e1987105005"><div class="ttname"><a href="a00117.html#a9978cdf5158c8fc2ed93dbd7bbf3efb5af85aaa2127f5b4f45bd92e1987105005">MiraiCP::eventTypes::GroupMessageEvent</a></div><div class="ttdeci">@ GroupMessageEvent</div></div>
+</div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">生成于 2021年 十一月 8日 星期一 17:09:09 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="footer">生成于 2021年 十一月 21日 星期日 14:40:03 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
 <script type="text/javascript">

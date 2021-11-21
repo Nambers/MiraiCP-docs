@@ -1,7 +1,9 @@
 var a00133 =
 [
-    [ "GroupException", "a00133.html#a69406b3c0673d48da8a30fd2ecccb5b7", null ],
-    [ "basicRaise", "a00133.html#abd3a6f2072fb2d9da000f687529d11c0", null ],
-    [ "what", "a00133.html#a9f2c7e927a20ea5548121da35b02eb52", null ],
-    [ "description", "a00133.html#a0125e21ddd8ccc54caa832db6fd34a0c", null ]
+    [ "CPPPlugin", "a00133.html#a8757991e0396faf72a9e0ad06caa53f4", null ],
+    [ "onDisable", "a00133.html#a3ecc2c479d1ca6785e7cdcb0738c1597", null ],
+    [ "onEnable", "a00133.html#ad3d1188d089ab0fc945475f988c64fa7", null ],
+    [ "config", "a00133.html#a4ca2c5ec7d04d258a2da1ce7cdb09a75", null ],
+    [ "plugin", "a00133.html#a5bfd48cf68b997a48e04d141d831f6d3", null ],
+    [ "pluginLogger", "a00133.html#a77d8d4ed65a3beb60410f0659bf9aedf", null ]
 ];

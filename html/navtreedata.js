@@ -25,6 +25,7 @@
 var NAVTREE =
 [
   [ "MiraiCP", "index.html", [
+    [ "弃用列表", "a00116.html", null ],
     [ "命名空间", "namespaces.html", [
       [ "命名空间列表", "namespaces.html", "namespaces_dup" ],
       [ "命名空间成员", "namespacemembers.html", [
@@ -64,12 +65,12 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "a00002.html",
-"a00128.html#a0435c2942d9789e62bc3ea06981b7734",
-"a00176.html#a4cd87975d98bef10e520e2ca9e3bfcf4",
-"a00284.html#a75805d847603df24ade1c924ee288249",
-"a00348.html#a6344b836b9fcb3d8c0793a0d72b29c17",
-"a00404.html",
-"functions_w.html"
+"a00129.html#a03b66ef9aaa19140dcb6bb486e82ebe9",
+"a00177.html#a29c18056652c7d36248f70f359f01e74",
+"a00285.html#a623848fdcd4af723a433e7f03c45d32f",
+"a00349.html#a558be734956c9ee749220c57d45ba144",
+"a00401.html#ab6d7d4b47233b30630c752945603d780",
+"functions_r.html"
 ];
 
 var SYNCONMSG = '点击 关闭 面板同步';

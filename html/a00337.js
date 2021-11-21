@@ -1,5 +1,8 @@
 var a00337 =
 [
-    [ "avatarUrl", "a00337.html#a037b8d06c116200bdb37de924401ef46", null ],
-    [ "nickornamecard", "a00337.html#abc3f2c3176f05d64751446e8760595df", null ]
+    [ "info", "a00341.html", "a00341" ],
+    [ "getInfoSource", "a00337.html#a69d9455b09cce9b2eb887749b6ae8aa6", null ],
+    [ "info0", "a00337.html#a39064f9c2b148b3a3061f818bf237215", null ],
+    [ "send0", "a00337.html#a5b4156f0bbbdbf6284fbe4ab59978c86", null ],
+    [ "uploadImg0", "a00337.html#ad2d09eec39d12deca9c3353e8b64aecd", null ]
 ];

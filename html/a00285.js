@@ -1,8 +1,12 @@
 var a00285 =
 [
-    [ "Friend", "a00285.html#a442b5aa59578a5effe83ac2b586ddccf", null ],
-    [ "Friend", "a00285.html#afeb4038f8101deba30dfc834bc47c807", null ],
-    [ "deleteFriend", "a00285.html#a7b26cb2d92491f9ec5d76466ba2416dc", null ],
-    [ "refreshInfo", "a00285.html#adcb6e1cb9a54ef532d9996d9c240b4c4", null ],
-    [ "sendNudge", "a00285.html#a62e45d8547cfb66bea29c9a577dc6dae", null ]
+    [ "OnlineForwardedMessage", "a00285.html#a623848fdcd4af723a433e7f03c45d32f", null ],
+    [ "deserializationFromMessageSourceJson", "a00285.html#a0903dc41fb44391da9dcc6a60bdf6ea7", null ],
+    [ "operator==", "a00285.html#a36cb67be0ffb52568cc6211b9b8c3d65", null ],
+    [ "operator[]", "a00285.html#a0d29b0fb5c909370a9f5149075272b94", null ],
+    [ "toMiraiCode", "a00285.html#a3eee9d12679e20cc08750853ec7655e7", null ],
+    [ "type", "a00285.html#a5b7f35a7b72d29102b39f560343ec05c", null ],
+    [ "nodelist", "a00285.html#a3fcb5073c4ec3f07fb918cf2055cc40c", null ],
+    [ "origin", "a00285.html#a75805d847603df24ade1c924ee288249", null ],
+    [ "resourceId", "a00285.html#a5106f13692786b4713ba1c6a9fac6be3", null ]
 ];

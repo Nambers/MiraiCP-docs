@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiraiCP: 撤回信息</title>
+<title>MiraiCP: 在事件中构建Group对象</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MiraiCP
-   &#160;<span id="projectnumber">v2.8.0-RC</span>
+   &#160;<span id="projectnumber">v2.8.0</span>
    </div>
    <div id="projectbrief">MiraiCP api document</div>
   </td>
@@ -90,28 +90,18 @@ $(document).ready(function(){initNavTree('a00461.html',''); initResizable(); });
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">撤回信息</div></div>
+  <div class="headertitle"><div class="title">在事件中构建Group对象</div></div>
 </div><!--header-->
 <div class="contents">
-<p >撤回该信息</p>
-<div class="fragment"><div class="line">Event::processor.registerEvent([](GroupMessageEvent e) {</div>
-<div class="line"> <span class="keywordflow">try</span> {</div>
-<div class="line">     e.messageSource.recall();</div>
-<div class="line">     e.group.SendMsg(<span class="stringliteral">&quot;hi&quot;</span>).recall();</div>
-<div class="line"> }</div>
-<div class="line"> <span class="keywordflow">catch</span> (MiraiCPException &amp;e) {</div>
-<div class="line">     <a id="a0" name="a0"></a><a class="code hl_variable" href="a00113.html#a526fbb267bd3e2b072b85c1f502e14cf">Logger::logger</a>.<a id="a1" name="a1"></a><a class="code hl_function" href="a00313.html#a418fad5b082009c5e40871d3cd88cacf">error</a>(<span class="stringliteral">&quot;错误&quot;</span>);</div>
-<div class="line"> }</div>
-<div class="line"> });</div>
-<div class="ttc" id="aa00113_html_a526fbb267bd3e2b072b85c1f502e14cf"><div class="ttname"><a href="a00113.html#a526fbb267bd3e2b072b85c1f502e14cf">MiraiCP::logger</a></div><div class="ttdeci">Logger *const logger</div><div class="ttdef"><b>Definition:</b> <a href="a00053_source.html#l00024">Logger.cpp:24</a></div></div>
-<div class="ttc" id="aa00313_html_a418fad5b082009c5e40871d3cd88cacf"><div class="ttname"><a href="a00313.html#a418fad5b082009c5e40871d3cd88cacf">MiraiCP::Logger_interface::error</a></div><div class="ttdeci">void error(T... val)</div><div class="ttdoc">发送警告(warning级日志)</div><div class="ttdef"><b>Definition:</b> <a href="a00056_source.html#l00102">Logger.h:102</a></div></div>
-</div><!-- fragment --></div><!-- contents -->
+<p >@detail 群聊类声明 </p><div class="fragment"><div class="line">Group(this.group.id, <span class="keyword">this</span>.bot.id) </div>
+</div><!-- fragment --><div class="fragment"></div><!-- fragment --><p>对象 </p>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">生成于 2021年 十一月 8日 星期一 17:09:09 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="footer">生成于 2021年 十一月 21日 星期日 14:40:03 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
 <script type="text/javascript">

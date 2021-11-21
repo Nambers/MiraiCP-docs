@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiraiCP: 在事件中构建Member对象</title>
+<title>MiraiCP: 取群聊下一条消息</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MiraiCP
-   &#160;<span id="projectnumber">v2.8.0-RC</span>
+   &#160;<span id="projectnumber">v2.8.0</span>
    </div>
    <div id="projectbrief">MiraiCP api document</div>
   </td>
@@ -90,26 +90,19 @@ $(document).ready(function(){initNavTree('a00455.html',''); initResizable(); });
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">在事件中构建Member对象</div></div>
+  <div class="headertitle"><div class="title">取群聊下一条消息</div></div>
 </div><!--header-->
 <div class="contents">
-<p >构建群成员对象 </p><dl class="params"><dt>参数</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">qqid</td><td>该成员q号 </td></tr>
-    <tr><td class="paramname">groupid</td><td>所在群号 </td></tr>
-    <tr><td class="paramname">botid</td><td>机器人id</td></tr>
-  </table>
-  </dd>
-</dl>
-<div class="fragment"><div class="line">Member(this.sender.id, <span class="keyword">this</span>.group.id, <span class="keyword">this</span>.bot.id)</div>
-</div><!-- fragment --><div class="fragment"></div><!-- fragment --><p>对象 </p>
-</div><!-- contents -->
+<p >群消息事件声明</p>
+<div class="fragment"><div class="line"><span class="keyword">auto</span> tmp = e.nextMessage();</div>
+<div class="line">e.group.sendMessage(tmp);</div>
+</div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">生成于 2021年 十一月 8日 星期一 17:09:09 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="footer">生成于 2021年 十一月 21日 星期日 14:40:03 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
 <script type="text/javascript">

@@ -1,11 +1,9 @@
 var a00165 =
 [
-    [ "RecallEvent", "a00165.html#a8f34646f10c6059226357b96876cec3e", null ],
-    [ "authorid", "a00165.html#a38902ca6a35385461d1ebfd9dd5fe4c0", null ],
-    [ "groupid", "a00165.html#a224023cbc9f1e0e70e0c200e098a70e1", null ],
-    [ "ids", "a00165.html#ab921c8f46196c000301a49580c9c8731", null ],
-    [ "internalids", "a00165.html#a286b52d1fc395cffeb19867d174e8fa4", null ],
-    [ "operatorid", "a00165.html#abe1179293996af8fe9474805e125f748", null ],
-    [ "time", "a00165.html#afcf05164400a14a598aba4de6566b66c", null ],
-    [ "type", "a00165.html#ac986c53d844263a8af1ddf3e767e3a0c", null ]
+    [ "MemberLeaveEvent", "a00165.html#acbd646bf783ca8d03b8b0a48e3a37cb7", null ],
+    [ "getEventType", "a00165.html#a5d89041ce88b38c03348abb152d61ca4", null ],
+    [ "group", "a00165.html#ab693afc3bdbfddc1ae88caf9ee052d54", null ],
+    [ "memberid", "a00165.html#ab1908decaccb41ea3bc74836dff63246", null ],
+    [ "operaterid", "a00165.html#aade41087ec629e2632628919d9df79fe", null ],
+    [ "type", "a00165.html#ad28ac4243630eab3bf7d65a737cac9ca", null ]
 ];

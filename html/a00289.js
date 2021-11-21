@@ -1,25 +1,8 @@
 var a00289 =
 [
-    [ "AnnouncementParams", "a00293.html", "a00293" ],
-    [ "file_short_info", "a00309.html", "a00309" ],
-    [ "GroupSetting", "a00305.html", "a00305" ],
-    [ "OfflineAnnouncement", "a00301.html", "a00301" ],
-    [ "OnlineAnnouncement", "a00297.html", "a00297" ],
-    [ "Group", "a00289.html#acf740d39fec857eda1becaad8abb4244", null ],
-    [ "Group", "a00289.html#a8e3040a60fd31298dd76d6826db96d77", null ],
-    [ "getAnnouncementsList", "a00289.html#acbb9e5678f95bbf76cf2161481303c91", null ],
-    [ "getFile", "a00289.html#a6750ccd1be9cf7d689b1e73fe2c05dbd", null ],
-    [ "getFileById", "a00289.html#a96b9aa69d5ac9e1263bb6d2a43860911", null ],
-    [ "getFileList", "a00289.html#aa6e15189fa3ee92dfff4fbc8c3c4db14", null ],
-    [ "getFileListString", "a00289.html#af36b3eaa77a5b4d2347f4bbfc9e891ca", null ],
-    [ "getMember", "a00289.html#a1b11b468620c9b9eb99c7b5ad7c6ac51", null ],
-    [ "getMemberList", "a00289.html#ab9df93e0e936fb192fefe9e3e87292c7", null ],
-    [ "getOwner", "a00289.html#afbb64b5a03d80ac2bb86327df2817497", null ],
-    [ "MemberListToString", "a00289.html#a7e4a285e03aac96ef4152d852958329d", null ],
-    [ "quit", "a00289.html#aa8d924259072f21600568bd061046084", null ],
-    [ "refreshInfo", "a00289.html#a432d6ad6e92a9018c4788195b2d62f05", null ],
-    [ "sendFile", "a00289.html#ac4fe5ca6cfe0b2243311f95639aea29f", null ],
-    [ "sendVoice", "a00289.html#a13a0cbb1d4b421d782acbd6e85830707", null ],
-    [ "updateSetting", "a00289.html#a702f1db818c85c3b03b427d8be704acc", null ],
-    [ "setting", "a00289.html#a0076eeb69e08e5dee4399e424645a333", null ]
+    [ "Friend", "a00289.html#a442b5aa59578a5effe83ac2b586ddccf", null ],
+    [ "Friend", "a00289.html#afeb4038f8101deba30dfc834bc47c807", null ],
+    [ "deleteFriend", "a00289.html#a7b26cb2d92491f9ec5d76466ba2416dc", null ],
+    [ "refreshInfo", "a00289.html#adcb6e1cb9a54ef532d9996d9c240b4c4", null ],
+    [ "sendNudge", "a00289.html#a62e45d8547cfb66bea29c9a577dc6dae", null ]
 ];

@@ -1,7 +1,15 @@
 var a00301 =
 [
-    [ "OfflineAnnouncement", "a00301.html#a01236de68a15c8de48ffeecc47f7d422", null ],
-    [ "publishTo", "a00301.html#ac5e2613306079cce18866fa1f2809357", null ],
-    [ "content", "a00301.html#ad41adfb9b859845999f24978087af62b", null ],
-    [ "params", "a00301.html#ab1ff075cae77526d00c8f96b135c2873", null ]
+    [ "OnlineAnnouncement", "a00301.html#ae7b3c5f6cbb8874f93e286529e624fdb", null ],
+    [ "deleteThis", "a00301.html#a04aaabd735ed542b313a8df2a3fd9ecb", null ],
+    [ "deserializeFromJson", "a00301.html#aabba022ccb2e4c5e8b14beaee17f0979", null ],
+    [ "botid", "a00301.html#a507cd3e23d5d5204b0deaa6b1c6cad3c", null ],
+    [ "confirmNum", "a00301.html#af210882e3d89a4843c05c92ca7c83dd1", null ],
+    [ "content", "a00301.html#afbc4d030c34bf815a8b8466cc0661f61", null ],
+    [ "fid", "a00301.html#a24d4711f1da5a6f5e952b77e198b0f3f", null ],
+    [ "groupid", "a00301.html#a73fcfc8f32a547eaa9704afa706c5a38", null ],
+    [ "imageid", "a00301.html#a562cac2ea3788ef5268396101b08e7de", null ],
+    [ "params", "a00301.html#a0be35844059d66dc274fcf84de90e368", null ],
+    [ "publicationTime", "a00301.html#a60b71b2b35023e7774485f696c0c84f7", null ],
+    [ "senderid", "a00301.html#a020798c5d023b56bdf62fd08ad4dce7f", null ]
 ];

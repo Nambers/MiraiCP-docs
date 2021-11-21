@@ -1,6 +1,9 @@
 var a00401 =
 [
-    [ "QuoteReply", "a00401.html#a92e6c154936b9341964f10830844348e", null ],
-    [ "toMiraiCode", "a00401.html#a9b7099d0697ffd22fd35f91739105440", null ],
-    [ "source", "a00401.html#aa52b963186458663241016c751162769", null ]
+    [ "ServiceMessage", "a00401.html#af2da1f54cc88abcddc68f96bde22d24e", null ],
+    [ "ServiceMessage", "a00401.html#ab5866201bea86658dadc054764fd1db6", null ],
+    [ "ServiceMessage", "a00401.html#a367f5b76f1716ba7b5fa31219274bc85", null ],
+    [ "operator==", "a00401.html#ac376e371ca5bd671ea8f3d98881b8052", null ],
+    [ "toMiraiCode", "a00401.html#a25240f7b9b413c65916c92035569a095", null ],
+    [ "type", "a00401.html#ab6d7d4b47233b30630c752945603d780", null ]
 ];

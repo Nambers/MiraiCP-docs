@@ -1,7 +1,8 @@
 var a00397 =
 [
-    [ "ServiceMessage", "a00397.html#af2da1f54cc88abcddc68f96bde22d24e", null ],
-    [ "ServiceMessage", "a00397.html#ab5866201bea86658dadc054764fd1db6", null ],
-    [ "ServiceMessage", "a00397.html#a367f5b76f1716ba7b5fa31219274bc85", null ],
-    [ "toMiraiCode", "a00397.html#a25240f7b9b413c65916c92035569a095", null ]
+    [ "LightApp", "a00397.html#a7cfcefeb788e3046fb321fab0a7b813a", null ],
+    [ "LightApp", "a00397.html#a1803b5deeb42af5f4770751aa4160a25", null ],
+    [ "operator==", "a00397.html#ae69ac9a6359eb6848ce09f7671395969", null ],
+    [ "toMiraiCode", "a00397.html#ad1637240306cd3dd587044054381d991", null ],
+    [ "type", "a00397.html#abba0c279393369d31f7ebc88ee6756fd", null ]
 ];

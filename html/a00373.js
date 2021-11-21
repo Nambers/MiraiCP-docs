@@ -1,10 +1,8 @@
 var a00373 =
 [
-    [ "SingleMessage", "a00373.html#a1e645ecfc57a7b630290d88e7cc9ae39", null ],
-    [ "getKey", "a00373.html#a02de0179d4a665d29ca9350be9f1e63e", null ],
-    [ "toMiraiCode", "a00373.html#ade93b603f22f584ada2a003c9e523b89", null ],
-    [ "content", "a00373.html#a7ebcc9775985874bb7a09bd1d8274a24", null ],
-    [ "messageType", "a00373.html#a3fbf4e209a236ba91885d9523d0163a2", null ],
-    [ "prefix", "a00373.html#a207f61ebfd79e0ae18833f2edf954595", null ],
-    [ "type", "a00373.html#a80942452883a814f0462e451982ffd39", null ]
+    [ "brief", "a00373.html#a922825f2fe708a70c66ff6585d688bb6", null ],
+    [ "cover", "a00373.html#a38c4579d9ccb887f3cab0573a39b96fa", null ],
+    [ "summary", "a00373.html#a5927b32bbb8fc21efe5d183fb12ddd1a", null ],
+    [ "title", "a00373.html#a929d703d700b67f4a1c1d17111271922", null ],
+    [ "url", "a00373.html#aba141291ce2939583450057c338b1fc5", null ]
 ];

@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiraiCP: 发送日志</title>
+<title>MiraiCP: threadManager类 参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MiraiCP
-   &#160;<span id="projectnumber">v2.8.0-RC</span>
+   &#160;<span id="projectnumber">v2.8.0</span>
    </div>
    <div id="projectbrief">MiraiCP api document</div>
   </td>
@@ -90,23 +90,37 @@ $(document).ready(function(){initNavTree('a00449.html',''); initResizable(); });
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">发送日志</div></div>
+  <div class="headertitle"><div class="title">threadManager类 参考</div></div>
 </div><!--header-->
 <div class="contents">
-<p >发送消息级日志 </p><div class="fragment"><div class="line"><a id="a0" name="a0"></a><a class="code hl_variable" href="a00113.html#a526fbb267bd3e2b072b85c1f502e14cf">Logger::logger</a>.<a id="a1" name="a1"></a><a class="code hl_function" href="a00313.html#af487216ad90334b62a970ad6e5a796a4">info</a>(<span class="keywordtype">string</span>) </div>
-<div class="ttc" id="aa00113_html_a526fbb267bd3e2b072b85c1f502e14cf"><div class="ttname"><a href="a00113.html#a526fbb267bd3e2b072b85c1f502e14cf">MiraiCP::logger</a></div><div class="ttdeci">Logger *const logger</div><div class="ttdef"><b>Definition:</b> <a href="a00053_source.html#l00024">Logger.cpp:24</a></div></div>
-<div class="ttc" id="aa00313_html_af487216ad90334b62a970ad6e5a796a4"><div class="ttname"><a href="a00313.html#af487216ad90334b62a970ad6e5a796a4">MiraiCP::Logger_interface::info</a></div><div class="ttdeci">void info(T... val)</div><div class="ttdoc">发送普通(info级日志)</div><div class="ttdef"><b>Definition:</b> <a href="a00056_source.html#l00090">Logger.h:90</a></div></div>
-</div><!-- fragment --><p> 发送警告级日志 </p><div class="fragment"><div class="line"><a class="code hl_variable" href="a00113.html#a526fbb267bd3e2b072b85c1f502e14cf">Logger::logger</a>.<a id="a2" name="a2"></a><a class="code hl_function" href="a00313.html#a19b06047f8959a3bfb100c0006767c83">warning</a>(<span class="keywordtype">string</span>) </div>
-<div class="ttc" id="aa00313_html_a19b06047f8959a3bfb100c0006767c83"><div class="ttname"><a href="a00313.html#a19b06047f8959a3bfb100c0006767c83">MiraiCP::Logger_interface::warning</a></div><div class="ttdeci">void warning(T... val)</div><div class="ttdoc">发送警告(warning级日志)</div><div class="ttdef"><b>Definition:</b> <a href="a00056_source.html#l00096">Logger.h:96</a></div></div>
-</div><!-- fragment --><p> 发送错误级日志 </p><div class="fragment"><div class="line"><a class="code hl_variable" href="a00113.html#a526fbb267bd3e2b072b85c1f502e14cf">Logger::logger</a>.<a id="a3" name="a3"></a><a class="code hl_function" href="a00313.html#a418fad5b082009c5e40871d3cd88cacf">error</a>(<span class="keywordtype">string</span>) </div>
-<div class="ttc" id="aa00313_html_a418fad5b082009c5e40871d3cd88cacf"><div class="ttname"><a href="a00313.html#a418fad5b082009c5e40871d3cd88cacf">MiraiCP::Logger_interface::error</a></div><div class="ttdeci">void error(T... val)</div><div class="ttdoc">发送警告(warning级日志)</div><div class="ttdef"><b>Definition:</b> <a href="a00056_source.html#l00102">Logger.h:102</a></div></div>
-</div><!-- fragment --></div><!-- contents -->
+
+<p>多线程管理.  
+ <a href="a00449.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="a00101_source.html">ThreadManager.h</a>&gt;</code></p>
+<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> threadManager 的协作图:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="a00447.png" border="0" usemap="#athread_manager_coll__map" alt="Collaboration graph"/></div>
+<map name="athread_manager_coll__map" id="athread_manager_coll__map">
+<area shape="rect" title="多线程管理." alt="" coords="5,5,113,83"/>
+</map>
+</div>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p >多线程管理. </p>
+</div><hr/>该类的文档由以下文件生成:<ul>
+<li><a class="el" href="a00101_source.html">ThreadManager.h</a></li>
+</ul>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">生成于 2021年 十一月 8日 星期一 17:09:09 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="navelem"><a class="el" href="a00449.html">threadManager</a></li>
+    <li class="footer">生成于 2021年 十一月 21日 星期日 14:40:06 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
 <script type="text/javascript">

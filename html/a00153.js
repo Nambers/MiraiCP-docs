@@ -1,12 +1,13 @@
 var a00153 =
 [
-    [ "NewFriendRequestEvent", "a00153.html#aa7a60db5331de88e29455d07a6d9ccca", null ],
-    [ "accept", "a00153.html#abf7029978268eea4f28877b749ccbbd0", null ],
-    [ "operation0", "a00153.html#a113900b854bd92448127adda43f393db", null ],
-    [ "reject", "a00153.html#ac184af60bcab8fdf381aea3b3a3ac0d1", null ],
-    [ "fromgroupid", "a00153.html#a9d75cbeeaf4d484676bfc7090baa4b9b", null ],
-    [ "fromid", "a00153.html#a6c987dc795e5e1893caef8370bf6dfee", null ],
-    [ "message", "a00153.html#a914502cfd8ab0db7ea570240f0bb56e5", null ],
-    [ "nick", "a00153.html#aac9936ee444a019ef2c988a4ed369b55", null ],
-    [ "source", "a00153.html#a4b48f29f9ac4443abf0a76590690a897", null ]
+    [ "GroupInviteEvent", "a00153.html#a9c76e0f986edef4d3915204a07085d11", null ],
+    [ "accept", "a00153.html#aa70e744adfe091f631fc1d86c72aecb9", null ],
+    [ "getEventType", "a00153.html#a586e1591d3d3669defc23e9d9a888ce9", null ],
+    [ "operation0", "a00153.html#a76e547b3b1776529eda0c8d5b784a7d7", null ],
+    [ "reject", "a00153.html#a3f6ee3152f935755c6dc055b888b9f89", null ],
+    [ "groupid", "a00153.html#ad0d2dad878885d82c78e5ef79efa9945", null ],
+    [ "groupName", "a00153.html#a578c8a027cb9f1574fba3de4b3646fc0", null ],
+    [ "inviterid", "a00153.html#a9e48a48c1429b8739da6e91cb8a04819", null ],
+    [ "inviterNick", "a00153.html#abf7cb41022c0cf81725c2925507f1d58", null ],
+    [ "source", "a00153.html#affaff17057d8b347a51ba2516f529596", null ]
 ];

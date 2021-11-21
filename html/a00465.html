@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiraiCP: 通过常量构建并发送小程序卡片</title>
+<title>MiraiCP: 取群文件信息</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MiraiCP
-   &#160;<span id="projectnumber">v2.8.0-RC</span>
+   &#160;<span id="projectnumber">v2.8.0</span>
    </div>
    <div id="projectbrief">MiraiCP api document</div>
   </td>
@@ -90,27 +90,23 @@ $(document).ready(function(){initNavTree('a00465.html',''); initResizable(); });
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">通过常量构建并发送小程序卡片</div></div>
+  <div class="headertitle"><div class="title">取群文件信息</div></div>
 </div><!--header-->
 <div class="contents">
-<p >小程序卡片 </p><dl class="section see"><dt>参见</dt><dd>LightAppStyle1, LightAppStyle2, LightAppStyle3 </dd></dl>
-<dl class="section attention"><dt>注意</dt><dd>自带的模板不稳定，可能发出现没有效果</dd></dl>
-<div class="fragment"><div class="line">Event::processor.registerEvent([](GroupMessageEvent e) {</div>
-<div class="line">    <span class="comment">//修改里面的属性从而自定义</span></div>
-<div class="line">    LightAppStyle1 a = LightAppStyle1();</div>
-<div class="line">    LightAppStyle2 b = LightAppStyle2();</div>
-<div class="line">    LightAppStyle3 c = LightAppStyle3();</div>
-<div class="line">    e.group.SendMiraiCode(LightApp(a).toMiraiCode());</div>
-<div class="line">    e.group.SendMiraiCode(LightApp(b).toMiraiCode());</div>
-<div class="line">    e.group.SendMiraiCode(LightApp(c).toMiraiCode());</div>
-<div class="line"> });</div>
+<div class="fragment"><div class="line"><span class="comment">//根据qq群远程路径(不带文件名)和文件id, 文件id可以在上传返回的RemoteFile类型中获得, 会在子目录中查找如果当前目录未找到</span></div>
+<div class="line"><span class="comment">//根据qq群远程路径(带文件名)找, 不过由于qq群文件允许同名文件这一特性, 返回的文件为群文件中同名文件中随机一个(不可靠)</span></div>
+<div class="line">Event::processor.registerEvent([](GroupMessageEvent e) {</div>
+<div class="line">   e.group.SendMsg(e.group.getFile(<span class="stringliteral">&quot;/&quot;</span>, <span class="keywordtype">id</span>).name());</div>
+<div class="line">   e.group.SendMsg(e.group.getFile(<span class="stringliteral">&quot;/test.txt&quot;</span>).name());</div>
+<div class="line">   e.group.SendMsg(e.group.getFileListString(<span class="stringliteral">&quot;/&quot;</span>));</div>
+<div class="line">   });</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">生成于 2021年 十一月 8日 星期一 17:09:09 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="footer">生成于 2021年 十一月 21日 星期日 14:40:03 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
 <script type="text/javascript">
