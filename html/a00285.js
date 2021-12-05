@@ -1,7 +1,7 @@
 var a00285 =
 [
-    [ "OnlineForwardedMessage", "a00285.html#a623848fdcd4af723a433e7f03c45d32f", null ],
-    [ "deserializationFromMessageSourceJson", "a00285.html#a0903dc41fb44391da9dcc6a60bdf6ea7", null ],
+    [ "OnlineForwardedMessage", "a00285.html#a8eeee98912485b77514779d426f3aac2", null ],
+    [ "deserializationFromMessageSourceJson", "a00285.html#ae8adc9f69b0bc64ba952a746085709dd", null ],
     [ "operator==", "a00285.html#a36cb67be0ffb52568cc6211b9b8c3d65", null ],
     [ "operator[]", "a00285.html#a0d29b0fb5c909370a9f5149075272b94", null ],
     [ "toMiraiCode", "a00285.html#a3eee9d12679e20cc08750853ec7655e7", null ],

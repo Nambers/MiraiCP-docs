@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MiraiCP
-   &#160;<span id="projectnumber">v2.8.0</span>
+   &#160;<span id="projectnumber">v2.9.0-M1</span>
    </div>
    <div id="projectbrief">MiraiCP api document</div>
   </td>
@@ -225,10 +225,10 @@ Public 属性</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">在文件 <a class="el" href="a00077_source.html">MessageSource.cpp</a> 第 <a class="el" href="a00077_source.html#l00030">30</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        : <a class="code hl_variable" href="a00357.html#a4b5fd176a16871dbb39e5be15b2b6c15">ids</a>(std::move(<a class="code hl_variable" href="a00357.html#a4b5fd176a16871dbb39e5be15b2b6c15">ids</a>)),</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>          <a class="code hl_variable" href="a00357.html#a358ba0250715b1c4692554995750675e">internalids</a>(std::move(<a class="code hl_variable" href="a00357.html#a358ba0250715b1c4692554995750675e">internalids</a>)),</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>          <a class="code hl_variable" href="a00357.html#afc51041bfb7cc7cb0915b5131ee05805">source</a>(std::move(<a class="code hl_variable" href="a00357.html#afc51041bfb7cc7cb0915b5131ee05805">source</a>)) {}</div>
+<p class="definition">在文件 <a class="el" href="a00077_source.html">MessageSource.cpp</a> 第 <a class="el" href="a00077_source.html#l00033">33</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        : <a class="code hl_variable" href="a00357.html#a4b5fd176a16871dbb39e5be15b2b6c15">ids</a>(std::move(<a class="code hl_variable" href="a00357.html#a4b5fd176a16871dbb39e5be15b2b6c15">ids</a>)),</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>          <a class="code hl_variable" href="a00357.html#a358ba0250715b1c4692554995750675e">internalids</a>(std::move(<a class="code hl_variable" href="a00357.html#a358ba0250715b1c4692554995750675e">internalids</a>)),</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>          <a class="code hl_variable" href="a00357.html#afc51041bfb7cc7cb0915b5131ee05805">source</a>(std::move(<a class="code hl_variable" href="a00357.html#afc51041bfb7cc7cb0915b5131ee05805">source</a>)) {}</div>
 <div class="ttc" id="aa00357_html_a358ba0250715b1c4692554995750675e"><div class="ttname"><a href="a00357.html#a358ba0250715b1c4692554995750675e">MiraiCP::MessageSource::internalids</a></div><div class="ttdeci">std::string internalids</div><div class="ttdoc">消息的internalids</div><div class="ttdef"><b>Definition:</b> <a href="a00080_source.html#l00038">MessageSource.h:38</a></div></div>
 <div class="ttc" id="aa00357_html_a4b5fd176a16871dbb39e5be15b2b6c15"><div class="ttname"><a href="a00357.html#a4b5fd176a16871dbb39e5be15b2b6c15">MiraiCP::MessageSource::ids</a></div><div class="ttdeci">std::string ids</div><div class="ttdoc">消息的ids</div><div class="ttdef"><b>Definition:</b> <a href="a00080_source.html#l00036">MessageSource.h:36</a></div></div>
 <div class="ttc" id="aa00357_html_afc51041bfb7cc7cb0915b5131ee05805"><div class="ttname"><a href="a00357.html#afc51041bfb7cc7cb0915b5131ee05805">MiraiCP::MessageSource::source</a></div><div class="ttdeci">std::string source</div><div class="ttdoc">消息源序列化</div><div class="ttdef"><b>Definition:</b> <a href="a00080_source.html#l00040">MessageSource.h:40</a></div></div>
@@ -264,20 +264,20 @@ Public 属性</h2></td></tr>
 <dl class="section note"><dt>注解</dt><dd>json应该为以下格式 <div class="fragment"><div class="line">{<span class="stringliteral">&quot;ids&quot;</span>:<span class="stringliteral">&quot;&quot;</span>, <span class="stringliteral">&quot;internalids&quot;</span>:<span class="stringliteral">&quot;&quot;</span>}</div>
 </div><!-- fragment --> </dd></dl>
 
-<p class="definition">在文件 <a class="el" href="a00077_source.html">MessageSource.cpp</a> 第 <a class="el" href="a00077_source.html#l00041">41</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>                                                                              {</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <a class="code hl_typedef" href="a00117.html#ac0a8a1bade77a57eeb1d94cfacfb75ce">json</a> j = json::parse(<a class="code hl_variable" href="a00357.html#afc51041bfb7cc7cb0915b5131ee05805">source</a>);</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        <span class="keywordflow">try</span> {</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>            <span class="keywordflow">return</span> {j[<span class="stringliteral">&quot;ids&quot;</span>].dump(), j[<span class="stringliteral">&quot;internalIds&quot;</span>].dump(), <a class="code hl_variable" href="a00357.html#afc51041bfb7cc7cb0915b5131ee05805">source</a>};</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        } <span class="keywordflow">catch</span> (json::type_error &amp;e) {</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>            <a class="code hl_variable" href="a00325.html#a268fd602157c3fa49616a8872c82bfb1">Logger::logger</a>.<a class="code hl_function" href="a00317.html#a418fad5b082009c5e40871d3cd88cacf">error</a>(<span class="stringliteral">&quot;消息源序列化出错，格式不符合(MessageSource::deserializeFromString)&quot;</span>);</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>            <a class="code hl_variable" href="a00325.html#a268fd602157c3fa49616a8872c82bfb1">Logger::logger</a>.<a class="code hl_function" href="a00317.html#a418fad5b082009c5e40871d3cd88cacf">error</a>(<a class="code hl_variable" href="a00357.html#afc51041bfb7cc7cb0915b5131ee05805">source</a>);</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>            <a class="code hl_variable" href="a00325.html#a268fd602157c3fa49616a8872c82bfb1">Logger::logger</a>.<a class="code hl_function" href="a00317.html#a418fad5b082009c5e40871d3cd88cacf">error</a>(e.what());</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>            <a class="code hl_define" href="a00101.html#a05895baa03633917e58dcb7228229097">MiraiCPThrow</a>(IllegalArgumentException(std::string(<span class="stringliteral">&quot;消息源序列化出错，格式不符合(MessageSource::deserializeFromString), &quot;</span>) + e.what()));</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        }</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    }</div>
+<p class="definition">在文件 <a class="el" href="a00077_source.html">MessageSource.cpp</a> 第 <a class="el" href="a00077_source.html#l00044">44</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>                                                                              {</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <a class="code hl_typedef" href="a00110.html#ab701e3ac61a85b337ec5c1abaad6742d">json</a> j = json::parse(<a class="code hl_variable" href="a00357.html#afc51041bfb7cc7cb0915b5131ee05805">source</a>);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <span class="keywordflow">try</span> {</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>            <span class="keywordflow">return</span> {j[<span class="stringliteral">&quot;ids&quot;</span>].dump(), j[<span class="stringliteral">&quot;internalIds&quot;</span>].dump(), <a class="code hl_variable" href="a00357.html#afc51041bfb7cc7cb0915b5131ee05805">source</a>};</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        } <span class="keywordflow">catch</span> (json::type_error &amp;e) {</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>            <a class="code hl_variable" href="a00325.html#a268fd602157c3fa49616a8872c82bfb1">Logger::logger</a>.<a class="code hl_function" href="a00317.html#a418fad5b082009c5e40871d3cd88cacf">error</a>(<span class="stringliteral">&quot;消息源序列化出错，格式不符合(MessageSource::deserializeFromString)&quot;</span>);</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            <a class="code hl_variable" href="a00325.html#a268fd602157c3fa49616a8872c82bfb1">Logger::logger</a>.<a class="code hl_function" href="a00317.html#a418fad5b082009c5e40871d3cd88cacf">error</a>(<a class="code hl_variable" href="a00357.html#afc51041bfb7cc7cb0915b5131ee05805">source</a>);</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>            <a class="code hl_variable" href="a00325.html#a268fd602157c3fa49616a8872c82bfb1">Logger::logger</a>.<a class="code hl_function" href="a00317.html#a418fad5b082009c5e40871d3cd88cacf">error</a>(e.what());</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>            <a class="code hl_define" href="a00101.html#a05895baa03633917e58dcb7228229097">MiraiCPThrow</a>(IllegalArgumentException(std::string(<span class="stringliteral">&quot;消息源序列化出错，格式不符合(MessageSource::deserializeFromString), &quot;</span>) + e.what()));</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        }</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    }</div>
 <div class="ttc" id="aa00101_html_a05895baa03633917e58dcb7228229097"><div class="ttname"><a href="a00101.html#a05895baa03633917e58dcb7228229097">MiraiCPThrow</a></div><div class="ttdeci">#define MiraiCPThrow(x)</div><div class="ttdef"><b>Definition:</b> <a href="a00101_source.html#l00019">ThreadManager.h:19</a></div></div>
-<div class="ttc" id="aa00117_html_ac0a8a1bade77a57eeb1d94cfacfb75ce"><div class="ttname"><a href="a00117.html#ac0a8a1bade77a57eeb1d94cfacfb75ce">MiraiCP::json</a></div><div class="ttdeci">nlohmann::json json</div><div class="ttdef"><b>Definition:</b> <a href="a00008_source.html#l00025">Config.h:25</a></div></div>
+<div class="ttc" id="aa00110_html_ab701e3ac61a85b337ec5c1abaad6742d"><div class="ttname"><a href="a00110.html#ab701e3ac61a85b337ec5c1abaad6742d">json</a></div><div class="ttdeci">nlohmann::json json</div><div class="ttdef"><b>Definition:</b> <a href="a00110_source.html#l00029">utils.cpp:29</a></div></div>
 <div class="ttc" id="aa00317_html_a418fad5b082009c5e40871d3cd88cacf"><div class="ttname"><a href="a00317.html#a418fad5b082009c5e40871d3cd88cacf">MiraiCP::Logger_interface::error</a></div><div class="ttdeci">void error(T... val)</div><div class="ttdoc">发送警告(warning级日志)</div><div class="ttdef"><b>Definition:</b> <a href="a00056_source.html#l00107">Logger.h:107</a></div></div>
 <div class="ttc" id="aa00325_html_a268fd602157c3fa49616a8872c82bfb1"><div class="ttname"><a href="a00325.html#a268fd602157c3fa49616a8872c82bfb1">MiraiCP::Logger::logger</a></div><div class="ttdeci">static Logger logger</div><div class="ttdef"><b>Definition:</b> <a href="a00056_source.html#l00135">Logger.h:135</a></div></div>
 </div><!-- fragment --><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -306,7 +306,7 @@ Public 属性</h2></td></tr>
 <div class="center"><img src="a00357_a1f98db6bbdf6b7d178bf92f55fd2e4dc_icgraph.png" border="0" usemap="#aa00357_a1f98db6bbdf6b7d178bf92f55fd2e4dc_icgraph" alt=""/></div>
 <map name="aa00357_a1f98db6bbdf6b7d178bf92f55fd2e4dc_icgraph" id="aa00357_a1f98db6bbdf6b7d178bf92f55fd2e4dc_icgraph">
 <area shape="rect" title="从json字符串反序列化到MessageSource对象" alt="" coords="1007,338,1177,379"/>
-<area shape="rect" href="a00349.html#a87ff4172ffc9c6477fb5d55e36d91b4f" title=" " alt="" coords="761,7,957,63"/>
+<area shape="rect" href="a00349.html#aeeb641cbcda9a71a199a177ec39bf837" title=" " alt="" coords="761,7,957,63"/>
 <area shape="rect" href="a00145.html#a426435ef6d4410c9ebfe27f53baa6cd4" title="取群聊中同群成员的下一个消息(发送人和群与本事件一样)" alt="" coords="505,86,701,127"/>
 <area shape="rect" href="a00145.html#a574c300a6f4a656133e0d910003291bd" title="取群聊下一个消息(群聊与本事件一样)" alt="" coords="761,142,957,183"/>
 <area shape="rect" href="a00149.html#aacd6904aaab5ca0ba5e6a47711f9fb79" title="取下一个消息(发送人和接收人和本事件一样)" alt="" coords="759,207,959,249"/>
@@ -314,17 +314,17 @@ Public 属性</h2></td></tr>
 <area shape="rect" href="a00349.html#a558be734956c9ee749220c57d45ba144" title=" " alt="" coords="777,338,940,379"/>
 <area shape="rect" href="a00357.html#a7814640913083a562f75f462ddc5802a" title="回复(引用并发送)" alt="" coords="772,403,945,445"/>
 <area shape="rect" href="a00357.html#a3c435f76d84c5b3217cc747a7f4cb02e" title="回复(引用并发送)" alt="" coords="773,469,944,510"/>
-<area shape="rect" href="a00129.html#a3d996647aa0ed54723982007937043d4" title=" " alt="" coords="764,535,953,561"/>
+<area shape="rect" href="a00129.html#ad0e4abab876815ddee37fa7a64385d36" title=" " alt="" coords="764,535,953,561"/>
 <area shape="rect" href="a00281.html#a088e7c45a7354edca612ba1ae2e2a5a9" title="发送给群或好友或群成员" alt="" coords="764,586,953,627"/>
 <area shape="rect" href="a00129.html#afe1f2da737384380eae71d28f4a0ee29" title="发送语音" alt="" coords="760,652,957,679"/>
-<area shape="rect" href="a00285.html#a0903dc41fb44391da9dcc6a60bdf6ea7" title=" " alt="" coords="505,5,701,61"/>
+<area shape="rect" href="a00285.html#ae8adc9f69b0bc64ba952a746085709dd" title=" " alt="" coords="505,5,701,61"/>
 <area shape="rect" href="a00129.html#a118f81d055f185a50ba6da4328b7bca1" title=" " alt="" coords="511,273,695,314"/>
 <area shape="rect" href="a00129.html#a8675bddd2ad0fc8393437553c2ec8919" title="回复并发送" alt="" coords="251,273,435,314"/>
 <area shape="rect" href="a00129.html#a7ac97399336eaaa70089d75f913fba6c" title="回复并发送" alt="" coords="5,273,189,314"/>
 <area shape="rect" href="a00349.html#af34b4d694bc8b326621db5d7d1292672" title=" " alt="" coords="522,338,685,379"/>
 <area shape="rect" href="a00349.html#a674c24d544390f68be14c26b1106749a" title="回复并发送" alt="" coords="259,338,427,379"/>
 <area shape="rect" href="a00129.html#ada7726d259050ba1cfb2803c55e5088f" title=" " alt="" coords="521,484,685,511"/>
-<area shape="rect" href="a00129.html#a075114376e789adc282a88d778740a55" title="发送MiraiCode信息" alt="" coords="496,535,711,561"/>
+<area shape="rect" href="a00129.html#aa39190b81b3062cfb466e2c0d1ee4939" title="发送MiraiCode信息" alt="" coords="496,535,711,561"/>
 <area shape="rect" href="a00129.html#abf2e266b124e932dd2f49915b0733df9" title="发送纯文本信息" alt="" coords="512,585,695,612"/>
 <area shape="rect" href="a00129.html#aab5369a58feffb6fa48a86f3ad8a483d" title="发送一条Message @detail 支持" alt="" coords="237,484,448,511"/>
 <area shape="rect" href="a00293.html#a13a0cbb1d4b421d782acbd6e85830707" title="发送语音" alt="" coords="513,644,693,671"/>
@@ -406,24 +406,24 @@ Public 属性</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>返回</dt><dd><a class="el" href="a00357.html">MessageSource</a> </dd></dl>
-<dl class="deprecated"><dt><b><a class="el" href="a00116.html#_deprecated000010">弃用:</a></b></dt><dd>use <a class="el" href="a00129.html#a8675bddd2ad0fc8393437553c2ec8919" title="回复并发送">Contact.quoteAndSendMessage</a>, since v2.8.1 </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="a00116.html#_deprecated000013">弃用:</a></b></dt><dd>use <a class="el" href="a00129.html#a8675bddd2ad0fc8393437553c2ec8919" title="回复并发送">Contact.quoteAndSendMessage</a>, since v2.8.1 </dd></dl>
 
-<p class="definition">在文件 <a class="el" href="a00077_source.html">MessageSource.cpp</a> 第 <a class="el" href="a00077_source.html#l00053">53</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>                                                                                                                {</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        <a class="code hl_typedef" href="a00117.html#ac0a8a1bade77a57eeb1d94cfacfb75ce">json</a> obj;</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        <a class="code hl_typedef" href="a00117.html#ac0a8a1bade77a57eeb1d94cfacfb75ce">json</a> sign;</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        obj[<span class="stringliteral">&quot;messageSource&quot;</span>] = this-&gt;<a class="code hl_function" href="a00357.html#aca51487498128b420019182e1331a282">serializeToString</a>();</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        obj[<span class="stringliteral">&quot;msg&quot;</span>] = content;</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        sign[<span class="stringliteral">&quot;MiraiCode&quot;</span>] = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        sign[<span class="stringliteral">&quot;groupid&quot;</span>] = groupid;</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        obj[<span class="stringliteral">&quot;sign&quot;</span>] = sign.dump();</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        std::string re = <a class="code hl_function" href="a00125.html#a22d2ec34277e0d8d4684528d7bee621e">Config::koperation</a>(<a class="code hl_enumvalue" href="a00125.html#a1bc3c425340774687507c1683967231ba24ba94521e7556ad3f9ae52cf9cf8518">Config::SendWithQuote</a>, obj, env);</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="a00357.html#a1f98db6bbdf6b7d178bf92f55fd2e4dc">MessageSource::deserializeFromString</a>(re);</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    }</div>
-<div class="ttc" id="aa00125_html_a1bc3c425340774687507c1683967231ba24ba94521e7556ad3f9ae52cf9cf8518"><div class="ttname"><a href="a00125.html#a1bc3c425340774687507c1683967231ba24ba94521e7556ad3f9ae52cf9cf8518">MiraiCP::Config::SendWithQuote</a></div><div class="ttdeci">@ SendWithQuote</div><div class="ttdoc">回复(引用并发送)</div><div class="ttdef"><b>Definition:</b> <a href="a00008_source.html#l00077">Config.h:77</a></div></div>
-<div class="ttc" id="aa00125_html_a22d2ec34277e0d8d4684528d7bee621e"><div class="ttname"><a href="a00125.html#a22d2ec34277e0d8d4684528d7bee621e">MiraiCP::Config::koperation</a></div><div class="ttdeci">static std::string koperation(operation_set type, nlohmann::json &amp;data, JNIEnv *=ThreadManager::getEnv(), bool catchErr=true, const std::string &amp;errorInfo=&quot;&quot;)</div><div class="ttdoc">调用mirai操作</div><div class="ttdef"><b>Definition:</b> <a href="a00005_source.html#l00043">Config.cpp:43</a></div></div>
-<div class="ttc" id="aa00357_html_a1f98db6bbdf6b7d178bf92f55fd2e4dc"><div class="ttname"><a href="a00357.html#a1f98db6bbdf6b7d178bf92f55fd2e4dc">MiraiCP::MessageSource::deserializeFromString</a></div><div class="ttdeci">static MessageSource deserializeFromString(const std::string &amp;source)</div><div class="ttdoc">从json字符串反序列化到MessageSource对象</div><div class="ttdef"><b>Definition:</b> <a href="a00077_source.html#l00041">MessageSource.cpp:41</a></div></div>
-<div class="ttc" id="aa00357_html_aca51487498128b420019182e1331a282"><div class="ttname"><a href="a00357.html#aca51487498128b420019182e1331a282">MiraiCP::MessageSource::serializeToString</a></div><div class="ttdeci">std::string serializeToString() const</div><div class="ttdef"><b>Definition:</b> <a href="a00077_source.html#l00037">MessageSource.cpp:37</a></div></div>
+<p class="definition">在文件 <a class="el" href="a00077_source.html">MessageSource.cpp</a> 第 <a class="el" href="a00077_source.html#l00056">56</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>                                                                                                                {</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        <a class="code hl_typedef" href="a00110.html#ab701e3ac61a85b337ec5c1abaad6742d">json</a> obj;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        <a class="code hl_typedef" href="a00110.html#ab701e3ac61a85b337ec5c1abaad6742d">json</a> sign;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        obj[<span class="stringliteral">&quot;messageSource&quot;</span>] = this-&gt;<a class="code hl_function" href="a00357.html#aca51487498128b420019182e1331a282">serializeToString</a>();</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        obj[<span class="stringliteral">&quot;msg&quot;</span>] = content;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        sign[<span class="stringliteral">&quot;MiraiCode&quot;</span>] = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        sign[<span class="stringliteral">&quot;groupid&quot;</span>] = groupid;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        obj[<span class="stringliteral">&quot;sign&quot;</span>] = sign.dump();</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        std::string re = <a class="code hl_function" href="a00125.html#af81f741728a4ed24a81c76667e41c0eb">Config::koperation</a>(<a class="code hl_enumvalue" href="a00125.html#a1bc3c425340774687507c1683967231ba24ba94521e7556ad3f9ae52cf9cf8518">Config::SendWithQuote</a>, obj, env);</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="a00357.html#a1f98db6bbdf6b7d178bf92f55fd2e4dc">MessageSource::deserializeFromString</a>(re);</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    }</div>
+<div class="ttc" id="aa00125_html_a1bc3c425340774687507c1683967231ba24ba94521e7556ad3f9ae52cf9cf8518"><div class="ttname"><a href="a00125.html#a1bc3c425340774687507c1683967231ba24ba94521e7556ad3f9ae52cf9cf8518">MiraiCP::Config::SendWithQuote</a></div><div class="ttdeci">@ SendWithQuote</div><div class="ttdoc">回复(引用并发送)</div><div class="ttdef"><b>Definition:</b> <a href="a00008_source.html#l00076">Config.h:76</a></div></div>
+<div class="ttc" id="aa00125_html_af81f741728a4ed24a81c76667e41c0eb"><div class="ttname"><a href="a00125.html#af81f741728a4ed24a81c76667e41c0eb">MiraiCP::Config::koperation</a></div><div class="ttdeci">static std::string koperation(operation_set type, const nlohmann::json &amp;data, JNIEnv *=ThreadManager::getEnv(), bool catchErr=true, const std::string &amp;errorInfo=&quot;&quot;)</div><div class="ttdoc">调用mirai操作</div><div class="ttdef"><b>Definition:</b> <a href="a00005_source.html#l00043">Config.cpp:43</a></div></div>
+<div class="ttc" id="aa00357_html_a1f98db6bbdf6b7d178bf92f55fd2e4dc"><div class="ttname"><a href="a00357.html#a1f98db6bbdf6b7d178bf92f55fd2e4dc">MiraiCP::MessageSource::deserializeFromString</a></div><div class="ttdeci">static MessageSource deserializeFromString(const std::string &amp;source)</div><div class="ttdoc">从json字符串反序列化到MessageSource对象</div><div class="ttdef"><b>Definition:</b> <a href="a00077_source.html#l00044">MessageSource.cpp:44</a></div></div>
+<div class="ttc" id="aa00357_html_aca51487498128b420019182e1331a282"><div class="ttname"><a href="a00357.html#aca51487498128b420019182e1331a282">MiraiCP::MessageSource::serializeToString</a></div><div class="ttdeci">std::string serializeToString() const</div><div class="ttdef"><b>Definition:</b> <a href="a00077_source.html#l00040">MessageSource.cpp:40</a></div></div>
 </div><!-- fragment --><div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-3-trigger" src="closed.png" alt="+"/> 函数调用图:</div>
 <div id="dynsection-3-summary" class="dynsummary" style="display:block;">
@@ -433,7 +433,7 @@ Public 属性</h2></td></tr>
 <map name="aa00357_a7814640913083a562f75f462ddc5802a_cgraph" id="aa00357_a7814640913083a562f75f462ddc5802a_cgraph">
 <area shape="rect" title="回复(引用并发送)" alt="" coords="5,100,179,142"/>
 <area shape="rect" href="a00357.html#a1f98db6bbdf6b7d178bf92f55fd2e4dc" title="从json字符串反序列化到MessageSource对象" alt="" coords="455,42,626,83"/>
-<area shape="rect" href="a00125.html#a22d2ec34277e0d8d4684528d7bee621e" title="调用mirai操作" alt="" coords="227,108,407,134"/>
+<area shape="rect" href="a00125.html#af81f741728a4ed24a81c76667e41c0eb" title="调用mirai操作" alt="" coords="227,108,407,134"/>
 <area shape="rect" href="a00357.html#aca51487498128b420019182e1331a282" title=" " alt="" coords="231,159,402,200"/>
 <area shape="rect" href="a00317.html#a418fad5b082009c5e40871d3cd88cacf" title="发送警告(warning级日志)" alt="" coords="675,100,845,142"/>
 <area shape="rect" href="a00437.html#a365e1740117b0fb9d5990855a26dba4f" title="取env,如果不存在重新获取" alt="" coords="893,100,1059,142"/>
@@ -498,7 +498,7 @@ Public 属性</h2></td></tr>
   </dd>
 </dl>
 <dl class="section see"><dt>参见</dt><dd><a class="el" href="a00357.html#a70bcdcc3e3bc62724f859248e75a0f21" title="回复(引用并发送miraicode)">MessageSource::quoteAndSendMiraiCode</a> </dd></dl>
-<dl class="deprecated"><dt><b><a class="el" href="a00116.html#_deprecated000008">弃用:</a></b></dt><dd>用Contact.quoteAndSendMessage, since v2.8.1 </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="a00116.html#_deprecated000011">弃用:</a></b></dt><dd>用Contact.quoteAndSendMessage, since v2.8.1 </dd></dl>
 
 <p class="definition">在文件 <a class="el" href="a00080_source.html">MessageSource.h</a> 第 <a class="el" href="a00080_source.html#l00051">51</a> 行定义.</p>
 <div class="fragment"><div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>                                                                         {</div>
@@ -513,7 +513,7 @@ Public 属性</h2></td></tr>
 <div class="center"><img src="a00357_a70bcdcc3e3bc62724f859248e75a0f21_cgraph.png" border="0" usemap="#aa00357_a70bcdcc3e3bc62724f859248e75a0f21_cgraph" alt=""/></div>
 <map name="aa00357_a70bcdcc3e3bc62724f859248e75a0f21_cgraph" id="aa00357_a70bcdcc3e3bc62724f859248e75a0f21_cgraph">
 <area shape="rect" title="回复(引用并发送miraicode)" alt="" coords="5,29,179,71"/>
-<area shape="rect" href="a00361.html#a96bdd3af5e564960b2b7f562032b1a15" title=" " alt="" coords="227,29,385,71"/>
+<area shape="rect" href="a00361.html#a96bdd3af5e564960b2b7f562032b1a15" title="返回MiraiCode" alt="" coords="227,29,385,71"/>
 </map>
 </div>
 <div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -570,20 +570,20 @@ Public 属性</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>返回</dt><dd><a class="el" href="a00357.html">MessageSource</a> </dd></dl>
-<dl class="deprecated"><dt><b><a class="el" href="a00116.html#_deprecated000009">弃用:</a></b></dt><dd>use <a class="el" href="a00129.html#a8675bddd2ad0fc8393437553c2ec8919" title="回复并发送">Contact.quoteAndSendMessage</a>, since v2.8.1 </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="a00116.html#_deprecated000012">弃用:</a></b></dt><dd>use <a class="el" href="a00129.html#a8675bddd2ad0fc8393437553c2ec8919" title="回复并发送">Contact.quoteAndSendMessage</a>, since v2.8.1 </dd></dl>
 
-<p class="definition">在文件 <a class="el" href="a00077_source.html">MessageSource.cpp</a> 第 <a class="el" href="a00077_source.html#l00065">65</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>                                                                                                          {</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        <a class="code hl_typedef" href="a00117.html#ac0a8a1bade77a57eeb1d94cfacfb75ce">json</a> obj;</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        <a class="code hl_typedef" href="a00117.html#ac0a8a1bade77a57eeb1d94cfacfb75ce">json</a> sign;</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        obj[<span class="stringliteral">&quot;messageSource&quot;</span>] = this-&gt;<a class="code hl_function" href="a00357.html#aca51487498128b420019182e1331a282">serializeToString</a>();</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        obj[<span class="stringliteral">&quot;msg&quot;</span>] = content;</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        sign[<span class="stringliteral">&quot;MiraiCode&quot;</span>] = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        sign[<span class="stringliteral">&quot;groupid&quot;</span>] = groupid;</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        obj[<span class="stringliteral">&quot;sign&quot;</span>] = sign.dump();</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        std::string re = <a class="code hl_function" href="a00125.html#a22d2ec34277e0d8d4684528d7bee621e">Config::koperation</a>(<a class="code hl_enumvalue" href="a00125.html#a1bc3c425340774687507c1683967231ba24ba94521e7556ad3f9ae52cf9cf8518">Config::SendWithQuote</a>, obj, env);</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="a00357.html#a1f98db6bbdf6b7d178bf92f55fd2e4dc">MessageSource::deserializeFromString</a>(re);</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    }</div>
+<p class="definition">在文件 <a class="el" href="a00077_source.html">MessageSource.cpp</a> 第 <a class="el" href="a00077_source.html#l00068">68</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>                                                                                                          {</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        <a class="code hl_typedef" href="a00110.html#ab701e3ac61a85b337ec5c1abaad6742d">json</a> obj;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        <a class="code hl_typedef" href="a00110.html#ab701e3ac61a85b337ec5c1abaad6742d">json</a> sign;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        obj[<span class="stringliteral">&quot;messageSource&quot;</span>] = this-&gt;<a class="code hl_function" href="a00357.html#aca51487498128b420019182e1331a282">serializeToString</a>();</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        obj[<span class="stringliteral">&quot;msg&quot;</span>] = content;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        sign[<span class="stringliteral">&quot;MiraiCode&quot;</span>] = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        sign[<span class="stringliteral">&quot;groupid&quot;</span>] = groupid;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        obj[<span class="stringliteral">&quot;sign&quot;</span>] = sign.dump();</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        std::string re = <a class="code hl_function" href="a00125.html#af81f741728a4ed24a81c76667e41c0eb">Config::koperation</a>(<a class="code hl_enumvalue" href="a00125.html#a1bc3c425340774687507c1683967231ba24ba94521e7556ad3f9ae52cf9cf8518">Config::SendWithQuote</a>, obj, env);</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="a00357.html#a1f98db6bbdf6b7d178bf92f55fd2e4dc">MessageSource::deserializeFromString</a>(re);</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    }</div>
 </div><!-- fragment --><div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-6-trigger" src="closed.png" alt="+"/> 函数调用图:</div>
 <div id="dynsection-6-summary" class="dynsummary" style="display:block;">
@@ -593,7 +593,7 @@ Public 属性</h2></td></tr>
 <map name="aa00357_a3c435f76d84c5b3217cc747a7f4cb02e_cgraph" id="aa00357_a3c435f76d84c5b3217cc747a7f4cb02e_cgraph">
 <area shape="rect" title="回复(引用并发送)" alt="" coords="5,100,176,142"/>
 <area shape="rect" href="a00357.html#a1f98db6bbdf6b7d178bf92f55fd2e4dc" title="从json字符串反序列化到MessageSource对象" alt="" coords="453,42,623,83"/>
-<area shape="rect" href="a00125.html#a22d2ec34277e0d8d4684528d7bee621e" title="调用mirai操作" alt="" coords="224,108,404,134"/>
+<area shape="rect" href="a00125.html#af81f741728a4ed24a81c76667e41c0eb" title="调用mirai操作" alt="" coords="224,108,404,134"/>
 <area shape="rect" href="a00357.html#aca51487498128b420019182e1331a282" title=" " alt="" coords="229,159,399,200"/>
 <area shape="rect" href="a00317.html#a418fad5b082009c5e40871d3cd88cacf" title="发送警告(warning级日志)" alt="" coords="672,100,843,142"/>
 <area shape="rect" href="a00437.html#a365e1740117b0fb9d5990855a26dba4f" title="取env,如果不存在重新获取" alt="" coords="891,100,1056,142"/>
@@ -628,16 +628,16 @@ Public 属性</h2></td></tr>
 
 <p>撤回该信息 </p>
 
-<p class="definition">在文件 <a class="el" href="a00077_source.html">MessageSource.cpp</a> 第 <a class="el" href="a00077_source.html#l00021">21</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>                                                {</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        <a class="code hl_typedef" href="a00117.html#ac0a8a1bade77a57eeb1d94cfacfb75ce">json</a> j;</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        j[<span class="stringliteral">&quot;source&quot;</span>] = this-&gt;<a class="code hl_function" href="a00357.html#aca51487498128b420019182e1331a282">serializeToString</a>();</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        std::string re = <a class="code hl_function" href="a00125.html#a22d2ec34277e0d8d4684528d7bee621e">Config::koperation</a>(<a class="code hl_enumvalue" href="a00125.html#a1bc3c425340774687507c1683967231ba0a3c75ba9d67b444477df79a51b9f7c2">Config::Recall</a>, j, env);</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        <span class="keywordflow">if</span> (re == <span class="stringliteral">&quot;Y&quot;</span>) <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        <span class="keywordflow">if</span> (re == <span class="stringliteral">&quot;E1&quot;</span>) <a class="code hl_define" href="a00101.html#a05895baa03633917e58dcb7228229097">MiraiCPThrow</a>(BotException());</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        <span class="keywordflow">if</span> (re == <span class="stringliteral">&quot;E2&quot;</span>) <a class="code hl_define" href="a00101.html#a05895baa03633917e58dcb7228229097">MiraiCPThrow</a>(RecallException());</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    }</div>
-<div class="ttc" id="aa00125_html_a1bc3c425340774687507c1683967231ba0a3c75ba9d67b444477df79a51b9f7c2"><div class="ttname"><a href="a00125.html#a1bc3c425340774687507c1683967231ba0a3c75ba9d67b444477df79a51b9f7c2">MiraiCP::Config::Recall</a></div><div class="ttdeci">@ Recall</div><div class="ttdoc">撤回信息</div><div class="ttdef"><b>Definition:</b> <a href="a00008_source.html#l00039">Config.h:39</a></div></div>
+<p class="definition">在文件 <a class="el" href="a00077_source.html">MessageSource.cpp</a> 第 <a class="el" href="a00077_source.html#l00024">24</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>                                                {</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        <a class="code hl_typedef" href="a00110.html#ab701e3ac61a85b337ec5c1abaad6742d">json</a> j;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        j[<span class="stringliteral">&quot;source&quot;</span>] = this-&gt;<a class="code hl_function" href="a00357.html#aca51487498128b420019182e1331a282">serializeToString</a>();</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        std::string re = <a class="code hl_function" href="a00125.html#af81f741728a4ed24a81c76667e41c0eb">Config::koperation</a>(<a class="code hl_enumvalue" href="a00125.html#a1bc3c425340774687507c1683967231ba0a3c75ba9d67b444477df79a51b9f7c2">Config::Recall</a>, j, env);</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        <span class="keywordflow">if</span> (re == <span class="stringliteral">&quot;Y&quot;</span>) <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        <span class="keywordflow">if</span> (re == <span class="stringliteral">&quot;E1&quot;</span>) <a class="code hl_define" href="a00101.html#a05895baa03633917e58dcb7228229097">MiraiCPThrow</a>(BotException());</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        <span class="keywordflow">if</span> (re == <span class="stringliteral">&quot;E2&quot;</span>) <a class="code hl_define" href="a00101.html#a05895baa03633917e58dcb7228229097">MiraiCPThrow</a>(RecallException());</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    }</div>
+<div class="ttc" id="aa00125_html_a1bc3c425340774687507c1683967231ba0a3c75ba9d67b444477df79a51b9f7c2"><div class="ttname"><a href="a00125.html#a1bc3c425340774687507c1683967231ba0a3c75ba9d67b444477df79a51b9f7c2">MiraiCP::Config::Recall</a></div><div class="ttdeci">@ Recall</div><div class="ttdoc">撤回信息</div><div class="ttdef"><b>Definition:</b> <a href="a00008_source.html#l00038">Config.h:38</a></div></div>
 </div><!-- fragment --><div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-7-trigger" src="closed.png" alt="+"/> 函数调用图:</div>
 <div id="dynsection-7-summary" class="dynsummary" style="display:block;">
@@ -646,7 +646,7 @@ Public 属性</h2></td></tr>
 <div class="center"><img src="a00357_aae0711ff7bdfd3167b380d6fd8069491_cgraph.png" border="0" usemap="#aa00357_aae0711ff7bdfd3167b380d6fd8069491_cgraph" alt=""/></div>
 <map name="aa00357_aae0711ff7bdfd3167b380d6fd8069491_cgraph" id="aa00357_aae0711ff7bdfd3167b380d6fd8069491_cgraph">
 <area shape="rect" title="撤回该信息" alt="" coords="5,130,176,171"/>
-<area shape="rect" href="a00125.html#a22d2ec34277e0d8d4684528d7bee621e" title="调用mirai操作" alt="" coords="224,108,404,134"/>
+<area shape="rect" href="a00125.html#af81f741728a4ed24a81c76667e41c0eb" title="调用mirai操作" alt="" coords="224,108,404,134"/>
 <area shape="rect" href="a00357.html#aca51487498128b420019182e1331a282" title=" " alt="" coords="229,159,399,200"/>
 <area shape="rect" href="a00445.html#a3edca5ea268b6b1c023810b928701f55" title=" " alt="" coords="452,82,624,109"/>
 <area shape="rect" href="a00445.html#ad2e5e5b78f6b79428bca2e9b44ac8265" title=" " alt="" coords="452,133,624,160"/>
@@ -678,10 +678,10 @@ Public 属性</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="a00077_source.html">MessageSource.cpp</a> 第 <a class="el" href="a00077_source.html#l00037">37</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>                                                     {</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="a00357.html#afc51041bfb7cc7cb0915b5131ee05805">source</a>;</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    }</div>
+<p class="definition">在文件 <a class="el" href="a00077_source.html">MessageSource.cpp</a> 第 <a class="el" href="a00077_source.html#l00040">40</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>                                                     {</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="a00357.html#afc51041bfb7cc7cb0915b5131ee05805">source</a>;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    }</div>
 </div><!-- fragment --><div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-8-trigger" src="closed.png" alt="+"/> 这是这个函数的调用关系图:</div>
 <div id="dynsection-8-summary" class="dynsummary" style="display:block;">
@@ -768,7 +768,7 @@ Public 属性</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="a00117.html">MiraiCP</a></li><li class="navelem"><a class="el" href="a00357.html">MessageSource</a></li>
-    <li class="footer">生成于 2021年 十一月 21日 星期日 14:40:14 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="footer">生成于 2021年 十二月 5日 星期日 20:04:26 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
 <script type="text/javascript">

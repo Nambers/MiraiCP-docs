@@ -4,8 +4,10 @@ var files_dup =
       [ "MiraiCP::Bot", "a00121.html", "a00121" ]
     ] ],
     [ "Config.cpp", "a00005.html", null ],
-    [ "Config.h", "a00008.html", "a00008" ],
-    [ "Contact.cpp", "a00011.html", null ],
+    [ "Config.h", "a00008.html", [
+      [ "MiraiCP::Config", "a00125.html", "a00125" ]
+    ] ],
+    [ "Contact.cpp", "a00011.html", "a00011" ],
     [ "Contact.h", "a00014.html", [
       [ "MiraiCP::Contact", "a00129.html", "a00129" ]
     ] ],

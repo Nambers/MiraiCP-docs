@@ -4,7 +4,7 @@ var searchData=
   ['recall_1',['recall',['../a00357.html#aae0711ff7bdfd3167b380d6fd8069491',1,'MiraiCP::MessageSource']]],
   ['recallevent_2',['RecallEvent',['../a00169.html#a8f34646f10c6059226357b96876cec3e',1,'MiraiCP::RecallEvent']]],
   ['recallexception_3',['RecallException',['../a00261.html#ab70029a99574b211c34b4f1ee042572e',1,'MiraiCP::RecallException']]],
-  ['refreshinfo_4',['refreshInfo',['../a00121.html#a9424e9d17f3daa1c517a482aaedbe826',1,'MiraiCP::Bot::refreshInfo()'],['../a00129.html#ab30966176a71f0071150c68d00804102',1,'MiraiCP::Contact::refreshInfo()'],['../a00289.html#adcb6e1cb9a54ef532d9996d9c240b4c4',1,'MiraiCP::Friend::refreshInfo()'],['../a00293.html#a432d6ad6e92a9018c4788195b2d62f05',1,'MiraiCP::Group::refreshInfo()'],['../a00345.html#a0b970ea112ffd72534c1a98843bd6636',1,'MiraiCP::Member::refreshInfo()']]],
+  ['refreshinfo_4',['refreshInfo',['../a00121.html#a9424e9d17f3daa1c517a482aaedbe826',1,'MiraiCP::Bot::refreshInfo()'],['../a00129.html#ab30966176a71f0071150c68d00804102',1,'MiraiCP::Contact::refreshInfo()'],['../a00289.html#adcb6e1cb9a54ef532d9996d9c240b4c4',1,'MiraiCP::Friend::refreshInfo()'],['../a00293.html#a432d6ad6e92a9018c4788195b2d62f05',1,'MiraiCP::Group::refreshInfo()'],['../a00345.html#a0b970ea112ffd72534c1a98843bd6636',1,'MiraiCP::Member::refreshInfo()'],['../a00393.html#a9a5cea4a55c4625984364858b1d2225a',1,'MiraiCP::Image::refreshInfo()']]],
   ['registerevent_5',['registerEvent',['../a00205.html#a0b8c9683d3568a13b07423425912143d',1,'MiraiCP::Event']]],
   ['registerhandle_6',['registerHandle',['../a00317.html#aa3e0ad0c5771cee4583b577981105114',1,'MiraiCP::Logger_interface']]],
   ['registermethods_7',['registerMethods',['../a00110.html#aeb3405447431287ce1e38aef6797b8e8',1,'utils.cpp']]],

@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MiraiCP
-   &#160;<span id="projectnumber">v2.8.0</span>
+   &#160;<span id="projectnumber">v2.9.0-M1</span>
    </div>
    <div id="projectbrief">MiraiCP api document</div>
   </td>
@@ -332,7 +332,7 @@ Public 属性</h2></td></tr>
 <area shape="rect" title="接受申请" alt="" coords="5,75,191,116"/>
 <area shape="rect" href="a00157.html#a113900b854bd92448127adda43f393db" title="接受好友申请" alt="" coords="239,75,424,116"/>
 <area shape="rect" href="a00317.html#a418fad5b082009c5e40871d3cd88cacf" title="发送警告(warning级日志)" alt="" coords="920,100,1091,142"/>
-<area shape="rect" href="a00125.html#a22d2ec34277e0d8d4684528d7bee621e" title="调用mirai操作" alt="" coords="472,108,652,134"/>
+<area shape="rect" href="a00125.html#af81f741728a4ed24a81c76667e41c0eb" title="调用mirai操作" alt="" coords="472,108,652,134"/>
 <area shape="rect" href="a00437.html#a365e1740117b0fb9d5990855a26dba4f" title="取env,如果不存在重新获取" alt="" coords="1139,100,1304,142"/>
 <area shape="rect" href="a00317.html#aaeeaa321f40dd6bf2c653459248fd747" title="日志底层实现封装" alt="" coords="1792,91,1963,132"/>
 <area shape="rect" href="a00317.html#a03e193b2ae9547c7bcac58ebe54a1aee" title=" " alt="" coords="1784,182,1971,209"/>
@@ -452,17 +452,17 @@ Public 属性</h2></td></tr>
 
 <p class="definition">在文件 <a class="el" href="a00026_source.html">Event.h</a> 第 <a class="el" href="a00026_source.html#l00225">225</a> 行定义.</p>
 <div class="fragment"><div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>                                                                                      {</div>
-<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>            <a class="code hl_typedef" href="a00117.html#ac0a8a1bade77a57eeb1d94cfacfb75ce">nlohmann::json</a> j;</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>            <a class="code hl_typedef" href="a00110.html#ab701e3ac61a85b337ec5c1abaad6742d">nlohmann::json</a> j;</div>
 <div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>            j[<span class="stringliteral">&quot;text&quot;</span>] = <a class="code hl_variable" href="a00157.html#a4b48f29f9ac4443abf0a76590690a897">source</a>;</div>
 <div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>            j[<span class="stringliteral">&quot;operate&quot;</span>] = <a class="code hl_function" href="a00157.html#abf7029978268eea4f28877b749ccbbd0">accept</a>;</div>
 <div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>            j[<span class="stringliteral">&quot;botid&quot;</span>] = botid;</div>
 <div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>            j[<span class="stringliteral">&quot;ban&quot;</span>] = ban;</div>
-<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>            std::string re = <a class="code hl_function" href="a00125.html#a22d2ec34277e0d8d4684528d7bee621e">Config::koperation</a>(<a class="code hl_enumvalue" href="a00125.html#a1bc3c425340774687507c1683967231badffba064c616a27ee843dff58ef9d2b4">Config::Nfroperation</a>, j, env);</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>            std::string re = <a class="code hl_function" href="a00125.html#af81f741728a4ed24a81c76667e41c0eb">Config::koperation</a>(<a class="code hl_enumvalue" href="a00125.html#a1bc3c425340774687507c1683967231badffba064c616a27ee843dff58ef9d2b4">Config::Nfroperation</a>, j, env);</div>
 <div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>            <span class="keywordflow">if</span> (re == <span class="stringliteral">&quot;E&quot;</span>) <a class="code hl_variable" href="a00325.html#a268fd602157c3fa49616a8872c82bfb1">Logger::logger</a>.<a class="code hl_function" href="a00317.html#a418fad5b082009c5e40871d3cd88cacf">error</a>(<span class="stringliteral">&quot;好友申请事件同意失败(可能因为重复处理),id:&quot;</span> + <a class="code hl_variable" href="a00157.html#a4b48f29f9ac4443abf0a76590690a897">source</a>);</div>
 <div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>        }</div>
-<div class="ttc" id="aa00117_html_ac0a8a1bade77a57eeb1d94cfacfb75ce"><div class="ttname"><a href="a00117.html#ac0a8a1bade77a57eeb1d94cfacfb75ce">MiraiCP::json</a></div><div class="ttdeci">nlohmann::json json</div><div class="ttdef"><b>Definition:</b> <a href="a00008_source.html#l00025">Config.h:25</a></div></div>
-<div class="ttc" id="aa00125_html_a1bc3c425340774687507c1683967231badffba064c616a27ee843dff58ef9d2b4"><div class="ttname"><a href="a00125.html#a1bc3c425340774687507c1683967231badffba064c616a27ee843dff58ef9d2b4">MiraiCP::Config::Nfroperation</a></div><div class="ttdeci">@ Nfroperation</div><div class="ttdoc">好友申请事件</div><div class="ttdef"><b>Definition:</b> <a href="a00008_source.html#l00073">Config.h:73</a></div></div>
-<div class="ttc" id="aa00125_html_a22d2ec34277e0d8d4684528d7bee621e"><div class="ttname"><a href="a00125.html#a22d2ec34277e0d8d4684528d7bee621e">MiraiCP::Config::koperation</a></div><div class="ttdeci">static std::string koperation(operation_set type, nlohmann::json &amp;data, JNIEnv *=ThreadManager::getEnv(), bool catchErr=true, const std::string &amp;errorInfo=&quot;&quot;)</div><div class="ttdoc">调用mirai操作</div><div class="ttdef"><b>Definition:</b> <a href="a00005_source.html#l00043">Config.cpp:43</a></div></div>
+<div class="ttc" id="aa00110_html_ab701e3ac61a85b337ec5c1abaad6742d"><div class="ttname"><a href="a00110.html#ab701e3ac61a85b337ec5c1abaad6742d">json</a></div><div class="ttdeci">nlohmann::json json</div><div class="ttdef"><b>Definition:</b> <a href="a00110_source.html#l00029">utils.cpp:29</a></div></div>
+<div class="ttc" id="aa00125_html_a1bc3c425340774687507c1683967231badffba064c616a27ee843dff58ef9d2b4"><div class="ttname"><a href="a00125.html#a1bc3c425340774687507c1683967231badffba064c616a27ee843dff58ef9d2b4">MiraiCP::Config::Nfroperation</a></div><div class="ttdeci">@ Nfroperation</div><div class="ttdoc">好友申请事件</div><div class="ttdef"><b>Definition:</b> <a href="a00008_source.html#l00072">Config.h:72</a></div></div>
+<div class="ttc" id="aa00125_html_af81f741728a4ed24a81c76667e41c0eb"><div class="ttname"><a href="a00125.html#af81f741728a4ed24a81c76667e41c0eb">MiraiCP::Config::koperation</a></div><div class="ttdeci">static std::string koperation(operation_set type, const nlohmann::json &amp;data, JNIEnv *=ThreadManager::getEnv(), bool catchErr=true, const std::string &amp;errorInfo=&quot;&quot;)</div><div class="ttdoc">调用mirai操作</div><div class="ttdef"><b>Definition:</b> <a href="a00005_source.html#l00043">Config.cpp:43</a></div></div>
 <div class="ttc" id="aa00157_html_abf7029978268eea4f28877b749ccbbd0"><div class="ttname"><a href="a00157.html#abf7029978268eea4f28877b749ccbbd0">MiraiCP::NewFriendRequestEvent::accept</a></div><div class="ttdeci">void accept(JNIEnv *env=ThreadManager::getEnv())</div><div class="ttdoc">接受申请</div><div class="ttdef"><b>Definition:</b> <a href="a00026_source.html#l00243">Event.h:243</a></div></div>
 <div class="ttc" id="aa00317_html_a418fad5b082009c5e40871d3cd88cacf"><div class="ttname"><a href="a00317.html#a418fad5b082009c5e40871d3cd88cacf">MiraiCP::Logger_interface::error</a></div><div class="ttdeci">void error(T... val)</div><div class="ttdoc">发送警告(warning级日志)</div><div class="ttdef"><b>Definition:</b> <a href="a00056_source.html#l00107">Logger.h:107</a></div></div>
 <div class="ttc" id="aa00325_html_a268fd602157c3fa49616a8872c82bfb1"><div class="ttname"><a href="a00325.html#a268fd602157c3fa49616a8872c82bfb1">MiraiCP::Logger::logger</a></div><div class="ttdeci">static Logger logger</div><div class="ttdef"><b>Definition:</b> <a href="a00056_source.html#l00135">Logger.h:135</a></div></div>
@@ -476,7 +476,7 @@ Public 属性</h2></td></tr>
 <area shape="rect" title="接受好友申请" alt="" coords="5,35,191,76"/>
 <area shape="rect" href="a00157.html#abf7029978268eea4f28877b749ccbbd0" title="接受申请" alt="" coords="239,5,424,47"/>
 <area shape="rect" href="a00317.html#a418fad5b082009c5e40871d3cd88cacf" title="发送警告(warning级日志)" alt="" coords="692,115,863,156"/>
-<area shape="rect" href="a00125.html#a22d2ec34277e0d8d4684528d7bee621e" title="调用mirai操作" alt="" coords="241,122,421,149"/>
+<area shape="rect" href="a00125.html#af81f741728a4ed24a81c76667e41c0eb" title="调用mirai操作" alt="" coords="241,122,421,149"/>
 <area shape="rect" href="a00437.html#a365e1740117b0fb9d5990855a26dba4f" title="取env,如果不存在重新获取" alt="" coords="911,115,1076,156"/>
 <area shape="rect" href="a00317.html#aaeeaa321f40dd6bf2c653459248fd747" title="日志底层实现封装" alt="" coords="1564,105,1735,147"/>
 <area shape="rect" href="a00317.html#a03e193b2ae9547c7bcac58ebe54a1aee" title=" " alt="" coords="1556,197,1743,223"/>
@@ -554,7 +554,7 @@ Public 属性</h2></td></tr>
 <area shape="rect" href="a00157.html#a113900b854bd92448127adda43f393db" title="接受好友申请" alt="" coords="239,35,424,76"/>
 <area shape="rect" href="a00157.html#abf7029978268eea4f28877b749ccbbd0" title="接受申请" alt="" coords="472,5,657,47"/>
 <area shape="rect" href="a00317.html#a418fad5b082009c5e40871d3cd88cacf" title="发送警告(warning级日志)" alt="" coords="925,115,1096,156"/>
-<area shape="rect" href="a00125.html#a22d2ec34277e0d8d4684528d7bee621e" title="调用mirai操作" alt="" coords="475,122,655,149"/>
+<area shape="rect" href="a00125.html#af81f741728a4ed24a81c76667e41c0eb" title="调用mirai操作" alt="" coords="475,122,655,149"/>
 <area shape="rect" href="a00437.html#a365e1740117b0fb9d5990855a26dba4f" title="取env,如果不存在重新获取" alt="" coords="1144,115,1309,156"/>
 <area shape="rect" href="a00317.html#aaeeaa321f40dd6bf2c653459248fd747" title="日志底层实现封装" alt="" coords="1797,105,1968,147"/>
 <area shape="rect" href="a00317.html#a03e193b2ae9547c7bcac58ebe54a1aee" title=" " alt="" coords="1789,197,1976,223"/>
@@ -668,7 +668,7 @@ Public 属性</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="a00117.html">MiraiCP</a></li><li class="navelem"><a class="el" href="a00157.html">NewFriendRequestEvent</a></li>
-    <li class="footer">生成于 2021年 十一月 21日 星期日 14:40:16 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="footer">生成于 2021年 十二月 5日 星期日 20:04:27 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
 <script type="text/javascript">

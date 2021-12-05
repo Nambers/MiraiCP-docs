@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['timeout_0',['TimeOut',['../a00125.html#a1bc3c425340774687507c1683967231bae5161956bb109433aa80ffd6872309df',1,'MiraiCP::Config']]],
-  ['timeoutevent_1',['TimeOutEvent',['../a00117.html#a9978cdf5158c8fc2ed93dbd7bbf3efb5ab912d6b062af313eba2f8c3ce7e957e2',1,'MiraiCP']]]
+  ['send_0',['Send',['../a00125.html#a1bc3c425340774687507c1683967231bacdf0600adf4945c8ae7493fdcfd5fad6',1,'MiraiCP::Config']]],
+  ['sendfile_1',['SendFile',['../a00125.html#a1bc3c425340774687507c1683967231ba892a12ebd616904053bf33777df5b0d9',1,'MiraiCP::Config']]],
+  ['sendnudge_2',['SendNudge',['../a00125.html#a1bc3c425340774687507c1683967231ba52535f5f4a42201850a161597c3d3e09',1,'MiraiCP::Config']]],
+  ['sendwithquote_3',['SendWithQuote',['../a00125.html#a1bc3c425340774687507c1683967231ba24ba94521e7556ad3f9ae52cf9cf8518',1,'MiraiCP::Config']]]
 ];

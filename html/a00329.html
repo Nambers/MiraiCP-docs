@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MiraiCP
-   &#160;<span id="projectnumber">v2.8.0</span>
+   &#160;<span id="projectnumber">v2.9.0-M1</span>
    </div>
    <div id="projectbrief">MiraiCP api document</div>
   </td>
@@ -300,13 +300,13 @@ Protected 成员函数</h2></td></tr>
 <div class="fragment"><div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>                                                                        {</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        <span class="keywordflow">if</span> (this-&gt;<a class="code hl_variable" href="a00317.html#aa5e38fc4b466c0bc6b02972a3b549728">loggerhandler</a>.<a class="code hl_variable" href="a00321.html#a0fda6ed76658ebaa758e801a72b3d946">enable</a>)</div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>            this-&gt;<a class="code hl_variable" href="a00317.html#aa5e38fc4b466c0bc6b02972a3b549728">loggerhandler</a>.<a class="code hl_variable" href="a00321.html#aea306ee2e14936202c9a814a15e0d0bc">action</a>(content, level);</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        <a class="code hl_typedef" href="a00117.html#ac0a8a1bade77a57eeb1d94cfacfb75ce">json</a> j;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        <a class="code hl_typedef" href="a00110.html#ab701e3ac61a85b337ec5c1abaad6742d">json</a> j;</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        j[<span class="stringliteral">&quot;id&quot;</span>] = <a class="code hl_variable" href="a00329.html#a0780713691dbbe27226d2c4c6c13d226">id</a>;</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        j[<span class="stringliteral">&quot;log&quot;</span>] = content;</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        env-&gt;CallStaticVoidMethod(<a class="code hl_variable" href="a00125.html#a71fd29df0981bb7474283eee1ea18493">Config::CPP_lib</a>, <a class="code hl_variable" href="a00317.html#ac1f75ae7a4298f72c7e2934a653e3a63">log</a>, <a class="code hl_function" href="a00445.html#ad2e5e5b78f6b79428bca2e9b44ac8265">Tools::str2jstring</a>(j.dump().c_str()), (jint) level);</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        env-&gt;CallStaticVoidMethod(<a class="code hl_variable" href="a00125.html#a60520b19317b53c740f1d6c63a5ca26b">Config::CPPLib</a>, <a class="code hl_variable" href="a00317.html#ac1f75ae7a4298f72c7e2934a653e3a63">log</a>, <a class="code hl_function" href="a00445.html#ad2e5e5b78f6b79428bca2e9b44ac8265">Tools::str2jstring</a>(j.dump().c_str()), (jint) level);</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    }</div>
-<div class="ttc" id="aa00117_html_ac0a8a1bade77a57eeb1d94cfacfb75ce"><div class="ttname"><a href="a00117.html#ac0a8a1bade77a57eeb1d94cfacfb75ce">MiraiCP::json</a></div><div class="ttdeci">nlohmann::json json</div><div class="ttdef"><b>Definition:</b> <a href="a00008_source.html#l00025">Config.h:25</a></div></div>
-<div class="ttc" id="aa00125_html_a71fd29df0981bb7474283eee1ea18493"><div class="ttname"><a href="a00125.html#a71fd29df0981bb7474283eee1ea18493">MiraiCP::Config::CPP_lib</a></div><div class="ttdeci">static jclass CPP_lib</div><div class="ttdoc">kt中JNI接口类</div><div class="ttdef"><b>Definition:</b> <a href="a00008_source.html#l00032">Config.h:32</a></div></div>
+<div class="ttc" id="aa00110_html_ab701e3ac61a85b337ec5c1abaad6742d"><div class="ttname"><a href="a00110.html#ab701e3ac61a85b337ec5c1abaad6742d">json</a></div><div class="ttdeci">nlohmann::json json</div><div class="ttdef"><b>Definition:</b> <a href="a00110_source.html#l00029">utils.cpp:29</a></div></div>
+<div class="ttc" id="aa00125_html_a60520b19317b53c740f1d6c63a5ca26b"><div class="ttname"><a href="a00125.html#a60520b19317b53c740f1d6c63a5ca26b">MiraiCP::Config::CPPLib</a></div><div class="ttdeci">static jclass CPPLib</div><div class="ttdoc">kt中JNI接口类</div><div class="ttdef"><b>Definition:</b> <a href="a00008_source.html#l00031">Config.h:31</a></div></div>
 <div class="ttc" id="aa00321_html_a0fda6ed76658ebaa758e801a72b3d946"><div class="ttname"><a href="a00321.html#a0fda6ed76658ebaa758e801a72b3d946">MiraiCP::Logger_interface::Handler::enable</a></div><div class="ttdeci">bool enable</div><div class="ttdoc">是否启用</div><div class="ttdef"><b>Definition:</b> <a href="a00056_source.html#l00084">Logger.h:84</a></div></div>
 <div class="ttc" id="aa00321_html_aea306ee2e14936202c9a814a15e0d0bc"><div class="ttname"><a href="a00321.html#aea306ee2e14936202c9a814a15e0d0bc">MiraiCP::Logger_interface::Handler::action</a></div><div class="ttdeci">Action action</div><div class="ttdoc">执行的操作，格式为lambda</div><div class="ttdef"><b>Definition:</b> <a href="a00056_source.html#l00086">Logger.h:86</a></div></div>
 <div class="ttc" id="aa00445_html_ad2e5e5b78f6b79428bca2e9b44ac8265"><div class="ttname"><a href="a00445.html#ad2e5e5b78f6b79428bca2e9b44ac8265">MiraiCP::Tools::str2jstring</a></div><div class="ttdeci">static jstring str2jstring(const char *stra, JNIEnv *=ThreadManager::getEnv())</div><div class="ttdef"><b>Definition:</b> <a href="a00104_source.html#l00039">Tools.cpp:39</a></div></div>
@@ -360,7 +360,7 @@ Protected 成员函数</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="a00117.html">MiraiCP</a></li><li class="navelem"><a class="el" href="a00329.html">IdLogger</a></li>
-    <li class="footer">生成于 2021年 十一月 21日 星期日 14:40:11 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="footer">生成于 2021年 十二月 5日 星期日 20:04:23 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
 <script type="text/javascript">

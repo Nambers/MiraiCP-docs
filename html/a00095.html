@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MiraiCP
-   &#160;<span id="projectnumber">v2.8.0</span>
+   &#160;<span id="projectnumber">v2.9.0-M1</span>
    </div>
    <div id="projectbrief">MiraiCP api document</div>
   </td>
@@ -96,9 +96,11 @@ $(document).ready(function(){initNavTree('a00095.html',''); initResizable(); });
   <div class="headertitle"><div class="title">SingleMessage.h 文件参考</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="a00032_source.html">Exception.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="a00008_source.html">Config.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00032_source.html">Exception.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="a00080_source.html">MessageSource.h</a>&quot;</code><br />
 <code>#include &lt;array&gt;</code><br />
+<code>#include &lt;json.hpp&gt;</code><br />
 <code>#include &lt;optional&gt;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> SingleMessage.h 的引用(Include)关系图:</div>
@@ -107,23 +109,25 @@ $(document).ready(function(){initNavTree('a00095.html',''); initResizable(); });
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="a00096.png" border="0" usemap="#a_single_message_8h" alt=""/></div>
 <map name="a_single_message_8h" id="a_single_message_8h">
-<area shape="rect" title=" " alt="" coords="381,5,503,32"/>
-<area shape="rect" href="a00032.html" title=" " alt="" coords="350,80,441,107"/>
-<area shape="rect" href="a00080.html" title=" " alt="" coords="208,155,335,181"/>
-<area shape="rect" title=" " alt="" coords="465,80,515,107"/>
-<area shape="rect" title=" " alt="" coords="539,80,606,107"/>
-<area shape="rect" href="a00056.html" title=" " alt="" coords="359,155,431,181"/>
-<area shape="rect" title=" " alt="" coords="488,453,543,480"/>
-<area shape="rect" href="a00083.html" title=" " alt="" coords="226,229,317,256"/>
-<area shape="rect" title=" " alt="" coords="394,453,463,480"/>
-<area shape="rect" title=" " alt="" coords="341,229,418,256"/>
-<area shape="rect" href="a00107.html" title=" " alt="" coords="231,304,295,331"/>
-<area shape="rect" href="a00101.html" title=" " alt="" coords="202,379,325,405"/>
-<area shape="rect" title=" " alt="" coords="5,453,52,480"/>
-<area shape="rect" title=" " alt="" coords="240,453,287,480"/>
-<area shape="rect" title=" " alt="" coords="311,453,370,480"/>
-<area shape="rect" title=" " alt="" coords="77,453,135,480"/>
-<area shape="rect" title=" " alt="" coords="159,453,215,480"/>
+<area shape="rect" title=" " alt="" coords="385,5,508,32"/>
+<area shape="rect" href="a00008.html" title=" " alt="" coords="376,80,445,107"/>
+<area shape="rect" title=" " alt="" coords="518,155,589,181"/>
+<area shape="rect" href="a00032.html" title=" " alt="" coords="71,80,161,107"/>
+<area shape="rect" href="a00080.html" title=" " alt="" coords="177,155,303,181"/>
+<area shape="rect" title=" " alt="" coords="520,80,571,107"/>
+<area shape="rect" title=" " alt="" coords="595,80,661,107"/>
+<area shape="rect" href="a00101.html" title=" " alt="" coords="269,379,392,405"/>
+<area shape="rect" title=" " alt="" coords="502,453,549,480"/>
+<area shape="rect" title=" " alt="" coords="347,453,394,480"/>
+<area shape="rect" title=" " alt="" coords="419,453,477,480"/>
+<area shape="rect" title=" " alt="" coords="91,453,160,480"/>
+<area shape="rect" title=" " alt="" coords="11,453,66,480"/>
+<area shape="rect" title=" " alt="" coords="184,453,243,480"/>
+<area shape="rect" title=" " alt="" coords="267,453,323,480"/>
+<area shape="rect" href="a00056.html" title=" " alt="" coords="80,155,152,181"/>
+<area shape="rect" href="a00083.html" title=" " alt="" coords="195,229,285,256"/>
+<area shape="rect" title=" " alt="" coords="43,229,120,256"/>
+<area shape="rect" href="a00107.html" title=" " alt="" coords="379,304,443,331"/>
 </map>
 </div>
 </div><div class="textblock"><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -133,28 +137,25 @@ $(document).ready(function(){initNavTree('a00095.html',''); initResizable(); });
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="a00097.png" border="0" usemap="#a_single_message_8hdep" alt=""/></div>
 <map name="a_single_message_8hdep" id="a_single_message_8hdep">
-<area shape="rect" title=" " alt="" coords="169,5,292,32"/>
-<area shape="rect" href="a00014.html" title=" " alt="" coords="142,155,221,181"/>
-<area shape="rect" href="a00074.html" title=" " alt="" coords="171,80,290,107"/>
-<area shape="rect" href="a00092.html" title=" " alt="" coords="315,80,451,107"/>
-<area shape="rect" href="a00026.html" title=" " alt="" coords="202,528,267,555"/>
-<area shape="rect" href="a00038.html" title=" " alt="" coords="108,229,255,256"/>
-<area shape="rect" href="a00062.html" title=" " alt="" coords="469,229,576,256"/>
-<area shape="rect" href="a00023.html" title=" " alt="" coords="79,603,158,629"/>
-<area shape="rect" href="a00029.html" title=" " alt="" coords="182,603,287,629"/>
-<area shape="rect" href="a00110.html" title=" " alt="" coords="311,603,382,629"/>
-<area shape="rect" href="a00035.html" title=" " alt="" coords="43,304,203,331"/>
-<area shape="rect" href="a00071.html" title=" " alt="" coords="147,453,280,480"/>
-<area shape="rect" href="a00011.html" title=" " alt="" coords="547,304,639,331"/>
-<area shape="rect" href="a00044.html" title=" " alt="" coords="664,304,733,331"/>
-<area shape="rect" href="a00059.html" title=" " alt="" coords="757,304,877,331"/>
-<area shape="rect" href="a00068.html" title=" " alt="" coords="277,304,357,331"/>
-<area shape="rect" href="a00077.html" title=" " alt="" coords="381,304,523,331"/>
-<area shape="rect" href="a00002.html" title=" " alt="" coords="411,453,464,480"/>
-<area shape="rect" href="a00041.html" title=" " alt="" coords="657,379,740,405"/>
-<area shape="rect" href="a00050.html" title=" " alt="" coords="283,379,351,405"/>
-<area shape="rect" href="a00065.html" title=" " alt="" coords="375,379,470,405"/>
-<area shape="rect" href="a00047.html" title=" " alt="" coords="304,453,387,480"/>
+<area shape="rect" title=" " alt="" coords="262,5,385,32"/>
+<area shape="rect" href="a00014.html" title=" " alt="" coords="235,155,313,181"/>
+<area shape="rect" href="a00074.html" title=" " alt="" coords="167,80,285,107"/>
+<area shape="rect" href="a00092.html" title=" " alt="" coords="361,80,497,107"/>
+<area shape="rect" href="a00011.html" title=" " alt="" coords="5,229,97,256"/>
+<area shape="rect" href="a00026.html" title=" " alt="" coords="267,453,332,480"/>
+<area shape="rect" href="a00038.html" title=" " alt="" coords="201,229,347,256"/>
+<area shape="rect" href="a00044.html" title=" " alt="" coords="626,229,695,256"/>
+<area shape="rect" href="a00068.html" title=" " alt="" coords="402,229,482,256"/>
+<area shape="rect" href="a00023.html" title=" " alt="" coords="144,528,223,555"/>
+<area shape="rect" href="a00029.html" title=" " alt="" coords="247,528,352,555"/>
+<area shape="rect" href="a00110.html" title=" " alt="" coords="376,528,447,555"/>
+<area shape="rect" href="a00035.html" title=" " alt="" coords="223,304,383,331"/>
+<area shape="rect" href="a00071.html" title=" " alt="" coords="207,379,341,405"/>
+<area shape="rect" href="a00002.html" title=" " alt="" coords="489,379,542,405"/>
+<area shape="rect" href="a00041.html" title=" " alt="" coords="619,304,702,331"/>
+<area shape="rect" href="a00050.html" title=" " alt="" coords="408,304,476,331"/>
+<area shape="rect" href="a00065.html" title=" " alt="" coords="500,304,595,331"/>
+<area shape="rect" href="a00047.html" title=" " alt="" coords="382,379,465,405"/>
 </map>
 </div>
 </div>
@@ -219,7 +220,7 @@ $(document).ready(function(){initNavTree('a00095.html',''); initResizable(); });
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="a00095.html">SingleMessage.h</a></li>
-    <li class="footer">生成于 2021年 十一月 21日 星期日 14:40:06 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="footer">生成于 2021年 十二月 5日 星期日 20:04:18 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
 <script type="text/javascript">

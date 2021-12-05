@@ -4,6 +4,8 @@ var a00401 =
     [ "ServiceMessage", "a00401.html#ab5866201bea86658dadc054764fd1db6", null ],
     [ "ServiceMessage", "a00401.html#a367f5b76f1716ba7b5fa31219274bc85", null ],
     [ "operator==", "a00401.html#ac376e371ca5bd671ea8f3d98881b8052", null ],
+    [ "toJson", "a00401.html#ac6e0602d6b6eda201108025e7318d07b", null ],
     [ "toMiraiCode", "a00401.html#a25240f7b9b413c65916c92035569a095", null ],
-    [ "type", "a00401.html#ab6d7d4b47233b30630c752945603d780", null ]
+    [ "type", "a00401.html#ab6d7d4b47233b30630c752945603d780", null ],
+    [ "id", "a00401.html#a71730c48bdb7186bd5be19dc87d0e629", null ]
 ];

@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MiraiCP
-   &#160;<span id="projectnumber">v2.8.0</span>
+   &#160;<span id="projectnumber">v2.9.0-M1</span>
    </div>
    <div id="projectbrief">MiraiCP api document</div>
   </td>
@@ -109,9 +109,9 @@ $(document).ready(function(){initNavTree('a00305.html',''); initResizable(); });
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="a00303.png" border="0" usemap="#a_mirai_c_p_1_1_group_1_1_offline_announcement_coll__map" alt="Collaboration graph"/></div>
 <map name="a_mirai_c_p_1_1_group_1_1_offline_announcement_coll__map" id="a_mirai_c_p_1_1_group_1_1_offline_announcement_coll__map">
-<area shape="rect" title="本地(未发送)群公告" alt="" coords="5,447,248,583"/>
-<area shape="rect" title=" " alt="" coords="39,255,94,333"/>
-<area shape="rect" href="a00297.html" title="群公告参数" alt="" coords="118,204,325,384"/>
+<area shape="rect" title="本地(未发送)群公告" alt="" coords="5,461,248,597"/>
+<area shape="rect" title=" " alt="" coords="39,263,94,340"/>
+<area shape="rect" href="a00297.html" title="群公告参数" alt="" coords="118,204,325,399"/>
 <area shape="rect" title=" " alt="" coords="198,5,245,83"/>
 </map>
 </div>
@@ -199,27 +199,27 @@ Public 属性</h2></td></tr>
 
 <p>发布群公告 </p>
 
-<p class="definition">在文件 <a class="el" href="a00047_source.html">Group.cpp</a> 第 <a class="el" href="a00047_source.html#l00057">57</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>                                                                              {</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        <a class="code hl_typedef" href="a00117.html#ac0a8a1bade77a57eeb1d94cfacfb75ce">json</a> j, i, s;</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        i[<span class="stringliteral">&quot;botid&quot;</span>] = g.botid();</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        i[<span class="stringliteral">&quot;groupid&quot;</span>] = g.id();</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        i[<span class="stringliteral">&quot;type&quot;</span>] = 2;</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        j[<span class="stringliteral">&quot;identify&quot;</span>] = i.dump();</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        s[<span class="stringliteral">&quot;content&quot;</span>] = this-&gt;<a class="code hl_variable" href="a00305.html#ad41adfb9b859845999f24978087af62b">content</a>;</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        s[<span class="stringliteral">&quot;params&quot;</span>] = this-&gt;<a class="code hl_variable" href="a00305.html#ab1ff075cae77526d00c8f96b135c2873">params</a>.<a class="code hl_function" href="a00297.html#ac87021b1e71d8d3334c4d197813924bc">serializeToJson</a>();</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        j[<span class="stringliteral">&quot;source&quot;</span>] = s.dump();</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        std::string re = <a class="code hl_function" href="a00125.html#a22d2ec34277e0d8d4684528d7bee621e">Config::koperation</a>(<a class="code hl_enumvalue" href="a00125.html#a1bc3c425340774687507c1683967231ba4b7ab6f3afe066b8dcee57d3099c8ef0">Config::Announcement</a>, j);</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        <span class="keywordflow">if</span> (re == <span class="stringliteral">&quot;E1&quot;</span>)</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>            <a class="code hl_define" href="a00101.html#a05895baa03633917e58dcb7228229097">MiraiCPThrow</a>(BotException());</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="a00301.html#aabba022ccb2e4c5e8b14beaee17f0979">Group::OnlineAnnouncement::deserializeFromJson</a>(json::parse(re));</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    }</div>
+<p class="definition">在文件 <a class="el" href="a00047_source.html">Group.cpp</a> 第 <a class="el" href="a00047_source.html#l00058">58</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>                                                                              {</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        <a class="code hl_typedef" href="a00110.html#ab701e3ac61a85b337ec5c1abaad6742d">json</a> j, i, s;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        i[<span class="stringliteral">&quot;botid&quot;</span>] = g.botid();</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        i[<span class="stringliteral">&quot;groupid&quot;</span>] = g.id();</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        i[<span class="stringliteral">&quot;type&quot;</span>] = 2;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        j[<span class="stringliteral">&quot;identify&quot;</span>] = i.dump();</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        s[<span class="stringliteral">&quot;content&quot;</span>] = this-&gt;<a class="code hl_variable" href="a00305.html#ad41adfb9b859845999f24978087af62b">content</a>;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        s[<span class="stringliteral">&quot;params&quot;</span>] = this-&gt;<a class="code hl_variable" href="a00305.html#ab1ff075cae77526d00c8f96b135c2873">params</a>.<a class="code hl_function" href="a00297.html#ac87021b1e71d8d3334c4d197813924bc">serializeToJson</a>();</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        j[<span class="stringliteral">&quot;source&quot;</span>] = s.dump();</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        std::string re = <a class="code hl_function" href="a00125.html#af81f741728a4ed24a81c76667e41c0eb">Config::koperation</a>(<a class="code hl_enumvalue" href="a00125.html#a1bc3c425340774687507c1683967231ba4b7ab6f3afe066b8dcee57d3099c8ef0">Config::Announcement</a>, j);</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        <span class="keywordflow">if</span> (re == <span class="stringliteral">&quot;E1&quot;</span>)</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>            <a class="code hl_define" href="a00101.html#a05895baa03633917e58dcb7228229097">MiraiCPThrow</a>(BotException());</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="a00301.html#a43455087b4c787cbc8ef01a09453feaf">Group::OnlineAnnouncement::deserializeFromJson</a>(json::parse(re));</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    }</div>
 <div class="ttc" id="aa00101_html_a05895baa03633917e58dcb7228229097"><div class="ttname"><a href="a00101.html#a05895baa03633917e58dcb7228229097">MiraiCPThrow</a></div><div class="ttdeci">#define MiraiCPThrow(x)</div><div class="ttdef"><b>Definition:</b> <a href="a00101_source.html#l00019">ThreadManager.h:19</a></div></div>
-<div class="ttc" id="aa00117_html_ac0a8a1bade77a57eeb1d94cfacfb75ce"><div class="ttname"><a href="a00117.html#ac0a8a1bade77a57eeb1d94cfacfb75ce">MiraiCP::json</a></div><div class="ttdeci">nlohmann::json json</div><div class="ttdef"><b>Definition:</b> <a href="a00008_source.html#l00025">Config.h:25</a></div></div>
-<div class="ttc" id="aa00125_html_a1bc3c425340774687507c1683967231ba4b7ab6f3afe066b8dcee57d3099c8ef0"><div class="ttname"><a href="a00125.html#a1bc3c425340774687507c1683967231ba4b7ab6f3afe066b8dcee57d3099c8ef0">MiraiCP::Config::Announcement</a></div><div class="ttdeci">@ Announcement</div><div class="ttdoc">群公告操作</div><div class="ttdef"><b>Definition:</b> <a href="a00008_source.html#l00079">Config.h:79</a></div></div>
-<div class="ttc" id="aa00125_html_a22d2ec34277e0d8d4684528d7bee621e"><div class="ttname"><a href="a00125.html#a22d2ec34277e0d8d4684528d7bee621e">MiraiCP::Config::koperation</a></div><div class="ttdeci">static std::string koperation(operation_set type, nlohmann::json &amp;data, JNIEnv *=ThreadManager::getEnv(), bool catchErr=true, const std::string &amp;errorInfo=&quot;&quot;)</div><div class="ttdoc">调用mirai操作</div><div class="ttdef"><b>Definition:</b> <a href="a00005_source.html#l00043">Config.cpp:43</a></div></div>
-<div class="ttc" id="aa00297_html_ac87021b1e71d8d3334c4d197813924bc"><div class="ttname"><a href="a00297.html#ac87021b1e71d8d3334c4d197813924bc">MiraiCP::Group::AnnouncementParams::serializeToJson</a></div><div class="ttdeci">json serializeToJson()</div><div class="ttdoc">序列化到文本</div><div class="ttdef"><b>Definition:</b> <a href="a00047_source.html#l00047">Group.cpp:47</a></div></div>
-<div class="ttc" id="aa00301_html_aabba022ccb2e4c5e8b14beaee17f0979"><div class="ttname"><a href="a00301.html#aabba022ccb2e4c5e8b14beaee17f0979">MiraiCP::Group::OnlineAnnouncement::deserializeFromJson</a></div><div class="ttdeci">static OnlineAnnouncement deserializeFromJson(json)</div><div class="ttdoc">反序列化</div><div class="ttdef"><b>Definition:</b> <a href="a00047_source.html#l00072">Group.cpp:72</a></div></div>
+<div class="ttc" id="aa00110_html_ab701e3ac61a85b337ec5c1abaad6742d"><div class="ttname"><a href="a00110.html#ab701e3ac61a85b337ec5c1abaad6742d">json</a></div><div class="ttdeci">nlohmann::json json</div><div class="ttdef"><b>Definition:</b> <a href="a00110_source.html#l00029">utils.cpp:29</a></div></div>
+<div class="ttc" id="aa00125_html_a1bc3c425340774687507c1683967231ba4b7ab6f3afe066b8dcee57d3099c8ef0"><div class="ttname"><a href="a00125.html#a1bc3c425340774687507c1683967231ba4b7ab6f3afe066b8dcee57d3099c8ef0">MiraiCP::Config::Announcement</a></div><div class="ttdeci">@ Announcement</div><div class="ttdoc">群公告操作</div><div class="ttdef"><b>Definition:</b> <a href="a00008_source.html#l00078">Config.h:78</a></div></div>
+<div class="ttc" id="aa00125_html_af81f741728a4ed24a81c76667e41c0eb"><div class="ttname"><a href="a00125.html#af81f741728a4ed24a81c76667e41c0eb">MiraiCP::Config::koperation</a></div><div class="ttdeci">static std::string koperation(operation_set type, const nlohmann::json &amp;data, JNIEnv *=ThreadManager::getEnv(), bool catchErr=true, const std::string &amp;errorInfo=&quot;&quot;)</div><div class="ttdoc">调用mirai操作</div><div class="ttdef"><b>Definition:</b> <a href="a00005_source.html#l00043">Config.cpp:43</a></div></div>
+<div class="ttc" id="aa00297_html_ac87021b1e71d8d3334c4d197813924bc"><div class="ttname"><a href="a00297.html#ac87021b1e71d8d3334c4d197813924bc">MiraiCP::Group::AnnouncementParams::serializeToJson</a></div><div class="ttdeci">nlohmann::json serializeToJson()</div><div class="ttdoc">序列化到文本</div><div class="ttdef"><b>Definition:</b> <a href="a00047_source.html#l00048">Group.cpp:48</a></div></div>
+<div class="ttc" id="aa00301_html_a43455087b4c787cbc8ef01a09453feaf"><div class="ttname"><a href="a00301.html#a43455087b4c787cbc8ef01a09453feaf">MiraiCP::Group::OnlineAnnouncement::deserializeFromJson</a></div><div class="ttdeci">static OnlineAnnouncement deserializeFromJson(nlohmann::json)</div><div class="ttdoc">反序列化</div><div class="ttdef"><b>Definition:</b> <a href="a00047_source.html#l00073">Group.cpp:73</a></div></div>
 </div><!-- fragment --><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-1-trigger" src="closed.png" alt="+"/> 函数调用图:</div>
 <div id="dynsection-1-summary" class="dynsummary" style="display:block;">
@@ -229,9 +229,9 @@ Public 属性</h2></td></tr>
 <map name="aa00305_ac5e2613306079cce18866fa1f2809357_cgraph" id="aa00305_ac5e2613306079cce18866fa1f2809357_cgraph">
 <area shape="rect" title="发布群公告" alt="" coords="5,86,248,127"/>
 <area shape="rect" href="a00129.html#ac257ebdd1591ea5acf6e045abf28ecba" title="所属bot" alt="" coords="339,5,496,32"/>
-<area shape="rect" href="a00301.html#aabba022ccb2e4c5e8b14beaee17f0979" title="反序列化" alt="" coords="296,57,539,98"/>
+<area shape="rect" href="a00301.html#a43455087b4c787cbc8ef01a09453feaf" title="反序列化" alt="" coords="296,57,539,98"/>
 <area shape="rect" href="a00129.html#a1f208ae0f09c367c90c2e079e63048db" title="id在全部情况存在" alt="" coords="348,123,487,149"/>
-<area shape="rect" href="a00125.html#a22d2ec34277e0d8d4684528d7bee621e" title="调用mirai操作" alt="" coords="327,173,507,200"/>
+<area shape="rect" href="a00125.html#af81f741728a4ed24a81c76667e41c0eb" title="调用mirai操作" alt="" coords="327,173,507,200"/>
 <area shape="rect" href="a00445.html#a3edca5ea268b6b1c023810b928701f55" title=" " alt="" coords="587,148,759,175"/>
 <area shape="rect" href="a00445.html#ad2e5e5b78f6b79428bca2e9b44ac8265" title=" " alt="" coords="587,199,759,225"/>
 <area shape="rect" href="a00317.html#a418fad5b082009c5e40871d3cd88cacf" title="发送警告(warning级日志)" alt="" coords="807,166,977,207"/>
@@ -295,7 +295,7 @@ Public 属性</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="a00117.html">MiraiCP</a></li><li class="navelem"><a class="el" href="a00293.html">Group</a></li><li class="navelem"><a class="el" href="a00305.html">OfflineAnnouncement</a></li>
-    <li class="footer">生成于 2021年 十一月 21日 星期日 14:40:10 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="footer">生成于 2021年 十二月 5日 星期日 20:04:22 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
 <script type="text/javascript">

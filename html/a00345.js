@@ -3,7 +3,7 @@ var a00345 =
     [ "Member", "a00345.html#a3f4426f778803585de253508cd40e17c", null ],
     [ "Member", "a00345.html#a077555680a65e4ff7da00e45e7808a33", null ],
     [ "at", "a00345.html#ace4950bd9191fdf90ecba764c870f90e", null ],
-    [ "getPermission", "a00345.html#a27ef4633b6c6f0634c56cac0b66b6a4d", null ],
+    [ "getPermission", "a00345.html#a3b2029999d3c973f985070f003528d25", null ],
     [ "kick", "a00345.html#af0f9ebe2fc57cdd042e8f360a593fff8", null ],
     [ "modifyAdmin", "a00345.html#abb6fd404cff37f4a4eb1fec72d020359", null ],
     [ "mute", "a00345.html#aedac5c32572eeaf5e480c1ad116e38f7", null ],

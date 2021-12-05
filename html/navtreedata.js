@@ -55,6 +55,7 @@ var NAVTREE =
         [ "全部", "globals.html", null ],
         [ "函数", "globals_func.html", null ],
         [ "变量", "globals_vars.html", null ],
+        [ "类型定义", "globals_type.html", null ],
         [ "宏定义", "globals_defs.html", null ]
       ] ]
     ] ],
@@ -65,12 +66,12 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "a00002.html",
-"a00129.html#a03b66ef9aaa19140dcb6bb486e82ebe9",
-"a00177.html#a29c18056652c7d36248f70f359f01e74",
-"a00285.html#a623848fdcd4af723a433e7f03c45d32f",
-"a00349.html#a558be734956c9ee749220c57d45ba144",
-"a00401.html#ab6d7d4b47233b30630c752945603d780",
-"functions_r.html"
+"a00129.html",
+"a00173.html#aec3b3e13b9dedba8e0a06ae45b146e51",
+"a00285.html#a3fcb5073c4ec3f07fb918cf2055cc40c",
+"a00349.html#a404b4535fa633f86f84c3145f646e8c2",
+"a00393.html#a90e338ad396d824807759601a7fa3b88",
+"files.html"
 ];
 
 var SYNCONMSG = '点击 关闭 面板同步';

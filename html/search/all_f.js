@@ -5,7 +5,7 @@ var searchData=
   ['onenable_2',['onEnable',['../a00133.html#ad3d1188d089ab0fc945475f988c64fa7',1,'MiraiCP::CPPPlugin']]],
   ['onlineannouncement_3',['OnlineAnnouncement',['../a00301.html',1,'MiraiCP::Group::OnlineAnnouncement'],['../a00301.html#ae7b3c5f6cbb8874f93e286529e624fdb',1,'MiraiCP::Group::OnlineAnnouncement::OnlineAnnouncement()']]],
   ['onlineaudio_4',['OnlineAudio',['../a00409.html',1,'MiraiCP::OnlineAudio'],['../a00409.html#a6019cb1d4607f359565eee4b8b5cca33',1,'MiraiCP::OnlineAudio::OnlineAudio()']]],
-  ['onlineforwardedmessage_5',['OnlineForwardedMessage',['../a00285.html',1,'MiraiCP::OnlineForwardedMessage'],['../a00285.html#a623848fdcd4af723a433e7f03c45d32f',1,'MiraiCP::OnlineForwardedMessage::OnlineForwardedMessage()']]],
+  ['onlineforwardedmessage_5',['OnlineForwardedMessage',['../a00285.html',1,'MiraiCP::OnlineForwardedMessage'],['../a00285.html#a8eeee98912485b77514779d426f3aac2',1,'MiraiCP::OnlineForwardedMessage::OnlineForwardedMessage()']]],
   ['operate_6',['operate',['../a00197.html#a7436d1eea1f593b75d647dbe199a37a2',1,'MiraiCP::MemberJoinRequestEvent']]],
   ['operaterid_7',['operaterid',['../a00165.html#aade41087ec629e2632628919d9df79fe',1,'MiraiCP::MemberLeaveEvent']]],
   ['operation0_8',['operation0',['../a00153.html#a76e547b3b1776529eda0c8d5b784a7d7',1,'MiraiCP::GroupInviteEvent::operation0()'],['../a00157.html#a113900b854bd92448127adda43f393db',1,'MiraiCP::NewFriendRequestEvent::operation0()']]],
