@@ -1,5 +1,6 @@
 var a00333 =
 [
-    [ "PluginLogger", "a00333.html#a91bffeaf24b473d9bd2db8ede443f03d", null ],
-    [ "log0", "a00333.html#a4e09035efc7288039acacc5482692034", null ]
+    [ "IdLogger", "a00333.html#a50eb2703023973190ae65a949011166f", null ],
+    [ "log1", "a00333.html#ac00e0c40a6aafe1119dad61d840aa87c", null ],
+    [ "id", "a00333.html#a0780713691dbbe27226d2c4c6c13d226", null ]
 ];

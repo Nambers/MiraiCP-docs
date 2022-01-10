@@ -1,9 +1,9 @@
 var a00165 =
 [
-    [ "MemberLeaveEvent", "a00165.html#acbd646bf783ca8d03b8b0a48e3a37cb7", null ],
-    [ "getEventType", "a00165.html#a5d89041ce88b38c03348abb152d61ca4", null ],
-    [ "group", "a00165.html#ab693afc3bdbfddc1ae88caf9ee052d54", null ],
-    [ "memberid", "a00165.html#ab1908decaccb41ea3bc74836dff63246", null ],
-    [ "operaterid", "a00165.html#aade41087ec629e2632628919d9df79fe", null ],
-    [ "type", "a00165.html#ad28ac4243630eab3bf7d65a737cac9ca", null ]
+    [ "MemberJoinEvent", "a00165.html#a073cb4162b0f02a4497e9ea6912399d5", null ],
+    [ "getEventType", "a00165.html#ae7cb01c8b1b91bbb00d75a2f6f0ddb46", null ],
+    [ "group", "a00165.html#a1f879c48cc7b54fa387853b5330b0caf", null ],
+    [ "inviterid", "a00165.html#a3342fd9e038a616a272ae8de9599ad31", null ],
+    [ "member", "a00165.html#aa1a42b944df9f40fc96629a1c5687f01", null ],
+    [ "type", "a00165.html#a96ecc208a289c8a567f0148bfa46a2a0", null ]
 ];

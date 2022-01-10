@@ -1,9 +1,19 @@
 var a00397 =
 [
-    [ "LightApp", "a00397.html#a7cfcefeb788e3046fb321fab0a7b813a", null ],
-    [ "LightApp", "a00397.html#a1803b5deeb42af5f4770751aa4160a25", null ],
-    [ "operator==", "a00397.html#ae69ac9a6359eb6848ce09f7671395969", null ],
-    [ "toJson", "a00397.html#a95599fbda45f4240f9241f6dfa6fe05d", null ],
-    [ "toMiraiCode", "a00397.html#ad1637240306cd3dd587044054381d991", null ],
-    [ "type", "a00397.html#abba0c279393369d31f7ebc88ee6756fd", null ]
+    [ "Image", "a00397.html#a3ad348debd25e9bfb7e809c86f670e65", null ],
+    [ "Image", "a00397.html#a96926ef90fc6925d7d2f24605d7b9fbf", null ],
+    [ "deserialize", "a00397.html#a0e3fa5f500c071d484dd56d5562e0d9c", null ],
+    [ "isUploaded", "a00397.html#a6bc40ee958a59a3f70a0146c7e9312e2", null ],
+    [ "operator==", "a00397.html#a4ae5258f9f0f0462ba2fa7b15fbde7e9", null ],
+    [ "refreshInfo", "a00397.html#a3c8b1b2f1741c02d38fd41b45461ec18", null ],
+    [ "toJson", "a00397.html#a34553da30d7a3753b72247654bc36e89", null ],
+    [ "toMiraiCode", "a00397.html#a10cd01f40a86dcd051722cc50baa2003", null ],
+    [ "type", "a00397.html#a8920fb2036cd75d06b0343b32886f610", null ],
+    [ "height", "a00397.html#a6d91d1442a67a40efea60fd8b21f0344", null ],
+    [ "id", "a00397.html#ac6a67525ab64646c9068bc98bd58e796", null ],
+    [ "imageType", "a00397.html#ad0f3d7f5356612a87bf1769577be8d88", null ],
+    [ "md5", "a00397.html#a0ac48e10b27d52864e36f65a154f4503", null ],
+    [ "size", "a00397.html#a90e338ad396d824807759601a7fa3b88", null ],
+    [ "url", "a00397.html#ae64873f7812cdc802bf61a7c77c5e21d", null ],
+    [ "width", "a00397.html#a32663d1a7c0f773d5e0edc245a503f5e", null ]
 ];

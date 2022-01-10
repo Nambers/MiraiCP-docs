@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiraiCP: 弃用列表</title>
+<title>MiraiCP: Tools.cpp 文件参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MiraiCP
-   &#160;<span id="projectnumber">v2.9.0-M1</span>
+   &#160;<span id="projectnumber">v2.9.1</span>
    </div>
    <div id="projectbrief">MiraiCP api document</div>
   </td>
@@ -89,46 +89,112 @@ $(document).ready(function(){initNavTree('a00116.html',''); initResizable(); });
 </iframe>
 </div>
 
-<div><div class="header">
-  <div class="headertitle"><div class="title">弃用列表 </div></div>
+<div class="header">
+  <div class="summary">
+<a href="#namespaces">命名空间</a>  </div>
+  <div class="headertitle"><div class="title">Tools.cpp 文件参考</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><dl class="reflist">
-<dt>成员 <a class="el" href="a00129.html#abf617fe245eaf72e903ed1d02102bd28">MiraiCP::Contact::deserializationFromString</a>  (const std::string &amp;source)</dt>
-<dd><a class="anchor" id="_deprecated000003"></a>use deserialize, since v2.8.1  </dd>
-<dt>成员 <a class="el" href="a00129.html#aa39190b81b3062cfb466e2c0d1ee4939">MiraiCP::Contact::sendMiraiCode</a>  (const <a class="el" href="a00365.html" title="miraicode字符串">MiraiCode</a> &amp;msg, int retryTime=3, JNIEnv *env=<a class="el" href="a00437.html#a365e1740117b0fb9d5990855a26dba4f" title="取env,如果不存在重新获取">ThreadManager::getEnv()</a>) const</dt>
-<dd><a class="anchor" id="_deprecated000004"></a>用 sendMessage, since v2.8.1  </dd>
-<dt>成员 <a class="el" href="a00129.html#abf2e266b124e932dd2f49915b0733df9">MiraiCP::Contact::sendMsg</a>  (const std::string &amp;msg, int retryTime=3, JNIEnv *env=<a class="el" href="a00437.html#a365e1740117b0fb9d5990855a26dba4f" title="取env,如果不存在重新获取">ThreadManager::getEnv()</a>)</dt>
-<dd><a class="anchor" id="_deprecated000005"></a>用 sendMessage, since v2.8.1  </dd>
-<dt>成员 <a class="el" href="a00129.html#a3456c41954b94322df0e92e27a348de2">MiraiCP::Contact::sendMsg</a>  (const <a class="el" href="a00365.html" title="miraicode字符串">MiraiCode</a> &amp;msg, int retryTime=3, JNIEnv *env=<a class="el" href="a00437.html#a365e1740117b0fb9d5990855a26dba4f" title="取env,如果不存在重新获取">ThreadManager::getEnv()</a>)</dt>
-<dd><a class="anchor" id="_deprecated000006"></a>用 sendMessage, since v2.8.1  </dd>
-<dt>成员 <a class="el" href="a00129.html#ab1f20b2fb232f30b6bd5db412ee88baa">MiraiCP::Contact::sendMsg</a>  (std::vector&lt; std::string &gt; msg, int retryTime=3, JNIEnv *env=<a class="el" href="a00437.html#a365e1740117b0fb9d5990855a26dba4f" title="取env,如果不存在重新获取">ThreadManager::getEnv()</a>)</dt>
-<dd><a class="anchor" id="_deprecated000007"></a>用 sendMessage, since v2.8.1  </dd>
-<dt>成员 <a class="el" href="a00129.html#a9d79a7c7b1590f4e12b6637b1d5a5363">MiraiCP::Contact::serialization</a>  () const</dt>
-<dd><a class="anchor" id="_deprecated000001"></a>use toJson, since v2.8.1  </dd>
-<dt>成员 <a class="el" href="a00129.html#a6032a97a7afdc3a9ceba4cb13b045002">MiraiCP::Contact::serializationToString</a>  () const</dt>
-<dd><a class="anchor" id="_deprecated000002"></a>use toString, since v2.8.1  </dd>
-<dt>成员 <a class="el" href="a00117.html#a526fbb267bd3e2b072b85c1f502e14cf">MiraiCP::logger</a>  </dt>
-<dd><a class="anchor" id="_deprecated000009"></a>use <a class="el" href="a00325.html#a268fd602157c3fa49616a8872c82bfb1">Logger::logger</a>, 用单例模式, since v2.8.1  </dd>
-<dt>成员 <a class="el" href="a00349.html#a674c24d544390f68be14c26b1106749a">MiraiCP::MessageChain::quoteAndSendMessage</a>  (T s, QQID groupid=-1, JNIEnv *env=<a class="el" href="a00437.html#a365e1740117b0fb9d5990855a26dba4f" title="取env,如果不存在重新获取">ThreadManager::getEnv()</a>)</dt>
-<dd><a class="anchor" id="_deprecated000010"></a>use Contact.quoteAndSend, since v2.8.1  </dd>
-<dt>成员 <a class="el" href="a00357.html#a70bcdcc3e3bc62724f859248e75a0f21">MiraiCP::MessageSource::quoteAndSendMiraiCode</a>  (<a class="el" href="a00361.html" title="MiraiCode父类, 指可以被转换成miraicode的类型">MiraiCodeable</a> *msg, QQID groupid=0, JNIEnv *env=<a class="el" href="a00437.html#a365e1740117b0fb9d5990855a26dba4f" title="取env,如果不存在重新获取">ThreadManager::getEnv()</a>) const</dt>
-<dd><a class="anchor" id="_deprecated000011"></a>用Contact.quoteAndSendMessage, since v2.8.1  </dd>
-<dt>成员 <a class="el" href="a00357.html#a7814640913083a562f75f462ddc5802a">MiraiCP::MessageSource::quoteAndSendMiraiCode</a>  (const std::string &amp;c, QQID groupid=0, JNIEnv *=<a class="el" href="a00437.html#a365e1740117b0fb9d5990855a26dba4f" title="取env,如果不存在重新获取">ThreadManager::getEnv()</a>) const</dt>
-<dd><a class="anchor" id="_deprecated000013"></a>use <a class="el" href="a00129.html#a8675bddd2ad0fc8393437553c2ec8919" title="回复并发送">Contact.quoteAndSendMessage</a>, since v2.8.1  </dd>
-<dt>成员 <a class="el" href="a00357.html#a3c435f76d84c5b3217cc747a7f4cb02e">MiraiCP::MessageSource::quoteAndSendMsg</a>  (const std::string &amp;c, QQID groupid=0, JNIEnv *=<a class="el" href="a00437.html#a365e1740117b0fb9d5990855a26dba4f" title="取env,如果不存在重新获取">ThreadManager::getEnv()</a>) const</dt>
-<dd><a class="anchor" id="_deprecated000012"></a>use <a class="el" href="a00129.html#a8675bddd2ad0fc8393437553c2ec8919" title="回复并发送">Contact.quoteAndSendMessage</a>, since v2.8.1  </dd>
-<dt>成员 <a class="el" href="a00117.html#a82421c522d86f1982570dfd9ee0fd45e">MiraiCP::procession</a>  </dt>
-<dd><a class="anchor" id="_deprecated000008"></a>use Event::prcessor, 使用单例模式, since v2.8.1 </dd>
+<div class="textblock"><code>#include &quot;<a class="el" href="a00119_source.html">Tools.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00065_source.html">Logger.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00113_source.html">ThreadManager.h</a>&quot;</code><br />
+<code>#include &lt;regex&gt;</code><br />
+<code>#include &lt;utf8.h&gt;</code><br />
+</div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Tools.cpp 的引用(Include)关系图:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="a00117.png" border="0" usemap="#a_tools_8cpp" alt=""/></div>
+<map name="a_tools_8cpp" id="a_tools_8cpp">
+<area shape="rect" title=" " alt="" coords="605,5,684,32"/>
+<area shape="rect" href="a00119.html" title=" " alt="" coords="613,80,677,107"/>
+<area shape="rect" href="a00065.html" title=" " alt="" coords="463,80,535,107"/>
+<area shape="rect" href="a00113.html" title=" " alt="" coords="171,80,294,107"/>
+<area shape="rect" title=" " alt="" coords="701,80,756,107"/>
+<area shape="rect" title=" " alt="" coords="780,80,835,107"/>
+<area shape="rect" title=" " alt="" coords="648,155,695,181"/>
+<area shape="rect" title=" " alt="" coords="242,155,311,181"/>
+<area shape="rect" title=" " alt="" coords="628,229,683,256"/>
+<area shape="rect" title=" " alt="" coords="770,155,826,181"/>
+<area shape="rect" title=" " alt="" coords="335,155,413,181"/>
+<area shape="rect" title=" " alt="" coords="437,155,508,181"/>
+<area shape="rect" href="a00095.html" title=" " alt="" coords="533,155,623,181"/>
+<area shape="rect" title=" " alt="" coords="5,155,52,181"/>
+<area shape="rect" title=" " alt="" coords="77,155,135,181"/>
+<area shape="rect" title=" " alt="" coords="159,155,218,181"/>
+</map>
+</div>
+</div>
+<p><a href="a00116_source.html">浏览源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
+命名空间</h2></td></tr>
+<tr class="memitem:a00129"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00129.html">MiraiCP</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00131"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00131.html">MiraiCP::Tools</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr><td colspan="2"><div class="groupHeader">jstring2str</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p >string类型转码转换到jstring类型, UTF16 -&gt; UTF8</p>
+<dl class="section note"><dt>注解</dt><dd>来源https://blog.csdn.net/chunleixiahe/article/details/51394116 </dd></dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">jstr</td><td>转换内容,jstring类型 </td></tr>
+    <tr><td class="paramname">env</td><td>可选，JNIEnv </td></tr>
+  </table>
+  </dd>
 </dl>
-</div></div><!-- contents -->
-</div><!-- PageDoc -->
+<dl class="section return"><dt>返回</dt><dd>内容转换成jstring类型 </dd></dl>
+</div></td></tr>
+<tr class="memitem:aca81fb0894771f60fbf64c3b776044e5"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00131.html#aca81fb0894771f60fbf64c3b776044e5">MiraiCP::Tools::jstring2str</a> (jstring jStr, JNIEnv *env)</td></tr>
+<tr class="separator:aca81fb0894771f60fbf64c3b776044e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">str2jstring</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p >string类型到jsting类型 UTF8 -&gt; UTF16</p>
+<dl class="section note"><dt>注解</dt><dd>来源https://blog.csdn.net/chunleixiahe/article/details/51394116 </dd></dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">stra</td><td>const char*(string.c_str()转换的内容) </td></tr>
+    <tr><td class="paramname">env</td><td>可选JNIEnv </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>转换后jstring类型 </dd></dl>
+</div></td></tr>
+<tr class="memitem:ad6af583021178966fa57f1290f69c0ff"><td class="memItemLeft" align="right" valign="top">jstring&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00131.html#ad6af583021178966fa57f1290f69c0ff">MiraiCP::Tools::str2jstring</a> (const char *stra, JNIEnv *env)</td></tr>
+<tr class="separator:ad6af583021178966fa57f1290f69c0ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d114f18a24887ca125a869802e43118"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00131.html#a7d114f18a24887ca125a869802e43118">MiraiCP::Tools::replace</a> (std::string str, const std::string &amp;from, const std::string &amp;to)</td></tr>
+<tr class="memdesc:a7d114f18a24887ca125a869802e43118"><td class="mdescLeft">&#160;</td><td class="mdescRight">替换全部在一个字符串中.  <a href="a00131.html#a7d114f18a24887ca125a869802e43118">更多...</a><br /></td></tr>
+<tr class="separator:a7d114f18a24887ca125a869802e43118"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e3ca5f1b36ef97a2cc8255fd07ccd69"><td class="memItemLeft" align="right" valign="top">std::vector&lt; unsigned long long &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00131.html#a5e3ca5f1b36ef97a2cc8255fd07ccd69">MiraiCP::Tools::StringToVector</a> (std::string temp)</td></tr>
+<tr class="memdesc:a5e3ca5f1b36ef97a2cc8255fd07ccd69"><td class="mdescLeft">&#160;</td><td class="mdescRight">从string格式化到vector  <a href="a00131.html#a5e3ca5f1b36ef97a2cc8255fd07ccd69">更多...</a><br /></td></tr>
+<tr class="separator:a5e3ca5f1b36ef97a2cc8255fd07ccd69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7bf212fddf60af59042677c3a7753a5"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00131.html#ae7bf212fddf60af59042677c3a7753a5">MiraiCP::Tools::escapeFromMiraiCode</a> (const std::string &amp;s)</td></tr>
+<tr class="memdesc:ae7bf212fddf60af59042677c3a7753a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">从miraicode转义到正常  <a href="a00131.html#ae7bf212fddf60af59042677c3a7753a5">更多...</a><br /></td></tr>
+<tr class="separator:ae7bf212fddf60af59042677c3a7753a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01f4fe41f8bef55b95953750f5cfb0c2"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00131.html#a01f4fe41f8bef55b95953750f5cfb0c2">MiraiCP::Tools::escapeToMiraiCode</a> (const std::string &amp;s)</td></tr>
+<tr class="memdesc:a01f4fe41f8bef55b95953750f5cfb0c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">转义miraicode格式  <a href="a00131.html#a01f4fe41f8bef55b95953750f5cfb0c2">更多...</a><br /></td></tr>
+<tr class="separator:a01f4fe41f8bef55b95953750f5cfb0c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a723249aacce9d348d328306a91d0a23c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00131.html#a723249aacce9d348d328306a91d0a23c">MiraiCP::Tools::starts_with</a> (const std::string &amp;f, const std::string &amp;s)</td></tr>
+<tr class="memdesc:a723249aacce9d348d328306a91d0a23c"><td class="mdescLeft">&#160;</td><td class="mdescRight">starts_with, from <a href="https://stackoverflow.com/questions/1878001/how-do-i-check-if-a-c-stdstring-starts-with-a-certain-string-and-convert-a">https://stackoverflow.com/questions/1878001/how-do-i-check-if-a-c-stdstring-starts-with-a-certain-string-and-convert-a</a>  <a href="a00131.html#a723249aacce9d348d328306a91d0a23c">更多...</a><br /></td></tr>
+<tr class="separator:a723249aacce9d348d328306a91d0a23c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30a4f141015fdd657749f277d69770d6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00131.html#a30a4f141015fdd657749f277d69770d6">MiraiCP::Tools::icompareChar</a> (char &amp;c1, char &amp;c2)</td></tr>
+<tr class="memdesc:a30a4f141015fdd657749f277d69770d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">compare char with case-insensitive  <a href="a00131.html#a30a4f141015fdd657749f277d69770d6">更多...</a><br /></td></tr>
+<tr class="separator:a30a4f141015fdd657749f277d69770d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef137ad19850356b58dae5185e74071e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00131.html#aef137ad19850356b58dae5185e74071e">MiraiCP::Tools::iequal</a> (std::string str1, std::string str2)</td></tr>
+<tr class="memdesc:aef137ad19850356b58dae5185e74071e"><td class="mdescLeft">&#160;</td><td class="mdescRight">case insensitive string compare from <a href="https://thispointer.com/c-case-insensitive-string-comparison-using-stl-c11-boost-library/">https://thispointer.com/c-case-insensitive-string-comparison-using-stl-c11-boost-library/</a>  <a href="a00131.html#aef137ad19850356b58dae5185e74071e">更多...</a><br /></td></tr>
+<tr class="separator:aef137ad19850356b58dae5185e74071e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">生成于 2021年 十二月 5日 星期日 20:04:19 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="a00116.html">Tools.cpp</a></li>
+    <li class="footer">生成于 2022年 一月 10日 星期一 15:34:47 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
 <script type="text/javascript">

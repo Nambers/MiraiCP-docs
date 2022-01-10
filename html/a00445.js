@@ -1,13 +1,5 @@
 var a00445 =
 [
-    [ "escapeFromMiraiCode", "a00445.html#ae7bf212fddf60af59042677c3a7753a5", null ],
-    [ "escapeToMiraiCode", "a00445.html#a01f4fe41f8bef55b95953750f5cfb0c2", null ],
-    [ "icompareChar", "a00445.html#a971744c8abffe33135c22bf4e4bde1f9", null ],
-    [ "iequal", "a00445.html#af67792d88da39aaecd6a8721019e1b1e", null ],
-    [ "jstring2str", "a00445.html#a3edca5ea268b6b1c023810b928701f55", null ],
-    [ "replace", "a00445.html#a7d114f18a24887ca125a869802e43118", null ],
-    [ "starts_with", "a00445.html#aa3dce8d70026bbf1d34736b5e206d0e1", null ],
-    [ "str2jstring", "a00445.html#ad2e5e5b78f6b79428bca2e9b44ac8265", null ],
-    [ "StringToVector", "a00445.html#a5e3ca5f1b36ef97a2cc8255fd07ccd69", null ],
-    [ "VectorToString", "a00445.html#aa81d48cd2113996106dc4ee7cb7c32b9", null ]
+    [ "attach", "a00445.html#a20796cdd95ace90b1f56b825abf51032", null ],
+    [ "e", "a00445.html#ad5e0fc94f06fd33fbc0c6db40c0486eb", null ]
 ];

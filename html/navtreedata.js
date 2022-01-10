@@ -25,7 +25,7 @@
 var NAVTREE =
 [
   [ "MiraiCP", "index.html", [
-    [ "弃用列表", "a00116.html", null ],
+    [ "弃用列表", "a00128.html", null ],
     [ "命名空间", "namespaces.html", [
       [ "命名空间列表", "namespaces.html", "namespaces_dup" ],
       [ "命名空间成员", "namespacemembers.html", [
@@ -33,7 +33,8 @@ var NAVTREE =
         [ "函数", "namespacemembers_func.html", null ],
         [ "变量", "namespacemembers_vars.html", null ],
         [ "类型定义", "namespacemembers_type.html", null ],
-        [ "枚举", "namespacemembers_enum.html", null ]
+        [ "枚举", "namespacemembers_enum.html", null ],
+        [ "枚举值", "namespacemembers_eval.html", null ]
       ] ]
     ] ],
     [ "类", "annotated.html", [
@@ -44,9 +45,7 @@ var NAVTREE =
         [ "全部", "functions.html", "functions_dup" ],
         [ "函数", "functions_func.html", "functions_func" ],
         [ "变量", "functions_vars.html", null ],
-        [ "类型定义", "functions_type.html", null ],
-        [ "枚举", "functions_enum.html", null ],
-        [ "枚举值", "functions_eval.html", null ]
+        [ "类型定义", "functions_type.html", null ]
       ] ]
     ] ],
     [ "文件", "files.html", [
@@ -66,12 +65,12 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "a00002.html",
-"a00129.html",
-"a00173.html#aec3b3e13b9dedba8e0a06ae45b146e51",
-"a00285.html#a3fcb5073c4ec3f07fb918cf2055cc40c",
-"a00349.html#a404b4535fa633f86f84c3145f646e8c2",
-"a00393.html#a90e338ad396d824807759601a7fa3b88",
-"files.html"
+"a00131.html",
+"a00175.html#ad0d2dad878885d82c78e5ef79efa9945",
+"a00259.html#a4d7a7e2f7c45f39a082580e885ee4f03",
+"a00343.html",
+"a00395.html#a91e0549cd91bb441980909cc5b32bee0",
+"a00447.html#ad0293f9419de31e1debe34fe84a38efc"
 ];
 
 var SYNCONMSG = '点击 关闭 面板同步';

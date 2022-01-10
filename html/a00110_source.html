@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiraiCP: utils.cpp 源文件</title>
+<title>MiraiCP: ThreadManager.cpp 源文件</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MiraiCP
-   &#160;<span id="projectnumber">v2.9.0-M1</span>
+   &#160;<span id="projectnumber">v2.9.1</span>
    </div>
    <div id="projectbrief">MiraiCP api document</div>
   </td>
@@ -90,10 +90,10 @@ $(document).ready(function(){initNavTree('a00110_source.html',''); initResizable
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">utils.cpp</div></div>
+  <div class="headertitle"><div class="title">ThreadManager.cpp</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="a00110.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// Copyright (c) 2021-2021. Eritque arcus and contributors.</span></div>
+<a href="a00110.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// Copyright (c) 2020 - 2022. Eritque arcus and contributors.</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">//</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">// This program is free software: you can redistribute it and/or modify</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">// it under the terms of the GNU Affero General Public License as</span></div>
@@ -109,306 +109,93 @@ $(document).ready(function(){initNavTree('a00110_source.html',''); initResizable
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">// along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</span></div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">//</span></div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &quot;<a class="code" href="a00113.html">utils.h</a>&quot;</span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &quot;<a class="code" href="a00026.html">Event.h</a>&quot;</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &quot;<a class="code" href="a00032.html">Exception.h</a>&quot;</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">// 开始对接JNI接口代码</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &quot;<a class="code" href="a00113.html">ThreadManager.h</a>&quot;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &quot;<a class="code" href="a00065.html">Logger.h</a>&quot;</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">namespace </span><a class="code hl_namespace" href="a00129.html">MiraiCP</a> {</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="comment">// 静态成员</span></div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment">/*</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment">* 名称:Java_com_example_plugin_CPP_1lib_Verify</span></div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="comment">* 作用:判断是否连接上本插件，勿改</span></div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="comment">* 参数:env 必备，job 必备</span></div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="comment">* 返回值:jstring (用str2jstring把string类型转成jsrting) 发送返回的字符串</span></div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="comment">*/</span></div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="a00110.html#ab701e3ac61a85b337ec5c1abaad6742d">   29</a></span><span class="keyword">using</span> <a class="code hl_typedef" href="a00110.html#ab701e3ac61a85b337ec5c1abaad6742d">json</a> = <a class="code hl_typedef" href="a00110.html#ab701e3ac61a85b337ec5c1abaad6742d">nlohmann::json</a>;</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>JNIEXPORT jstring</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="a00110.html#a8316c042af07664977262869ba214f13">   31</a></span><a class="code hl_function" href="a00110.html#a8316c042af07664977262869ba214f13">Verify</a>(JNIEnv *env, jobject) {</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keyword">using namespace </span><a class="code hl_namespace" href="a00117.html">MiraiCP</a>;</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    ThreadManager::setEnv(env);</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <a class="code hl_variable" href="a00437.html#a630b0c6d61decb2ea60eb719bbc1120e">MiraiCP::ThreadManager::JNIVersion</a> = env-&gt;GetVersion();</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keywordflow">try</span> {</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        <span class="comment">//初始化日志模块</span></div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        Config::construct();</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <a class="code hl_variable" href="a00117.html#a526fbb267bd3e2b072b85c1f502e14cf">Logger::logger</a>.<a class="code hl_function" href="a00317.html#a3b3770c77e25e0b43a4fce2f65be7175">init</a>();</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        <a class="code hl_function" href="a00117.html#a12d27be6730af4fc321ac1eb231db281">enrollPlugin</a>();</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <span class="keywordflow">if</span> (CPPPlugin::plugin == <span class="keyword">nullptr</span>) {</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>            <a class="code hl_variable" href="a00117.html#a526fbb267bd3e2b072b85c1f502e14cf">Logger::logger</a>.<a class="code hl_function" href="a00317.html#a418fad5b082009c5e40871d3cd88cacf">error</a>(<span class="stringliteral">&quot;无插件实例加载&quot;</span>);</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>            CPPPlugin::pluginLogger = <span class="keyword">new</span> <a class="code hl_class" href="a00333.html">PluginLogger</a>(&amp;<a class="code hl_variable" href="a00117.html#a526fbb267bd3e2b072b85c1f502e14cf">Logger::logger</a>);</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>            CPPPlugin::plugin-&gt;onEnable();</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        }</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    } <span class="keywordflow">catch</span> (<span class="keyword">const</span> <a class="code hl_interface" href="a00217.html">MiraiCPException</a> &amp;e) {</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        e.<a class="code hl_function" href="a00217.html#afdc939e2ca0635420943682e989fac86">raise</a>();</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    }</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <a class="code hl_typedef" href="a00117.html#ac0a8a1bade77a57eeb1d94cfacfb75ce">json</a> j = CPPPlugin::plugin-&gt;config.serialize();</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    j[<span class="stringliteral">&quot;MiraiCPversion&quot;</span>] = <a class="code hl_variable" href="a00117.html#ae471c96f73a019b792a82629b6bdfdf5">MiraiCPVersion</a>;</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keywordflow">return</span> Tools::str2jstring(j.dump().c_str());</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="comment">//验证机制，返回当前SDK版本</span></div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>}</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="comment">/* 插件结束事件*/</span></div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>JNIEXPORT jobject</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="a00110.html#a506a34a4d2049669f5d37ac29ebf2068">   57</a></span><a class="code hl_function" href="a00110.html#a506a34a4d2049669f5d37ac29ebf2068">PluginDisable</a>(JNIEnv *env, jobject job) {</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keyword">using namespace </span><a class="code hl_namespace" href="a00117.html">MiraiCP</a>;</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    ThreadManager::setEnv(env);</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="keywordflow">try</span> {</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        CPPPlugin::plugin-&gt;onDisable();</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    } <span class="keywordflow">catch</span> (<span class="keyword">const</span> <a class="code hl_interface" href="a00217.html">MiraiCPException</a> &amp;e) {</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        e.<a class="code hl_function" href="a00217.html#afdc939e2ca0635420943682e989fac86">raise</a>();</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    }</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    CPPPlugin::plugin = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="keywordflow">return</span> job;</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>}</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    std::map&lt;std::string, ThreadManager::ThreadInfo&gt; <a class="code hl_variable" href="a00467.html#a6aaf08f6744b01ac5ab06430313dd3a0">ThreadManager::threads</a> = std::map&lt;std::string, ThreadInfo&gt;();</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    std::recursive_mutex <a class="code hl_variable" href="a00467.html#af61aae7d053395c836bae677af861364">ThreadManager::mtx</a> = std::recursive_mutex();</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    JavaVM *<a class="code hl_variable" href="a00467.html#ac5796576b9962187070ad21fbfdf17ff">ThreadManager::gvm</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keywordtype">long</span> <a class="code hl_variable" href="a00467.html#a630b0c6d61decb2ea60eb719bbc1120e">ThreadManager::JNIVersion</a> = 0;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="comment">// 结束静态成员</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="a00467.html#afacfbdbffc416bb53676f040720a42e0">   30</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="a00467.html#afacfbdbffc416bb53676f040720a42e0">ThreadManager::setEnv</a>(JNIEnv *e) {</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        <a class="code hl_variable" href="a00467.html#af61aae7d053395c836bae677af861364">mtx</a>.lock();</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <span class="keywordflow">if</span> (!<a class="code hl_function" href="a00467.html#abd1025cb50143b1aa60b55d79ec2b370">ThreadManager::included</a>(<a class="code hl_function" href="a00467.html#a11837c8fea64ee75bea0bcd1ea56de9c">ThreadManager::getThreadId</a>())) {</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>            <a class="code hl_struct" href="a00471.html">ThreadInfo</a> tmp{e, <span class="keyword">false</span>};</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>            <a class="code hl_variable" href="a00467.html#a6aaf08f6744b01ac5ab06430313dd3a0">ThreadManager::threads</a>.insert(std::pair&lt;std::string, ThreadInfo&gt;(<a class="code hl_function" href="a00467.html#a11837c8fea64ee75bea0bcd1ea56de9c">ThreadManager::getThreadId</a>(), tmp));</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>            <a class="code hl_variable" href="a00467.html#a6aaf08f6744b01ac5ab06430313dd3a0">ThreadManager::threads</a>[<a class="code hl_function" href="a00467.html#a11837c8fea64ee75bea0bcd1ea56de9c">ThreadManager::getThreadId</a>()].e = e;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        }</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <a class="code hl_variable" href="a00467.html#af61aae7d053395c836bae677af861364">mtx</a>.unlock();</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    }</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="a00467.html#a29f1a55d4cb7b78045fd3f2566c59dcc">   41</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="a00467.html#a29f1a55d4cb7b78045fd3f2566c59dcc">ThreadManager::newEnv</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *threadName) {</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        JNIEnv *env = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        JavaVMAttachArgs args{<a class="code hl_variable" href="a00467.html#a630b0c6d61decb2ea60eb719bbc1120e">JNIVersion</a>,</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>                              <span class="keyword">const_cast&lt;</span><span class="keywordtype">char</span> *<span class="keyword">&gt;</span>(threadName),</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>                              <span class="keyword">nullptr</span>};</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <a class="code hl_variable" href="a00467.html#ac5796576b9962187070ad21fbfdf17ff">gvm</a>-&gt;AttachCurrentThread((<span class="keywordtype">void</span> **) &amp;env, &amp;args);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <a class="code hl_struct" href="a00471.html">ThreadInfo</a> tmp{env, <span class="keyword">true</span>};</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        <a class="code hl_variable" href="a00467.html#a6aaf08f6744b01ac5ab06430313dd3a0">ThreadManager::threads</a>.insert(std::pair&lt;std::string, ThreadInfo&gt;(<a class="code hl_function" href="a00467.html#a11837c8fea64ee75bea0bcd1ea56de9c">ThreadManager::getThreadId</a>(), tmp));</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        <a class="code hl_variable" href="a00355.html#a268fd602157c3fa49616a8872c82bfb1">Logger::logger</a>.<a class="code hl_function" href="a00347.html#af487216ad90334b62a970ad6e5a796a4">info</a>(<span class="stringliteral">&quot;refresh env&quot;</span>);</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    };</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="a00467.html#a72b77deebd7be1c800b73ebd4b2daa09">   52</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="a00467.html#a72b77deebd7be1c800b73ebd4b2daa09">ThreadManager::detach</a>() {</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        <a class="code hl_variable" href="a00467.html#af61aae7d053395c836bae677af861364">mtx</a>.lock();</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="a00467.html#abd1025cb50143b1aa60b55d79ec2b370">ThreadManager::included</a>(<a class="code hl_function" href="a00467.html#a11837c8fea64ee75bea0bcd1ea56de9c">ThreadManager::getThreadId</a>())) {</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>            <span class="keywordtype">bool</span> att = <a class="code hl_variable" href="a00467.html#a6aaf08f6744b01ac5ab06430313dd3a0">ThreadManager::threads</a>[<a class="code hl_function" href="a00467.html#a11837c8fea64ee75bea0bcd1ea56de9c">ThreadManager::getThreadId</a>()].attach;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>            <a class="code hl_variable" href="a00467.html#a6aaf08f6744b01ac5ab06430313dd3a0">ThreadManager::threads</a>.erase(<a class="code hl_function" href="a00467.html#a11837c8fea64ee75bea0bcd1ea56de9c">ThreadManager::getThreadId</a>());</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>            <span class="keywordflow">if</span> (att)</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>                <a class="code hl_variable" href="a00467.html#ac5796576b9962187070ad21fbfdf17ff">gvm</a>-&gt;DetachCurrentThread();</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        }</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        <a class="code hl_variable" href="a00467.html#af61aae7d053395c836bae677af861364">mtx</a>.unlock();</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    }</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="a00467.html#abd1025cb50143b1aa60b55d79ec2b370">   63</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="a00467.html#abd1025cb50143b1aa60b55d79ec2b370">ThreadManager::included</a>(<span class="keyword">const</span> std::string &amp;<span class="keywordtype">id</span>) {</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="a00467.html#a6aaf08f6744b01ac5ab06430313dd3a0">ThreadManager::threads</a>.empty() || <a class="code hl_variable" href="a00467.html#a6aaf08f6744b01ac5ab06430313dd3a0">ThreadManager::threads</a>.<a class="code hl_enumvalue" href="a00129.html#a9978cdf5158c8fc2ed93dbd7bbf3efb5ae2942a04780e223b215eb8b663cf5353">count</a>(<span class="keywordtype">id</span>) == 0)</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    }</div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="comment">/*返回空值*/</span></div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>JNIEXPORT jstring</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="a00110.html#a0817b020132dc68a0f1a55a9c47e1fea">   72</a></span><a class="code hl_function" href="a00110.html#a0817b020132dc68a0f1a55a9c47e1fea">returnNull</a>() {</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="a00445.html#ad2e5e5b78f6b79428bca2e9b44ac8265">MiraiCP::Tools::str2jstring</a>(<span class="stringliteral">&quot;MIRAICP_NULL&quot;</span>);</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>}</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="comment">/*</span></div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="comment">* 消息解析分流</span></div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="comment">*/</span></div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>JNIEXPORT jstring</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="a00110.html#a8384b304b12cbb9e9746aebb14f84e5a">   80</a></span><a class="code hl_function" href="a00110.html#a8384b304b12cbb9e9746aebb14f84e5a">Event</a>(JNIEnv *env, jobject, jstring content) {</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <span class="keyword">using namespace </span><a class="code hl_namespace" href="a00117.html">MiraiCP</a>;</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    ThreadManager::setEnv(env);</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    std::string tmp = Tools::jstring2str(content, env);</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <a class="code hl_typedef" href="a00117.html#ac0a8a1bade77a57eeb1d94cfacfb75ce">json</a> j;</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <span class="keywordflow">try</span> {</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        j = json::parse(tmp);</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    } <span class="keywordflow">catch</span> (json::parse_error &amp;e) {</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        <a class="code hl_class" href="a00233.html">APIException</a>(<span class="stringliteral">&quot;格式化json错误&quot;</span>).<a class="code hl_function" href="a00217.html#afdc939e2ca0635420943682e989fac86">raise</a>();</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        <a class="code hl_variable" href="a00117.html#a526fbb267bd3e2b072b85c1f502e14cf">Logger::logger</a>.<a class="code hl_function" href="a00317.html#a418fad5b082009c5e40871d3cd88cacf">error</a>(<span class="stringliteral">&quot;For debug:&quot;</span> + j.dump());</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        <a class="code hl_variable" href="a00117.html#a526fbb267bd3e2b072b85c1f502e14cf">Logger::logger</a>.<a class="code hl_function" href="a00317.html#a418fad5b082009c5e40871d3cd88cacf">error</a>(e.what(), <span class="keyword">false</span>);</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="a00110.html#a0817b020132dc68a0f1a55a9c47e1fea">returnNull</a>();</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    }</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    <span class="keywordflow">try</span> {</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        <span class="keywordflow">switch</span> (j[<span class="stringliteral">&quot;type&quot;</span>].get&lt;int&gt;()) {</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>            <span class="keywordflow">case</span> 1: {</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>                <span class="comment">//GroupMessage</span></div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>                Event::processor.broadcast&lt;<a class="code hl_class" href="a00145.html">GroupMessageEvent</a>&gt;(</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>                        <a class="code hl_class" href="a00145.html">GroupMessageEvent</a>(j[<span class="stringliteral">&quot;group&quot;</span>][<span class="stringliteral">&quot;botid&quot;</span>],</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>                                          <a class="code hl_class" href="a00293.html">Group</a>(Group::deserialize(j[<span class="stringliteral">&quot;group&quot;</span>])),</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>                                          <a class="code hl_class" href="a00345.html">Member</a>(Member::deserialize(j[<span class="stringliteral">&quot;member&quot;</span>])),</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>                                          MessageChain::deserializationFromMessageSourceJson(json::parse(j[<span class="stringliteral">&quot;source&quot;</span>].get&lt;std::string&gt;()))</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>                                                  .plus(MessageSource::deserializeFromString(j[<span class="stringliteral">&quot;source&quot;</span>].get&lt;std::string&gt;()))));</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>            }</div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>            <span class="keywordflow">case</span> 2: {</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>                <span class="comment">//私聊消息</span></div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>                Event::processor.broadcast&lt;<a class="code hl_class" href="a00149.html">PrivateMessageEvent</a>&gt;(</div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>                        <a class="code hl_class" href="a00149.html">PrivateMessageEvent</a>(j[<span class="stringliteral">&quot;friend&quot;</span>][<span class="stringliteral">&quot;botid&quot;</span>],</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>                                            <a class="code hl_class" href="a00289.html">Friend</a>(Friend::deserialize(j[<span class="stringliteral">&quot;friend&quot;</span>])),</div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>                                            MessageChain::deserializationFromMessageSourceJson(json::parse(j[<span class="stringliteral">&quot;source&quot;</span>].get&lt;std::string&gt;()))</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>                                                    .plus(MessageSource::deserializeFromString(j[<span class="stringliteral">&quot;source&quot;</span>].get&lt;std::string&gt;()))));</div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>            }</div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>            <span class="keywordflow">case</span> 3:</div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>                <span class="comment">//群聊邀请</span></div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>                Event::processor.broadcast&lt;<a class="code hl_class" href="a00153.html">GroupInviteEvent</a>&gt;(</div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>                        <a class="code hl_class" href="a00153.html">GroupInviteEvent</a>(</div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>                                j[<span class="stringliteral">&quot;source&quot;</span>][<span class="stringliteral">&quot;botid&quot;</span>],</div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>                                j[<span class="stringliteral">&quot;request&quot;</span>],</div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>                                j[<span class="stringliteral">&quot;source&quot;</span>][<span class="stringliteral">&quot;inviternick&quot;</span>],</div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>                                j[<span class="stringliteral">&quot;source&quot;</span>][<span class="stringliteral">&quot;inviterid&quot;</span>],</div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>                                j[<span class="stringliteral">&quot;source&quot;</span>][<span class="stringliteral">&quot;groupname&quot;</span>],</div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>                                j[<span class="stringliteral">&quot;source&quot;</span>][<span class="stringliteral">&quot;groupid&quot;</span>]));</div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>            <span class="keywordflow">case</span> 4:</div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>                <span class="comment">//好友</span></div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>                Event::processor.broadcast&lt;<a class="code hl_class" href="a00157.html">NewFriendRequestEvent</a>&gt;(</div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>                        <a class="code hl_class" href="a00157.html">NewFriendRequestEvent</a>(</div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>                                j[<span class="stringliteral">&quot;source&quot;</span>][<span class="stringliteral">&quot;botid&quot;</span>],</div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>                                j[<span class="stringliteral">&quot;request&quot;</span>],</div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>                                j[<span class="stringliteral">&quot;source&quot;</span>][<span class="stringliteral">&quot;fromid&quot;</span>],</div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>                                j[<span class="stringliteral">&quot;source&quot;</span>][<span class="stringliteral">&quot;fromgroupid&quot;</span>],</div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>                                j[<span class="stringliteral">&quot;source&quot;</span>][<span class="stringliteral">&quot;fromnick&quot;</span>],</div>
-<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>                                j[<span class="stringliteral">&quot;source&quot;</span>][<span class="stringliteral">&quot;message&quot;</span>]));</div>
-<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>            <span class="keywordflow">case</span> 5:</div>
-<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>                <span class="comment">//新成员加入</span></div>
-<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>                Event::processor.broadcast&lt;<a class="code hl_class" href="a00161.html">MemberJoinEvent</a>&gt;(</div>
-<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>                        <a class="code hl_class" href="a00161.html">MemberJoinEvent</a>(</div>
-<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>                                j[<span class="stringliteral">&quot;group&quot;</span>][<span class="stringliteral">&quot;botid&quot;</span>],</div>
-<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>                                j[<span class="stringliteral">&quot;jointype&quot;</span>],</div>
-<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>                                <a class="code hl_class" href="a00345.html">Member</a>(Member::deserialize(j[<span class="stringliteral">&quot;member&quot;</span>])),</div>
-<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>                                <a class="code hl_class" href="a00293.html">Group</a>(Group::deserialize(j[<span class="stringliteral">&quot;group&quot;</span>])),</div>
-<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>                                j[<span class="stringliteral">&quot;inviterid&quot;</span>]));</div>
-<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>            <span class="keywordflow">case</span> 6:</div>
-<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>                <span class="comment">//群成员退出</span></div>
-<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>                Event::processor.broadcast&lt;<a class="code hl_class" href="a00165.html">MemberLeaveEvent</a>&gt;(<a class="code hl_class" href="a00165.html">MemberLeaveEvent</a>(</div>
-<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>                        j[<span class="stringliteral">&quot;group&quot;</span>][<span class="stringliteral">&quot;botid&quot;</span>],</div>
-<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>                        j[<span class="stringliteral">&quot;leavetype&quot;</span>],</div>
-<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>                        j[<span class="stringliteral">&quot;memberid&quot;</span>],</div>
-<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>                        <a class="code hl_class" href="a00293.html">Group</a>(Group::deserialize(j[<span class="stringliteral">&quot;group&quot;</span>])),</div>
-<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>                        j[<span class="stringliteral">&quot;operatorid&quot;</span>]));</div>
-<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>            <span class="keywordflow">case</span> 7:</div>
-<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>                Event::processor.broadcast&lt;<a class="code hl_class" href="a00169.html">RecallEvent</a>&gt;(<a class="code hl_class" href="a00169.html">RecallEvent</a>(</div>
-<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>                        j[<span class="stringliteral">&quot;botid&quot;</span>],</div>
-<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>                        j[<span class="stringliteral">&quot;etype&quot;</span>],</div>
-<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>                        j[<span class="stringliteral">&quot;time&quot;</span>],</div>
-<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>                        j[<span class="stringliteral">&quot;authorid&quot;</span>],</div>
-<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>                        j[<span class="stringliteral">&quot;operatorid&quot;</span>],</div>
-<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>                        j[<span class="stringliteral">&quot;ids&quot;</span>],</div>
-<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>                        j[<span class="stringliteral">&quot;internalids&quot;</span>],</div>
-<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>                        j[<span class="stringliteral">&quot;groupid&quot;</span>]));</div>
-<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>            <span class="keywordflow">case</span> 9:</div>
-<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>                Event::processor.broadcast&lt;<a class="code hl_class" href="a00173.html">BotJoinGroupEvent</a>&gt;(<a class="code hl_class" href="a00173.html">BotJoinGroupEvent</a>(</div>
-<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>                        j[<span class="stringliteral">&quot;group&quot;</span>][<span class="stringliteral">&quot;botid&quot;</span>],</div>
-<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>                        j[<span class="stringliteral">&quot;etype&quot;</span>],</div>
-<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>                        <a class="code hl_class" href="a00293.html">Group</a>(Group::deserialize(j[<span class="stringliteral">&quot;group&quot;</span>])),</div>
-<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>                        j[<span class="stringliteral">&quot;inviterid&quot;</span>]));</div>
-<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>            <span class="keywordflow">case</span> 10:</div>
-<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>                Event::processor.broadcast&lt;<a class="code hl_class" href="a00177.html">GroupTempMessageEvent</a>&gt;(<a class="code hl_class" href="a00177.html">GroupTempMessageEvent</a>(</div>
-<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>                        j[<span class="stringliteral">&quot;group&quot;</span>][<span class="stringliteral">&quot;botid&quot;</span>],</div>
-<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>                        <a class="code hl_class" href="a00293.html">Group</a>(Group::deserialize(j[<span class="stringliteral">&quot;group&quot;</span>])),</div>
-<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>                        <a class="code hl_class" href="a00345.html">Member</a>(Member::deserialize(j[<span class="stringliteral">&quot;member&quot;</span>])),</div>
-<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>                        MessageChain::deserializationFromMessageSourceJson(json::parse(j[<span class="stringliteral">&quot;message&quot;</span>].get&lt;std::string&gt;()))</div>
-<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>                                .plus(MessageSource::deserializeFromString(j[<span class="stringliteral">&quot;source&quot;</span>]))));</div>
-<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>            <span class="keywordflow">case</span> 11:</div>
-<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>                Event::processor.broadcast&lt;<a class="code hl_class" href="a00185.html">BotOnlineEvent</a>&gt;(<a class="code hl_class" href="a00185.html">BotOnlineEvent</a>(j[<span class="stringliteral">&quot;botid&quot;</span>]));</div>
-<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>            <span class="keywordflow">case</span> 12:</div>
-<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>                Event::processor.broadcast&lt;<a class="code hl_class" href="a00181.html">TimeOutEvent</a>&gt;(<a class="code hl_class" href="a00181.html">TimeOutEvent</a>(j[<span class="stringliteral">&quot;msg&quot;</span>]));</div>
-<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>            <span class="keywordflow">case</span> 13:</div>
-<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>                Event::processor.broadcast&lt;<a class="code hl_class" href="a00189.html">NudgeEvent</a>&gt;(<a class="code hl_class" href="a00189.html">NudgeEvent</a>(Contact::deserialize(j[<span class="stringliteral">&quot;from&quot;</span>]),</div>
-<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>                                                                  Contact::deserialize(j[<span class="stringliteral">&quot;target&quot;</span>]),</div>
-<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>                                                                  j[<span class="stringliteral">&quot;botid&quot;</span>]));</div>
-<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>            <span class="keywordflow">case</span> 14:</div>
-<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>                Event::processor.broadcast(<a class="code hl_class" href="a00193.html">BotLeaveEvent</a>(j[<span class="stringliteral">&quot;groupid&quot;</span>], j[<span class="stringliteral">&quot;botid&quot;</span>]));</div>
-<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>            <span class="keywordflow">case</span> 15: {</div>
-<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>                std::optional&lt;Group&gt; a;</div>
-<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>                std::optional&lt;Member&gt; b;</div>
-<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>                <a class="code hl_class" href="a00129.html">Contact</a> temp = Contact::deserialize(j[<span class="stringliteral">&quot;group&quot;</span>]);</div>
-<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>                <span class="keywordflow">if</span> (temp.<a class="code hl_function" href="a00129.html#a1f208ae0f09c367c90c2e079e63048db">id</a>() == 0)</div>
-<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>                    a = std::nullopt;</div>
-<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>                <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>                    a = <a class="code hl_class" href="a00293.html">Group</a>(temp);</div>
-<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>                temp = Contact::deserialize(j[<span class="stringliteral">&quot;inviter&quot;</span>]);</div>
-<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>                <span class="keywordflow">if</span> (temp.<a class="code hl_function" href="a00129.html#a1f208ae0f09c367c90c2e079e63048db">id</a>() == 0)</div>
-<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>                    b = std::nullopt;</div>
-<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>                <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>                    b = <a class="code hl_class" href="a00345.html">Member</a>(temp);</div>
-<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>                Event::processor.broadcast(<a class="code hl_class" href="a00197.html">MemberJoinRequestEvent</a>(a, b, temp.<a class="code hl_function" href="a00129.html#ac257ebdd1591ea5acf6e045abf28ecba">botid</a>(), j[<span class="stringliteral">&quot;requestData&quot;</span>]));</div>
-<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>            }</div>
-<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>            <span class="keywordflow">default</span>:</div>
-<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>                <a class="code hl_define" href="a00101.html#a05895baa03633917e58dcb7228229097">MiraiCPThrow</a>(<a class="code hl_class" href="a00233.html">APIException</a>(<span class="stringliteral">&quot;Unreachable code&quot;</span>));</div>
-<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>        }</div>
-<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>    } <span class="keywordflow">catch</span> (json::type_error &amp;e) {</div>
-<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>        <a class="code hl_variable" href="a00117.html#a526fbb267bd3e2b072b85c1f502e14cf">Logger::logger</a>.<a class="code hl_function" href="a00317.html#a418fad5b082009c5e40871d3cd88cacf">error</a>(<span class="stringliteral">&quot;json格式化异常,位置C-Handle&quot;</span>);</div>
-<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>        <a class="code hl_variable" href="a00117.html#a526fbb267bd3e2b072b85c1f502e14cf">Logger::logger</a>.<a class="code hl_function" href="a00317.html#a418fad5b082009c5e40871d3cd88cacf">error</a>(e.what(), <span class="keyword">false</span>);</div>
-<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>        <span class="keywordflow">return</span> Tools::str2jstring(<span class="stringliteral">&quot;ERROR&quot;</span>);</div>
-<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>    } <span class="keywordflow">catch</span> (<span class="keyword">const</span> <a class="code hl_interface" href="a00217.html">MiraiCPException</a> &amp;e) {</div>
-<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>        e.raise();</div>
-<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>        <span class="keywordflow">return</span> Tools::str2jstring(<span class="stringliteral">&quot;ERROR&quot;</span>);</div>
-<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>    } <span class="keywordflow">catch</span> (<span class="keyword">const</span> std::exception &amp;e) {</div>
-<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>        <span class="comment">// 这里如果不catch全部exception就会带崩jvm</span></div>
-<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>        <a class="code hl_variable" href="a00117.html#a526fbb267bd3e2b072b85c1f502e14cf">Logger::logger</a>.<a class="code hl_function" href="a00317.html#a418fad5b082009c5e40871d3cd88cacf">error</a>(e.what());</div>
-<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>        <span class="keywordflow">return</span> Tools::str2jstring(<span class="stringliteral">&quot;ERROR&quot;</span>);</div>
-<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>    }</div>
-<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="a00110.html#a0817b020132dc68a0f1a55a9c47e1fea">returnNull</a>();</div>
-<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>}</div>
-<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span> </div>
-<div class="line"><a id="l00229" name="l00229"></a><span class="lineno"><a class="line" href="a00110.html#aeb3405447431287ce1e38aef6797b8e8">  229</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="a00110.html#aeb3405447431287ce1e38aef6797b8e8">registerMethods</a>(JNIEnv *env, <span class="keyword">const</span> <span class="keywordtype">char</span> *className, JNINativeMethod *gMethods, <span class="keywordtype">int</span> numMethods) {</div>
-<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>    jclass clazz = env-&gt;FindClass(className);</div>
-<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>    <span class="keywordflow">if</span> (clazz == <span class="keyword">nullptr</span>) {</div>
-<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>        <span class="keywordflow">return</span> JNI_FALSE;</div>
-<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>    }</div>
-<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>    <span class="comment">//注册native方法</span></div>
-<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>    <span class="keywordflow">if</span> (env-&gt;RegisterNatives(clazz, gMethods, numMethods) &lt; 0) {</div>
-<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>        <span class="keywordflow">return</span> JNI_FALSE;</div>
-<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>    }</div>
-<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>    <span class="keywordflow">return</span> JNI_TRUE;</div>
-<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>}</div>
-<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span> </div>
-<div class="line"><a id="l00241" name="l00241"></a><span class="lineno"><a class="line" href="a00110.html#ace2f182a65d314239803bda0fc212c51">  241</a></span>JNINativeMethod <a class="code hl_variable" href="a00110.html#ace2f182a65d314239803bda0fc212c51">method_table</a>[] = {</div>
-<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>        {(<span class="keywordtype">char</span> *) <span class="stringliteral">&quot;Verify&quot;</span>, (<span class="keywordtype">char</span> *) <span class="stringliteral">&quot;()Ljava/lang/String;&quot;</span>, (jstring *) <a class="code hl_function" href="a00110.html#a8316c042af07664977262869ba214f13">Verify</a>},</div>
-<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>        {(<span class="keywordtype">char</span> *) <span class="stringliteral">&quot;Event&quot;</span>, (<span class="keywordtype">char</span> *) <span class="stringliteral">&quot;(Ljava/lang/String;)Ljava/lang/String;&quot;</span>, (jstring *) <a class="code hl_class" href="a00205.html">Event</a>},</div>
-<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>        {(<span class="keywordtype">char</span> *) <span class="stringliteral">&quot;PluginDisable&quot;</span>, (<span class="keywordtype">char</span> *) <span class="stringliteral">&quot;()Ljava/lang/Void;&quot;</span>, (jobject *) <a class="code hl_function" href="a00110.html#a506a34a4d2049669f5d37ac29ebf2068">PluginDisable</a>}};</div>
-<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span> </div>
-<div class="line"><a id="l00246" name="l00246"></a><span class="lineno"><a class="line" href="a00110.html#afb46b584efd9f9efc5313642141edeff">  246</a></span><span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> JNIEXPORT jint <a class="code hl_function" href="a00110.html#afb46b584efd9f9efc5313642141edeff">JNI_OnLoad</a>(JavaVM *vm, <span class="keywordtype">void</span> *) {</div>
-<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>    JNIEnv *env = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>    <span class="keywordflow">if</span> (vm-&gt;GetEnv((<span class="keywordtype">void</span> **) &amp;env, JNI_VERSION_1_6) != JNI_OK) {</div>
-<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>        <span class="keywordflow">return</span> JNI_ERR;</div>
-<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>    }</div>
-<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>    assert(env != <span class="keyword">nullptr</span>);</div>
-<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>    <a class="code hl_variable" href="a00437.html#ac5796576b9962187070ad21fbfdf17ff">MiraiCP::ThreadManager::gvm</a> = vm;</div>
-<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>    <span class="comment">// 注册native方法</span></div>
-<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>    <span class="keywordflow">if</span> (!<a class="code hl_function" href="a00110.html#aeb3405447431287ce1e38aef6797b8e8">registerMethods</a>(env, <span class="stringliteral">&quot;tech/eritquearcus/miraicp/shared/CPPLib&quot;</span>, <a class="code hl_variable" href="a00110.html#ace2f182a65d314239803bda0fc212c51">method_table</a>, 3)) {</div>
-<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>        <span class="keywordflow">return</span> JNI_ERR;</div>
-<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>    }</div>
-<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span> </div>
-<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>    <span class="keywordflow">return</span> JNI_VERSION_1_6;</div>
-<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>}</div>
-<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span> </div>
-<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span><span class="comment">//结束对接JNI接口代码</span></div>
-<div class="ttc" id="aa00026_html"><div class="ttname"><a href="a00026.html">Event.h</a></div></div>
-<div class="ttc" id="aa00032_html"><div class="ttname"><a href="a00032.html">Exception.h</a></div></div>
-<div class="ttc" id="aa00101_html_a05895baa03633917e58dcb7228229097"><div class="ttname"><a href="a00101.html#a05895baa03633917e58dcb7228229097">MiraiCPThrow</a></div><div class="ttdeci">#define MiraiCPThrow(x)</div><div class="ttdef"><b>Definition:</b> <a href="a00101_source.html#l00019">ThreadManager.h:19</a></div></div>
-<div class="ttc" id="aa00110_html_a0817b020132dc68a0f1a55a9c47e1fea"><div class="ttname"><a href="a00110.html#a0817b020132dc68a0f1a55a9c47e1fea">returnNull</a></div><div class="ttdeci">JNIEXPORT jstring returnNull()</div><div class="ttdef"><b>Definition:</b> <a href="a00110_source.html#l00072">utils.cpp:72</a></div></div>
-<div class="ttc" id="aa00110_html_a506a34a4d2049669f5d37ac29ebf2068"><div class="ttname"><a href="a00110.html#a506a34a4d2049669f5d37ac29ebf2068">PluginDisable</a></div><div class="ttdeci">JNIEXPORT jobject PluginDisable(JNIEnv *env, jobject job)</div><div class="ttdef"><b>Definition:</b> <a href="a00110_source.html#l00057">utils.cpp:57</a></div></div>
-<div class="ttc" id="aa00110_html_a8316c042af07664977262869ba214f13"><div class="ttname"><a href="a00110.html#a8316c042af07664977262869ba214f13">Verify</a></div><div class="ttdeci">JNIEXPORT jstring Verify(JNIEnv *env, jobject)</div><div class="ttdef"><b>Definition:</b> <a href="a00110_source.html#l00031">utils.cpp:31</a></div></div>
-<div class="ttc" id="aa00110_html_a8384b304b12cbb9e9746aebb14f84e5a"><div class="ttname"><a href="a00110.html#a8384b304b12cbb9e9746aebb14f84e5a">Event</a></div><div class="ttdeci">JNIEXPORT jstring Event(JNIEnv *env, jobject, jstring content)</div><div class="ttdef"><b>Definition:</b> <a href="a00110_source.html#l00080">utils.cpp:80</a></div></div>
-<div class="ttc" id="aa00110_html_ab701e3ac61a85b337ec5c1abaad6742d"><div class="ttname"><a href="a00110.html#ab701e3ac61a85b337ec5c1abaad6742d">json</a></div><div class="ttdeci">nlohmann::json json</div><div class="ttdef"><b>Definition:</b> <a href="a00110_source.html#l00029">utils.cpp:29</a></div></div>
-<div class="ttc" id="aa00110_html_ace2f182a65d314239803bda0fc212c51"><div class="ttname"><a href="a00110.html#ace2f182a65d314239803bda0fc212c51">method_table</a></div><div class="ttdeci">JNINativeMethod method_table[]</div><div class="ttdef"><b>Definition:</b> <a href="a00110_source.html#l00241">utils.cpp:241</a></div></div>
-<div class="ttc" id="aa00110_html_aeb3405447431287ce1e38aef6797b8e8"><div class="ttname"><a href="a00110.html#aeb3405447431287ce1e38aef6797b8e8">registerMethods</a></div><div class="ttdeci">int registerMethods(JNIEnv *env, const char *className, JNINativeMethod *gMethods, int numMethods)</div><div class="ttdef"><b>Definition:</b> <a href="a00110_source.html#l00229">utils.cpp:229</a></div></div>
-<div class="ttc" id="aa00110_html_afb46b584efd9f9efc5313642141edeff"><div class="ttname"><a href="a00110.html#afb46b584efd9f9efc5313642141edeff">JNI_OnLoad</a></div><div class="ttdeci">JNIEXPORT jint JNI_OnLoad(JavaVM *vm, void *)</div><div class="ttdef"><b>Definition:</b> <a href="a00110_source.html#l00246">utils.cpp:246</a></div></div>
-<div class="ttc" id="aa00113_html"><div class="ttname"><a href="a00113.html">utils.h</a></div></div>
-<div class="ttc" id="aa00117_html"><div class="ttname"><a href="a00117.html">MiraiCP</a></div><div class="ttdef"><b>Definition:</b> <a href="a00002_source.html#l00024">Bot.h:24</a></div></div>
-<div class="ttc" id="aa00117_html_a12d27be6730af4fc321ac1eb231db281"><div class="ttname"><a href="a00117.html#a12d27be6730af4fc321ac1eb231db281">MiraiCP::enrollPlugin</a></div><div class="ttdeci">void enrollPlugin()</div></div>
-<div class="ttc" id="aa00117_html_a526fbb267bd3e2b072b85c1f502e14cf"><div class="ttname"><a href="a00117.html#a526fbb267bd3e2b072b85c1f502e14cf">MiraiCP::logger</a></div><div class="ttdeci">Logger *const logger</div><div class="ttdef"><b>Definition:</b> <a href="a00053_source.html#l00024">Logger.cpp:24</a></div></div>
-<div class="ttc" id="aa00117_html_ac0a8a1bade77a57eeb1d94cfacfb75ce"><div class="ttname"><a href="a00117.html#ac0a8a1bade77a57eeb1d94cfacfb75ce">MiraiCP::json</a></div><div class="ttdeci">nlohmann::json json</div><div class="ttdef"><b>Definition:</b> <a href="a00011_source.html#l00021">Contact.cpp:21</a></div></div>
-<div class="ttc" id="aa00117_html_ae471c96f73a019b792a82629b6bdfdf5"><div class="ttname"><a href="a00117.html#ae471c96f73a019b792a82629b6bdfdf5">MiraiCP::MiraiCPVersion</a></div><div class="ttdeci">const std::string MiraiCPVersion</div><div class="ttdef"><b>Definition:</b> <a href="a00113_source.html#l00025">utils.h:25</a></div></div>
-<div class="ttc" id="aa00129_html"><div class="ttname"><a href="a00129.html">MiraiCP::Contact</a></div><div class="ttdef"><b>Definition:</b> <a href="a00014_source.html#l00047">Contact.h:47</a></div></div>
-<div class="ttc" id="aa00129_html_a1f208ae0f09c367c90c2e079e63048db"><div class="ttname"><a href="a00129.html#a1f208ae0f09c367c90c2e079e63048db">MiraiCP::Contact::id</a></div><div class="ttdeci">QQID id() const</div><div class="ttdoc">id在全部情况存在</div><div class="ttdef"><b>Definition:</b> <a href="a00014_source.html#l00153">Contact.h:153</a></div></div>
-<div class="ttc" id="aa00129_html_ac257ebdd1591ea5acf6e045abf28ecba"><div class="ttname"><a href="a00129.html#ac257ebdd1591ea5acf6e045abf28ecba">MiraiCP::Contact::botid</a></div><div class="ttdeci">QQID botid() const</div><div class="ttdoc">所属bot</div><div class="ttdef"><b>Definition:</b> <a href="a00014_source.html#l00169">Contact.h:169</a></div></div>
-<div class="ttc" id="aa00145_html"><div class="ttname"><a href="a00145.html">MiraiCP::GroupMessageEvent</a></div><div class="ttdef"><b>Definition:</b> <a href="a00026_source.html#l00086">Event.h:86</a></div></div>
-<div class="ttc" id="aa00149_html"><div class="ttname"><a href="a00149.html">MiraiCP::PrivateMessageEvent</a></div><div class="ttdef"><b>Definition:</b> <a href="a00026_source.html#l00128">Event.h:128</a></div></div>
-<div class="ttc" id="aa00153_html"><div class="ttname"><a href="a00153.html">MiraiCP::GroupInviteEvent</a></div><div class="ttdoc">群聊邀请事件类声明</div><div class="ttdef"><b>Definition:</b> <a href="a00026_source.html#l00160">Event.h:160</a></div></div>
-<div class="ttc" id="aa00157_html"><div class="ttname"><a href="a00157.html">MiraiCP::NewFriendRequestEvent</a></div><div class="ttdoc">好友申请事件声明</div><div class="ttdef"><b>Definition:</b> <a href="a00026_source.html#l00211">Event.h:211</a></div></div>
-<div class="ttc" id="aa00161_html"><div class="ttname"><a href="a00161.html">MiraiCP::MemberJoinEvent</a></div><div class="ttdoc">新群成员加入</div><div class="ttdef"><b>Definition:</b> <a href="a00026_source.html#l00269">Event.h:269</a></div></div>
-<div class="ttc" id="aa00165_html"><div class="ttname"><a href="a00165.html">MiraiCP::MemberLeaveEvent</a></div><div class="ttdoc">群成员离开</div><div class="ttdef"><b>Definition:</b> <a href="a00026_source.html#l00304">Event.h:304</a></div></div>
-<div class="ttc" id="aa00169_html"><div class="ttname"><a href="a00169.html">MiraiCP::RecallEvent</a></div><div class="ttdoc">撤回信息</div><div class="ttdef"><b>Definition:</b> <a href="a00026_source.html#l00339">Event.h:339</a></div></div>
-<div class="ttc" id="aa00173_html"><div class="ttname"><a href="a00173.html">MiraiCP::BotJoinGroupEvent</a></div><div class="ttdoc">机器人进入某群</div><div class="ttdef"><b>Definition:</b> <a href="a00026_source.html#l00380">Event.h:380</a></div></div>
-<div class="ttc" id="aa00177_html"><div class="ttname"><a href="a00177.html">MiraiCP::GroupTempMessageEvent</a></div><div class="ttdoc">群临时会话</div><div class="ttdef"><b>Definition:</b> <a href="a00026_source.html#l00406">Event.h:406</a></div></div>
-<div class="ttc" id="aa00181_html"><div class="ttname"><a href="a00181.html">MiraiCP::TimeOutEvent</a></div><div class="ttdoc">定时任务结束</div><div class="ttdef"><b>Definition:</b> <a href="a00026_source.html#l00435">Event.h:435</a></div></div>
-<div class="ttc" id="aa00185_html"><div class="ttname"><a href="a00185.html">MiraiCP::BotOnlineEvent</a></div><div class="ttdoc">机器人上线事件</div><div class="ttdef"><b>Definition:</b> <a href="a00026_source.html#l00449">Event.h:449</a></div></div>
-<div class="ttc" id="aa00189_html"><div class="ttname"><a href="a00189.html">MiraiCP::NudgeEvent</a></div><div class="ttdoc">戳一戳事件</div><div class="ttdef"><b>Definition:</b> <a href="a00026_source.html#l00459">Event.h:459</a></div></div>
-<div class="ttc" id="aa00193_html"><div class="ttname"><a href="a00193.html">MiraiCP::BotLeaveEvent</a></div><div class="ttdef"><b>Definition:</b> <a href="a00026_source.html#l00476">Event.h:476</a></div></div>
-<div class="ttc" id="aa00197_html"><div class="ttname"><a href="a00197.html">MiraiCP::MemberJoinRequestEvent</a></div><div class="ttdoc">申请加群事件, bot需为管理员或者群主</div><div class="ttdef"><b>Definition:</b> <a href="a00026_source.html#l00490">Event.h:490</a></div></div>
-<div class="ttc" id="aa00205_html"><div class="ttname"><a href="a00205.html">MiraiCP::Event</a></div><div class="ttdef"><b>Definition:</b> <a href="a00026_source.html#l00550">Event.h:550</a></div></div>
-<div class="ttc" id="aa00217_html"><div class="ttname"><a href="a00217.html">MiraiCP::MiraiCPException</a></div><div class="ttdoc">总异常抽象类</div><div class="ttdef"><b>Definition:</b> <a href="a00032_source.html#l00026">Exception.h:26</a></div></div>
-<div class="ttc" id="aa00217_html_afdc939e2ca0635420943682e989fac86"><div class="ttname"><a href="a00217.html#afdc939e2ca0635420943682e989fac86">MiraiCP::MiraiCPException::raise</a></div><div class="ttdeci">void raise() const</div><div class="ttdoc">实际抛出方法</div><div class="ttdef"><b>Definition:</b> <a href="a00032_source.html#l00072">Exception.h:72</a></div></div>
-<div class="ttc" id="aa00233_html"><div class="ttname"><a href="a00233.html">MiraiCP::APIException</a></div><div class="ttdef"><b>Definition:</b> <a href="a00032_source.html#l00107">Exception.h:107</a></div></div>
-<div class="ttc" id="aa00289_html"><div class="ttname"><a href="a00289.html">MiraiCP::Friend</a></div><div class="ttdoc">好友类声明</div><div class="ttdef"><b>Definition:</b> <a href="a00044_source.html#l00025">Friend.h:25</a></div></div>
-<div class="ttc" id="aa00293_html"><div class="ttname"><a href="a00293.html">MiraiCP::Group</a></div><div class="ttdef"><b>Definition:</b> <a href="a00050_source.html#l00050">Group.h:50</a></div></div>
-<div class="ttc" id="aa00317_html_a3b3770c77e25e0b43a4fce2f65be7175"><div class="ttname"><a href="a00317.html#a3b3770c77e25e0b43a4fce2f65be7175">MiraiCP::Logger_interface::init</a></div><div class="ttdeci">void init(JNIEnv *=ThreadManager::getEnv())</div><div class="ttdef"><b>Definition:</b> <a href="a00053_source.html#l00032">Logger.cpp:32</a></div></div>
-<div class="ttc" id="aa00317_html_a418fad5b082009c5e40871d3cd88cacf"><div class="ttname"><a href="a00317.html#a418fad5b082009c5e40871d3cd88cacf">MiraiCP::Logger_interface::error</a></div><div class="ttdeci">void error(T... val)</div><div class="ttdoc">发送警告(warning级日志)</div><div class="ttdef"><b>Definition:</b> <a href="a00056_source.html#l00107">Logger.h:107</a></div></div>
-<div class="ttc" id="aa00333_html"><div class="ttname"><a href="a00333.html">MiraiCP::PluginLogger</a></div><div class="ttdoc">插件logger</div><div class="ttdef"><b>Definition:</b> <a href="a00056_source.html#l00153">Logger.h:153</a></div></div>
-<div class="ttc" id="aa00345_html"><div class="ttname"><a href="a00345.html">MiraiCP::Member</a></div><div class="ttdef"><b>Definition:</b> <a href="a00068_source.html#l00050">Member.h:50</a></div></div>
-<div class="ttc" id="aa00437_html_a630b0c6d61decb2ea60eb719bbc1120e"><div class="ttname"><a href="a00437.html#a630b0c6d61decb2ea60eb719bbc1120e">MiraiCP::ThreadManager::JNIVersion</a></div><div class="ttdeci">static long JNIVersion</div><div class="ttdoc">JNI 版本.</div><div class="ttdef"><b>Definition:</b> <a href="a00101_source.html#l00063">ThreadManager.h:63</a></div></div>
-<div class="ttc" id="aa00437_html_ac5796576b9962187070ad21fbfdf17ff"><div class="ttname"><a href="a00437.html#ac5796576b9962187070ad21fbfdf17ff">MiraiCP::ThreadManager::gvm</a></div><div class="ttdeci">static JavaVM * gvm</div><div class="ttdoc">全局JavaVM对象，用于多线程管理中新建线程的JNIEnv.</div><div class="ttdef"><b>Definition:</b> <a href="a00101_source.html#l00061">ThreadManager.h:61</a></div></div>
-<div class="ttc" id="aa00445_html_ad2e5e5b78f6b79428bca2e9b44ac8265"><div class="ttname"><a href="a00445.html#ad2e5e5b78f6b79428bca2e9b44ac8265">MiraiCP::Tools::str2jstring</a></div><div class="ttdeci">static jstring str2jstring(const char *stra, JNIEnv *=ThreadManager::getEnv())</div><div class="ttdef"><b>Definition:</b> <a href="a00104_source.html#l00039">Tools.cpp:39</a></div></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="a00467.html#a365e1740117b0fb9d5990855a26dba4f">   69</a></span>    JNIEnv *<a class="code hl_function" href="a00467.html#a365e1740117b0fb9d5990855a26dba4f">ThreadManager::getEnv</a>() {</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        <a class="code hl_variable" href="a00467.html#af61aae7d053395c836bae677af861364">mtx</a>.lock();</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        <span class="keywordflow">if</span> (!<a class="code hl_function" href="a00467.html#abd1025cb50143b1aa60b55d79ec2b370">ThreadManager::included</a>(<a class="code hl_function" href="a00467.html#a11837c8fea64ee75bea0bcd1ea56de9c">getThreadId</a>())) {</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>            <a class="code hl_function" href="a00467.html#a29f1a55d4cb7b78045fd3f2566c59dcc">ThreadManager::newEnv</a>();</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        }</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        JNIEnv *tmp = <a class="code hl_variable" href="a00467.html#a6aaf08f6744b01ac5ab06430313dd3a0">ThreadManager::threads</a>[<a class="code hl_function" href="a00467.html#a11837c8fea64ee75bea0bcd1ea56de9c">ThreadManager::getThreadId</a>()].e;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        <a class="code hl_variable" href="a00467.html#af61aae7d053395c836bae677af861364">mtx</a>.unlock();</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        <span class="keywordflow">return</span> tmp;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    }</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>} <span class="comment">// namespace MiraiCP</span></div>
+<div class="ttc" id="aa00065_html"><div class="ttname"><a href="a00065.html">Logger.h</a></div></div>
+<div class="ttc" id="aa00113_html"><div class="ttname"><a href="a00113.html">ThreadManager.h</a></div></div>
+<div class="ttc" id="aa00129_html"><div class="ttname"><a href="a00129.html">MiraiCP</a></div><div class="ttdef"><b>Definition:</b> <a href="a00002_source.html#l00023">Bot.cpp:23</a></div></div>
+<div class="ttc" id="aa00129_html_a9978cdf5158c8fc2ed93dbd7bbf3efb5ae2942a04780e223b215eb8b663cf5353"><div class="ttname"><a href="a00129.html#a9978cdf5158c8fc2ed93dbd7bbf3efb5ae2942a04780e223b215eb8b663cf5353">MiraiCP::eventTypes::count</a></div><div class="ttdeci">@ count</div></div>
+<div class="ttc" id="aa00347_html_af487216ad90334b62a970ad6e5a796a4"><div class="ttname"><a href="a00347.html#af487216ad90334b62a970ad6e5a796a4">MiraiCP::Logger_interface::info</a></div><div class="ttdeci">void info(T... val)</div><div class="ttdoc">发送普通(info级日志)</div><div class="ttdef"><b>Definition:</b> <a href="a00065_source.html#l00109">Logger.h:109</a></div></div>
+<div class="ttc" id="aa00355_html_a268fd602157c3fa49616a8872c82bfb1"><div class="ttname"><a href="a00355.html#a268fd602157c3fa49616a8872c82bfb1">MiraiCP::Logger::logger</a></div><div class="ttdeci">static Logger logger</div><div class="ttdef"><b>Definition:</b> <a href="a00065_source.html#l00153">Logger.h:153</a></div></div>
+<div class="ttc" id="aa00467_html_a11837c8fea64ee75bea0bcd1ea56de9c"><div class="ttname"><a href="a00467.html#a11837c8fea64ee75bea0bcd1ea56de9c">MiraiCP::ThreadManager::getThreadId</a></div><div class="ttdeci">static std::string getThreadId()</div><div class="ttdoc">获取线程id.</div><div class="ttdef"><b>Definition:</b> <a href="a00113_source.html#l00075">ThreadManager.h:75</a></div></div>
+<div class="ttc" id="aa00467_html_a29f1a55d4cb7b78045fd3f2566c59dcc"><div class="ttname"><a href="a00467.html#a29f1a55d4cb7b78045fd3f2566c59dcc">MiraiCP::ThreadManager::newEnv</a></div><div class="ttdeci">static void newEnv(const char *threadName=nullptr)</div><div class="ttdef"><b>Definition:</b> <a href="a00110_source.html#l00041">ThreadManager.cpp:41</a></div></div>
+<div class="ttc" id="aa00467_html_a365e1740117b0fb9d5990855a26dba4f"><div class="ttname"><a href="a00467.html#a365e1740117b0fb9d5990855a26dba4f">MiraiCP::ThreadManager::getEnv</a></div><div class="ttdeci">static JNIEnv * getEnv()</div><div class="ttdoc">取env,如果不存在重新获取</div><div class="ttdef"><b>Definition:</b> <a href="a00110_source.html#l00069">ThreadManager.cpp:69</a></div></div>
+<div class="ttc" id="aa00467_html_a630b0c6d61decb2ea60eb719bbc1120e"><div class="ttname"><a href="a00467.html#a630b0c6d61decb2ea60eb719bbc1120e">MiraiCP::ThreadManager::JNIVersion</a></div><div class="ttdeci">static long JNIVersion</div><div class="ttdoc">JNI 版本.</div><div class="ttdef"><b>Definition:</b> <a href="a00113_source.html#l00055">ThreadManager.h:55</a></div></div>
+<div class="ttc" id="aa00467_html_a6aaf08f6744b01ac5ab06430313dd3a0"><div class="ttname"><a href="a00467.html#a6aaf08f6744b01ac5ab06430313dd3a0">MiraiCP::ThreadManager::threads</a></div><div class="ttdeci">static std::map&lt; std::string, ThreadInfo &gt; threads</div><div class="ttdef"><b>Definition:</b> <a href="a00113_source.html#l00049">ThreadManager.h:49</a></div></div>
+<div class="ttc" id="aa00467_html_a72b77deebd7be1c800b73ebd4b2daa09"><div class="ttname"><a href="a00467.html#a72b77deebd7be1c800b73ebd4b2daa09">MiraiCP::ThreadManager::detach</a></div><div class="ttdeci">static void detach()</div><div class="ttdoc">结束当前线程的env，也就是释放当前线程缓存的env.</div><div class="ttdef"><b>Definition:</b> <a href="a00110_source.html#l00052">ThreadManager.cpp:52</a></div></div>
+<div class="ttc" id="aa00467_html_abd1025cb50143b1aa60b55d79ec2b370"><div class="ttname"><a href="a00467.html#abd1025cb50143b1aa60b55d79ec2b370">MiraiCP::ThreadManager::included</a></div><div class="ttdeci">static bool included(const std::string &amp;id)</div><div class="ttdoc">判断该线程id是否包含在线程池里</div><div class="ttdef"><b>Definition:</b> <a href="a00110_source.html#l00063">ThreadManager.cpp:63</a></div></div>
+<div class="ttc" id="aa00467_html_ac5796576b9962187070ad21fbfdf17ff"><div class="ttname"><a href="a00467.html#ac5796576b9962187070ad21fbfdf17ff">MiraiCP::ThreadManager::gvm</a></div><div class="ttdeci">static JavaVM * gvm</div><div class="ttdoc">全局JavaVM对象，用于多线程管理中新建线程的JNIEnv.</div><div class="ttdef"><b>Definition:</b> <a href="a00113_source.html#l00053">ThreadManager.h:53</a></div></div>
+<div class="ttc" id="aa00467_html_af61aae7d053395c836bae677af861364"><div class="ttname"><a href="a00467.html#af61aae7d053395c836bae677af861364">MiraiCP::ThreadManager::mtx</a></div><div class="ttdeci">static std::recursive_mutex mtx</div><div class="ttdoc">&lt; 线程池(线程id:env).</div><div class="ttdef"><b>Definition:</b> <a href="a00113_source.html#l00050">ThreadManager.h:50</a></div></div>
+<div class="ttc" id="aa00467_html_afacfbdbffc416bb53676f040720a42e0"><div class="ttname"><a href="a00467.html#afacfbdbffc416bb53676f040720a42e0">MiraiCP::ThreadManager::setEnv</a></div><div class="ttdeci">static void setEnv(JNIEnv *e)</div><div class="ttdoc">设置env给当前线程.</div><div class="ttdef"><b>Definition:</b> <a href="a00110_source.html#l00030">ThreadManager.cpp:30</a></div></div>
+<div class="ttc" id="aa00471_html"><div class="ttname"><a href="a00471.html">MiraiCP::ThreadManager::ThreadInfo</a></div><div class="ttdoc">每个线程实例.</div><div class="ttdef"><b>Definition:</b> <a href="a00113_source.html#l00042">ThreadManager.h:42</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="a00110.html">utils.cpp</a></li>
-    <li class="footer">生成于 2021年 十二月 5日 星期日 20:04:16 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="a00110.html">ThreadManager.cpp</a></li>
+    <li class="footer">生成于 2022年 一月 10日 星期一 15:34:47 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
 <script type="text/javascript">

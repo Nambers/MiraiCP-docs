@@ -1,5 +1,5 @@
 var a00237 =
 [
-    [ "BotException", "a00237.html#a75b0bbe29eeabfa5237d7a99d6b24f0e", null ],
-    [ "description", "a00237.html#a6e92043e958d13a3066396ec9092268e", null ]
+    [ "APIException", "a00237.html#a4d7a7e2f7c45f39a082580e885ee4f03", null ],
+    [ "description", "a00237.html#a8a227a2e1494b35e2e5456ade77066b3", null ]
 ];

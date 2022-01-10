@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiraiCP: Config.cpp 源文件</title>
+<title>MiraiCP: Bot.h 源文件</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MiraiCP
-   &#160;<span id="projectnumber">v2.9.0-M1</span>
+   &#160;<span id="projectnumber">v2.9.1</span>
    </div>
    <div id="projectbrief">MiraiCP api document</div>
   </td>
@@ -90,10 +90,10 @@ $(document).ready(function(){initNavTree('a00005_source.html',''); initResizable
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">Config.cpp</div></div>
+  <div class="headertitle"><div class="title">Bot.h</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="a00005.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// Copyright (c) 2021-2021. Eritque arcus and contributors.</span></div>
+<a href="a00005.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// Copyright (c) 2020 - 2022. Eritque arcus and contributors.</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">//</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">// This program is free software: you can redistribute it and/or modify</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">// it under the terms of the GNU Affero General Public License as</span></div>
@@ -109,69 +109,100 @@ $(document).ready(function(){initNavTree('a00005_source.html',''); initResizable
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">// along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</span></div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">//</span></div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &quot;<a class="code" href="a00008.html">Config.h</a>&quot;</span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &quot;<a class="code" href="a00032.html">Exception.h</a>&quot;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#ifndef MIRAICP_PRO_BOT_H</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#define MIRAICP_PRO_BOT_H</span></div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">namespace </span><a class="code hl_namespace" href="a00117.html">MiraiCP</a> {</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="comment">// 静态成员</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    jclass <a class="code hl_variable" href="a00125.html#a60520b19317b53c740f1d6c63a5ca26b">Config::CPPLib</a> = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    jmethodID <a class="code hl_variable" href="a00125.html#a8bd741acc7e85315b8c254b39a922514">Config::KOperation</a> = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="comment">// 结束静态成员</span></div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="comment">/*</span></div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="comment">    配置类实现</span></div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="comment">    throw: InitxException 即找不到对应签名</span></div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="comment">    */</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="a00125.html#a3afbe9bcd2af7e54102849a86cd8032a">   30</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="a00125.html#a3afbe9bcd2af7e54102849a86cd8032a">Config::construct</a>(JNIEnv *env) {</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        <a class="code hl_variable" href="a00125.html#a60520b19317b53c740f1d6c63a5ca26b">Config::CPPLib</a> = <span class="keyword">reinterpret_cast&lt;</span>jclass<span class="keyword">&gt;</span>(env-&gt;NewGlobalRef(</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>                env-&gt;FindClass(<span class="stringliteral">&quot;tech/eritquearcus/miraicp/shared/CPPLib&quot;</span>)));</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="a00125.html#a60520b19317b53c740f1d6c63a5ca26b">Config::CPPLib</a> == <span class="keyword">nullptr</span>) {</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>            <a class="code hl_define" href="a00101.html#a05895baa03633917e58dcb7228229097">MiraiCPThrow</a>(<a class="code hl_class" href="a00233.html">APIException</a>(<span class="stringliteral">&quot;初始化错误，找不到CPPLib类&quot;</span>));</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        }</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        <a class="code hl_variable" href="a00125.html#a8bd741acc7e85315b8c254b39a922514">Config::KOperation</a> = env-&gt;GetStaticMethodID(<a class="code hl_variable" href="a00125.html#a60520b19317b53c740f1d6c63a5ca26b">CPPLib</a>, <span class="stringliteral">&quot;KOperation&quot;</span>, <span class="stringliteral">&quot;(Ljava/lang/String;)Ljava/lang/String;&quot;</span>);</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    }</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="a00125.html#a5a228e9533807266028e3d4ff05d122b">   39</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="a00125.html#a5a228e9533807266028e3d4ff05d122b">Config::destruct</a>() {</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <a class="code hl_function" href="a00437.html#a365e1740117b0fb9d5990855a26dba4f">ThreadManager::getEnv</a>()-&gt;DeleteGlobalRef(<a class="code hl_variable" href="a00125.html#a60520b19317b53c740f1d6c63a5ca26b">Config::CPPLib</a>);</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    }</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &lt;jni.h&gt;</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keyword">namespace </span><a class="code hl_namespace" href="a00129.html">MiraiCP</a> {</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keyword">class </span>Friend;  <span class="comment">// forward declaration</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keyword">class </span>Group;   <span class="comment">// forward declaration</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="keyword">class </span>Contact; <span class="comment">// forward declaration</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="a00129.html#a59ef86b4ef19e525734fc04811fa9681">   28</a></span>    <span class="keyword">using</span> <a class="code hl_typedef" href="a00129.html#a59ef86b4ef19e525734fc04811fa9681">QQID</a> = <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> long;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="a00135.html">   30</a></span>    <span class="keyword">class </span><a class="code hl_class" href="a00135.html">Bot</a> {</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="a00135.html#a0c7162dd94ffde65ac85e2fa31dd327e">   32</a></span>        <span class="keywordtype">bool</span> <a class="code hl_variable" href="a00135.html#a0c7162dd94ffde65ac85e2fa31dd327e">inited</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="a00135.html#ad38f34b4d2230de460573afd5a967e74">   33</a></span>        std::string <a class="code hl_variable" href="a00135.html#ad38f34b4d2230de460573afd5a967e74">_nick</a>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="a00135.html#a2347f261667afe42cbe52d1c38d6618b">   34</a></span>        std::string <a class="code hl_variable" href="a00135.html#a2347f261667afe42cbe52d1c38d6618b">_avatarUrl</a>;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="a00135.html#a717a5ccc1e5be516c5caacf9ce937b61">   36</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="a00135.html#a717a5ccc1e5be516c5caacf9ce937b61">check</a>() {</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>            <span class="keywordflow">if</span> (!this-&gt;inited) {</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>                <a class="code hl_function" href="a00135.html#a9a212b3abcfcd50a91e79ff2cf87a6fa">refreshInfo</a>();</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>                this-&gt;inited = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>            }</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        }</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="a00125.html#af81f741728a4ed24a81c76667e41c0eb">   43</a></span>    std::string <a class="code hl_function" href="a00125.html#af81f741728a4ed24a81c76667e41c0eb">Config::koperation</a>(<a class="code hl_enumeration" href="a00125.html#a1bc3c425340774687507c1683967231b">operation_set</a> type, <span class="keyword">const</span> <a class="code hl_typedef" href="a00110.html#ab701e3ac61a85b337ec5c1abaad6742d">nlohmann::json</a> &amp;data, JNIEnv *env, <span class="keywordtype">bool</span> catchErr, <span class="keyword">const</span> std::string &amp;errorInfo) {</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        <a class="code hl_typedef" href="a00110.html#ab701e3ac61a85b337ec5c1abaad6742d">nlohmann::json</a> j;</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        j[<span class="stringliteral">&quot;type&quot;</span>] = type;</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        j[<span class="stringliteral">&quot;data&quot;</span>] = data;</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        std::string re = <a class="code hl_function" href="a00445.html#a3edca5ea268b6b1c023810b928701f55">Tools::jstring2str</a>((jstring) env-&gt;CallStaticObjectMethod(<a class="code hl_variable" href="a00125.html#a60520b19317b53c740f1d6c63a5ca26b">Config::CPPLib</a>,</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>                                                                                  <a class="code hl_variable" href="a00125.html#a8bd741acc7e85315b8c254b39a922514">Config::KOperation</a>,</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>                                                                                  <a class="code hl_function" href="a00445.html#ad2e5e5b78f6b79428bca2e9b44ac8265">Tools::str2jstring</a>(j.dump().c_str(), env)),</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>                                            env);</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        <span class="keywordflow">if</span> (catchErr) <a class="code hl_define" href="a00101.html#a10e0f2260bfde013500e04ba0d77a9fb">ErrorHandle</a>(re, errorInfo);</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        <span class="keywordflow">return</span> re;</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    }</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>} <span class="comment">// namespace MiraiCP</span></div>
-<div class="ttc" id="aa00008_html"><div class="ttname"><a href="a00008.html">Config.h</a></div></div>
-<div class="ttc" id="aa00032_html"><div class="ttname"><a href="a00032.html">Exception.h</a></div></div>
-<div class="ttc" id="aa00101_html_a05895baa03633917e58dcb7228229097"><div class="ttname"><a href="a00101.html#a05895baa03633917e58dcb7228229097">MiraiCPThrow</a></div><div class="ttdeci">#define MiraiCPThrow(x)</div><div class="ttdef"><b>Definition:</b> <a href="a00101_source.html#l00019">ThreadManager.h:19</a></div></div>
-<div class="ttc" id="aa00101_html_a10e0f2260bfde013500e04ba0d77a9fb"><div class="ttname"><a href="a00101.html#a10e0f2260bfde013500e04ba0d77a9fb">ErrorHandle</a></div><div class="ttdeci">#define ErrorHandle(x, y)</div><div class="ttdef"><b>Definition:</b> <a href="a00101_source.html#l00020">ThreadManager.h:20</a></div></div>
-<div class="ttc" id="aa00110_html_ab701e3ac61a85b337ec5c1abaad6742d"><div class="ttname"><a href="a00110.html#ab701e3ac61a85b337ec5c1abaad6742d">json</a></div><div class="ttdeci">nlohmann::json json</div><div class="ttdef"><b>Definition:</b> <a href="a00110_source.html#l00029">utils.cpp:29</a></div></div>
-<div class="ttc" id="aa00117_html"><div class="ttname"><a href="a00117.html">MiraiCP</a></div><div class="ttdef"><b>Definition:</b> <a href="a00002_source.html#l00024">Bot.h:24</a></div></div>
-<div class="ttc" id="aa00125_html_a1bc3c425340774687507c1683967231b"><div class="ttname"><a href="a00125.html#a1bc3c425340774687507c1683967231b">MiraiCP::Config::operation_set</a></div><div class="ttdeci">operation_set</div><div class="ttdoc">操作id</div><div class="ttdef"><b>Definition:</b> <a href="a00008_source.html#l00036">Config.h:36</a></div></div>
-<div class="ttc" id="aa00125_html_a3afbe9bcd2af7e54102849a86cd8032a"><div class="ttname"><a href="a00125.html#a3afbe9bcd2af7e54102849a86cd8032a">MiraiCP::Config::construct</a></div><div class="ttdeci">static void construct(JNIEnv *=ThreadManager::getEnv())</div><div class="ttdef"><b>Definition:</b> <a href="a00005_source.html#l00030">Config.cpp:30</a></div></div>
-<div class="ttc" id="aa00125_html_a5a228e9533807266028e3d4ff05d122b"><div class="ttname"><a href="a00125.html#a5a228e9533807266028e3d4ff05d122b">MiraiCP::Config::destruct</a></div><div class="ttdeci">static void destruct()</div><div class="ttdef"><b>Definition:</b> <a href="a00005_source.html#l00039">Config.cpp:39</a></div></div>
-<div class="ttc" id="aa00125_html_a60520b19317b53c740f1d6c63a5ca26b"><div class="ttname"><a href="a00125.html#a60520b19317b53c740f1d6c63a5ca26b">MiraiCP::Config::CPPLib</a></div><div class="ttdeci">static jclass CPPLib</div><div class="ttdoc">kt中JNI接口类</div><div class="ttdef"><b>Definition:</b> <a href="a00008_source.html#l00031">Config.h:31</a></div></div>
-<div class="ttc" id="aa00125_html_a8bd741acc7e85315b8c254b39a922514"><div class="ttname"><a href="a00125.html#a8bd741acc7e85315b8c254b39a922514">MiraiCP::Config::KOperation</a></div><div class="ttdeci">static jmethodID KOperation</div><div class="ttdoc">调用mirai方法</div><div class="ttdef"><b>Definition:</b> <a href="a00008_source.html#l00033">Config.h:33</a></div></div>
-<div class="ttc" id="aa00125_html_af81f741728a4ed24a81c76667e41c0eb"><div class="ttname"><a href="a00125.html#af81f741728a4ed24a81c76667e41c0eb">MiraiCP::Config::koperation</a></div><div class="ttdeci">static std::string koperation(operation_set type, const nlohmann::json &amp;data, JNIEnv *=ThreadManager::getEnv(), bool catchErr=true, const std::string &amp;errorInfo=&quot;&quot;)</div><div class="ttdoc">调用mirai操作</div><div class="ttdef"><b>Definition:</b> <a href="a00005_source.html#l00043">Config.cpp:43</a></div></div>
-<div class="ttc" id="aa00233_html"><div class="ttname"><a href="a00233.html">MiraiCP::APIException</a></div><div class="ttdef"><b>Definition:</b> <a href="a00032_source.html#l00107">Exception.h:107</a></div></div>
-<div class="ttc" id="aa00437_html_a365e1740117b0fb9d5990855a26dba4f"><div class="ttname"><a href="a00437.html#a365e1740117b0fb9d5990855a26dba4f">MiraiCP::ThreadManager::getEnv</a></div><div class="ttdeci">static JNIEnv * getEnv()</div><div class="ttdoc">取env,如果不存在重新获取</div><div class="ttdef"><b>Definition:</b> <a href="a00098_source.html#l00069">ThreadManager.cpp:69</a></div></div>
-<div class="ttc" id="aa00445_html_a3edca5ea268b6b1c023810b928701f55"><div class="ttname"><a href="a00445.html#a3edca5ea268b6b1c023810b928701f55">MiraiCP::Tools::jstring2str</a></div><div class="ttdeci">static std::string jstring2str(jstring jstr, JNIEnv *=ThreadManager::getEnv())</div><div class="ttdef"><b>Definition:</b> <a href="a00104_source.html#l00024">Tools.cpp:24</a></div></div>
-<div class="ttc" id="aa00445_html_ad2e5e5b78f6b79428bca2e9b44ac8265"><div class="ttname"><a href="a00445.html#ad2e5e5b78f6b79428bca2e9b44ac8265">MiraiCP::Tools::str2jstring</a></div><div class="ttdeci">static jstring str2jstring(const char *stra, JNIEnv *=ThreadManager::getEnv())</div><div class="ttdef"><b>Definition:</b> <a href="a00104_source.html#l00039">Tools.cpp:39</a></div></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="a00135.html#a6f3b849ef6eb4888b36d9883ba8aa8eb">   45</a></span>        <a class="code hl_typedef" href="a00129.html#a59ef86b4ef19e525734fc04811fa9681">QQID</a> <a class="code hl_variable" href="a00135.html#a6f3b849ef6eb4888b36d9883ba8aa8eb">id</a>;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="a00135.html#a9a212b3abcfcd50a91e79ff2cf87a6fa">refreshInfo</a>(JNIEnv *env = <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="a00135.html#a924e47e8b0591f395f3dd085c16e16e5">   54</a></span>        <span class="keyword">explicit</span> <a class="code hl_function" href="a00135.html#a924e47e8b0591f395f3dd085c16e16e5">Bot</a>(<a class="code hl_typedef" href="a00129.html#a59ef86b4ef19e525734fc04811fa9681">QQID</a> i) : <a class="code hl_variable" href="a00135.html#a6f3b849ef6eb4888b36d9883ba8aa8eb">id</a>(i) {}</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        <a class="code hl_class" href="a00319.html">Friend</a> <a class="code hl_function" href="a00135.html#a04542119c4f726723e021579d472b4d1">getFriend</a>(<a class="code hl_typedef" href="a00129.html#a59ef86b4ef19e525734fc04811fa9681">QQID</a> i, JNIEnv *env = <span class="keyword">nullptr</span>) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        <a class="code hl_class" href="a00323.html">Group</a> <a class="code hl_function" href="a00135.html#a5bcd0af0a545bba99477ddf6d82f4fff">getGroup</a>(<a class="code hl_typedef" href="a00129.html#a59ef86b4ef19e525734fc04811fa9681">QQID</a> groupid, JNIEnv *env = <span class="keyword">nullptr</span>) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="a00135.html#a14f2c875a64bf63c487be2f45454f517">   63</a></span>        std::string <a class="code hl_function" href="a00135.html#a14f2c875a64bf63c487be2f45454f517">nick</a>() {</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>            <a class="code hl_function" href="a00135.html#a717a5ccc1e5be516c5caacf9ce937b61">check</a>();</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>            <span class="keywordflow">return</span> this-&gt;<a class="code hl_variable" href="a00135.html#ad38f34b4d2230de460573afd5a967e74">_nick</a>;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        }</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="a00135.html#a6b0ebecc9de3fdf10852b341c88561c0">   69</a></span>        std::string <a class="code hl_function" href="a00135.html#a6b0ebecc9de3fdf10852b341c88561c0">avatarUrl</a>() {</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>            <a class="code hl_function" href="a00135.html#a717a5ccc1e5be516c5caacf9ce937b61">check</a>();</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>            <span class="keywordflow">return</span> this-&gt;<a class="code hl_variable" href="a00135.html#a2347f261667afe42cbe52d1c38d6618b">_avatarUrl</a>;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        }</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        std::vector&lt;unsigned long long&gt; <a class="code hl_function" href="a00135.html#a5ccb851f383b028ab4dc0c7794b1b812">getFriendList</a>(JNIEnv *env = <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        std::string <a class="code hl_function" href="a00135.html#aa4c59d6acabbfed3e0450cb3e2257c6b">FriendListToString</a>();</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        std::vector&lt;unsigned long long&gt; <a class="code hl_function" href="a00135.html#adde56f274d31b5b48a0c753272772ce5">getGroupList</a>(JNIEnv *env = <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        std::string <a class="code hl_function" href="a00135.html#a281b2ac226680cde671a28dd1e5d5e87">GroupListToString</a>();</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="a00135.html#a75247962e7030cccc0013e3658573db2">operator==</a>(<span class="keyword">const</span> <a class="code hl_class" href="a00151.html">Contact</a> &amp;c) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno"><a class="line" href="a00135.html#a2eccb558dd0dfe6adbd2245fd8ca5ca4">   88</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="a00135.html#a2eccb558dd0dfe6adbd2245fd8ca5ca4">operator==</a>(<span class="keyword">const</span> <a class="code hl_class" href="a00135.html">Bot</a> &amp;b)<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>            <span class="keywordflow">return</span> this-&gt;<span class="keywordtype">id</span> == b.<a class="code hl_variable" href="a00135.html#a6f3b849ef6eb4888b36d9883ba8aa8eb">id</a>;</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        }</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    };</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>} <span class="comment">// namespace MiraiCP</span></div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span><span class="preprocessor">#endif </span><span class="comment">//MIRAICP_PRO_BOT_H</span></div>
+<div class="ttc" id="aa00129_html"><div class="ttname"><a href="a00129.html">MiraiCP</a></div><div class="ttdef"><b>Definition:</b> <a href="a00002_source.html#l00023">Bot.cpp:23</a></div></div>
+<div class="ttc" id="aa00129_html_a59ef86b4ef19e525734fc04811fa9681"><div class="ttname"><a href="a00129.html#a59ef86b4ef19e525734fc04811fa9681">MiraiCP::QQID</a></div><div class="ttdeci">unsigned long long QQID</div><div class="ttdef"><b>Definition:</b> <a href="a00005_source.html#l00028">Bot.h:28</a></div></div>
+<div class="ttc" id="aa00135_html"><div class="ttname"><a href="a00135.html">MiraiCP::Bot</a></div><div class="ttdoc">当前bot账号信息</div><div class="ttdef"><b>Definition:</b> <a href="a00005_source.html#l00030">Bot.h:30</a></div></div>
+<div class="ttc" id="aa00135_html_a04542119c4f726723e021579d472b4d1"><div class="ttname"><a href="a00135.html#a04542119c4f726723e021579d472b4d1">MiraiCP::Bot::getFriend</a></div><div class="ttdeci">Friend getFriend(QQID i, JNIEnv *env=nullptr) const</div><div class="ttdoc">取好友</div><div class="ttdef"><b>Definition:</b> <a href="a00002_source.html#l00027">Bot.cpp:27</a></div></div>
+<div class="ttc" id="aa00135_html_a0c7162dd94ffde65ac85e2fa31dd327e"><div class="ttname"><a href="a00135.html#a0c7162dd94ffde65ac85e2fa31dd327e">MiraiCP::Bot::inited</a></div><div class="ttdeci">bool inited</div><div class="ttdef"><b>Definition:</b> <a href="a00005_source.html#l00032">Bot.h:32</a></div></div>
+<div class="ttc" id="aa00135_html_a14f2c875a64bf63c487be2f45454f517"><div class="ttname"><a href="a00135.html#a14f2c875a64bf63c487be2f45454f517">MiraiCP::Bot::nick</a></div><div class="ttdeci">std::string nick()</div><div class="ttdoc">昵称</div><div class="ttdef"><b>Definition:</b> <a href="a00005_source.html#l00063">Bot.h:63</a></div></div>
+<div class="ttc" id="aa00135_html_a2347f261667afe42cbe52d1c38d6618b"><div class="ttname"><a href="a00135.html#a2347f261667afe42cbe52d1c38d6618b">MiraiCP::Bot::_avatarUrl</a></div><div class="ttdeci">std::string _avatarUrl</div><div class="ttdef"><b>Definition:</b> <a href="a00005_source.html#l00034">Bot.h:34</a></div></div>
+<div class="ttc" id="aa00135_html_a281b2ac226680cde671a28dd1e5d5e87"><div class="ttname"><a href="a00135.html#a281b2ac226680cde671a28dd1e5d5e87">MiraiCP::Bot::GroupListToString</a></div><div class="ttdeci">std::string GroupListToString()</div><div class="ttdoc">群列表string形式返回，利于保存</div><div class="ttdef"><b>Definition:</b> <a href="a00002_source.html#l00057">Bot.cpp:57</a></div></div>
+<div class="ttc" id="aa00135_html_a2eccb558dd0dfe6adbd2245fd8ca5ca4"><div class="ttname"><a href="a00135.html#a2eccb558dd0dfe6adbd2245fd8ca5ca4">MiraiCP::Bot::operator==</a></div><div class="ttdeci">bool operator==(const Bot &amp;b) const</div><div class="ttdef"><b>Definition:</b> <a href="a00005_source.html#l00088">Bot.h:88</a></div></div>
+<div class="ttc" id="aa00135_html_a5bcd0af0a545bba99477ddf6d82f4fff"><div class="ttname"><a href="a00135.html#a5bcd0af0a545bba99477ddf6d82f4fff">MiraiCP::Bot::getGroup</a></div><div class="ttdeci">Group getGroup(QQID groupid, JNIEnv *env=nullptr) const</div><div class="ttdoc">取群聊</div><div class="ttdef"><b>Definition:</b> <a href="a00002_source.html#l00024">Bot.cpp:24</a></div></div>
+<div class="ttc" id="aa00135_html_a5ccb851f383b028ab4dc0c7794b1b812"><div class="ttname"><a href="a00135.html#a5ccb851f383b028ab4dc0c7794b1b812">MiraiCP::Bot::getFriendList</a></div><div class="ttdeci">std::vector&lt; unsigned long long &gt; getFriendList(JNIEnv *env=nullptr)</div><div class="ttdoc">取好友列表</div><div class="ttdef"><b>Definition:</b> <a href="a00002_source.html#l00042">Bot.cpp:42</a></div></div>
+<div class="ttc" id="aa00135_html_a6b0ebecc9de3fdf10852b341c88561c0"><div class="ttname"><a href="a00135.html#a6b0ebecc9de3fdf10852b341c88561c0">MiraiCP::Bot::avatarUrl</a></div><div class="ttdeci">std::string avatarUrl()</div><div class="ttdoc">头像下载链接</div><div class="ttdef"><b>Definition:</b> <a href="a00005_source.html#l00069">Bot.h:69</a></div></div>
+<div class="ttc" id="aa00135_html_a6f3b849ef6eb4888b36d9883ba8aa8eb"><div class="ttname"><a href="a00135.html#a6f3b849ef6eb4888b36d9883ba8aa8eb">MiraiCP::Bot::id</a></div><div class="ttdeci">QQID id</div><div class="ttdoc">该botid</div><div class="ttdef"><b>Definition:</b> <a href="a00005_source.html#l00045">Bot.h:45</a></div></div>
+<div class="ttc" id="aa00135_html_a717a5ccc1e5be516c5caacf9ce937b61"><div class="ttname"><a href="a00135.html#a717a5ccc1e5be516c5caacf9ce937b61">MiraiCP::Bot::check</a></div><div class="ttdeci">void check()</div><div class="ttdef"><b>Definition:</b> <a href="a00005_source.html#l00036">Bot.h:36</a></div></div>
+<div class="ttc" id="aa00135_html_a75247962e7030cccc0013e3658573db2"><div class="ttname"><a href="a00135.html#a75247962e7030cccc0013e3658573db2">MiraiCP::Bot::operator==</a></div><div class="ttdeci">bool operator==(const Contact &amp;c) const</div><div class="ttdef"><b>Definition:</b> <a href="a00002_source.html#l00030">Bot.cpp:30</a></div></div>
+<div class="ttc" id="aa00135_html_a924e47e8b0591f395f3dd085c16e16e5"><div class="ttname"><a href="a00135.html#a924e47e8b0591f395f3dd085c16e16e5">MiraiCP::Bot::Bot</a></div><div class="ttdeci">Bot(QQID i)</div><div class="ttdoc">用id构建机器人</div><div class="ttdef"><b>Definition:</b> <a href="a00005_source.html#l00054">Bot.h:54</a></div></div>
+<div class="ttc" id="aa00135_html_a9a212b3abcfcd50a91e79ff2cf87a6fa"><div class="ttname"><a href="a00135.html#a9a212b3abcfcd50a91e79ff2cf87a6fa">MiraiCP::Bot::refreshInfo</a></div><div class="ttdeci">void refreshInfo(JNIEnv *env=nullptr)</div><div class="ttdoc">刷新bot信息</div><div class="ttdef"><b>Definition:</b> <a href="a00002_source.html#l00033">Bot.cpp:33</a></div></div>
+<div class="ttc" id="aa00135_html_aa4c59d6acabbfed3e0450cb3e2257c6b"><div class="ttname"><a href="a00135.html#aa4c59d6acabbfed3e0450cb3e2257c6b">MiraiCP::Bot::FriendListToString</a></div><div class="ttdeci">std::string FriendListToString()</div><div class="ttdoc">好友列表string形式返回，利于保存</div><div class="ttdef"><b>Definition:</b> <a href="a00002_source.html#l00048">Bot.cpp:48</a></div></div>
+<div class="ttc" id="aa00135_html_ad38f34b4d2230de460573afd5a967e74"><div class="ttname"><a href="a00135.html#ad38f34b4d2230de460573afd5a967e74">MiraiCP::Bot::_nick</a></div><div class="ttdeci">std::string _nick</div><div class="ttdef"><b>Definition:</b> <a href="a00005_source.html#l00033">Bot.h:33</a></div></div>
+<div class="ttc" id="aa00135_html_adde56f274d31b5b48a0c753272772ce5"><div class="ttname"><a href="a00135.html#adde56f274d31b5b48a0c753272772ce5">MiraiCP::Bot::getGroupList</a></div><div class="ttdeci">std::vector&lt; unsigned long long &gt; getGroupList(JNIEnv *env=nullptr)</div><div class="ttdoc">取群列表</div><div class="ttdef"><b>Definition:</b> <a href="a00002_source.html#l00051">Bot.cpp:51</a></div></div>
+<div class="ttc" id="aa00151_html"><div class="ttname"><a href="a00151.html">MiraiCP::Contact</a></div><div class="ttdef"><b>Definition:</b> <a href="a00023_source.html#l00051">Contact.h:51</a></div></div>
+<div class="ttc" id="aa00319_html"><div class="ttname"><a href="a00319.html">MiraiCP::Friend</a></div><div class="ttdoc">好友类声明</div><div class="ttdef"><b>Definition:</b> <a href="a00053_source.html#l00024">Friend.h:24</a></div></div>
+<div class="ttc" id="aa00323_html"><div class="ttname"><a href="a00323.html">MiraiCP::Group</a></div><div class="ttdef"><b>Definition:</b> <a href="a00059_source.html#l00058">Group.h:58</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="a00005.html">Config.cpp</a></li>
-    <li class="footer">生成于 2021年 十二月 5日 星期日 20:04:15 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="a00005.html">Bot.h</a></li>
+    <li class="footer">生成于 2022年 一月 10日 星期一 15:34:47 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
 <script type="text/javascript">

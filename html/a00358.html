@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MiraiCP
-   &#160;<span id="projectnumber">v2.9.0-M1</span>
+   &#160;<span id="projectnumber">v2.9.0</span>
    </div>
    <div id="projectbrief">MiraiCP api document</div>
   </td>
@@ -90,20 +90,31 @@ $(document).ready(function(){initNavTree('a00361.html',''); initResizable(); });
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">MiraiCP::MiraiCodeable 成员列表</div></div>
+  <div class="headertitle"><div class="title">MiraiCP::MessageSource 成员列表</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>成员的完整列表，这些成员属于 <a class="el" href="a00361.html">MiraiCP::MiraiCodeable</a>,包括所有继承而来的类成员</p>
+<p>成员的完整列表，这些成员属于 <a class="el" href="a00361.html">MiraiCP::MessageSource</a>,包括所有继承而来的类成员</p>
 <table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="a00361.html#a96bdd3af5e564960b2b7f562032b1a15">toMiraiCode</a>() const =0</td><td class="entry"><a class="el" href="a00361.html">MiraiCP::MiraiCodeable</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="a00361.html#a1f98db6bbdf6b7d178bf92f55fd2e4dc">deserializeFromString</a>(const std::string &amp;source)</td><td class="entry"><a class="el" href="a00361.html">MiraiCP::MessageSource</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="a00361.html#a4b5fd176a16871dbb39e5be15b2b6c15">ids</a></td><td class="entry"><a class="el" href="a00361.html">MiraiCP::MessageSource</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="a00361.html#a358ba0250715b1c4692554995750675e">internalids</a></td><td class="entry"><a class="el" href="a00361.html">MiraiCP::MessageSource</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="a00361.html#a49210b1a4c711d50ab0acc17d0dae88d">MessageSource</a>()=default</td><td class="entry"><a class="el" href="a00361.html">MiraiCP::MessageSource</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="a00361.html#a17c32c44e0af14a5f23f15ca56e527ae">MessageSource</a>(std::string ids, std::string internalids, std::string source)</td><td class="entry"><a class="el" href="a00361.html">MiraiCP::MessageSource</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="a00361.html#a2d08aa9b079abe268966313e12a3496b">operator==</a>(const MessageSource &amp;ms) const</td><td class="entry"><a class="el" href="a00361.html">MiraiCP::MessageSource</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="a00361.html#a33753029445bef8e3814df820066e9d1">quoteAndSendMiraiCode</a>(MiraiCodeable *msg, QQID groupid=0, JNIEnv *env=nullptr) const</td><td class="entry"><a class="el" href="a00361.html">MiraiCP::MessageSource</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="a00361.html#af0c1e2aa6db7d553248d9400b4bbb326">quoteAndSendMiraiCode</a>(const std::string &amp;c, QQID groupid=0, JNIEnv *=nullptr) const</td><td class="entry"><a class="el" href="a00361.html">MiraiCP::MessageSource</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="a00361.html#ab90b886a80a8b7f565489e6dea0bf10c">quoteAndSendMsg</a>(const std::string &amp;c, QQID groupid=0, JNIEnv *=nullptr) const</td><td class="entry"><a class="el" href="a00361.html">MiraiCP::MessageSource</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="a00361.html#afe1ce48e1c2ee0095202843e5df82f9e">recall</a>(JNIEnv *=nullptr) const</td><td class="entry"><a class="el" href="a00361.html">MiraiCP::MessageSource</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="a00361.html#aca51487498128b420019182e1331a282">serializeToString</a>() const</td><td class="entry"><a class="el" href="a00361.html">MiraiCP::MessageSource</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="a00361.html#afc51041bfb7cc7cb0915b5131ee05805">source</a></td><td class="entry"><a class="el" href="a00361.html">MiraiCP::MessageSource</a></td><td class="entry"></td></tr>
 </table></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">生成于 2021年 十二月 5日 星期日 20:04:26 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="footer">生成于 2021年 十二月 22日 星期三 21:13:19 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
 <script type="text/javascript">

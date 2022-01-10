@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiraiCP: utils.h 源文件</title>
+<title>MiraiCP: ThreadManager.h 源文件</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MiraiCP
-   &#160;<span id="projectnumber">v2.9.0-M1</span>
+   &#160;<span id="projectnumber">v2.9.1</span>
    </div>
    <div id="projectbrief">MiraiCP api document</div>
   </td>
@@ -90,10 +90,10 @@ $(document).ready(function(){initNavTree('a00113_source.html',''); initResizable
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">utils.h</div></div>
+  <div class="headertitle"><div class="title">ThreadManager.h</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="a00113.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// Copyright (c) 2021-2021. Eritque arcus and contributors.</span></div>
+<a href="a00113.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// Copyright (c) 2020 - 2022. Eritque arcus and contributors.</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">//</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">// This program is free software: you can redistribute it and/or modify</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">// it under the terms of the GNU Affero General Public License as</span></div>
@@ -109,50 +109,89 @@ $(document).ready(function(){initNavTree('a00113_source.html',''); initResizable
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">// along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</span></div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">//</span></div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#ifndef MIRAICP_PRO_UTILS_H</span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#define MIRAICP_PRO_UTILS_H</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &quot;<a class="code" href="a00020.html">CPPPlugin.h</a>&quot;</span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &quot;<a class="code" href="a00008.html">Config.h</a>&quot;</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keyword">namespace </span><a class="code hl_namespace" href="a00117.html">MiraiCP</a> {</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="a00117.html#ae471c96f73a019b792a82629b6bdfdf5">   25</a></span>    <span class="keyword">const</span> std::string <a class="code hl_variable" href="a00117.html#ae471c96f73a019b792a82629b6bdfdf5">MiraiCPVersion</a> = <span class="stringliteral">&quot;v2.9.0-M1&quot;</span>;</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="a00117.html#a3c5e8fb0077be3fb7c9216bc99d67a7e">   26</a></span>    <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="a00117.html#a3c5e8fb0077be3fb7c9216bc99d67a7e">schedule</a>(<span class="keywordtype">long</span> time, <span class="keyword">const</span> std::string &amp;msg, JNIEnv *env = <a class="code hl_function" href="a00437.html#a365e1740117b0fb9d5990855a26dba4f">ThreadManager::getEnv</a>()) {</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        <a class="code hl_typedef" href="a00110.html#ab701e3ac61a85b337ec5c1abaad6742d">nlohmann::json</a> j;</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        j[<span class="stringliteral">&quot;time&quot;</span>] = time;</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        j[<span class="stringliteral">&quot;msg&quot;</span>] = msg;</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        <a class="code hl_function" href="a00125.html#af81f741728a4ed24a81c76667e41c0eb">Config::koperation</a>(<a class="code hl_enumvalue" href="a00125.html#a1bc3c425340774687507c1683967231bae5161956bb109433aa80ffd6872309df">Config::TimeOut</a>, j, env);</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    }</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="a00117.html#a12d27be6730af4fc321ac1eb231db281">   32</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="a00117.html#a12d27be6730af4fc321ac1eb231db281">enrollPlugin</a>();</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="a00117.html#ad5dfcfb8bbf110c31ac8a5288f395bba">   34</a></span>    <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="a00117.html#ad5dfcfb8bbf110c31ac8a5288f395bba">enrollPlugin0</a>(<a class="code hl_class" href="a00133.html">CPPPlugin</a> *p) {</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        <a class="code hl_variable" href="a00133.html#a5bfd48cf68b997a48e04d141d831f6d3">CPPPlugin::plugin</a> = p;</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    }</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>} <span class="comment">// namespace MiraiCP</span></div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="preprocessor">#endif </span><span class="comment">//MIRAICP_PRO_UTILS_H</span></div>
-<div class="ttc" id="aa00008_html"><div class="ttname"><a href="a00008.html">Config.h</a></div></div>
-<div class="ttc" id="aa00020_html"><div class="ttname"><a href="a00020.html">CPPPlugin.h</a></div></div>
-<div class="ttc" id="aa00110_html_ab701e3ac61a85b337ec5c1abaad6742d"><div class="ttname"><a href="a00110.html#ab701e3ac61a85b337ec5c1abaad6742d">json</a></div><div class="ttdeci">nlohmann::json json</div><div class="ttdef"><b>Definition:</b> <a href="a00110_source.html#l00029">utils.cpp:29</a></div></div>
-<div class="ttc" id="aa00117_html"><div class="ttname"><a href="a00117.html">MiraiCP</a></div><div class="ttdef"><b>Definition:</b> <a href="a00002_source.html#l00024">Bot.h:24</a></div></div>
-<div class="ttc" id="aa00117_html_a12d27be6730af4fc321ac1eb231db281"><div class="ttname"><a href="a00117.html#a12d27be6730af4fc321ac1eb231db281">MiraiCP::enrollPlugin</a></div><div class="ttdeci">void enrollPlugin()</div></div>
-<div class="ttc" id="aa00117_html_a3c5e8fb0077be3fb7c9216bc99d67a7e"><div class="ttname"><a href="a00117.html#a3c5e8fb0077be3fb7c9216bc99d67a7e">MiraiCP::schedule</a></div><div class="ttdeci">void schedule(long time, const std::string &amp;msg, JNIEnv *env=ThreadManager::getEnv())</div><div class="ttdef"><b>Definition:</b> <a href="a00113_source.html#l00026">utils.h:26</a></div></div>
-<div class="ttc" id="aa00117_html_ad5dfcfb8bbf110c31ac8a5288f395bba"><div class="ttname"><a href="a00117.html#ad5dfcfb8bbf110c31ac8a5288f395bba">MiraiCP::enrollPlugin0</a></div><div class="ttdeci">void enrollPlugin0(CPPPlugin *p)</div><div class="ttdef"><b>Definition:</b> <a href="a00113_source.html#l00034">utils.h:34</a></div></div>
-<div class="ttc" id="aa00117_html_ae471c96f73a019b792a82629b6bdfdf5"><div class="ttname"><a href="a00117.html#ae471c96f73a019b792a82629b6bdfdf5">MiraiCP::MiraiCPVersion</a></div><div class="ttdeci">const std::string MiraiCPVersion</div><div class="ttdef"><b>Definition:</b> <a href="a00113_source.html#l00025">utils.h:25</a></div></div>
-<div class="ttc" id="aa00125_html_a1bc3c425340774687507c1683967231bae5161956bb109433aa80ffd6872309df"><div class="ttname"><a href="a00125.html#a1bc3c425340774687507c1683967231bae5161956bb109433aa80ffd6872309df">MiraiCP::Config::TimeOut</a></div><div class="ttdeci">@ TimeOut</div><div class="ttdoc">定时任务</div><div class="ttdef"><b>Definition:</b> <a href="a00008_source.html#l00080">Config.h:80</a></div></div>
-<div class="ttc" id="aa00125_html_af81f741728a4ed24a81c76667e41c0eb"><div class="ttname"><a href="a00125.html#af81f741728a4ed24a81c76667e41c0eb">MiraiCP::Config::koperation</a></div><div class="ttdeci">static std::string koperation(operation_set type, const nlohmann::json &amp;data, JNIEnv *=ThreadManager::getEnv(), bool catchErr=true, const std::string &amp;errorInfo=&quot;&quot;)</div><div class="ttdoc">调用mirai操作</div><div class="ttdef"><b>Definition:</b> <a href="a00005_source.html#l00043">Config.cpp:43</a></div></div>
-<div class="ttc" id="aa00133_html"><div class="ttname"><a href="a00133.html">MiraiCP::CPPPlugin</a></div><div class="ttdoc">插件父类</div><div class="ttdef"><b>Definition:</b> <a href="a00020_source.html#l00025">CPPPlugin.h:25</a></div></div>
-<div class="ttc" id="aa00133_html_a5bfd48cf68b997a48e04d141d831f6d3"><div class="ttname"><a href="a00133.html#a5bfd48cf68b997a48e04d141d831f6d3">MiraiCP::CPPPlugin::plugin</a></div><div class="ttdeci">static CPPPlugin * plugin</div><div class="ttdef"><b>Definition:</b> <a href="a00020_source.html#l00032">CPPPlugin.h:32</a></div></div>
-<div class="ttc" id="aa00437_html_a365e1740117b0fb9d5990855a26dba4f"><div class="ttname"><a href="a00437.html#a365e1740117b0fb9d5990855a26dba4f">MiraiCP::ThreadManager::getEnv</a></div><div class="ttdeci">static JNIEnv * getEnv()</div><div class="ttdoc">取env,如果不存在重新获取</div><div class="ttdef"><b>Definition:</b> <a href="a00098_source.html#l00069">ThreadManager.cpp:69</a></div></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#ifndef MIRAICP_PRO_THREADMANAGER_H</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#define MIRAICP_PRO_THREADMANAGER_H</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &lt;jni.h&gt;</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &lt;map&gt;</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &lt;mutex&gt;</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &lt;sstream&gt;</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &lt;thread&gt;</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keyword">namespace </span><a class="code hl_namespace" href="a00129.html">MiraiCP</a> {</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keyword">using</span> <a class="code hl_typedef" href="a00129.html#a59ef86b4ef19e525734fc04811fa9681">QQID</a> = <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> long;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="a00467.html">   39</a></span>    <span class="keyword">class </span><a class="code hl_class" href="a00467.html">ThreadManager</a> {</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="a00471.html">   42</a></span>        <span class="keyword">struct </span><a class="code hl_struct" href="a00471.html">ThreadInfo</a> {</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="a00471.html#ad5e0fc94f06fd33fbc0c6db40c0486eb">   43</a></span>            JNIEnv *<a class="code hl_variable" href="a00471.html#ad5e0fc94f06fd33fbc0c6db40c0486eb">e</a>{};</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="a00471.html#a20796cdd95ace90b1f56b825abf51032">   44</a></span>            <span class="keywordtype">bool</span> <a class="code hl_variable" href="a00471.html#a20796cdd95ace90b1f56b825abf51032">attach</a>{};</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        };</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        <span class="comment">// 类静态成员</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="a00467.html#a6aaf08f6744b01ac5ab06430313dd3a0">   49</a></span>        <span class="keyword">static</span> std::map&lt;std::string, ThreadInfo&gt; <a class="code hl_variable" href="a00467.html#a6aaf08f6744b01ac5ab06430313dd3a0">threads</a>; </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="a00467.html#af61aae7d053395c836bae677af861364">   50</a></span>        <span class="keyword">static</span> std::recursive_mutex <a class="code hl_variable" href="a00467.html#af61aae7d053395c836bae677af861364">mtx</a>;                  </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="a00467.html#ac5796576b9962187070ad21fbfdf17ff">   53</a></span>        <span class="keyword">static</span> JavaVM *<a class="code hl_variable" href="a00467.html#ac5796576b9962187070ad21fbfdf17ff">gvm</a>;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="a00467.html#a630b0c6d61decb2ea60eb719bbc1120e">   55</a></span>        <span class="keyword">static</span> <span class="keywordtype">long</span> <a class="code hl_variable" href="a00467.html#a630b0c6d61decb2ea60eb719bbc1120e">JNIVersion</a>;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="a00467.html#a839cd3642c36630c7f71c09728498bb5">   58</a></span>        <a class="code hl_function" href="a00467.html#a839cd3642c36630c7f71c09728498bb5">ThreadManager</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        <span class="comment">// 私有静态方法</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="a00467.html#a29f1a55d4cb7b78045fd3f2566c59dcc">newEnv</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *threadName = <span class="keyword">nullptr</span>); </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="a00467.html#abd1025cb50143b1aa60b55d79ec2b370">included</a>(<span class="keyword">const</span> std::string &amp;<span class="keywordtype">id</span>);</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        <span class="comment">// 静态方法</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="a00467.html#a00a561eb63a7489b54010df23b58036d">   70</a></span><span class="comment"></span>        <span class="keyword">static</span> <a class="code hl_struct" href="a00471.html">ThreadInfo</a> *<a class="code hl_function" href="a00467.html#a00a561eb63a7489b54010df23b58036d">getThread</a>() {</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>            <span class="keywordflow">return</span> &amp;<a class="code hl_variable" href="a00467.html#a6aaf08f6744b01ac5ab06430313dd3a0">threads</a>[<a class="code hl_function" href="a00467.html#a11837c8fea64ee75bea0bcd1ea56de9c">getThreadId</a>()];</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        }</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="a00467.html#a11837c8fea64ee75bea0bcd1ea56de9c">   75</a></span>        <span class="keyword">static</span> std::string <a class="code hl_function" href="a00467.html#a11837c8fea64ee75bea0bcd1ea56de9c">getThreadId</a>() {</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>            <span class="keyword">auto</span> myid = std::this_thread::get_id();</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>            std::stringstream ss;</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>            ss &lt;&lt; myid;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>            <span class="keywordflow">return</span> ss.str();</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        }</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="a00467.html#afacfbdbffc416bb53676f040720a42e0">setEnv</a>(JNIEnv *e);</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="a00467.html#a72b77deebd7be1c800b73ebd4b2daa09">detach</a>();</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        <span class="keyword">static</span> JNIEnv *<a class="code hl_function" href="a00467.html#a365e1740117b0fb9d5990855a26dba4f">getEnv</a>();</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    };</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>} <span class="comment">// namespace MiraiCP</span></div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span><span class="preprocessor">#endif </span><span class="comment">//MIRAICP_PRO_THREADMANAGER_H</span></div>
+<div class="ttc" id="aa00129_html"><div class="ttname"><a href="a00129.html">MiraiCP</a></div><div class="ttdef"><b>Definition:</b> <a href="a00002_source.html#l00023">Bot.cpp:23</a></div></div>
+<div class="ttc" id="aa00129_html_a59ef86b4ef19e525734fc04811fa9681"><div class="ttname"><a href="a00129.html#a59ef86b4ef19e525734fc04811fa9681">MiraiCP::QQID</a></div><div class="ttdeci">unsigned long long QQID</div><div class="ttdef"><b>Definition:</b> <a href="a00005_source.html#l00028">Bot.h:28</a></div></div>
+<div class="ttc" id="aa00467_html"><div class="ttname"><a href="a00467.html">MiraiCP::ThreadManager</a></div><div class="ttdef"><b>Definition:</b> <a href="a00113_source.html#l00039">ThreadManager.h:39</a></div></div>
+<div class="ttc" id="aa00467_html_a00a561eb63a7489b54010df23b58036d"><div class="ttname"><a href="a00467.html#a00a561eb63a7489b54010df23b58036d">MiraiCP::ThreadManager::getThread</a></div><div class="ttdeci">static ThreadInfo * getThread()</div><div class="ttdoc">获取线程</div><div class="ttdef"><b>Definition:</b> <a href="a00113_source.html#l00070">ThreadManager.h:70</a></div></div>
+<div class="ttc" id="aa00467_html_a11837c8fea64ee75bea0bcd1ea56de9c"><div class="ttname"><a href="a00467.html#a11837c8fea64ee75bea0bcd1ea56de9c">MiraiCP::ThreadManager::getThreadId</a></div><div class="ttdeci">static std::string getThreadId()</div><div class="ttdoc">获取线程id.</div><div class="ttdef"><b>Definition:</b> <a href="a00113_source.html#l00075">ThreadManager.h:75</a></div></div>
+<div class="ttc" id="aa00467_html_a29f1a55d4cb7b78045fd3f2566c59dcc"><div class="ttname"><a href="a00467.html#a29f1a55d4cb7b78045fd3f2566c59dcc">MiraiCP::ThreadManager::newEnv</a></div><div class="ttdeci">static void newEnv(const char *threadName=nullptr)</div><div class="ttdef"><b>Definition:</b> <a href="a00110_source.html#l00041">ThreadManager.cpp:41</a></div></div>
+<div class="ttc" id="aa00467_html_a365e1740117b0fb9d5990855a26dba4f"><div class="ttname"><a href="a00467.html#a365e1740117b0fb9d5990855a26dba4f">MiraiCP::ThreadManager::getEnv</a></div><div class="ttdeci">static JNIEnv * getEnv()</div><div class="ttdoc">取env,如果不存在重新获取</div><div class="ttdef"><b>Definition:</b> <a href="a00110_source.html#l00069">ThreadManager.cpp:69</a></div></div>
+<div class="ttc" id="aa00467_html_a630b0c6d61decb2ea60eb719bbc1120e"><div class="ttname"><a href="a00467.html#a630b0c6d61decb2ea60eb719bbc1120e">MiraiCP::ThreadManager::JNIVersion</a></div><div class="ttdeci">static long JNIVersion</div><div class="ttdoc">JNI 版本.</div><div class="ttdef"><b>Definition:</b> <a href="a00113_source.html#l00055">ThreadManager.h:55</a></div></div>
+<div class="ttc" id="aa00467_html_a6aaf08f6744b01ac5ab06430313dd3a0"><div class="ttname"><a href="a00467.html#a6aaf08f6744b01ac5ab06430313dd3a0">MiraiCP::ThreadManager::threads</a></div><div class="ttdeci">static std::map&lt; std::string, ThreadInfo &gt; threads</div><div class="ttdef"><b>Definition:</b> <a href="a00113_source.html#l00049">ThreadManager.h:49</a></div></div>
+<div class="ttc" id="aa00467_html_a72b77deebd7be1c800b73ebd4b2daa09"><div class="ttname"><a href="a00467.html#a72b77deebd7be1c800b73ebd4b2daa09">MiraiCP::ThreadManager::detach</a></div><div class="ttdeci">static void detach()</div><div class="ttdoc">结束当前线程的env，也就是释放当前线程缓存的env.</div><div class="ttdef"><b>Definition:</b> <a href="a00110_source.html#l00052">ThreadManager.cpp:52</a></div></div>
+<div class="ttc" id="aa00467_html_a839cd3642c36630c7f71c09728498bb5"><div class="ttname"><a href="a00467.html#a839cd3642c36630c7f71c09728498bb5">MiraiCP::ThreadManager::ThreadManager</a></div><div class="ttdeci">ThreadManager()=default</div></div>
+<div class="ttc" id="aa00467_html_abd1025cb50143b1aa60b55d79ec2b370"><div class="ttname"><a href="a00467.html#abd1025cb50143b1aa60b55d79ec2b370">MiraiCP::ThreadManager::included</a></div><div class="ttdeci">static bool included(const std::string &amp;id)</div><div class="ttdoc">判断该线程id是否包含在线程池里</div><div class="ttdef"><b>Definition:</b> <a href="a00110_source.html#l00063">ThreadManager.cpp:63</a></div></div>
+<div class="ttc" id="aa00467_html_ac5796576b9962187070ad21fbfdf17ff"><div class="ttname"><a href="a00467.html#ac5796576b9962187070ad21fbfdf17ff">MiraiCP::ThreadManager::gvm</a></div><div class="ttdeci">static JavaVM * gvm</div><div class="ttdoc">全局JavaVM对象，用于多线程管理中新建线程的JNIEnv.</div><div class="ttdef"><b>Definition:</b> <a href="a00113_source.html#l00053">ThreadManager.h:53</a></div></div>
+<div class="ttc" id="aa00467_html_af61aae7d053395c836bae677af861364"><div class="ttname"><a href="a00467.html#af61aae7d053395c836bae677af861364">MiraiCP::ThreadManager::mtx</a></div><div class="ttdeci">static std::recursive_mutex mtx</div><div class="ttdoc">&lt; 线程池(线程id:env).</div><div class="ttdef"><b>Definition:</b> <a href="a00113_source.html#l00050">ThreadManager.h:50</a></div></div>
+<div class="ttc" id="aa00467_html_afacfbdbffc416bb53676f040720a42e0"><div class="ttname"><a href="a00467.html#afacfbdbffc416bb53676f040720a42e0">MiraiCP::ThreadManager::setEnv</a></div><div class="ttdeci">static void setEnv(JNIEnv *e)</div><div class="ttdoc">设置env给当前线程.</div><div class="ttdef"><b>Definition:</b> <a href="a00110_source.html#l00030">ThreadManager.cpp:30</a></div></div>
+<div class="ttc" id="aa00471_html"><div class="ttname"><a href="a00471.html">MiraiCP::ThreadManager::ThreadInfo</a></div><div class="ttdoc">每个线程实例.</div><div class="ttdef"><b>Definition:</b> <a href="a00113_source.html#l00042">ThreadManager.h:42</a></div></div>
+<div class="ttc" id="aa00471_html_a20796cdd95ace90b1f56b825abf51032"><div class="ttname"><a href="a00471.html#a20796cdd95ace90b1f56b825abf51032">MiraiCP::ThreadManager::ThreadInfo::attach</a></div><div class="ttdeci">bool attach</div><div class="ttdef"><b>Definition:</b> <a href="a00113_source.html#l00044">ThreadManager.h:44</a></div></div>
+<div class="ttc" id="aa00471_html_ad5e0fc94f06fd33fbc0c6db40c0486eb"><div class="ttname"><a href="a00471.html#ad5e0fc94f06fd33fbc0c6db40c0486eb">MiraiCP::ThreadManager::ThreadInfo::e</a></div><div class="ttdeci">JNIEnv * e</div><div class="ttdef"><b>Definition:</b> <a href="a00113_source.html#l00043">ThreadManager.h:43</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="a00113.html">utils.h</a></li>
-    <li class="footer">生成于 2021年 十二月 5日 星期日 20:04:16 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="a00113.html">ThreadManager.h</a></li>
+    <li class="footer">生成于 2022年 一月 10日 星期一 15:34:47 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
 <script type="text/javascript">

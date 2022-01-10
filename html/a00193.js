@@ -1,6 +1,7 @@
 var a00193 =
 [
-    [ "BotLeaveEvent", "a00193.html#a1d6901317417c45332686a1b148ea789", null ],
-    [ "getEventType", "a00193.html#a39c20f49f800c9e3b0ddf35306f84ca5", null ],
-    [ "groupid", "a00193.html#a75d1aed07afc1cc0c9a6985c406e68ee", null ]
+    [ "NudgeEvent", "a00193.html#a4357682e0b2c43665cafe1be9e928587", null ],
+    [ "getEventType", "a00193.html#a21921a889c8878097e9ebc76ad802986", null ],
+    [ "from", "a00193.html#a6b41c32519408428cb6fc302bf24b970", null ],
+    [ "target", "a00193.html#af4e172354f69ce65c8d8d2cd1f188cca", null ]
 ];

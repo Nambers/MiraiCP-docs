@@ -1,5 +1,5 @@
 var a00241 =
 [
-    [ "BotIsBeingMutedException", "a00241.html#a504bc3ce8a99aa12e236f2cf77cbdb9d", null ],
-    [ "timeRemain", "a00241.html#aacccf1ba2a31c6a8901d87d166c85f3e", null ]
+    [ "BotException", "a00241.html#a11c5982f3092e45d3112910b8fc9071b", null ],
+    [ "description", "a00241.html#a6e92043e958d13a3066396ec9092268e", null ]
 ];

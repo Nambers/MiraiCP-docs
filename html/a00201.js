@@ -1,7 +1,11 @@
 var a00201 =
 [
-    [ "MiraiCPExceptionEvent", "a00201.html#afd30bd6b1fff4e0ac6b94dd31e965631", null ],
-    [ "getEventType", "a00201.html#a2924af149e879ce8991fd9537dbb20f4", null ],
-    [ "getException", "a00201.html#a90e01efbe49872e7233c3185fe2dd93f", null ],
-    [ "exceptionPtr", "a00201.html#a762a554cc588634317c6be8791ace0f2", null ]
+    [ "MemberJoinRequestEvent", "a00201.html#a042a1dcc691eb34a77c2afd0a433c4f4", null ],
+    [ "accept", "a00201.html#ace031723d310c72ed25b83485f66a034", null ],
+    [ "getEventType", "a00201.html#aebf8ce3f19785a673012177f4eb610d0", null ],
+    [ "operate", "a00201.html#a0ac3404118b4a7051c285d00dfe625d2", null ],
+    [ "reject", "a00201.html#a855d60c9e71eda3fd438e45728a8799d", null ],
+    [ "group", "a00201.html#a7967276b662117dfae303235ce70fada", null ],
+    [ "inviter", "a00201.html#a1a2aa46fd5e85786f2e3858e12ceaeea", null ],
+    [ "source", "a00201.html#aa1b90d95a75a1e6b79aa54a777eb8bf7", null ]
 ];

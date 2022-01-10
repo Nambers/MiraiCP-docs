@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiraiCP: 构建聊天记录</title>
+<title>MiraiCP: MiraiCP::OnlineAudio类 参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MiraiCP
-   &#160;<span id="projectnumber">v2.8.0-RC</span>
+   &#160;<span id="projectnumber">v2.9.1</span>
    </div>
    <div id="projectbrief">MiraiCP api document</div>
   </td>
@@ -90,22 +90,405 @@ $(document).ready(function(){initNavTree('a00439.html',''); initResizable(); });
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">构建聊天记录</div></div>
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="#pub-attribs">Public 属性</a> &#124;
+<a href="a00436.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">MiraiCP::OnlineAudio类 参考</div></div>
 </div><!--header-->
 <div class="contents">
-<p >构建一条聊天记录 第一个参数是聊天记录发生的地方 然后是每条信息</p>
-<div class="fragment"><div class="line">*ForwardedMessage(&amp;e.group,</div>
-<div class="line"> {</div>
-<div class="line">    ForwardedNode(1930893235, <span class="stringliteral">&quot;Eritque arcus&quot;</span>, <span class="stringliteral">&quot;hahaha&quot;</span>, 1),</div>
-<div class="line">    ForwardedNode(1930893235, <span class="stringliteral">&quot;Eritque arcus&quot;</span>, <span class="stringliteral">&quot;hahaha&quot;</span>, -1)</div>
-<div class="line"> }).sendTo(&amp;e.group);</div>
-</div><!-- fragment --></div><!-- contents -->
+
+<p>接收到的音频文件, 发送用<code>Contact.sendAudio</code>  
+ <a href="a00439.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="a00107_source.html">SingleMessage.h</a>&gt;</code></p>
+<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> 类 MiraiCP::OnlineAudio 继承关系图:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="a00438.png" border="0" usemap="#a_mirai_c_p_1_1_online_audio_inherit__map" alt="Inheritance graph"/></div>
+<map name="a_mirai_c_p_1_1_online_audio_inherit__map" id="a_mirai_c_p_1_1_online_audio_inherit__map">
+<area shape="rect" title="接收到的音频文件, 发送用Contact.sendAudio" alt="" coords="31,535,198,832"/>
+<area shape="rect" href="a00407.html" title="MessageChain的组成部分" alt="" coords="5,145,224,487"/>
+<area shape="rect" href="a00391.html" title="MiraiCode父类, 指可以被转换成miraicode的类型" alt="" coords="35,5,194,97"/>
+</map>
+</div>
+<div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> MiraiCP::OnlineAudio 的协作图:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="a00437.png" border="0" usemap="#a_mirai_c_p_1_1_online_audio_coll__map" alt="Collaboration graph"/></div>
+<map name="a_mirai_c_p_1_1_online_audio_coll__map" id="a_mirai_c_p_1_1_online_audio_coll__map">
+<area shape="rect" title="接收到的音频文件, 发送用Contact.sendAudio" alt="" coords="254,520,421,729"/>
+<area shape="rect" href="a00407.html" title="MessageChain的组成部分" alt="" coords="111,175,330,457"/>
+<area shape="rect" href="a00391.html" title="MiraiCode父类, 指可以被转换成miraicode的类型" alt="" coords="170,5,329,97"/>
+<area shape="rect" title=" " alt="" coords="92,13,146,90"/>
+<area shape="rect" title=" " alt="" coords="17,13,56,90"/>
+<area shape="rect" title=" " alt="" coords="353,13,408,90"/>
+<area shape="rect" title=" " alt="" coords="463,277,522,355"/>
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a489558aac1aa115a829c273ba71ace54"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00439.html#a489558aac1aa115a829c273ba71ace54">toMiraiCode</a> () const override</td></tr>
+<tr class="memdesc:a489558aac1aa115a829c273ba71ace54"><td class="mdescLeft">&#160;</td><td class="mdescRight">不支持直接发送, 用Contact.sendAudio  <a href="a00439.html#a489558aac1aa115a829c273ba71ace54">更多...</a><br /></td></tr>
+<tr class="separator:a489558aac1aa115a829c273ba71ace54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6019cb1d4607f359565eee4b8b5cca33"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00439.html#a6019cb1d4607f359565eee4b8b5cca33">OnlineAudio</a> (std::string f, std::array&lt; uint8_t, 16 &gt; <a class="el" href="a00439.html#a403a5a5837bbf02f5e0c5a4327f51ff3">md5</a>, int <a class="el" href="a00439.html#a06c764f6c1f6f65def69fcfe378ebef1">size</a>, int <a class="el" href="a00439.html#afe96592ba24d9c3f1887c7668d788c97">codec</a>, int <a class="el" href="a00439.html#a963774ddebf115bebd86386cb84a5117">length</a>, std::string <a class="el" href="a00439.html#aedf31534944297bea3c997cc49329443">url</a>)</td></tr>
+<tr class="separator:a6019cb1d4607f359565eee4b8b5cca33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf77a906cd6705425a28ab4483c634b5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00439.html#adf77a906cd6705425a28ab4483c634b5">operator==</a> (const <a class="el" href="a00439.html">OnlineAudio</a> &amp;oa) const</td></tr>
+<tr class="separator:adf77a906cd6705425a28ab4483c634b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_a00407"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_a00407')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="a00407.html">MiraiCP::SingleMessage</a></td></tr>
+<tr class="memitem:a7602ba8b70c61feebadea2cb6744b9dc inherit pub_methods_a00407"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00407.html#a7602ba8b70c61feebadea2cb6744b9dc">~SingleMessage</a> ()=default</td></tr>
+<tr class="separator:a7602ba8b70c61feebadea2cb6744b9dc inherit pub_methods_a00407"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a408adbe935640d5b02b8ba084dfaa0 inherit pub_methods_a00407"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="a00122.html#ab701e3ac61a85b337ec5c1abaad6742d">nlohmann::json</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00407.html#a0a408adbe935640d5b02b8ba084dfaa0">toJson</a> () const</td></tr>
+<tr class="separator:a0a408adbe935640d5b02b8ba084dfaa0 inherit pub_methods_a00407"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d501cb4ed4cf97c4eb43246c35224b0 inherit pub_methods_a00407"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00407.html#a9d501cb4ed4cf97c4eb43246c35224b0">operator==</a> (const <a class="el" href="a00407.html">SingleMessage</a> &amp;m) const</td></tr>
+<tr class="separator:a9d501cb4ed4cf97c4eb43246c35224b0 inherit pub_methods_a00407"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2836bc9c5110cbada54ecbb65341b8f inherit pub_methods_a00407"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00407.html#aa2836bc9c5110cbada54ecbb65341b8f">operator==</a> (<a class="el" href="a00407.html">SingleMessage</a> *m) const</td></tr>
+<tr class="separator:aa2836bc9c5110cbada54ecbb65341b8f inherit pub_methods_a00407"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e645ecfc57a7b630290d88e7cc9ae39 inherit pub_methods_a00407"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00407.html#a1e645ecfc57a7b630290d88e7cc9ae39">SingleMessage</a> (int <a class="el" href="a00407.html#a80942452883a814f0462e451982ffd39">type</a>, std::string <a class="el" href="a00407.html#a7ebcc9775985874bb7a09bd1d8274a24">content</a>, std::string <a class="el" href="a00407.html#a207f61ebfd79e0ae18833f2edf954595">prefix</a>=&quot;:&quot;)</td></tr>
+<tr class="memdesc:a1e645ecfc57a7b630290d88e7cc9ae39 inherit pub_methods_a00407"><td class="mdescLeft">&#160;</td><td class="mdescRight">构建单条  <a href="a00407.html#a1e645ecfc57a7b630290d88e7cc9ae39">更多...</a><br /></td></tr>
+<tr class="separator:a1e645ecfc57a7b630290d88e7cc9ae39 inherit pub_methods_a00407"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:ab55cc2add22064ea6437677abc6d2555"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00439.html#ab55cc2add22064ea6437677abc6d2555">type</a> ()</td></tr>
+<tr class="separator:ab55cc2add22064ea6437677abc6d2555"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_static_methods_a00407"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_a00407')"><img src="closed.png" alt="-"/>&#160;静态 Public 成员函数 继承自 <a class="el" href="a00407.html">MiraiCP::SingleMessage</a></td></tr>
+<tr class="memitem:a7412c91a4b45c7f1d77cf904af64b6d7 inherit pub_static_methods_a00407"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00407.html#a7412c91a4b45c7f1d77cf904af64b6d7">getKey</a> (const std::string &amp;value)</td></tr>
+<tr class="memdesc:a7412c91a4b45c7f1d77cf904af64b6d7 inherit pub_static_methods_a00407"><td class="mdescLeft">&#160;</td><td class="mdescRight">找对应类型的index key  <a href="a00407.html#a7412c91a4b45c7f1d77cf904af64b6d7">更多...</a><br /></td></tr>
+<tr class="separator:a7412c91a4b45c7f1d77cf904af64b6d7 inherit pub_static_methods_a00407"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public 属性</h2></td></tr>
+<tr class="memitem:a9cf8841f7297be7d0b8404aeaf1727a1"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00439.html#a9cf8841f7297be7d0b8404aeaf1727a1">filename</a></td></tr>
+<tr class="memdesc:a9cf8841f7297be7d0b8404aeaf1727a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">文件名  <a href="a00439.html#a9cf8841f7297be7d0b8404aeaf1727a1">更多...</a><br /></td></tr>
+<tr class="separator:a9cf8841f7297be7d0b8404aeaf1727a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aedf31534944297bea3c997cc49329443"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00439.html#aedf31534944297bea3c997cc49329443">url</a></td></tr>
+<tr class="memdesc:aedf31534944297bea3c997cc49329443"><td class="mdescLeft">&#160;</td><td class="mdescRight">下载地址  <a href="a00439.html#aedf31534944297bea3c997cc49329443">更多...</a><br /></td></tr>
+<tr class="separator:aedf31534944297bea3c997cc49329443"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06c764f6c1f6f65def69fcfe378ebef1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00439.html#a06c764f6c1f6f65def69fcfe378ebef1">size</a></td></tr>
+<tr class="memdesc:a06c764f6c1f6f65def69fcfe378ebef1"><td class="mdescLeft">&#160;</td><td class="mdescRight">文件大小  <a href="a00439.html#a06c764f6c1f6f65def69fcfe378ebef1">更多...</a><br /></td></tr>
+<tr class="separator:a06c764f6c1f6f65def69fcfe378ebef1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe96592ba24d9c3f1887c7668d788c97"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00439.html#afe96592ba24d9c3f1887c7668d788c97">codec</a></td></tr>
+<tr class="memdesc:afe96592ba24d9c3f1887c7668d788c97"><td class="mdescLeft">&#160;</td><td class="mdescRight">编码方式  <a href="a00439.html#afe96592ba24d9c3f1887c7668d788c97">更多...</a><br /></td></tr>
+<tr class="separator:afe96592ba24d9c3f1887c7668d788c97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a963774ddebf115bebd86386cb84a5117"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00439.html#a963774ddebf115bebd86386cb84a5117">length</a></td></tr>
+<tr class="memdesc:a963774ddebf115bebd86386cb84a5117"><td class="mdescLeft">&#160;</td><td class="mdescRight">时长(单位s)  <a href="a00439.html#a963774ddebf115bebd86386cb84a5117">更多...</a><br /></td></tr>
+<tr class="separator:a963774ddebf115bebd86386cb84a5117"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a403a5a5837bbf02f5e0c5a4327f51ff3"><td class="memItemLeft" align="right" valign="top">std::array&lt; uint8_t, 16 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00439.html#a403a5a5837bbf02f5e0c5a4327f51ff3">md5</a></td></tr>
+<tr class="memdesc:a403a5a5837bbf02f5e0c5a4327f51ff3"><td class="mdescLeft">&#160;</td><td class="mdescRight">16位md5  <a href="a00439.html#a403a5a5837bbf02f5e0c5a4327f51ff3">更多...</a><br /></td></tr>
+<tr class="separator:a403a5a5837bbf02f5e0c5a4327f51ff3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_attribs_a00407"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_a00407')"><img src="closed.png" alt="-"/>&#160;Public 属性 继承自 <a class="el" href="a00407.html">MiraiCP::SingleMessage</a></td></tr>
+<tr class="memitem:a80942452883a814f0462e451982ffd39 inherit pub_attribs_a00407"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00407.html#a80942452883a814f0462e451982ffd39">type</a></td></tr>
+<tr class="separator:a80942452883a814f0462e451982ffd39 inherit pub_attribs_a00407"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ebcc9775985874bb7a09bd1d8274a24 inherit pub_attribs_a00407"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00407.html#a7ebcc9775985874bb7a09bd1d8274a24">content</a></td></tr>
+<tr class="separator:a7ebcc9775985874bb7a09bd1d8274a24 inherit pub_attribs_a00407"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a207f61ebfd79e0ae18833f2edf954595 inherit pub_attribs_a00407"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00407.html#a207f61ebfd79e0ae18833f2edf954595">prefix</a></td></tr>
+<tr class="separator:a207f61ebfd79e0ae18833f2edf954595 inherit pub_attribs_a00407"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+额外继承的成员函数</h2></td></tr>
+<tr class="inherit_header pub_static_attribs_a00407"><td colspan="2" onclick="javascript:toggleInherit('pub_static_attribs_a00407')"><img src="closed.png" alt="-"/>&#160;静态 Public 属性 继承自 <a class="el" href="a00407.html">MiraiCP::SingleMessage</a></td></tr>
+<tr class="memitem:a3fbf4e209a236ba91885d9523d0163a2 inherit pub_static_attribs_a00407"><td class="memItemLeft" align="right" valign="top">static std::map&lt; int, std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00407.html#a3fbf4e209a236ba91885d9523d0163a2">messageType</a></td></tr>
+<tr class="separator:a3fbf4e209a236ba91885d9523d0163a2 inherit pub_static_attribs_a00407"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p >接收到的音频文件, 发送用<code>Contact.sendAudio</code> </p>
+
+<p class="definition">在文件 <a class="el" href="a00107_source.html">SingleMessage.h</a> 第 <a class="el" href="a00107_source.html#l00346">346</a> 行定义.</p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a6019cb1d4607f359565eee4b8b5cca33" name="a6019cb1d4607f359565eee4b8b5cca33"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6019cb1d4607f359565eee4b8b5cca33">&#9670;&nbsp;</a></span>OnlineAudio()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">MiraiCP::OnlineAudio::OnlineAudio </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>f</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::array&lt; uint8_t, 16 &gt;&#160;</td>
+          <td class="paramname"><em>md5</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>codec</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>length</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>url</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="a00107_source.html">SingleMessage.h</a> 第 <a class="el" href="a00107_source.html#l00367">367</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00368" name="l00368"></a><span class="lineno">  368</span>                                            : <a class="code hl_function" href="a00407.html#a1e645ecfc57a7b630290d88e7cc9ae39">SingleMessage</a>(<a class="code hl_function" href="a00439.html#ab55cc2add22064ea6437677abc6d2555">OnlineAudio::type</a>(), <span class="stringliteral">&quot;&quot;</span>),</div>
+<div class="line"><a id="l00369" name="l00369"></a><span class="lineno">  369</span>                                                <a class="code hl_variable" href="a00439.html#a9cf8841f7297be7d0b8404aeaf1727a1">filename</a>(std::move(f)), <a class="code hl_variable" href="a00439.html#a403a5a5837bbf02f5e0c5a4327f51ff3">md5</a>(<a class="code hl_variable" href="a00439.html#a403a5a5837bbf02f5e0c5a4327f51ff3">md5</a>), <a class="code hl_variable" href="a00439.html#a06c764f6c1f6f65def69fcfe378ebef1">size</a>(<a class="code hl_variable" href="a00439.html#a06c764f6c1f6f65def69fcfe378ebef1">size</a>), <a class="code hl_variable" href="a00439.html#afe96592ba24d9c3f1887c7668d788c97">codec</a>(<a class="code hl_variable" href="a00439.html#afe96592ba24d9c3f1887c7668d788c97">codec</a>),</div>
+<div class="line"><a id="l00370" name="l00370"></a><span class="lineno">  370</span>                                                <a class="code hl_variable" href="a00439.html#a963774ddebf115bebd86386cb84a5117">length</a>(<a class="code hl_variable" href="a00439.html#a963774ddebf115bebd86386cb84a5117">length</a>), <a class="code hl_variable" href="a00439.html#aedf31534944297bea3c997cc49329443">url</a>(std::move(<a class="code hl_variable" href="a00439.html#aedf31534944297bea3c997cc49329443">url</a>)){};</div>
+<div class="ttc" id="aa00407_html_a1e645ecfc57a7b630290d88e7cc9ae39"><div class="ttname"><a href="a00407.html#a1e645ecfc57a7b630290d88e7cc9ae39">MiraiCP::SingleMessage::SingleMessage</a></div><div class="ttdeci">SingleMessage(int type, std::string content, std::string prefix=&quot;:&quot;)</div><div class="ttdoc">构建单条</div><div class="ttdef"><b>Definition:</b> <a href="a00107_source.html#l00080">SingleMessage.h:80</a></div></div>
+<div class="ttc" id="aa00439_html_a06c764f6c1f6f65def69fcfe378ebef1"><div class="ttname"><a href="a00439.html#a06c764f6c1f6f65def69fcfe378ebef1">MiraiCP::OnlineAudio::size</a></div><div class="ttdeci">int size</div><div class="ttdoc">文件大小</div><div class="ttdef"><b>Definition:</b> <a href="a00107_source.html#l00354">SingleMessage.h:354</a></div></div>
+<div class="ttc" id="aa00439_html_a403a5a5837bbf02f5e0c5a4327f51ff3"><div class="ttname"><a href="a00439.html#a403a5a5837bbf02f5e0c5a4327f51ff3">MiraiCP::OnlineAudio::md5</a></div><div class="ttdeci">std::array&lt; uint8_t, 16 &gt; md5</div><div class="ttdoc">16位md5</div><div class="ttdef"><b>Definition:</b> <a href="a00107_source.html#l00360">SingleMessage.h:360</a></div></div>
+<div class="ttc" id="aa00439_html_a963774ddebf115bebd86386cb84a5117"><div class="ttname"><a href="a00439.html#a963774ddebf115bebd86386cb84a5117">MiraiCP::OnlineAudio::length</a></div><div class="ttdeci">int length</div><div class="ttdoc">时长(单位s)</div><div class="ttdef"><b>Definition:</b> <a href="a00107_source.html#l00358">SingleMessage.h:358</a></div></div>
+<div class="ttc" id="aa00439_html_a9cf8841f7297be7d0b8404aeaf1727a1"><div class="ttname"><a href="a00439.html#a9cf8841f7297be7d0b8404aeaf1727a1">MiraiCP::OnlineAudio::filename</a></div><div class="ttdeci">std::string filename</div><div class="ttdoc">文件名</div><div class="ttdef"><b>Definition:</b> <a href="a00107_source.html#l00350">SingleMessage.h:350</a></div></div>
+<div class="ttc" id="aa00439_html_ab55cc2add22064ea6437677abc6d2555"><div class="ttname"><a href="a00439.html#ab55cc2add22064ea6437677abc6d2555">MiraiCP::OnlineAudio::type</a></div><div class="ttdeci">static int type()</div><div class="ttdef"><b>Definition:</b> <a href="a00107_source.html#l00348">SingleMessage.h:348</a></div></div>
+<div class="ttc" id="aa00439_html_aedf31534944297bea3c997cc49329443"><div class="ttname"><a href="a00439.html#aedf31534944297bea3c997cc49329443">MiraiCP::OnlineAudio::url</a></div><div class="ttdeci">std::string url</div><div class="ttdoc">下载地址</div><div class="ttdef"><b>Definition:</b> <a href="a00107_source.html#l00352">SingleMessage.h:352</a></div></div>
+<div class="ttc" id="aa00439_html_afe96592ba24d9c3f1887c7668d788c97"><div class="ttname"><a href="a00439.html#afe96592ba24d9c3f1887c7668d788c97">MiraiCP::OnlineAudio::codec</a></div><div class="ttdeci">int codec</div><div class="ttdoc">编码方式</div><div class="ttdef"><b>Definition:</b> <a href="a00107_source.html#l00356">SingleMessage.h:356</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="adf77a906cd6705425a28ab4483c634b5" name="adf77a906cd6705425a28ab4483c634b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf77a906cd6705425a28ab4483c634b5">&#9670;&nbsp;</a></span>operator==()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MiraiCP::OnlineAudio::operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="a00439.html">OnlineAudio</a> &amp;&#160;</td>
+          <td class="paramname"><em>oa</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="a00107_source.html">SingleMessage.h</a> 第 <a class="el" href="a00107_source.html#l00372">372</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00372" name="l00372"></a><span class="lineno">  372</span>                                                     {</div>
+<div class="line"><a id="l00373" name="l00373"></a><span class="lineno">  373</span>            <span class="keywordflow">return</span> this-&gt;<a class="code hl_variable" href="a00439.html#a403a5a5837bbf02f5e0c5a4327f51ff3">md5</a> == oa.md5;</div>
+<div class="line"><a id="l00374" name="l00374"></a><span class="lineno">  374</span>        }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a489558aac1aa115a829c273ba71ace54" name="a489558aac1aa115a829c273ba71ace54"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a489558aac1aa115a829c273ba71ace54">&#9670;&nbsp;</a></span>toMiraiCode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string MiraiCP::OnlineAudio::toMiraiCode </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>不支持直接发送, 用Contact.sendAudio </p>
+
+<p>重载 <a class="el" href="a00407.html#ade93b603f22f584ada2a003c9e523b89">MiraiCP::SingleMessage</a> .</p>
+
+<p class="definition">在文件 <a class="el" href="a00107_source.html">SingleMessage.h</a> 第 <a class="el" href="a00107_source.html#l00363">363</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span>                                                                                                   {</div>
+<div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span>        }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ab55cc2add22064ea6437677abc6d2555" name="ab55cc2add22064ea6437677abc6d2555"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab55cc2add22064ea6437677abc6d2555">&#9670;&nbsp;</a></span>type()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int MiraiCP::OnlineAudio::type </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="a00107_source.html">SingleMessage.h</a> 第 <a class="el" href="a00107_source.html#l00348">348</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span>{ <span class="keywordflow">return</span> -3; }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="afe96592ba24d9c3f1887c7668d788c97" name="afe96592ba24d9c3f1887c7668d788c97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe96592ba24d9c3f1887c7668d788c97">&#9670;&nbsp;</a></span>codec</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int MiraiCP::OnlineAudio::codec</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>编码方式 </p>
+
+<p class="definition">在文件 <a class="el" href="a00107_source.html">SingleMessage.h</a> 第 <a class="el" href="a00107_source.html#l00356">356</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a9cf8841f7297be7d0b8404aeaf1727a1" name="a9cf8841f7297be7d0b8404aeaf1727a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9cf8841f7297be7d0b8404aeaf1727a1">&#9670;&nbsp;</a></span>filename</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string MiraiCP::OnlineAudio::filename</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>文件名 </p>
+
+<p class="definition">在文件 <a class="el" href="a00107_source.html">SingleMessage.h</a> 第 <a class="el" href="a00107_source.html#l00350">350</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a963774ddebf115bebd86386cb84a5117" name="a963774ddebf115bebd86386cb84a5117"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a963774ddebf115bebd86386cb84a5117">&#9670;&nbsp;</a></span>length</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int MiraiCP::OnlineAudio::length</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>时长(单位s) </p>
+
+<p class="definition">在文件 <a class="el" href="a00107_source.html">SingleMessage.h</a> 第 <a class="el" href="a00107_source.html#l00358">358</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a403a5a5837bbf02f5e0c5a4327f51ff3" name="a403a5a5837bbf02f5e0c5a4327f51ff3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a403a5a5837bbf02f5e0c5a4327f51ff3">&#9670;&nbsp;</a></span>md5</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::array&lt;uint8_t, 16&gt; MiraiCP::OnlineAudio::md5</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>16位md5 </p>
+
+<p class="definition">在文件 <a class="el" href="a00107_source.html">SingleMessage.h</a> 第 <a class="el" href="a00107_source.html#l00360">360</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a06c764f6c1f6f65def69fcfe378ebef1" name="a06c764f6c1f6f65def69fcfe378ebef1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06c764f6c1f6f65def69fcfe378ebef1">&#9670;&nbsp;</a></span>size</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int MiraiCP::OnlineAudio::size</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>文件大小 </p>
+
+<p class="definition">在文件 <a class="el" href="a00107_source.html">SingleMessage.h</a> 第 <a class="el" href="a00107_source.html#l00354">354</a> 行定义.</p>
+
+</div>
+</div>
+<a id="aedf31534944297bea3c997cc49329443" name="aedf31534944297bea3c997cc49329443"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aedf31534944297bea3c997cc49329443">&#9670;&nbsp;</a></span>url</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string MiraiCP::OnlineAudio::url</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>下载地址 </p>
+
+<p class="definition">在文件 <a class="el" href="a00107_source.html">SingleMessage.h</a> 第 <a class="el" href="a00107_source.html#l00352">352</a> 行定义.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li><a class="el" href="a00107_source.html">SingleMessage.h</a></li>
+</ul>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">生成于 2021年 十一月 8日 星期一 17:09:09 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="navelem"><a class="el" href="a00129.html">MiraiCP</a></li><li class="navelem"><a class="el" href="a00439.html">OnlineAudio</a></li>
+    <li class="footer">生成于 2022年 一月 10日 星期一 15:34:48 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
 <script type="text/javascript">

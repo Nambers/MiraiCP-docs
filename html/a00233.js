@@ -1,5 +1,5 @@
 var a00233 =
 [
-    [ "APIException", "a00233.html#a4d7a7e2f7c45f39a082580e885ee4f03", null ],
-    [ "description", "a00233.html#a8a227a2e1494b35e2e5456ade77066b3", null ]
+    [ "IllegalStateException", "a00233.html#a08986de2386eb21ca973f3afe268b0fe", null ],
+    [ "description", "a00233.html#ad7635e2bb8ed90e1d506bfe15e32e68f", null ]
 ];

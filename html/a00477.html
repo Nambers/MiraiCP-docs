@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiraiCP: 踢出群成员</title>
+<title>MiraiCP: 设置handler的启用状态</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MiraiCP
-   &#160;<span id="projectnumber">v2.9.0-M1</span>
+   &#160;<span id="projectnumber">v2.9.0</span>
    </div>
    <div id="projectbrief">MiraiCP api document</div>
   </td>
@@ -90,34 +90,26 @@ $(document).ready(function(){initNavTree('a00477.html',''); initResizable(); });
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">踢出群成员</div></div>
+  <div class="headertitle"><div class="title">设置handler的启用状态</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line">Event::processor.registerEvent([](GroupMessageEvent e) {</div>
-<div class="line"> <span class="keywordflow">try</span> {</div>
-<div class="line">     Member m = Member(qqid, e.group.id(), e.bot.id());</div>
-<div class="line">     m.Kick(<span class="stringliteral">&quot;this_is_reason&quot;</span>);</div>
-<div class="line"> }<span class="keywordflow">catch</span> (BotException err) {</div>
-<div class="line">    <span class="comment">//权限不足</span></div>
-<div class="line">    <a id="a0" name="a0"></a><a class="code hl_variable" href="a00117.html#a526fbb267bd3e2b072b85c1f502e14cf">Logger::logger</a>.<a id="a1" name="a1"></a><a class="code hl_function" href="a00317.html#a418fad5b082009c5e40871d3cd88cacf">error</a>(err.what());</div>
-<div class="line"> }<span class="keywordflow">catch</span> (MemberException err) {</div>
-<div class="line">    <span class="keywordflow">if</span> (err.type == 1) {</div>
-<div class="line">        <span class="comment">//找不到群</span></div>
-<div class="line">    }</div>
-<div class="line">    <span class="keywordflow">if</span> (err.type == 2) {</div>
-<div class="line">        <span class="comment">//找不到群成员</span></div>
-<div class="line">    }</div>
-<div class="line"> }</div>
-<div class="line">});</div>
-<div class="ttc" id="aa00117_html_a526fbb267bd3e2b072b85c1f502e14cf"><div class="ttname"><a href="a00117.html#a526fbb267bd3e2b072b85c1f502e14cf">MiraiCP::logger</a></div><div class="ttdeci">Logger *const logger</div><div class="ttdef"><b>Definition:</b> <a href="a00053_source.html#l00024">Logger.cpp:24</a></div></div>
-<div class="ttc" id="aa00317_html_a418fad5b082009c5e40871d3cd88cacf"><div class="ttname"><a href="a00317.html#a418fad5b082009c5e40871d3cd88cacf">MiraiCP::Logger_interface::error</a></div><div class="ttdeci">void error(T... val)</div><div class="ttdoc">发送警告(warning级日志)</div><div class="ttdef"><b>Definition:</b> <a href="a00056_source.html#l00107">Logger.h:107</a></div></div>
-</div><!-- fragment --></div><!-- contents -->
+<p >设置handler的启用状态 </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">state</td><td>状态，启用或者关闭 (check in version 2.9.0) <div class="fragment"><div class="line"><a id="a0" name="a0"></a><a class="code hl_variable" href="a00123.html#a526fbb267bd3e2b072b85c1f502e14cf">Logger::logger</a>.<a id="a1" name="a1"></a><a class="code hl_function" href="a00321.html#a3ed1680508618b446c94ed004c211ea9">setHandleState</a>(ture); </div>
+<div class="ttc" id="aa00123_html_a526fbb267bd3e2b072b85c1f502e14cf"><div class="ttname"><a href="a00123.html#a526fbb267bd3e2b072b85c1f502e14cf">MiraiCP::logger</a></div><div class="ttdeci">Logger *const logger</div><div class="ttdef"><b>Definition:</b> <a href="a00056_source.html#l00029">Logger.cpp:29</a></div></div>
+<div class="ttc" id="aa00321_html_a3ed1680508618b446c94ed004c211ea9"><div class="ttname"><a href="a00321.html#a3ed1680508618b446c94ed004c211ea9">MiraiCP::Logger_interface::setHandleState</a></div><div class="ttdeci">void setHandleState(bool state)</div><div class="ttdef"><b>Definition:</b> <a href="a00059_source.html#l00136">Logger.h:136</a></div></div>
+</div><!-- fragment --></td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"></div><!-- fragment --><p>的启用状态 </p>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">生成于 2021年 十二月 5日 星期日 20:04:15 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="footer">生成于 2021年 十二月 22日 星期三 21:13:19 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
 <script type="text/javascript">

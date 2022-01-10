@@ -1,8 +1,7 @@
 var a00309 =
 [
-    [ "isAllowMemberInvite", "a00309.html#adccf862ef0e617a47afb0df587edf59f", null ],
-    [ "isAnonymousChatEnabled", "a00309.html#ab0bf5bfb9c998204ca668855c09a9b8a", null ],
-    [ "isAutoApproveEnabled", "a00309.html#a625ca6d44d9d06a2af48cab1962e73fa", null ],
-    [ "isMuteAll", "a00309.html#a6bfb635769917d4f2c84c4e9cfc813d0", null ],
-    [ "name", "a00309.html#ae29352ebb0325fd3b035b1c65be1092f", null ]
+    [ "OfflineAnnouncement", "a00309.html#a01236de68a15c8de48ffeecc47f7d422", null ],
+    [ "publishTo", "a00309.html#ac5e2613306079cce18866fa1f2809357", null ],
+    [ "content", "a00309.html#ad41adfb9b859845999f24978087af62b", null ],
+    [ "params", "a00309.html#ab1ff075cae77526d00c8f96b135c2873", null ]
 ];

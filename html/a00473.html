@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiraiCP: 设置handler的启用状态</title>
+<title>MiraiCP: 发送日志</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MiraiCP
-   &#160;<span id="projectnumber">v2.9.0-M1</span>
+   &#160;<span id="projectnumber">v2.9.0</span>
    </div>
    <div id="projectbrief">MiraiCP api document</div>
   </td>
@@ -90,26 +90,23 @@ $(document).ready(function(){initNavTree('a00473.html',''); initResizable(); });
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">设置handler的启用状态</div></div>
+  <div class="headertitle"><div class="title">发送日志</div></div>
 </div><!--header-->
 <div class="contents">
-<p >设置handler的启用状态 </p><dl class="params"><dt>参数</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">state</td><td>状态，启用或者关闭</td></tr>
-  </table>
-  </dd>
-</dl>
-<div class="fragment"><div class="line"><a id="a0" name="a0"></a><a class="code hl_variable" href="a00117.html#a526fbb267bd3e2b072b85c1f502e14cf">Logger::logger</a>.<a id="a1" name="a1"></a><a class="code hl_function" href="a00317.html#a3ed1680508618b446c94ed004c211ea9">setHandleState</a>(ture); </div>
-<div class="ttc" id="aa00117_html_a526fbb267bd3e2b072b85c1f502e14cf"><div class="ttname"><a href="a00117.html#a526fbb267bd3e2b072b85c1f502e14cf">MiraiCP::logger</a></div><div class="ttdeci">Logger *const logger</div><div class="ttdef"><b>Definition:</b> <a href="a00053_source.html#l00024">Logger.cpp:24</a></div></div>
-<div class="ttc" id="aa00317_html_a3ed1680508618b446c94ed004c211ea9"><div class="ttname"><a href="a00317.html#a3ed1680508618b446c94ed004c211ea9">MiraiCP::Logger_interface::setHandleState</a></div><div class="ttdeci">void setHandleState(bool state)</div><div class="ttdef"><b>Definition:</b> <a href="a00053_source.html#l00040">Logger.cpp:40</a></div></div>
-</div><!-- fragment --><div class="fragment"></div><!-- fragment --><p>的启用状态 </p>
-</div><!-- contents -->
+<p >发送消息级日志 </p><div class="fragment"><div class="line"><a id="a0" name="a0"></a><a class="code hl_variable" href="a00123.html#a526fbb267bd3e2b072b85c1f502e14cf">Logger::logger</a>.<a id="a1" name="a1"></a><a class="code hl_function" href="a00321.html#af487216ad90334b62a970ad6e5a796a4">info</a>(<span class="keywordtype">string</span>) </div>
+<div class="ttc" id="aa00123_html_a526fbb267bd3e2b072b85c1f502e14cf"><div class="ttname"><a href="a00123.html#a526fbb267bd3e2b072b85c1f502e14cf">MiraiCP::logger</a></div><div class="ttdeci">Logger *const logger</div><div class="ttdef"><b>Definition:</b> <a href="a00056_source.html#l00029">Logger.cpp:29</a></div></div>
+<div class="ttc" id="aa00321_html_af487216ad90334b62a970ad6e5a796a4"><div class="ttname"><a href="a00321.html#af487216ad90334b62a970ad6e5a796a4">MiraiCP::Logger_interface::info</a></div><div class="ttdeci">void info(T... val)</div><div class="ttdoc">发送普通(info级日志)</div><div class="ttdef"><b>Definition:</b> <a href="a00059_source.html#l00109">Logger.h:109</a></div></div>
+</div><!-- fragment --><p> 发送警告级日志 </p><div class="fragment"><div class="line"><a class="code hl_variable" href="a00123.html#a526fbb267bd3e2b072b85c1f502e14cf">Logger::logger</a>.<a id="a2" name="a2"></a><a class="code hl_function" href="a00321.html#a19b06047f8959a3bfb100c0006767c83">warning</a>(<span class="keywordtype">string</span>) </div>
+<div class="ttc" id="aa00321_html_a19b06047f8959a3bfb100c0006767c83"><div class="ttname"><a href="a00321.html#a19b06047f8959a3bfb100c0006767c83">MiraiCP::Logger_interface::warning</a></div><div class="ttdeci">void warning(T... val)</div><div class="ttdoc">发送警告(warning级日志)</div><div class="ttdef"><b>Definition:</b> <a href="a00059_source.html#l00115">Logger.h:115</a></div></div>
+</div><!-- fragment --><p> 发送错误级日志 </p><div class="fragment"><div class="line"><a class="code hl_variable" href="a00123.html#a526fbb267bd3e2b072b85c1f502e14cf">Logger::logger</a>.<a id="a3" name="a3"></a><a class="code hl_function" href="a00321.html#a418fad5b082009c5e40871d3cd88cacf">error</a>(<span class="keywordtype">string</span>) </div>
+<div class="ttc" id="aa00321_html_a418fad5b082009c5e40871d3cd88cacf"><div class="ttname"><a href="a00321.html#a418fad5b082009c5e40871d3cd88cacf">MiraiCP::Logger_interface::error</a></div><div class="ttdeci">void error(T... val)</div><div class="ttdoc">发送警告(warning级日志)</div><div class="ttdef"><b>Definition:</b> <a href="a00059_source.html#l00121">Logger.h:121</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">生成于 2021年 十二月 5日 星期日 20:04:15 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="footer">生成于 2021年 十二月 22日 星期三 21:13:19 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
 <script type="text/javascript">

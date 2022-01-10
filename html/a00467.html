@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiraiCP: 取string格式群文件列表</title>
+<title>MiraiCP: MiraiCP::ThreadManager类 参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MiraiCP
-   &#160;<span id="projectnumber">v2.9.0-M1</span>
+   &#160;<span id="projectnumber">v2.9.1</span>
    </div>
    <div id="projectbrief">MiraiCP api document</div>
   </td>
@@ -90,18 +90,965 @@ $(document).ready(function(){initNavTree('a00467.html',''); initResizable(); });
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">取string格式群文件列表</div></div>
+  <div class="summary">
+<a href="#nested-classes">类</a> &#124;
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="#pub-static-attribs">静态 Public 属性</a> &#124;
+<a href="#pri-methods">Private 成员函数</a> &#124;
+<a href="#pri-static-methods">静态 Private 成员函数</a> &#124;
+<a href="a00464.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">MiraiCP::ThreadManager类 参考</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line">e.group.SendMsg(e.group.getFileListString(<span class="stringliteral">&quot;/&quot;</span>));</div>
-</div><!-- fragment --><div class="fragment"></div><!-- fragment --><p>格式群文件列表 </p>
+
+<p><code>#include &lt;<a class="el" href="a00113_source.html">ThreadManager.h</a>&gt;</code></p>
+<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> MiraiCP::ThreadManager 的协作图:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="a00465.png" border="0" usemap="#a_mirai_c_p_1_1_thread_manager_coll__map" alt="Collaboration graph"/></div>
+<map name="a_mirai_c_p_1_1_thread_manager_coll__map" id="a_mirai_c_p_1_1_thread_manager_coll__map">
+<area shape="rect" title=" " alt="" coords="125,145,298,413"/>
+<area shape="rect" title=" " alt="" coords="5,5,60,83"/>
+<area shape="rect" title=" " alt="" coords="84,5,200,83"/>
+<area shape="rect" title=" " alt="" coords="225,5,337,83"/>
+<area shape="rect" title=" " alt="" coords="361,5,408,83"/>
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00471.html">ThreadInfo</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">每个线程实例.  <a href="a00471.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:a00a561eb63a7489b54010df23b58036d"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="a00471.html">ThreadInfo</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00467.html#a00a561eb63a7489b54010df23b58036d">getThread</a> ()</td></tr>
+<tr class="memdesc:a00a561eb63a7489b54010df23b58036d"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取线程  <a href="a00467.html#a00a561eb63a7489b54010df23b58036d">更多...</a><br /></td></tr>
+<tr class="separator:a00a561eb63a7489b54010df23b58036d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11837c8fea64ee75bea0bcd1ea56de9c"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00467.html#a11837c8fea64ee75bea0bcd1ea56de9c">getThreadId</a> ()</td></tr>
+<tr class="memdesc:a11837c8fea64ee75bea0bcd1ea56de9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取线程id.  <a href="a00467.html#a11837c8fea64ee75bea0bcd1ea56de9c">更多...</a><br /></td></tr>
+<tr class="separator:a11837c8fea64ee75bea0bcd1ea56de9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afacfbdbffc416bb53676f040720a42e0"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00467.html#afacfbdbffc416bb53676f040720a42e0">setEnv</a> (JNIEnv *e)</td></tr>
+<tr class="memdesc:afacfbdbffc416bb53676f040720a42e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置env给当前线程.  <a href="a00467.html#afacfbdbffc416bb53676f040720a42e0">更多...</a><br /></td></tr>
+<tr class="separator:afacfbdbffc416bb53676f040720a42e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72b77deebd7be1c800b73ebd4b2daa09"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00467.html#a72b77deebd7be1c800b73ebd4b2daa09">detach</a> ()</td></tr>
+<tr class="memdesc:a72b77deebd7be1c800b73ebd4b2daa09"><td class="mdescLeft">&#160;</td><td class="mdescRight">结束当前线程的env，也就是释放当前线程缓存的env.  <a href="a00467.html#a72b77deebd7be1c800b73ebd4b2daa09">更多...</a><br /></td></tr>
+<tr class="separator:a72b77deebd7be1c800b73ebd4b2daa09"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a365e1740117b0fb9d5990855a26dba4f"><td class="memItemLeft" align="right" valign="top">static JNIEnv *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00467.html#a365e1740117b0fb9d5990855a26dba4f">getEnv</a> ()</td></tr>
+<tr class="memdesc:a365e1740117b0fb9d5990855a26dba4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">取env,如果不存在重新获取  <a href="a00467.html#a365e1740117b0fb9d5990855a26dba4f">更多...</a><br /></td></tr>
+<tr class="separator:a365e1740117b0fb9d5990855a26dba4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
+静态 Public 属性</h2></td></tr>
+<tr class="memitem:a6aaf08f6744b01ac5ab06430313dd3a0"><td class="memItemLeft" align="right" valign="top">static std::map&lt; std::string, <a class="el" href="a00471.html">ThreadInfo</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00467.html#a6aaf08f6744b01ac5ab06430313dd3a0">threads</a> = std::map&lt;std::string, <a class="el" href="a00471.html">ThreadInfo</a>&gt;()</td></tr>
+<tr class="separator:a6aaf08f6744b01ac5ab06430313dd3a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af61aae7d053395c836bae677af861364"><td class="memItemLeft" align="right" valign="top">static std::recursive_mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00467.html#af61aae7d053395c836bae677af861364">mtx</a> = std::recursive_mutex()</td></tr>
+<tr class="memdesc:af61aae7d053395c836bae677af861364"><td class="mdescLeft">&#160;</td><td class="mdescRight">&lt; 线程池(线程id:env).  <a href="a00467.html#af61aae7d053395c836bae677af861364">更多...</a><br /></td></tr>
+<tr class="separator:af61aae7d053395c836bae677af861364"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5796576b9962187070ad21fbfdf17ff"><td class="memItemLeft" align="right" valign="top">static JavaVM *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00467.html#ac5796576b9962187070ad21fbfdf17ff">gvm</a> = nullptr</td></tr>
+<tr class="memdesc:ac5796576b9962187070ad21fbfdf17ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">全局JavaVM对象，用于多线程管理中新建线程的JNIEnv.  <a href="a00467.html#ac5796576b9962187070ad21fbfdf17ff">更多...</a><br /></td></tr>
+<tr class="separator:ac5796576b9962187070ad21fbfdf17ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a630b0c6d61decb2ea60eb719bbc1120e"><td class="memItemLeft" align="right" valign="top">static long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00467.html#a630b0c6d61decb2ea60eb719bbc1120e">JNIVersion</a> = 0</td></tr>
+<tr class="memdesc:a630b0c6d61decb2ea60eb719bbc1120e"><td class="mdescLeft">&#160;</td><td class="mdescRight">JNI 版本.  <a href="a00467.html#a630b0c6d61decb2ea60eb719bbc1120e">更多...</a><br /></td></tr>
+<tr class="separator:a630b0c6d61decb2ea60eb719bbc1120e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:a839cd3642c36630c7f71c09728498bb5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00467.html#a839cd3642c36630c7f71c09728498bb5">ThreadManager</a> ()=default</td></tr>
+<tr class="separator:a839cd3642c36630c7f71c09728498bb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-methods" name="pri-static-methods"></a>
+静态 Private 成员函数</h2></td></tr>
+<tr class="memitem:a29f1a55d4cb7b78045fd3f2566c59dcc"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00467.html#a29f1a55d4cb7b78045fd3f2566c59dcc">newEnv</a> (const char *threadName=nullptr)</td></tr>
+<tr class="separator:a29f1a55d4cb7b78045fd3f2566c59dcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd1025cb50143b1aa60b55d79ec2b370"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00467.html#abd1025cb50143b1aa60b55d79ec2b370">included</a> (const std::string &amp;id)</td></tr>
+<tr class="memdesc:abd1025cb50143b1aa60b55d79ec2b370"><td class="mdescLeft">&#160;</td><td class="mdescRight">判断该线程id是否包含在线程池里  <a href="a00467.html#abd1025cb50143b1aa60b55d79ec2b370">更多...</a><br /></td></tr>
+<tr class="separator:abd1025cb50143b1aa60b55d79ec2b370"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock">
+<p class="definition">在文件 <a class="el" href="a00113_source.html">ThreadManager.h</a> 第 <a class="el" href="a00113_source.html#l00039">39</a> 行定义.</p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a839cd3642c36630c7f71c09728498bb5" name="a839cd3642c36630c7f71c09728498bb5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a839cd3642c36630c7f71c09728498bb5">&#9670;&nbsp;</a></span>ThreadManager()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">MiraiCP::ThreadManager::ThreadManager </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a72b77deebd7be1c800b73ebd4b2daa09" name="a72b77deebd7be1c800b73ebd4b2daa09"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72b77deebd7be1c800b73ebd4b2daa09">&#9670;&nbsp;</a></span>detach()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MiraiCP::ThreadManager::detach </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>结束当前线程的env，也就是释放当前线程缓存的env. </p>
+<dl class="section note"><dt>注解</dt><dd>不过继续调用getEnv()将再次获取，所以本方法调用后线程也可以通过getEnv重新获取一个env，本方法的作用就是在结束后释放空间 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="a00110_source.html">ThreadManager.cpp</a> 第 <a class="el" href="a00110_source.html#l00052">52</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>                               {</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        <a class="code hl_variable" href="a00467.html#af61aae7d053395c836bae677af861364">mtx</a>.lock();</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="a00467.html#abd1025cb50143b1aa60b55d79ec2b370">ThreadManager::included</a>(<a class="code hl_function" href="a00467.html#a11837c8fea64ee75bea0bcd1ea56de9c">ThreadManager::getThreadId</a>())) {</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>            <span class="keywordtype">bool</span> att = <a class="code hl_variable" href="a00467.html#a6aaf08f6744b01ac5ab06430313dd3a0">ThreadManager::threads</a>[<a class="code hl_function" href="a00467.html#a11837c8fea64ee75bea0bcd1ea56de9c">ThreadManager::getThreadId</a>()].attach;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>            <a class="code hl_variable" href="a00467.html#a6aaf08f6744b01ac5ab06430313dd3a0">ThreadManager::threads</a>.erase(<a class="code hl_function" href="a00467.html#a11837c8fea64ee75bea0bcd1ea56de9c">ThreadManager::getThreadId</a>());</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>            <span class="keywordflow">if</span> (att)</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>                <a class="code hl_variable" href="a00467.html#ac5796576b9962187070ad21fbfdf17ff">gvm</a>-&gt;DetachCurrentThread();</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        }</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        <a class="code hl_variable" href="a00467.html#af61aae7d053395c836bae677af861364">mtx</a>.unlock();</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    }</div>
+<div class="ttc" id="aa00467_html_a11837c8fea64ee75bea0bcd1ea56de9c"><div class="ttname"><a href="a00467.html#a11837c8fea64ee75bea0bcd1ea56de9c">MiraiCP::ThreadManager::getThreadId</a></div><div class="ttdeci">static std::string getThreadId()</div><div class="ttdoc">获取线程id.</div><div class="ttdef"><b>Definition:</b> <a href="a00113_source.html#l00075">ThreadManager.h:75</a></div></div>
+<div class="ttc" id="aa00467_html_a6aaf08f6744b01ac5ab06430313dd3a0"><div class="ttname"><a href="a00467.html#a6aaf08f6744b01ac5ab06430313dd3a0">MiraiCP::ThreadManager::threads</a></div><div class="ttdeci">static std::map&lt; std::string, ThreadInfo &gt; threads</div><div class="ttdef"><b>Definition:</b> <a href="a00113_source.html#l00049">ThreadManager.h:49</a></div></div>
+<div class="ttc" id="aa00467_html_abd1025cb50143b1aa60b55d79ec2b370"><div class="ttname"><a href="a00467.html#abd1025cb50143b1aa60b55d79ec2b370">MiraiCP::ThreadManager::included</a></div><div class="ttdeci">static bool included(const std::string &amp;id)</div><div class="ttdoc">判断该线程id是否包含在线程池里</div><div class="ttdef"><b>Definition:</b> <a href="a00110_source.html#l00063">ThreadManager.cpp:63</a></div></div>
+<div class="ttc" id="aa00467_html_ac5796576b9962187070ad21fbfdf17ff"><div class="ttname"><a href="a00467.html#ac5796576b9962187070ad21fbfdf17ff">MiraiCP::ThreadManager::gvm</a></div><div class="ttdeci">static JavaVM * gvm</div><div class="ttdoc">全局JavaVM对象，用于多线程管理中新建线程的JNIEnv.</div><div class="ttdef"><b>Definition:</b> <a href="a00113_source.html#l00053">ThreadManager.h:53</a></div></div>
+<div class="ttc" id="aa00467_html_af61aae7d053395c836bae677af861364"><div class="ttname"><a href="a00467.html#af61aae7d053395c836bae677af861364">MiraiCP::ThreadManager::mtx</a></div><div class="ttdeci">static std::recursive_mutex mtx</div><div class="ttdoc">&lt; 线程池(线程id:env).</div><div class="ttdef"><b>Definition:</b> <a href="a00113_source.html#l00050">ThreadManager.h:50</a></div></div>
+</div><!-- fragment --><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> 函数调用图:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="a00467_a72b77deebd7be1c800b73ebd4b2daa09_cgraph.png" border="0" usemap="#aa00467_a72b77deebd7be1c800b73ebd4b2daa09_cgraph" alt=""/></div>
+<map name="aa00467_a72b77deebd7be1c800b73ebd4b2daa09_cgraph" id="aa00467_a72b77deebd7be1c800b73ebd4b2daa09_cgraph">
+<area shape="rect" title="结束当前线程的env，也就是释放当前线程缓存的env." alt="" coords="5,39,171,80"/>
+<area shape="rect" href="a00467.html#a11837c8fea64ee75bea0bcd1ea56de9c" title="获取线程id." alt="" coords="219,5,384,47"/>
+<area shape="rect" href="a00467.html#abd1025cb50143b1aa60b55d79ec2b370" title="判断该线程id是否包含在线程池里" alt="" coords="219,71,384,112"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a365e1740117b0fb9d5990855a26dba4f" name="a365e1740117b0fb9d5990855a26dba4f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a365e1740117b0fb9d5990855a26dba4f">&#9670;&nbsp;</a></span>getEnv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">JNIEnv * MiraiCP::ThreadManager::getEnv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>取env,如果不存在重新获取 </p>
+
+<p class="definition">在文件 <a class="el" href="a00110_source.html">ThreadManager.cpp</a> 第 <a class="el" href="a00110_source.html#l00069">69</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>                                  {</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        <a class="code hl_variable" href="a00467.html#af61aae7d053395c836bae677af861364">mtx</a>.lock();</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        <span class="keywordflow">if</span> (!<a class="code hl_function" href="a00467.html#abd1025cb50143b1aa60b55d79ec2b370">ThreadManager::included</a>(<a class="code hl_function" href="a00467.html#a11837c8fea64ee75bea0bcd1ea56de9c">getThreadId</a>())) {</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>            <a class="code hl_function" href="a00467.html#a29f1a55d4cb7b78045fd3f2566c59dcc">ThreadManager::newEnv</a>();</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        }</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        JNIEnv *tmp = <a class="code hl_variable" href="a00467.html#a6aaf08f6744b01ac5ab06430313dd3a0">ThreadManager::threads</a>[<a class="code hl_function" href="a00467.html#a11837c8fea64ee75bea0bcd1ea56de9c">ThreadManager::getThreadId</a>()].e;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        <a class="code hl_variable" href="a00467.html#af61aae7d053395c836bae677af861364">mtx</a>.unlock();</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        <span class="keywordflow">return</span> tmp;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    }</div>
+<div class="ttc" id="aa00467_html_a29f1a55d4cb7b78045fd3f2566c59dcc"><div class="ttname"><a href="a00467.html#a29f1a55d4cb7b78045fd3f2566c59dcc">MiraiCP::ThreadManager::newEnv</a></div><div class="ttdeci">static void newEnv(const char *threadName=nullptr)</div><div class="ttdef"><b>Definition:</b> <a href="a00110_source.html#l00041">ThreadManager.cpp:41</a></div></div>
+</div><!-- fragment --><div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-2-trigger" src="closed.png" alt="+"/> 函数调用图:</div>
+<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-2-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="a00467_a365e1740117b0fb9d5990855a26dba4f_cgraph.png" border="0" usemap="#aa00467_a365e1740117b0fb9d5990855a26dba4f_cgraph" alt=""/></div>
+<map name="aa00467_a365e1740117b0fb9d5990855a26dba4f_cgraph" id="aa00467_a365e1740117b0fb9d5990855a26dba4f_cgraph">
+<area shape="rect" title="取env,如果不存在重新获取" alt="" coords="5,35,171,76"/>
+<area shape="rect" href="a00467.html#a11837c8fea64ee75bea0bcd1ea56de9c" title="获取线程id." alt="" coords="435,5,600,47"/>
+<area shape="rect" href="a00467.html#abd1025cb50143b1aa60b55d79ec2b370" title="判断该线程id是否包含在线程池里" alt="" coords="219,35,384,76"/>
+<area shape="rect" href="a00467.html#a29f1a55d4cb7b78045fd3f2566c59dcc" title=" " alt="" coords="219,100,384,141"/>
+<area shape="rect" href="a00347.html#af487216ad90334b62a970ad6e5a796a4" title="发送普通(info级日志)" alt="" coords="432,100,603,141"/>
+<area shape="rect" href="a00347.html#a06202e1ad07f0ed0f131bbba9b16132a" title="日志底层实现封装" alt="" coords="659,71,829,112"/>
+<area shape="rect" href="a00347.html#adb33c9a049ed4d32293641c2381fc734" title=" " alt="" coords="651,137,837,163"/>
+</map>
+</div>
+<div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-3-trigger" src="closed.png" alt="+"/> 这是这个函数的调用关系图:</div>
+<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-3-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="a00467_a365e1740117b0fb9d5990855a26dba4f_icgraph.png" border="0" usemap="#aa00467_a365e1740117b0fb9d5990855a26dba4f_icgraph" alt=""/></div>
+<map name="aa00467_a365e1740117b0fb9d5990855a26dba4f_icgraph" id="aa00467_a365e1740117b0fb9d5990855a26dba4f_icgraph">
+<area shape="rect" title="取env,如果不存在重新获取" alt="" coords="1520,1117,1685,1158"/>
+<area shape="rect" href="a00130.html#ae88b8f9603a554ad5640df5940b9d618" title=" " alt="" coords="1297,1023,1472,1049"/>
+<area shape="rect" href="a00130.html#a5a228e9533807266028e3d4ff05d122b" title=" " alt="" coords="1301,1276,1468,1303"/>
+<area shape="rect" href="a00347.html#a6fa065a408e2fe35617e8209a46c9758" title=" " alt="" coords="1299,957,1470,998"/>
+<area shape="rect" href="a00131.html#aca81fb0894771f60fbf64c3b776044e5" title=" " alt="" coords="1299,1073,1471,1100"/>
+<area shape="rect" href="a00130.html#a6cc3a4fb89a9701380288f1c16f738b4" title="调用mirai操作" alt="" coords="1069,1175,1249,1201"/>
+<area shape="rect" href="a00347.html#a5eeedd52cbf8f0881f3b61a117beab6c" title=" " alt="" coords="1074,2418,1245,2459"/>
+<area shape="rect" href="a00131.html#ad6af583021178966fa57f1290f69c0ff" title=" " alt="" coords="1299,1124,1471,1151"/>
+<area shape="rect" href="a00122.html#aaeb9df4ad68a9360d8495346da84ca53" title=" " alt="" coords="1132,972,1187,999"/>
+<area shape="rect" href="a00122.html#a8384b304b12cbb9e9746aebb14f84e5a" title=" " alt="" coords="868,5,923,32"/>
+<area shape="rect" href="a00319.html#a6e7e1a8a401f0ff1c636f11b988703d5" title="删除好友(delete是C++关键字" alt="" coords="800,759,991,785"/>
+<area shape="rect" href="a00331.html#a04aaabd735ed542b313a8df2a3fd9ecb" title=" " alt="" coords="774,810,1017,851"/>
+<area shape="rect" href="a00323.html#aff935e8f08436bf3a2f893a9a82cc29a" title="取群公告列表" alt="" coords="769,876,1021,903"/>
+<area shape="rect" href="a00323.html#a1190371ba6c79e3aa36f39b64d3bbc4c" title=" " alt="" coords="545,877,703,904"/>
+<area shape="rect" href="a00323.html#a0e948a653b9ab1b93451ce096eda47be" title="取文件信息(根据id)" alt="" coords="803,977,987,1004"/>
+<area shape="rect" href="a00323.html#a3d7761e1a104c080dfdd6d6a4c5668c3" title=" " alt="" coords="806,1029,985,1070"/>
+<area shape="rect" href="a00135.html#a5ccb851f383b028ab4dc0c7794b1b812" title="取好友列表" alt="" coords="806,1095,985,1121"/>
+<area shape="rect" href="a00135.html#adde56f274d31b5b48a0c753272772ce5" title="取群列表" alt="" coords="806,1145,985,1172"/>
+<area shape="rect" href="a00367.html#ac03aa9c815ce59030b0f2610e48b79b1" title="取该联系人的一些信息" alt="" coords="821,1197,970,1238"/>
+<area shape="rect" href="a00323.html#a2976015b96b67dd8be26b973b6f07989" title="更新群设置, 即覆盖服务器上的群设置" alt="" coords="272,1263,471,1289"/>
+<area shape="rect" href="a00323.html#a637b6bf57905f45522b490459202ee0a" title=" " alt="" coords="793,1364,998,1391"/>
+<area shape="rect" href="a00323.html#a73fe586db73deabb77885f44aae79e29" title="取群主" alt="" coords="808,1415,983,1441"/>
+<area shape="rect" href="a00375.html#ade27b6ea619f27ec4823618a0cacf00a" title=" " alt="" coords="788,1313,1003,1340"/>
+<area shape="rect" href="a00423.html#a6bc40ee958a59a3f70a0146c7e9312e2" title="图片是否已经上传(如果已经上传即表明可以直接用ImageId发送, 如果没有需要手动上传)" alt="" coords="533,1491,715,1517"/>
+<area shape="rect" href="a00375.html#ad83478036b6ad5750b7b4de2c182353b" title=" " alt="" coords="818,1567,973,1593"/>
+<area shape="rect" href="a00375.html#ad9b954fd548c29c1fcf7b6895605cfaf" title="更改群成员权限" alt="" coords="792,1617,999,1644"/>
+<area shape="rect" href="a00375.html#a068163bcb889d26bc8f8ac767472156d" title=" " alt="" coords="815,1668,975,1695"/>
+<area shape="rect" href="a00167.html#a5d4aa0224ce1d277ade801f1bae52e27" title="取群聊下一个消息(群聊与本事件一样)" alt="" coords="797,1719,993,1761"/>
+<area shape="rect" href="a00171.html#aec7fed74f95ec3322ecc64328a36473e" title="取下一个消息(发送人和接收人和本事件一样)" alt="" coords="795,1785,995,1826"/>
+<area shape="rect" href="a00219.html#a0ac3404118b4a7051c285d00dfe625d2" title=" " alt="" coords="798,1850,993,1891"/>
+<area shape="rect" href="a00175.html#a7e773d9868319834f338b3ebc963d1d5" title=" " alt="" coords="809,1915,981,1957"/>
+<area shape="rect" href="a00179.html#a3fb58755202dc30c9a460d10545c6a0a" title="接受好友申请" alt="" coords="803,1981,988,2022"/>
+<area shape="rect" href="a00335.html#ac5e2613306079cce18866fa1f2809357" title="发布群公告" alt="" coords="774,2046,1017,2087"/>
+<area shape="rect" href="a00323.html#a6004bf96d3dec2c7e555b1bc7877909e" title=" " alt="" coords="825,2112,965,2139"/>
+<area shape="rect" href="a00151.html#aab05081d2d0fee7d5a1a38b499887c76" title=" " alt="" coords="803,2163,987,2205"/>
+<area shape="rect" href="a00379.html#ae326adfd25fd95d040b676a25f2fe0fb" title=" " alt="" coords="814,2229,977,2270"/>
+<area shape="rect" href="a00387.html#af0c1e2aa6db7d553248d9400b4bbb326" title="回复(引用并发送)" alt="" coords="809,2294,982,2335"/>
+<area shape="rect" href="a00387.html#ab90b886a80a8b7f565489e6dea0bf10c" title="回复(引用并发送)" alt="" coords="810,2359,981,2401"/>
+<area shape="rect" href="a00387.html#afe1ce48e1c2ee0095202843e5df82f9e" title="撤回该信息" alt="" coords="810,57,981,98"/>
+<area shape="rect" href="a00135.html#a9a212b3abcfcd50a91e79ff2cf87a6fa" title="刷新bot信息" alt="" coords="814,123,977,149"/>
+<area shape="rect" href="a00423.html#a3c8b1b2f1741c02d38fd41b45461ec18" title="刷新信息(获取图片下载Url,md5, size)" alt="" coords="806,1465,985,1492"/>
+<area shape="rect" href="a00147.html#accb883db18602dc65b5fdd264dd73bfd" title="注册一条指令" alt="" coords="803,174,988,215"/>
+<area shape="rect" href="a00129.html#a8e65cfc6209a54aa4e300c375f71359e" title=" " alt="" coords="831,240,959,267"/>
+<area shape="rect" href="a00367.html#a795f4093d390bd0205ae95aa0075d442" title="抽象封装底层发送信息接口" alt="" coords="821,291,970,333"/>
+<area shape="rect" href="a00167.html#a458c623f584904f306bacdae5702e22b" title="取群聊中同群成员的下一个消息(发送人和群与本事件一样)" alt="" coords="797,357,993,398"/>
+<area shape="rect" href="a00323.html#a84d77fcc64ddd52ba32e020e1226a71a" title="上传并发送远程(群)文件" alt="" coords="811,423,979,449"/>
+<area shape="rect" href="a00319.html#a62e45d8547cfb66bea29c9a577dc6dae" title="发送戳一戳" alt="" coords="803,473,988,500"/>
+<area shape="rect" href="a00375.html#ad1ee31adb9f9c6b776c537502331b7a1" title="发送戳一戳" alt="" coords="797,524,993,551"/>
+<area shape="rect" href="a00311.html#a2ba47bfa3aef481a5e62527e6e1ff5e3" title="发送给群或好友或群成员" alt="" coords="801,575,990,617"/>
+<area shape="rect" href="a00151.html#ae2cbfaaee8ec2b2723978efdc0825f0c" title="发送语音" alt="" coords="797,641,994,668"/>
+<area shape="rect" href="a00367.html#a3effa0c77f4c1687cf8656cdf0b60e42" title="上传图片" alt="" coords="821,693,970,734"/>
+<area shape="rect" href="a00323.html#adbf28d5576a745528341a8a52fd99a14" title=" " alt="" coords="527,928,721,955"/>
+<area shape="rect" href="a00323.html#af26a13bd9238095403d55b2a40ddcc78" title=" " alt="" coords="535,979,713,1005"/>
+<area shape="rect" href="a00135.html#aa4c59d6acabbfed3e0450cb3e2257c6b" title="好友列表string形式返回，利于保存" alt="" coords="543,1030,705,1071"/>
+<area shape="rect" href="a00135.html#a281b2ac226680cde671a28dd1e5d5e87" title="群列表string形式返回，利于保存" alt="" coords="537,1095,711,1137"/>
+<area shape="rect" href="a00319.html#a20abefd6f5f8b5867360b457ca6f0e03" title="刷新当前对象信息" alt="" coords="535,1161,713,1188"/>
+<area shape="rect" href="a00323.html#a25b142b68d1b058ba696143c1ca79a2b" title="刷新群聊信息" alt="" coords="535,1212,713,1239"/>
+<area shape="rect" href="a00375.html#a0ae62e17c22489ffe5aeadc2b3120850" title="重新获取(刷新)群成员信息" alt="" coords="529,1313,719,1340"/>
+<area shape="rect" href="a00319.html#ab3ac94c426a7f2d61f77c970cedd838e" title="构建好友对象" alt="" coords="293,1161,449,1188"/>
+<area shape="rect" href="a00323.html#ac65c6a26d3bc7de5e75ea4cfb0f8c4db" title="构建以群号构建群对象" alt="" coords="294,1212,449,1239"/>
+<area shape="rect" href="a00375.html#a3cfdf6803d46393e79da5382d8189dd7" title="构建群成员对象" alt="" coords="282,1313,461,1340"/>
+<area shape="rect" href="a00323.html#a7e4a285e03aac96ef4152d852958329d" title=" " alt="" coords="531,1365,717,1406"/>
+<area shape="rect" href="a00375.html#a218b3216bfc009ec7ca8b3535496f7c3" title=" " alt="" coords="537,1668,711,1695"/>
+<area shape="rect" href="a00219.html#ace031723d310c72ed25b83485f66a034" title="通过" alt="" coords="527,1745,721,1786"/>
+<area shape="rect" href="a00219.html#a855d60c9e71eda3fd438e45728a8799d" title="拒绝" alt="" coords="527,1810,721,1851"/>
+<area shape="rect" href="a00175.html#ae2666f5eac9e7bb256bad669a06a6e73" title=" " alt="" coords="538,1875,710,1917"/>
+<area shape="rect" href="a00175.html#a9dae2fd6b842761d82641de62d97d5ff" title=" " alt="" coords="538,1941,710,1982"/>
+<area shape="rect" href="a00179.html#a282335f850a9ab57d5a1d695940034a9" title="接受申请" alt="" coords="531,2006,717,2047"/>
+<area shape="rect" href="a00179.html#a9ad16173148b9c63b24860c06ce6b3c3" title="拒绝好友申请" alt="" coords="531,2071,717,2113"/>
+<area shape="rect" href="a00151.html#af4f06bbff9dbdc9eceb014a89f515eba" title=" " alt="" coords="532,2163,716,2205"/>
+<area shape="rect" href="a00151.html#a7937ea932043872ad932e5d8c94e0a79" title="回复并发送" alt="" coords="279,2163,463,2205"/>
+<area shape="rect" href="a00151.html#a7ac97399336eaaa70089d75f913fba6c" title="回复并发送" alt="" coords="19,2163,203,2205"/>
+<area shape="rect" href="a00379.html#a5307f5951e5a859270de3b0d9819ff64" title=" " alt="" coords="543,2229,705,2270"/>
+<area shape="rect" href="a00379.html#a92a82bf120e1be0c07841d0f3181951b" title="回复并发送" alt="" coords="287,2229,455,2270"/>
+<area shape="rect" href="a00135.html#a717a5ccc1e5be516c5caacf9ce937b61" title=" " alt="" coords="555,123,693,149"/>
+<area shape="rect" href="a00135.html#a6b0ebecc9de3fdf10852b341c88561c0" title="头像下载链接" alt="" coords="294,97,449,124"/>
+<area shape="rect" href="a00135.html#a14f2c875a64bf63c487be2f45454f517" title="昵称" alt="" coords="307,148,435,175"/>
+<area shape="rect" href="a00151.html#a41c2bfbf83d42ca538693071dc7c2ec7" title=" " alt="" coords="529,299,719,325"/>
+<area shape="rect" href="a00151.html#ada7726d259050ba1cfb2803c55e5088f" title=" " alt="" coords="289,299,453,325"/>
+<area shape="rect" href="a00151.html#acce2e1538b425fb729bdd013d89ccebe" title="发送MiraiCode信息" alt="" coords="264,349,479,376"/>
+<area shape="rect" href="a00151.html#aea8a7b7829dc335717a362b7ba86a63f" title="发送纯文本信息" alt="" coords="280,248,463,275"/>
+<area shape="rect" href="a00151.html#aaaa4eb0d64b48e01748f007e2b6088bd" title="发送一条Message @detail 支持" alt="" coords="5,299,216,325"/>
+<area shape="rect" href="a00323.html#a7713acaf2d8cf8a003e6337d4e0a10e6" title="发送语音" alt="" coords="534,645,714,672"/>
+<area shape="rect" href="a00375.html#aeeb58a0e84068d0b18bdb634093cf5d7" title="发送语音" alt="" coords="528,595,720,621"/>
+<area shape="rect" href="a00151.html#a2afe293fd81628ce7467afd6036b31c0" title="上传本地图片，务必要用绝对路径 由于mirai要区分图片发送对象，所以使用本函数上传的图片只能发到群" alt="" coords="530,700,718,727"/>
+<area shape="rect" href="a00355.html#a9fdef28aa50fd451675ebb2bc591b8cf" title="日志底层实现封装" alt="" coords="822,2425,969,2452"/>
+<area shape="rect" href="a00359.html#ac00e0c40a6aafe1119dad61d840aa87c" title="日志底层实现封装" alt="" coords="817,2476,974,2503"/>
+<area shape="rect" href="a00363.html#ad8142764645f0f0e6c6e2ecd526ef9da" title="日志底层实现封装" alt="" coords="820,2527,971,2569"/>
+<area shape="rect" href="a00122.html#a0817b020132dc68a0f1a55a9c47e1fea" title=" " alt="" coords="1121,1124,1198,1151"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a00a561eb63a7489b54010df23b58036d" name="a00a561eb63a7489b54010df23b58036d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00a561eb63a7489b54010df23b58036d">&#9670;&nbsp;</a></span>getThread()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="a00471.html">ThreadInfo</a> * MiraiCP::ThreadManager::getThread </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取线程 </p>
+
+<p class="definition">在文件 <a class="el" href="a00113_source.html">ThreadManager.h</a> 第 <a class="el" href="a00113_source.html#l00070">70</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>                                       {</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>            <span class="keywordflow">return</span> &amp;<a class="code hl_variable" href="a00467.html#a6aaf08f6744b01ac5ab06430313dd3a0">threads</a>[<a class="code hl_function" href="a00467.html#a11837c8fea64ee75bea0bcd1ea56de9c">getThreadId</a>()];</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        }</div>
+</div><!-- fragment --><div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-4-trigger" src="closed.png" alt="+"/> 函数调用图:</div>
+<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-4-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="a00467_a00a561eb63a7489b54010df23b58036d_cgraph.png" border="0" usemap="#aa00467_a00a561eb63a7489b54010df23b58036d_cgraph" alt=""/></div>
+<map name="aa00467_a00a561eb63a7489b54010df23b58036d_cgraph" id="aa00467_a00a561eb63a7489b54010df23b58036d_cgraph">
+<area shape="rect" title="获取线程" alt="" coords="5,5,171,47"/>
+<area shape="rect" href="a00467.html#a11837c8fea64ee75bea0bcd1ea56de9c" title="获取线程id." alt="" coords="219,5,384,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a11837c8fea64ee75bea0bcd1ea56de9c" name="a11837c8fea64ee75bea0bcd1ea56de9c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11837c8fea64ee75bea0bcd1ea56de9c">&#9670;&nbsp;</a></span>getThreadId()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static std::string MiraiCP::ThreadManager::getThreadId </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取线程id. </p>
+
+<p class="definition">在文件 <a class="el" href="a00113_source.html">ThreadManager.h</a> 第 <a class="el" href="a00113_source.html#l00075">75</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>                                       {</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>            <span class="keyword">auto</span> myid = std::this_thread::get_id();</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>            std::stringstream ss;</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>            ss &lt;&lt; myid;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>            <span class="keywordflow">return</span> ss.str();</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        }</div>
+</div><!-- fragment --><div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-5-trigger" src="closed.png" alt="+"/> 这是这个函数的调用关系图:</div>
+<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-5-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="a00467_a11837c8fea64ee75bea0bcd1ea56de9c_icgraph.png" border="0" usemap="#aa00467_a11837c8fea64ee75bea0bcd1ea56de9c_icgraph" alt=""/></div>
+<map name="aa00467_a11837c8fea64ee75bea0bcd1ea56de9c_icgraph" id="aa00467_a11837c8fea64ee75bea0bcd1ea56de9c_icgraph">
+<area shape="rect" title="获取线程id." alt="" coords="1947,1146,2112,1187"/>
+<area shape="rect" href="a00467.html#a72b77deebd7be1c800b73ebd4b2daa09" title="结束当前线程的env，也就是释放当前线程缓存的env." alt="" coords="1733,1022,1899,1063"/>
+<area shape="rect" href="a00467.html#a365e1740117b0fb9d5990855a26dba4f" title="取env,如果不存在重新获取" alt="" coords="1520,1117,1685,1158"/>
+<area shape="rect" href="a00467.html#a00a561eb63a7489b54010df23b58036d" title="获取线程" alt="" coords="1733,1205,1899,1246"/>
+<area shape="rect" href="a00467.html#a29f1a55d4cb7b78045fd3f2566c59dcc" title=" " alt="" coords="1733,1087,1899,1129"/>
+<area shape="rect" href="a00467.html#afacfbdbffc416bb53676f040720a42e0" title="设置env给当前线程." alt="" coords="1733,1270,1899,1311"/>
+<area shape="rect" href="a00130.html#ae88b8f9603a554ad5640df5940b9d618" title=" " alt="" coords="1297,1023,1472,1049"/>
+<area shape="rect" href="a00130.html#a5a228e9533807266028e3d4ff05d122b" title=" " alt="" coords="1301,1276,1468,1303"/>
+<area shape="rect" href="a00347.html#a6fa065a408e2fe35617e8209a46c9758" title=" " alt="" coords="1299,957,1470,998"/>
+<area shape="rect" href="a00131.html#aca81fb0894771f60fbf64c3b776044e5" title=" " alt="" coords="1299,1073,1471,1100"/>
+<area shape="rect" href="a00130.html#a6cc3a4fb89a9701380288f1c16f738b4" title="调用mirai操作" alt="" coords="1069,1175,1249,1201"/>
+<area shape="rect" href="a00347.html#a5eeedd52cbf8f0881f3b61a117beab6c" title=" " alt="" coords="1074,2418,1245,2459"/>
+<area shape="rect" href="a00131.html#ad6af583021178966fa57f1290f69c0ff" title=" " alt="" coords="1299,1124,1471,1151"/>
+<area shape="rect" href="a00122.html#aaeb9df4ad68a9360d8495346da84ca53" title=" " alt="" coords="1132,972,1187,999"/>
+<area shape="rect" href="a00122.html#a8384b304b12cbb9e9746aebb14f84e5a" title=" " alt="" coords="868,5,923,32"/>
+<area shape="rect" href="a00319.html#a6e7e1a8a401f0ff1c636f11b988703d5" title="删除好友(delete是C++关键字" alt="" coords="800,759,991,785"/>
+<area shape="rect" href="a00331.html#a04aaabd735ed542b313a8df2a3fd9ecb" title=" " alt="" coords="774,810,1017,851"/>
+<area shape="rect" href="a00323.html#aff935e8f08436bf3a2f893a9a82cc29a" title="取群公告列表" alt="" coords="769,876,1021,903"/>
+<area shape="rect" href="a00323.html#a1190371ba6c79e3aa36f39b64d3bbc4c" title=" " alt="" coords="545,877,703,904"/>
+<area shape="rect" href="a00323.html#a0e948a653b9ab1b93451ce096eda47be" title="取文件信息(根据id)" alt="" coords="803,977,987,1004"/>
+<area shape="rect" href="a00323.html#a3d7761e1a104c080dfdd6d6a4c5668c3" title=" " alt="" coords="806,1029,985,1070"/>
+<area shape="rect" href="a00135.html#a5ccb851f383b028ab4dc0c7794b1b812" title="取好友列表" alt="" coords="806,1095,985,1121"/>
+<area shape="rect" href="a00135.html#adde56f274d31b5b48a0c753272772ce5" title="取群列表" alt="" coords="806,1145,985,1172"/>
+<area shape="rect" href="a00367.html#ac03aa9c815ce59030b0f2610e48b79b1" title="取该联系人的一些信息" alt="" coords="821,1197,970,1238"/>
+<area shape="rect" href="a00323.html#a2976015b96b67dd8be26b973b6f07989" title="更新群设置, 即覆盖服务器上的群设置" alt="" coords="272,1263,471,1289"/>
+<area shape="rect" href="a00323.html#a637b6bf57905f45522b490459202ee0a" title=" " alt="" coords="793,1364,998,1391"/>
+<area shape="rect" href="a00323.html#a73fe586db73deabb77885f44aae79e29" title="取群主" alt="" coords="808,1415,983,1441"/>
+<area shape="rect" href="a00375.html#ade27b6ea619f27ec4823618a0cacf00a" title=" " alt="" coords="788,1313,1003,1340"/>
+<area shape="rect" href="a00423.html#a6bc40ee958a59a3f70a0146c7e9312e2" title="图片是否已经上传(如果已经上传即表明可以直接用ImageId发送, 如果没有需要手动上传)" alt="" coords="533,1491,715,1517"/>
+<area shape="rect" href="a00375.html#ad83478036b6ad5750b7b4de2c182353b" title=" " alt="" coords="818,1567,973,1593"/>
+<area shape="rect" href="a00375.html#ad9b954fd548c29c1fcf7b6895605cfaf" title="更改群成员权限" alt="" coords="792,1617,999,1644"/>
+<area shape="rect" href="a00375.html#a068163bcb889d26bc8f8ac767472156d" title=" " alt="" coords="815,1668,975,1695"/>
+<area shape="rect" href="a00167.html#a5d4aa0224ce1d277ade801f1bae52e27" title="取群聊下一个消息(群聊与本事件一样)" alt="" coords="797,1719,993,1761"/>
+<area shape="rect" href="a00171.html#aec7fed74f95ec3322ecc64328a36473e" title="取下一个消息(发送人和接收人和本事件一样)" alt="" coords="795,1785,995,1826"/>
+<area shape="rect" href="a00219.html#a0ac3404118b4a7051c285d00dfe625d2" title=" " alt="" coords="798,1850,993,1891"/>
+<area shape="rect" href="a00175.html#a7e773d9868319834f338b3ebc963d1d5" title=" " alt="" coords="809,1915,981,1957"/>
+<area shape="rect" href="a00179.html#a3fb58755202dc30c9a460d10545c6a0a" title="接受好友申请" alt="" coords="803,1981,988,2022"/>
+<area shape="rect" href="a00335.html#ac5e2613306079cce18866fa1f2809357" title="发布群公告" alt="" coords="774,2046,1017,2087"/>
+<area shape="rect" href="a00323.html#a6004bf96d3dec2c7e555b1bc7877909e" title=" " alt="" coords="825,2112,965,2139"/>
+<area shape="rect" href="a00151.html#aab05081d2d0fee7d5a1a38b499887c76" title=" " alt="" coords="803,2163,987,2205"/>
+<area shape="rect" href="a00379.html#ae326adfd25fd95d040b676a25f2fe0fb" title=" " alt="" coords="814,2229,977,2270"/>
+<area shape="rect" href="a00387.html#af0c1e2aa6db7d553248d9400b4bbb326" title="回复(引用并发送)" alt="" coords="809,2294,982,2335"/>
+<area shape="rect" href="a00387.html#ab90b886a80a8b7f565489e6dea0bf10c" title="回复(引用并发送)" alt="" coords="810,2359,981,2401"/>
+<area shape="rect" href="a00387.html#afe1ce48e1c2ee0095202843e5df82f9e" title="撤回该信息" alt="" coords="810,57,981,98"/>
+<area shape="rect" href="a00135.html#a9a212b3abcfcd50a91e79ff2cf87a6fa" title="刷新bot信息" alt="" coords="814,123,977,149"/>
+<area shape="rect" href="a00423.html#a3c8b1b2f1741c02d38fd41b45461ec18" title="刷新信息(获取图片下载Url,md5, size)" alt="" coords="806,1465,985,1492"/>
+<area shape="rect" href="a00147.html#accb883db18602dc65b5fdd264dd73bfd" title="注册一条指令" alt="" coords="803,174,988,215"/>
+<area shape="rect" href="a00129.html#a8e65cfc6209a54aa4e300c375f71359e" title=" " alt="" coords="831,240,959,267"/>
+<area shape="rect" href="a00367.html#a795f4093d390bd0205ae95aa0075d442" title="抽象封装底层发送信息接口" alt="" coords="821,291,970,333"/>
+<area shape="rect" href="a00167.html#a458c623f584904f306bacdae5702e22b" title="取群聊中同群成员的下一个消息(发送人和群与本事件一样)" alt="" coords="797,357,993,398"/>
+<area shape="rect" href="a00323.html#a84d77fcc64ddd52ba32e020e1226a71a" title="上传并发送远程(群)文件" alt="" coords="811,423,979,449"/>
+<area shape="rect" href="a00319.html#a62e45d8547cfb66bea29c9a577dc6dae" title="发送戳一戳" alt="" coords="803,473,988,500"/>
+<area shape="rect" href="a00375.html#ad1ee31adb9f9c6b776c537502331b7a1" title="发送戳一戳" alt="" coords="797,524,993,551"/>
+<area shape="rect" href="a00311.html#a2ba47bfa3aef481a5e62527e6e1ff5e3" title="发送给群或好友或群成员" alt="" coords="801,575,990,617"/>
+<area shape="rect" href="a00151.html#ae2cbfaaee8ec2b2723978efdc0825f0c" title="发送语音" alt="" coords="797,641,994,668"/>
+<area shape="rect" href="a00367.html#a3effa0c77f4c1687cf8656cdf0b60e42" title="上传图片" alt="" coords="821,693,970,734"/>
+<area shape="rect" href="a00323.html#adbf28d5576a745528341a8a52fd99a14" title=" " alt="" coords="527,928,721,955"/>
+<area shape="rect" href="a00323.html#af26a13bd9238095403d55b2a40ddcc78" title=" " alt="" coords="535,979,713,1005"/>
+<area shape="rect" href="a00135.html#aa4c59d6acabbfed3e0450cb3e2257c6b" title="好友列表string形式返回，利于保存" alt="" coords="543,1030,705,1071"/>
+<area shape="rect" href="a00135.html#a281b2ac226680cde671a28dd1e5d5e87" title="群列表string形式返回，利于保存" alt="" coords="537,1095,711,1137"/>
+<area shape="rect" href="a00319.html#a20abefd6f5f8b5867360b457ca6f0e03" title="刷新当前对象信息" alt="" coords="535,1161,713,1188"/>
+<area shape="rect" href="a00323.html#a25b142b68d1b058ba696143c1ca79a2b" title="刷新群聊信息" alt="" coords="535,1212,713,1239"/>
+<area shape="rect" href="a00375.html#a0ae62e17c22489ffe5aeadc2b3120850" title="重新获取(刷新)群成员信息" alt="" coords="529,1313,719,1340"/>
+<area shape="rect" href="a00319.html#ab3ac94c426a7f2d61f77c970cedd838e" title="构建好友对象" alt="" coords="293,1161,449,1188"/>
+<area shape="rect" href="a00323.html#ac65c6a26d3bc7de5e75ea4cfb0f8c4db" title="构建以群号构建群对象" alt="" coords="294,1212,449,1239"/>
+<area shape="rect" href="a00375.html#a3cfdf6803d46393e79da5382d8189dd7" title="构建群成员对象" alt="" coords="282,1313,461,1340"/>
+<area shape="rect" href="a00323.html#a7e4a285e03aac96ef4152d852958329d" title=" " alt="" coords="531,1365,717,1406"/>
+<area shape="rect" href="a00375.html#a218b3216bfc009ec7ca8b3535496f7c3" title=" " alt="" coords="537,1668,711,1695"/>
+<area shape="rect" href="a00219.html#ace031723d310c72ed25b83485f66a034" title="通过" alt="" coords="527,1746,721,1787"/>
+<area shape="rect" href="a00219.html#a855d60c9e71eda3fd438e45728a8799d" title="拒绝" alt="" coords="527,1811,721,1853"/>
+<area shape="rect" href="a00175.html#ae2666f5eac9e7bb256bad669a06a6e73" title=" " alt="" coords="538,1877,710,1918"/>
+<area shape="rect" href="a00175.html#a9dae2fd6b842761d82641de62d97d5ff" title=" " alt="" coords="538,1942,710,1983"/>
+<area shape="rect" href="a00179.html#a282335f850a9ab57d5a1d695940034a9" title="接受申请" alt="" coords="531,2007,717,2049"/>
+<area shape="rect" href="a00179.html#a9ad16173148b9c63b24860c06ce6b3c3" title="拒绝好友申请" alt="" coords="531,2073,717,2114"/>
+<area shape="rect" href="a00151.html#af4f06bbff9dbdc9eceb014a89f515eba" title=" " alt="" coords="532,2163,716,2205"/>
+<area shape="rect" href="a00151.html#a7937ea932043872ad932e5d8c94e0a79" title="回复并发送" alt="" coords="279,2163,463,2205"/>
+<area shape="rect" href="a00151.html#a7ac97399336eaaa70089d75f913fba6c" title="回复并发送" alt="" coords="19,2163,203,2205"/>
+<area shape="rect" href="a00379.html#a5307f5951e5a859270de3b0d9819ff64" title=" " alt="" coords="543,2229,705,2270"/>
+<area shape="rect" href="a00379.html#a92a82bf120e1be0c07841d0f3181951b" title="回复并发送" alt="" coords="287,2229,455,2270"/>
+<area shape="rect" href="a00135.html#a717a5ccc1e5be516c5caacf9ce937b61" title=" " alt="" coords="555,123,693,149"/>
+<area shape="rect" href="a00135.html#a6b0ebecc9de3fdf10852b341c88561c0" title="头像下载链接" alt="" coords="294,97,449,124"/>
+<area shape="rect" href="a00135.html#a14f2c875a64bf63c487be2f45454f517" title="昵称" alt="" coords="307,148,435,175"/>
+<area shape="rect" href="a00151.html#a41c2bfbf83d42ca538693071dc7c2ec7" title=" " alt="" coords="529,299,719,325"/>
+<area shape="rect" href="a00151.html#ada7726d259050ba1cfb2803c55e5088f" title=" " alt="" coords="289,299,453,325"/>
+<area shape="rect" href="a00151.html#acce2e1538b425fb729bdd013d89ccebe" title="发送MiraiCode信息" alt="" coords="264,349,479,376"/>
+<area shape="rect" href="a00151.html#aea8a7b7829dc335717a362b7ba86a63f" title="发送纯文本信息" alt="" coords="280,248,463,275"/>
+<area shape="rect" href="a00151.html#aaaa4eb0d64b48e01748f007e2b6088bd" title="发送一条Message @detail 支持" alt="" coords="5,299,216,325"/>
+<area shape="rect" href="a00323.html#a7713acaf2d8cf8a003e6337d4e0a10e6" title="发送语音" alt="" coords="534,645,714,672"/>
+<area shape="rect" href="a00375.html#aeeb58a0e84068d0b18bdb634093cf5d7" title="发送语音" alt="" coords="528,595,720,621"/>
+<area shape="rect" href="a00151.html#a2afe293fd81628ce7467afd6036b31c0" title="上传本地图片，务必要用绝对路径 由于mirai要区分图片发送对象，所以使用本函数上传的图片只能发到群" alt="" coords="530,700,718,727"/>
+<area shape="rect" href="a00355.html#a9fdef28aa50fd451675ebb2bc591b8cf" title="日志底层实现封装" alt="" coords="822,2425,969,2452"/>
+<area shape="rect" href="a00359.html#ac00e0c40a6aafe1119dad61d840aa87c" title="日志底层实现封装" alt="" coords="817,2476,974,2503"/>
+<area shape="rect" href="a00363.html#ad8142764645f0f0e6c6e2ecd526ef9da" title="日志底层实现封装" alt="" coords="820,2527,971,2569"/>
+<area shape="rect" href="a00122.html#a0817b020132dc68a0f1a55a9c47e1fea" title=" " alt="" coords="1121,1124,1198,1151"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="abd1025cb50143b1aa60b55d79ec2b370" name="abd1025cb50143b1aa60b55d79ec2b370"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd1025cb50143b1aa60b55d79ec2b370">&#9670;&nbsp;</a></span>included()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MiraiCP::ThreadManager::included </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>判断该线程id是否包含在线程池里 </p>
+
+<p class="definition">在文件 <a class="el" href="a00110_source.html">ThreadManager.cpp</a> 第 <a class="el" href="a00110_source.html#l00063">63</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>                                                    {</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="a00467.html#a6aaf08f6744b01ac5ab06430313dd3a0">ThreadManager::threads</a>.empty() || <a class="code hl_variable" href="a00467.html#a6aaf08f6744b01ac5ab06430313dd3a0">ThreadManager::threads</a>.<a class="code hl_enumvalue" href="a00129.html#a9978cdf5158c8fc2ed93dbd7bbf3efb5ae2942a04780e223b215eb8b663cf5353">count</a>(<span class="keywordtype">id</span>) == 0)</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    }</div>
+<div class="ttc" id="aa00129_html_a9978cdf5158c8fc2ed93dbd7bbf3efb5ae2942a04780e223b215eb8b663cf5353"><div class="ttname"><a href="a00129.html#a9978cdf5158c8fc2ed93dbd7bbf3efb5ae2942a04780e223b215eb8b663cf5353">MiraiCP::eventTypes::count</a></div><div class="ttdeci">@ count</div></div>
+</div><!-- fragment --><div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-6-trigger" src="closed.png" alt="+"/> 这是这个函数的调用关系图:</div>
+<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-6-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="a00467_abd1025cb50143b1aa60b55d79ec2b370_icgraph.png" border="0" usemap="#aa00467_abd1025cb50143b1aa60b55d79ec2b370_icgraph" alt=""/></div>
+<map name="aa00467_abd1025cb50143b1aa60b55d79ec2b370_icgraph" id="aa00467_abd1025cb50143b1aa60b55d79ec2b370_icgraph">
+<area shape="rect" title="判断该线程id是否包含在线程池里" alt="" coords="1733,1117,1899,1158"/>
+<area shape="rect" href="a00467.html#a72b77deebd7be1c800b73ebd4b2daa09" title="结束当前线程的env，也就是释放当前线程缓存的env." alt="" coords="1520,1051,1685,1093"/>
+<area shape="rect" href="a00467.html#a365e1740117b0fb9d5990855a26dba4f" title="取env,如果不存在重新获取" alt="" coords="1520,1117,1685,1158"/>
+<area shape="rect" href="a00467.html#afacfbdbffc416bb53676f040720a42e0" title="设置env给当前线程." alt="" coords="1520,1182,1685,1223"/>
+<area shape="rect" href="a00130.html#ae88b8f9603a554ad5640df5940b9d618" title=" " alt="" coords="1297,1023,1472,1049"/>
+<area shape="rect" href="a00130.html#a5a228e9533807266028e3d4ff05d122b" title=" " alt="" coords="1301,1276,1468,1303"/>
+<area shape="rect" href="a00347.html#a6fa065a408e2fe35617e8209a46c9758" title=" " alt="" coords="1299,957,1470,998"/>
+<area shape="rect" href="a00131.html#aca81fb0894771f60fbf64c3b776044e5" title=" " alt="" coords="1299,1073,1471,1100"/>
+<area shape="rect" href="a00130.html#a6cc3a4fb89a9701380288f1c16f738b4" title="调用mirai操作" alt="" coords="1069,1175,1249,1201"/>
+<area shape="rect" href="a00347.html#a5eeedd52cbf8f0881f3b61a117beab6c" title=" " alt="" coords="1074,2418,1245,2459"/>
+<area shape="rect" href="a00131.html#ad6af583021178966fa57f1290f69c0ff" title=" " alt="" coords="1299,1124,1471,1151"/>
+<area shape="rect" href="a00122.html#aaeb9df4ad68a9360d8495346da84ca53" title=" " alt="" coords="1132,972,1187,999"/>
+<area shape="rect" href="a00122.html#a8384b304b12cbb9e9746aebb14f84e5a" title=" " alt="" coords="868,5,923,32"/>
+<area shape="rect" href="a00319.html#a6e7e1a8a401f0ff1c636f11b988703d5" title="删除好友(delete是C++关键字" alt="" coords="800,759,991,785"/>
+<area shape="rect" href="a00331.html#a04aaabd735ed542b313a8df2a3fd9ecb" title=" " alt="" coords="774,810,1017,851"/>
+<area shape="rect" href="a00323.html#aff935e8f08436bf3a2f893a9a82cc29a" title="取群公告列表" alt="" coords="769,876,1021,903"/>
+<area shape="rect" href="a00323.html#a1190371ba6c79e3aa36f39b64d3bbc4c" title=" " alt="" coords="545,877,703,904"/>
+<area shape="rect" href="a00323.html#a0e948a653b9ab1b93451ce096eda47be" title="取文件信息(根据id)" alt="" coords="803,977,987,1004"/>
+<area shape="rect" href="a00323.html#a3d7761e1a104c080dfdd6d6a4c5668c3" title=" " alt="" coords="806,1029,985,1070"/>
+<area shape="rect" href="a00135.html#a5ccb851f383b028ab4dc0c7794b1b812" title="取好友列表" alt="" coords="806,1095,985,1121"/>
+<area shape="rect" href="a00135.html#adde56f274d31b5b48a0c753272772ce5" title="取群列表" alt="" coords="806,1145,985,1172"/>
+<area shape="rect" href="a00367.html#ac03aa9c815ce59030b0f2610e48b79b1" title="取该联系人的一些信息" alt="" coords="821,1197,970,1238"/>
+<area shape="rect" href="a00323.html#a2976015b96b67dd8be26b973b6f07989" title="更新群设置, 即覆盖服务器上的群设置" alt="" coords="272,1263,471,1289"/>
+<area shape="rect" href="a00323.html#a637b6bf57905f45522b490459202ee0a" title=" " alt="" coords="793,1364,998,1391"/>
+<area shape="rect" href="a00323.html#a73fe586db73deabb77885f44aae79e29" title="取群主" alt="" coords="808,1415,983,1441"/>
+<area shape="rect" href="a00375.html#ade27b6ea619f27ec4823618a0cacf00a" title=" " alt="" coords="788,1313,1003,1340"/>
+<area shape="rect" href="a00423.html#a6bc40ee958a59a3f70a0146c7e9312e2" title="图片是否已经上传(如果已经上传即表明可以直接用ImageId发送, 如果没有需要手动上传)" alt="" coords="533,1491,715,1517"/>
+<area shape="rect" href="a00375.html#ad83478036b6ad5750b7b4de2c182353b" title=" " alt="" coords="818,1567,973,1593"/>
+<area shape="rect" href="a00375.html#ad9b954fd548c29c1fcf7b6895605cfaf" title="更改群成员权限" alt="" coords="792,1617,999,1644"/>
+<area shape="rect" href="a00375.html#a068163bcb889d26bc8f8ac767472156d" title=" " alt="" coords="815,1668,975,1695"/>
+<area shape="rect" href="a00167.html#a5d4aa0224ce1d277ade801f1bae52e27" title="取群聊下一个消息(群聊与本事件一样)" alt="" coords="797,1719,993,1761"/>
+<area shape="rect" href="a00171.html#aec7fed74f95ec3322ecc64328a36473e" title="取下一个消息(发送人和接收人和本事件一样)" alt="" coords="795,1785,995,1826"/>
+<area shape="rect" href="a00219.html#a0ac3404118b4a7051c285d00dfe625d2" title=" " alt="" coords="798,1850,993,1891"/>
+<area shape="rect" href="a00175.html#a7e773d9868319834f338b3ebc963d1d5" title=" " alt="" coords="809,1915,981,1957"/>
+<area shape="rect" href="a00179.html#a3fb58755202dc30c9a460d10545c6a0a" title="接受好友申请" alt="" coords="803,1981,988,2022"/>
+<area shape="rect" href="a00335.html#ac5e2613306079cce18866fa1f2809357" title="发布群公告" alt="" coords="774,2046,1017,2087"/>
+<area shape="rect" href="a00323.html#a6004bf96d3dec2c7e555b1bc7877909e" title=" " alt="" coords="825,2112,965,2139"/>
+<area shape="rect" href="a00151.html#aab05081d2d0fee7d5a1a38b499887c76" title=" " alt="" coords="803,2163,987,2205"/>
+<area shape="rect" href="a00379.html#ae326adfd25fd95d040b676a25f2fe0fb" title=" " alt="" coords="814,2229,977,2270"/>
+<area shape="rect" href="a00387.html#af0c1e2aa6db7d553248d9400b4bbb326" title="回复(引用并发送)" alt="" coords="809,2294,982,2335"/>
+<area shape="rect" href="a00387.html#ab90b886a80a8b7f565489e6dea0bf10c" title="回复(引用并发送)" alt="" coords="810,2359,981,2401"/>
+<area shape="rect" href="a00387.html#afe1ce48e1c2ee0095202843e5df82f9e" title="撤回该信息" alt="" coords="810,57,981,98"/>
+<area shape="rect" href="a00135.html#a9a212b3abcfcd50a91e79ff2cf87a6fa" title="刷新bot信息" alt="" coords="814,123,977,149"/>
+<area shape="rect" href="a00423.html#a3c8b1b2f1741c02d38fd41b45461ec18" title="刷新信息(获取图片下载Url,md5, size)" alt="" coords="806,1465,985,1492"/>
+<area shape="rect" href="a00147.html#accb883db18602dc65b5fdd264dd73bfd" title="注册一条指令" alt="" coords="803,174,988,215"/>
+<area shape="rect" href="a00129.html#a8e65cfc6209a54aa4e300c375f71359e" title=" " alt="" coords="831,240,959,267"/>
+<area shape="rect" href="a00367.html#a795f4093d390bd0205ae95aa0075d442" title="抽象封装底层发送信息接口" alt="" coords="821,291,970,333"/>
+<area shape="rect" href="a00167.html#a458c623f584904f306bacdae5702e22b" title="取群聊中同群成员的下一个消息(发送人和群与本事件一样)" alt="" coords="797,357,993,398"/>
+<area shape="rect" href="a00323.html#a84d77fcc64ddd52ba32e020e1226a71a" title="上传并发送远程(群)文件" alt="" coords="811,423,979,449"/>
+<area shape="rect" href="a00319.html#a62e45d8547cfb66bea29c9a577dc6dae" title="发送戳一戳" alt="" coords="803,473,988,500"/>
+<area shape="rect" href="a00375.html#ad1ee31adb9f9c6b776c537502331b7a1" title="发送戳一戳" alt="" coords="797,524,993,551"/>
+<area shape="rect" href="a00311.html#a2ba47bfa3aef481a5e62527e6e1ff5e3" title="发送给群或好友或群成员" alt="" coords="801,575,990,617"/>
+<area shape="rect" href="a00151.html#ae2cbfaaee8ec2b2723978efdc0825f0c" title="发送语音" alt="" coords="797,641,994,668"/>
+<area shape="rect" href="a00367.html#a3effa0c77f4c1687cf8656cdf0b60e42" title="上传图片" alt="" coords="821,693,970,734"/>
+<area shape="rect" href="a00323.html#adbf28d5576a745528341a8a52fd99a14" title=" " alt="" coords="527,928,721,955"/>
+<area shape="rect" href="a00323.html#af26a13bd9238095403d55b2a40ddcc78" title=" " alt="" coords="535,979,713,1005"/>
+<area shape="rect" href="a00135.html#aa4c59d6acabbfed3e0450cb3e2257c6b" title="好友列表string形式返回，利于保存" alt="" coords="543,1030,705,1071"/>
+<area shape="rect" href="a00135.html#a281b2ac226680cde671a28dd1e5d5e87" title="群列表string形式返回，利于保存" alt="" coords="537,1095,711,1137"/>
+<area shape="rect" href="a00319.html#a20abefd6f5f8b5867360b457ca6f0e03" title="刷新当前对象信息" alt="" coords="535,1161,713,1188"/>
+<area shape="rect" href="a00323.html#a25b142b68d1b058ba696143c1ca79a2b" title="刷新群聊信息" alt="" coords="535,1212,713,1239"/>
+<area shape="rect" href="a00375.html#a0ae62e17c22489ffe5aeadc2b3120850" title="重新获取(刷新)群成员信息" alt="" coords="529,1313,719,1340"/>
+<area shape="rect" href="a00319.html#ab3ac94c426a7f2d61f77c970cedd838e" title="构建好友对象" alt="" coords="293,1161,449,1188"/>
+<area shape="rect" href="a00323.html#ac65c6a26d3bc7de5e75ea4cfb0f8c4db" title="构建以群号构建群对象" alt="" coords="294,1212,449,1239"/>
+<area shape="rect" href="a00375.html#a3cfdf6803d46393e79da5382d8189dd7" title="构建群成员对象" alt="" coords="282,1313,461,1340"/>
+<area shape="rect" href="a00323.html#a7e4a285e03aac96ef4152d852958329d" title=" " alt="" coords="531,1365,717,1406"/>
+<area shape="rect" href="a00375.html#a218b3216bfc009ec7ca8b3535496f7c3" title=" " alt="" coords="537,1668,711,1695"/>
+<area shape="rect" href="a00219.html#ace031723d310c72ed25b83485f66a034" title="通过" alt="" coords="527,1745,721,1786"/>
+<area shape="rect" href="a00219.html#a855d60c9e71eda3fd438e45728a8799d" title="拒绝" alt="" coords="527,1810,721,1851"/>
+<area shape="rect" href="a00175.html#ae2666f5eac9e7bb256bad669a06a6e73" title=" " alt="" coords="538,1875,710,1917"/>
+<area shape="rect" href="a00175.html#a9dae2fd6b842761d82641de62d97d5ff" title=" " alt="" coords="538,1941,710,1982"/>
+<area shape="rect" href="a00179.html#a282335f850a9ab57d5a1d695940034a9" title="接受申请" alt="" coords="531,2006,717,2047"/>
+<area shape="rect" href="a00179.html#a9ad16173148b9c63b24860c06ce6b3c3" title="拒绝好友申请" alt="" coords="531,2071,717,2113"/>
+<area shape="rect" href="a00151.html#af4f06bbff9dbdc9eceb014a89f515eba" title=" " alt="" coords="532,2163,716,2205"/>
+<area shape="rect" href="a00151.html#a7937ea932043872ad932e5d8c94e0a79" title="回复并发送" alt="" coords="279,2163,463,2205"/>
+<area shape="rect" href="a00151.html#a7ac97399336eaaa70089d75f913fba6c" title="回复并发送" alt="" coords="19,2163,203,2205"/>
+<area shape="rect" href="a00379.html#a5307f5951e5a859270de3b0d9819ff64" title=" " alt="" coords="543,2229,705,2270"/>
+<area shape="rect" href="a00379.html#a92a82bf120e1be0c07841d0f3181951b" title="回复并发送" alt="" coords="287,2229,455,2270"/>
+<area shape="rect" href="a00135.html#a717a5ccc1e5be516c5caacf9ce937b61" title=" " alt="" coords="555,123,693,149"/>
+<area shape="rect" href="a00135.html#a6b0ebecc9de3fdf10852b341c88561c0" title="头像下载链接" alt="" coords="294,97,449,124"/>
+<area shape="rect" href="a00135.html#a14f2c875a64bf63c487be2f45454f517" title="昵称" alt="" coords="307,148,435,175"/>
+<area shape="rect" href="a00151.html#a41c2bfbf83d42ca538693071dc7c2ec7" title=" " alt="" coords="529,299,719,325"/>
+<area shape="rect" href="a00151.html#ada7726d259050ba1cfb2803c55e5088f" title=" " alt="" coords="289,299,453,325"/>
+<area shape="rect" href="a00151.html#acce2e1538b425fb729bdd013d89ccebe" title="发送MiraiCode信息" alt="" coords="264,349,479,376"/>
+<area shape="rect" href="a00151.html#aea8a7b7829dc335717a362b7ba86a63f" title="发送纯文本信息" alt="" coords="280,248,463,275"/>
+<area shape="rect" href="a00151.html#aaaa4eb0d64b48e01748f007e2b6088bd" title="发送一条Message @detail 支持" alt="" coords="5,299,216,325"/>
+<area shape="rect" href="a00323.html#a7713acaf2d8cf8a003e6337d4e0a10e6" title="发送语音" alt="" coords="534,645,714,672"/>
+<area shape="rect" href="a00375.html#aeeb58a0e84068d0b18bdb634093cf5d7" title="发送语音" alt="" coords="528,595,720,621"/>
+<area shape="rect" href="a00151.html#a2afe293fd81628ce7467afd6036b31c0" title="上传本地图片，务必要用绝对路径 由于mirai要区分图片发送对象，所以使用本函数上传的图片只能发到群" alt="" coords="530,700,718,727"/>
+<area shape="rect" href="a00355.html#a9fdef28aa50fd451675ebb2bc591b8cf" title="日志底层实现封装" alt="" coords="822,2425,969,2452"/>
+<area shape="rect" href="a00359.html#ac00e0c40a6aafe1119dad61d840aa87c" title="日志底层实现封装" alt="" coords="817,2476,974,2503"/>
+<area shape="rect" href="a00363.html#ad8142764645f0f0e6c6e2ecd526ef9da" title="日志底层实现封装" alt="" coords="820,2527,971,2569"/>
+<area shape="rect" href="a00122.html#a0817b020132dc68a0f1a55a9c47e1fea" title=" " alt="" coords="1121,1124,1198,1151"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a29f1a55d4cb7b78045fd3f2566c59dcc" name="a29f1a55d4cb7b78045fd3f2566c59dcc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29f1a55d4cb7b78045fd3f2566c59dcc">&#9670;&nbsp;</a></span>newEnv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MiraiCP::ThreadManager::newEnv </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>threadName</em> = <code>nullptr</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >新建一个env，于getEnv中没取到env时调用. </p>
+
+<p class="definition">在文件 <a class="el" href="a00110_source.html">ThreadManager.cpp</a> 第 <a class="el" href="a00110_source.html#l00041">41</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>                                                     {</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        JNIEnv *env = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        JavaVMAttachArgs args{<a class="code hl_variable" href="a00467.html#a630b0c6d61decb2ea60eb719bbc1120e">JNIVersion</a>,</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>                              <span class="keyword">const_cast&lt;</span><span class="keywordtype">char</span> *<span class="keyword">&gt;</span>(threadName),</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>                              <span class="keyword">nullptr</span>};</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <a class="code hl_variable" href="a00467.html#ac5796576b9962187070ad21fbfdf17ff">gvm</a>-&gt;AttachCurrentThread((<span class="keywordtype">void</span> **) &amp;env, &amp;args);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        ThreadInfo tmp{env, <span class="keyword">true</span>};</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        <a class="code hl_variable" href="a00467.html#a6aaf08f6744b01ac5ab06430313dd3a0">ThreadManager::threads</a>.insert(std::pair&lt;std::string, ThreadInfo&gt;(<a class="code hl_function" href="a00467.html#a11837c8fea64ee75bea0bcd1ea56de9c">ThreadManager::getThreadId</a>(), tmp));</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        <a class="code hl_variable" href="a00355.html#a268fd602157c3fa49616a8872c82bfb1">Logger::logger</a>.<a class="code hl_function" href="a00347.html#af487216ad90334b62a970ad6e5a796a4">info</a>(<span class="stringliteral">&quot;refresh env&quot;</span>);</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    };</div>
+<div class="ttc" id="aa00347_html_af487216ad90334b62a970ad6e5a796a4"><div class="ttname"><a href="a00347.html#af487216ad90334b62a970ad6e5a796a4">MiraiCP::Logger_interface::info</a></div><div class="ttdeci">void info(T... val)</div><div class="ttdoc">发送普通(info级日志)</div><div class="ttdef"><b>Definition:</b> <a href="a00065_source.html#l00109">Logger.h:109</a></div></div>
+<div class="ttc" id="aa00355_html_a268fd602157c3fa49616a8872c82bfb1"><div class="ttname"><a href="a00355.html#a268fd602157c3fa49616a8872c82bfb1">MiraiCP::Logger::logger</a></div><div class="ttdeci">static Logger logger</div><div class="ttdef"><b>Definition:</b> <a href="a00065_source.html#l00153">Logger.h:153</a></div></div>
+<div class="ttc" id="aa00467_html_a630b0c6d61decb2ea60eb719bbc1120e"><div class="ttname"><a href="a00467.html#a630b0c6d61decb2ea60eb719bbc1120e">MiraiCP::ThreadManager::JNIVersion</a></div><div class="ttdeci">static long JNIVersion</div><div class="ttdoc">JNI 版本.</div><div class="ttdef"><b>Definition:</b> <a href="a00113_source.html#l00055">ThreadManager.h:55</a></div></div>
+</div><!-- fragment --><div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-7-trigger" src="closed.png" alt="+"/> 函数调用图:</div>
+<div id="dynsection-7-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-7-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="a00467_a29f1a55d4cb7b78045fd3f2566c59dcc_cgraph.png" border="0" usemap="#aa00467_a29f1a55d4cb7b78045fd3f2566c59dcc_cgraph" alt=""/></div>
+<map name="aa00467_a29f1a55d4cb7b78045fd3f2566c59dcc_cgraph" id="aa00467_a29f1a55d4cb7b78045fd3f2566c59dcc_cgraph">
+<area shape="rect" title=" " alt="" coords="5,39,171,80"/>
+<area shape="rect" href="a00467.html#a11837c8fea64ee75bea0bcd1ea56de9c" title="获取线程id." alt="" coords="221,5,387,47"/>
+<area shape="rect" href="a00347.html#af487216ad90334b62a970ad6e5a796a4" title="发送普通(info级日志)" alt="" coords="219,71,389,112"/>
+<area shape="rect" href="a00347.html#a06202e1ad07f0ed0f131bbba9b16132a" title="日志底层实现封装" alt="" coords="445,41,616,83"/>
+<area shape="rect" href="a00347.html#adb33c9a049ed4d32293641c2381fc734" title=" " alt="" coords="437,107,624,134"/>
+</map>
+</div>
+<div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-8-trigger" src="closed.png" alt="+"/> 这是这个函数的调用关系图:</div>
+<div id="dynsection-8-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-8-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="a00467_a29f1a55d4cb7b78045fd3f2566c59dcc_icgraph.png" border="0" usemap="#aa00467_a29f1a55d4cb7b78045fd3f2566c59dcc_icgraph" alt=""/></div>
+<map name="aa00467_a29f1a55d4cb7b78045fd3f2566c59dcc_icgraph" id="aa00467_a29f1a55d4cb7b78045fd3f2566c59dcc_icgraph">
+<area shape="rect" title=" " alt="" coords="1733,1117,1899,1158"/>
+<area shape="rect" href="a00467.html#a365e1740117b0fb9d5990855a26dba4f" title="取env,如果不存在重新获取" alt="" coords="1520,1117,1685,1158"/>
+<area shape="rect" href="a00130.html#ae88b8f9603a554ad5640df5940b9d618" title=" " alt="" coords="1297,1023,1472,1049"/>
+<area shape="rect" href="a00130.html#a5a228e9533807266028e3d4ff05d122b" title=" " alt="" coords="1301,1276,1468,1303"/>
+<area shape="rect" href="a00347.html#a6fa065a408e2fe35617e8209a46c9758" title=" " alt="" coords="1299,957,1470,998"/>
+<area shape="rect" href="a00131.html#aca81fb0894771f60fbf64c3b776044e5" title=" " alt="" coords="1299,1073,1471,1100"/>
+<area shape="rect" href="a00130.html#a6cc3a4fb89a9701380288f1c16f738b4" title="调用mirai操作" alt="" coords="1069,1175,1249,1201"/>
+<area shape="rect" href="a00347.html#a5eeedd52cbf8f0881f3b61a117beab6c" title=" " alt="" coords="1074,2418,1245,2459"/>
+<area shape="rect" href="a00131.html#ad6af583021178966fa57f1290f69c0ff" title=" " alt="" coords="1299,1124,1471,1151"/>
+<area shape="rect" href="a00122.html#aaeb9df4ad68a9360d8495346da84ca53" title=" " alt="" coords="1132,972,1187,999"/>
+<area shape="rect" href="a00122.html#a8384b304b12cbb9e9746aebb14f84e5a" title=" " alt="" coords="868,5,923,32"/>
+<area shape="rect" href="a00319.html#a6e7e1a8a401f0ff1c636f11b988703d5" title="删除好友(delete是C++关键字" alt="" coords="800,759,991,785"/>
+<area shape="rect" href="a00331.html#a04aaabd735ed542b313a8df2a3fd9ecb" title=" " alt="" coords="774,810,1017,851"/>
+<area shape="rect" href="a00323.html#aff935e8f08436bf3a2f893a9a82cc29a" title="取群公告列表" alt="" coords="769,876,1021,903"/>
+<area shape="rect" href="a00323.html#a1190371ba6c79e3aa36f39b64d3bbc4c" title=" " alt="" coords="545,877,703,904"/>
+<area shape="rect" href="a00323.html#a0e948a653b9ab1b93451ce096eda47be" title="取文件信息(根据id)" alt="" coords="803,977,987,1004"/>
+<area shape="rect" href="a00323.html#a3d7761e1a104c080dfdd6d6a4c5668c3" title=" " alt="" coords="806,1029,985,1070"/>
+<area shape="rect" href="a00135.html#a5ccb851f383b028ab4dc0c7794b1b812" title="取好友列表" alt="" coords="806,1095,985,1121"/>
+<area shape="rect" href="a00135.html#adde56f274d31b5b48a0c753272772ce5" title="取群列表" alt="" coords="806,1145,985,1172"/>
+<area shape="rect" href="a00367.html#ac03aa9c815ce59030b0f2610e48b79b1" title="取该联系人的一些信息" alt="" coords="821,1197,970,1238"/>
+<area shape="rect" href="a00323.html#a2976015b96b67dd8be26b973b6f07989" title="更新群设置, 即覆盖服务器上的群设置" alt="" coords="272,1263,471,1289"/>
+<area shape="rect" href="a00323.html#a637b6bf57905f45522b490459202ee0a" title=" " alt="" coords="793,1364,998,1391"/>
+<area shape="rect" href="a00323.html#a73fe586db73deabb77885f44aae79e29" title="取群主" alt="" coords="808,1415,983,1441"/>
+<area shape="rect" href="a00375.html#ade27b6ea619f27ec4823618a0cacf00a" title=" " alt="" coords="788,1313,1003,1340"/>
+<area shape="rect" href="a00423.html#a6bc40ee958a59a3f70a0146c7e9312e2" title="图片是否已经上传(如果已经上传即表明可以直接用ImageId发送, 如果没有需要手动上传)" alt="" coords="533,1491,715,1517"/>
+<area shape="rect" href="a00375.html#ad83478036b6ad5750b7b4de2c182353b" title=" " alt="" coords="818,1567,973,1593"/>
+<area shape="rect" href="a00375.html#ad9b954fd548c29c1fcf7b6895605cfaf" title="更改群成员权限" alt="" coords="792,1617,999,1644"/>
+<area shape="rect" href="a00375.html#a068163bcb889d26bc8f8ac767472156d" title=" " alt="" coords="815,1668,975,1695"/>
+<area shape="rect" href="a00167.html#a5d4aa0224ce1d277ade801f1bae52e27" title="取群聊下一个消息(群聊与本事件一样)" alt="" coords="797,1719,993,1761"/>
+<area shape="rect" href="a00171.html#aec7fed74f95ec3322ecc64328a36473e" title="取下一个消息(发送人和接收人和本事件一样)" alt="" coords="795,1785,995,1826"/>
+<area shape="rect" href="a00219.html#a0ac3404118b4a7051c285d00dfe625d2" title=" " alt="" coords="798,1850,993,1891"/>
+<area shape="rect" href="a00175.html#a7e773d9868319834f338b3ebc963d1d5" title=" " alt="" coords="809,1915,981,1957"/>
+<area shape="rect" href="a00179.html#a3fb58755202dc30c9a460d10545c6a0a" title="接受好友申请" alt="" coords="803,1981,988,2022"/>
+<area shape="rect" href="a00335.html#ac5e2613306079cce18866fa1f2809357" title="发布群公告" alt="" coords="774,2046,1017,2087"/>
+<area shape="rect" href="a00323.html#a6004bf96d3dec2c7e555b1bc7877909e" title=" " alt="" coords="825,2112,965,2139"/>
+<area shape="rect" href="a00151.html#aab05081d2d0fee7d5a1a38b499887c76" title=" " alt="" coords="803,2163,987,2205"/>
+<area shape="rect" href="a00379.html#ae326adfd25fd95d040b676a25f2fe0fb" title=" " alt="" coords="814,2229,977,2270"/>
+<area shape="rect" href="a00387.html#af0c1e2aa6db7d553248d9400b4bbb326" title="回复(引用并发送)" alt="" coords="809,2294,982,2335"/>
+<area shape="rect" href="a00387.html#ab90b886a80a8b7f565489e6dea0bf10c" title="回复(引用并发送)" alt="" coords="810,2359,981,2401"/>
+<area shape="rect" href="a00387.html#afe1ce48e1c2ee0095202843e5df82f9e" title="撤回该信息" alt="" coords="810,57,981,98"/>
+<area shape="rect" href="a00135.html#a9a212b3abcfcd50a91e79ff2cf87a6fa" title="刷新bot信息" alt="" coords="814,123,977,149"/>
+<area shape="rect" href="a00423.html#a3c8b1b2f1741c02d38fd41b45461ec18" title="刷新信息(获取图片下载Url,md5, size)" alt="" coords="806,1465,985,1492"/>
+<area shape="rect" href="a00147.html#accb883db18602dc65b5fdd264dd73bfd" title="注册一条指令" alt="" coords="803,174,988,215"/>
+<area shape="rect" href="a00129.html#a8e65cfc6209a54aa4e300c375f71359e" title=" " alt="" coords="831,240,959,267"/>
+<area shape="rect" href="a00367.html#a795f4093d390bd0205ae95aa0075d442" title="抽象封装底层发送信息接口" alt="" coords="821,291,970,333"/>
+<area shape="rect" href="a00167.html#a458c623f584904f306bacdae5702e22b" title="取群聊中同群成员的下一个消息(发送人和群与本事件一样)" alt="" coords="797,357,993,398"/>
+<area shape="rect" href="a00323.html#a84d77fcc64ddd52ba32e020e1226a71a" title="上传并发送远程(群)文件" alt="" coords="811,423,979,449"/>
+<area shape="rect" href="a00319.html#a62e45d8547cfb66bea29c9a577dc6dae" title="发送戳一戳" alt="" coords="803,473,988,500"/>
+<area shape="rect" href="a00375.html#ad1ee31adb9f9c6b776c537502331b7a1" title="发送戳一戳" alt="" coords="797,524,993,551"/>
+<area shape="rect" href="a00311.html#a2ba47bfa3aef481a5e62527e6e1ff5e3" title="发送给群或好友或群成员" alt="" coords="801,575,990,617"/>
+<area shape="rect" href="a00151.html#ae2cbfaaee8ec2b2723978efdc0825f0c" title="发送语音" alt="" coords="797,641,994,668"/>
+<area shape="rect" href="a00367.html#a3effa0c77f4c1687cf8656cdf0b60e42" title="上传图片" alt="" coords="821,693,970,734"/>
+<area shape="rect" href="a00323.html#adbf28d5576a745528341a8a52fd99a14" title=" " alt="" coords="527,928,721,955"/>
+<area shape="rect" href="a00323.html#af26a13bd9238095403d55b2a40ddcc78" title=" " alt="" coords="535,979,713,1005"/>
+<area shape="rect" href="a00135.html#aa4c59d6acabbfed3e0450cb3e2257c6b" title="好友列表string形式返回，利于保存" alt="" coords="543,1030,705,1071"/>
+<area shape="rect" href="a00135.html#a281b2ac226680cde671a28dd1e5d5e87" title="群列表string形式返回，利于保存" alt="" coords="537,1095,711,1137"/>
+<area shape="rect" href="a00319.html#a20abefd6f5f8b5867360b457ca6f0e03" title="刷新当前对象信息" alt="" coords="535,1161,713,1188"/>
+<area shape="rect" href="a00323.html#a25b142b68d1b058ba696143c1ca79a2b" title="刷新群聊信息" alt="" coords="535,1212,713,1239"/>
+<area shape="rect" href="a00375.html#a0ae62e17c22489ffe5aeadc2b3120850" title="重新获取(刷新)群成员信息" alt="" coords="529,1313,719,1340"/>
+<area shape="rect" href="a00319.html#ab3ac94c426a7f2d61f77c970cedd838e" title="构建好友对象" alt="" coords="293,1161,449,1188"/>
+<area shape="rect" href="a00323.html#ac65c6a26d3bc7de5e75ea4cfb0f8c4db" title="构建以群号构建群对象" alt="" coords="294,1212,449,1239"/>
+<area shape="rect" href="a00375.html#a3cfdf6803d46393e79da5382d8189dd7" title="构建群成员对象" alt="" coords="282,1313,461,1340"/>
+<area shape="rect" href="a00323.html#a7e4a285e03aac96ef4152d852958329d" title=" " alt="" coords="531,1365,717,1406"/>
+<area shape="rect" href="a00375.html#a218b3216bfc009ec7ca8b3535496f7c3" title=" " alt="" coords="537,1668,711,1695"/>
+<area shape="rect" href="a00219.html#ace031723d310c72ed25b83485f66a034" title="通过" alt="" coords="527,1745,721,1786"/>
+<area shape="rect" href="a00219.html#a855d60c9e71eda3fd438e45728a8799d" title="拒绝" alt="" coords="527,1810,721,1851"/>
+<area shape="rect" href="a00175.html#ae2666f5eac9e7bb256bad669a06a6e73" title=" " alt="" coords="538,1875,710,1917"/>
+<area shape="rect" href="a00175.html#a9dae2fd6b842761d82641de62d97d5ff" title=" " alt="" coords="538,1941,710,1982"/>
+<area shape="rect" href="a00179.html#a282335f850a9ab57d5a1d695940034a9" title="接受申请" alt="" coords="531,2006,717,2047"/>
+<area shape="rect" href="a00179.html#a9ad16173148b9c63b24860c06ce6b3c3" title="拒绝好友申请" alt="" coords="531,2071,717,2113"/>
+<area shape="rect" href="a00151.html#af4f06bbff9dbdc9eceb014a89f515eba" title=" " alt="" coords="532,2163,716,2205"/>
+<area shape="rect" href="a00151.html#a7937ea932043872ad932e5d8c94e0a79" title="回复并发送" alt="" coords="279,2163,463,2205"/>
+<area shape="rect" href="a00151.html#a7ac97399336eaaa70089d75f913fba6c" title="回复并发送" alt="" coords="19,2163,203,2205"/>
+<area shape="rect" href="a00379.html#a5307f5951e5a859270de3b0d9819ff64" title=" " alt="" coords="543,2229,705,2270"/>
+<area shape="rect" href="a00379.html#a92a82bf120e1be0c07841d0f3181951b" title="回复并发送" alt="" coords="287,2229,455,2270"/>
+<area shape="rect" href="a00135.html#a717a5ccc1e5be516c5caacf9ce937b61" title=" " alt="" coords="555,123,693,149"/>
+<area shape="rect" href="a00135.html#a6b0ebecc9de3fdf10852b341c88561c0" title="头像下载链接" alt="" coords="294,97,449,124"/>
+<area shape="rect" href="a00135.html#a14f2c875a64bf63c487be2f45454f517" title="昵称" alt="" coords="307,148,435,175"/>
+<area shape="rect" href="a00151.html#a41c2bfbf83d42ca538693071dc7c2ec7" title=" " alt="" coords="529,299,719,325"/>
+<area shape="rect" href="a00151.html#ada7726d259050ba1cfb2803c55e5088f" title=" " alt="" coords="289,299,453,325"/>
+<area shape="rect" href="a00151.html#acce2e1538b425fb729bdd013d89ccebe" title="发送MiraiCode信息" alt="" coords="264,349,479,376"/>
+<area shape="rect" href="a00151.html#aea8a7b7829dc335717a362b7ba86a63f" title="发送纯文本信息" alt="" coords="280,248,463,275"/>
+<area shape="rect" href="a00151.html#aaaa4eb0d64b48e01748f007e2b6088bd" title="发送一条Message @detail 支持" alt="" coords="5,299,216,325"/>
+<area shape="rect" href="a00323.html#a7713acaf2d8cf8a003e6337d4e0a10e6" title="发送语音" alt="" coords="534,645,714,672"/>
+<area shape="rect" href="a00375.html#aeeb58a0e84068d0b18bdb634093cf5d7" title="发送语音" alt="" coords="528,595,720,621"/>
+<area shape="rect" href="a00151.html#a2afe293fd81628ce7467afd6036b31c0" title="上传本地图片，务必要用绝对路径 由于mirai要区分图片发送对象，所以使用本函数上传的图片只能发到群" alt="" coords="530,700,718,727"/>
+<area shape="rect" href="a00355.html#a9fdef28aa50fd451675ebb2bc591b8cf" title="日志底层实现封装" alt="" coords="822,2425,969,2452"/>
+<area shape="rect" href="a00359.html#ac00e0c40a6aafe1119dad61d840aa87c" title="日志底层实现封装" alt="" coords="817,2476,974,2503"/>
+<area shape="rect" href="a00363.html#ad8142764645f0f0e6c6e2ecd526ef9da" title="日志底层实现封装" alt="" coords="820,2527,971,2569"/>
+<area shape="rect" href="a00122.html#a0817b020132dc68a0f1a55a9c47e1fea" title=" " alt="" coords="1121,1124,1198,1151"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="afacfbdbffc416bb53676f040720a42e0" name="afacfbdbffc416bb53676f040720a42e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afacfbdbffc416bb53676f040720a42e0">&#9670;&nbsp;</a></span>setEnv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MiraiCP::ThreadManager::setEnv </td>
+          <td>(</td>
+          <td class="paramtype">JNIEnv *&#160;</td>
+          <td class="paramname"><em>e</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>设置env给当前线程. </p>
+
+<p class="definition">在文件 <a class="el" href="a00110_source.html">ThreadManager.cpp</a> 第 <a class="el" href="a00110_source.html#l00030">30</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>                                        {</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        <a class="code hl_variable" href="a00467.html#af61aae7d053395c836bae677af861364">mtx</a>.lock();</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <span class="keywordflow">if</span> (!<a class="code hl_function" href="a00467.html#abd1025cb50143b1aa60b55d79ec2b370">ThreadManager::included</a>(<a class="code hl_function" href="a00467.html#a11837c8fea64ee75bea0bcd1ea56de9c">ThreadManager::getThreadId</a>())) {</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>            ThreadInfo tmp{e, <span class="keyword">false</span>};</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>            <a class="code hl_variable" href="a00467.html#a6aaf08f6744b01ac5ab06430313dd3a0">ThreadManager::threads</a>.insert(std::pair&lt;std::string, ThreadInfo&gt;(<a class="code hl_function" href="a00467.html#a11837c8fea64ee75bea0bcd1ea56de9c">ThreadManager::getThreadId</a>(), tmp));</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>            <a class="code hl_variable" href="a00467.html#a6aaf08f6744b01ac5ab06430313dd3a0">ThreadManager::threads</a>[<a class="code hl_function" href="a00467.html#a11837c8fea64ee75bea0bcd1ea56de9c">ThreadManager::getThreadId</a>()].e = e;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        }</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <a class="code hl_variable" href="a00467.html#af61aae7d053395c836bae677af861364">mtx</a>.unlock();</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    }</div>
+</div><!-- fragment --><div id="dynsection-9" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-9-trigger" src="closed.png" alt="+"/> 函数调用图:</div>
+<div id="dynsection-9-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-9-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="a00467_afacfbdbffc416bb53676f040720a42e0_cgraph.png" border="0" usemap="#aa00467_afacfbdbffc416bb53676f040720a42e0_cgraph" alt=""/></div>
+<map name="aa00467_afacfbdbffc416bb53676f040720a42e0_cgraph" id="aa00467_afacfbdbffc416bb53676f040720a42e0_cgraph">
+<area shape="rect" title="设置env给当前线程." alt="" coords="5,39,171,80"/>
+<area shape="rect" href="a00467.html#a11837c8fea64ee75bea0bcd1ea56de9c" title="获取线程id." alt="" coords="219,5,384,47"/>
+<area shape="rect" href="a00467.html#abd1025cb50143b1aa60b55d79ec2b370" title="判断该线程id是否包含在线程池里" alt="" coords="219,71,384,112"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="ac5796576b9962187070ad21fbfdf17ff" name="ac5796576b9962187070ad21fbfdf17ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5796576b9962187070ad21fbfdf17ff">&#9670;&nbsp;</a></span>gvm</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">JavaVM * MiraiCP::ThreadManager::gvm = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>全局JavaVM对象，用于多线程管理中新建线程的JNIEnv. </p>
+
+<p class="definition">在文件 <a class="el" href="a00113_source.html">ThreadManager.h</a> 第 <a class="el" href="a00113_source.html#l00053">53</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a630b0c6d61decb2ea60eb719bbc1120e" name="a630b0c6d61decb2ea60eb719bbc1120e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a630b0c6d61decb2ea60eb719bbc1120e">&#9670;&nbsp;</a></span>JNIVersion</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">long MiraiCP::ThreadManager::JNIVersion = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>JNI 版本. </p>
+
+<p class="definition">在文件 <a class="el" href="a00113_source.html">ThreadManager.h</a> 第 <a class="el" href="a00113_source.html#l00055">55</a> 行定义.</p>
+
+</div>
+</div>
+<a id="af61aae7d053395c836bae677af861364" name="af61aae7d053395c836bae677af861364"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af61aae7d053395c836bae677af861364">&#9670;&nbsp;</a></span>mtx</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::recursive_mutex MiraiCP::ThreadManager::mtx = std::recursive_mutex()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>&lt; 线程池(线程id:env). </p>
+<p >线程池读写锁. </p>
+
+<p class="definition">在文件 <a class="el" href="a00113_source.html">ThreadManager.h</a> 第 <a class="el" href="a00113_source.html#l00050">50</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a6aaf08f6744b01ac5ab06430313dd3a0" name="a6aaf08f6744b01ac5ab06430313dd3a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6aaf08f6744b01ac5ab06430313dd3a0">&#9670;&nbsp;</a></span>threads</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::map&lt; std::string, <a class="el" href="a00471.html">ThreadManager::ThreadInfo</a> &gt; MiraiCP::ThreadManager::threads = std::map&lt;std::string, <a class="el" href="a00471.html">ThreadInfo</a>&gt;()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="a00113_source.html">ThreadManager.h</a> 第 <a class="el" href="a00113_source.html#l00049">49</a> 行定义.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li><a class="el" href="a00113_source.html">ThreadManager.h</a></li>
+<li><a class="el" href="a00110_source.html">ThreadManager.cpp</a></li>
+</ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">生成于 2021年 十二月 5日 星期日 20:04:15 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="navelem"><a class="el" href="a00129.html">MiraiCP</a></li><li class="navelem"><a class="el" href="a00467.html">ThreadManager</a></li>
+    <li class="footer">生成于 2022年 一月 10日 星期一 15:34:48 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
 <script type="text/javascript">

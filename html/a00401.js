@@ -1,11 +1,9 @@
 var a00401 =
 [
-    [ "ServiceMessage", "a00401.html#af2da1f54cc88abcddc68f96bde22d24e", null ],
-    [ "ServiceMessage", "a00401.html#ab5866201bea86658dadc054764fd1db6", null ],
-    [ "ServiceMessage", "a00401.html#a367f5b76f1716ba7b5fa31219274bc85", null ],
-    [ "operator==", "a00401.html#ac376e371ca5bd671ea8f3d98881b8052", null ],
-    [ "toJson", "a00401.html#ac6e0602d6b6eda201108025e7318d07b", null ],
-    [ "toMiraiCode", "a00401.html#a25240f7b9b413c65916c92035569a095", null ],
-    [ "type", "a00401.html#ab6d7d4b47233b30630c752945603d780", null ],
-    [ "id", "a00401.html#a71730c48bdb7186bd5be19dc87d0e629", null ]
+    [ "LightApp", "a00401.html#a7cfcefeb788e3046fb321fab0a7b813a", null ],
+    [ "LightApp", "a00401.html#a1803b5deeb42af5f4770751aa4160a25", null ],
+    [ "operator==", "a00401.html#ae69ac9a6359eb6848ce09f7671395969", null ],
+    [ "toJson", "a00401.html#a95599fbda45f4240f9241f6dfa6fe05d", null ],
+    [ "toMiraiCode", "a00401.html#ad1637240306cd3dd587044054381d991", null ],
+    [ "type", "a00401.html#abba0c279393369d31f7ebc88ee6756fd", null ]
 ];

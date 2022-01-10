@@ -1,11 +1,12 @@
 var a00110 =
 [
-    [ "json", "a00110.html#ab701e3ac61a85b337ec5c1abaad6742d", null ],
-    [ "Event", "a00110.html#a8384b304b12cbb9e9746aebb14f84e5a", null ],
-    [ "JNI_OnLoad", "a00110.html#afb46b584efd9f9efc5313642141edeff", null ],
-    [ "PluginDisable", "a00110.html#a506a34a4d2049669f5d37ac29ebf2068", null ],
-    [ "registerMethods", "a00110.html#aeb3405447431287ce1e38aef6797b8e8", null ],
-    [ "returnNull", "a00110.html#a0817b020132dc68a0f1a55a9c47e1fea", null ],
-    [ "Verify", "a00110.html#a8316c042af07664977262869ba214f13", null ],
-    [ "method_table", "a00110.html#ace2f182a65d314239803bda0fc212c51", null ]
+    [ "escapeFromMiraiCode", "a00110.html#ae7bf212fddf60af59042677c3a7753a5", null ],
+    [ "escapeToMiraiCode", "a00110.html#a01f4fe41f8bef55b95953750f5cfb0c2", null ],
+    [ "icompareChar", "a00110.html#a30a4f141015fdd657749f277d69770d6", null ],
+    [ "iequal", "a00110.html#aef137ad19850356b58dae5185e74071e", null ],
+    [ "jstring2str", "a00110.html#aca81fb0894771f60fbf64c3b776044e5", null ],
+    [ "replace", "a00110.html#a7d114f18a24887ca125a869802e43118", null ],
+    [ "starts_with", "a00110.html#a723249aacce9d348d328306a91d0a23c", null ],
+    [ "str2jstring", "a00110.html#ad6af583021178966fa57f1290f69c0ff", null ],
+    [ "StringToVector", "a00110.html#a5e3ca5f1b36ef97a2cc8255fd07ccd69", null ]
 ];
