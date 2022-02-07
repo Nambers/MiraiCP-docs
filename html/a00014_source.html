@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MiraiCP
-   &#160;<span id="projectnumber">v2.9.1</span>
+   &#160;<span id="projectnumber">v2.10.0</span>
    </div>
    <div id="projectbrief">MiraiCP api document</div>
   </td>
@@ -124,7 +124,7 @@ $(document).ready(function(){initNavTree('a00014_source.html',''); initResizable
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="comment">    throw: InitxException 即找不到对应签名</span></div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="comment">    */</span></div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="a00130.html#ae88b8f9603a554ad5640df5940b9d618">   31</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="a00130.html#ae88b8f9603a554ad5640df5940b9d618">construct</a>(JNIEnv *env) {</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <span class="keywordflow">if</span> (env == <span class="keyword">nullptr</span>) env = <a class="code hl_function" href="a00467.html#a365e1740117b0fb9d5990855a26dba4f">ThreadManager::getEnv</a>();</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <span class="keywordflow">if</span> (env == <span class="keyword">nullptr</span>) env = <a class="code hl_function" href="a00475.html#a365e1740117b0fb9d5990855a26dba4f">ThreadManager::getEnv</a>();</div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        <a class="code hl_variable" href="a00130.html#a60520b19317b53c740f1d6c63a5ca26b">CPPLib</a> = <span class="keyword">reinterpret_cast&lt;</span>jclass<span class="keyword">&gt;</span>(env-&gt;NewGlobalRef(</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>                env-&gt;FindClass(<span class="stringliteral">&quot;tech/eritquearcus/miraicp/shared/CPPLib&quot;</span>)));</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="a00130.html#a60520b19317b53c740f1d6c63a5ca26b">CPPLib</a> == <span class="keyword">nullptr</span>) {</div>
@@ -134,11 +134,11 @@ $(document).ready(function(){initNavTree('a00014_source.html',''); initResizable
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    }</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="a00130.html#a5a228e9533807266028e3d4ff05d122b">   41</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="a00130.html#a5a228e9533807266028e3d4ff05d122b">destruct</a>() {</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <a class="code hl_function" href="a00467.html#a365e1740117b0fb9d5990855a26dba4f">ThreadManager::getEnv</a>()-&gt;DeleteGlobalRef(<a class="code hl_variable" href="a00130.html#a60520b19317b53c740f1d6c63a5ca26b">CPPLib</a>);</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <a class="code hl_function" href="a00475.html#a365e1740117b0fb9d5990855a26dba4f">ThreadManager::getEnv</a>()-&gt;DeleteGlobalRef(<a class="code hl_variable" href="a00130.html#a60520b19317b53c740f1d6c63a5ca26b">CPPLib</a>);</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    }</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="a00130.html#a6cc3a4fb89a9701380288f1c16f738b4">   45</a></span>    std::string <a class="code hl_function" href="a00130.html#a6cc3a4fb89a9701380288f1c16f738b4">koperation</a>(<a class="code hl_enumeration" href="a00130.html#a1bc3c425340774687507c1683967231b">operation_set</a> type, <span class="keyword">const</span> <a class="code hl_typedef" href="a00122.html#ab701e3ac61a85b337ec5c1abaad6742d">nlohmann::json</a> &amp;data, JNIEnv *env, <span class="keywordtype">bool</span> catchErr, <span class="keyword">const</span> std::string &amp;errorInfo) {</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <span class="keywordflow">if</span> (env == <span class="keyword">nullptr</span>) env = <a class="code hl_function" href="a00467.html#a365e1740117b0fb9d5990855a26dba4f">ThreadManager::getEnv</a>();</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <span class="keywordflow">if</span> (env == <span class="keyword">nullptr</span>) env = <a class="code hl_function" href="a00475.html#a365e1740117b0fb9d5990855a26dba4f">ThreadManager::getEnv</a>();</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <a class="code hl_typedef" href="a00122.html#ab701e3ac61a85b337ec5c1abaad6742d">nlohmann::json</a> j;</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        j[<span class="stringliteral">&quot;type&quot;</span>] = type;</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        j[<span class="stringliteral">&quot;data&quot;</span>] = data;</div>
@@ -156,7 +156,7 @@ $(document).ready(function(){initNavTree('a00014_source.html',''); initResizable
 <div class="ttc" id="aa00041_html_a10e0f2260bfde013500e04ba0d77a9fb"><div class="ttname"><a href="a00041.html#a10e0f2260bfde013500e04ba0d77a9fb">ErrorHandle</a></div><div class="ttdeci">#define ErrorHandle(x, y)</div><div class="ttdef"><b>Definition:</b> <a href="a00041_source.html#l00020">Exception.h:20</a></div></div>
 <div class="ttc" id="aa00113_html"><div class="ttname"><a href="a00113.html">ThreadManager.h</a></div></div>
 <div class="ttc" id="aa00119_html"><div class="ttname"><a href="a00119.html">Tools.h</a></div></div>
-<div class="ttc" id="aa00122_html_ab701e3ac61a85b337ec5c1abaad6742d"><div class="ttname"><a href="a00122.html#ab701e3ac61a85b337ec5c1abaad6742d">json</a></div><div class="ttdeci">nlohmann::json json</div><div class="ttdef"><b>Definition:</b> <a href="a00122_source.html#l00042">utils.cpp:42</a></div></div>
+<div class="ttc" id="aa00122_html_ab701e3ac61a85b337ec5c1abaad6742d"><div class="ttname"><a href="a00122.html#ab701e3ac61a85b337ec5c1abaad6742d">json</a></div><div class="ttdeci">nlohmann::json json</div><div class="ttdef"><b>Definition:</b> <a href="a00122_source.html#l00032">utils.cpp:32</a></div></div>
 <div class="ttc" id="aa00130_html"><div class="ttname"><a href="a00130.html">MiraiCP::Config</a></div><div class="ttdoc">配置类声明, 主要存放各种jmethodid, MiraiCP内部使用, 不需要更改或其他操作</div><div class="ttdef"><b>Definition:</b> <a href="a00014_source.html#l00022">Config.cpp:22</a></div></div>
 <div class="ttc" id="aa00130_html_a1bc3c425340774687507c1683967231b"><div class="ttname"><a href="a00130.html#a1bc3c425340774687507c1683967231b">MiraiCP::Config::operation_set</a></div><div class="ttdeci">operation_set</div><div class="ttdoc">操作id</div><div class="ttdef"><b>Definition:</b> <a href="a00017_source.html#l00036">Config.h:36</a></div></div>
 <div class="ttc" id="aa00130_html_a4bbd618437ad40afb913c038ca2532f0"><div class="ttname"><a href="a00130.html#a4bbd618437ad40afb913c038ca2532f0">MiraiCP::Config::pluginId</a></div><div class="ttdeci">int pluginId</div><div class="ttdoc">本插件id</div><div class="ttdef"><b>Definition:</b> <a href="a00014_source.html#l00026">Config.cpp:26</a></div></div>
@@ -167,8 +167,8 @@ $(document).ready(function(){initNavTree('a00014_source.html',''); initResizable
 <div class="ttc" id="aa00130_html_ae88b8f9603a554ad5640df5940b9d618"><div class="ttname"><a href="a00130.html#ae88b8f9603a554ad5640df5940b9d618">MiraiCP::Config::construct</a></div><div class="ttdeci">void construct(JNIEnv *env)</div><div class="ttdef"><b>Definition:</b> <a href="a00014_source.html#l00031">Config.cpp:31</a></div></div>
 <div class="ttc" id="aa00131_html_aca81fb0894771f60fbf64c3b776044e5"><div class="ttname"><a href="a00131.html#aca81fb0894771f60fbf64c3b776044e5">MiraiCP::Tools::jstring2str</a></div><div class="ttdeci">std::string jstring2str(jstring jStr, JNIEnv *env)</div><div class="ttdef"><b>Definition:</b> <a href="a00116_source.html#l00025">Tools.cpp:25</a></div></div>
 <div class="ttc" id="aa00131_html_ad6af583021178966fa57f1290f69c0ff"><div class="ttname"><a href="a00131.html#ad6af583021178966fa57f1290f69c0ff">MiraiCP::Tools::str2jstring</a></div><div class="ttdeci">jstring str2jstring(const char *stra, JNIEnv *env)</div><div class="ttdef"><b>Definition:</b> <a href="a00116_source.html#l00041">Tools.cpp:41</a></div></div>
-<div class="ttc" id="aa00259_html"><div class="ttname"><a href="a00259.html">MiraiCP::APIException</a></div><div class="ttdef"><b>Definition:</b> <a href="a00041_source.html#l00103">Exception.h:103</a></div></div>
-<div class="ttc" id="aa00467_html_a365e1740117b0fb9d5990855a26dba4f"><div class="ttname"><a href="a00467.html#a365e1740117b0fb9d5990855a26dba4f">MiraiCP::ThreadManager::getEnv</a></div><div class="ttdeci">static JNIEnv * getEnv()</div><div class="ttdoc">取env,如果不存在重新获取</div><div class="ttdef"><b>Definition:</b> <a href="a00110_source.html#l00069">ThreadManager.cpp:69</a></div></div>
+<div class="ttc" id="aa00259_html"><div class="ttname"><a href="a00259.html">MiraiCP::APIException</a></div><div class="ttdef"><b>Definition:</b> <a href="a00041_source.html#l00111">Exception.h:111</a></div></div>
+<div class="ttc" id="aa00475_html_a365e1740117b0fb9d5990855a26dba4f"><div class="ttname"><a href="a00475.html#a365e1740117b0fb9d5990855a26dba4f">MiraiCP::ThreadManager::getEnv</a></div><div class="ttdeci">static JNIEnv * getEnv()</div><div class="ttdoc">取env,如果不存在重新获取</div><div class="ttdef"><b>Definition:</b> <a href="a00110_source.html#l00069">ThreadManager.cpp:69</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
@@ -176,7 +176,7 @@ $(document).ready(function(){initNavTree('a00014_source.html',''); initResizable
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="a00014.html">Config.cpp</a></li>
-    <li class="footer">生成于 2022年 一月 10日 星期一 15:34:47 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="footer">生成于 2022年 二月 7日 星期一 12:18:50 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
 <script type="text/javascript">

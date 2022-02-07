@@ -30,7 +30,7 @@ var a00379 =
     [ "quoteAndSend1", "a00379.html#adbc13812ae206a1b96e33fafd9d49e10", null ],
     [ "quoteAndSend1", "a00379.html#afb57cbb9b80f5dd5712bec9bd1c61dc8", null ],
     [ "quoteAndSend1", "a00379.html#a5307f5951e5a859270de3b0d9819ff64", null ],
-    [ "quoteAndSendMessage", "a00379.html#a92a82bf120e1be0c07841d0f3181951b", null ],
+    [ "quoteAndSendMessage", "a00379.html#a562dd34a6011b018ca9058ed982f6124", null ],
     [ "size", "a00379.html#a6344b836b9fcb3d8c0793a0d72b29c17", null ],
     [ "toMiraiCode", "a00379.html#a73c05e91884bde875f89e9552e7509c0", null ],
     [ "toMiraiCodeVector", "a00379.html#a5d3419fcc240e5cb60a7a8fc221a606c", null ],

@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['codec_0',['codec',['../a00439.html#afe96592ba24d9c3f1887c7668d788c97',1,'MiraiCP::OnlineAudio']]],
+  ['codec_0',['codec',['../a00443.html#afe96592ba24d9c3f1887c7668d788c97',1,'MiraiCP::OnlineAudio']]],
   ['commandlist_1',['commandList',['../a00147.html#af770c2433fdf62bee434d79f7118cbcc',1,'MiraiCP::CommandManager']]],
   ['commandmanager_2',['commandManager',['../a00147.html#a772ce2c737ce39e63ed80b023019f152',1,'MiraiCP::CommandManager']]],
   ['config_3',['config',['../a00155.html#a4ca2c5ec7d04d258a2da1ce7cdb09a75',1,'MiraiCP::CPPPlugin']]],

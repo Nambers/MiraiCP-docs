@@ -1,5 +1,9 @@
 var a00471 =
 [
-    [ "attach", "a00471.html#a20796cdd95ace90b1f56b825abf51032", null ],
-    [ "e", "a00471.html#ad5e0fc94f06fd33fbc0c6db40c0486eb", null ]
+    [ "UnSupportMessage", "a00471.html#a23b8cc40f52162400793ef2dc9c592be", null ],
+    [ "UnSupportMessage", "a00471.html#a6be0a774db3dc14967b31ab49e057454", null ],
+    [ "operator==", "a00471.html#a0ab999563baa8193b226d442d1a7f5dc", null ],
+    [ "toJson", "a00471.html#ae28bab32ffb5b7520376b88cb0fb70e1", null ],
+    [ "toMiraiCode", "a00471.html#a911faf12ad83185a3f321c227461d636", null ],
+    [ "type", "a00471.html#ad5b8af135be7c2201fa5cc3d81fa8912", null ]
 ];

@@ -21,8 +21,8 @@ var a00035 =
     [ "MiraiCP::Event", "a00231.html", "a00231" ],
     [ "MiraiCP::Event::eventNode", "a00235.html", "a00235" ],
     [ "MiraiCP::Event::NodeHandle", "a00239.html", "a00239" ],
+    [ "EVENT_TYPE_FUNC_GEN", "a00035.html#a1aa0e3291653e48865e7d91d845b2d6c", null ],
     [ "eventTypes", "a00035.html#a9978cdf5158c8fc2ed93dbd7bbf3efb5", [
-      [ "MiraiCPEvent", "a00035.html#a9978cdf5158c8fc2ed93dbd7bbf3efb5abf5d94fcdcf585821900f60157a29cf9", null ],
       [ "BotEvent", "a00035.html#a9978cdf5158c8fc2ed93dbd7bbf3efb5a87ec8a0052a49b6b7fffeedfa3013f48", null ],
       [ "GroupMessageEvent", "a00035.html#a9978cdf5158c8fc2ed93dbd7bbf3efb5af85aaa2127f5b4f45bd92e1987105005", null ],
       [ "PrivateMessageEvent", "a00035.html#a9978cdf5158c8fc2ed93dbd7bbf3efb5a05b008ff62fd281b43c4d2265fb1691f", null ],
@@ -38,8 +38,9 @@ var a00035 =
       [ "NudgeEvent", "a00035.html#a9978cdf5158c8fc2ed93dbd7bbf3efb5a77c72202fb2fc3bb3e69547fed73d504", null ],
       [ "BotLeaveEvent", "a00035.html#a9978cdf5158c8fc2ed93dbd7bbf3efb5a08a0b0fe21c21e8984578e791d1e9dcb", null ],
       [ "MemberJoinRequestEvent", "a00035.html#a9978cdf5158c8fc2ed93dbd7bbf3efb5af710a97e309651df52edbefd8db7f666", null ],
-      [ "MessagePreSend", "a00035.html#a9978cdf5158c8fc2ed93dbd7bbf3efb5a7b3c584c9334292ed72bb7a59bddf56d", null ],
+      [ "MessagePreSendEvent", "a00035.html#a9978cdf5158c8fc2ed93dbd7bbf3efb5a5cac4c64485c91fff853a4b857d6638d", null ],
       [ "MiraiCPExceptionEvent", "a00035.html#a9978cdf5158c8fc2ed93dbd7bbf3efb5af3dfeb621d756effa3acc2ac355d0803", null ],
+      [ "Command", "a00035.html#a9978cdf5158c8fc2ed93dbd7bbf3efb5aee97be03cb04119af45014d815621ce1", null ],
       [ "count", "a00035.html#a9978cdf5158c8fc2ed93dbd7bbf3efb5ae2942a04780e223b215eb8b663cf5353", null ],
       [ "error", "a00035.html#a9978cdf5158c8fc2ed93dbd7bbf3efb5acb5e100e5a9a3e7f6d1fd97512215282", null ]
     ] ]

@@ -2,7 +2,7 @@ var a00175 =
 [
     [ "GroupInviteEvent", "a00175.html#a9c76e0f986edef4d3915204a07085d11", null ],
     [ "accept", "a00175.html#ae2666f5eac9e7bb256bad669a06a6e73", null ],
-    [ "getEventType", "a00175.html#a586e1591d3d3669defc23e9d9a888ce9", null ],
+    [ "get_event_type", "a00175.html#a5c31168a595a89839b42e49a36bc2736", null ],
     [ "operation0", "a00175.html#a7e773d9868319834f338b3ebc963d1d5", null ],
     [ "reject", "a00175.html#a9dae2fd6b842761d82641de62d97d5ff", null ],
     [ "groupid", "a00175.html#ad0d2dad878885d82c78e5ef79efa9945", null ],

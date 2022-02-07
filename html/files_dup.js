@@ -18,7 +18,7 @@ var files_dup =
     [ "CPPPlugin.h", "a00029.html", [
       [ "MiraiCP::CPPPlugin", "a00155.html", "a00155" ]
     ] ],
-    [ "Event.cpp", "a00032.html", "a00032" ],
+    [ "Event.cpp", "a00032.html", null ],
     [ "Event.h", "a00035.html", "a00035" ],
     [ "Exception.cpp", "a00038.html", null ],
     [ "Exception.h", "a00041.html", "a00041" ],
@@ -41,7 +41,7 @@ var files_dup =
       [ "MiraiCP::Group::GroupSetting", "a00339.html", "a00339" ],
       [ "MiraiCP::Group::file_short_info", "a00343.html", "a00343" ]
     ] ],
-    [ "Logger.cpp", "a00062.html", "a00062" ],
+    [ "Logger.cpp", "a00062.html", null ],
     [ "Logger.h", "a00065.html", [
       [ "MiraiCP::Logger_interface", "a00347.html", "a00347" ],
       [ "MiraiCP::Logger_interface::Handler", "a00351.html", "a00351" ],
@@ -84,24 +84,26 @@ var files_dup =
       [ "MiraiCP::At", "a00415.html", "a00415" ],
       [ "MiraiCP::AtAll", "a00419.html", "a00419" ],
       [ "MiraiCP::Image", "a00423.html", "a00423" ],
-      [ "MiraiCP::LightApp", "a00427.html", "a00427" ],
-      [ "MiraiCP::ServiceMessage", "a00431.html", "a00431" ],
-      [ "MiraiCP::QuoteReply", "a00435.html", "a00435" ],
-      [ "MiraiCP::OnlineAudio", "a00439.html", "a00439" ],
-      [ "MiraiCP::RemoteFile", "a00443.html", "a00443" ],
-      [ "MiraiCP::RemoteFile::Dinfo", "a00447.html", "a00447" ],
-      [ "MiraiCP::RemoteFile::Finfo", "a00451.html", "a00451" ],
-      [ "MiraiCP::Face", "a00455.html", "a00455" ],
-      [ "MiraiCP::MarketFace", "a00459.html", "a00459" ],
-      [ "MiraiCP::UnSupportMessage", "a00463.html", "a00463" ]
+      [ "MiraiCP::FlashImage", "a00427.html", "a00427" ],
+      [ "MiraiCP::LightApp", "a00431.html", "a00431" ],
+      [ "MiraiCP::ServiceMessage", "a00435.html", "a00435" ],
+      [ "MiraiCP::QuoteReply", "a00439.html", "a00439" ],
+      [ "MiraiCP::OnlineAudio", "a00443.html", "a00443" ],
+      [ "MiraiCP::RemoteFile", "a00447.html", "a00447" ],
+      [ "MiraiCP::RemoteFile::Dinfo", "a00451.html", "a00451" ],
+      [ "MiraiCP::RemoteFile::Finfo", "a00455.html", "a00455" ],
+      [ "MiraiCP::Face", "a00459.html", "a00459" ],
+      [ "MiraiCP::MusicShare", "a00463.html", "a00463" ],
+      [ "MiraiCP::MarketFace", "a00467.html", "a00467" ],
+      [ "MiraiCP::UnSupportMessage", "a00471.html", "a00471" ]
     ] ],
     [ "ThreadManager.cpp", "a00110.html", null ],
     [ "ThreadManager.h", "a00113.html", [
-      [ "MiraiCP::ThreadManager", "a00467.html", "a00467" ],
-      [ "MiraiCP::ThreadManager::ThreadInfo", "a00471.html", "a00471" ]
+      [ "MiraiCP::ThreadManager", "a00475.html", "a00475" ],
+      [ "MiraiCP::ThreadManager::ThreadInfo", "a00479.html", "a00479" ]
     ] ],
     [ "Tools.cpp", "a00116.html", "a00116" ],
     [ "Tools.h", "a00119.html", "a00119" ],
     [ "utils.cpp", "a00122.html", "a00122" ],
-    [ "utils.h", "a00125.html", "a00125" ]
+    [ "utils.h", "a00125.html", null ]
 ];

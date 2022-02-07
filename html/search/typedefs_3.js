@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['string_0',['string',['../a00347.html#a22429d5974d2c062b424e0c0297cb897',1,'MiraiCP::Logger_interface']]]
+  ['qqid_0',['QQID',['../a00129.html#a59ef86b4ef19e525734fc04811fa9681',1,'MiraiCP']]]
 ];

@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiraiCP: 上传并发送远程</title>
+<title>MiraiCP: 取群聊下一条消息</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MiraiCP
-   &#160;<span id="projectnumber">v2.9.1</span>
+   &#160;<span id="projectnumber">v2.10.0</span>
    </div>
    <div id="projectbrief">MiraiCP api document</div>
   </td>
@@ -90,21 +90,18 @@ $(document).ready(function(){initNavTree('a00495.html',''); initResizable(); });
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">上传并发送远程</div></div>
+  <div class="headertitle"><div class="title">取群聊下一条消息</div></div>
 </div><!--header-->
 <div class="contents">
-<p >(群)文件(check in version 2.9.0) </p><div class="fragment"><div class="line">Event::processor.registerEvent&lt;<a class="code hl_enumvalue" href="a00129.html#a9978cdf5158c8fc2ed93dbd7bbf3efb5af85aaa2127f5b4f45bd92e1987105005">GroupMessageEvent</a>&gt;([](<a class="code hl_enumvalue" href="a00129.html#a9978cdf5158c8fc2ed93dbd7bbf3efb5af85aaa2127f5b4f45bd92e1987105005">GroupMessageEvent</a> e) {</div>
-<div class="line">   <span class="comment">// 发送D:\\ValveUnhandledExceptionFilter.txt本地文件到qq群的 /test.txt 路径</span></div>
-<div class="line">   RemoteFile tmp = e.group.sendFile(<span class="stringliteral">&quot;/test.txt&quot;</span>, <span class="stringliteral">&quot;D:\\ValveUnhandledExceptionFilter.txt&quot;</span>);</div>
-<div class="line">});</div>
-<div class="ttc" id="aa00129_html_a9978cdf5158c8fc2ed93dbd7bbf3efb5af85aaa2127f5b4f45bd92e1987105005"><div class="ttname"><a href="a00129.html#a9978cdf5158c8fc2ed93dbd7bbf3efb5af85aaa2127f5b4f45bd92e1987105005">MiraiCP::eventTypes::GroupMessageEvent</a></div><div class="ttdeci">@ GroupMessageEvent</div></div>
+<p >群消息事件声明 (check in version 2.9.0) </p><div class="fragment"><div class="line"><span class="keyword">auto</span> tmp = e.nextMessage();</div>
+<div class="line">e.group.sendMessage(tmp);</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">生成于 2022年 一月 10日 星期一 15:34:47 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="footer">生成于 2022年 二月 7日 星期一 12:18:50 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
 <script type="text/javascript">

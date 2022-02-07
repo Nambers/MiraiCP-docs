@@ -1,9 +1,13 @@
 var a00463 =
 [
-    [ "UnSupportMessage", "a00463.html#a23b8cc40f52162400793ef2dc9c592be", null ],
-    [ "UnSupportMessage", "a00463.html#a6be0a774db3dc14967b31ab49e057454", null ],
-    [ "operator==", "a00463.html#a0ab999563baa8193b226d442d1a7f5dc", null ],
-    [ "toJson", "a00463.html#ae28bab32ffb5b7520376b88cb0fb70e1", null ],
-    [ "toMiraiCode", "a00463.html#a911faf12ad83185a3f321c227461d636", null ],
-    [ "type", "a00463.html#ad5b8af135be7c2201fa5cc3d81fa8912", null ]
+    [ "MusicShare", "a00463.html#a36dd35e9834b873e11c98eae3602d0ac", null ],
+    [ "toMiraiCode", "a00463.html#a1bffdbd7cd143a903f22fb376b79c855", null ],
+    [ "type", "a00463.html#a0d066ebbca63439a3eea2e564e31403a", null ],
+    [ "appName", "a00463.html#a87a20d867c8dadbe4a8f55ef2b6d0d4d", null ],
+    [ "brief", "a00463.html#ab3e91b8220d2e80dbb84ff17b83ce3f8", null ],
+    [ "jumpUrl", "a00463.html#aa4239e8aadb82d6c79bc8986f55e68b6", null ],
+    [ "musicUrl", "a00463.html#a98dc3816bcdd57e551a55ff88b2ea4fa", null ],
+    [ "picUrl", "a00463.html#a0615bbf6886985e1438ab1493cdc012a", null ],
+    [ "summary", "a00463.html#a2da932b20adbdc6f9fa58bda8c0623ac", null ],
+    [ "title", "a00463.html#aa4f1eb91480d538d2aead5904f1cc4b9", null ]
 ];

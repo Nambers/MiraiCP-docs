@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MiraiCP
-   &#160;<span id="projectnumber">v2.9.1</span>
+   &#160;<span id="projectnumber">v2.10.0</span>
    </div>
    <div id="projectbrief">MiraiCP api document</div>
   </td>
@@ -107,7 +107,7 @@ $(document).ready(function(){initNavTree('a00151.html',''); initResizable(); });
   <tr class="even"><td class="entry"><a class="el" href="a00151.html#ac257ebdd1591ea5acf6e045abf28ecba">botid</a>() const</td><td class="entry"><a class="el" href="a00151.html">MiraiCP::Contact</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="odd"><td class="entry"><a class="el" href="a00151.html#ad8f45e856e06e89c33e2145a001b8b74">Contact</a>()</td><td class="entry"><a class="el" href="a00151.html">MiraiCP::Contact</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="a00151.html#a7daf0380e940c410a05c4ffe52d7ef35">Contact</a>(int type, QQID id, QQID gid, const std::string &amp;name, QQID botid, bool anonymous=false)</td><td class="entry"><a class="el" href="a00151.html">MiraiCP::Contact</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">explicit</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00151.html#abf617fe245eaf72e903ed1d02102bd28">deserializationFromString</a>(const std::string &amp;source)</td><td class="entry"><a class="el" href="a00151.html">MiraiCP::Contact</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">static</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="a00151.html#a35da1cbf3dc0f418e9de3de0319d183e">deserializationFromString</a>(const std::string &amp;source)=delete</td><td class="entry"><a class="el" href="a00151.html">MiraiCP::Contact</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="a00151.html#a08d512434520f77421c5bde1ba421bbe">deserialize</a>(const std::string &amp;source)</td><td class="entry"><a class="el" href="a00151.html">MiraiCP::Contact</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
   <tr class="odd"><td class="entry"><a class="el" href="a00151.html#a397101cb574488ebaf3feefa683860e3">deserialize</a>(nlohmann::json source)</td><td class="entry"><a class="el" href="a00151.html">MiraiCP::Contact</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="a00151.html#a9133845dcf5eab2000a3867964972ea5">groupid</a>() const</td><td class="entry"><a class="el" href="a00151.html">MiraiCP::Contact</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
@@ -128,25 +128,26 @@ $(document).ready(function(){initNavTree('a00151.html',''); initResizable(); });
   <tr class="odd"><td class="entry"><a class="el" href="a00151.html#aa8c8175194deb878d7943ab38298c9f6">send1</a>(const char *msg, int retryTime, JNIEnv *env)</td><td class="entry"><a class="el" href="a00151.html">MiraiCP::Contact</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">private</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="a00151.html#ad05051993a591b55847d87265f7691df">sendMessage</a>(T... msg)</td><td class="entry"><a class="el" href="a00151.html">MiraiCP::Contact</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="odd"><td class="entry"><a class="el" href="a00151.html#aaaa4eb0d64b48e01748f007e2b6088bd">sendMessage</a>(T msg, int retryTime=3, JNIEnv *env=nullptr)</td><td class="entry"><a class="el" href="a00151.html">MiraiCP::Contact</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00151.html#acce2e1538b425fb729bdd013d89ccebe">sendMiraiCode</a>(const MiraiCode &amp;msg, int retryTime=3, JNIEnv *env=nullptr) const</td><td class="entry"><a class="el" href="a00151.html">MiraiCP::Contact</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00151.html#aea9fcaf72d95995091c8e1af601613fb">sendMsg</a>(const std::string &amp;msg, int retryTime=3, JNIEnv *env=nullptr)</td><td class="entry"><a class="el" href="a00151.html">MiraiCP::Contact</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00151.html#af7311c2c398e6c35f9135f2f8e465b3c">sendMsg</a>(const MiraiCode &amp;msg, int retryTime=3, JNIEnv *env=nullptr)</td><td class="entry"><a class="el" href="a00151.html">MiraiCP::Contact</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00151.html#aea8a7b7829dc335717a362b7ba86a63f">sendMsg</a>(std::vector&lt; std::string &gt; msg, int retryTime=3, JNIEnv *env=nullptr)</td><td class="entry"><a class="el" href="a00151.html">MiraiCP::Contact</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="a00151.html#a3f5b51075414c795959a0ec3a2ab90a4">sendMiraiCode</a>(const MiraiCode &amp;msg, int retryTime=3, JNIEnv *env=nullptr) const =delete</td><td class="entry"><a class="el" href="a00151.html">MiraiCP::Contact</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="a00151.html#a7781ce4dbc8a318c90d41d5ea8a47a15">sendMsg</a>(const std::string &amp;msg, int retryTime=3, JNIEnv *env=nullptr)=delete</td><td class="entry"><a class="el" href="a00151.html">MiraiCP::Contact</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="a00151.html#a3935aae9cff20c0cc5671eefeab4625f">sendMsg</a>(const MiraiCode &amp;msg, int retryTime=3, JNIEnv *env=nullptr)=delete</td><td class="entry"><a class="el" href="a00151.html">MiraiCP::Contact</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="a00151.html#ae90701b09ae72fc47615e1bf917b634c">sendMsg</a>(std::vector&lt; std::string &gt; msg, int retryTime=3, JNIEnv *env=nullptr)=delete</td><td class="entry"><a class="el" href="a00151.html">MiraiCP::Contact</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="a00151.html#a41c2bfbf83d42ca538693071dc7c2ec7">sendMsg0</a>(const std::string &amp;msg, int retryTime, bool miraicode=false, JNIEnv *=nullptr) const</td><td class="entry"><a class="el" href="a00151.html">MiraiCP::Contact</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
   <tr class="odd"><td class="entry"><a class="el" href="a00151.html#ae2cbfaaee8ec2b2723978efdc0825f0c">sendVoice0</a>(const std::string &amp;path, JNIEnv *=nullptr)</td><td class="entry"><a class="el" href="a00151.html">MiraiCP::Contact</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00151.html#a9d79a7c7b1590f4e12b6637b1d5a5363">serialization</a>() const</td><td class="entry"><a class="el" href="a00151.html">MiraiCP::Contact</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00151.html#a6032a97a7afdc3a9ceba4cb13b045002">serializationToString</a>() const</td><td class="entry"><a class="el" href="a00151.html">MiraiCP::Contact</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="a00151.html#a33610ee439fb37d38456c0659e3c2e00">serialization</a>() const =delete</td><td class="entry"><a class="el" href="a00151.html">MiraiCP::Contact</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="a00151.html#a46176a8b9219f3b2964117432dfaf478">serializationToString</a>() const =delete</td><td class="entry"><a class="el" href="a00151.html">MiraiCP::Contact</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="a00151.html#a89fb588a12ff2d4de10722788945ea55">toJson</a>() const</td><td class="entry"><a class="el" href="a00151.html">MiraiCP::Contact</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="odd"><td class="entry"><a class="el" href="a00151.html#afdd2c14fc9c7c6fceaffe4478aed8b68">toString</a>() const</td><td class="entry"><a class="el" href="a00151.html">MiraiCP::Contact</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="a00151.html#ae861b52ebe6311825d4e352e99fd286c">type</a>() const</td><td class="entry"><a class="el" href="a00151.html">MiraiCP::Contact</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00151.html#a2afe293fd81628ce7467afd6036b31c0">uploadImg</a>(const std::string &amp;path, JNIEnv *=nullptr) const</td><td class="entry"><a class="el" href="a00151.html">MiraiCP::Contact</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="a00151.html#ab764736fc0b82924ede105fd8dc41778">uploadFlashImg</a>(const std::string &amp;path, JNIEnv *=nullptr) const</td><td class="entry"><a class="el" href="a00151.html">MiraiCP::Contact</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="a00151.html#a2afe293fd81628ce7467afd6036b31c0">uploadImg</a>(const std::string &amp;path, JNIEnv *=nullptr) const</td><td class="entry"><a class="el" href="a00151.html">MiraiCP::Contact</a></td><td class="entry"></td></tr>
 </table></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">生成于 2022年 一月 10日 星期一 15:34:48 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="footer">生成于 2022年 二月 7日 星期一 12:18:50 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
 <script type="text/javascript">

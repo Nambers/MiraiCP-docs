@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiraiCP: 取好友下一条信息</title>
+<title>MiraiCP: 注册一条指令</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MiraiCP
-   &#160;<span id="projectnumber">v2.9.1</span>
+   &#160;<span id="projectnumber">v2.10.0</span>
    </div>
    <div id="projectbrief">MiraiCP api document</div>
   </td>
@@ -90,18 +90,29 @@ $(document).ready(function(){initNavTree('a00489.html',''); initResizable(); });
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">取好友下一条信息</div></div>
+  <div class="headertitle"><div class="title">注册一条指令</div></div>
 </div><!--header-->
 <div class="contents">
-<p >@detail 私聊消息事件类声明 (check in version 2.9.0) </p><div class="fragment"><div class="line"><span class="keyword">auto</span> tmp = e.nextMessage();</div>
-<div class="line">e.sender.sendMessage(tmp);</div>
-</div><!-- fragment --></div><!-- contents -->
+<p >指令 Interface</p>
+<div class="fragment"><div class="line"><span class="keyword">class </span>a: <span class="keyword">public</span> IRawCommand{</div>
+<div class="line"> <span class="keyword">public</span>:</div>
+<div class="line">     IRawCommand::Config config()<span class="keyword"> override</span>{</div>
+<div class="line">         <span class="keywordflow">return</span> IRawCommand::Config(<span class="stringliteral">&quot;test&quot;</span>);</div>
+<div class="line">     }</div>
+<div class="line">     <span class="keywordtype">void</span> onCommand(std::optional&lt;Contact&gt; c, <span class="keyword">const</span> Bot&amp; b, <span class="keyword">const</span> MessageChain&amp; a)<span class="keyword"> override</span>{</div>
+<div class="line">         Logger::logger.info(a.toMiraiCode());</div>
+<div class="line">     }</div>
+<div class="line">     a() = <span class="keywordflow">default</span>;</div>
+<div class="line"> };</div>
+</div><!-- fragment --><p> 然后在<code>onEnable()</code>里 </p><div class="fragment"><div class="line">CommandManager::commandManager.registerCommand(a());</div>
+</div><!-- fragment --> <dl class="section attention"><dt>注意</dt><dd>loader端的命令只支持从console传入, plugin端是对接mirai的RawCommand</dd></dl>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">生成于 2022年 一月 10日 星期一 15:34:47 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="footer">生成于 2022年 二月 7日 星期一 12:18:50 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
 <script type="text/javascript">

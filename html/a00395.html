@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MiraiCP
-   &#160;<span id="projectnumber">v2.9.1</span>
+   &#160;<span id="projectnumber">v2.10.0</span>
    </div>
    <div id="projectbrief">MiraiCP api document</div>
   </td>
@@ -173,7 +173,7 @@ Private 属性</h2></td></tr>
 <div class="textblock"><p >miraicode字符串 </p>
 <dl class="section attention"><dt>注意</dt><dd>MiraiCode会把非miraicode组成部分(非[mirai:])转码, 输出转码前的文本用toString, 参考: <a href="https://github.com/mamoe/mirai/blob/dev/docs/Messages.md#%E8%BD%AC%E4%B9%89%E8%A7%84%E5%88%99">https://github.com/mamoe/mirai/blob/dev/docs/Messages.md#%E8%BD%AC%E4%B9%89%E8%A7%84%E5%88%99</a> @detail 为了便捷使用，构造函数不以explicit注释 </dd></dl>
 
-<p class="definition">在文件 <a class="el" href="a00095_source.html">MiraiCode.h</a> 第 <a class="el" href="a00095_source.html#l00031">31</a> 行定义.</p>
+<p class="definition">在文件 <a class="el" href="a00095_source.html">MiraiCode.h</a> 第 <a class="el" href="a00095_source.html#l00033">33</a> 行定义.</p>
 </div><h2 class="groupheader">构造及析构函数说明</h2>
 <a id="a357aa786136dc94421877f5572ca150a" name="a357aa786136dc94421877f5572ca150a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a357aa786136dc94421877f5572ca150a">&#9670;&nbsp;</a></span>MiraiCode() <span class="overload">[1/2]</span></h2>
@@ -201,11 +201,11 @@ Private 属性</h2></td></tr>
 
 <p>从MiraiCodeable类型初始化一个miraicode字符串 </p>
 
-<p class="definition">在文件 <a class="el" href="a00095_source.html">MiraiCode.h</a> 第 <a class="el" href="a00095_source.html#l00045">45</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>                                    { <span class="comment">// NOLINT(google-explicit-constructor)</span></div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>            <a class="code hl_variable" href="a00395.html#a10f382c47adbdf7874ee6aff2c1b1850">content</a> = a-&gt;toMiraiCode();</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        }</div>
-<div class="ttc" id="aa00395_html_a10f382c47adbdf7874ee6aff2c1b1850"><div class="ttname"><a href="a00395.html#a10f382c47adbdf7874ee6aff2c1b1850">MiraiCP::MiraiCode::content</a></div><div class="ttdeci">std::string content</div><div class="ttdef"><b>Definition:</b> <a href="a00095_source.html#l00033">MiraiCode.h:33</a></div></div>
+<p class="definition">在文件 <a class="el" href="a00095_source.html">MiraiCode.h</a> 第 <a class="el" href="a00095_source.html#l00047">47</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>                                    { <span class="comment">// NOLINT(google-explicit-constructor)</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>            <a class="code hl_variable" href="a00395.html#a10f382c47adbdf7874ee6aff2c1b1850">content</a> = a-&gt;toMiraiCode();</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        }</div>
+<div class="ttc" id="aa00395_html_a10f382c47adbdf7874ee6aff2c1b1850"><div class="ttname"><a href="a00395.html#a10f382c47adbdf7874ee6aff2c1b1850">MiraiCP::MiraiCode::content</a></div><div class="ttdeci">std::string content</div><div class="ttdef"><b>Definition:</b> <a href="a00095_source.html#l00035">MiraiCode.h:35</a></div></div>
 </div><!-- fragment --><div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-2-trigger" src="closed.png" alt="+"/> 函数调用图:</div>
 <div id="dynsection-2-summary" class="dynsummary" style="display:block;">
@@ -275,7 +275,7 @@ Private 属性</h2></td></tr>
 <map name="aa00395_a0d635f5decbaa8f14f9e255efb8654f0_cgraph" id="aa00395_a0d635f5decbaa8f14f9e255efb8654f0_cgraph">
 <area shape="rect" title=" " alt="" coords="5,5,140,47"/>
 <area shape="rect" href="a00131.html#a01f4fe41f8bef55b95953750f5cfb0c2" title="转义miraicode格式" alt="" coords="188,5,359,47"/>
-<area shape="rect" href="a00131.html#a7d114f18a24887ca125a869802e43118" title="替换全部在一个字符串中." alt="" coords="407,13,564,39"/>
+<area shape="rect" href="a00131.html#a939c6b8139fec1968a2d8b45bf3e46d0" title="替换全部在一个字符串中." alt="" coords="407,13,564,39"/>
 </map>
 </div>
 
@@ -308,10 +308,10 @@ Private 属性</h2></td></tr>
 
 <p>不执行转义，适用于已经被MiraiCode转义过的字符串 </p>
 
-<p class="definition">在文件 <a class="el" href="a00095_source.html">MiraiCode.h</a> 第 <a class="el" href="a00095_source.html#l00083">83</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>                                                                    {</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>            <span class="keywordflow">return</span> {a, <span class="keyword">false</span>};</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        }</div>
+<p class="definition">在文件 <a class="el" href="a00095_source.html">MiraiCode.h</a> 第 <a class="el" href="a00095_source.html#l00085">85</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>                                                                    {</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>            <span class="keywordflow">return</span> {a, <span class="keyword">false</span>};</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -341,10 +341,10 @@ Private 属性</h2></td></tr>
 
 <p>不执行转义，因为MiraiCodeable的toMiraiCode已经转义过了 </p>
 
-<p class="definition">在文件 <a class="el" href="a00095_source.html">MiraiCode.h</a> 第 <a class="el" href="a00095_source.html#l00088">88</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>                                                                  {</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>            <span class="keywordflow">return</span> {a-&gt;toMiraiCode(), <span class="keyword">false</span>};</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        }</div>
+<p class="definition">在文件 <a class="el" href="a00095_source.html">MiraiCode.h</a> 第 <a class="el" href="a00095_source.html#l00090">90</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>                                                                  {</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>            <span class="keywordflow">return</span> {a-&gt;toMiraiCode(), <span class="keyword">false</span>};</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        }</div>
 </div><!-- fragment --><div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-5-trigger" src="closed.png" alt="+"/> 函数调用图:</div>
 <div id="dynsection-5-summary" class="dynsummary" style="display:block;">
@@ -383,10 +383,10 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="a00095_source.html">MiraiCode.h</a> 第 <a class="el" href="a00095_source.html#l00061">61</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>                                                {</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>            <span class="keywordflow">return</span> {<a class="code hl_variable" href="a00395.html#a10f382c47adbdf7874ee6aff2c1b1850">content</a> + a.content};</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        }</div>
+<p class="definition">在文件 <a class="el" href="a00095_source.html">MiraiCode.h</a> 第 <a class="el" href="a00095_source.html#l00063">63</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>                                                {</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>            <span class="keywordflow">return</span> {<a class="code hl_variable" href="a00395.html#a10f382c47adbdf7874ee6aff2c1b1850">content</a> + a.content};</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -414,10 +414,10 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="a00095_source.html">MiraiCode.h</a> 第 <a class="el" href="a00095_source.html#l00057">57</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>                                                {</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>            <span class="keywordflow">return</span> {<a class="code hl_variable" href="a00395.html#a10f382c47adbdf7874ee6aff2c1b1850">content</a> + a};</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        }</div>
+<p class="definition">在文件 <a class="el" href="a00095_source.html">MiraiCode.h</a> 第 <a class="el" href="a00095_source.html#l00059">59</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>                                                {</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>            <span class="keywordflow">return</span> {<a class="code hl_variable" href="a00395.html#a10f382c47adbdf7874ee6aff2c1b1850">content</a> + a};</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -445,10 +445,10 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="a00095_source.html">MiraiCode.h</a> 第 <a class="el" href="a00095_source.html#l00065">65</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>                                          {</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>            <span class="keywordflow">return</span> {<a class="code hl_variable" href="a00395.html#a10f382c47adbdf7874ee6aff2c1b1850">content</a> + a-&gt;content};</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        }</div>
+<p class="definition">在文件 <a class="el" href="a00095_source.html">MiraiCode.h</a> 第 <a class="el" href="a00095_source.html#l00067">67</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>                                          {</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>            <span class="keywordflow">return</span> {<a class="code hl_variable" href="a00395.html#a10f382c47adbdf7874ee6aff2c1b1850">content</a> + a-&gt;content};</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -476,10 +476,10 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="a00095_source.html">MiraiCode.h</a> 第 <a class="el" href="a00095_source.html#l00053">53</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>                                              {</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>            <span class="keywordflow">return</span> {<a class="code hl_variable" href="a00395.html#a10f382c47adbdf7874ee6aff2c1b1850">content</a> + a-&gt;toMiraiCode()};</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        }</div>
+<p class="definition">在文件 <a class="el" href="a00095_source.html">MiraiCode.h</a> 第 <a class="el" href="a00095_source.html#l00055">55</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>                                              {</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>            <span class="keywordflow">return</span> {<a class="code hl_variable" href="a00395.html#a10f382c47adbdf7874ee6aff2c1b1850">content</a> + a-&gt;toMiraiCode()};</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        }</div>
 </div><!-- fragment --><div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-6-trigger" src="closed.png" alt="+"/> 函数调用图:</div>
 <div id="dynsection-6-summary" class="dynsummary" style="display:block;">
@@ -518,11 +518,11 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="a00095_source.html">MiraiCode.h</a> 第 <a class="el" href="a00095_source.html#l00069">69</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>                                                 {</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>            this-&gt;<a class="code hl_variable" href="a00395.html#a10f382c47adbdf7874ee6aff2c1b1850">content</a> = a;</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>            <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        }</div>
+<p class="definition">在文件 <a class="el" href="a00095_source.html">MiraiCode.h</a> 第 <a class="el" href="a00095_source.html#l00071">71</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>                                                 {</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>            this-&gt;<a class="code hl_variable" href="a00395.html#a10f382c47adbdf7874ee6aff2c1b1850">content</a> = a;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>            <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -550,11 +550,11 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="a00095_source.html">MiraiCode.h</a> 第 <a class="el" href="a00095_source.html#l00078">78</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>                                           {</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>            <span class="keywordflow">return</span> <a class="code hl_function" href="a00395.html#a357aa786136dc94421877f5572ca150a">MiraiCode</a>(a) + <span class="keyword">this</span>;</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        }</div>
-<div class="ttc" id="aa00395_html_a357aa786136dc94421877f5572ca150a"><div class="ttname"><a href="a00395.html#a357aa786136dc94421877f5572ca150a">MiraiCP::MiraiCode::MiraiCode</a></div><div class="ttdeci">MiraiCode(MiraiCodeable *a)</div><div class="ttdoc">从MiraiCodeable类型初始化一个miraicode字符串</div><div class="ttdef"><b>Definition:</b> <a href="a00095_source.html#l00045">MiraiCode.h:45</a></div></div>
+<p class="definition">在文件 <a class="el" href="a00095_source.html">MiraiCode.h</a> 第 <a class="el" href="a00095_source.html#l00080">80</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>                                           {</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>            <span class="keywordflow">return</span> <a class="code hl_function" href="a00395.html#a357aa786136dc94421877f5572ca150a">MiraiCode</a>(a) + <span class="keyword">this</span>;</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        }</div>
+<div class="ttc" id="aa00395_html_a357aa786136dc94421877f5572ca150a"><div class="ttname"><a href="a00395.html#a357aa786136dc94421877f5572ca150a">MiraiCP::MiraiCode::MiraiCode</a></div><div class="ttdeci">MiraiCode(MiraiCodeable *a)</div><div class="ttdoc">从MiraiCodeable类型初始化一个miraicode字符串</div><div class="ttdef"><b>Definition:</b> <a href="a00095_source.html#l00047">MiraiCode.h:47</a></div></div>
 </div><!-- fragment --><div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-7-trigger" src="closed.png" alt="+"/> 函数调用图:</div>
 <div id="dynsection-7-summary" class="dynsummary" style="display:block;">
@@ -594,10 +594,10 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="a00095_source.html">MiraiCode.h</a> 第 <a class="el" href="a00095_source.html#l00074">74</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>                                         {</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>            <span class="keywordflow">return</span> {<a class="code hl_variable" href="a00395.html#a10f382c47adbdf7874ee6aff2c1b1850">content</a> + a-&gt;toMiraiCode()};</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        }</div>
+<p class="definition">在文件 <a class="el" href="a00095_source.html">MiraiCode.h</a> 第 <a class="el" href="a00095_source.html#l00076">76</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>                                         {</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>            <span class="keywordflow">return</span> {<a class="code hl_variable" href="a00395.html#a10f382c47adbdf7874ee6aff2c1b1850">content</a> + a-&gt;toMiraiCode()};</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        }</div>
 </div><!-- fragment --><div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-8-trigger" src="closed.png" alt="+"/> 函数调用图:</div>
 <div id="dynsection-8-summary" class="dynsummary" style="display:block;">
@@ -639,10 +639,10 @@ Private 属性</h2></td></tr>
 
 <p>实现了 <a class="el" href="a00391.html#a96bdd3af5e564960b2b7f562032b1a15">MiraiCP::MiraiCodeable</a>.</p>
 
-<p class="definition">在文件 <a class="el" href="a00095_source.html">MiraiCode.h</a> 第 <a class="el" href="a00095_source.html#l00040">40</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>                                               {</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="a00395.html#a10f382c47adbdf7874ee6aff2c1b1850">content</a>;</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        }</div>
+<p class="definition">在文件 <a class="el" href="a00095_source.html">MiraiCode.h</a> 第 <a class="el" href="a00095_source.html#l00042">42</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>                                               {</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="a00395.html#a10f382c47adbdf7874ee6aff2c1b1850">content</a>;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        }</div>
 </div><!-- fragment --><div id="dynsection-9" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-9-trigger" src="closed.png" alt="+"/> 这是这个函数的调用关系图:</div>
 <div id="dynsection-9-summary" class="dynsummary" style="display:block;">
@@ -650,10 +650,8 @@ Private 属性</h2></td></tr>
 <div id="dynsection-9-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="a00395_a2a17d996287c93b8b048a18b58e955c9_icgraph.png" border="0" usemap="#aa00395_a2a17d996287c93b8b048a18b58e955c9_icgraph" alt=""/></div>
 <map name="aa00395_a2a17d996287c93b8b048a18b58e955c9_icgraph" id="aa00395_a2a17d996287c93b8b048a18b58e955c9_icgraph">
-<area shape="rect" title="和toString作用一样, 不过不会自动转码" alt="" coords="268,49,403,90"/>
-<area shape="rect" href="a00151.html#a805cd512dd314376e29bdc7e37f963f8" title=" " alt="" coords="31,5,195,32"/>
-<area shape="rect" href="a00151.html#acce2e1538b425fb729bdd013d89ccebe" title="发送MiraiCode信息" alt="" coords="5,56,220,83"/>
-<area shape="rect" href="a00151.html#af7311c2c398e6c35f9135f2f8e465b3c" title="以纯文本发送MiraiCode信息" alt="" coords="21,107,204,133"/>
+<area shape="rect" title="和toString作用一样, 不过不会自动转码" alt="" coords="217,5,352,47"/>
+<area shape="rect" href="a00151.html#a805cd512dd314376e29bdc7e37f963f8" title=" " alt="" coords="5,13,169,39"/>
 </map>
 </div>
 
@@ -690,7 +688,7 @@ Private 属性</h2></td></tr>
 <map name="aa00395_a9b46bf5804f88f2504d97c87d3e1b7fc_cgraph" id="aa00395_a9b46bf5804f88f2504d97c87d3e1b7fc_cgraph">
 <area shape="rect" title="输出当前内容, 会自动转码" alt="" coords="5,5,140,47"/>
 <area shape="rect" href="a00131.html#ae7bf212fddf60af59042677c3a7753a5" title="从miraicode转义到正常" alt="" coords="188,5,375,47"/>
-<area shape="rect" href="a00131.html#a7d114f18a24887ca125a869802e43118" title="替换全部在一个字符串中." alt="" coords="423,13,580,39"/>
+<area shape="rect" href="a00131.html#a939c6b8139fec1968a2d8b45bf3e46d0" title="替换全部在一个字符串中." alt="" coords="423,13,580,39"/>
 </map>
 </div>
 
@@ -717,7 +715,7 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="a00095_source.html">MiraiCode.h</a> 第 <a class="el" href="a00095_source.html#l00033">33</a> 行定义.</p>
+<p class="definition">在文件 <a class="el" href="a00095_source.html">MiraiCode.h</a> 第 <a class="el" href="a00095_source.html#l00035">35</a> 行定义.</p>
 
 </div>
 </div>
@@ -732,7 +730,7 @@ Private 属性</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="a00129.html">MiraiCP</a></li><li class="navelem"><a class="el" href="a00395.html">MiraiCode</a></li>
-    <li class="footer">生成于 2022年 一月 10日 星期一 15:34:48 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="footer">生成于 2022年 二月 7日 星期一 12:18:51 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
 <script type="text/javascript">

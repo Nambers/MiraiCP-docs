@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MiraiCP
-   &#160;<span id="projectnumber">v2.9.1</span>
+   &#160;<span id="projectnumber">v2.10.0</span>
    </div>
    <div id="projectbrief">MiraiCP api document</div>
   </td>
@@ -180,7 +180,7 @@ Public 成员函数</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><p >纯文本信息 </p>
 
-<p class="definition">在文件 <a class="el" href="a00107_source.html">SingleMessage.h</a> 第 <a class="el" href="a00107_source.html#l00086">86</a> 行定义.</p>
+<p class="definition">在文件 <a class="el" href="a00107_source.html">SingleMessage.h</a> 第 <a class="el" href="a00107_source.html#l00085">85</a> 行定义.</p>
 </div><h2 class="groupheader">构造及析构函数说明</h2>
 <a id="af0ffa277c961cde9e5fc0ecc23ff224c" name="af0ffa277c961cde9e5fc0ecc23ff224c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af0ffa277c961cde9e5fc0ecc23ff224c">&#9670;&nbsp;</a></span>PlainText() <span class="overload">[1/2]</span></h2>
@@ -206,17 +206,17 @@ Public 成员函数</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="a00104_source.html">SingleMessage.cpp</a> 第 <a class="el" href="a00104_source.html#l00072">72</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>                                                : <a class="code hl_function" href="a00407.html#a1e645ecfc57a7b630290d88e7cc9ae39">SingleMessage</a>(sg) {</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        <span class="keywordflow">if</span> (sg.type != 0)</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>            <a class="code hl_define" href="a00041.html#a05895baa03633917e58dcb7228229097">MiraiCPThrow</a>(IllegalArgumentException(</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>                    <span class="stringliteral">&quot;Cannot convert(&quot;</span> + <a class="code hl_variable" href="a00407.html#a3fbf4e209a236ba91885d9523d0163a2">MiraiCP::SingleMessage::messageType</a>[sg.type] + <span class="stringliteral">&quot;) to PlainText&quot;</span>));</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        this-&gt;<a class="code hl_variable" href="a00407.html#a7ebcc9775985874bb7a09bd1d8274a24">content</a> = sg.content;</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    }</div>
+<p class="definition">在文件 <a class="el" href="a00104_source.html">SingleMessage.cpp</a> 第 <a class="el" href="a00104_source.html#l00074">74</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>                                                : <a class="code hl_function" href="a00407.html#a1e645ecfc57a7b630290d88e7cc9ae39">SingleMessage</a>(sg) {</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        <span class="keywordflow">if</span> (sg.type != 0)</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>            <a class="code hl_define" href="a00041.html#a05895baa03633917e58dcb7228229097">MiraiCPThrow</a>(IllegalArgumentException(</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>                    <span class="stringliteral">&quot;Cannot convert(&quot;</span> + <a class="code hl_variable" href="a00407.html#a3fbf4e209a236ba91885d9523d0163a2">MiraiCP::SingleMessage::messageType</a>[sg.type] + <span class="stringliteral">&quot;) to PlainText&quot;</span>));</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        this-&gt;<a class="code hl_variable" href="a00407.html#a7ebcc9775985874bb7a09bd1d8274a24">content</a> = sg.content;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    }</div>
 <div class="ttc" id="aa00041_html_a05895baa03633917e58dcb7228229097"><div class="ttname"><a href="a00041.html#a05895baa03633917e58dcb7228229097">MiraiCPThrow</a></div><div class="ttdeci">#define MiraiCPThrow(x)</div><div class="ttdef"><b>Definition:</b> <a href="a00041_source.html#l00019">Exception.h:19</a></div></div>
-<div class="ttc" id="aa00407_html_a1e645ecfc57a7b630290d88e7cc9ae39"><div class="ttname"><a href="a00407.html#a1e645ecfc57a7b630290d88e7cc9ae39">MiraiCP::SingleMessage::SingleMessage</a></div><div class="ttdeci">SingleMessage(int type, std::string content, std::string prefix=&quot;:&quot;)</div><div class="ttdoc">构建单条</div><div class="ttdef"><b>Definition:</b> <a href="a00107_source.html#l00080">SingleMessage.h:80</a></div></div>
-<div class="ttc" id="aa00407_html_a3fbf4e209a236ba91885d9523d0163a2"><div class="ttname"><a href="a00407.html#a3fbf4e209a236ba91885d9523d0163a2">MiraiCP::SingleMessage::messageType</a></div><div class="ttdeci">static std::map&lt; int, std::string &gt; messageType</div><div class="ttdef"><b>Definition:</b> <a href="a00107_source.html#l00047">SingleMessage.h:47</a></div></div>
-<div class="ttc" id="aa00407_html_a7ebcc9775985874bb7a09bd1d8274a24"><div class="ttname"><a href="a00407.html#a7ebcc9775985874bb7a09bd1d8274a24">MiraiCP::SingleMessage::content</a></div><div class="ttdeci">std::string content</div><div class="ttdef"><b>Definition:</b> <a href="a00107_source.html#l00063">SingleMessage.h:63</a></div></div>
+<div class="ttc" id="aa00407_html_a1e645ecfc57a7b630290d88e7cc9ae39"><div class="ttname"><a href="a00407.html#a1e645ecfc57a7b630290d88e7cc9ae39">MiraiCP::SingleMessage::SingleMessage</a></div><div class="ttdeci">SingleMessage(int type, std::string content, std::string prefix=&quot;:&quot;)</div><div class="ttdoc">构建单条</div><div class="ttdef"><b>Definition:</b> <a href="a00107_source.html#l00079">SingleMessage.h:79</a></div></div>
+<div class="ttc" id="aa00407_html_a3fbf4e209a236ba91885d9523d0163a2"><div class="ttname"><a href="a00407.html#a3fbf4e209a236ba91885d9523d0163a2">MiraiCP::SingleMessage::messageType</a></div><div class="ttdeci">static std::map&lt; int, std::string &gt; messageType</div><div class="ttdef"><b>Definition:</b> <a href="a00107_source.html#l00046">SingleMessage.h:46</a></div></div>
+<div class="ttc" id="aa00407_html_a7ebcc9775985874bb7a09bd1d8274a24"><div class="ttname"><a href="a00407.html#a7ebcc9775985874bb7a09bd1d8274a24">MiraiCP::SingleMessage::content</a></div><div class="ttdeci">std::string content</div><div class="ttdef"><b>Definition:</b> <a href="a00107_source.html#l00062">SingleMessage.h:62</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -246,13 +246,13 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="a00107_source.html">SingleMessage.h</a> 第 <a class="el" href="a00107_source.html#l00097">97</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>                                       : <a class="code hl_function" href="a00407.html#a1e645ecfc57a7b630290d88e7cc9ae39">SingleMessage</a>(<a class="code hl_function" href="a00411.html#a440b92da26612820bd700e2ce9a5e999">PlainText::type</a>(), ([&amp;a]() -&gt; std::string {</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>                                                           std::stringstream sst;</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>                                                           sst &lt;&lt; a;</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>                                                           <span class="keywordflow">return</span> sst.str();</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>                                                       })()) {}</div>
-<div class="ttc" id="aa00411_html_a440b92da26612820bd700e2ce9a5e999"><div class="ttname"><a href="a00411.html#a440b92da26612820bd700e2ce9a5e999">MiraiCP::PlainText::type</a></div><div class="ttdeci">static int type()</div><div class="ttdef"><b>Definition:</b> <a href="a00107_source.html#l00088">SingleMessage.h:88</a></div></div>
+<p class="definition">在文件 <a class="el" href="a00107_source.html">SingleMessage.h</a> 第 <a class="el" href="a00107_source.html#l00096">96</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>                                       : <a class="code hl_function" href="a00407.html#a1e645ecfc57a7b630290d88e7cc9ae39">SingleMessage</a>(<a class="code hl_function" href="a00411.html#a440b92da26612820bd700e2ce9a5e999">PlainText::type</a>(), ([&amp;a]() -&gt; std::string {</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>                                                           std::stringstream sst;</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>                                                           sst &lt;&lt; a;</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>                                                           <span class="keywordflow">return</span> sst.str();</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>                                                       })()) {}</div>
+<div class="ttc" id="aa00411_html_a440b92da26612820bd700e2ce9a5e999"><div class="ttname"><a href="a00411.html#a440b92da26612820bd700e2ce9a5e999">MiraiCP::PlainText::type</a></div><div class="ttdeci">static int type()</div><div class="ttdef"><b>Definition:</b> <a href="a00107_source.html#l00087">SingleMessage.h:87</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -281,10 +281,10 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="a00107_source.html">SingleMessage.h</a> 第 <a class="el" href="a00107_source.html#l00103">103</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>                                                  {</div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>            <span class="keywordflow">return</span> this-&gt;<a class="code hl_variable" href="a00407.html#a7ebcc9775985874bb7a09bd1d8274a24">content</a> == p.content;</div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>        }</div>
+<p class="definition">在文件 <a class="el" href="a00107_source.html">SingleMessage.h</a> 第 <a class="el" href="a00107_source.html#l00102">102</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>                                                  {</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>            <span class="keywordflow">return</span> this-&gt;<a class="code hl_variable" href="a00407.html#a7ebcc9775985874bb7a09bd1d8274a24">content</a> == p.content;</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -313,14 +313,14 @@ template&lt;typename T &gt; </div>
 
 <p>重载 <a class="el" href="a00407.html#a0a408adbe935640d5b02b8ba084dfaa0">MiraiCP::SingleMessage</a> .</p>
 
-<p class="definition">在文件 <a class="el" href="a00104_source.html">SingleMessage.cpp</a> 第 <a class="el" href="a00104_source.html#l00048">48</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>                                         {</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        <a class="code hl_typedef" href="a00122.html#ab701e3ac61a85b337ec5c1abaad6742d">nlohmann::json</a> j;</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        j[<span class="stringliteral">&quot;key&quot;</span>] = <span class="stringliteral">&quot;plaintext&quot;</span>;</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        j[<span class="stringliteral">&quot;content&quot;</span>] = <a class="code hl_variable" href="a00407.html#a7ebcc9775985874bb7a09bd1d8274a24">content</a>;</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        <span class="keywordflow">return</span> j;</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    }</div>
-<div class="ttc" id="aa00122_html_ab701e3ac61a85b337ec5c1abaad6742d"><div class="ttname"><a href="a00122.html#ab701e3ac61a85b337ec5c1abaad6742d">json</a></div><div class="ttdeci">nlohmann::json json</div><div class="ttdef"><b>Definition:</b> <a href="a00122_source.html#l00042">utils.cpp:42</a></div></div>
+<p class="definition">在文件 <a class="el" href="a00104_source.html">SingleMessage.cpp</a> 第 <a class="el" href="a00104_source.html#l00050">50</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>                                         {</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        <a class="code hl_typedef" href="a00122.html#ab701e3ac61a85b337ec5c1abaad6742d">nlohmann::json</a> j;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        j[<span class="stringliteral">&quot;key&quot;</span>] = <span class="stringliteral">&quot;plaintext&quot;</span>;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        j[<span class="stringliteral">&quot;content&quot;</span>] = <a class="code hl_variable" href="a00407.html#a7ebcc9775985874bb7a09bd1d8274a24">content</a>;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        <span class="keywordflow">return</span> j;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    }</div>
+<div class="ttc" id="aa00122_html_ab701e3ac61a85b337ec5c1abaad6742d"><div class="ttname"><a href="a00122.html#ab701e3ac61a85b337ec5c1abaad6742d">json</a></div><div class="ttdeci">nlohmann::json json</div><div class="ttdef"><b>Definition:</b> <a href="a00122_source.html#l00032">utils.cpp:32</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -351,10 +351,10 @@ template&lt;typename T &gt; </div>
 
 <p>重载 <a class="el" href="a00407.html#ade93b603f22f584ada2a003c9e523b89">MiraiCP::SingleMessage</a> .</p>
 
-<p class="definition">在文件 <a class="el" href="a00107_source.html">SingleMessage.h</a> 第 <a class="el" href="a00107_source.html#l00089">89</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>                                               {</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="a00407.html#a7ebcc9775985874bb7a09bd1d8274a24">content</a>;</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        }</div>
+<p class="definition">在文件 <a class="el" href="a00107_source.html">SingleMessage.h</a> 第 <a class="el" href="a00107_source.html#l00088">88</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>                                               {</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="a00407.html#a7ebcc9775985874bb7a09bd1d8274a24">content</a>;</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -381,8 +381,8 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="a00107_source.html">SingleMessage.h</a> 第 <a class="el" href="a00107_source.html#l00088">88</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>{ <span class="keywordflow">return</span> 0; }</div>
+<p class="definition">在文件 <a class="el" href="a00107_source.html">SingleMessage.h</a> 第 <a class="el" href="a00107_source.html#l00087">87</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>{ <span class="keywordflow">return</span> 0; }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -397,7 +397,7 @@ template&lt;typename T &gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="a00129.html">MiraiCP</a></li><li class="navelem"><a class="el" href="a00411.html">PlainText</a></li>
-    <li class="footer">生成于 2022年 一月 10日 星期一 15:34:48 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="footer">生成于 2022年 二月 7日 星期一 12:18:51 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
 <script type="text/javascript">

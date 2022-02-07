@@ -10,7 +10,7 @@ var hierarchy =
       [ "MiraiCP::Member", "a00375.html", null ]
     ] ],
     [ "MiraiCP::CPPPlugin", "a00155.html", null ],
-    [ "MiraiCP::RemoteFile::Dinfo", "a00447.html", null ],
+    [ "MiraiCP::RemoteFile::Dinfo", "a00451.html", null ],
     [ "MiraiCP::Event", "a00231.html", null ],
     [ "MiraiCP::Event::eventNode", "a00235.html", null ],
     [ "std::exception", null, [
@@ -34,7 +34,7 @@ var hierarchy =
     ] ],
     [ "MiraiCP::MiraiCPException::ExceptionBroadcasting", "a00247.html", null ],
     [ "MiraiCP::Group::file_short_info", "a00343.html", null ],
-    [ "MiraiCP::RemoteFile::Finfo", "a00451.html", null ],
+    [ "MiraiCP::RemoteFile::Finfo", "a00455.html", null ],
     [ "MiraiCP::ForwardedMessage", "a00311.html", null ],
     [ "MiraiCP::ForwardedNode", "a00307.html", null ],
     [ "MiraiCP::Group::GroupSetting", "a00339.html", null ],
@@ -55,17 +55,20 @@ var hierarchy =
       [ "MiraiCP::SingleMessage", "a00407.html", [
         [ "MiraiCP::At", "a00415.html", null ],
         [ "MiraiCP::AtAll", "a00419.html", null ],
-        [ "MiraiCP::Face", "a00455.html", null ],
-        [ "MiraiCP::Image", "a00423.html", null ],
-        [ "MiraiCP::LightApp", "a00427.html", null ],
-        [ "MiraiCP::MarketFace", "a00459.html", null ],
-        [ "MiraiCP::OnlineAudio", "a00439.html", null ],
+        [ "MiraiCP::Face", "a00459.html", null ],
+        [ "MiraiCP::Image", "a00423.html", [
+          [ "MiraiCP::FlashImage", "a00427.html", null ]
+        ] ],
+        [ "MiraiCP::LightApp", "a00431.html", null ],
+        [ "MiraiCP::MarketFace", "a00467.html", null ],
+        [ "MiraiCP::MusicShare", "a00463.html", null ],
+        [ "MiraiCP::OnlineAudio", "a00443.html", null ],
         [ "MiraiCP::OnlineForwardedMessage", "a00315.html", null ],
         [ "MiraiCP::PlainText", "a00411.html", null ],
-        [ "MiraiCP::QuoteReply", "a00435.html", null ],
-        [ "MiraiCP::RemoteFile", "a00443.html", null ],
-        [ "MiraiCP::ServiceMessage", "a00431.html", null ],
-        [ "MiraiCP::UnSupportMessage", "a00463.html", null ]
+        [ "MiraiCP::QuoteReply", "a00439.html", null ],
+        [ "MiraiCP::RemoteFile", "a00447.html", null ],
+        [ "MiraiCP::ServiceMessage", "a00435.html", null ],
+        [ "MiraiCP::UnSupportMessage", "a00471.html", null ]
       ] ]
     ] ],
     [ "MiraiCP::MiraiCPEvent", "a00159.html", [
@@ -92,9 +95,9 @@ var hierarchy =
     [ "MiraiCP::Group::OfflineAnnouncement", "a00335.html", null ],
     [ "MiraiCP::Group::OnlineAnnouncement", "a00331.html", null ],
     [ "MiraiCP::PluginConfig", "a00399.html", null ],
-    [ "MiraiCP::ThreadManager::ThreadInfo", "a00471.html", null ],
-    [ "MiraiCP::ThreadManager", "a00467.html", null ],
-    [ "threadManager", "a00475.html", null ],
-    [ "Tools", "a00479.html", null ],
+    [ "MiraiCP::ThreadManager::ThreadInfo", "a00479.html", null ],
+    [ "MiraiCP::ThreadManager", "a00475.html", null ],
+    [ "threadManager", "a00483.html", null ],
+    [ "Tools", "a00487.html", null ],
     [ "MiraiCP::URLSharer", "a00403.html", null ]
 ];

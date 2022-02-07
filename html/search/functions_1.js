@@ -3,7 +3,7 @@ var searchData=
   ['basicraise_0',['basicRaise',['../a00243.html#a9ae53ee0d2ad64dd25d08506ee4feca7',1,'MiraiCP::MiraiCPException']]],
   ['bot_1',['Bot',['../a00135.html#a924e47e8b0591f395f3dd085c16e16e5',1,'MiraiCP::Bot']]],
   ['botevent_2',['BotEvent',['../a00163.html#aac97ce1eea8254b11b1d427cb53e4d5e',1,'MiraiCP::BotEvent']]],
-  ['botexception_3',['BotException',['../a00263.html#a11c5982f3092e45d3112910b8fc9071b',1,'MiraiCP::BotException']]],
+  ['botexception_3',['BotException',['../a00263.html#a3f3052dbd64d7960b8c5c448a724ab03',1,'MiraiCP::BotException']]],
   ['botid_4',['botid',['../a00151.html#ac257ebdd1591ea5acf6e045abf28ecba',1,'MiraiCP::Contact']]],
   ['botisbeingmutedexception_5',['BotIsBeingMutedException',['../a00267.html#a504bc3ce8a99aa12e236f2cf77cbdb9d',1,'MiraiCP::BotIsBeingMutedException']]],
   ['botjoingroupevent_6',['BotJoinGroupEvent',['../a00195.html#a52f6947edde412772cc67609f9414b61',1,'MiraiCP::BotJoinGroupEvent']]],

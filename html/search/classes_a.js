@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['marketface_0',['MarketFace',['../a00459.html',1,'MiraiCP']]],
+  ['marketface_0',['MarketFace',['../a00467.html',1,'MiraiCP']]],
   ['member_1',['Member',['../a00375.html',1,'MiraiCP']]],
   ['memberexception_2',['MemberException',['../a00275.html',1,'MiraiCP']]],
   ['memberjoinevent_3',['MemberJoinEvent',['../a00183.html',1,'MiraiCP']]],
@@ -15,5 +15,6 @@ var searchData=
   ['miraicpevent_12',['MiraiCPEvent',['../a00159.html',1,'MiraiCP']]],
   ['miraicpexception_13',['MiraiCPException',['../a00243.html',1,'MiraiCP']]],
   ['miraicpexceptionevent_14',['MiraiCPExceptionEvent',['../a00227.html',1,'MiraiCP']]],
-  ['muteexception_15',['MuteException',['../a00271.html',1,'MiraiCP']]]
+  ['musicshare_15',['MusicShare',['../a00463.html',1,'MiraiCP']]],
+  ['muteexception_16',['MuteException',['../a00271.html',1,'MiraiCP']]]
 ];

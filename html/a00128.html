@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MiraiCP
-   &#160;<span id="projectnumber">v2.9.1</span>
+   &#160;<span id="projectnumber">v2.10.0</span>
    </div>
    <div id="projectbrief">MiraiCP api document</div>
   </td>
@@ -94,32 +94,28 @@ $(document).ready(function(){initNavTree('a00128.html',''); initResizable(); });
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><dl class="reflist">
-<dt>成员 <a class="el" href="a00151.html#abf617fe245eaf72e903ed1d02102bd28">MiraiCP::Contact::deserializationFromString</a>  (const std::string &amp;source)</dt>
-<dd><a class="anchor" id="_deprecated000003"></a>use deserialize, since v2.8.1  </dd>
-<dt>成员 <a class="el" href="a00151.html#acce2e1538b425fb729bdd013d89ccebe">MiraiCP::Contact::sendMiraiCode</a>  (const <a class="el" href="a00395.html" title="miraicode字符串">MiraiCode</a> &amp;msg, int retryTime=3, JNIEnv *env=nullptr) const</dt>
-<dd><a class="anchor" id="_deprecated000004"></a>用 sendMessage, since v2.8.1  </dd>
-<dt>成员 <a class="el" href="a00151.html#aea9fcaf72d95995091c8e1af601613fb">MiraiCP::Contact::sendMsg</a>  (const std::string &amp;msg, int retryTime=3, JNIEnv *env=nullptr)</dt>
-<dd><a class="anchor" id="_deprecated000005"></a>用 sendMessage, since v2.8.1  </dd>
-<dt>成员 <a class="el" href="a00151.html#af7311c2c398e6c35f9135f2f8e465b3c">MiraiCP::Contact::sendMsg</a>  (const <a class="el" href="a00395.html" title="miraicode字符串">MiraiCode</a> &amp;msg, int retryTime=3, JNIEnv *env=nullptr)</dt>
-<dd><a class="anchor" id="_deprecated000006"></a>用 sendMessage, since v2.8.1  </dd>
-<dt>成员 <a class="el" href="a00151.html#aea8a7b7829dc335717a362b7ba86a63f">MiraiCP::Contact::sendMsg</a>  (std::vector&lt; std::string &gt; msg, int retryTime=3, JNIEnv *env=nullptr)</dt>
-<dd><a class="anchor" id="_deprecated000007"></a>用 sendMessage, since v2.8.1  </dd>
-<dt>成员 <a class="el" href="a00151.html#a9d79a7c7b1590f4e12b6637b1d5a5363">MiraiCP::Contact::serialization</a>  () const</dt>
-<dd><a class="anchor" id="_deprecated000001"></a>use toJson, since v2.8.1  </dd>
-<dt>成员 <a class="el" href="a00151.html#a6032a97a7afdc3a9ceba4cb13b045002">MiraiCP::Contact::serializationToString</a>  () const</dt>
-<dd><a class="anchor" id="_deprecated000002"></a>use toString, since v2.8.1  </dd>
-<dt>成员 <a class="el" href="a00129.html#a526fbb267bd3e2b072b85c1f502e14cf">MiraiCP::logger</a>  </dt>
-<dd><a class="anchor" id="_deprecated000009"></a>use <a class="el" href="a00355.html#a268fd602157c3fa49616a8872c82bfb1">Logger::logger</a>, 用单例模式, since v2.8.1  </dd>
-<dt>成员 <a class="el" href="a00379.html#a92a82bf120e1be0c07841d0f3181951b">MiraiCP::MessageChain::quoteAndSendMessage</a>  (T s, QQID groupid=-1, JNIEnv *env=nullptr)</dt>
-<dd><a class="anchor" id="_deprecated000010"></a>use Contact.quoteAndSend, since v2.8.1  </dd>
-<dt>成员 <a class="el" href="a00387.html#a33753029445bef8e3814df820066e9d1">MiraiCP::MessageSource::quoteAndSendMiraiCode</a>  (<a class="el" href="a00391.html" title="MiraiCode父类, 指可以被转换成miraicode的类型">MiraiCodeable</a> *msg, QQID groupid=0, JNIEnv *env=nullptr) const</dt>
-<dd><a class="anchor" id="_deprecated000011"></a>用Contact.quoteAndSendMessage, since v2.8.1  </dd>
-<dt>成员 <a class="el" href="a00387.html#af0c1e2aa6db7d553248d9400b4bbb326">MiraiCP::MessageSource::quoteAndSendMiraiCode</a>  (const std::string &amp;c, QQID groupid=0, JNIEnv *=nullptr) const</dt>
-<dd><a class="anchor" id="_deprecated000013"></a>use <a class="el" href="a00151.html#a7937ea932043872ad932e5d8c94e0a79" title="回复并发送">Contact.quoteAndSendMessage</a>, since v2.8.1  </dd>
-<dt>成员 <a class="el" href="a00387.html#ab90b886a80a8b7f565489e6dea0bf10c">MiraiCP::MessageSource::quoteAndSendMsg</a>  (const std::string &amp;c, QQID groupid=0, JNIEnv *=nullptr) const</dt>
-<dd><a class="anchor" id="_deprecated000012"></a>use <a class="el" href="a00151.html#a7937ea932043872ad932e5d8c94e0a79" title="回复并发送">Contact.quoteAndSendMessage</a>, since v2.8.1  </dd>
-<dt>成员 <a class="el" href="a00129.html#a82421c522d86f1982570dfd9ee0fd45e">MiraiCP::procession</a>  </dt>
-<dd><a class="anchor" id="_deprecated000008"></a>use Event::prcessor, 使用单例模式, since v2.8.1 </dd>
+<dt>成员 <a class="el" href="a00151.html#a35da1cbf3dc0f418e9de3de0319d183e">MiraiCP::Contact::deserializationFromString</a>  (const std::string &amp;source)=delete</dt>
+<dd><a class="anchor" id="_deprecated000003"></a>since v2.8.1, use <code>Contact::deserialize(source)</code>  </dd>
+<dt>成员 <a class="el" href="a00151.html#a3f5b51075414c795959a0ec3a2ab90a4">MiraiCP::Contact::sendMiraiCode</a>  (const <a class="el" href="a00395.html" title="miraicode字符串">MiraiCode</a> &amp;msg, int retryTime=3, JNIEnv *env=nullptr) const =delete</dt>
+<dd><a class="anchor" id="_deprecated000004"></a>since v2.8.1, use <code>sendMessage(MiraiCode)</code> or <code>sendMsg0(msg.toMiraiCode(), retryTime, true, env)</code>  </dd>
+<dt>成员 <a class="el" href="a00151.html#a7781ce4dbc8a318c90d41d5ea8a47a15">MiraiCP::Contact::sendMsg</a>  (const std::string &amp;msg, int retryTime=3, JNIEnv *env=nullptr)=delete</dt>
+<dd><a class="anchor" id="_deprecated000005"></a>since v2.8.1, use <code>sendMessage(msg)</code> or <code>sendMsg0(msg, retryTime, false, env)</code>  </dd>
+<dt>成员 <a class="el" href="a00151.html#a3935aae9cff20c0cc5671eefeab4625f">MiraiCP::Contact::sendMsg</a>  (const <a class="el" href="a00395.html" title="miraicode字符串">MiraiCode</a> &amp;msg, int retryTime=3, JNIEnv *env=nullptr)=delete</dt>
+<dd><a class="anchor" id="_deprecated000006"></a>since v2.8.1, use <code>sendMessage(MiraiCode)</code> or <code>sendMsg0(msg.toMiraiCode(), retryTime, false, env);</code>  </dd>
+<dt>成员 <a class="el" href="a00151.html#ae90701b09ae72fc47615e1bf917b634c">MiraiCP::Contact::sendMsg</a>  (std::vector&lt; std::string &gt; msg, int retryTime=3, JNIEnv *env=nullptr)=delete</dt>
+<dd><a class="anchor" id="_deprecated000007"></a>since v2.8.1, use <code>sendMessage(Tools::VectorToString(std::move(msg)))</code> or <code>sendMsg0(Tools::VectorToString(std::move(msg)), retryTime, false, env);</code>  </dd>
+<dt>成员 <a class="el" href="a00151.html#a33610ee439fb37d38456c0659e3c2e00">MiraiCP::Contact::serialization</a>  () const =delete</dt>
+<dd><a class="anchor" id="_deprecated000001"></a>since v2.8.1, use <code>this-&gt;<a class="el" href="a00151.html#a89fb588a12ff2d4de10722788945ea55" title="序列化到json对象">toJson()</a></code>  </dd>
+<dt>成员 <a class="el" href="a00151.html#a46176a8b9219f3b2964117432dfaf478">MiraiCP::Contact::serializationToString</a>  () const =delete</dt>
+<dd><a class="anchor" id="_deprecated000002"></a>since v2.8.1, use <code>this-&gt;<a class="el" href="a00151.html#afdd2c14fc9c7c6fceaffe4478aed8b68">toString()</a></code>  </dd>
+<dt>成员 <a class="el" href="a00379.html#a562dd34a6011b018ca9058ed982f6124">MiraiCP::MessageChain::quoteAndSendMessage</a>  (T s, QQID groupid=-1, JNIEnv *env=nullptr)=delete</dt>
+<dd><a class="anchor" id="_deprecated000008"></a>use Contact.quoteAndSend or <code>this-&gt;quoteAndSend1(s, groupid, env)</code>, since v2.8.1  </dd>
+<dt>成员 <a class="el" href="a00387.html#a4c1f9a67fdedd846d104b49d7e32a81e">MiraiCP::MessageSource::quoteAndSendMiraiCode</a>  (<a class="el" href="a00391.html" title="MiraiCode父类, 指可以被转换成miraicode的类型">MiraiCodeable</a> *msg, QQID groupid=0, JNIEnv *env=nullptr) const =delete</dt>
+<dd><a class="anchor" id="_deprecated000009"></a>用Contact.quoteAndSendMessage, since v2.8.1  </dd>
+<dt>成员 <a class="el" href="a00387.html#a846aa8b65aaac4a25dae07034817c964">MiraiCP::MessageSource::quoteAndSendMiraiCode</a>  (const std::string &amp;c, QQID groupid=0, JNIEnv *=nullptr) const =delete</dt>
+<dd><a class="anchor" id="_deprecated000011"></a>use <a class="el" href="a00151.html#a7937ea932043872ad932e5d8c94e0a79" title="回复并发送">Contact.quoteAndSendMessage</a>, since v2.8.1  </dd>
+<dt>成员 <a class="el" href="a00387.html#a91c3975520ceb0bc398d2b3dfd253a28">MiraiCP::MessageSource::quoteAndSendMsg</a>  (const std::string &amp;c, QQID groupid=0, JNIEnv *=nullptr) const =delete</dt>
+<dd><a class="anchor" id="_deprecated000010"></a>use <a class="el" href="a00151.html#a7937ea932043872ad932e5d8c94e0a79" title="回复并发送">Contact.quoteAndSendMessage</a>, since v2.8.1 </dd>
 </dl>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
@@ -128,7 +124,7 @@ $(document).ready(function(){initNavTree('a00128.html',''); initResizable(); });
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">生成于 2022年 一月 10日 星期一 15:34:47 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="footer">生成于 2022年 二月 7日 星期一 12:18:50 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
 <script type="text/javascript">
