@@ -1,6 +1,7 @@
 var a00215 =
 [
-    [ "BotLeaveEvent", "a00215.html#a1d6901317417c45332686a1b148ea789", null ],
-    [ "get_event_type", "a00215.html#a2f2129af7756d13ec3be875b72bed14d", null ],
-    [ "groupid", "a00215.html#a75d1aed07afc1cc0c9a6985c406e68ee", null ]
+    [ "TimeOutEvent", "a00215.html#abcaf0a409f7f3a66e0da48ada27a6820", null ],
+    [ "get_event_type", "a00215.html#a2505c982f58e30adb636aec887e190f0", null ],
+    [ "getEventType", "a00215.html#a94fc9b8a91d0fa22f08fd085378498be", null ],
+    [ "msg", "a00215.html#ad6869868495ecef440a6d4b909188b77", null ]
 ];

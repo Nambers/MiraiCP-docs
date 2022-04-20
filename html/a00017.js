@@ -28,7 +28,8 @@ var a00017 =
       [ "ModifyAdmin", "a00017.html#a1bc3c425340774687507c1683967231bab62371a56fe2b2eff75737a30dec6a84", null ],
       [ "MemberJoinRequest", "a00017.html#a1bc3c425340774687507c1683967231ba70940a528ddf113fd74e126fd9312aa4", null ],
       [ "ImageUploaded", "a00017.html#a1bc3c425340774687507c1683967231bad8322f8fd52415927c4cc159e75305af", null ],
-      [ "CommandReg", "a00017.html#a1bc3c425340774687507c1683967231badb89224b1161987e772726572e457f13", null ]
+      [ "CommandReg", "a00017.html#a1bc3c425340774687507c1683967231badb89224b1161987e772726572e457f13", null ],
+      [ "ChangeNameCard", "a00017.html#a1bc3c425340774687507c1683967231ba49e0f7846324d0a043bc4cd5f01b067d", null ]
     ] ],
     [ "construct", "a00017.html#ae88b8f9603a554ad5640df5940b9d618", null ],
     [ "destruct", "a00017.html#a5a228e9533807266028e3d4ff05d122b", null ],

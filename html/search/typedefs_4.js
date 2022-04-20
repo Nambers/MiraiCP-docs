@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['string_0',['string',['../a00243.html#ac93d7a867a67efd719b60403f68bad20',1,'MiraiCP::MiraiCPException::string()'],['../a00347.html#a22429d5974d2c062b424e0c0297cb897',1,'MiraiCP::Logger_interface::string()']]]
+  ['qqid_0',['QQID',['../a00135.html#a59ef86b4ef19e525734fc04811fa9681',1,'MiraiCP::QQID()'],['../a00139.html#aaa91855dbe1a6370032673bf14bc17d5',1,'MiraiCP::Core::QQID()']]]
 ];

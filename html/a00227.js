@@ -1,7 +1,6 @@
 var a00227 =
 [
-    [ "MiraiCPExceptionEvent", "a00227.html#afd30bd6b1fff4e0ac6b94dd31e965631", null ],
-    [ "get_event_type", "a00227.html#a4e981ec9cda646e7ca2aeff678ed3422", null ],
-    [ "getException", "a00227.html#a90e01efbe49872e7233c3185fe2dd93f", null ],
-    [ "exceptionPtr", "a00227.html#a762a554cc588634317c6be8791ace0f2", null ]
+    [ "BotLeaveEvent", "a00227.html#a1d6901317417c45332686a1b148ea789", null ],
+    [ "get_event_type", "a00227.html#af477670377fef2ea1d76b5a36f738a3b", null ],
+    [ "groupid", "a00227.html#a75d1aed07afc1cc0c9a6985c406e68ee", null ]
 ];

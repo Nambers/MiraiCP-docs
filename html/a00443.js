@@ -1,13 +1,9 @@
 var a00443 =
 [
-    [ "OnlineAudio", "a00443.html#a6019cb1d4607f359565eee4b8b5cca33", null ],
-    [ "operator==", "a00443.html#adf77a906cd6705425a28ab4483c634b5", null ],
-    [ "toMiraiCode", "a00443.html#a489558aac1aa115a829c273ba71ace54", null ],
-    [ "type", "a00443.html#ab55cc2add22064ea6437677abc6d2555", null ],
-    [ "codec", "a00443.html#afe96592ba24d9c3f1887c7668d788c97", null ],
-    [ "filename", "a00443.html#a9cf8841f7297be7d0b8404aeaf1727a1", null ],
-    [ "length", "a00443.html#a963774ddebf115bebd86386cb84a5117", null ],
-    [ "md5", "a00443.html#a403a5a5837bbf02f5e0c5a4327f51ff3", null ],
-    [ "size", "a00443.html#a06c764f6c1f6f65def69fcfe378ebef1", null ],
-    [ "url", "a00443.html#aedf31534944297bea3c997cc49329443", null ]
+    [ "LightApp", "a00443.html#a7cfcefeb788e3046fb321fab0a7b813a", null ],
+    [ "LightApp", "a00443.html#a1803b5deeb42af5f4770751aa4160a25", null ],
+    [ "operator==", "a00443.html#ae69ac9a6359eb6848ce09f7671395969", null ],
+    [ "toJson", "a00443.html#a95599fbda45f4240f9241f6dfa6fe05d", null ],
+    [ "toMiraiCode", "a00443.html#ad1637240306cd3dd587044054381d991", null ],
+    [ "type", "a00443.html#abba0c279393369d31f7ebc88ee6756fd", null ]
 ];

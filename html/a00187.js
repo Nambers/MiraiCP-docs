@@ -1,9 +1,13 @@
 var a00187 =
 [
-    [ "MemberLeaveEvent", "a00187.html#acbd646bf783ca8d03b8b0a48e3a37cb7", null ],
-    [ "get_event_type", "a00187.html#a1852796ee210b0081a8802a8e2857f9f", null ],
-    [ "group", "a00187.html#ab693afc3bdbfddc1ae88caf9ee052d54", null ],
-    [ "memberid", "a00187.html#ab1908decaccb41ea3bc74836dff63246", null ],
-    [ "operaterid", "a00187.html#aade41087ec629e2632628919d9df79fe", null ],
-    [ "type", "a00187.html#ad28ac4243630eab3bf7d65a737cac9ca", null ]
+    [ "GroupInviteEvent", "a00187.html#a9c76e0f986edef4d3915204a07085d11", null ],
+    [ "accept", "a00187.html#ae2666f5eac9e7bb256bad669a06a6e73", null ],
+    [ "get_event_type", "a00187.html#af6b33b5f4c0f29ebc3b8f8c9534a3bdf", null ],
+    [ "operation0", "a00187.html#a7e773d9868319834f338b3ebc963d1d5", null ],
+    [ "reject", "a00187.html#a9dae2fd6b842761d82641de62d97d5ff", null ],
+    [ "groupid", "a00187.html#ad0d2dad878885d82c78e5ef79efa9945", null ],
+    [ "groupName", "a00187.html#a578c8a027cb9f1574fba3de4b3646fc0", null ],
+    [ "inviterid", "a00187.html#a9e48a48c1429b8739da6e91cb8a04819", null ],
+    [ "inviterNick", "a00187.html#abf7cb41022c0cf81725c2925507f1d58", null ],
+    [ "source", "a00187.html#affaff17057d8b347a51ba2516f529596", null ]
 ];

@@ -1,7 +1,9 @@
 var searchData=
 [
-  ['recall_0',['Recall',['../a00130.html#a1bc3c425340774687507c1683967231ba0a3c75ba9d67b444477df79a51b9f7c2',1,'MiraiCP::Config']]],
-  ['recallevent_1',['RecallEvent',['../a00129.html#a9978cdf5158c8fc2ed93dbd7bbf3efb5a3c5a371b32ebcadab95c1a678814004b',1,'MiraiCP']]],
-  ['refreshinfo_2',['RefreshInfo',['../a00130.html#a1bc3c425340774687507c1683967231ba1117a41d69693010f5c5029f1eb2afe6',1,'MiraiCP::Config']]],
-  ['remotefileinfo_3',['RemoteFileInfo',['../a00130.html#a1bc3c425340774687507c1683967231ba0772d842b6129b51b12498a5d1bc1dd1',1,'MiraiCP::Config']]]
+  ['querybfl_0',['QueryBFL',['../a00136.html#a1bc3c425340774687507c1683967231ba31dd0933ace955b1ea7b89004278f08f',1,'MiraiCP::Config']]],
+  ['querybgl_1',['QueryBGL',['../a00136.html#a1bc3c425340774687507c1683967231ba661258dbd64d4f211d183f8840600897',1,'MiraiCP::Config']]],
+  ['queryimginfo_2',['QueryImgInfo',['../a00136.html#a1bc3c425340774687507c1683967231bada9344e3d3c20aa67e7d05364cbcab48',1,'MiraiCP::Config']]],
+  ['querym_3',['QueryM',['../a00136.html#a1bc3c425340774687507c1683967231baba31848e9c490d06f24e81b19f86b3a9',1,'MiraiCP::Config']]],
+  ['queryml_4',['QueryML',['../a00136.html#a1bc3c425340774687507c1683967231bae7f62bcea0b0360e61c40bd6bb9e2d12',1,'MiraiCP::Config']]],
+  ['queryowner_5',['QueryOwner',['../a00136.html#a1bc3c425340774687507c1683967231bad8fea5d74fa89962ce1d8550329bec60',1,'MiraiCP::Config']]]
 ];

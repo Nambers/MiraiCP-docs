@@ -1,6 +1,5 @@
 var a00295 =
 [
-    [ "IllegalArgumentException", "a00295.html#a0dd810504dbce3135348662e6ac54d7d", null ],
-    [ "exceptionType", "a00295.html#ac26b38440b67a6eefcaf00b2ef12e92d", null ],
-    [ "description", "a00295.html#a67fd5f888d7491a9346b4f158979a14c", null ]
+    [ "GroupException", "a00295.html#a86d9f8647899ea7ec1c9bc29a0fab4e2", null ],
+    [ "exceptionType", "a00295.html#ad5423a44299fc74eca0a1be0e66529fd", null ]
 ];

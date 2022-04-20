@@ -1,13 +1,12 @@
 var a00231 =
 [
-    [ "eventNode", "a00235.html", "a00235" ],
-    [ "NodeHandle", "a00239.html", "a00239" ],
-    [ "eventNodeTable", "a00231.html#ada7d3e71f54b9a764e5659b93062dd0d", null ],
-    [ "Event", "a00231.html#a9f36e22e23e02faaeba7f89736332c9c", null ],
-    [ "broadcast", "a00231.html#a491ec99324852b8a12aac5286877ac29", null ],
-    [ "id", "a00231.html#a546bbcb33bec161fb5977447ddf7c344", null ],
-    [ "noRegistered", "a00231.html#ac1aac60c33dd2e854f068e09b1eb4b43", null ],
-    [ "registerEvent", "a00231.html#a0b8c9683d3568a13b07423425912143d", null ],
-    [ "processor", "a00231.html#ab78af8afd9a5121e7ed0a1d7237f2b20", null ],
-    [ "vec", "a00231.html#a5cfd31d7de3615173be7dffd118ba52d", null ]
+    [ "MemberJoinRequestEvent", "a00231.html#a0ee741bf6f005098ecd99b841dacf67e", null ],
+    [ "accept", "a00231.html#ace031723d310c72ed25b83485f66a034", null ],
+    [ "get_event_type", "a00231.html#a4575b38a0df0326b85e0927a3ff1484b", null ],
+    [ "operate", "a00231.html#a57e031d98608fde09fc098481effb799", null ],
+    [ "reject", "a00231.html#a855d60c9e71eda3fd438e45728a8799d", null ],
+    [ "group", "a00231.html#a7967276b662117dfae303235ce70fada", null ],
+    [ "inviter", "a00231.html#a1a2aa46fd5e85786f2e3858e12ceaeea", null ],
+    [ "requesterId", "a00231.html#a7e58fe5f7635d01343da6a1ea7a725e9", null ],
+    [ "source", "a00231.html#aa1b90d95a75a1e6b79aa54a777eb8bf7", null ]
 ];

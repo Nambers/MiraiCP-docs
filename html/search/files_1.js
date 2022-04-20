@@ -6,6 +6,8 @@ var searchData=
   ['config_2eh_3',['Config.h',['../a00017.html',1,'']]],
   ['contact_2ecpp_4',['Contact.cpp',['../a00020.html',1,'']]],
   ['contact_2eh_5',['Contact.h',['../a00023.html',1,'']]],
-  ['cppplugin_2ecpp_6',['CPPPlugin.cpp',['../a00026.html',1,'']]],
-  ['cppplugin_2eh_7',['CPPPlugin.h',['../a00029.html',1,'']]]
+  ['core_2ecpp_6',['core.cpp',['../a00128.html',1,'']]],
+  ['core_2eh_7',['core.h',['../a00131.html',1,'']]],
+  ['cppplugin_2ecpp_8',['CPPPlugin.cpp',['../a00026.html',1,'']]],
+  ['cppplugin_2eh_9',['CPPPlugin.h',['../a00029.html',1,'']]]
 ];

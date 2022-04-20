@@ -1,5 +1,7 @@
 var a00119 =
 [
+    [ "MiraiCP::Tools::MiraiCPDefer< RT_TYPE >", "a00495.html", "a00495" ],
+    [ "MiraiCP_defer", "a00119.html#a7e8212fd73efa74415d83aa658eabf0b", null ],
     [ "escapeFromMiraiCode", "a00119.html#ae7bf212fddf60af59042677c3a7753a5", null ],
     [ "escapeToMiraiCode", "a00119.html#a01f4fe41f8bef55b95953750f5cfb0c2", null ],
     [ "icompareChar", "a00119.html#a795aadb1af1cd4b85e9b48b5bb5b246d", null ],

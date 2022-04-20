@@ -1,6 +1,6 @@
 var a00259 =
 [
-    [ "APIException", "a00259.html#a4d7a7e2f7c45f39a082580e885ee4f03", null ],
-    [ "exceptionType", "a00259.html#afeb8fdb10b9f6b5b17bc458a96e690cd", null ],
-    [ "description", "a00259.html#a8a227a2e1494b35e2e5456ade77066b3", null ]
+    [ "MiraiCPExceptionCRTP", "a00259.html#a02700530ff07249086c6556d7d270ec7", null ],
+    [ "MiraiCPExceptionCRTP", "a00259.html#a810ba1c8839e012b9c6c7827435e0374", null ],
+    [ "getExceptionType", "a00259.html#ad64ad9b96b50c93cd9d210eeb31b43ee", null ]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['qqid_0',['QQID',['../a00129.html#a59ef86b4ef19e525734fc04811fa9681',1,'MiraiCP']]]
+  ['miraicpexception_0',['MiraiCPException',['../a00135.html#a04c8b0950b0853de75d31539b66410b1',1,'MiraiCP']]]
 ];

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['miraicpthrow_0',['MiraiCPThrow',['../a00041.html#a05895baa03633917e58dcb7228229097',1,'Exception.h']]]
+  ['miraicp_5fdefer_0',['MiraiCP_defer',['../a00119.html#a7e8212fd73efa74415d83aa658eabf0b',1,'Tools.h']]],
+  ['miraicp_5fexception_5fwhere_1',['MIRAICP_EXCEPTION_WHERE',['../a00041.html#a64a15c1bd1292eb8eb8b5874281372c6',1,'Exception.h']]]
 ];

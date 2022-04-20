@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MiraiCP
-   &#160;<span id="projectnumber">v2.10.0</span>
+   &#160;<span id="projectnumber">v2.11.0-M2</span>
    </div>
    <div id="projectbrief">MiraiCP api document</div>
   </td>
@@ -94,6 +94,7 @@ $(document).ready(function(){initNavTree('a00041.html',''); initResizable(); });
 <a href="#nested-classes">类</a> &#124;
 <a href="#namespaces">命名空间</a> &#124;
 <a href="#define-members">宏定义</a> &#124;
+<a href="#typedef-members">类型定义</a> &#124;
 <a href="#func-members">函数</a>  </div>
   <div class="headertitle"><div class="title">Exception.h 文件参考</div></div>
 </div><!--header-->
@@ -149,57 +150,65 @@ $(document).ready(function(){initNavTree('a00041.html',''); initResizable(); });
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 类</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">interface &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00243.html">MiraiCP::MiraiCPException</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">总异常抽象类  <a href="a00243.html#details">更多...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">interface &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00255.html">MiraiCP::MiraiCPExceptionBase</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">总异常抽象类，用于一般捕获，不要直接抛出该类，不知道抛出什么的时候请抛出 MiraiCPException  <a href="a00255.html#details">更多...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00247.html">MiraiCP::MiraiCPException::ExceptionBroadcasting</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">异常事件广播  <a href="a00247.html#details">更多...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">interface &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00259.html">MiraiCP::MiraiCPExceptionCRTP&lt; T &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">总异常CRTP抽象类，不要直接抛出该类，不知道抛出什么的时候请抛出 MiraiCPException  <a href="a00259.html#details">更多...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00251.html">MiraiCP::UploadException</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00263.html">MiraiCP::UploadException</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00255.html">MiraiCP::IllegalStateException</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00267.html">MiraiCP::IllegalStateException</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00259.html">MiraiCP::APIException</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00271.html">MiraiCP::APIException</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00263.html">MiraiCP::BotException</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00275.html">MiraiCP::BotException</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00267.html">MiraiCP::BotIsBeingMutedException</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">被禁言异常, 通常发生于发送信息  <a href="a00267.html#details">更多...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00279.html">MiraiCP::BotIsBeingMutedException</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">被禁言异常, 通常发生于发送信息  <a href="a00279.html#details">更多...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00271.html">MiraiCP::MuteException</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00283.html">MiraiCP::MuteException</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00275.html">MiraiCP::MemberException</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00287.html">MiraiCP::MemberException</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00279.html">MiraiCP::FriendException</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00291.html">MiraiCP::FriendException</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00283.html">MiraiCP::GroupException</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00295.html">MiraiCP::GroupException</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00287.html">MiraiCP::RecallException</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00299.html">MiraiCP::RecallException</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00291.html">MiraiCP::RemoteAssetException</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00303.html">MiraiCP::RemoteAssetException</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00295.html">MiraiCP::IllegalArgumentException</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00307.html">MiraiCP::IllegalArgumentException</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00299.html">MiraiCP::TimeOutException</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00311.html">MiraiCP::TimeOutException</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00303.html">MiraiCP::EventCancelledException</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00315.html">MiraiCP::EventCancelledException</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
 命名空间</h2></td></tr>
-<tr class="memitem:a00129"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00129.html">MiraiCP</a></td></tr>
+<tr class="memitem:a00135"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00135.html">MiraiCP</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 宏定义</h2></td></tr>
-<tr class="memitem:a05895baa03633917e58dcb7228229097"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00041.html#a05895baa03633917e58dcb7228229097">MiraiCPThrow</a>(x)&#160;&#160;&#160;throw((x).append(__FILE__, __LINE__))</td></tr>
-<tr class="separator:a05895baa03633917e58dcb7228229097"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a10e0f2260bfde013500e04ba0d77a9fb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00041.html#a10e0f2260bfde013500e04ba0d77a9fb">ErrorHandle</a>(x,  y)&#160;&#160;&#160;ErrorHandle0(__FILE__, __LINE__, (x), (y))</td></tr>
 <tr class="separator:a10e0f2260bfde013500e04ba0d77a9fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64a15c1bd1292eb8eb8b5874281372c6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00041.html#a64a15c1bd1292eb8eb8b5874281372c6">MIRAICP_EXCEPTION_WHERE</a>&#160;&#160;&#160;__FILE__, __LINE__</td></tr>
+<tr class="separator:a64a15c1bd1292eb8eb8b5874281372c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1d03b516481fc8bce7d91943b41aaad"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00041.html#ae1d03b516481fc8bce7d91943b41aaad">ShouldNotUse</a>(msg)</td></tr>
+<tr class="separator:ae1d03b516481fc8bce7d91943b41aaad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+类型定义</h2></td></tr>
+<tr class="memitem:a04c8b0950b0853de75d31539b66410b1"><td class="memItemLeft" align="right" valign="top">typedef MiraiCPExceptionCRTP&lt; MiraiCPExceptionBase &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00135.html#a04c8b0950b0853de75d31539b66410b1">MiraiCP::MiraiCPException</a></td></tr>
+<tr class="memdesc:a04c8b0950b0853de75d31539b66410b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">通用MiraiCP异常  <a href="a00135.html#a04c8b0950b0853de75d31539b66410b1">更多...</a><br /></td></tr>
+<tr class="separator:a04c8b0950b0853de75d31539b66410b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 函数</h2></td></tr>
-<tr class="memitem:aec8ca61f7ace90fd50aa63bcb38d63a8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00129.html#aec8ca61f7ace90fd50aa63bcb38d63a8">MiraiCP::ErrorHandle0</a> (const std::string &amp;name, int line, const std::string &amp;re, const std::string &amp;ErrorMsg=&quot;&quot;)</td></tr>
+<tr class="memitem:aec8ca61f7ace90fd50aa63bcb38d63a8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00135.html#aec8ca61f7ace90fd50aa63bcb38d63a8">MiraiCP::ErrorHandle0</a> (const std::string &amp;name, int line, const std::string &amp;re, const std::string &amp;ErrorMsg=&quot;&quot;)</td></tr>
 <tr class="separator:aec8ca61f7ace90fd50aa63bcb38d63a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">宏定义说明</h2>
@@ -229,27 +238,43 @@ $(document).ready(function(){initNavTree('a00041.html',''); initResizable(); });
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="a00041_source.html">Exception.h</a> 第 <a class="el" href="a00041_source.html#l00020">20</a> 行定义.</p>
+<p class="definition">在文件 <a class="el" href="a00041_source.html">Exception.h</a> 第 <a class="el" href="a00041_source.html#l00021">21</a> 行定义.</p>
 
 </div>
 </div>
-<a id="a05895baa03633917e58dcb7228229097" name="a05895baa03633917e58dcb7228229097"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a05895baa03633917e58dcb7228229097">&#9670;&nbsp;</a></span>MiraiCPThrow</h2>
+<a id="a64a15c1bd1292eb8eb8b5874281372c6" name="a64a15c1bd1292eb8eb8b5874281372c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64a15c1bd1292eb8eb8b5874281372c6">&#9670;&nbsp;</a></span>MIRAICP_EXCEPTION_WHERE</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define MiraiCPThrow</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">x</td><td>)</td>
-          <td>&#160;&#160;&#160;throw((x).append(__FILE__, __LINE__))</td>
+          <td class="memname">#define MIRAICP_EXCEPTION_WHERE&#160;&#160;&#160;__FILE__, __LINE__</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="a00041_source.html">Exception.h</a> 第 <a class="el" href="a00041_source.html#l00019">19</a> 行定义.</p>
+<p class="definition">在文件 <a class="el" href="a00041_source.html">Exception.h</a> 第 <a class="el" href="a00041_source.html#l00022">22</a> 行定义.</p>
+
+</div>
+</div>
+<a id="ae1d03b516481fc8bce7d91943b41aaad" name="ae1d03b516481fc8bce7d91943b41aaad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1d03b516481fc8bce7d91943b41aaad">&#9670;&nbsp;</a></span>ShouldNotUse</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ShouldNotUse</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">msg</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="a00041_source.html">Exception.h</a> 第 <a class="el" href="a00041_source.html#l00030">30</a> 行定义.</p>
 
 </div>
 </div>
@@ -260,7 +285,7 @@ $(document).ready(function(){initNavTree('a00041.html',''); initResizable(); });
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="a00041.html">Exception.h</a></li>
-    <li class="footer">生成于 2022年 二月 7日 星期一 12:18:50 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="footer">生成于 2022年 四月 20日 星期三 10:36:30 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
 <script type="text/javascript">

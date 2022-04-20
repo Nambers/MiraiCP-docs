@@ -1,5 +1,5 @@
 var a00363 =
 [
-    [ "PluginLogger", "a00363.html#a91bffeaf24b473d9bd2db8ede443f03d", null ],
-    [ "log1", "a00363.html#ad8142764645f0f0e6c6e2ecd526ef9da", null ]
+    [ "action", "a00363.html#aea306ee2e14936202c9a814a15e0d0bc", null ],
+    [ "enable", "a00363.html#a0fda6ed76658ebaa758e801a72b3d946", null ]
 ];

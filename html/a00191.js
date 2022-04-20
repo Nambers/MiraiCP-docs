@@ -1,12 +1,13 @@
 var a00191 =
 [
-    [ "RecallEvent", "a00191.html#a8f34646f10c6059226357b96876cec3e", null ],
-    [ "get_event_type", "a00191.html#aec5cdcbd1108ca4e6d56caf8db81c4fb", null ],
-    [ "authorid", "a00191.html#a38902ca6a35385461d1ebfd9dd5fe4c0", null ],
-    [ "groupid", "a00191.html#a224023cbc9f1e0e70e0c200e098a70e1", null ],
-    [ "ids", "a00191.html#ab921c8f46196c000301a49580c9c8731", null ],
-    [ "internalids", "a00191.html#a286b52d1fc395cffeb19867d174e8fa4", null ],
-    [ "operatorid", "a00191.html#abe1179293996af8fe9474805e125f748", null ],
-    [ "time", "a00191.html#afcf05164400a14a598aba4de6566b66c", null ],
-    [ "type", "a00191.html#ac986c53d844263a8af1ddf3e767e3a0c", null ]
+    [ "NewFriendRequestEvent", "a00191.html#aa7a60db5331de88e29455d07a6d9ccca", null ],
+    [ "accept", "a00191.html#a282335f850a9ab57d5a1d695940034a9", null ],
+    [ "get_event_type", "a00191.html#a84c455f8df829ea965c27fbba6e237ef", null ],
+    [ "operation0", "a00191.html#a3fb58755202dc30c9a460d10545c6a0a", null ],
+    [ "reject", "a00191.html#a9ad16173148b9c63b24860c06ce6b3c3", null ],
+    [ "fromgroupid", "a00191.html#a9d75cbeeaf4d484676bfc7090baa4b9b", null ],
+    [ "fromid", "a00191.html#a6c987dc795e5e1893caef8370bf6dfee", null ],
+    [ "message", "a00191.html#a914502cfd8ab0db7ea570240f0bb56e5", null ],
+    [ "nick", "a00191.html#aac9936ee444a019ef2c988a4ed369b55", null ],
+    [ "source", "a00191.html#a4b48f29f9ac4443abf0a76590690a897", null ]
 ];

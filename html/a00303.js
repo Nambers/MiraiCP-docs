@@ -1,6 +1,5 @@
 var a00303 =
 [
-    [ "EventCancelledException", "a00303.html#a9dd26aa0c359cc6250db8c4df85e6172", null ],
-    [ "exceptionType", "a00303.html#a226b95d686e04e28b9767cc406d81b92", null ],
-    [ "description", "a00303.html#a266ea635acaa891a0fe25dd388a5506b", null ]
+    [ "RemoteAssetException", "a00303.html#aebe23c969f37db35cc07993c6c53c9f4", null ],
+    [ "exceptionType", "a00303.html#a623ffa1b259b723ab191fe5adb52a2be", null ]
 ];

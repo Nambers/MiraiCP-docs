@@ -1,7 +1,8 @@
 var a00223 =
 [
-    [ "MessagePreSendEvent", "a00223.html#a14ade975f492c912c43d9c6140f36a8d", null ],
-    [ "get_event_type", "a00223.html#aecba29fb2fdbe3d111d4e370cf5e555b", null ],
-    [ "message", "a00223.html#a2fe0731f2ede62683919e2af5deecb2c", null ],
-    [ "target", "a00223.html#a9f10bb0f95316175506f9f48d9ed148d", null ]
+    [ "NudgeEvent", "a00223.html#a33de6a207ef920b7fee423674cc2e126", null ],
+    [ "get_event_type", "a00223.html#ac0f00b0b573c63f72bb2a6fbc0257c8e", null ],
+    [ "from", "a00223.html#a6b41c32519408428cb6fc302bf24b970", null ],
+    [ "subject", "a00223.html#a48c484cc7aeaa12cec54886697950dc6", null ],
+    [ "target", "a00223.html#af4e172354f69ce65c8d8d2cd1f188cca", null ]
 ];

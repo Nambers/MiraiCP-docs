@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiraiCP: 取群文件信息</title>
+<title>MiraiCP: 成员列表</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MiraiCP
-   &#160;<span id="projectnumber">v2.9.0</span>
+   &#160;<span id="projectnumber">v2.11.0-M2</span>
    </div>
    <div id="projectbrief">MiraiCP api document</div>
   </td>
@@ -71,7 +71,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('a00469.html',''); initResizable(); });
+$(document).ready(function(){initNavTree('a00472.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -90,24 +90,33 @@ $(document).ready(function(){initNavTree('a00469.html',''); initResizable(); });
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">取群文件信息</div></div>
+  <div class="headertitle"><div class="title">MiraiCP::MarketFace 成员列表</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><span class="comment">//根据qq群远程路径(不带文件名)和文件id, 文件id可以在上传返回的RemoteFile类型中获得, 会在子目录中查找如果当前目录未找到</span></div>
-<div class="line"><span class="comment">//根据qq群远程路径(带文件名)找, 不过由于qq群文件允许同名文件这一特性, 返回的文件为群文件中同名文件中随机一个(不可靠)</span></div>
-<div class="line">Event::processor.registerEvent&lt;<a class="code hl_enumvalue" href="a00123.html#a9978cdf5158c8fc2ed93dbd7bbf3efb5af85aaa2127f5b4f45bd92e1987105005">GroupMessageEvent</a>&gt;([](<a class="code hl_enumvalue" href="a00123.html#a9978cdf5158c8fc2ed93dbd7bbf3efb5af85aaa2127f5b4f45bd92e1987105005">GroupMessageEvent</a> e) {</div>
-<div class="line">   e.group.SendMsg(e.group.getFile(<span class="stringliteral">&quot;/&quot;</span>, <span class="keywordtype">id</span>).name());</div>
-<div class="line">   e.group.SendMsg(e.group.getFile(<span class="stringliteral">&quot;/test.txt&quot;</span>).name());</div>
-<div class="line">   e.group.SendMsg(e.group.getFileListString(<span class="stringliteral">&quot;/&quot;</span>));</div>
-<div class="line">   });</div>
-<div class="ttc" id="aa00123_html_a9978cdf5158c8fc2ed93dbd7bbf3efb5af85aaa2127f5b4f45bd92e1987105005"><div class="ttname"><a href="a00123.html#a9978cdf5158c8fc2ed93dbd7bbf3efb5af85aaa2127f5b4f45bd92e1987105005">MiraiCP::eventTypes::GroupMessageEvent</a></div><div class="ttdeci">@ GroupMessageEvent</div></div>
-</div><!-- fragment --></div><!-- contents -->
+
+<p>成员的完整列表，这些成员属于 <a class="el" href="a00472.html">MiraiCP::MarketFace</a>,包括所有继承而来的类成员</p>
+<table class="directory">
+  <tr class="even"><td class="entry"><a class="el" href="a00412.html#a7ebcc9775985874bb7a09bd1d8274a24">content</a></td><td class="entry"><a class="el" href="a00412.html">MiraiCP::SingleMessage</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="a00472.html#aded09c1fba7d8914cc9bf2f67f3df83a">faceId</a></td><td class="entry"><a class="el" href="a00472.html">MiraiCP::MarketFace</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="a00412.html#a7412c91a4b45c7f1d77cf904af64b6d7">getKey</a>(const std::string &amp;value)</td><td class="entry"><a class="el" href="a00412.html">MiraiCP::SingleMessage</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="a00472.html#ae58c1c2293ec3c1c339c01e56d05f345">MarketFace</a>(std::array&lt; uint8_t, 16 &gt; id)</td><td class="entry"><a class="el" href="a00472.html">MiraiCP::MarketFace</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">explicit</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="a00412.html#a40ef6246fdbdce9e7a6c4c3d92696ffa">messageType</a></td><td class="entry"><a class="el" href="a00412.html">MiraiCP::SingleMessage</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="a00472.html#a06db9ba5cb8e759845fc44cabf5c4a8e">operator==</a>(const MarketFace &amp;mf) const</td><td class="entry"><a class="el" href="a00472.html">MiraiCP::MarketFace</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="a00412.html#a9d501cb4ed4cf97c4eb43246c35224b0">MiraiCP::SingleMessage::operator==</a>(const SingleMessage &amp;m) const</td><td class="entry"><a class="el" href="a00412.html">MiraiCP::SingleMessage</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="a00412.html#aa2836bc9c5110cbada54ecbb65341b8f">MiraiCP::SingleMessage::operator==</a>(SingleMessage *m) const</td><td class="entry"><a class="el" href="a00412.html">MiraiCP::SingleMessage</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="a00412.html#a207f61ebfd79e0ae18833f2edf954595">prefix</a></td><td class="entry"><a class="el" href="a00412.html">MiraiCP::SingleMessage</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="a00412.html#a1e645ecfc57a7b630290d88e7cc9ae39">SingleMessage</a>(int type, std::string content, std::string prefix=&quot;:&quot;)</td><td class="entry"><a class="el" href="a00412.html">MiraiCP::SingleMessage</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="a00412.html#a0a408adbe935640d5b02b8ba084dfaa0">toJson</a>() const</td><td class="entry"><a class="el" href="a00412.html">MiraiCP::SingleMessage</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="a00472.html#afa27aa0689287b078ad1410a49608a75">toMiraiCode</a>() const override</td><td class="entry"><a class="el" href="a00472.html">MiraiCP::MarketFace</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="a00472.html#a4b1a9e71197d9810f31b09b6e5ee5b0a">type</a>()</td><td class="entry"><a class="el" href="a00472.html">MiraiCP::MarketFace</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">static</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="a00412.html#a7602ba8b70c61feebadea2cb6744b9dc">~SingleMessage</a>()=default</td><td class="entry"><a class="el" href="a00412.html">MiraiCP::SingleMessage</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+</table></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">生成于 2021年 十二月 22日 星期三 21:13:19 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="footer">生成于 2022年 四月 20日 星期三 10:35:05 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
 <script type="text/javascript">

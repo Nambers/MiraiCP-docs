@@ -1,6 +1,11 @@
 var a00287 =
 [
-    [ "RecallException", "a00287.html#ab70029a99574b211c34b4f1ee042572e", null ],
-    [ "exceptionType", "a00287.html#aaf07fedeed6d91ea97ee3417381b1616", null ],
-    [ "description", "a00287.html#a9a0251d9ef9f5dcfdd49191e8f4e74cc", null ]
+    [ "MemberExceptionType", "a00287.html#a5d79da819adcd25a5b51a498762067a2", [
+      [ "OtherType", "a00287.html#a5d79da819adcd25a5b51a498762067a2a10d7175ae7e717fa50187eff06445f9b", null ],
+      [ "NoSuchGroup", "a00287.html#a5d79da819adcd25a5b51a498762067a2af45ac2de0a67bb83ddabbe90de94b759", null ],
+      [ "NoSuchMember", "a00287.html#a5d79da819adcd25a5b51a498762067a2aec2ea117521b98eb6ceed80c5b155716", null ]
+    ] ],
+    [ "MemberException", "a00287.html#a5a77bb2dee827ef89cb7fab2e62b160c", null ],
+    [ "exceptionType", "a00287.html#a7d8014930572cc2e598c2709e240d429", null ],
+    [ "type", "a00287.html#aeedca55477d89e61d8449fd22aeeff04", null ]
 ];
