@@ -1,5 +1,6 @@
 var a00527 =
 [
-    [ "attach", "a00527.html#a20796cdd95ace90b1f56b825abf51032", null ],
-    [ "e", "a00527.html#ad5e0fc94f06fd33fbc0c6db40c0486eb", null ]
+    [ "MarketFace", "a00527.html#a4caebb2c1479ca9039f6102f25e5547f", null ],
+    [ "operator==", "a00527.html#a06db9ba5cb8e759845fc44cabf5c4a8e", null ],
+    [ "type", "a00527.html#a4b1a9e71197d9810f31b09b6e5ee5b0a", null ]
 ];

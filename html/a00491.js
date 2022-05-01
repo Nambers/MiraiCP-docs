@@ -1,12 +1,9 @@
 var a00491 =
 [
-    [ "operator==", "a00491.html#adf77a906cd6705425a28ab4483c634b5", null ],
-    [ "ShouldNotUse", "a00491.html#a66690e9c31bc7daf8a1c7c15261f83b3", null ],
-    [ "type", "a00491.html#ab55cc2add22064ea6437677abc6d2555", null ],
-    [ "codec", "a00491.html#afe96592ba24d9c3f1887c7668d788c97", null ],
-    [ "filename", "a00491.html#a9cf8841f7297be7d0b8404aeaf1727a1", null ],
-    [ "length", "a00491.html#a963774ddebf115bebd86386cb84a5117", null ],
-    [ "md5", "a00491.html#a403a5a5837bbf02f5e0c5a4327f51ff3", null ],
-    [ "size", "a00491.html#a06c764f6c1f6f65def69fcfe378ebef1", null ],
-    [ "url", "a00491.html#aedf31534944297bea3c997cc49329443", null ]
+    [ "LightApp", "a00491.html#a7cfcefeb788e3046fb321fab0a7b813a", null ],
+    [ "LightApp", "a00491.html#a1803b5deeb42af5f4770751aa4160a25", null ],
+    [ "operator==", "a00491.html#ae69ac9a6359eb6848ce09f7671395969", null ],
+    [ "toJson", "a00491.html#a95599fbda45f4240f9241f6dfa6fe05d", null ],
+    [ "toMiraiCode", "a00491.html#ad1637240306cd3dd587044054381d991", null ],
+    [ "type", "a00491.html#abba0c279393369d31f7ebc88ee6756fd", null ]
 ];

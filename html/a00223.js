@@ -1,13 +1,7 @@
 var a00223 =
 [
-    [ "GroupInviteEvent", "a00223.html#a9c76e0f986edef4d3915204a07085d11", null ],
-    [ "accept", "a00223.html#ae2666f5eac9e7bb256bad669a06a6e73", null ],
-    [ "get_event_type", "a00223.html#af6b33b5f4c0f29ebc3b8f8c9534a3bdf", null ],
-    [ "operation0", "a00223.html#a7e773d9868319834f338b3ebc963d1d5", null ],
-    [ "reject", "a00223.html#a9dae2fd6b842761d82641de62d97d5ff", null ],
-    [ "groupid", "a00223.html#ad0d2dad878885d82c78e5ef79efa9945", null ],
-    [ "groupName", "a00223.html#a578c8a027cb9f1574fba3de4b3646fc0", null ],
-    [ "inviterid", "a00223.html#a9e48a48c1429b8739da6e91cb8a04819", null ],
-    [ "inviterNick", "a00223.html#abf7cb41022c0cf81725c2925507f1d58", null ],
-    [ "source", "a00223.html#affaff17057d8b347a51ba2516f529596", null ]
+    [ "BotEvent", "a00223.html#a5da368a0e44891433b340288bc872df3", null ],
+    [ "getEventType", "a00223.html#ad176440a2b764c7a123c4efcb3bfece3", null ],
+    [ "bot", "a00223.html#a0b14bddb4baebbd348969dac6c9a8edc", null ],
+    [ "botlogger", "a00223.html#a864b09f1e3cf406c2e96ca7b4c10e18e", null ]
 ];

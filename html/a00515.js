@@ -1,6 +1,8 @@
 var a00515 =
 [
-    [ "MarketFace", "a00515.html#a4caebb2c1479ca9039f6102f25e5547f", null ],
-    [ "operator==", "a00515.html#a06db9ba5cb8e759845fc44cabf5c4a8e", null ],
-    [ "type", "a00515.html#a4b1a9e71197d9810f31b09b6e5ee5b0a", null ]
+    [ "expirytime", "a00515.html#a666efd0312dcc5805394a02ff7c326bb", null ],
+    [ "lastmodifytime", "a00515.html#a8597f745a6869003efa097519bf34148", null ],
+    [ "size", "a00515.html#a35cc1f23bf34db4184696833b12e4605", null ],
+    [ "uploaderid", "a00515.html#accf1835e308104bde941d72053d5c5a7", null ],
+    [ "uploadtime", "a00515.html#ab5f94fd436b08eb8963d7c5d8d4907b4", null ]
 ];

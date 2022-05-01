@@ -1,17 +1,11 @@
 var a00443 =
 [
-    [ "MiraiCode", "a00443.html#a357aa786136dc94421877f5572ca150a", null ],
-    [ "MiraiCode", "a00443.html#a0d635f5decbaa8f14f9e255efb8654f0", null ],
-    [ "MiraiCodeWithoutEscape", "a00443.html#a91e0549cd91bb441980909cc5b32bee0", null ],
-    [ "MiraiCodeWithoutEscape", "a00443.html#ad116a6d05b09bb93b637ead57b499042", null ],
-    [ "operator+", "a00443.html#a03a38b9280bf4ec1039a1c7a1efd136f", null ],
-    [ "operator+", "a00443.html#aa2296db186d60e6ccf5cd46448eced94", null ],
-    [ "operator+", "a00443.html#ad5d0dd8566b6d330a35f7fca5c20c1ab", null ],
-    [ "operator+", "a00443.html#aced348510d8532bf2a101cd50a9fae19", null ],
-    [ "operator=", "a00443.html#ad7e09968df7b19ccd68e144c2388e365", null ],
-    [ "plus", "a00443.html#acfec7789b210c8a082f0dc93c21f8ed7", null ],
-    [ "plus", "a00443.html#a016fbece8589f03516f5a92a8a3cb177", null ],
-    [ "toMiraiCode", "a00443.html#a2a17d996287c93b8b048a18b58e955c9", null ],
-    [ "toString", "a00443.html#a9b46bf5804f88f2504d97c87d3e1b7fc", null ],
-    [ "content", "a00443.html#a10f382c47adbdf7874ee6aff2c1b1850", null ]
+    [ "Message", "a00443.html#a7de8dcb64a63016d9fd56e67521bf7bc", null ],
+    [ "Message", "a00443.html#afe2538f33d2579ab463fcbb8cf6ab7fa", null ],
+    [ "get", "a00443.html#ae4b04a6aa2a4a95f3729a2a3c8a8bed2", null ],
+    [ "operator!=", "a00443.html#a4e54488b5b28f7f606f4de2632a5f541", null ],
+    [ "operator==", "a00443.html#a88e760c0f2eb2790198ad336256dfdba", null ],
+    [ "toMiraiCode", "a00443.html#a487a379efa40cd0f4650491f0fb8e7bb", null ],
+    [ "type", "a00443.html#ae110eef981b54bd49c0807f8f29dcc3f", null ],
+    [ "content", "a00443.html#a4dc4f2ad7ed693e783e2aa9df3eec951", null ]
 ];

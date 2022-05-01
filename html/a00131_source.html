@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiraiCP: MiraiCode.h 源文件</title>
+<title>MiraiCP: MiraiCode.cpp 源文件</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -90,7 +90,7 @@ $(document).ready(function(){initNavTree('a00131_source.html',''); initResizable
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">MiraiCode.h</div></div>
+  <div class="headertitle"><div class="title">MiraiCode.cpp</div></div>
 </div><!--header-->
 <div class="contents">
 <a href="a00131.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// Copyright (c) 2020 - 2022. Eritque arcus and contributors.</span></div>
@@ -108,100 +108,36 @@ $(document).ready(function(){initNavTree('a00131_source.html',''); initResizable
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">// You should have received a copy of the GNU Affero General Public License</span></div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">// along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</span></div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">//</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#ifndef MIRAICP_PRO_MIRAICODE_H</span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#define MIRAICP_PRO_MIRAICODE_H</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keyword">namespace </span><a class="code hl_namespace" href="a00171.html">MiraiCP</a> {</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="a00439.html">   24</a></span>    <span class="keyword">class </span><a class="code hl_class" href="a00439.html">MiraiCodeable</a> {</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="a00439.html#a96bdd3af5e564960b2b7f562032b1a15">   27</a></span>        <span class="keyword">virtual</span> std::string <a class="code hl_function" href="a00439.html#a96bdd3af5e564960b2b7f562032b1a15">toMiraiCode</a>() <span class="keyword">const</span> = 0;</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    };</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="a00443.html">   33</a></span>    <span class="keyword">class </span><a class="code hl_class" href="a00443.html">MiraiCode</a> : <span class="keyword">public</span> <a class="code hl_class" href="a00439.html">MiraiCodeable</a> {</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="a00443.html#a10f382c47adbdf7874ee6aff2c1b1850">   35</a></span>        std::string <a class="code hl_variable" href="a00443.html#a10f382c47adbdf7874ee6aff2c1b1850">content</a>;</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        std::string <a class="code hl_function" href="a00443.html#a9b46bf5804f88f2504d97c87d3e1b7fc">toString</a>();</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="a00443.html#a2a17d996287c93b8b048a18b58e955c9">   42</a></span>        std::string <a class="code hl_function" href="a00443.html#a2a17d996287c93b8b048a18b58e955c9">toMiraiCode</a>()<span class="keyword"> const override </span>{</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="a00443.html#a10f382c47adbdf7874ee6aff2c1b1850">content</a>;</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        }</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="a00443.html#a357aa786136dc94421877f5572ca150a">   47</a></span>        <a class="code hl_function" href="a00443.html#a357aa786136dc94421877f5572ca150a">MiraiCode</a>(<a class="code hl_class" href="a00439.html">MiraiCodeable</a> *a) { <span class="comment">// NOLINT(google-explicit-constructor)</span></div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>            <a class="code hl_variable" href="a00443.html#a10f382c47adbdf7874ee6aff2c1b1850">content</a> = a-&gt;<a class="code hl_function" href="a00439.html#a96bdd3af5e564960b2b7f562032b1a15">toMiraiCode</a>();</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        }</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        <a class="code hl_function" href="a00443.html#a357aa786136dc94421877f5572ca150a">MiraiCode</a>(<span class="keyword">const</span> std::string &amp;a, <span class="keywordtype">bool</span> convert = <span class="keyword">false</span>);</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="a00443.html#aced348510d8532bf2a101cd50a9fae19">   55</a></span>        <a class="code hl_class" href="a00443.html">MiraiCode</a> <a class="code hl_function" href="a00443.html#aced348510d8532bf2a101cd50a9fae19">operator+</a>(<a class="code hl_class" href="a00439.html">MiraiCodeable</a> *a) {</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>            <span class="keywordflow">return</span> {<a class="code hl_variable" href="a00443.html#a10f382c47adbdf7874ee6aff2c1b1850">content</a> + a-&gt;<a class="code hl_function" href="a00439.html#a96bdd3af5e564960b2b7f562032b1a15">toMiraiCode</a>()};</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        }</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="a00443.html#aa2296db186d60e6ccf5cd46448eced94">   59</a></span>        <a class="code hl_class" href="a00443.html">MiraiCode</a> <a class="code hl_function" href="a00443.html#aa2296db186d60e6ccf5cd46448eced94">operator+</a>(<span class="keyword">const</span> std::string &amp;a) {</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>            <span class="keywordflow">return</span> {<a class="code hl_variable" href="a00443.html#a10f382c47adbdf7874ee6aff2c1b1850">content</a> + a};</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        }</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="a00443.html#a03a38b9280bf4ec1039a1c7a1efd136f">   63</a></span>        <a class="code hl_class" href="a00443.html">MiraiCode</a> <a class="code hl_function" href="a00443.html#a03a38b9280bf4ec1039a1c7a1efd136f">operator+</a>(<span class="keyword">const</span> <a class="code hl_class" href="a00443.html">MiraiCode</a> &amp;a) {</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>            <span class="keywordflow">return</span> {<a class="code hl_variable" href="a00443.html#a10f382c47adbdf7874ee6aff2c1b1850">content</a> + a.<a class="code hl_variable" href="a00443.html#a10f382c47adbdf7874ee6aff2c1b1850">content</a>};</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        }</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="a00443.html#ad5d0dd8566b6d330a35f7fca5c20c1ab">   67</a></span>        <a class="code hl_class" href="a00443.html">MiraiCode</a> <a class="code hl_function" href="a00443.html#ad5d0dd8566b6d330a35f7fca5c20c1ab">operator+</a>(<a class="code hl_class" href="a00443.html">MiraiCode</a> *a) {</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>            <span class="keywordflow">return</span> {<a class="code hl_variable" href="a00443.html#a10f382c47adbdf7874ee6aff2c1b1850">content</a> + a-&gt;<a class="code hl_variable" href="a00443.html#a10f382c47adbdf7874ee6aff2c1b1850">content</a>};</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        }</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="a00443.html#ad7e09968df7b19ccd68e144c2388e365">   71</a></span>        <a class="code hl_class" href="a00443.html">MiraiCode</a> &amp;<a class="code hl_function" href="a00443.html#ad7e09968df7b19ccd68e144c2388e365">operator=</a>(<span class="keyword">const</span> std::string &amp;a) {</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>            this-&gt;content = a;</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>            <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        }</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="a00443.html#a016fbece8589f03516f5a92a8a3cb177">   76</a></span>        <a class="code hl_class" href="a00443.html">MiraiCode</a> <a class="code hl_function" href="a00443.html#a016fbece8589f03516f5a92a8a3cb177">plus</a>(<a class="code hl_class" href="a00439.html">MiraiCodeable</a> *a) {</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>            <span class="keywordflow">return</span> {<a class="code hl_variable" href="a00443.html#a10f382c47adbdf7874ee6aff2c1b1850">content</a> + a-&gt;<a class="code hl_function" href="a00439.html#a96bdd3af5e564960b2b7f562032b1a15">toMiraiCode</a>()};</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        }</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="a00443.html#acfec7789b210c8a082f0dc93c21f8ed7">   80</a></span>        <a class="code hl_class" href="a00443.html">MiraiCode</a> <a class="code hl_function" href="a00443.html#acfec7789b210c8a082f0dc93c21f8ed7">plus</a>(<span class="keyword">const</span> std::string &amp;a) {</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>            <span class="keywordflow">return</span> <a class="code hl_function" href="a00443.html#a357aa786136dc94421877f5572ca150a">MiraiCode</a>(a) + <span class="keyword">this</span>;</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        }</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="a00443.html#a91e0549cd91bb441980909cc5b32bee0">   85</a></span>        <span class="keyword">static</span> <a class="code hl_class" href="a00443.html">MiraiCode</a> <a class="code hl_function" href="a00443.html#a91e0549cd91bb441980909cc5b32bee0">MiraiCodeWithoutEscape</a>(<span class="keyword">const</span> std::string &amp;a) {</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>            <span class="keywordflow">return</span> {a, <span class="keyword">false</span>};</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        }</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno"><a class="line" href="a00443.html#ad116a6d05b09bb93b637ead57b499042">   90</a></span>        <span class="keyword">static</span> <a class="code hl_class" href="a00443.html">MiraiCode</a> <a class="code hl_function" href="a00443.html#ad116a6d05b09bb93b637ead57b499042">MiraiCodeWithoutEscape</a>(<a class="code hl_class" href="a00439.html">MiraiCodeable</a> *a) {</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>            <span class="keywordflow">return</span> {a-&gt;<a class="code hl_function" href="a00439.html#a96bdd3af5e564960b2b7f562032b1a15">toMiraiCode</a>(), <span class="keyword">false</span>};</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        }</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    };</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>} <span class="comment">// namespace MiraiCP</span></div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span><span class="preprocessor">#endif </span><span class="comment">//MIRAICP_PRO_MIRAICODE_H</span></div>
-<div class="ttc" id="aa00171_html"><div class="ttname"><a href="a00171.html">MiraiCP</a></div><div class="ttdef"><b>Definition:</b> <a href="a00038_source.html#l00023">Bot.cpp:23</a></div></div>
-<div class="ttc" id="aa00439_html"><div class="ttname"><a href="a00439.html">MiraiCP::MiraiCodeable</a></div><div class="ttdoc">MiraiCode父类, 指可以被转换成miraicode的类型</div><div class="ttdef"><b>Definition:</b> <a href="a00131_source.html#l00024">MiraiCode.h:24</a></div></div>
-<div class="ttc" id="aa00439_html_a96bdd3af5e564960b2b7f562032b1a15"><div class="ttname"><a href="a00439.html#a96bdd3af5e564960b2b7f562032b1a15">MiraiCP::MiraiCodeable::toMiraiCode</a></div><div class="ttdeci">virtual std::string toMiraiCode() const =0</div><div class="ttdoc">返回MiraiCode</div></div>
-<div class="ttc" id="aa00443_html"><div class="ttname"><a href="a00443.html">MiraiCP::MiraiCode</a></div><div class="ttdoc">miraicode字符串</div><div class="ttdef"><b>Definition:</b> <a href="a00131_source.html#l00033">MiraiCode.h:33</a></div></div>
-<div class="ttc" id="aa00443_html_a016fbece8589f03516f5a92a8a3cb177"><div class="ttname"><a href="a00443.html#a016fbece8589f03516f5a92a8a3cb177">MiraiCP::MiraiCode::plus</a></div><div class="ttdeci">MiraiCode plus(MiraiCodeable *a)</div><div class="ttdef"><b>Definition:</b> <a href="a00131_source.html#l00076">MiraiCode.h:76</a></div></div>
-<div class="ttc" id="aa00443_html_a03a38b9280bf4ec1039a1c7a1efd136f"><div class="ttname"><a href="a00443.html#a03a38b9280bf4ec1039a1c7a1efd136f">MiraiCP::MiraiCode::operator+</a></div><div class="ttdeci">MiraiCode operator+(const MiraiCode &amp;a)</div><div class="ttdef"><b>Definition:</b> <a href="a00131_source.html#l00063">MiraiCode.h:63</a></div></div>
-<div class="ttc" id="aa00443_html_a10f382c47adbdf7874ee6aff2c1b1850"><div class="ttname"><a href="a00443.html#a10f382c47adbdf7874ee6aff2c1b1850">MiraiCP::MiraiCode::content</a></div><div class="ttdeci">std::string content</div><div class="ttdef"><b>Definition:</b> <a href="a00131_source.html#l00035">MiraiCode.h:35</a></div></div>
-<div class="ttc" id="aa00443_html_a2a17d996287c93b8b048a18b58e955c9"><div class="ttname"><a href="a00443.html#a2a17d996287c93b8b048a18b58e955c9">MiraiCP::MiraiCode::toMiraiCode</a></div><div class="ttdeci">std::string toMiraiCode() const override</div><div class="ttdoc">和toString作用一样, 不过不会自动转码</div><div class="ttdef"><b>Definition:</b> <a href="a00131_source.html#l00042">MiraiCode.h:42</a></div></div>
-<div class="ttc" id="aa00443_html_a357aa786136dc94421877f5572ca150a"><div class="ttname"><a href="a00443.html#a357aa786136dc94421877f5572ca150a">MiraiCP::MiraiCode::MiraiCode</a></div><div class="ttdeci">MiraiCode(MiraiCodeable *a)</div><div class="ttdoc">从MiraiCodeable类型初始化一个miraicode字符串</div><div class="ttdef"><b>Definition:</b> <a href="a00131_source.html#l00047">MiraiCode.h:47</a></div></div>
-<div class="ttc" id="aa00443_html_a91e0549cd91bb441980909cc5b32bee0"><div class="ttname"><a href="a00443.html#a91e0549cd91bb441980909cc5b32bee0">MiraiCP::MiraiCode::MiraiCodeWithoutEscape</a></div><div class="ttdeci">static MiraiCode MiraiCodeWithoutEscape(const std::string &amp;a)</div><div class="ttdoc">不执行转义，适用于已经被MiraiCode转义过的字符串</div><div class="ttdef"><b>Definition:</b> <a href="a00131_source.html#l00085">MiraiCode.h:85</a></div></div>
-<div class="ttc" id="aa00443_html_a9b46bf5804f88f2504d97c87d3e1b7fc"><div class="ttname"><a href="a00443.html#a9b46bf5804f88f2504d97c87d3e1b7fc">MiraiCP::MiraiCode::toString</a></div><div class="ttdeci">std::string toString()</div><div class="ttdoc">输出当前内容, 会自动转码</div><div class="ttdef"><b>Definition:</b> <a href="a00128_source.html#l00020">MiraiCode.cpp:20</a></div></div>
-<div class="ttc" id="aa00443_html_aa2296db186d60e6ccf5cd46448eced94"><div class="ttname"><a href="a00443.html#aa2296db186d60e6ccf5cd46448eced94">MiraiCP::MiraiCode::operator+</a></div><div class="ttdeci">MiraiCode operator+(const std::string &amp;a)</div><div class="ttdef"><b>Definition:</b> <a href="a00131_source.html#l00059">MiraiCode.h:59</a></div></div>
-<div class="ttc" id="aa00443_html_aced348510d8532bf2a101cd50a9fae19"><div class="ttname"><a href="a00443.html#aced348510d8532bf2a101cd50a9fae19">MiraiCP::MiraiCode::operator+</a></div><div class="ttdeci">MiraiCode operator+(MiraiCodeable *a)</div><div class="ttdef"><b>Definition:</b> <a href="a00131_source.html#l00055">MiraiCode.h:55</a></div></div>
-<div class="ttc" id="aa00443_html_acfec7789b210c8a082f0dc93c21f8ed7"><div class="ttname"><a href="a00443.html#acfec7789b210c8a082f0dc93c21f8ed7">MiraiCP::MiraiCode::plus</a></div><div class="ttdeci">MiraiCode plus(const std::string &amp;a)</div><div class="ttdef"><b>Definition:</b> <a href="a00131_source.html#l00080">MiraiCode.h:80</a></div></div>
-<div class="ttc" id="aa00443_html_ad116a6d05b09bb93b637ead57b499042"><div class="ttname"><a href="a00443.html#ad116a6d05b09bb93b637ead57b499042">MiraiCP::MiraiCode::MiraiCodeWithoutEscape</a></div><div class="ttdeci">static MiraiCode MiraiCodeWithoutEscape(MiraiCodeable *a)</div><div class="ttdoc">不执行转义，因为MiraiCodeable的toMiraiCode已经转义过了</div><div class="ttdef"><b>Definition:</b> <a href="a00131_source.html#l00090">MiraiCode.h:90</a></div></div>
-<div class="ttc" id="aa00443_html_ad5d0dd8566b6d330a35f7fca5c20c1ab"><div class="ttname"><a href="a00443.html#ad5d0dd8566b6d330a35f7fca5c20c1ab">MiraiCP::MiraiCode::operator+</a></div><div class="ttdeci">MiraiCode operator+(MiraiCode *a)</div><div class="ttdef"><b>Definition:</b> <a href="a00131_source.html#l00067">MiraiCode.h:67</a></div></div>
-<div class="ttc" id="aa00443_html_ad7e09968df7b19ccd68e144c2388e365"><div class="ttname"><a href="a00443.html#ad7e09968df7b19ccd68e144c2388e365">MiraiCP::MiraiCode::operator=</a></div><div class="ttdeci">MiraiCode &amp; operator=(const std::string &amp;a)</div><div class="ttdef"><b>Definition:</b> <a href="a00131_source.html#l00071">MiraiCode.h:71</a></div></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &quot;<a class="code" href="a00134.html">MiraiCode.h</a>&quot;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &quot;<a class="code" href="a00164.html">Tools.h</a>&quot;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">namespace </span><a class="code hl_namespace" href="a00174.html">MiraiCP</a> {</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="a00455.html#a9b46bf5804f88f2504d97c87d3e1b7fc">   20</a></span>    std::string <a class="code hl_function" href="a00455.html#a9b46bf5804f88f2504d97c87d3e1b7fc">MiraiCode::toString</a>() {</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="a00176.html#ae7bf212fddf60af59042677c3a7753a5">Tools::escapeFromMiraiCode</a>(this-&gt;<a class="code hl_variable" href="a00455.html#a10f382c47adbdf7874ee6aff2c1b1850">content</a>);</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    }</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="a00455.html#a0d635f5decbaa8f14f9e255efb8654f0">   23</a></span>    <a class="code hl_function" href="a00455.html#a357aa786136dc94421877f5572ca150a">MiraiCode::MiraiCode</a>(<span class="keyword">const</span> std::string &amp;a, <span class="keywordtype">bool</span> convert) { <span class="comment">// NOLINT(google-explicit-constructor)</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        <span class="keywordflow">if</span> (!convert)</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>            <a class="code hl_variable" href="a00455.html#a10f382c47adbdf7874ee6aff2c1b1850">content</a> = a;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>            <a class="code hl_variable" href="a00455.html#a10f382c47adbdf7874ee6aff2c1b1850">content</a> = <a class="code hl_function" href="a00176.html#a01f4fe41f8bef55b95953750f5cfb0c2">Tools::escapeToMiraiCode</a>(a);</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    }</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>} <span class="comment">// namespace MiraiCP</span></div>
+<div class="ttc" id="aa00134_html"><div class="ttname"><a href="a00134.html">MiraiCode.h</a></div></div>
+<div class="ttc" id="aa00164_html"><div class="ttname"><a href="a00164.html">Tools.h</a></div></div>
+<div class="ttc" id="aa00174_html"><div class="ttname"><a href="a00174.html">MiraiCP</a></div><div class="ttdef"><b>Definition:</b> <a href="a00041_source.html#l00023">Bot.cpp:23</a></div></div>
+<div class="ttc" id="aa00176_html_a01f4fe41f8bef55b95953750f5cfb0c2"><div class="ttname"><a href="a00176.html#a01f4fe41f8bef55b95953750f5cfb0c2">MiraiCP::Tools::escapeToMiraiCode</a></div><div class="ttdeci">std::string escapeToMiraiCode(const std::string &amp;s)</div><div class="ttdoc">转义miraicode格式</div><div class="ttdef"><b>Definition:</b> <a href="a00161_source.html#l00090">Tools.cpp:90</a></div></div>
+<div class="ttc" id="aa00176_html_ae7bf212fddf60af59042677c3a7753a5"><div class="ttname"><a href="a00176.html#ae7bf212fddf60af59042677c3a7753a5">MiraiCP::Tools::escapeFromMiraiCode</a></div><div class="ttdeci">std::string escapeFromMiraiCode(const std::string &amp;s)</div><div class="ttdoc">从miraicode转义到正常</div><div class="ttdef"><b>Definition:</b> <a href="a00161_source.html#l00076">Tools.cpp:76</a></div></div>
+<div class="ttc" id="aa00455_html_a10f382c47adbdf7874ee6aff2c1b1850"><div class="ttname"><a href="a00455.html#a10f382c47adbdf7874ee6aff2c1b1850">MiraiCP::MiraiCode::content</a></div><div class="ttdeci">std::string content</div><div class="ttdef"><b>Definition:</b> <a href="a00134_source.html#l00035">MiraiCode.h:35</a></div></div>
+<div class="ttc" id="aa00455_html_a357aa786136dc94421877f5572ca150a"><div class="ttname"><a href="a00455.html#a357aa786136dc94421877f5572ca150a">MiraiCP::MiraiCode::MiraiCode</a></div><div class="ttdeci">MiraiCode(MiraiCodeable *a)</div><div class="ttdoc">从MiraiCodeable类型初始化一个miraicode字符串</div><div class="ttdef"><b>Definition:</b> <a href="a00134_source.html#l00047">MiraiCode.h:47</a></div></div>
+<div class="ttc" id="aa00455_html_a9b46bf5804f88f2504d97c87d3e1b7fc"><div class="ttname"><a href="a00455.html#a9b46bf5804f88f2504d97c87d3e1b7fc">MiraiCP::MiraiCode::toString</a></div><div class="ttdeci">std::string toString()</div><div class="ttdoc">输出当前内容, 会自动转码</div><div class="ttdef"><b>Definition:</b> <a href="a00131_source.html#l00020">MiraiCode.cpp:20</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b0856f6b0d80ccb263b2f415c91f9e17.html">include</a></li><li class="navelem"><a class="el" href="a00131.html">MiraiCode.h</a></li>
-    <li class="footer">生成于 2022年 五月 1日 星期日 11:26:10 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b0856f6b0d80ccb263b2f415c91f9e17.html">include</a></li><li class="navelem"><a class="el" href="a00131.html">MiraiCode.cpp</a></li>
+    <li class="footer">生成于 2022年 五月 1日 星期日 11:46:57 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
 <script type="text/javascript">

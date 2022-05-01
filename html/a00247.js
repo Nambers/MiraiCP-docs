@@ -1,8 +1,9 @@
 var a00247 =
 [
-    [ "GroupTempMessageEvent", "a00247.html#a4cd87975d98bef10e520e2ca9e3bfcf4", null ],
-    [ "get_event_type", "a00247.html#a6129a5451a7602b73c8d04fe88ad2715", null ],
-    [ "group", "a00247.html#a29c18056652c7d36248f70f359f01e74", null ],
-    [ "message", "a00247.html#a2405f8a309e3b2de0d7cba313d795cee", null ],
-    [ "sender", "a00247.html#ac0252e17c1cb9a0d4f2ebf37720951db", null ]
+    [ "MemberLeaveEvent", "a00247.html#acbd646bf783ca8d03b8b0a48e3a37cb7", null ],
+    [ "get_event_type", "a00247.html#ac16581cdd4e400c2a6e92889fb928d95", null ],
+    [ "group", "a00247.html#ab693afc3bdbfddc1ae88caf9ee052d54", null ],
+    [ "memberid", "a00247.html#ab1908decaccb41ea3bc74836dff63246", null ],
+    [ "operaterid", "a00247.html#aade41087ec629e2632628919d9df79fe", null ],
+    [ "type", "a00247.html#ad28ac4243630eab3bf7d65a737cac9ca", null ]
 ];

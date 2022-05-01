@@ -1,8 +1,12 @@
 var a00503 =
 [
-    [ "expirytime", "a00503.html#a666efd0312dcc5805394a02ff7c326bb", null ],
-    [ "lastmodifytime", "a00503.html#a8597f745a6869003efa097519bf34148", null ],
-    [ "size", "a00503.html#a35cc1f23bf34db4184696833b12e4605", null ],
-    [ "uploaderid", "a00503.html#accf1835e308104bde941d72053d5c5a7", null ],
-    [ "uploadtime", "a00503.html#ab5f94fd436b08eb8963d7c5d8d4907b4", null ]
+    [ "operator==", "a00503.html#adf77a906cd6705425a28ab4483c634b5", null ],
+    [ "ShouldNotUse", "a00503.html#a66690e9c31bc7daf8a1c7c15261f83b3", null ],
+    [ "type", "a00503.html#ab55cc2add22064ea6437677abc6d2555", null ],
+    [ "codec", "a00503.html#afe96592ba24d9c3f1887c7668d788c97", null ],
+    [ "filename", "a00503.html#a9cf8841f7297be7d0b8404aeaf1727a1", null ],
+    [ "length", "a00503.html#a963774ddebf115bebd86386cb84a5117", null ],
+    [ "md5", "a00503.html#a403a5a5837bbf02f5e0c5a4327f51ff3", null ],
+    [ "size", "a00503.html#a06c764f6c1f6f65def69fcfe378ebef1", null ],
+    [ "url", "a00503.html#aedf31534944297bea3c997cc49329443", null ]
 ];

@@ -1,9 +1,7 @@
 var a00479 =
 [
-    [ "LightApp", "a00479.html#a7cfcefeb788e3046fb321fab0a7b813a", null ],
-    [ "LightApp", "a00479.html#a1803b5deeb42af5f4770751aa4160a25", null ],
-    [ "operator==", "a00479.html#ae69ac9a6359eb6848ce09f7671395969", null ],
-    [ "toJson", "a00479.html#a95599fbda45f4240f9241f6dfa6fe05d", null ],
-    [ "toMiraiCode", "a00479.html#ad1637240306cd3dd587044054381d991", null ],
-    [ "type", "a00479.html#abba0c279393369d31f7ebc88ee6756fd", null ]
+    [ "AtAll", "a00479.html#aa19455c0291e5f1ebe7f6ed85b6cdea6", null ],
+    [ "toJson", "a00479.html#a4a0c42473de5f646c9d5ff5864c7d1e1", null ],
+    [ "toMiraiCode", "a00479.html#a0b99f7dc0cd4d328e7105a34395c8019", null ],
+    [ "type", "a00479.html#ac3a9e58d6562b04ed3eaefb26d137a9a", null ]
 ];

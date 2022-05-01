@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiraiCP: core.cpp 文件参考</title>
+<title>MiraiCP: thread.cpp 文件参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -91,150 +91,99 @@ $(document).ready(function(){initNavTree('a00032.html',''); initResizable(); });
 
 <div class="header">
   <div class="summary">
-<a href="#namespaces">命名空间</a> &#124;
-<a href="#typedef-members">类型定义</a> &#124;
-<a href="#func-members">函数</a> &#124;
-<a href="#var-members">变量</a>  </div>
-  <div class="headertitle"><div class="title">core.cpp 文件参考</div></div>
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle"><div class="title">thread.cpp 文件参考</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="a00035_source.html">core.h</a>&quot;</code><br />
-<code>#include &lt;<a class="el" href="a00134_source.html">MiraiCP.hpp</a>&gt;</code><br />
-<code>#include &lt;jni.h&gt;</code><br />
+<div class="textblock"><code>#include &lt;<a class="el" href="a00137_source.html">MiraiCP.hpp</a>&gt;</code><br />
+<code>#include &lt;thread&gt;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> core.cpp 的引用(Include)关系图:</div>
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> thread.cpp 的引用(Include)关系图:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="a00033.png" border="0" usemap="#acore_8cpp" alt=""/></div>
-<map name="acore_8cpp" id="acore_8cpp">
-<area shape="rect" title=" " alt="" coords="860,5,932,32"/>
-<area shape="rect" href="a00035.html" title=" " alt="" coords="867,80,925,107"/>
-<area shape="rect" href="a00134.html" title=" " alt="" coords="783,155,876,181"/>
-<area shape="rect" title=" " alt="" coords="1505,677,1551,704"/>
-<area shape="rect" title=" " alt="" coords="321,677,375,704"/>
-<area shape="rect" href="a00041.html" title=" " alt="" coords="997,528,1051,555"/>
-<area shape="rect" href="a00137.html" title=" " alt="" coords="762,677,849,704"/>
-<area shape="rect" href="a00065.html" title=" " alt="" coords="1136,453,1232,480"/>
-<area shape="rect" href="a00101.html" title=" " alt="" coords="1089,528,1161,555"/>
-<area shape="rect" href="a00131.html" title=" " alt="" coords="381,603,472,629"/>
-<area shape="rect" href="a00143.html" title=" " alt="" coords="867,528,973,555"/>
-<area shape="rect" href="a00047.html" title=" " alt="" coords="867,453,959,480"/>
-<area shape="rect" href="a00053.html" title=" " alt="" coords="1197,528,1267,555"/>
-<area shape="rect" href="a00077.html" title=" " alt="" coords="93,528,184,555"/>
-<area shape="rect" href="a00059.html" title=" " alt="" coords="427,379,506,405"/>
-<area shape="rect" href="a00119.html" title=" " alt="" coords="259,453,378,480"/>
-<area shape="rect" href="a00149.html" title=" " alt="" coords="416,528,539,555"/>
-<area shape="rect" href="a00125.html" title=" " alt="" coords="497,603,623,629"/>
-<area shape="rect" href="a00071.html" title=" " alt="" coords="675,229,741,256"/>
-<area shape="rect" href="a00089.html" title=" " alt="" coords="373,304,443,331"/>
-<area shape="rect" href="a00095.html" title=" " alt="" coords="673,304,741,331"/>
-<area shape="rect" href="a00113.html" title=" " alt="" coords="467,304,547,331"/>
-<area shape="rect" href="a00083.html" title=" " alt="" coords="251,379,397,405"/>
-<area shape="rect" href="a00107.html" title=" " alt="" coords="1457,528,1564,555"/>
-<area shape="rect" href="a00155.html" title=" " alt="" coords="1676,528,1799,555"/>
-<area shape="rect" href="a00161.html" title=" " alt="" coords="1369,528,1433,555"/>
-<area shape="rect" href="a00167.html" title=" " alt="" coords="1155,379,1213,405"/>
-<area shape="rect" title=" " alt="" coords="1088,603,1144,629"/>
-<area shape="rect" title=" " alt="" coords="1363,603,1440,629"/>
-<area shape="rect" title=" " alt="" coords="1269,603,1339,629"/>
-<area shape="rect" title=" " alt="" coords="790,603,861,629"/>
-<area shape="rect" title=" " alt="" coords="699,603,765,629"/>
-<area shape="rect" title=" " alt="" coords="102,603,181,629"/>
-<area shape="rect" title=" " alt="" coords="259,528,341,555"/>
-<area shape="rect" title=" " alt="" coords="307,603,357,629"/>
-<area shape="rect" title=" " alt="" coords="1883,603,1930,629"/>
-<area shape="rect" title=" " alt="" coords="1717,603,1776,629"/>
-<area shape="rect" title=" " alt="" coords="1800,603,1859,629"/>
+<div class="center"><img src="a00033.png" border="0" usemap="#athread_8cpp" alt=""/></div>
+<map name="athread_8cpp" id="athread_8cpp">
+<area shape="rect" title=" " alt="" coords="1119,5,1201,32"/>
+<area shape="rect" href="a00137.html" title=" " alt="" coords="749,80,843,107"/>
+<area shape="rect" title=" " alt="" coords="1607,229,1665,256"/>
+<area shape="rect" href="a00044.html" title=" " alt="" coords="1557,453,1611,480"/>
+<area shape="rect" href="a00140.html" title=" " alt="" coords="983,603,1070,629"/>
+<area shape="rect" href="a00068.html" title=" " alt="" coords="927,379,1023,405"/>
+<area shape="rect" href="a00104.html" title=" " alt="" coords="939,453,1011,480"/>
+<area shape="rect" href="a00134.html" title=" " alt="" coords="389,528,480,555"/>
+<area shape="rect" href="a00146.html" title=" " alt="" coords="809,453,914,480"/>
+<area shape="rect" href="a00050.html" title=" " alt="" coords="709,379,801,405"/>
+<area shape="rect" href="a00056.html" title=" " alt="" coords="1068,453,1137,480"/>
+<area shape="rect" href="a00080.html" title=" " alt="" coords="13,453,104,480"/>
+<area shape="rect" href="a00062.html" title=" " alt="" coords="410,304,489,331"/>
+<area shape="rect" href="a00122.html" title=" " alt="" coords="230,379,349,405"/>
+<area shape="rect" href="a00152.html" title=" " alt="" coords="389,453,512,480"/>
+<area shape="rect" href="a00128.html" title=" " alt="" coords="670,528,797,555"/>
+<area shape="rect" href="a00074.html" title=" " alt="" coords="591,155,657,181"/>
+<area shape="rect" href="a00092.html" title=" " alt="" coords="340,229,409,256"/>
+<area shape="rect" href="a00098.html" title=" " alt="" coords="589,229,657,256"/>
+<area shape="rect" href="a00116.html" title=" " alt="" coords="433,229,513,256"/>
+<area shape="rect" href="a00086.html" title=" " alt="" coords="239,304,385,331"/>
+<area shape="rect" href="a00110.html" title=" " alt="" coords="1212,453,1319,480"/>
+<area shape="rect" href="a00158.html" title=" " alt="" coords="1392,155,1515,181"/>
+<area shape="rect" href="a00164.html" title=" " alt="" coords="1396,453,1460,480"/>
+<area shape="rect" href="a00170.html" title=" " alt="" coords="965,304,1022,331"/>
+<area shape="rect" title=" " alt="" coords="1354,603,1401,629"/>
+<area shape="rect" title=" " alt="" coords="407,603,462,629"/>
+<area shape="rect" title=" " alt="" coords="1465,528,1521,555"/>
+<area shape="rect" title=" " alt="" coords="1161,528,1239,555"/>
+<area shape="rect" title=" " alt="" coords="1017,528,1087,555"/>
+<area shape="rect" title=" " alt="" coords="821,528,891,555"/>
+<area shape="rect" title=" " alt="" coords="579,528,645,555"/>
+<area shape="rect" title=" " alt="" coords="25,528,103,555"/>
+<area shape="rect" title=" " alt="" coords="232,453,315,480"/>
+<area shape="rect" title=" " alt="" coords="504,528,555,555"/>
+<area shape="rect" title=" " alt="" coords="1402,229,1449,256"/>
+<area shape="rect" title=" " alt="" coords="1473,229,1532,256"/>
 </map>
 </div>
 </div>
 <p><a href="a00032_source.html">浏览源代码.</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
-命名空间</h2></td></tr>
-<tr class="memitem:a00171"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00171.html">MiraiCP</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00175"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00175.html">MiraiCP::Core</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
-类型定义</h2></td></tr>
-<tr class="memitem:a0eab3ea242457bb1654c44df15cdc4db"><td class="memItemLeft" align="right" valign="top">typedef jint(JNICALL *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00032.html#a0eab3ea242457bb1654c44df15cdc4db">JNICREATEPROC</a>) (JavaVM **, void **, void *)</td></tr>
-<tr class="separator:a0eab3ea242457bb1654c44df15cdc4db"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 函数</h2></td></tr>
-<tr class="memitem:a10b05044395d4c1c07690963396ef228"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00032.html#a10b05044395d4c1c07690963396ef228">freeLibrary</a> (void *pointer)</td></tr>
-<tr class="separator:a10b05044395d4c1c07690963396ef228"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab2915e2a70337ef9624f9b1ebbbc258f"><td class="memItemLeft" align="right" valign="top">JNIEXPORT jstring&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00175.html#ab2915e2a70337ef9624f9b1ebbbc258f">MiraiCP::Core::enroll</a> (JNIEnv *env, jobject)</td></tr>
-<tr class="separator:ab2915e2a70337ef9624f9b1ebbbc258f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8b56509ff94538768069d3e84f00d167"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00175.html#a8b56509ff94538768069d3e84f00d167">MiraiCP::Core::loadCore</a> (const std::string &amp;corePath)</td></tr>
-<tr class="memdesc:a8b56509ff94538768069d3e84f00d167"><td class="mdescLeft">&#160;</td><td class="mdescRight">加载MiraiCP核心  <a href="a00175.html#a8b56509ff94538768069d3e84f00d167">更多...</a><br /></td></tr>
-<tr class="separator:a8b56509ff94538768069d3e84f00d167"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9a97b6ca402745354a980d46df824a20"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00175.html#a9a97b6ca402745354a980d46df824a20">MiraiCP::Core::exitCore</a> ()</td></tr>
-<tr class="memdesc:a9a97b6ca402745354a980d46df824a20"><td class="mdescLeft">&#160;</td><td class="mdescRight">结束时释放占用的空间  <a href="a00175.html#a9a97b6ca402745354a980d46df824a20">更多...</a><br /></td></tr>
-<tr class="separator:a9a97b6ca402745354a980d46df824a20"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a65dcf56179c52282d8bea686fa1bb0a9"><td class="memItemLeft" align="right" valign="top">Bot&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00175.html#a65dcf56179c52282d8bea686fa1bb0a9">MiraiCP::Core::login</a> (QQID id, std::string_view password, bool md5=false, std::string_view protocol=&quot;PAD&quot;, std::string_view heartBeat=&quot;STAT_HB&quot;, JNIEnv *=nullptr)</td></tr>
-<tr class="memdesc:a65dcf56179c52282d8bea686fa1bb0a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">登录一个机器人账号  <a href="a00175.html#a65dcf56179c52282d8bea686fa1bb0a9">更多...</a><br /></td></tr>
-<tr class="separator:a65dcf56179c52282d8bea686fa1bb0a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
-变量</h2></td></tr>
-<tr class="memitem:a55d6a9d91d0ba7e1797835892cf6b21d"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00175.html#a55d6a9d91d0ba7e1797835892cf6b21d">MiraiCP::Core::jvmLib</a></td></tr>
-<tr class="separator:a55d6a9d91d0ba7e1797835892cf6b21d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5e4d3df727df54208488a4d9c436eefd"><td class="memItemLeft" align="right" valign="top">jclass&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00175.html#a5e4d3df727df54208488a4d9c436eefd">MiraiCP::Core::coreClaz</a></td></tr>
-<tr class="separator:a5e4d3df727df54208488a4d9c436eefd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24f647174760cac13d2624b5ad74b00c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00032.html#a24f647174760cac13d2624b5ad74b00c">func</a> ()</td></tr>
+<tr class="separator:a24f647174760cac13d2624b5ad74b00c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">类型定义说明</h2>
-<a id="a0eab3ea242457bb1654c44df15cdc4db" name="a0eab3ea242457bb1654c44df15cdc4db"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0eab3ea242457bb1654c44df15cdc4db">&#9670;&nbsp;</a></span>JNICREATEPROC</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef jint(JNICALL * JNICREATEPROC) (JavaVM **, void **, void *)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">在文件 <a class="el" href="a00032_source.html">core.cpp</a> 第 <a class="el" href="a00032_source.html#l00029">29</a> 行定义.</p>
-
-</div>
-</div>
 <h2 class="groupheader">函数说明</h2>
-<a id="a10b05044395d4c1c07690963396ef228" name="a10b05044395d4c1c07690963396ef228"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a10b05044395d4c1c07690963396ef228">&#9670;&nbsp;</a></span>freeLibrary()</h2>
+<a id="a24f647174760cac13d2624b5ad74b00c" name="a24f647174760cac13d2624b5ad74b00c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24f647174760cac13d2624b5ad74b00c">&#9670;&nbsp;</a></span>func()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void freeLibrary </td>
+          <td class="memname">void func </td>
           <td>(</td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>pointer</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="section examples"><dt>示例</dt><dd><a class="el" href="a00561.html#a0">thread.cpp</a>.</dd>
+</dl>
 
-<p class="definition">在文件 <a class="el" href="a00032_source.html">core.cpp</a> 第 <a class="el" href="a00032_source.html#l00025">25</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>                                {</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <a class="code hl_variable" href="a00523.html#ac5796576b9962187070ad21fbfdf17ff">MiraiCP::ThreadManager::gvm</a>-&gt;DestroyJavaVM();</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>}</div>
-<div class="ttc" id="aa00523_html_ac5796576b9962187070ad21fbfdf17ff"><div class="ttname"><a href="a00523.html#ac5796576b9962187070ad21fbfdf17ff">MiraiCP::ThreadManager::gvm</a></div><div class="ttdeci">static JavaVM * gvm</div><div class="ttdoc">全局JavaVM对象，用于多线程管理中新建线程的JNIEnv.</div><div class="ttdef"><b>Definition:</b> <a href="a00155_source.html#l00045">ThreadManager.h:45</a></div></div>
+<p class="definition">在文件 <a class="el" href="a00032_source.html">thread.cpp</a> 第 <a class="el" href="a00032_source.html#l00020">20</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>            {</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="comment">//do some things</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="comment">// 一个完整的线程应该在结束时调用detach来释放env的空间</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    ThreadManager::detach();</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>}</div>
 </div><!-- fragment --><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-1-trigger" src="closed.png" alt="+"/> 这是这个函数的调用关系图:</div>
 <div id="dynsection-1-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="a00032_a10b05044395d4c1c07690963396ef228_icgraph.png" border="0" usemap="#aa00032_a10b05044395d4c1c07690963396ef228_icgraph" alt=""/></div>
-<map name="aa00032_a10b05044395d4c1c07690963396ef228_icgraph" id="aa00032_a10b05044395d4c1c07690963396ef228_icgraph">
-<area shape="rect" title=" " alt="" coords="216,31,299,57"/>
-<area shape="rect" href="a00175.html#a9a97b6ca402745354a980d46df824a20" title="结束时释放占用的空间" alt="" coords="7,5,166,32"/>
-<area shape="rect" href="a00175.html#a8b56509ff94538768069d3e84f00d167" title="加载MiraiCP核心" alt="" coords="5,56,168,83"/>
+<div class="center"><img src="a00032_a24f647174760cac13d2624b5ad74b00c_icgraph.png" border="0" usemap="#aa00032_a24f647174760cac13d2624b5ad74b00c_icgraph" alt=""/></div>
+<map name="aa00032_a24f647174760cac13d2624b5ad74b00c_icgraph" id="aa00032_a24f647174760cac13d2624b5ad74b00c_icgraph">
+<area shape="rect" title=" " alt="" coords="216,13,263,39"/>
+<area shape="rect" href="a00439.html#a3efab78ab867f61f84885c63b45734bd" title="自定义筛选器" alt="" coords="5,5,168,47"/>
 </map>
 </div>
 
@@ -246,8 +195,8 @@ $(document).ready(function(){initNavTree('a00032.html',''); initResizable(); });
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_1e8c1027e3cf70bb833ddc1bc6f231d1.html">miraicp-core</a></li><li class="navelem"><a class="el" href="a00032.html">core.cpp</a></li>
-    <li class="footer">生成于 2022年 五月 1日 星期日 11:26:10 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_e931c1a3f0014e624d0645a271726ad2.html">examples</a></li><li class="navelem"><a class="el" href="a00032.html">thread.cpp</a></li>
+    <li class="footer">生成于 2022年 五月 1日 星期日 11:46:57 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
 <script type="text/javascript">

@@ -1,5 +1,5 @@
 var a00339 =
 [
-    [ "RemoteAssetException", "a00339.html#aebe23c969f37db35cc07993c6c53c9f4", null ],
-    [ "exceptionType", "a00339.html#a623ffa1b259b723ab191fe5adb52a2be", null ]
+    [ "FriendException", "a00339.html#a73e9dd98256665fe2230a68df2cf2110", null ],
+    [ "exceptionType", "a00339.html#aa08c204826f37f656ed48413f331fe06", null ]
 ];

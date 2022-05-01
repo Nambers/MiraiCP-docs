@@ -1,5 +1,5 @@
 var a00347 =
 [
-    [ "TimeOutException", "a00347.html#a463bf6b96088ead25092aa265eb3ea97", null ],
-    [ "exceptionType", "a00347.html#a33b7cd14d774ca08c06e537ec6379841", null ]
+    [ "RecallException", "a00347.html#a7efed6d5b4e2e7c655b53496fbff9710", null ],
+    [ "exceptionType", "a00347.html#abb3b6f5b42098376e6a195eb6f420410", null ]
 ];

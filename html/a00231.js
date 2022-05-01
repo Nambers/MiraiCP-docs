@@ -1,15 +1,8 @@
 var a00231 =
 [
-    [ "joinType", "a00231.html#a1d73fdd5e84653d078b859b37dd1bcc8", [
-      [ "error", "a00231.html#a1d73fdd5e84653d078b859b37dd1bcc8ac7223d287b6643e82449fdfc84a78b17", null ],
-      [ "invited", "a00231.html#a1d73fdd5e84653d078b859b37dd1bcc8aa328607b0546483fb4503bf453508821", null ],
-      [ "applied", "a00231.html#a1d73fdd5e84653d078b859b37dd1bcc8a24c75b1f74122bc5b2b618daa89b14c9", null ],
-      [ "rehab", "a00231.html#a1d73fdd5e84653d078b859b37dd1bcc8a0f0421157cba536506b325cefe9fac90", null ]
-    ] ],
-    [ "MemberJoinEvent", "a00231.html#a073cb4162b0f02a4497e9ea6912399d5", null ],
-    [ "get_event_type", "a00231.html#a5f50dec2d80a1d4041a0c35a0870f66c", null ],
-    [ "group", "a00231.html#a1f879c48cc7b54fa387853b5330b0caf", null ],
-    [ "inviterid", "a00231.html#a3342fd9e038a616a272ae8de9599ad31", null ],
-    [ "member", "a00231.html#aa1a42b944df9f40fc96629a1c5687f01", null ],
-    [ "type", "a00231.html#aaef692838d233a5ddcf8d54e1b02eb40", null ]
+    [ "PrivateMessageEvent", "a00231.html#aad1f069d4e65a59adbe04f707896c8e5", null ],
+    [ "get_event_type", "a00231.html#ac3053b80946deed03cefda11255c7785", null ],
+    [ "nextMessage", "a00231.html#a5b1a60fcb2e527350742d362a5ee3b56", null ],
+    [ "message", "a00231.html#a8a85d06adc5634099288001409e51de0", null ],
+    [ "sender", "a00231.html#aa2ba8dfb74a6324a1a6ef5774d6ee793", null ]
 ];

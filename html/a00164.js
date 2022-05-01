@@ -1,11 +1,16 @@
 var a00164 =
 [
-    [ "json", "a00164.html#ab701e3ac61a85b337ec5c1abaad6742d", null ],
-    [ "Event", "a00164.html#a66ecc9e4cce13730175b5bcb21801f72", null ],
-    [ "JNI_OnLoad", "a00164.html#afb46b584efd9f9efc5313642141edeff", null ],
-    [ "PluginDisable", "a00164.html#a977e2e597fe9020cba9806a7583d3894", null ],
-    [ "registerMethods", "a00164.html#acd50ba00052ee4194d336f41b0703d66", null ],
-    [ "returnNull", "a00164.html#a0eeb0de4ae4a15bc5b8c388124ae2ef6", null ],
-    [ "Verify", "a00164.html#a069b5c9b3a753002b532970e025f91bd", null ],
-    [ "method_table", "a00164.html#a3302d044ef9d5b830044961e82c20ebf", null ]
+    [ "MiraiCP::Tools::MiraiCPDefer< RT_TYPE >", "a00543.html", "a00543" ],
+    [ "MiraiCP_defer", "a00164.html#a7e8212fd73efa74415d83aa658eabf0b", null ],
+    [ "escapeFromMiraiCode", "a00164.html#ae7bf212fddf60af59042677c3a7753a5", null ],
+    [ "escapeToMiraiCode", "a00164.html#a01f4fe41f8bef55b95953750f5cfb0c2", null ],
+    [ "icompareChar", "a00164.html#a795aadb1af1cd4b85e9b48b5bb5b246d", null ],
+    [ "iequal", "a00164.html#a0b52c701b3d96bf42b4d67c21f1dab2d", null ],
+    [ "jstring2str", "a00164.html#aca81fb0894771f60fbf64c3b776044e5", null ],
+    [ "replace", "a00164.html#a939c6b8139fec1968a2d8b45bf3e46d0", null ],
+    [ "split", "a00164.html#aa9d4bfd5269173c2f6aed44f79bf976e", null ],
+    [ "starts_with", "a00164.html#ac1c9173c6218044be45605d07874e99b", null ],
+    [ "str2jstring", "a00164.html#ad6af583021178966fa57f1290f69c0ff", null ],
+    [ "StringToVector", "a00164.html#a5e3ca5f1b36ef97a2cc8255fd07ccd69", null ],
+    [ "VectorToString", "a00164.html#a2cc70adde692e966e1d4530ac572dbbb", null ]
 ];

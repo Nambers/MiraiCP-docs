@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiraiCP: 弃用列表</title>
+<title>MiraiCP: utils.h 文件参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -89,42 +89,100 @@ $(document).ready(function(){initNavTree('a00170.html',''); initResizable(); });
 </iframe>
 </div>
 
-<div><div class="header">
-  <div class="headertitle"><div class="title">弃用列表 </div></div>
+<div class="header">
+  <div class="summary">
+<a href="#namespaces">命名空间</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle"><div class="title">utils.h 文件参考</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><dl class="reflist">
-<dt>成员 <a class="el" href="a00195.html#a08d512434520f77421c5bde1ba421bbe">MiraiCP::Contact::deserialize</a>  (const std::string &amp;source)</dt>
-<dd><a class="anchor" id="_deprecated000002"></a>since v2.8.1, use <code>this-&gt;<a class="el" href="a00195.html#ab9e12fdad98e83843cd9c3da430b9d96">toString()</a></code>  </dd>
-<dt>成员 <a class="el" href="a00195.html#a85127e1f0810fb0c03f701fbe591c1a8">MiraiCP::Contact::ShouldNotUse</a>  ("Use sendMessage") <a class="el" href="a00435.html">MessageSource</a> sendMiraiCode(const <a class="el" href="a00443.html" title="miraicode字符串">MiraiCode</a> &amp;msg</dt>
-<dd><p class="startdd"><a class="anchor" id="_deprecated000003"></a>since v2.8.1, use <code>Contact::deserialize(source)</code> </p>
-<p class="enddd"><a class="anchor" id="_deprecated000004"></a>since v2.8.1, use <code>sendMessage(MiraiCode)</code> or <code>sendMsg0(msg.toMiraiCode(), retryTime, true, env)</code>  </p>
-</dd>
-<dt>成员 <a class="el" href="a00195.html#a5022bcb86201045af660dd8a670170c5">MiraiCP::Contact::ShouldNotUse</a>  ("Use sendMessage") <a class="el" href="a00435.html">MessageSource</a> sendMsg(const <a class="el" href="a00443.html" title="miraicode字符串">MiraiCode</a> &amp;msg</dt>
-<dd><p class="startdd"><a class="anchor" id="_deprecated000005"></a>since v2.8.1, use <code>sendMessage(msg)</code> or <code>sendMsg0(msg, retryTime, false, env)</code> </p>
-<p class="enddd"><a class="anchor" id="_deprecated000006"></a>since v2.8.1, use <code>sendMessage(MiraiCode)</code> or <code>sendMsg0(msg.toMiraiCode(), retryTime, false, env);</code>  </p>
-</dd>
-<dt>成员 <a class="el" href="a00195.html#ab9e12fdad98e83843cd9c3da430b9d96">MiraiCP::Contact::toString</a>  () const</dt>
-<dd><a class="anchor" id="_deprecated000001"></a>since v2.8.1, use <code>this-&gt;<a class="el" href="a00195.html#a89fb588a12ff2d4de10722788945ea55" title="序列化到json对象">toJson()</a></code>  </dd>
-<dt>成员 <a class="el" href="a00195.html#a2afe293fd81628ce7467afd6036b31c0">MiraiCP::Contact::uploadImg</a>  (const std::string &amp;path, JNIEnv *=nullptr) const</dt>
-<dd><a class="anchor" id="_deprecated000007"></a>since v2.8.1, use <code>sendMessage(Tools::VectorToString(std::move(msg)))</code> or <code>sendMsg0(Tools::VectorToString(std::move(msg)), retryTime, false, env);</code>  </dd>
-<dt>成员 <a class="el" href="a00427.html#a7a852f4322e652fe2634591a81797c11">MiraiCP::MessageChain::ShouldNotUse</a>  ("use Contact.quoteAndSend") <a class="el" href="a00435.html">MessageSource</a> quoteAndSendMessage(T s</dt>
-<dd><a class="anchor" id="_deprecated000008"></a>use Contact.quoteAndSend or <code>this-&gt;quoteAndSend1(s, groupid, env)</code>, since v2.8.1  </dd>
-<dt>成员 <a class="el" href="a00435.html#a17c32c44e0af14a5f23f15ca56e527ae">MiraiCP::MessageSource::MessageSource</a>  (std::string ids, std::string internalids, std::string source)</dt>
-<dd><p class="startdd"><a class="anchor" id="_deprecated000010"></a>use <a class="el" href="a00195.html#a7937ea932043872ad932e5d8c94e0a79" title="回复并发送">Contact.quoteAndSendMessage</a>, since v2.8.1 </p>
-<p class="enddd"><a class="anchor" id="_deprecated000011"></a>use <a class="el" href="a00195.html#a7937ea932043872ad932e5d8c94e0a79" title="回复并发送">Contact.quoteAndSendMessage</a>, since v2.8.1  </p>
-</dd>
-<dt>成员 <a class="el" href="a00435.html#af746248b4f82c9832ace5b8b98e5295f">MiraiCP::MessageSource::ShouldNotUse</a>  ("Use Contact.quoteAndSendMessage") <a class="el" href="a00435.html">MessageSource</a> quoteAndSendMiraiCode(<a class="el" href="a00439.html" title="MiraiCode父类, 指可以被转换成miraicode的类型">MiraiCodeable</a> *msg</dt>
-<dd><a class="anchor" id="_deprecated000009"></a>用Contact.quoteAndSendMessage, since v2.8.1 </dd>
-</dl>
-</div></div><!-- contents -->
-</div><!-- PageDoc -->
+<div class="textblock"><code>#include &quot;<a class="el" href="a00068_source.html">CPPPlugin.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00056_source.html">Config.h</a>&quot;</code><br />
+</div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> utils.h 的引用(Include)关系图:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="a00171.png" border="0" usemap="#autils_8h" alt=""/></div>
+<map name="autils_8h" id="autils_8h">
+<area shape="rect" title=" " alt="" coords="434,5,491,32"/>
+<area shape="rect" href="a00068.html" title=" " alt="" coords="372,80,468,107"/>
+<area shape="rect" href="a00056.html" title=" " alt="" coords="497,155,567,181"/>
+<area shape="rect" href="a00104.html" title=" " alt="" coords="271,155,343,181"/>
+<area shape="rect" href="a00146.html" title=" " alt="" coords="367,155,473,181"/>
+<area shape="rect" title=" " alt="" coords="5,229,83,256"/>
+<area shape="rect" title=" " alt="" coords="107,229,176,256"/>
+<area shape="rect" title=" " alt="" coords="426,229,473,256"/>
+<area shape="rect" title=" " alt="" coords="497,229,567,256"/>
+<area shape="rect" href="a00134.html" title=" " alt="" coords="200,229,291,256"/>
+<area shape="rect" href="a00140.html" title=" " alt="" coords="315,229,402,256"/>
+<area shape="rect" title=" " alt="" coords="218,304,273,331"/>
+</map>
+</div>
+</div><div class="textblock"><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> 此图展示该文件直接或间接的被哪些文件引用了:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="a00172.png" border="0" usemap="#autils_8hdep" alt=""/></div>
+<map name="autils_8hdep" id="autils_8hdep">
+<area shape="rect" title=" " alt="" coords="677,5,734,32"/>
+<area shape="rect" href="a00137.html" title=" " alt="" coords="605,80,699,107"/>
+<area shape="rect" href="a00167.html" title=" " alt="" coords="723,80,794,107"/>
+<area shape="rect" href="a00774.html" title=" " alt="" coords="5,155,109,181"/>
+<area shape="rect" href="a00035.html" title=" " alt="" coords="144,229,216,256"/>
+<area shape="rect" href="a00038.html" title=" " alt="" coords="184,155,243,181"/>
+<area shape="rect" href="a00780.html" title=" " alt="" coords="267,155,421,181"/>
+<area shape="rect" href="a00786.html" title=" " alt="" coords="446,155,525,181"/>
+<area shape="rect" href="a00014.html" title=" " alt="" coords="549,155,643,181"/>
+<area shape="rect" href="a00792.html" title=" " alt="" coords="668,155,751,181"/>
+<area shape="rect" href="a00798.html" title=" " alt="" coords="775,155,870,181"/>
+<area shape="rect" href="a00023.html" title=" " alt="" coords="894,155,994,181"/>
+<area shape="rect" href="a00026.html" title=" " alt="" coords="1019,155,1144,181"/>
+<area shape="rect" href="a00029.html" title=" " alt="" coords="1168,155,1267,181"/>
+<area shape="rect" href="a00032.html" title=" " alt="" coords="1291,155,1373,181"/>
+</map>
+</div>
+</div>
+<p><a href="a00170_source.html">浏览源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
+命名空间</h2></td></tr>
+<tr class="memitem:a00174"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00174.html">MiraiCP</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00177"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00177.html">MiraiCP::JNIApi</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:ad274e5c7a685e18ad0b3817fd554b934"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00174.html#ad274e5c7a685e18ad0b3817fd554b934">MiraiCP::schedule</a> (long time, const std::string &amp;msg, JNIEnv *env=nullptr)</td></tr>
+<tr class="memdesc:ad274e5c7a685e18ad0b3817fd554b934"><td class="mdescLeft">&#160;</td><td class="mdescRight">定时任务, 在一定时间后广播**一次**TimeOutEvent  <a href="a00174.html#ad274e5c7a685e18ad0b3817fd554b934">更多...</a><br /></td></tr>
+<tr class="separator:ad274e5c7a685e18ad0b3817fd554b934"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12d27be6730af4fc321ac1eb231db281"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00174.html#a12d27be6730af4fc321ac1eb231db281">MiraiCP::enrollPlugin</a> ()</td></tr>
+<tr class="memdesc:a12d27be6730af4fc321ac1eb231db281"><td class="mdescLeft">&#160;</td><td class="mdescRight">注册插件函数, 需要被实现, 类似onStart();  <a href="a00174.html#a12d27be6730af4fc321ac1eb231db281">更多...</a><br /></td></tr>
+<tr class="separator:a12d27be6730af4fc321ac1eb231db281"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5dfcfb8bbf110c31ac8a5288f395bba"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00174.html#ad5dfcfb8bbf110c31ac8a5288f395bba">MiraiCP::enrollPlugin0</a> (CPPPlugin *p)</td></tr>
+<tr class="memdesc:ad5dfcfb8bbf110c31ac8a5288f395bba"><td class="mdescLeft">&#160;</td><td class="mdescRight">用指针绑定插件  <a href="a00174.html#ad5dfcfb8bbf110c31ac8a5288f395bba">更多...</a><br /></td></tr>
+<tr class="separator:ad5dfcfb8bbf110c31ac8a5288f395bba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66ecc9e4cce13730175b5bcb21801f72"><td class="memItemLeft" align="right" valign="top">JNIEXPORT jstring&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00177.html#a66ecc9e4cce13730175b5bcb21801f72">MiraiCP::JNIApi::Event</a> (JNIEnv *env, jobject, jstring content)</td></tr>
+<tr class="separator:a66ecc9e4cce13730175b5bcb21801f72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0eeb0de4ae4a15bc5b8c388124ae2ef6"><td class="memItemLeft" align="right" valign="top">JNIEXPORT jstring&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00177.html#a0eeb0de4ae4a15bc5b8c388124ae2ef6">MiraiCP::JNIApi::returnNull</a> ()</td></tr>
+<tr class="separator:a0eeb0de4ae4a15bc5b8c388124ae2ef6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a977e2e597fe9020cba9806a7583d3894"><td class="memItemLeft" align="right" valign="top">JNIEXPORT jobject&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00177.html#a977e2e597fe9020cba9806a7583d3894">MiraiCP::JNIApi::PluginDisable</a> (JNIEnv *env, jobject job)</td></tr>
+<tr class="separator:a977e2e597fe9020cba9806a7583d3894"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a069b5c9b3a753002b532970e025f91bd"><td class="memItemLeft" align="right" valign="top">JNIEXPORT jstring&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00177.html#a069b5c9b3a753002b532970e025f91bd">MiraiCP::JNIApi::Verify</a> (JNIEnv *env, jobject, jstring id)</td></tr>
+<tr class="separator:a069b5c9b3a753002b532970e025f91bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd50ba00052ee4194d336f41b0703d66"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00177.html#acd50ba00052ee4194d336f41b0703d66">MiraiCP::JNIApi::registerMethods</a> (JNIEnv *env, const char *className, JNINativeMethod *gMethods, int numMethods)</td></tr>
+<tr class="separator:acd50ba00052ee4194d336f41b0703d66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">生成于 2022年 五月 1日 星期日 11:26:10 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b0856f6b0d80ccb263b2f415c91f9e17.html">include</a></li><li class="navelem"><a class="el" href="a00170.html">utils.h</a></li>
+    <li class="footer">生成于 2022年 五月 1日 星期日 11:46:58 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
 <script type="text/javascript">

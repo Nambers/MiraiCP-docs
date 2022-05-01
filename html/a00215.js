@@ -1,10 +1,9 @@
 var a00215 =
 [
-    [ "GroupMessageEvent", "a00215.html#a69a261b515fcfafc599a649684cea695", null ],
-    [ "get_event_type", "a00215.html#a09594d4b28823a009b03c9640a670fe8", null ],
-    [ "nextMessage", "a00215.html#a64b10968daea52b1209c8ff8e3922160", null ],
-    [ "senderNextMessage", "a00215.html#a3f151b658fd0fe0ddf7d6a5e16254529", null ],
-    [ "group", "a00215.html#abac98c5b1373ad6c8483f9978952c553", null ],
-    [ "message", "a00215.html#a722dc1ca031c471c953c710367067ae7", null ],
-    [ "sender", "a00215.html#acd0e90e4fb7862986215aae7e47cb2d6", null ]
+    [ "CPPPlugin", "a00215.html#a8757991e0396faf72a9e0ad06caa53f4", null ],
+    [ "onDisable", "a00215.html#a3ecc2c479d1ca6785e7cdcb0738c1597", null ],
+    [ "onEnable", "a00215.html#ad3d1188d089ab0fc945475f988c64fa7", null ],
+    [ "config", "a00215.html#a4ca2c5ec7d04d258a2da1ce7cdb09a75", null ],
+    [ "plugin", "a00215.html#a5bfd48cf68b997a48e04d141d831f6d3", null ],
+    [ "pluginLogger", "a00215.html#a77d8d4ed65a3beb60410f0659bf9aedf", null ]
 ];

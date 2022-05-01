@@ -1,10 +1,11 @@
 var a00375 =
 [
-    [ "AnnouncementParams", "a00375.html#ad9cd7b9ca38c4268c6f625034107a584", null ],
-    [ "serializeToJson", "a00375.html#ac87021b1e71d8d3334c4d197813924bc", null ],
-    [ "pinned", "a00375.html#a1045432e9f2c822b1150bc278e99de05", null ],
-    [ "requireConfirm", "a00375.html#a2641ceb16f0da11938027e7bf67c5c8a", null ],
-    [ "send2new", "a00375.html#af941b1ec8148c2675bcad7a6a10a53f5", null ],
-    [ "showEditCard", "a00375.html#a92569e1952f8f1668db0df430928da8e", null ],
-    [ "showPopup", "a00375.html#ab80e896e8ac632e75f5d5e98dff79a97", null ]
+    [ "OnlineForwardedMessage", "a00375.html#a8eeee98912485b77514779d426f3aac2", null ],
+    [ "operator==", "a00375.html#a36cb67be0ffb52568cc6211b9b8c3d65", null ],
+    [ "operator[]", "a00375.html#a0d29b0fb5c909370a9f5149075272b94", null ],
+    [ "toForwardedMessage", "a00375.html#a2dcabd31951eefb2d6bec010bd4fdede", null ],
+    [ "type", "a00375.html#a5b7f35a7b72d29102b39f560343ec05c", null ],
+    [ "nodelist", "a00375.html#a3fcb5073c4ec3f07fb918cf2055cc40c", null ],
+    [ "origin", "a00375.html#a75805d847603df24ade1c924ee288249", null ],
+    [ "resourceId", "a00375.html#a5106f13692786b4713ba1c6a9fac6be3", null ]
 ];

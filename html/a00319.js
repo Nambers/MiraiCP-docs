@@ -1,5 +1,5 @@
 var a00319 =
 [
-    [ "MuteException", "a00319.html#aabc181c072a55209b6a88f4a0f43fa9a", null ],
-    [ "exceptionType", "a00319.html#afae350ada0208f24022d4de92442b515", null ]
+    [ "APIException", "a00319.html#a5ab35b388404f70eeccfe3474bdb9c90", null ],
+    [ "exceptionType", "a00319.html#aa95831ad20b7019b10241a25f8f41dd1", null ]
 ];

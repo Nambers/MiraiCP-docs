@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiraiCP: CPPPlugin.h 源文件</title>
+<title>MiraiCP: CPPPlugin.cpp 源文件</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -90,7 +90,7 @@ $(document).ready(function(){initNavTree('a00065_source.html',''); initResizable
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">CPPPlugin.h</div></div>
+  <div class="headertitle"><div class="title">CPPPlugin.cpp</div></div>
 </div><!--header-->
 <div class="contents">
 <a href="a00065.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// Copyright (c) 2020 - 2022. Eritque arcus and contributors.</span></div>
@@ -109,50 +109,24 @@ $(document).ready(function(){initNavTree('a00065_source.html',''); initResizable
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">// along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</span></div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">//</span></div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#ifndef MIRAICP_PRO_CPPPLUGIN_H</span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#define MIRAICP_PRO_CPPPLUGIN_H</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &quot;<a class="code" href="a00101.html">Logger.h</a>&quot;</span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &quot;<a class="code" href="a00143.html">PluginConfig.h</a>&quot;</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keyword">namespace </span><a class="code hl_namespace" href="a00171.html">MiraiCP</a> {</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="a00203.html">   25</a></span>    <span class="keyword">class </span><a class="code hl_class" href="a00203.html">CPPPlugin</a> {</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="a00203.html#a4ca2c5ec7d04d258a2da1ce7cdb09a75">   28</a></span>        <a class="code hl_class" href="a00447.html">PluginConfig</a> <a class="code hl_variable" href="a00203.html#a4ca2c5ec7d04d258a2da1ce7cdb09a75">config</a>;</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="a00203.html#a77d8d4ed65a3beb60410f0659bf9aedf">   30</a></span>        <span class="keyword">static</span> <a class="code hl_class" href="a00411.html">PluginLogger</a> *<a class="code hl_variable" href="a00203.html#a77d8d4ed65a3beb60410f0659bf9aedf">pluginLogger</a>;</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="a00203.html#a5bfd48cf68b997a48e04d141d831f6d3">   32</a></span>        <span class="keyword">static</span> <a class="code hl_class" href="a00203.html">CPPPlugin</a> *<a class="code hl_variable" href="a00203.html#a5bfd48cf68b997a48e04d141d831f6d3">plugin</a>;</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="a00203.html#ad3d1188d089ab0fc945475f988c64fa7">   35</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="a00203.html#ad3d1188d089ab0fc945475f988c64fa7">onEnable</a>() {}</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="a00203.html#a3ecc2c479d1ca6785e7cdcb0738c1597">   37</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="a00203.html#a3ecc2c479d1ca6785e7cdcb0738c1597">onDisable</a>() {}</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="a00203.html#a8757991e0396faf72a9e0ad06caa53f4">   39</a></span>        <span class="keyword">explicit</span> <a class="code hl_function" href="a00203.html#a8757991e0396faf72a9e0ad06caa53f4">CPPPlugin</a>(<a class="code hl_class" href="a00447.html">PluginConfig</a> c) : <a class="code hl_variable" href="a00203.html#a4ca2c5ec7d04d258a2da1ce7cdb09a75">config</a>(std::move(c)) {}</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    };</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>} <span class="comment">// namespace MiraiCP</span></div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="preprocessor">#endif </span><span class="comment">//MIRAICP_PRO_CPPPLUGIN_H</span></div>
-<div class="ttc" id="aa00101_html"><div class="ttname"><a href="a00101.html">Logger.h</a></div></div>
-<div class="ttc" id="aa00143_html"><div class="ttname"><a href="a00143.html">PluginConfig.h</a></div></div>
-<div class="ttc" id="aa00171_html"><div class="ttname"><a href="a00171.html">MiraiCP</a></div><div class="ttdef"><b>Definition:</b> <a href="a00038_source.html#l00023">Bot.cpp:23</a></div></div>
-<div class="ttc" id="aa00203_html"><div class="ttname"><a href="a00203.html">MiraiCP::CPPPlugin</a></div><div class="ttdoc">插件父类</div><div class="ttdef"><b>Definition:</b> <a href="a00065_source.html#l00025">CPPPlugin.h:25</a></div></div>
-<div class="ttc" id="aa00203_html_a3ecc2c479d1ca6785e7cdcb0738c1597"><div class="ttname"><a href="a00203.html#a3ecc2c479d1ca6785e7cdcb0738c1597">MiraiCP::CPPPlugin::onDisable</a></div><div class="ttdeci">virtual void onDisable()</div><div class="ttdef"><b>Definition:</b> <a href="a00065_source.html#l00037">CPPPlugin.h:37</a></div></div>
-<div class="ttc" id="aa00203_html_a4ca2c5ec7d04d258a2da1ce7cdb09a75"><div class="ttname"><a href="a00203.html#a4ca2c5ec7d04d258a2da1ce7cdb09a75">MiraiCP::CPPPlugin::config</a></div><div class="ttdeci">PluginConfig config</div><div class="ttdoc">插件信息</div><div class="ttdef"><b>Definition:</b> <a href="a00065_source.html#l00028">CPPPlugin.h:28</a></div></div>
-<div class="ttc" id="aa00203_html_a5bfd48cf68b997a48e04d141d831f6d3"><div class="ttname"><a href="a00203.html#a5bfd48cf68b997a48e04d141d831f6d3">MiraiCP::CPPPlugin::plugin</a></div><div class="ttdeci">static CPPPlugin * plugin</div><div class="ttdef"><b>Definition:</b> <a href="a00065_source.html#l00032">CPPPlugin.h:32</a></div></div>
-<div class="ttc" id="aa00203_html_a77d8d4ed65a3beb60410f0659bf9aedf"><div class="ttname"><a href="a00203.html#a77d8d4ed65a3beb60410f0659bf9aedf">MiraiCP::CPPPlugin::pluginLogger</a></div><div class="ttdeci">static PluginLogger * pluginLogger</div><div class="ttdoc">插件级logger</div><div class="ttdef"><b>Definition:</b> <a href="a00065_source.html#l00030">CPPPlugin.h:30</a></div></div>
-<div class="ttc" id="aa00203_html_a8757991e0396faf72a9e0ad06caa53f4"><div class="ttname"><a href="a00203.html#a8757991e0396faf72a9e0ad06caa53f4">MiraiCP::CPPPlugin::CPPPlugin</a></div><div class="ttdeci">CPPPlugin(PluginConfig c)</div><div class="ttdef"><b>Definition:</b> <a href="a00065_source.html#l00039">CPPPlugin.h:39</a></div></div>
-<div class="ttc" id="aa00203_html_ad3d1188d089ab0fc945475f988c64fa7"><div class="ttname"><a href="a00203.html#ad3d1188d089ab0fc945475f988c64fa7">MiraiCP::CPPPlugin::onEnable</a></div><div class="ttdeci">virtual void onEnable()</div><div class="ttdoc">插件启用时调用一次</div><div class="ttdef"><b>Definition:</b> <a href="a00065_source.html#l00035">CPPPlugin.h:35</a></div></div>
-<div class="ttc" id="aa00411_html"><div class="ttname"><a href="a00411.html">MiraiCP::PluginLogger</a></div><div class="ttdoc">插件logger</div><div class="ttdef"><b>Definition:</b> <a href="a00101_source.html#l00170">Logger.h:170</a></div></div>
-<div class="ttc" id="aa00447_html"><div class="ttname"><a href="a00447.html">MiraiCP::PluginConfig</a></div><div class="ttdef"><b>Definition:</b> <a href="a00143_source.html#l00023">PluginConfig.h:23</a></div></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &quot;<a class="code" href="a00068.html">CPPPlugin.h</a>&quot;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">namespace </span><a class="code hl_namespace" href="a00174.html">MiraiCP</a> {</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    PluginLogger *<a class="code hl_variable" href="a00215.html#a77d8d4ed65a3beb60410f0659bf9aedf">CPPPlugin::pluginLogger</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    CPPPlugin *<a class="code hl_variable" href="a00215.html#a5bfd48cf68b997a48e04d141d831f6d3">CPPPlugin::plugin</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>} <span class="comment">// namespace MiraiCP</span></div>
+<div class="ttc" id="aa00068_html"><div class="ttname"><a href="a00068.html">CPPPlugin.h</a></div></div>
+<div class="ttc" id="aa00174_html"><div class="ttname"><a href="a00174.html">MiraiCP</a></div><div class="ttdef"><b>Definition:</b> <a href="a00041_source.html#l00023">Bot.cpp:23</a></div></div>
+<div class="ttc" id="aa00215_html_a5bfd48cf68b997a48e04d141d831f6d3"><div class="ttname"><a href="a00215.html#a5bfd48cf68b997a48e04d141d831f6d3">MiraiCP::CPPPlugin::plugin</a></div><div class="ttdeci">static CPPPlugin * plugin</div><div class="ttdef"><b>Definition:</b> <a href="a00068_source.html#l00032">CPPPlugin.h:32</a></div></div>
+<div class="ttc" id="aa00215_html_a77d8d4ed65a3beb60410f0659bf9aedf"><div class="ttname"><a href="a00215.html#a77d8d4ed65a3beb60410f0659bf9aedf">MiraiCP::CPPPlugin::pluginLogger</a></div><div class="ttdeci">static PluginLogger * pluginLogger</div><div class="ttdoc">插件级logger</div><div class="ttdef"><b>Definition:</b> <a href="a00068_source.html#l00030">CPPPlugin.h:30</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b0856f6b0d80ccb263b2f415c91f9e17.html">include</a></li><li class="navelem"><a class="el" href="a00065.html">CPPPlugin.h</a></li>
-    <li class="footer">生成于 2022年 五月 1日 星期日 11:26:10 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b0856f6b0d80ccb263b2f415c91f9e17.html">include</a></li><li class="navelem"><a class="el" href="a00065.html">CPPPlugin.cpp</a></li>
+    <li class="footer">生成于 2022年 五月 1日 星期日 11:46:57 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
 <script type="text/javascript">

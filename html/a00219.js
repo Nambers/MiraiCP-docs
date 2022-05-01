@@ -1,8 +1,7 @@
 var a00219 =
 [
-    [ "PrivateMessageEvent", "a00219.html#aad1f069d4e65a59adbe04f707896c8e5", null ],
-    [ "get_event_type", "a00219.html#ac3053b80946deed03cefda11255c7785", null ],
-    [ "nextMessage", "a00219.html#a5b1a60fcb2e527350742d362a5ee3b56", null ],
-    [ "message", "a00219.html#a8a85d06adc5634099288001409e51de0", null ],
-    [ "sender", "a00219.html#aa2ba8dfb74a6324a1a6ef5774d6ee793", null ]
+    [ "MiraiCPEvent", "a00219.html#ac85886499f0138dbdd661dea59c7596d", null ],
+    [ "~MiraiCPEvent", "a00219.html#a42d37c121315a51870afcc0b9306675a", null ],
+    [ "get_event_type", "a00219.html#a4b47da50d047657111117e4cd6d895e9", null ],
+    [ "getEventType", "a00219.html#ae9be7c5b43cf85e524a55b9b3eaca522", null ]
 ];

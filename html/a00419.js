@@ -1,5 +1,6 @@
 var a00419 =
 [
-    [ "avatarUrl", "a00419.html#a037b8d06c116200bdb37de924401ef46", null ],
-    [ "nickornamecard", "a00419.html#abc3f2c3176f05d64751446e8760595df", null ]
+    [ "IdLogger", "a00419.html#a50eb2703023973190ae65a949011166f", null ],
+    [ "log1", "a00419.html#ac00e0c40a6aafe1119dad61d840aa87c", null ],
+    [ "id", "a00419.html#a0780713691dbbe27226d2c4c6c13d226", null ]
 ];

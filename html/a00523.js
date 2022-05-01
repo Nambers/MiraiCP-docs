@@ -1,16 +1,13 @@
 var a00523 =
 [
-    [ "ThreadInfo", "a00527.html", "a00527" ],
-    [ "ThreadManager", "a00523.html#a839cd3642c36630c7f71c09728498bb5", null ],
-    [ "detach", "a00523.html#a72b77deebd7be1c800b73ebd4b2daa09", null ],
-    [ "getEnv", "a00523.html#a365e1740117b0fb9d5990855a26dba4f", null ],
-    [ "getThread", "a00523.html#a00a561eb63a7489b54010df23b58036d", null ],
-    [ "getThreadId", "a00523.html#a11837c8fea64ee75bea0bcd1ea56de9c", null ],
-    [ "included", "a00523.html#abd1025cb50143b1aa60b55d79ec2b370", null ],
-    [ "newEnv", "a00523.html#a29f1a55d4cb7b78045fd3f2566c59dcc", null ],
-    [ "setEnv", "a00523.html#afacfbdbffc416bb53676f040720a42e0", null ],
-    [ "gvm", "a00523.html#ac5796576b9962187070ad21fbfdf17ff", null ],
-    [ "JNIVersion", "a00523.html#a630b0c6d61decb2ea60eb719bbc1120e", null ],
-    [ "mtx", "a00523.html#af61aae7d053395c836bae677af861364", null ],
-    [ "threads", "a00523.html#a6aaf08f6744b01ac5ab06430313dd3a0", null ]
+    [ "MusicShare", "a00523.html#a36dd35e9834b873e11c98eae3602d0ac", null ],
+    [ "toMiraiCode", "a00523.html#a1bffdbd7cd143a903f22fb376b79c855", null ],
+    [ "type", "a00523.html#a0d066ebbca63439a3eea2e564e31403a", null ],
+    [ "appName", "a00523.html#a87a20d867c8dadbe4a8f55ef2b6d0d4d", null ],
+    [ "brief", "a00523.html#ab3e91b8220d2e80dbb84ff17b83ce3f8", null ],
+    [ "jumpUrl", "a00523.html#aa4239e8aadb82d6c79bc8986f55e68b6", null ],
+    [ "musicUrl", "a00523.html#a98dc3816bcdd57e551a55ff88b2ea4fa", null ],
+    [ "picUrl", "a00523.html#a0615bbf6886985e1438ab1493cdc012a", null ],
+    [ "summary", "a00523.html#a2da932b20adbdc6f9fa58bda8c0623ac", null ],
+    [ "title", "a00523.html#aa4f1eb91480d538d2aead5904f1cc4b9", null ]
 ];

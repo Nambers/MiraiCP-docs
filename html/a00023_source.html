@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiraiCP: core.h 源文件</title>
+<title>MiraiCP: message.cpp 源文件</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -90,7 +90,7 @@ $(document).ready(function(){initNavTree('a00023_source.html',''); initResizable
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">core.h</div></div>
+  <div class="headertitle"><div class="title">message.cpp</div></div>
 </div><!--header-->
 <div class="contents">
 <a href="a00023.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// Copyright (c) 2020 - 2022. Eritque arcus and contributors.</span></div>
@@ -108,37 +108,53 @@ $(document).ready(function(){initNavTree('a00023_source.html',''); initResizable
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">// You should have received a copy of the GNU Affero General Public License</span></div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">// along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</span></div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">//</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#ifndef MIRAICP_PRO_CORE_H</span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#define MIRAICP_PRO_CORE_H</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &quot;MiraiCP.hpp&quot;</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &lt;jni.h&gt;</span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keyword">namespace </span><a class="code hl_namespace" href="a00160.html">MiraiCP::Core</a> {</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="a00160.html#aaa91855dbe1a6370032673bf14bc17d5">   23</a></span>    <span class="keyword">using</span> <a class="code hl_typedef" href="a00160.html#aaa91855dbe1a6370032673bf14bc17d5">QQID</a> = <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> long;</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keyword">extern</span> jclass <a class="code hl_variable" href="a00160.html#a5e4d3df727df54208488a4d9c436eefd">coreClaz</a>;</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keyword">extern</span> <span class="keywordtype">void</span> *<a class="code hl_variable" href="a00160.html#a55d6a9d91d0ba7e1797835892cf6b21d">jvmLib</a>;</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="a00160.html#a8b56509ff94538768069d3e84f00d167">loadCore</a>(<span class="keyword">const</span> std::string &amp;corePath);</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="a00160.html#a9a97b6ca402745354a980d46df824a20">exitCore</a>();</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <a class="code hl_class" href="a00164.html">Bot</a> <a class="code hl_function" href="a00160.html#a65dcf56179c52282d8bea686fa1bb0a9">login</a>(<a class="code hl_typedef" href="a00160.html#aaa91855dbe1a6370032673bf14bc17d5">QQID</a> <span class="keywordtype">id</span>, std::string_view password, <span class="keywordtype">bool</span> md5 = <span class="keyword">false</span>, std::string_view protocol = <span class="stringliteral">&quot;PAD&quot;</span>, std::string_view heartBeat = <span class="stringliteral">&quot;STAT_HB&quot;</span>, JNIEnv * = <span class="keyword">nullptr</span>);</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>} <span class="comment">// namespace MiraiCP::Core</span></div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="preprocessor">#endif </span><span class="comment">//MIRAICP_PRO_CORE_H</span></div>
-<div class="ttc" id="aa00160_html"><div class="ttname"><a href="a00160.html">MiraiCP::Core</a></div><div class="ttdef"><b>Definition:</b> <a href="a00020_source.html#l00030">core.cpp:30</a></div></div>
-<div class="ttc" id="aa00160_html_a55d6a9d91d0ba7e1797835892cf6b21d"><div class="ttname"><a href="a00160.html#a55d6a9d91d0ba7e1797835892cf6b21d">MiraiCP::Core::jvmLib</a></div><div class="ttdeci">void * jvmLib</div><div class="ttdef"><b>Definition:</b> <a href="a00020_source.html#l00031">core.cpp:31</a></div></div>
-<div class="ttc" id="aa00160_html_a5e4d3df727df54208488a4d9c436eefd"><div class="ttname"><a href="a00160.html#a5e4d3df727df54208488a4d9c436eefd">MiraiCP::Core::coreClaz</a></div><div class="ttdeci">jclass coreClaz</div><div class="ttdef"><b>Definition:</b> <a href="a00020_source.html#l00032">core.cpp:32</a></div></div>
-<div class="ttc" id="aa00160_html_a65dcf56179c52282d8bea686fa1bb0a9"><div class="ttname"><a href="a00160.html#a65dcf56179c52282d8bea686fa1bb0a9">MiraiCP::Core::login</a></div><div class="ttdeci">Bot login(QQID id, std::string_view password, bool md5, std::string_view protocol, std::string_view heartBeat, JNIEnv *env)</div><div class="ttdoc">登录一个机器人账号</div><div class="ttdef"><b>Definition:</b> <a href="a00020_source.html#l00126">core.cpp:126</a></div></div>
-<div class="ttc" id="aa00160_html_a8b56509ff94538768069d3e84f00d167"><div class="ttname"><a href="a00160.html#a8b56509ff94538768069d3e84f00d167">MiraiCP::Core::loadCore</a></div><div class="ttdeci">int loadCore(const std::string &amp;corePath)</div><div class="ttdoc">加载MiraiCP核心</div><div class="ttdef"><b>Definition:</b> <a href="a00020_source.html#l00042">core.cpp:42</a></div></div>
-<div class="ttc" id="aa00160_html_a9a97b6ca402745354a980d46df824a20"><div class="ttname"><a href="a00160.html#a9a97b6ca402745354a980d46df824a20">MiraiCP::Core::exitCore</a></div><div class="ttdeci">void exitCore()</div><div class="ttdoc">结束时释放占用的空间</div><div class="ttdef"><b>Definition:</b> <a href="a00020_source.html#l00120">core.cpp:120</a></div></div>
-<div class="ttc" id="aa00160_html_aaa91855dbe1a6370032673bf14bc17d5"><div class="ttname"><a href="a00160.html#aaa91855dbe1a6370032673bf14bc17d5">MiraiCP::Core::QQID</a></div><div class="ttdeci">unsigned long long QQID</div><div class="ttdef"><b>Definition:</b> <a href="a00023_source.html#l00023">core.h:23</a></div></div>
-<div class="ttc" id="aa00164_html"><div class="ttname"><a href="a00164.html">MiraiCP::Bot</a></div><div class="ttdoc">当前bot账号信息</div><div class="ttdef"><b>Definition:</b> <a href="a00029_source.html#l00031">Bot.h:31</a></div></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;<a class="code" href="a00137.html">MiraiCP.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">using namespace </span><a class="code hl_namespace" href="a00174.html">MiraiCP</a>;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">class </span>Main : <span class="keyword">public</span> <a class="code hl_class" href="a00215.html">CPPPlugin</a> {</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    Main() : <a class="code hl_class" href="a00215.html">CPPPlugin</a>(<a class="code hl_class" href="a00459.html">PluginConfig</a>(</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>                     <span class="stringliteral">&quot;id&quot;</span>,</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>                     <span class="stringliteral">&quot;test&quot;</span>,</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>                     <span class="stringliteral">&quot;v1.0&quot;</span>,</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>                     <span class="stringliteral">&quot;a&quot;</span>)) {}</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="a00215.html#ad3d1188d089ab0fc945475f988c64fa7">onEnable</a>()<span class="keyword"> override </span>{</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        Event::processor.registerEvent&lt;<a class="code hl_class" href="a00227.html">GroupMessageEvent</a>&gt;([](<a class="code hl_class" href="a00227.html">GroupMessageEvent</a> e) {</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>            <span class="comment">// 发送MessageChain</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>            e.group.sendMessage(e.message);</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>            <span class="comment">// 发送SingleMessage</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>            e.group.sendMessage(<a class="code hl_class" href="a00471.html">PlainText</a>(<span class="stringliteral">&quot;a&quot;</span>));</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>            e.group.sendMessage(e.sender.at(), <a class="code hl_class" href="a00471.html">PlainText</a>(<span class="stringliteral">&quot;&quot;</span>), <a class="code hl_class" href="a00519.html">Face</a>(5));</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>            <span class="comment">// 回复信息</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>            e.group.quoteAndSendMessage(<a class="code hl_class" href="a00471.html">PlainText</a>(<span class="stringliteral">&quot;a&quot;</span>), e.message.source.value());</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>            <span class="comment">// 撤回信息</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>            e.message.source.value().recall();</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>            e.group.sendMessage(<span class="stringliteral">&quot;hi&quot;</span>).recall();</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        });</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    }</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>};</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="keywordtype">void</span> <a class="code hl_function" href="a00174.html#a12d27be6730af4fc321ac1eb231db281">MiraiCP::enrollPlugin</a>() {</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <a class="code hl_function" href="a00174.html#ad5dfcfb8bbf110c31ac8a5288f395bba">MiraiCP::enrollPlugin0</a>(<span class="keyword">new</span> Main());</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>}</div>
+<div class="ttc" id="aa00137_html"><div class="ttname"><a href="a00137.html">MiraiCP.hpp</a></div></div>
+<div class="ttc" id="aa00174_html"><div class="ttname"><a href="a00174.html">MiraiCP</a></div><div class="ttdef"><b>Definition:</b> <a href="a00041_source.html#l00023">Bot.cpp:23</a></div></div>
+<div class="ttc" id="aa00174_html_a12d27be6730af4fc321ac1eb231db281"><div class="ttname"><a href="a00174.html#a12d27be6730af4fc321ac1eb231db281">MiraiCP::enrollPlugin</a></div><div class="ttdeci">void enrollPlugin()</div><div class="ttdoc">注册插件函数, 需要被实现, 类似onStart();</div><div class="ttdef"><b>Definition:</b> <a href="a00774_source.html#l00044">examples/Command.cpp:44</a></div></div>
+<div class="ttc" id="aa00174_html_ad5dfcfb8bbf110c31ac8a5288f395bba"><div class="ttname"><a href="a00174.html#ad5dfcfb8bbf110c31ac8a5288f395bba">MiraiCP::enrollPlugin0</a></div><div class="ttdeci">void enrollPlugin0(CPPPlugin *p)</div><div class="ttdoc">用指针绑定插件</div><div class="ttdef"><b>Definition:</b> <a href="a00170_source.html#l00038">utils.h:38</a></div></div>
+<div class="ttc" id="aa00215_html"><div class="ttname"><a href="a00215.html">MiraiCP::CPPPlugin</a></div><div class="ttdoc">插件父类</div><div class="ttdef"><b>Definition:</b> <a href="a00068_source.html#l00025">CPPPlugin.h:25</a></div></div>
+<div class="ttc" id="aa00215_html_ad3d1188d089ab0fc945475f988c64fa7"><div class="ttname"><a href="a00215.html#ad3d1188d089ab0fc945475f988c64fa7">MiraiCP::CPPPlugin::onEnable</a></div><div class="ttdeci">virtual void onEnable()</div><div class="ttdoc">插件启用时调用一次</div><div class="ttdef"><b>Definition:</b> <a href="a00068_source.html#l00035">CPPPlugin.h:35</a></div></div>
+<div class="ttc" id="aa00227_html"><div class="ttname"><a href="a00227.html">MiraiCP::GroupMessageEvent</a></div><div class="ttdoc">群消息事件声明</div><div class="ttdef"><b>Definition:</b> <a href="a00074_source.html#l00085">Event.h:85</a></div></div>
+<div class="ttc" id="aa00459_html"><div class="ttname"><a href="a00459.html">MiraiCP::PluginConfig</a></div><div class="ttdef"><b>Definition:</b> <a href="a00146_source.html#l00023">PluginConfig.h:23</a></div></div>
+<div class="ttc" id="aa00471_html"><div class="ttname"><a href="a00471.html">MiraiCP::PlainText</a></div><div class="ttdoc">纯文本信息</div><div class="ttdef"><b>Definition:</b> <a href="a00152_source.html#l00087">SingleMessage.h:87</a></div></div>
+<div class="ttc" id="aa00519_html"><div class="ttname"><a href="a00519.html">MiraiCP::Face</a></div><div class="ttdef"><b>Definition:</b> <a href="a00152_source.html#l00438">SingleMessage.h:438</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_1e8c1027e3cf70bb833ddc1bc6f231d1.html">miraicp-core</a></li><li class="navelem"><a class="el" href="a00023.html">core.h</a></li>
-    <li class="footer">生成于 2022年 五月 1日 星期日 10:34:33 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_e931c1a3f0014e624d0645a271726ad2.html">examples</a></li><li class="navelem"><a class="el" href="a00023.html">message.cpp</a></li>
+    <li class="footer">生成于 2022年 五月 1日 星期日 11:46:57 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
 <script type="text/javascript">
