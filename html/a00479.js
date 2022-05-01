@@ -1,8 +1,9 @@
 var a00479 =
 [
-    [ "MarketFace", "a00479.html#ae58c1c2293ec3c1c339c01e56d05f345", null ],
-    [ "operator==", "a00479.html#a06db9ba5cb8e759845fc44cabf5c4a8e", null ],
-    [ "toMiraiCode", "a00479.html#afa27aa0689287b078ad1410a49608a75", null ],
-    [ "type", "a00479.html#a4b1a9e71197d9810f31b09b6e5ee5b0a", null ],
-    [ "faceId", "a00479.html#aded09c1fba7d8914cc9bf2f67f3df83a", null ]
+    [ "LightApp", "a00479.html#a7cfcefeb788e3046fb321fab0a7b813a", null ],
+    [ "LightApp", "a00479.html#a1803b5deeb42af5f4770751aa4160a25", null ],
+    [ "operator==", "a00479.html#ae69ac9a6359eb6848ce09f7671395969", null ],
+    [ "toJson", "a00479.html#a95599fbda45f4240f9241f6dfa6fe05d", null ],
+    [ "toMiraiCode", "a00479.html#ad1637240306cd3dd587044054381d991", null ],
+    [ "type", "a00479.html#abba0c279393369d31f7ebc88ee6756fd", null ]
 ];

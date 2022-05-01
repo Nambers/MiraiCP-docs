@@ -1,10 +1,11 @@
 var a00149 =
 [
-    [ "GroupMessageEvent", "a00149.html#a69a261b515fcfafc599a649684cea695", null ],
-    [ "getEventType", "a00149.html#a0b9a88b4b47ad64dfefd66acf408c2dc", null ],
-    [ "nextMessage", "a00149.html#a5d4aa0224ce1d277ade801f1bae52e27", null ],
-    [ "senderNextMessage", "a00149.html#a458c623f584904f306bacdae5702e22b", null ],
-    [ "group", "a00149.html#abac98c5b1373ad6c8483f9978952c553", null ],
-    [ "message", "a00149.html#a722dc1ca031c471c953c710367067ae7", null ],
-    [ "sender", "a00149.html#acd0e90e4fb7862986215aae7e47cb2d6", null ]
+    [ "json", "a00149.html#ab701e3ac61a85b337ec5c1abaad6742d", null ],
+    [ "Event", "a00149.html#a66ecc9e4cce13730175b5bcb21801f72", null ],
+    [ "JNI_OnLoad", "a00149.html#afb46b584efd9f9efc5313642141edeff", null ],
+    [ "PluginDisable", "a00149.html#a977e2e597fe9020cba9806a7583d3894", null ],
+    [ "registerMethods", "a00149.html#acd50ba00052ee4194d336f41b0703d66", null ],
+    [ "returnNull", "a00149.html#a0eeb0de4ae4a15bc5b8c388124ae2ef6", null ],
+    [ "Verify", "a00149.html#a069b5c9b3a753002b532970e025f91bd", null ],
+    [ "method_table", "a00149.html#a3302d044ef9d5b830044961e82c20ebf", null ]
 ];

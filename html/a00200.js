@@ -1,8 +1,9 @@
 var a00200 =
 [
-    [ "BotJoinGroupEvent", "a00200.html#a52f6947edde412772cc67609f9414b61", null ],
-    [ "get_event_type", "a00200.html#adf48f18ecbec794027b76670d1ba22e0", null ],
-    [ "group", "a00200.html#ad3643d9978133be026420f1d71594ec7", null ],
-    [ "inviterid", "a00200.html#aec3b3e13b9dedba8e0a06ae45b146e51", null ],
-    [ "type", "a00200.html#afecd637a84090e12fa5721074711c05d", null ]
+    [ "CPPPlugin", "a00200.html#a8757991e0396faf72a9e0ad06caa53f4", null ],
+    [ "onDisable", "a00200.html#a3ecc2c479d1ca6785e7cdcb0738c1597", null ],
+    [ "onEnable", "a00200.html#ad3d1188d089ab0fc945475f988c64fa7", null ],
+    [ "config", "a00200.html#a4ca2c5ec7d04d258a2da1ce7cdb09a75", null ],
+    [ "plugin", "a00200.html#a5bfd48cf68b997a48e04d141d831f6d3", null ],
+    [ "pluginLogger", "a00200.html#a77d8d4ed65a3beb60410f0659bf9aedf", null ]
 ];

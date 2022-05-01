@@ -1,16 +1,15 @@
 var a00349 =
 [
-    [ "Member", "a00349.html#a3cfdf6803d46393e79da5382d8189dd7", null ],
-    [ "Member", "a00349.html#a077555680a65e4ff7da00e45e7808a33", null ],
-    [ "at", "a00349.html#ace4950bd9191fdf90ecba764c870f90e", null ],
-    [ "getPermission", "a00349.html#ade27b6ea619f27ec4823618a0cacf00a", null ],
-    [ "kick", "a00349.html#ad83478036b6ad5750b7b4de2c182353b", null ],
-    [ "modifyAdmin", "a00349.html#ad9b954fd548c29c1fcf7b6895605cfaf", null ],
-    [ "mute", "a00349.html#a068163bcb889d26bc8f8ac767472156d", null ],
-    [ "refreshInfo", "a00349.html#a0ae62e17c22489ffe5aeadc2b3120850", null ],
-    [ "sendNudge", "a00349.html#ad1ee31adb9f9c6b776c537502331b7a1", null ],
-    [ "sendVoice", "a00349.html#aeeb58a0e84068d0b18bdb634093cf5d7", null ],
-    [ "unMute", "a00349.html#a218b3216bfc009ec7ca8b3535496f7c3", null ],
-    [ "isAnonymous", "a00349.html#a02c93da6f71f701f384aceef3746c9c2", null ],
-    [ "permission", "a00349.html#a348c726624fb4fe3e1d419f32f51031a", null ]
+    [ "OnlineAnnouncement", "a00349.html#ae7b3c5f6cbb8874f93e286529e624fdb", null ],
+    [ "deleteThis", "a00349.html#a04aaabd735ed542b313a8df2a3fd9ecb", null ],
+    [ "deserializeFromJson", "a00349.html#a720239cba555515909088bc5404c483f", null ],
+    [ "botid", "a00349.html#a507cd3e23d5d5204b0deaa6b1c6cad3c", null ],
+    [ "confirmNum", "a00349.html#af210882e3d89a4843c05c92ca7c83dd1", null ],
+    [ "content", "a00349.html#afbc4d030c34bf815a8b8466cc0661f61", null ],
+    [ "fid", "a00349.html#a24d4711f1da5a6f5e952b77e198b0f3f", null ],
+    [ "groupid", "a00349.html#a73fcfc8f32a547eaa9704afa706c5a38", null ],
+    [ "imageid", "a00349.html#a562cac2ea3788ef5268396101b08e7de", null ],
+    [ "params", "a00349.html#a0be35844059d66dc274fcf84de90e368", null ],
+    [ "publicationTime", "a00349.html#a60b71b2b35023e7774485f696c0c84f7", null ],
+    [ "senderid", "a00349.html#a020798c5d023b56bdf62fd08ad4dce7f", null ]
 ];

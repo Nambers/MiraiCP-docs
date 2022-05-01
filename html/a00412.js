@@ -1,14 +1,8 @@
 var a00412 =
 [
-    [ "~SingleMessage", "a00412.html#a7602ba8b70c61feebadea2cb6744b9dc", null ],
-    [ "SingleMessage", "a00412.html#a1e645ecfc57a7b630290d88e7cc9ae39", null ],
-    [ "getKey", "a00412.html#a7412c91a4b45c7f1d77cf904af64b6d7", null ],
-    [ "operator==", "a00412.html#a9d501cb4ed4cf97c4eb43246c35224b0", null ],
-    [ "operator==", "a00412.html#aa2836bc9c5110cbada54ecbb65341b8f", null ],
-    [ "toJson", "a00412.html#a0a408adbe935640d5b02b8ba084dfaa0", null ],
-    [ "toMiraiCode", "a00412.html#ade93b603f22f584ada2a003c9e523b89", null ],
-    [ "content", "a00412.html#a7ebcc9775985874bb7a09bd1d8274a24", null ],
-    [ "messageType", "a00412.html#a40ef6246fdbdce9e7a6c4c3d92696ffa", null ],
-    [ "prefix", "a00412.html#a207f61ebfd79e0ae18833f2edf954595", null ],
-    [ "type", "a00412.html#a80942452883a814f0462e451982ffd39", null ]
+    [ "info", "a00416.html", "a00416" ],
+    [ "getInfoSource", "a00412.html#ac03aa9c815ce59030b0f2610e48b79b1", null ],
+    [ "info0", "a00412.html#a39064f9c2b148b3a3061f818bf237215", null ],
+    [ "send0", "a00412.html#a795f4093d390bd0205ae95aa0075d442", null ],
+    [ "uploadImg0", "a00412.html#a3effa0c77f4c1687cf8656cdf0b60e42", null ]
 ];

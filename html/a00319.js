@@ -1,12 +1,5 @@
 var a00319 =
 [
-    [ "ForwardedNode", "a00319.html#a0f2ebb57417b9f07c2d834774b59bd97", null ],
-    [ "ForwardedNode", "a00319.html#a7458e61bc049d68ffcc08f5c30486112", null ],
-    [ "ForwardedNode", "a00319.html#a44fb0fddc871dd56f62adecf0f832c4c", null ],
-    [ "ForwardedNode", "a00319.html#aebad41e1158fe07adc0da5c05f110a17", null ],
-    [ "forwardedMsg", "a00319.html#aaddfe4d77a14bef1cf07dd00dc5c6825", null ],
-    [ "id", "a00319.html#aaaa85af6ea1bea84767d5352fdc2c907", null ],
-    [ "message", "a00319.html#acb5969070d29271a128fc95d5b503fc0", null ],
-    [ "name", "a00319.html#a7c1ccf827b401b609cfc8481909019e7", null ],
-    [ "time", "a00319.html#ac5f4d270eb51284f2f25051aaf1545f7", null ]
+    [ "MuteException", "a00319.html#aabc181c072a55209b6a88f4a0f43fa9a", null ],
+    [ "exceptionType", "a00319.html#afae350ada0208f24022d4de92442b515", null ]
 ];

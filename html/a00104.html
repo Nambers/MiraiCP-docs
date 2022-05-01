@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiraiCP: SingleMessage.cpp 文件参考</title>
+<title>MiraiCP: LowLevelAPI.cpp 文件参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MiraiCP
-   &#160;<span id="projectnumber">v2.11.0-M2</span>
+   &#160;<span id="projectnumber">v2.11.0-M3</span>
    </div>
    <div id="projectbrief">MiraiCP api document</div>
   </td>
@@ -92,39 +92,29 @@ $(document).ready(function(){initNavTree('a00104.html',''); initResizable(); });
 <div class="header">
   <div class="summary">
 <a href="#namespaces">命名空间</a>  </div>
-  <div class="headertitle"><div class="title">SingleMessage.cpp 文件参考</div></div>
+  <div class="headertitle"><div class="title">LowLevelAPI.cpp 文件参考</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;json.hpp&gt;</code><br />
-<code>#include &quot;<a class="el" href="a00017_source.html">Config.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00041_source.html">Exception.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00065_source.html">Logger.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00107_source.html">SingleMessage.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00119_source.html">Tools.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="a00107_source.html">LowLevelAPI.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00053_source.html">Config.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00077_source.html">Exception.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00137_source.html">MiraiDefs.h</a>&quot;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> SingleMessage.cpp 的引用(Include)关系图:</div>
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> LowLevelAPI.cpp 的引用(Include)关系图:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="a00105.png" border="0" usemap="#a_single_message_8cpp" alt=""/></div>
-<map name="a_single_message_8cpp" id="a_single_message_8cpp">
-<area shape="rect" title=" " alt="" coords="398,5,534,32"/>
-<area shape="rect" title=" " alt="" coords="24,155,95,181"/>
-<area shape="rect" href="a00017.html" title=" " alt="" coords="25,80,94,107"/>
-<area shape="rect" href="a00041.html" title=" " alt="" coords="946,80,1037,107"/>
-<area shape="rect" href="a00065.html" title=" " alt="" coords="492,80,564,107"/>
-<area shape="rect" href="a00107.html" title=" " alt="" coords="338,80,461,107"/>
-<area shape="rect" href="a00119.html" title=" " alt="" coords="740,80,804,107"/>
-<area shape="rect" title=" " alt="" coords="326,229,372,256"/>
-<area shape="rect" title=" " alt="" coords="1030,155,1108,181"/>
-<area shape="rect" title=" " alt="" coords="710,229,764,256"/>
-<area shape="rect" title=" " alt="" coords="696,155,773,181"/>
-<area shape="rect" title=" " alt="" coords="602,155,672,181"/>
-<area shape="rect" href="a00095.html" title=" " alt="" coords="488,155,578,181"/>
-<area shape="rect" title=" " alt="" coords="120,155,170,181"/>
-<area shape="rect" title=" " alt="" coords="194,155,261,181"/>
-<area shape="rect" href="a00089.html" title=" " alt="" coords="336,155,463,181"/>
-<area shape="rect" title=" " alt="" coords="848,155,904,181"/>
+<div class="center"><img src="a00105.png" border="0" usemap="#a_low_level_a_p_i_8cpp" alt=""/></div>
+<map name="a_low_level_a_p_i_8cpp" id="a_low_level_a_p_i_8cpp">
+<area shape="rect" title=" " alt="" coords="163,5,283,32"/>
+<area shape="rect" href="a00107.html" title=" " alt="" coords="5,80,112,107"/>
+<area shape="rect" href="a00053.html" title=" " alt="" coords="136,80,205,107"/>
+<area shape="rect" href="a00077.html" title=" " alt="" coords="229,80,320,107"/>
+<area shape="rect" href="a00137.html" title=" " alt="" coords="345,80,431,107"/>
+<area shape="rect" title=" " alt="" coords="38,155,109,181"/>
+<area shape="rect" title=" " alt="" coords="139,155,186,181"/>
+<area shape="rect" title=" " alt="" coords="222,155,301,181"/>
+<area shape="rect" title=" " alt="" coords="325,155,379,181"/>
 </map>
 </div>
 </div>
@@ -132,7 +122,7 @@ $(document).ready(function(){initNavTree('a00104.html',''); initResizable(); });
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
 命名空间</h2></td></tr>
-<tr class="memitem:a00135"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00135.html">MiraiCP</a></td></tr>
+<tr class="memitem:a00171"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00171.html">MiraiCP</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
@@ -141,8 +131,8 @@ $(document).ready(function(){initNavTree('a00104.html',''); initResizable(); });
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="a00104.html">SingleMessage.cpp</a></li>
-    <li class="footer">生成于 2022年 四月 20日 星期三 10:36:30 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b0856f6b0d80ccb263b2f415c91f9e17.html">include</a></li><li class="navelem"><a class="el" href="a00104.html">LowLevelAPI.cpp</a></li>
+    <li class="footer">生成于 2022年 五月 1日 星期日 11:26:10 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
 <script type="text/javascript">

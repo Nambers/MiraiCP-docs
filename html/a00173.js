@@ -1,12 +1,15 @@
 var a00173 =
 [
-    [ "RecallEvent", "a00173.html#a8f34646f10c6059226357b96876cec3e", null ],
-    [ "getEventType", "a00173.html#a92fafd0fb13e8ac020d52cbf46722979", null ],
-    [ "authorid", "a00173.html#a38902ca6a35385461d1ebfd9dd5fe4c0", null ],
-    [ "groupid", "a00173.html#a224023cbc9f1e0e70e0c200e098a70e1", null ],
-    [ "ids", "a00173.html#ab921c8f46196c000301a49580c9c8731", null ],
-    [ "internalids", "a00173.html#a286b52d1fc395cffeb19867d174e8fa4", null ],
-    [ "operatorid", "a00173.html#abe1179293996af8fe9474805e125f748", null ],
-    [ "time", "a00173.html#afcf05164400a14a598aba4de6566b66c", null ],
-    [ "type", "a00173.html#ac986c53d844263a8af1ddf3e767e3a0c", null ]
+    [ "MiraiCPDefer", "a00531.html", "a00531" ],
+    [ "escapeFromMiraiCode", "a00173.html#ae7bf212fddf60af59042677c3a7753a5", null ],
+    [ "escapeToMiraiCode", "a00173.html#a01f4fe41f8bef55b95953750f5cfb0c2", null ],
+    [ "icompareChar", "a00173.html#a795aadb1af1cd4b85e9b48b5bb5b246d", null ],
+    [ "iequal", "a00173.html#a0b52c701b3d96bf42b4d67c21f1dab2d", null ],
+    [ "jstring2str", "a00173.html#aca81fb0894771f60fbf64c3b776044e5", null ],
+    [ "replace", "a00173.html#a939c6b8139fec1968a2d8b45bf3e46d0", null ],
+    [ "split", "a00173.html#aa9d4bfd5269173c2f6aed44f79bf976e", null ],
+    [ "starts_with", "a00173.html#ac1c9173c6218044be45605d07874e99b", null ],
+    [ "str2jstring", "a00173.html#ad6af583021178966fa57f1290f69c0ff", null ],
+    [ "StringToVector", "a00173.html#a5e3ca5f1b36ef97a2cc8255fd07ccd69", null ],
+    [ "VectorToString", "a00173.html#a2cc70adde692e966e1d4530ac572dbbb", null ]
 ];

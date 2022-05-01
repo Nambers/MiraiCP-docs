@@ -1,8 +1,7 @@
 var a00467 =
 [
-    [ "expirytime", "a00467.html#a666efd0312dcc5805394a02ff7c326bb", null ],
-    [ "lastmodifytime", "a00467.html#a8597f745a6869003efa097519bf34148", null ],
-    [ "size", "a00467.html#a35cc1f23bf34db4184696833b12e4605", null ],
-    [ "uploaderid", "a00467.html#accf1835e308104bde941d72053d5c5a7", null ],
-    [ "uploadtime", "a00467.html#ab5f94fd436b08eb8963d7c5d8d4907b4", null ]
+    [ "AtAll", "a00467.html#aa19455c0291e5f1ebe7f6ed85b6cdea6", null ],
+    [ "toJson", "a00467.html#a4a0c42473de5f646c9d5ff5864c7d1e1", null ],
+    [ "toMiraiCode", "a00467.html#a0b99f7dc0cd4d328e7105a34395c8019", null ],
+    [ "type", "a00467.html#ac3a9e58d6562b04ed3eaefb26d137a9a", null ]
 ];

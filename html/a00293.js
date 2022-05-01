@@ -1,8 +1,11 @@
 var a00293 =
 [
-    [ "Friend", "a00293.html#ab3ac94c426a7f2d61f77c970cedd838e", null ],
-    [ "Friend", "a00293.html#afeb4038f8101deba30dfc834bc47c807", null ],
-    [ "deleteFriend", "a00293.html#a6e7e1a8a401f0ff1c636f11b988703d5", null ],
-    [ "refreshInfo", "a00293.html#a20abefd6f5f8b5867360b457ca6f0e03", null ],
-    [ "sendNudge", "a00293.html#a62e45d8547cfb66bea29c9a577dc6dae", null ]
+    [ "MemberExceptionType", "a00293.html#a5d79da819adcd25a5b51a498762067a2", [
+      [ "OtherType", "a00293.html#a5d79da819adcd25a5b51a498762067a2a10d7175ae7e717fa50187eff06445f9b", null ],
+      [ "NoSuchGroup", "a00293.html#a5d79da819adcd25a5b51a498762067a2af45ac2de0a67bb83ddabbe90de94b759", null ],
+      [ "NoSuchMember", "a00293.html#a5d79da819adcd25a5b51a498762067a2aec2ea117521b98eb6ceed80c5b155716", null ]
+    ] ],
+    [ "MemberException", "a00293.html#a5a77bb2dee827ef89cb7fab2e62b160c", null ],
+    [ "exceptionType", "a00293.html#a7d8014930572cc2e598c2709e240d429", null ],
+    [ "type", "a00293.html#aeedca55477d89e61d8449fd22aeeff04", null ]
 ];

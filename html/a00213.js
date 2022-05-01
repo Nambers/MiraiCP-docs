@@ -1,7 +1,8 @@
 var a00213 =
 [
-    [ "eventNode", "a00213.html#ada1a211ec7334bd8271f5cb80c39e41b", null ],
-    [ "run", "a00213.html#ae2dec6d63790b7d7fe4c49549729867a", null ],
-    [ "enable", "a00213.html#aebe9d35974a43240e3ee02cb3bd1adfb", null ],
-    [ "func", "a00213.html#a5b68a33a87c4e2360c2f74cc1b52569f", null ]
+    [ "BotJoinGroupEvent", "a00213.html#a52f6947edde412772cc67609f9414b61", null ],
+    [ "get_event_type", "a00213.html#adf48f18ecbec794027b76670d1ba22e0", null ],
+    [ "group", "a00213.html#ad3643d9978133be026420f1d71594ec7", null ],
+    [ "inviterid", "a00213.html#aec3b3e13b9dedba8e0a06ae45b146e51", null ],
+    [ "type", "a00213.html#afecd637a84090e12fa5721074711c05d", null ]
 ];

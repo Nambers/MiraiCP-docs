@@ -1,7 +1,8 @@
 var a00451 =
 [
-    [ "QuoteReply", "a00451.html#a48b93dbd55eb6dabeb0ae0d8d3191dfb", null ],
-    [ "QuoteReply", "a00451.html#a92e6c154936b9341964f10830844348e", null ],
-    [ "operator==", "a00451.html#ad505141e383ead14add0a18f63d27283", null ],
-    [ "type", "a00451.html#a5c3073e9d8f5b2ce5f7f6d2980313855", null ]
+    [ "brief", "a00451.html#a922825f2fe708a70c66ff6585d688bb6", null ],
+    [ "cover", "a00451.html#a38c4579d9ccb887f3cab0573a39b96fa", null ],
+    [ "summary", "a00451.html#a5927b32bbb8fc21efe5d183fb12ddd1a", null ],
+    [ "title", "a00451.html#a929d703d700b67f4a1c1d17111271922", null ],
+    [ "url", "a00451.html#aba141291ce2939583450057c338b1fc5", null ]
 ];

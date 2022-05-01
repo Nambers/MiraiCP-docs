@@ -1,13 +1,8 @@
 var a00243 =
 [
-    [ "eventNode", "a00247.html", "a00247" ],
-    [ "NodeHandle", "a00251.html", "a00251" ],
-    [ "eventNodeTable", "a00243.html#ada7d3e71f54b9a764e5659b93062dd0d", null ],
-    [ "Event", "a00243.html#a9f36e22e23e02faaeba7f89736332c9c", null ],
-    [ "broadcast", "a00243.html#a491ec99324852b8a12aac5286877ac29", null ],
-    [ "id", "a00243.html#a546bbcb33bec161fb5977447ddf7c344", null ],
-    [ "noRegistered", "a00243.html#ac1aac60c33dd2e854f068e09b1eb4b43", null ],
-    [ "registerEvent", "a00243.html#a0b8c9683d3568a13b07423425912143d", null ],
-    [ "processor", "a00243.html#ab78af8afd9a5121e7ed0a1d7237f2b20", null ],
-    [ "vec", "a00243.html#a5cfd31d7de3615173be7dffd118ba52d", null ]
+    [ "BotJoinGroupEvent", "a00243.html#a52f6947edde412772cc67609f9414b61", null ],
+    [ "get_event_type", "a00243.html#adf48f18ecbec794027b76670d1ba22e0", null ],
+    [ "group", "a00243.html#ad3643d9978133be026420f1d71594ec7", null ],
+    [ "inviterid", "a00243.html#aec3b3e13b9dedba8e0a06ae45b146e51", null ],
+    [ "type", "a00243.html#afecd637a84090e12fa5721074711c05d", null ]
 ];

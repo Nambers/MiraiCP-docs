@@ -1,15 +1,8 @@
 var a00137 =
 [
-    [ "MiraiCPDefer", "a00495.html", "a00495" ],
-    [ "escapeFromMiraiCode", "a00137.html#ae7bf212fddf60af59042677c3a7753a5", null ],
-    [ "escapeToMiraiCode", "a00137.html#a01f4fe41f8bef55b95953750f5cfb0c2", null ],
-    [ "icompareChar", "a00137.html#a795aadb1af1cd4b85e9b48b5bb5b246d", null ],
-    [ "iequal", "a00137.html#a0b52c701b3d96bf42b4d67c21f1dab2d", null ],
-    [ "jstring2str", "a00137.html#aca81fb0894771f60fbf64c3b776044e5", null ],
-    [ "replace", "a00137.html#a939c6b8139fec1968a2d8b45bf3e46d0", null ],
-    [ "split", "a00137.html#aa9d4bfd5269173c2f6aed44f79bf976e", null ],
-    [ "starts_with", "a00137.html#ac1c9173c6218044be45605d07874e99b", null ],
-    [ "str2jstring", "a00137.html#ad6af583021178966fa57f1290f69c0ff", null ],
-    [ "StringToVector", "a00137.html#a5e3ca5f1b36ef97a2cc8255fd07ccd69", null ],
-    [ "VectorToString", "a00137.html#a2cc70adde692e966e1d4530ac572dbbb", null ]
+    [ "ErrorHandle", "a00137.html#a10e0f2260bfde013500e04ba0d77a9fb", null ],
+    [ "MIRAICP_EXCEPTION_WHERE", "a00137.html#a64a15c1bd1292eb8eb8b5874281372c6", null ],
+    [ "ShouldNotUse", "a00137.html#ae1d03b516481fc8bce7d91943b41aaad", null ],
+    [ "QQID", "a00137.html#a3ae2ebfdaa4574d341b8e7935f29ddb8", null ],
+    [ "MiraiCPVersion", "a00137.html#ae471c96f73a019b792a82629b6bdfdf5", null ]
 ];

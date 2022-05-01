@@ -1,6 +1,9 @@
 var a00456 =
 [
-    [ "md5", "a00456.html#ad0293f9419de31e1debe34fe84a38efc", null ],
-    [ "sha1", "a00456.html#a028dd19b1da21857fec0a606c4370427", null ],
-    [ "url", "a00456.html#ae5ef128eb690329fceda096ddb1d3004", null ]
+    [ "PlainText", "a00456.html#af0ffa277c961cde9e5fc0ecc23ff224c", null ],
+    [ "PlainText", "a00456.html#a76de73df323ad93c427f73f6794981df", null ],
+    [ "operator==", "a00456.html#a6c8a471bcf5cd3bcc65f6d75097ce286", null ],
+    [ "toJson", "a00456.html#a0fb7ad4530e4602d09c388d44fc4bc00", null ],
+    [ "toMiraiCode", "a00456.html#a2cbc08df42d84ad5c50e2dae680c0eb4", null ],
+    [ "type", "a00456.html#a440b92da26612820bd700e2ce9a5e999", null ]
 ];

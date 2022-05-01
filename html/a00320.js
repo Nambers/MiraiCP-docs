@@ -1,13 +1,11 @@
 var a00320 =
 [
-    [ "OnlineForwardedMessage", "a00320.html#a8eeee98912485b77514779d426f3aac2", null ],
-    [ "deserializationFromMessageSourceJson", "a00320.html#ae8adc9f69b0bc64ba952a746085709dd", null ],
-    [ "operator==", "a00320.html#a36cb67be0ffb52568cc6211b9b8c3d65", null ],
-    [ "operator[]", "a00320.html#a0d29b0fb5c909370a9f5149075272b94", null ],
-    [ "toForwardedMessage", "a00320.html#a2dcabd31951eefb2d6bec010bd4fdede", null ],
-    [ "toMiraiCode", "a00320.html#a3eee9d12679e20cc08750853ec7655e7", null ],
-    [ "type", "a00320.html#a5b7f35a7b72d29102b39f560343ec05c", null ],
-    [ "nodelist", "a00320.html#a3fcb5073c4ec3f07fb918cf2055cc40c", null ],
-    [ "origin", "a00320.html#a75805d847603df24ade1c924ee288249", null ],
-    [ "resourceId", "a00320.html#a5106f13692786b4713ba1c6a9fac6be3", null ]
+    [ "MemberExceptionType", "a00320.html#a5d79da819adcd25a5b51a498762067a2", [
+      [ "OtherType", "a00320.html#a5d79da819adcd25a5b51a498762067a2a10d7175ae7e717fa50187eff06445f9b", null ],
+      [ "NoSuchGroup", "a00320.html#a5d79da819adcd25a5b51a498762067a2af45ac2de0a67bb83ddabbe90de94b759", null ],
+      [ "NoSuchMember", "a00320.html#a5d79da819adcd25a5b51a498762067a2aec2ea117521b98eb6ceed80c5b155716", null ]
+    ] ],
+    [ "MemberException", "a00320.html#a5a77bb2dee827ef89cb7fab2e62b160c", null ],
+    [ "exceptionType", "a00320.html#a7d8014930572cc2e598c2709e240d429", null ],
+    [ "type", "a00320.html#aeedca55477d89e61d8449fd22aeeff04", null ]
 ];

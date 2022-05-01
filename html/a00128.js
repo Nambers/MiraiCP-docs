@@ -1,11 +1,13 @@
 var a00128 =
 [
-    [ "JNICREATEPROC", "a00128.html#a0eab3ea242457bb1654c44df15cdc4db", null ],
-    [ "enroll", "a00128.html#ab2915e2a70337ef9624f9b1ebbbc258f", null ],
-    [ "exitCore", "a00128.html#a9a97b6ca402745354a980d46df824a20", null ],
-    [ "freeLibrary", "a00128.html#a10b05044395d4c1c07690963396ef228", null ],
-    [ "loadCore", "a00128.html#a8b56509ff94538768069d3e84f00d167", null ],
-    [ "login", "a00128.html#a65dcf56179c52282d8bea686fa1bb0a9", null ],
-    [ "coreClaz", "a00128.html#a5e4d3df727df54208488a4d9c436eefd", null ],
-    [ "jvmLib", "a00128.html#a55d6a9d91d0ba7e1797835892cf6b21d", null ]
+    [ "escapeFromMiraiCode", "a00128.html#ae7bf212fddf60af59042677c3a7753a5", null ],
+    [ "escapeToMiraiCode", "a00128.html#a01f4fe41f8bef55b95953750f5cfb0c2", null ],
+    [ "icompareChar", "a00128.html#a795aadb1af1cd4b85e9b48b5bb5b246d", null ],
+    [ "iequal", "a00128.html#a0b52c701b3d96bf42b4d67c21f1dab2d", null ],
+    [ "jstring2str", "a00128.html#aca81fb0894771f60fbf64c3b776044e5", null ],
+    [ "replace", "a00128.html#a939c6b8139fec1968a2d8b45bf3e46d0", null ],
+    [ "split", "a00128.html#aa9d4bfd5269173c2f6aed44f79bf976e", null ],
+    [ "starts_with", "a00128.html#ac1c9173c6218044be45605d07874e99b", null ],
+    [ "str2jstring", "a00128.html#ad6af583021178966fa57f1290f69c0ff", null ],
+    [ "StringToVector", "a00128.html#a5e3ca5f1b36ef97a2cc8255fd07ccd69", null ]
 ];

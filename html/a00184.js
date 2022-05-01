@@ -1,13 +1,10 @@
 var a00184 =
 [
-    [ "NewFriendRequestEvent", "a00184.html#aa7a60db5331de88e29455d07a6d9ccca", null ],
-    [ "accept", "a00184.html#a282335f850a9ab57d5a1d695940034a9", null ],
-    [ "get_event_type", "a00184.html#a84c455f8df829ea965c27fbba6e237ef", null ],
-    [ "operation0", "a00184.html#a3fb58755202dc30c9a460d10545c6a0a", null ],
-    [ "reject", "a00184.html#a9ad16173148b9c63b24860c06ce6b3c3", null ],
-    [ "fromgroupid", "a00184.html#a9d75cbeeaf4d484676bfc7090baa4b9b", null ],
-    [ "fromid", "a00184.html#a6c987dc795e5e1893caef8370bf6dfee", null ],
-    [ "message", "a00184.html#a914502cfd8ab0db7ea570240f0bb56e5", null ],
-    [ "nick", "a00184.html#aac9936ee444a019ef2c988a4ed369b55", null ],
-    [ "source", "a00184.html#a4b48f29f9ac4443abf0a76590690a897", null ]
+    [ "Config", "a00184.html#abc66a7ba8c5d1bfa0fa2a521554ea166", null ],
+    [ "description", "a00184.html#ae924c02b04ee3fec68c0838ee34bd45d", null ],
+    [ "override", "a00184.html#ad502d3f82eba6b75fcaa6e5acb16eed1", null ],
+    [ "preFixOption", "a00184.html#af40c74e212dd165a72e7b2e8769e0dcb", null ],
+    [ "primaryName", "a00184.html#a21a4c0a9fe2032ce10efbd76c5388dce", null ],
+    [ "secondNames", "a00184.html#a5211c63986e404f8edc7b36cbd0c3618", null ],
+    [ "usage", "a00184.html#a3f604db6531d4956520cf813d57aa544", null ]
 ];

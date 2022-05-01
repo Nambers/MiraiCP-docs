@@ -1,8 +1,12 @@
 var a00472 =
 [
-    [ "MarketFace", "a00472.html#ae58c1c2293ec3c1c339c01e56d05f345", null ],
-    [ "operator==", "a00472.html#a06db9ba5cb8e759845fc44cabf5c4a8e", null ],
-    [ "toMiraiCode", "a00472.html#afa27aa0689287b078ad1410a49608a75", null ],
-    [ "type", "a00472.html#a4b1a9e71197d9810f31b09b6e5ee5b0a", null ],
-    [ "faceId", "a00472.html#aded09c1fba7d8914cc9bf2f67f3df83a", null ]
+    [ "FlashImage", "a00472.html#a47c9c97ea2a57ff02b2bc01f83a7ee44", null ],
+    [ "FlashImage", "a00472.html#a2cb2130cd8187e3dc598460bc44846cc", null ],
+    [ "FlashImage", "a00472.html#ae6562b2f43aede32b4746f50b9fcab5c", null ],
+    [ "deserialize", "a00472.html#a6f20e47833479a9669d78727527fe31f", null ],
+    [ "operator==", "a00472.html#aa01313f396a7623547ba0c2a409ef74c", null ],
+    [ "toImage", "a00472.html#ae2547ca115caa61991a59c5507028cb4", null ],
+    [ "toJson", "a00472.html#a55dd67b46186624fd4882406e16ff2c2", null ],
+    [ "toMiraiCode", "a00472.html#ac2edbd27eb5d904b56a599a176cf416f", null ],
+    [ "type", "a00472.html#ad31100fa57d8f8cf79a2267cfe10ae97", null ]
 ];

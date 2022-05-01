@@ -1,16 +1,19 @@
 var a00441 =
 [
-    [ "ThreadInfo", "a00445.html", "a00445" ],
-    [ "ThreadManager", "a00441.html#a839cd3642c36630c7f71c09728498bb5", null ],
-    [ "detach", "a00441.html#a72b77deebd7be1c800b73ebd4b2daa09", null ],
-    [ "getEnv", "a00441.html#a365e1740117b0fb9d5990855a26dba4f", null ],
-    [ "getThread", "a00441.html#a00a561eb63a7489b54010df23b58036d", null ],
-    [ "getThreadId", "a00441.html#a11837c8fea64ee75bea0bcd1ea56de9c", null ],
-    [ "included", "a00441.html#abd1025cb50143b1aa60b55d79ec2b370", null ],
-    [ "newEnv", "a00441.html#a29f1a55d4cb7b78045fd3f2566c59dcc", null ],
-    [ "setEnv", "a00441.html#afacfbdbffc416bb53676f040720a42e0", null ],
-    [ "gvm", "a00441.html#ac5796576b9962187070ad21fbfdf17ff", null ],
-    [ "JNIVersion", "a00441.html#a630b0c6d61decb2ea60eb719bbc1120e", null ],
-    [ "mtx", "a00441.html#af61aae7d053395c836bae677af861364", null ],
-    [ "threads", "a00441.html#a6aaf08f6744b01ac5ab06430313dd3a0", null ]
+    [ "Image", "a00441.html#a835ef3a1d15e9be52004125e6294ea0b", null ],
+    [ "Image", "a00441.html#a96926ef90fc6925d7d2f24605d7b9fbf", null ],
+    [ "deserialize", "a00441.html#a0e3fa5f500c071d484dd56d5562e0d9c", null ],
+    [ "isUploaded", "a00441.html#a6bc40ee958a59a3f70a0146c7e9312e2", null ],
+    [ "operator==", "a00441.html#a4ae5258f9f0f0462ba2fa7b15fbde7e9", null ],
+    [ "refreshInfo", "a00441.html#a3c8b1b2f1741c02d38fd41b45461ec18", null ],
+    [ "toJson", "a00441.html#a34553da30d7a3753b72247654bc36e89", null ],
+    [ "toMiraiCode", "a00441.html#a10cd01f40a86dcd051722cc50baa2003", null ],
+    [ "type", "a00441.html#a8920fb2036cd75d06b0343b32886f610", null ],
+    [ "height", "a00441.html#a6d91d1442a67a40efea60fd8b21f0344", null ],
+    [ "id", "a00441.html#ac6a67525ab64646c9068bc98bd58e796", null ],
+    [ "imageType", "a00441.html#ad0f3d7f5356612a87bf1769577be8d88", null ],
+    [ "md5", "a00441.html#a0ac48e10b27d52864e36f65a154f4503", null ],
+    [ "size", "a00441.html#a90e338ad396d824807759601a7fa3b88", null ],
+    [ "url", "a00441.html#ae64873f7812cdc802bf61a7c77c5e21d", null ],
+    [ "width", "a00441.html#a32663d1a7c0f773d5e0edc245a503f5e", null ]
 ];

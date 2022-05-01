@@ -1,6 +1,8 @@
 var a00259 =
 [
-    [ "MiraiCPExceptionCRTP", "a00259.html#a02700530ff07249086c6556d7d270ec7", null ],
-    [ "MiraiCPExceptionCRTP", "a00259.html#a810ba1c8839e012b9c6c7827435e0374", null ],
-    [ "getExceptionType", "a00259.html#ad64ad9b96b50c93cd9d210eeb31b43ee", null ]
+    [ "NudgeEvent", "a00259.html#a33de6a207ef920b7fee423674cc2e126", null ],
+    [ "get_event_type", "a00259.html#ac0f00b0b573c63f72bb2a6fbc0257c8e", null ],
+    [ "from", "a00259.html#a6b41c32519408428cb6fc302bf24b970", null ],
+    [ "subject", "a00259.html#a48c484cc7aeaa12cec54886697950dc6", null ],
+    [ "target", "a00259.html#af4e172354f69ce65c8d8d2cd1f188cca", null ]
 ];

@@ -1,9 +1,8 @@
 var a00385 =
 [
-    [ "PlainText", "a00385.html#af0ffa277c961cde9e5fc0ecc23ff224c", null ],
-    [ "PlainText", "a00385.html#a76de73df323ad93c427f73f6794981df", null ],
-    [ "operator==", "a00385.html#a6c8a471bcf5cd3bcc65f6d75097ce286", null ],
-    [ "toJson", "a00385.html#a0fb7ad4530e4602d09c388d44fc4bc00", null ],
-    [ "toMiraiCode", "a00385.html#a2cbc08df42d84ad5c50e2dae680c0eb4", null ],
-    [ "type", "a00385.html#a440b92da26612820bd700e2ce9a5e999", null ]
+    [ "info", "a00389.html", "a00389" ],
+    [ "getInfoSource", "a00385.html#ac03aa9c815ce59030b0f2610e48b79b1", null ],
+    [ "info0", "a00385.html#a39064f9c2b148b3a3061f818bf237215", null ],
+    [ "send0", "a00385.html#a795f4093d390bd0205ae95aa0075d442", null ],
+    [ "uploadImg0", "a00385.html#a3effa0c77f4c1687cf8656cdf0b60e42", null ]
 ];

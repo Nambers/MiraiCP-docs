@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['operation_5fset_0',['operation_set',['../a00136.html#a1bc3c425340774687507c1683967231b',1,'MiraiCP::Config']]]
+  ['memberexceptiontype_0',['MemberExceptionType',['../a00323.html#a5d79da819adcd25a5b51a498762067a2',1,'MiraiCP::MemberException']]]
 ];

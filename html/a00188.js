@@ -1,15 +1,8 @@
 var a00188 =
 [
-    [ "joinType", "a00188.html#a1d73fdd5e84653d078b859b37dd1bcc8", [
-      [ "error", "a00188.html#a1d73fdd5e84653d078b859b37dd1bcc8ac7223d287b6643e82449fdfc84a78b17", null ],
-      [ "invited", "a00188.html#a1d73fdd5e84653d078b859b37dd1bcc8aa328607b0546483fb4503bf453508821", null ],
-      [ "applied", "a00188.html#a1d73fdd5e84653d078b859b37dd1bcc8a24c75b1f74122bc5b2b618daa89b14c9", null ],
-      [ "rehab", "a00188.html#a1d73fdd5e84653d078b859b37dd1bcc8a0f0421157cba536506b325cefe9fac90", null ]
-    ] ],
-    [ "MemberJoinEvent", "a00188.html#a073cb4162b0f02a4497e9ea6912399d5", null ],
-    [ "get_event_type", "a00188.html#a5f50dec2d80a1d4041a0c35a0870f66c", null ],
-    [ "group", "a00188.html#a1f879c48cc7b54fa387853b5330b0caf", null ],
-    [ "inviterid", "a00188.html#a3342fd9e038a616a272ae8de9599ad31", null ],
-    [ "member", "a00188.html#aa1a42b944df9f40fc96629a1c5687f01", null ],
-    [ "type", "a00188.html#aaef692838d233a5ddcf8d54e1b02eb40", null ]
+    [ "CommandManager", "a00188.html#acf247b0f4f71627dc920d3297be6314f", null ],
+    [ "operator[]", "a00188.html#a2cadbf9c0ff28ff16c544c0fc03b874d", null ],
+    [ "registerCommand", "a00188.html#accb883db18602dc65b5fdd264dd73bfd", null ],
+    [ "commandList", "a00188.html#af770c2433fdf62bee434d79f7118cbcc", null ],
+    [ "commandManager", "a00188.html#a772ce2c737ce39e63ed80b023019f152", null ]
 ];

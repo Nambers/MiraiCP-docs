@@ -1,13 +1,10 @@
 var a00187 =
 [
-    [ "GroupInviteEvent", "a00187.html#a9c76e0f986edef4d3915204a07085d11", null ],
-    [ "accept", "a00187.html#ae2666f5eac9e7bb256bad669a06a6e73", null ],
-    [ "get_event_type", "a00187.html#af6b33b5f4c0f29ebc3b8f8c9534a3bdf", null ],
-    [ "operation0", "a00187.html#a7e773d9868319834f338b3ebc963d1d5", null ],
-    [ "reject", "a00187.html#a9dae2fd6b842761d82641de62d97d5ff", null ],
-    [ "groupid", "a00187.html#ad0d2dad878885d82c78e5ef79efa9945", null ],
-    [ "groupName", "a00187.html#a578c8a027cb9f1574fba3de4b3646fc0", null ],
-    [ "inviterid", "a00187.html#a9e48a48c1429b8739da6e91cb8a04819", null ],
-    [ "inviterNick", "a00187.html#abf7cb41022c0cf81725c2925507f1d58", null ],
-    [ "source", "a00187.html#affaff17057d8b347a51ba2516f529596", null ]
+    [ "Config", "a00187.html#abc66a7ba8c5d1bfa0fa2a521554ea166", null ],
+    [ "description", "a00187.html#ae924c02b04ee3fec68c0838ee34bd45d", null ],
+    [ "override", "a00187.html#ad502d3f82eba6b75fcaa6e5acb16eed1", null ],
+    [ "preFixOption", "a00187.html#af40c74e212dd165a72e7b2e8769e0dcb", null ],
+    [ "primaryName", "a00187.html#a21a4c0a9fe2032ce10efbd76c5388dce", null ],
+    [ "secondNames", "a00187.html#a5211c63986e404f8edc7b36cbd0c3618", null ],
+    [ "usage", "a00187.html#a3f604db6531d4956520cf813d57aa544", null ]
 ];

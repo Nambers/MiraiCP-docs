@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiraiCP: CPPPlugin.cpp 文件参考</title>
+<title>MiraiCP: Bot.cpp 文件参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MiraiCP
-   &#160;<span id="projectnumber">v2.11.0-M2</span>
+   &#160;<span id="projectnumber">v2.11.0-M3</span>
    </div>
    <div id="projectbrief">MiraiCP api document</div>
   </td>
@@ -92,27 +92,45 @@ $(document).ready(function(){initNavTree('a00026.html',''); initResizable(); });
 <div class="header">
   <div class="summary">
 <a href="#namespaces">命名空间</a>  </div>
-  <div class="headertitle"><div class="title">CPPPlugin.cpp 文件参考</div></div>
+  <div class="headertitle"><div class="title">Bot.cpp 文件参考</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="a00029_source.html">CPPPlugin.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="a00029_source.html">Bot.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00041_source.html">Config.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00077_source.html">Friend.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00083_source.html">Group.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00095_source.html">LowLevelAPI.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00146_source.html">Tools.h</a>&quot;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> CPPPlugin.cpp 的引用(Include)关系图:</div>
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Bot.cpp 的引用(Include)关系图:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="a00027.png" border="0" usemap="#a_c_p_p_plugin_8cpp" alt=""/></div>
-<map name="a_c_p_p_plugin_8cpp" id="a_c_p_p_plugin_8cpp">
-<area shape="rect" title=" " alt="" coords="267,5,378,32"/>
-<area shape="rect" href="a00029.html" title=" " alt="" coords="275,80,371,107"/>
-<area shape="rect" href="a00065.html" title=" " alt="" coords="231,155,303,181"/>
-<area shape="rect" href="a00101.html" title=" " alt="" coords="349,155,454,181"/>
-<area shape="rect" title=" " alt="" coords="5,229,83,256"/>
-<area shape="rect" title=" " alt="" coords="107,229,176,256"/>
-<area shape="rect" title=" " alt="" coords="201,229,247,256"/>
-<area shape="rect" title=" " alt="" coords="387,229,458,256"/>
-<area shape="rect" href="a00095.html" title=" " alt="" coords="272,229,363,256"/>
-<area shape="rect" title=" " alt="" coords="290,304,345,331"/>
+<div class="center"><img src="a00027.png" border="0" usemap="#a_bot_8cpp" alt=""/></div>
+<map name="a_bot_8cpp" id="a_bot_8cpp">
+<area shape="rect" title=" " alt="" coords="256,5,323,32"/>
+<area shape="rect" href="a00029.html" title=" " alt="" coords="348,379,401,405"/>
+<area shape="rect" href="a00041.html" title=" " alt="" coords="208,304,277,331"/>
+<area shape="rect" href="a00077.html" title=" " alt="" coords="445,80,515,107"/>
+<area shape="rect" href="a00083.html" title=" " alt="" coords="353,80,421,107"/>
+<area shape="rect" href="a00095.html" title=" " alt="" coords="77,304,184,331"/>
+<area shape="rect" href="a00146.html" title=" " alt="" coords="12,379,76,405"/>
+<area shape="rect" title=" " alt="" coords="281,453,327,480"/>
+<area shape="rect" title=" " alt="" coords="589,453,643,480"/>
+<area shape="rect" title=" " alt="" coords="200,453,256,480"/>
+<area shape="rect" href="a00122.html" title=" " alt="" coords="398,453,485,480"/>
+<area shape="rect" title=" " alt="" coords="202,379,273,405"/>
+<area shape="rect" href="a00047.html" title=" " alt="" coords="441,155,519,181"/>
+<area shape="rect" href="a00107.html" title=" " alt="" coords="531,229,650,256"/>
+<area shape="rect" href="a00065.html" title=" " alt="" coords="825,304,916,331"/>
+<area shape="rect" href="a00134.html" title=" " alt="" coords="529,304,652,331"/>
+<area shape="rect" title=" " alt="" coords="909,379,987,405"/>
+<area shape="rect" title=" " alt="" coords="577,379,628,405"/>
+<area shape="rect" title=" " alt="" coords="767,379,833,405"/>
+<area shape="rect" title=" " alt="" coords="107,453,176,480"/>
+<area shape="rect" href="a00113.html" title=" " alt="" coords="426,379,553,405"/>
+<area shape="rect" href="a00119.html" title=" " alt="" coords="652,379,743,405"/>
+<area shape="rect" title=" " alt="" coords="5,453,83,480"/>
 </map>
 </div>
 </div>
@@ -120,7 +138,7 @@ $(document).ready(function(){initNavTree('a00026.html',''); initResizable(); });
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
 命名空间</h2></td></tr>
-<tr class="memitem:a00135"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00135.html">MiraiCP</a></td></tr>
+<tr class="memitem:a00156"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00156.html">MiraiCP</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
@@ -129,8 +147,8 @@ $(document).ready(function(){initNavTree('a00026.html',''); initResizable(); });
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="a00026.html">CPPPlugin.cpp</a></li>
-    <li class="footer">生成于 2022年 四月 20日 星期三 10:36:30 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b0856f6b0d80ccb263b2f415c91f9e17.html">include</a></li><li class="navelem"><a class="el" href="a00026.html">Bot.cpp</a></li>
+    <li class="footer">生成于 2022年 五月 1日 星期日 10:34:33 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
 <script type="text/javascript">

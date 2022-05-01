@@ -1,7 +1,7 @@
 var a00208 =
 [
-    [ "TimeOutEvent", "a00208.html#abcaf0a409f7f3a66e0da48ada27a6820", null ],
-    [ "get_event_type", "a00208.html#a2505c982f58e30adb636aec887e190f0", null ],
-    [ "getEventType", "a00208.html#a94fc9b8a91d0fa22f08fd085378498be", null ],
-    [ "msg", "a00208.html#ad6869868495ecef440a6d4b909188b77", null ]
+    [ "BotEvent", "a00208.html#a5da368a0e44891433b340288bc872df3", null ],
+    [ "getEventType", "a00208.html#ad176440a2b764c7a123c4efcb3bfece3", null ],
+    [ "bot", "a00208.html#a0b14bddb4baebbd348969dac6c9a8edc", null ],
+    [ "botlogger", "a00208.html#a864b09f1e3cf406c2e96ca7b4c10e18e", null ]
 ];

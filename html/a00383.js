@@ -1,5 +1,7 @@
 var a00383 =
 [
-    [ "avatarUrl", "a00383.html#a037b8d06c116200bdb37de924401ef46", null ],
-    [ "nickornamecard", "a00383.html#abc3f2c3176f05d64751446e8760595df", null ]
+    [ "OfflineAnnouncement", "a00383.html#a01236de68a15c8de48ffeecc47f7d422", null ],
+    [ "publishTo", "a00383.html#ac5e2613306079cce18866fa1f2809357", null ],
+    [ "content", "a00383.html#ad41adfb9b859845999f24978087af62b", null ],
+    [ "params", "a00383.html#ab1ff075cae77526d00c8f96b135c2873", null ]
 ];

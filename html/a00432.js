@@ -1,12 +1,15 @@
 var a00432 =
 [
-    [ "FlashImage", "a00432.html#a47c9c97ea2a57ff02b2bc01f83a7ee44", null ],
-    [ "FlashImage", "a00432.html#a2cb2130cd8187e3dc598460bc44846cc", null ],
-    [ "FlashImage", "a00432.html#ae6562b2f43aede32b4746f50b9fcab5c", null ],
-    [ "deserialize", "a00432.html#a6f20e47833479a9669d78727527fe31f", null ],
-    [ "operator==", "a00432.html#aa01313f396a7623547ba0c2a409ef74c", null ],
-    [ "toImage", "a00432.html#ae2547ca115caa61991a59c5507028cb4", null ],
-    [ "toJson", "a00432.html#a55dd67b46186624fd4882406e16ff2c2", null ],
-    [ "toMiraiCode", "a00432.html#ac2edbd27eb5d904b56a599a176cf416f", null ],
-    [ "type", "a00432.html#ad31100fa57d8f8cf79a2267cfe10ae97", null ]
+    [ "MessageSource", "a00432.html#a49210b1a4c711d50ab0acc17d0dae88d", null ],
+    [ "MessageSource", "a00432.html#a17c32c44e0af14a5f23f15ca56e527ae", null ],
+    [ "deserializeFromString", "a00432.html#a1f98db6bbdf6b7d178bf92f55fd2e4dc", null ],
+    [ "operator==", "a00432.html#a2d08aa9b079abe268966313e12a3496b", null ],
+    [ "recall", "a00432.html#afe1ce48e1c2ee0095202843e5df82f9e", null ],
+    [ "serializeToString", "a00432.html#aca51487498128b420019182e1331a282", null ],
+    [ "ShouldNotUse", "a00432.html#af746248b4f82c9832ace5b8b98e5295f", null ],
+    [ "env", "a00432.html#aedc35b34b91f500adf45ab31f088b2e0", null ],
+    [ "groupid", "a00432.html#af4796797483c9706ba534a2eff4c78c5", null ],
+    [ "ids", "a00432.html#a4b5fd176a16871dbb39e5be15b2b6c15", null ],
+    [ "internalids", "a00432.html#a358ba0250715b1c4692554995750675e", null ],
+    [ "source", "a00432.html#afc51041bfb7cc7cb0915b5131ee05805", null ]
 ];

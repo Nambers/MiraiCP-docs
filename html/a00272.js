@@ -1,6 +1,8 @@
 var a00272 =
 [
-    [ "BotIsBeingMutedException", "a00272.html#a548111b99d412290281c43e90a1e8e16", null ],
-    [ "exceptionType", "a00272.html#a86c42cdc24c6bf1f85c143cdc5ef6941", null ],
-    [ "timeRemain", "a00272.html#aacccf1ba2a31c6a8901d87d166c85f3e", null ]
+    [ "MiraiCPExceptionEvent", "a00272.html#a67f475ec3ebcf1f185e5d9ef13fcd14c", null ],
+    [ "get_event_type", "a00272.html#ae1d7b10fffc99fba2cb4d08754e42365", null ],
+    [ "getEventType", "a00272.html#a95739c7970624a1ef395ba899e2bf68d", null ],
+    [ "getException", "a00272.html#a9e986a6f69f2fd33a7313827a1f75da0", null ],
+    [ "exceptionPtr", "a00272.html#abbe1679705abc11d256a39eb12ac6837", null ]
 ];

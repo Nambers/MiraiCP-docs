@@ -1,12 +1,13 @@
 var a00224 =
 [
-    [ "MemberJoinRequestEvent", "a00224.html#a0ee741bf6f005098ecd99b841dacf67e", null ],
-    [ "accept", "a00224.html#ace031723d310c72ed25b83485f66a034", null ],
-    [ "get_event_type", "a00224.html#a4575b38a0df0326b85e0927a3ff1484b", null ],
-    [ "operate", "a00224.html#a57e031d98608fde09fc098481effb799", null ],
-    [ "reject", "a00224.html#a855d60c9e71eda3fd438e45728a8799d", null ],
-    [ "group", "a00224.html#a7967276b662117dfae303235ce70fada", null ],
-    [ "inviter", "a00224.html#a1a2aa46fd5e85786f2e3858e12ceaeea", null ],
-    [ "requesterId", "a00224.html#a7e58fe5f7635d01343da6a1ea7a725e9", null ],
-    [ "source", "a00224.html#aa1b90d95a75a1e6b79aa54a777eb8bf7", null ]
+    [ "NewFriendRequestEvent", "a00224.html#aa7a60db5331de88e29455d07a6d9ccca", null ],
+    [ "accept", "a00224.html#a282335f850a9ab57d5a1d695940034a9", null ],
+    [ "get_event_type", "a00224.html#a84c455f8df829ea965c27fbba6e237ef", null ],
+    [ "operation0", "a00224.html#a3fb58755202dc30c9a460d10545c6a0a", null ],
+    [ "reject", "a00224.html#a9ad16173148b9c63b24860c06ce6b3c3", null ],
+    [ "fromgroupid", "a00224.html#a9d75cbeeaf4d484676bfc7090baa4b9b", null ],
+    [ "fromid", "a00224.html#a6c987dc795e5e1893caef8370bf6dfee", null ],
+    [ "message", "a00224.html#a914502cfd8ab0db7ea570240f0bb56e5", null ],
+    [ "nick", "a00224.html#aac9936ee444a019ef2c988a4ed369b55", null ],
+    [ "source", "a00224.html#a4b48f29f9ac4443abf0a76590690a897", null ]
 ];

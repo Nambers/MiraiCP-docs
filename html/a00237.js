@@ -1,5 +1,12 @@
 var a00237 =
 [
-    [ "APIException", "a00237.html#a4d7a7e2f7c45f39a082580e885ee4f03", null ],
-    [ "description", "a00237.html#a8a227a2e1494b35e2e5456ade77066b3", null ]
+    [ "MemberJoinRequestEvent", "a00237.html#a0ee741bf6f005098ecd99b841dacf67e", null ],
+    [ "accept", "a00237.html#ace031723d310c72ed25b83485f66a034", null ],
+    [ "get_event_type", "a00237.html#a4575b38a0df0326b85e0927a3ff1484b", null ],
+    [ "operate", "a00237.html#a57e031d98608fde09fc098481effb799", null ],
+    [ "reject", "a00237.html#a855d60c9e71eda3fd438e45728a8799d", null ],
+    [ "group", "a00237.html#a7967276b662117dfae303235ce70fada", null ],
+    [ "inviter", "a00237.html#a1a2aa46fd5e85786f2e3858e12ceaeea", null ],
+    [ "requesterId", "a00237.html#a7e58fe5f7635d01343da6a1ea7a725e9", null ],
+    [ "source", "a00237.html#aa1b90d95a75a1e6b79aa54a777eb8bf7", null ]
 ];

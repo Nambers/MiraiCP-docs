@@ -1,5 +1,6 @@
 var a00233 =
 [
-    [ "IllegalStateException", "a00233.html#a08986de2386eb21ca973f3afe268b0fe", null ],
-    [ "description", "a00233.html#ad7635e2bb8ed90e1d506bfe15e32e68f", null ]
+    [ "BotLeaveEvent", "a00233.html#a1d6901317417c45332686a1b148ea789", null ],
+    [ "get_event_type", "a00233.html#af477670377fef2ea1d76b5a36f738a3b", null ],
+    [ "groupid", "a00233.html#a75d1aed07afc1cc0c9a6985c406e68ee", null ]
 ];

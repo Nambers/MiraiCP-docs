@@ -1,15 +1,21 @@
 var a00392 =
 [
-    [ "MessageSource", "a00392.html#a49210b1a4c711d50ab0acc17d0dae88d", null ],
-    [ "MessageSource", "a00392.html#a17c32c44e0af14a5f23f15ca56e527ae", null ],
-    [ "deserializeFromString", "a00392.html#a1f98db6bbdf6b7d178bf92f55fd2e4dc", null ],
-    [ "operator==", "a00392.html#a2d08aa9b079abe268966313e12a3496b", null ],
-    [ "quoteAndSendMiraiCode", "a00392.html#a846aa8b65aaac4a25dae07034817c964", null ],
-    [ "quoteAndSendMiraiCode", "a00392.html#a4c1f9a67fdedd846d104b49d7e32a81e", null ],
-    [ "quoteAndSendMsg", "a00392.html#a91c3975520ceb0bc398d2b3dfd253a28", null ],
-    [ "recall", "a00392.html#afe1ce48e1c2ee0095202843e5df82f9e", null ],
-    [ "serializeToString", "a00392.html#aca51487498128b420019182e1331a282", null ],
-    [ "ids", "a00392.html#a4b5fd176a16871dbb39e5be15b2b6c15", null ],
-    [ "internalids", "a00392.html#a358ba0250715b1c4692554995750675e", null ],
-    [ "source", "a00392.html#afc51041bfb7cc7cb0915b5131ee05805", null ]
+    [ "Handler", "a00396.html", "a00396" ],
+    [ "Action", "a00392.html#ac8323ef8b0f1c81161e08c4fded239a3", null ],
+    [ "string", "a00392.html#a22429d5974d2c062b424e0c0297cb897", null ],
+    [ "error", "a00392.html#a418fad5b082009c5e40871d3cd88cacf", null ],
+    [ "getjmethod", "a00392.html#a9601e541a8622aececf1ab755b0c5c08", null ],
+    [ "info", "a00392.html#af487216ad90334b62a970ad6e5a796a4", null ],
+    [ "init", "a00392.html#a6fa065a408e2fe35617e8209a46c9758", null ],
+    [ "log0", "a00392.html#a5eeedd52cbf8f0881f3b61a117beab6c", null ],
+    [ "log1", "a00392.html#a06202e1ad07f0ed0f131bbba9b16132a", null ],
+    [ "p", "a00392.html#ace14d5af89e24656952e775d8036cbcc", null ],
+    [ "p", "a00392.html#ae9bbb5bb28e7caf5077e8aeb73cea068", null ],
+    [ "p", "a00392.html#a52e54b0249c74777838460def3366228", null ],
+    [ "p", "a00392.html#ace2ac955fd13925a312c5d716001a32c", null ],
+    [ "registerHandle", "a00392.html#aa3e0ad0c5771cee4583b577981105114", null ],
+    [ "setHandleState", "a00392.html#a3ed1680508618b446c94ed004c211ea9", null ],
+    [ "warning", "a00392.html#a19b06047f8959a3bfb100c0006767c83", null ],
+    [ "log", "a00392.html#ac1f75ae7a4298f72c7e2934a653e3a63", null ],
+    [ "loggerhandler", "a00392.html#aa5e38fc4b466c0bc6b02972a3b549728", null ]
 ];

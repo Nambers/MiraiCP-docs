@@ -1,5 +1,5 @@
 var a00299 =
 [
-    [ "RecallException", "a00299.html#a7efed6d5b4e2e7c655b53496fbff9710", null ],
-    [ "exceptionType", "a00299.html#abb3b6f5b42098376e6a195eb6f420410", null ]
+    [ "UploadException", "a00299.html#a1b5ca7e57cd117a0e45baae54a10019f", null ],
+    [ "exceptionType", "a00299.html#a75aa16afc81716cc340be44ee4950e18", null ]
 ];

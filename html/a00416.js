@@ -1,9 +1,5 @@
 var a00416 =
 [
-    [ "PlainText", "a00416.html#af0ffa277c961cde9e5fc0ecc23ff224c", null ],
-    [ "PlainText", "a00416.html#a76de73df323ad93c427f73f6794981df", null ],
-    [ "operator==", "a00416.html#a6c8a471bcf5cd3bcc65f6d75097ce286", null ],
-    [ "toJson", "a00416.html#a0fb7ad4530e4602d09c388d44fc4bc00", null ],
-    [ "toMiraiCode", "a00416.html#a2cbc08df42d84ad5c50e2dae680c0eb4", null ],
-    [ "type", "a00416.html#a440b92da26612820bd700e2ce9a5e999", null ]
+    [ "avatarUrl", "a00416.html#a037b8d06c116200bdb37de924401ef46", null ],
+    [ "nickornamecard", "a00416.html#abc3f2c3176f05d64751446e8760595df", null ]
 ];

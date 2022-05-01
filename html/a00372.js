@@ -1,8 +1,10 @@
 var a00372 =
 [
-    [ "info", "a00376.html", "a00376" ],
-    [ "getInfoSource", "a00372.html#ac03aa9c815ce59030b0f2610e48b79b1", null ],
-    [ "info0", "a00372.html#a39064f9c2b148b3a3061f818bf237215", null ],
-    [ "send0", "a00372.html#a795f4093d390bd0205ae95aa0075d442", null ],
-    [ "uploadImg0", "a00372.html#a3effa0c77f4c1687cf8656cdf0b60e42", null ]
+    [ "AnnouncementParams", "a00372.html#ad9cd7b9ca38c4268c6f625034107a584", null ],
+    [ "serializeToJson", "a00372.html#ac87021b1e71d8d3334c4d197813924bc", null ],
+    [ "pinned", "a00372.html#a1045432e9f2c822b1150bc278e99de05", null ],
+    [ "requireConfirm", "a00372.html#a2641ceb16f0da11938027e7bf67c5c8a", null ],
+    [ "send2new", "a00372.html#af941b1ec8148c2675bcad7a6a10a53f5", null ],
+    [ "showEditCard", "a00372.html#a92569e1952f8f1668db0df430928da8e", null ],
+    [ "showPopup", "a00372.html#ab80e896e8ac632e75f5d5e98dff79a97", null ]
 ];

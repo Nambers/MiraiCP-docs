@@ -1,7 +1,8 @@
 var a00217 =
 [
-    [ "NodeHandle", "a00217.html#a31a3cfc6513ea6551e906a07f87bc289", null ],
-    [ "resume", "a00217.html#a9c869342e0ce720ef497ae87573f9c5e", null ],
-    [ "stop", "a00217.html#aa82d17b4317d7dc18bd54ba1ee7cafa2", null ],
-    [ "enable", "a00217.html#aa4a8ee8ae8dbf3d3d436abd162657b6c", null ]
+    [ "GroupTempMessageEvent", "a00217.html#a4cd87975d98bef10e520e2ca9e3bfcf4", null ],
+    [ "get_event_type", "a00217.html#a6129a5451a7602b73c8d04fe88ad2715", null ],
+    [ "group", "a00217.html#a29c18056652c7d36248f70f359f01e74", null ],
+    [ "message", "a00217.html#a2405f8a309e3b2de0d7cba313d795cee", null ],
+    [ "sender", "a00217.html#ac0252e17c1cb9a0d4f2ebf37720951db", null ]
 ];

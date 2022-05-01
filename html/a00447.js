@@ -1,11 +1,12 @@
 var a00447 =
 [
-    [ "ServiceMessage", "a00447.html#af2da1f54cc88abcddc68f96bde22d24e", null ],
-    [ "ServiceMessage", "a00447.html#ab5866201bea86658dadc054764fd1db6", null ],
-    [ "ServiceMessage", "a00447.html#a367f5b76f1716ba7b5fa31219274bc85", null ],
-    [ "operator==", "a00447.html#ac376e371ca5bd671ea8f3d98881b8052", null ],
-    [ "toJson", "a00447.html#ac6e0602d6b6eda201108025e7318d07b", null ],
-    [ "toMiraiCode", "a00447.html#a25240f7b9b413c65916c92035569a095", null ],
-    [ "type", "a00447.html#ab6d7d4b47233b30630c752945603d780", null ],
-    [ "id", "a00447.html#a71730c48bdb7186bd5be19dc87d0e629", null ]
+    [ "PluginConfig", "a00447.html#afb34e8565a6e4ebebf24be6d0699db47", null ],
+    [ "serialize", "a00447.html#a074fac12f573e3ec8ea2bb2bced66f08", null ],
+    [ "serialize2string", "a00447.html#af92596a34de37970ec76538dc2817e98", null ],
+    [ "author", "a00447.html#aa0bfa133837b7525db6c952b6de7e80b", null ],
+    [ "description", "a00447.html#a0806f447d15ba6ae118230f6fc95535c", null ],
+    [ "id", "a00447.html#a9cf0aa83030884a81856bf2f748aede8", null ],
+    [ "name", "a00447.html#a100c48a6d40d59ada74a767b4572d51b", null ],
+    [ "time", "a00447.html#a211601f8e911adc42c99e07a904963e9", null ],
+    [ "version", "a00447.html#a8facb0a391626e527d52370ce7d14edb", null ]
 ];

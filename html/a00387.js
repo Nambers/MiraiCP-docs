@@ -1,17 +1,8 @@
 var a00387 =
 [
-    [ "Member", "a00387.html#a3cfdf6803d46393e79da5382d8189dd7", null ],
-    [ "Member", "a00387.html#a94779cdd0b802852a5d32ea71399413e", null ],
-    [ "at", "a00387.html#ace4950bd9191fdf90ecba764c870f90e", null ],
-    [ "changeNameCard", "a00387.html#a5aa1cde5b16fcbd72d942f038fd75b6e", null ],
-    [ "getPermission", "a00387.html#ade27b6ea619f27ec4823618a0cacf00a", null ],
-    [ "kick", "a00387.html#ad83478036b6ad5750b7b4de2c182353b", null ],
-    [ "modifyAdmin", "a00387.html#ad9b954fd548c29c1fcf7b6895605cfaf", null ],
-    [ "mute", "a00387.html#a068163bcb889d26bc8f8ac767472156d", null ],
-    [ "refreshInfo", "a00387.html#a82a34041332929299e293f81c6152ca0", null ],
-    [ "sendNudge", "a00387.html#aff2d2c3a907f051ca89d506b02caa5d0", null ],
-    [ "sendVoice", "a00387.html#aeeb58a0e84068d0b18bdb634093cf5d7", null ],
-    [ "unMute", "a00387.html#a218b3216bfc009ec7ca8b3535496f7c3", null ],
-    [ "isAnonymous", "a00387.html#a02c93da6f71f701f384aceef3746c9c2", null ],
-    [ "permission", "a00387.html#a348c726624fb4fe3e1d419f32f51031a", null ]
+    [ "isAllowMemberInvite", "a00387.html#adccf862ef0e617a47afb0df587edf59f", null ],
+    [ "isAnonymousChatEnabled", "a00387.html#ab0bf5bfb9c998204ca668855c09a9b8a", null ],
+    [ "isAutoApproveEnabled", "a00387.html#a625ca6d44d9d06a2af48cab1962e73fa", null ],
+    [ "isMuteAll", "a00387.html#a6bfb635769917d4f2c84c4e9cfc813d0", null ],
+    [ "name", "a00387.html#ae29352ebb0325fd3b035b1c65be1092f", null ]
 ];

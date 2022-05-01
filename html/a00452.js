@@ -1,20 +1,14 @@
 var a00452 =
 [
-    [ "Dinfo", "a00456.html", "a00456" ],
-    [ "Finfo", "a00460.html", "a00460" ],
-    [ "RemoteFile", "a00452.html#a42e9c8d14e1da508881201dbd46d54e1", null ],
-    [ "RemoteFile", "a00452.html#a4ecead51c171d61e1a858ef473e9bc36", null ],
-    [ "deserializeFromString", "a00452.html#a86d0f3d9b2d7ef5aab70d377297528fc", null ],
-    [ "operator==", "a00452.html#a8d4dbece939ba40816d3521b04e60612", null ],
-    [ "plus", "a00452.html#a6d3851415c16a7976def77a81a9b38d6", null ],
-    [ "serializeToString", "a00452.html#a037f0b6bb7ad3900335080fc4f219618", null ],
-    [ "toMiraiCode", "a00452.html#a8359964c95887f7003d55f4116837765", null ],
-    [ "type", "a00452.html#a36fe9c5c7c10560d1e4a7b62cb49164b", null ],
-    [ "dinfo", "a00452.html#ac51de6637e95569a0a56f15334d10ab3", null ],
-    [ "finfo", "a00452.html#a851391e82ecb74f624a397109a87bf48", null ],
-    [ "id", "a00452.html#a8e4443d5a31bd8a4e986a133596a4503", null ],
-    [ "internalid", "a00452.html#a7271af23428cf4ad419a053b9860b63e", null ],
-    [ "name", "a00452.html#ab349943782949b60cd117b5fc8b645e2", null ],
-    [ "path", "a00452.html#ad5c2c64b98d4ac3ee79f40640090b649", null ],
-    [ "size", "a00452.html#a9b15694dd4c005204268d161fd4760f1", null ]
+    [ "~SingleMessage", "a00452.html#a7602ba8b70c61feebadea2cb6744b9dc", null ],
+    [ "SingleMessage", "a00452.html#a1e645ecfc57a7b630290d88e7cc9ae39", null ],
+    [ "getKey", "a00452.html#a7412c91a4b45c7f1d77cf904af64b6d7", null ],
+    [ "operator==", "a00452.html#a9d501cb4ed4cf97c4eb43246c35224b0", null ],
+    [ "operator==", "a00452.html#aa2836bc9c5110cbada54ecbb65341b8f", null ],
+    [ "toJson", "a00452.html#a0a408adbe935640d5b02b8ba084dfaa0", null ],
+    [ "toMiraiCode", "a00452.html#ade93b603f22f584ada2a003c9e523b89", null ],
+    [ "content", "a00452.html#a7ebcc9775985874bb7a09bd1d8274a24", null ],
+    [ "messageType", "a00452.html#a40ef6246fdbdce9e7a6c4c3d92696ffa", null ],
+    [ "prefix", "a00452.html#a207f61ebfd79e0ae18833f2edf954595", null ],
+    [ "type", "a00452.html#a80942452883a814f0462e451982ffd39", null ]
 ];

@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiraiCP: utils.h 源文件</title>
+<title>MiraiCP: MessageSource.h 源文件</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MiraiCP
-   &#160;<span id="projectnumber">v2.11.0-M2</span>
+   &#160;<span id="projectnumber">v2.11.0-M3</span>
    </div>
    <div id="projectbrief">MiraiCP api document</div>
   </td>
@@ -90,7 +90,7 @@ $(document).ready(function(){initNavTree('a00125_source.html',''); initResizable
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">utils.h</div></div>
+  <div class="headertitle"><div class="title">MessageSource.h</div></div>
 </div><!--header-->
 <div class="contents">
 <a href="a00125.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// Copyright (c) 2020 - 2022. Eritque arcus and contributors.</span></div>
@@ -109,54 +109,74 @@ $(document).ready(function(){initNavTree('a00125_source.html',''); initResizable
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">// along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</span></div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">//</span></div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#ifndef MIRAICP_PRO_UTILS_H</span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#define MIRAICP_PRO_UTILS_H</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &quot;<a class="code" href="a00029.html">CPPPlugin.h</a>&quot;</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &quot;<a class="code" href="a00017.html">Config.h</a>&quot;</span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keyword">namespace </span><a class="code hl_namespace" href="a00135.html">MiraiCP</a> {</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="keyword">const</span> std::string MiraiCPVersion = <span class="stringliteral">&quot;v2.11.0-M1&quot;</span>;</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keyword">inline</span> <span class="keywordtype">void</span> schedule(<span class="keywordtype">long</span> time, <span class="keyword">const</span> std::string &amp;msg, JNIEnv *env = <span class="keyword">nullptr</span>) {</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <a class="code hl_typedef" href="a00122.html#ab701e3ac61a85b337ec5c1abaad6742d">nlohmann::json</a> j;</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        j[<span class="stringliteral">&quot;time&quot;</span>] = time;</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        j[<span class="stringliteral">&quot;msg&quot;</span>] = msg;</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <a class="code hl_function" href="a00136.html#a6cc3a4fb89a9701380288f1c16f738b4">Config::koperation</a>(<a class="code hl_enumvalue" href="a00136.html#a1bc3c425340774687507c1683967231bae5161956bb109433aa80ffd6872309df">Config::TimeOut</a>, j, env);</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    }</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keywordtype">void</span> enrollPlugin();</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keyword">inline</span> <span class="keywordtype">void</span> enrollPlugin0(CPPPlugin *p) {</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <a class="code hl_variable" href="a00167.html#a5bfd48cf68b997a48e04d141d831f6d3">CPPPlugin::plugin</a> = p;</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    }</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keyword">namespace </span>JNIApi {</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        <span class="comment">// todo 暴露了一些接口</span></div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        JNIEXPORT jstring <a class="code hl_function" href="a00138.html#a66ecc9e4cce13730175b5bcb21801f72">Event</a>(JNIEnv *env, jobject, jstring content);</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        JNIEXPORT jstring <a class="code hl_function" href="a00138.html#a0eeb0de4ae4a15bc5b8c388124ae2ef6">returnNull</a>();</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        JNIEXPORT jobject <a class="code hl_function" href="a00138.html#a977e2e597fe9020cba9806a7583d3894">PluginDisable</a>(JNIEnv *env, jobject job);</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        JNIEXPORT jstring <a class="code hl_function" href="a00138.html#a069b5c9b3a753002b532970e025f91bd">Verify</a>(JNIEnv *env, jobject, jstring <span class="keywordtype">id</span>);</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        <span class="keywordtype">int</span> <a class="code hl_function" href="a00138.html#acd50ba00052ee4194d336f41b0703d66">registerMethods</a>(JNIEnv *env, <span class="keyword">const</span> <span class="keywordtype">char</span> *className, JNINativeMethod *gMethods, <span class="keywordtype">int</span> numMethods);</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    } <span class="comment">// namespace JNIApi</span></div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>} <span class="comment">// namespace MiraiCP</span></div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="preprocessor">#endif </span><span class="comment">//MIRAICP_PRO_UTILS_H</span></div>
-<div class="ttc" id="aa00017_html"><div class="ttname"><a href="a00017.html">Config.h</a></div></div>
-<div class="ttc" id="aa00029_html"><div class="ttname"><a href="a00029.html">CPPPlugin.h</a></div></div>
-<div class="ttc" id="aa00122_html_ab701e3ac61a85b337ec5c1abaad6742d"><div class="ttname"><a href="a00122.html#ab701e3ac61a85b337ec5c1abaad6742d">json</a></div><div class="ttdeci">nlohmann::json json</div><div class="ttdef"><b>Definition:</b> <a href="a00122_source.html#l00032">utils.cpp:32</a></div></div>
-<div class="ttc" id="aa00135_html"><div class="ttname"><a href="a00135.html">MiraiCP</a></div><div class="ttdef"><b>Definition:</b> <a href="a00002_source.html#l00023">Bot.cpp:23</a></div></div>
-<div class="ttc" id="aa00136_html_a1bc3c425340774687507c1683967231bae5161956bb109433aa80ffd6872309df"><div class="ttname"><a href="a00136.html#a1bc3c425340774687507c1683967231bae5161956bb109433aa80ffd6872309df">MiraiCP::Config::TimeOut</a></div><div class="ttdeci">@ TimeOut</div><div class="ttdoc">定时任务</div><div class="ttdef"><b>Definition:</b> <a href="a00017_source.html#l00080">Config.h:80</a></div></div>
-<div class="ttc" id="aa00136_html_a6cc3a4fb89a9701380288f1c16f738b4"><div class="ttname"><a href="a00136.html#a6cc3a4fb89a9701380288f1c16f738b4">MiraiCP::Config::koperation</a></div><div class="ttdeci">std::string koperation(operation_set type, const nlohmann::json &amp;data, JNIEnv *env, bool catchErr, const std::string &amp;errorInfo)</div><div class="ttdoc">调用mirai操作</div><div class="ttdef"><b>Definition:</b> <a href="a00014_source.html#l00045">Config.cpp:45</a></div></div>
-<div class="ttc" id="aa00138_html_a069b5c9b3a753002b532970e025f91bd"><div class="ttname"><a href="a00138.html#a069b5c9b3a753002b532970e025f91bd">MiraiCP::JNIApi::Verify</a></div><div class="ttdeci">JNIEXPORT jstring Verify(JNIEnv *env, jobject, jstring id)</div><div class="ttdef"><b>Definition:</b> <a href="a00122_source.html#l00035">utils.cpp:35</a></div></div>
-<div class="ttc" id="aa00138_html_a0eeb0de4ae4a15bc5b8c388124ae2ef6"><div class="ttname"><a href="a00138.html#a0eeb0de4ae4a15bc5b8c388124ae2ef6">MiraiCP::JNIApi::returnNull</a></div><div class="ttdeci">JNIEXPORT jstring returnNull()</div><div class="ttdef"><b>Definition:</b> <a href="a00122_source.html#l00076">utils.cpp:76</a></div></div>
-<div class="ttc" id="aa00138_html_a66ecc9e4cce13730175b5bcb21801f72"><div class="ttname"><a href="a00138.html#a66ecc9e4cce13730175b5bcb21801f72">MiraiCP::JNIApi::Event</a></div><div class="ttdeci">JNIEXPORT jstring Event(JNIEnv *env, jobject, jstring content)</div><div class="ttdef"><b>Definition:</b> <a href="a00122_source.html#l00084">utils.cpp:84</a></div></div>
-<div class="ttc" id="aa00138_html_a977e2e597fe9020cba9806a7583d3894"><div class="ttname"><a href="a00138.html#a977e2e597fe9020cba9806a7583d3894">MiraiCP::JNIApi::PluginDisable</a></div><div class="ttdeci">JNIEXPORT jobject PluginDisable(JNIEnv *env, jobject job)</div><div class="ttdef"><b>Definition:</b> <a href="a00122_source.html#l00063">utils.cpp:63</a></div></div>
-<div class="ttc" id="aa00138_html_acd50ba00052ee4194d336f41b0703d66"><div class="ttname"><a href="a00138.html#acd50ba00052ee4194d336f41b0703d66">MiraiCP::JNIApi::registerMethods</a></div><div class="ttdeci">int registerMethods(JNIEnv *env, const char *className, JNINativeMethod *gMethods, int numMethods)</div><div class="ttdef"><b>Definition:</b> <a href="a00122_source.html#l00250">utils.cpp:250</a></div></div>
-<div class="ttc" id="aa00167_html_a5bfd48cf68b997a48e04d141d831f6d3"><div class="ttname"><a href="a00167.html#a5bfd48cf68b997a48e04d141d831f6d3">MiraiCP::CPPPlugin::plugin</a></div><div class="ttdeci">static CPPPlugin * plugin</div><div class="ttdef"><b>Definition:</b> <a href="a00029_source.html#l00032">CPPPlugin.h:32</a></div></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#ifndef MIRAICP_PRO_MESSAGESOURCE_H</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#define MIRAICP_PRO_MESSAGESOURCE_H</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &lt;jni.h&gt;</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &quot;<a class="code" href="a00137.html">MiraiDefs.h</a>&quot;</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keyword">namespace </span><a class="code hl_namespace" href="a00171.html">MiraiCP</a> {</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keyword">class </span>MiraiCodeable; <span class="comment">// forward declaration</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="a00435.html">   29</a></span><span class="comment"></span>    <span class="keyword">class </span><a class="code hl_class" href="a00435.html">MessageSource</a> {</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="a00435.html#a4b5fd176a16871dbb39e5be15b2b6c15">   32</a></span>        std::string <a class="code hl_variable" href="a00435.html#a4b5fd176a16871dbb39e5be15b2b6c15">ids</a>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="a00435.html#a358ba0250715b1c4692554995750675e">   34</a></span>        std::string <a class="code hl_variable" href="a00435.html#a358ba0250715b1c4692554995750675e">internalids</a>;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="a00435.html#afc51041bfb7cc7cb0915b5131ee05805">   36</a></span>        std::string <a class="code hl_variable" href="a00435.html#afc51041bfb7cc7cb0915b5131ee05805">source</a>;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="a00435.html#a49210b1a4c711d50ab0acc17d0dae88d">   38</a></span>        <a class="code hl_function" href="a00435.html#a49210b1a4c711d50ab0acc17d0dae88d">MessageSource</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="a00435.html#af746248b4f82c9832ace5b8b98e5295f">   41</a></span>        <a class="code hl_function" href="a00435.html#af746248b4f82c9832ace5b8b98e5295f">ShouldNotUse</a>(<span class="stringliteral">&quot;Use Contact.quoteAndSendMessage&quot;</span>) <a class="code hl_class" href="a00435.html">MessageSource</a></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="a00435.html#af4796797483c9706ba534a2eff4c78c5">   42</a></span>        quoteAndSendMiraiCode(<a class="code hl_class" href="a00439.html">MiraiCodeable</a> *msg, <a class="code hl_typedef" href="a00171.html#a3ae2ebfdaa4574d341b8e7935f29ddb8">QQID</a> <a class="code hl_variable" href="a00435.html#af4796797483c9706ba534a2eff4c78c5">groupid</a> = 0,</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="a00435.html#aedc35b34b91f500adf45ab31f088b2e0">   43</a></span>                              JNIEnv *<a class="code hl_variable" href="a00435.html#aedc35b34b91f500adf45ab31f088b2e0">env</a> = <span class="keywordtype">nullptr</span>) const = delete;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <a class="code hl_function" href="a00435.html#af746248b4f82c9832ace5b8b98e5295f">ShouldNotUse</a>(&quot;Use <a class="code hl_class" href="a00195.html">Contact</a>.quoteAndSendMessage&quot;) <a class="code hl_class" href="a00435.html">MessageSource</a></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        quoteAndSendMsg(const std::<span class="keywordtype">string</span> &amp;c, <a class="code hl_typedef" href="a00171.html#a3ae2ebfdaa4574d341b8e7935f29ddb8">QQID</a> <a class="code hl_variable" href="a00435.html#af4796797483c9706ba534a2eff4c78c5">groupid</a> = 0,</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>                        JNIEnv * = <span class="keywordtype">nullptr</span>) const = delete;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        <a class="code hl_function" href="a00435.html#af746248b4f82c9832ace5b8b98e5295f">ShouldNotUse</a>(&quot;Use <a class="code hl_class" href="a00195.html">Contact</a>.quoteAndSendMessage&quot;) <a class="code hl_class" href="a00435.html">MessageSource</a></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        quoteAndSendMiraiCode(const std::<span class="keywordtype">string</span> &amp;c, <a class="code hl_typedef" href="a00171.html#a3ae2ebfdaa4574d341b8e7935f29ddb8">QQID</a> <a class="code hl_variable" href="a00435.html#af4796797483c9706ba534a2eff4c78c5">groupid</a> = 0,</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>                              JNIEnv * = <span class="keywordtype">nullptr</span>) const = delete;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        <a class="code hl_class" href="a00435.html">MessageSource</a>(std::<span class="keywordtype">string</span> <a class="code hl_variable" href="a00435.html#a4b5fd176a16871dbb39e5be15b2b6c15">ids</a>, std::<span class="keywordtype">string</span> <a class="code hl_variable" href="a00435.html#a358ba0250715b1c4692554995750675e">internalids</a>, std::<span class="keywordtype">string</span> <a class="code hl_variable" href="a00435.html#afc51041bfb7cc7cb0915b5131ee05805">source</a>);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        static <a class="code hl_class" href="a00435.html">MessageSource</a> <a class="code hl_function" href="a00435.html#a1f98db6bbdf6b7d178bf92f55fd2e4dc">deserializeFromString</a>(const std::<span class="keywordtype">string</span> &amp;<a class="code hl_variable" href="a00435.html#afc51041bfb7cc7cb0915b5131ee05805">source</a>);</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        std::<span class="keywordtype">string</span> <a class="code hl_function" href="a00435.html#aca51487498128b420019182e1331a282">serializeToString</a>() const;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="a00435.html#afe1ce48e1c2ee0095202843e5df82f9e">recall</a>(JNIEnv * = <span class="keywordtype">nullptr</span>) const;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="a00435.html#a2d08aa9b079abe268966313e12a3496b">   77</a></span>        <span class="keywordtype">bool</span> operator==(const <a class="code hl_class" href="a00435.html">MessageSource</a> &amp;ms)<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>            <span class="keywordflow">return</span> this-&gt;ids == ms.ids &amp;&amp; this-&gt;internalids == ms.internalids;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        }</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    };</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>} <span class="comment">// namespace MiraiCP</span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="preprocessor">#endif </span><span class="comment">//MIRAICP_PRO_MESSAGESOURCE_H</span></div>
+<div class="ttc" id="aa00137_html"><div class="ttname"><a href="a00137.html">MiraiDefs.h</a></div></div>
+<div class="ttc" id="aa00171_html"><div class="ttname"><a href="a00171.html">MiraiCP</a></div><div class="ttdef"><b>Definition:</b> <a href="a00038_source.html#l00023">Bot.cpp:23</a></div></div>
+<div class="ttc" id="aa00171_html_a3ae2ebfdaa4574d341b8e7935f29ddb8"><div class="ttname"><a href="a00171.html#a3ae2ebfdaa4574d341b8e7935f29ddb8">MiraiCP::QQID</a></div><div class="ttdeci">unsigned long long QQID</div><div class="ttdef"><b>Definition:</b> <a href="a00137_source.html#l00033">MiraiDefs.h:33</a></div></div>
+<div class="ttc" id="aa00195_html"><div class="ttname"><a href="a00195.html">MiraiCP::Contact</a></div><div class="ttdoc">group, friend, member的父类</div><div class="ttdef"><b>Definition:</b> <a href="a00059_source.html#l00038">Contact.h:38</a></div></div>
+<div class="ttc" id="aa00435_html"><div class="ttname"><a href="a00435.html">MiraiCP::MessageSource</a></div><div class="ttdef"><b>Definition:</b> <a href="a00125_source.html#l00029">MessageSource.h:29</a></div></div>
+<div class="ttc" id="aa00435_html_a1f98db6bbdf6b7d178bf92f55fd2e4dc"><div class="ttname"><a href="a00435.html#a1f98db6bbdf6b7d178bf92f55fd2e4dc">MiraiCP::MessageSource::deserializeFromString</a></div><div class="ttdeci">static MessageSource deserializeFromString(const std::string &amp;source)</div><div class="ttdoc">从json字符串反序列化到MessageSource对象</div><div class="ttdef"><b>Definition:</b> <a href="a00122_source.html#l00043">MessageSource.cpp:43</a></div></div>
+<div class="ttc" id="aa00435_html_a358ba0250715b1c4692554995750675e"><div class="ttname"><a href="a00435.html#a358ba0250715b1c4692554995750675e">MiraiCP::MessageSource::internalids</a></div><div class="ttdeci">std::string internalids</div><div class="ttdoc">消息的internalids</div><div class="ttdef"><b>Definition:</b> <a href="a00125_source.html#l00034">MessageSource.h:34</a></div></div>
+<div class="ttc" id="aa00435_html_a49210b1a4c711d50ab0acc17d0dae88d"><div class="ttname"><a href="a00435.html#a49210b1a4c711d50ab0acc17d0dae88d">MiraiCP::MessageSource::MessageSource</a></div><div class="ttdeci">MessageSource()=default</div></div>
+<div class="ttc" id="aa00435_html_a4b5fd176a16871dbb39e5be15b2b6c15"><div class="ttname"><a href="a00435.html#a4b5fd176a16871dbb39e5be15b2b6c15">MiraiCP::MessageSource::ids</a></div><div class="ttdeci">std::string ids</div><div class="ttdoc">消息的ids</div><div class="ttdef"><b>Definition:</b> <a href="a00125_source.html#l00032">MessageSource.h:32</a></div></div>
+<div class="ttc" id="aa00435_html_aca51487498128b420019182e1331a282"><div class="ttname"><a href="a00435.html#aca51487498128b420019182e1331a282">MiraiCP::MessageSource::serializeToString</a></div><div class="ttdeci">std::string serializeToString() const</div><div class="ttdef"><b>Definition:</b> <a href="a00122_source.html#l00039">MessageSource.cpp:39</a></div></div>
+<div class="ttc" id="aa00435_html_aedc35b34b91f500adf45ab31f088b2e0"><div class="ttname"><a href="a00435.html#aedc35b34b91f500adf45ab31f088b2e0">MiraiCP::MessageSource::env</a></div><div class="ttdeci">QQID JNIEnv * env</div><div class="ttdef"><b>Definition:</b> <a href="a00125_source.html#l00043">MessageSource.h:43</a></div></div>
+<div class="ttc" id="aa00435_html_af4796797483c9706ba534a2eff4c78c5"><div class="ttname"><a href="a00435.html#af4796797483c9706ba534a2eff4c78c5">MiraiCP::MessageSource::groupid</a></div><div class="ttdeci">QQID groupid</div><div class="ttdef"><b>Definition:</b> <a href="a00125_source.html#l00042">MessageSource.h:42</a></div></div>
+<div class="ttc" id="aa00435_html_af746248b4f82c9832ace5b8b98e5295f"><div class="ttname"><a href="a00435.html#af746248b4f82c9832ace5b8b98e5295f">MiraiCP::MessageSource::ShouldNotUse</a></div><div class="ttdeci">ShouldNotUse(&quot;Use Contact.quoteAndSendMessage&quot;) MessageSource quoteAndSendMiraiCode(MiraiCodeable *msg</div></div>
+<div class="ttc" id="aa00435_html_afc51041bfb7cc7cb0915b5131ee05805"><div class="ttname"><a href="a00435.html#afc51041bfb7cc7cb0915b5131ee05805">MiraiCP::MessageSource::source</a></div><div class="ttdeci">std::string source</div><div class="ttdoc">消息源序列化</div><div class="ttdef"><b>Definition:</b> <a href="a00125_source.html#l00036">MessageSource.h:36</a></div></div>
+<div class="ttc" id="aa00435_html_afe1ce48e1c2ee0095202843e5df82f9e"><div class="ttname"><a href="a00435.html#afe1ce48e1c2ee0095202843e5df82f9e">MiraiCP::MessageSource::recall</a></div><div class="ttdeci">void recall(JNIEnv *=nullptr) const</div><div class="ttdoc">撤回该信息</div><div class="ttdef"><b>Definition:</b> <a href="a00122_source.html#l00024">MessageSource.cpp:24</a></div></div>
+<div class="ttc" id="aa00439_html"><div class="ttname"><a href="a00439.html">MiraiCP::MiraiCodeable</a></div><div class="ttdoc">MiraiCode父类, 指可以被转换成miraicode的类型</div><div class="ttdef"><b>Definition:</b> <a href="a00131_source.html#l00024">MiraiCode.h:24</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="a00125.html">utils.h</a></li>
-    <li class="footer">生成于 2022年 四月 20日 星期三 10:36:30 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b0856f6b0d80ccb263b2f415c91f9e17.html">include</a></li><li class="navelem"><a class="el" href="a00125.html">MessageSource.h</a></li>
+    <li class="footer">生成于 2022年 五月 1日 星期日 11:26:10 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
 <script type="text/javascript">

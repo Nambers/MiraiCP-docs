@@ -1,7 +1,12 @@
 var a00444 =
 [
-    [ "QuoteReply", "a00444.html#a48b93dbd55eb6dabeb0ae0d8d3191dfb", null ],
-    [ "QuoteReply", "a00444.html#a92e6c154936b9341964f10830844348e", null ],
-    [ "operator==", "a00444.html#ad505141e383ead14add0a18f63d27283", null ],
-    [ "type", "a00444.html#a5c3073e9d8f5b2ce5f7f6d2980313855", null ]
+    [ "PluginConfig", "a00444.html#afb34e8565a6e4ebebf24be6d0699db47", null ],
+    [ "serialize", "a00444.html#a074fac12f573e3ec8ea2bb2bced66f08", null ],
+    [ "serialize2string", "a00444.html#af92596a34de37970ec76538dc2817e98", null ],
+    [ "author", "a00444.html#aa0bfa133837b7525db6c952b6de7e80b", null ],
+    [ "description", "a00444.html#a0806f447d15ba6ae118230f6fc95535c", null ],
+    [ "id", "a00444.html#a9cf0aa83030884a81856bf2f748aede8", null ],
+    [ "name", "a00444.html#a100c48a6d40d59ada74a767b4572d51b", null ],
+    [ "time", "a00444.html#a211601f8e911adc42c99e07a904963e9", null ],
+    [ "version", "a00444.html#a8facb0a391626e527d52370ce7d14edb", null ]
 ];

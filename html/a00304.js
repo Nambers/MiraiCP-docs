@@ -1,5 +1,5 @@
 var a00304 =
 [
-    [ "TimeOutException", "a00304.html#a463bf6b96088ead25092aa265eb3ea97", null ],
-    [ "exceptionType", "a00304.html#a33b7cd14d774ca08c06e537ec6379841", null ]
+    [ "APIException", "a00304.html#a5ab35b388404f70eeccfe3474bdb9c90", null ],
+    [ "exceptionType", "a00304.html#aa95831ad20b7019b10241a25f8f41dd1", null ]
 ];

@@ -1,6 +1,12 @@
 var a00488 =
 [
-    [ "MiraiCPDefer", "a00488.html#a3973c844f3c12d276faa9e808f57a089", null ],
-    [ "~MiraiCPDefer", "a00488.html#a3d3aba8802266eba058aea22c438d382", null ],
-    [ "defer_func", "a00488.html#a6bee05dab690b35a5ca50a3c523f2533", null ]
+    [ "operator==", "a00488.html#adf77a906cd6705425a28ab4483c634b5", null ],
+    [ "ShouldNotUse", "a00488.html#a66690e9c31bc7daf8a1c7c15261f83b3", null ],
+    [ "type", "a00488.html#ab55cc2add22064ea6437677abc6d2555", null ],
+    [ "codec", "a00488.html#afe96592ba24d9c3f1887c7668d788c97", null ],
+    [ "filename", "a00488.html#a9cf8841f7297be7d0b8404aeaf1727a1", null ],
+    [ "length", "a00488.html#a963774ddebf115bebd86386cb84a5117", null ],
+    [ "md5", "a00488.html#a403a5a5837bbf02f5e0c5a4327f51ff3", null ],
+    [ "size", "a00488.html#a06c764f6c1f6f65def69fcfe378ebef1", null ],
+    [ "url", "a00488.html#aedf31534944297bea3c997cc49329443", null ]
 ];

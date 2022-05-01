@@ -1,5 +1,5 @@
 var a00269 =
 [
-    [ "RemoteAssetException", "a00269.html#aa425bceb3cb0dc52adfa36d7cf27dd22", null ],
-    [ "description", "a00269.html#a1630d13e8691e8327d2d15511ab2c5b4", null ]
+    [ "UploadException", "a00269.html#a1b5ca7e57cd117a0e45baae54a10019f", null ],
+    [ "exceptionType", "a00269.html#a75aa16afc81716cc340be44ee4950e18", null ]
 ];

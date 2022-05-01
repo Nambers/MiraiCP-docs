@@ -1,19 +1,11 @@
 var a00428 =
 [
-    [ "Image", "a00428.html#a835ef3a1d15e9be52004125e6294ea0b", null ],
-    [ "Image", "a00428.html#a96926ef90fc6925d7d2f24605d7b9fbf", null ],
-    [ "deserialize", "a00428.html#a0e3fa5f500c071d484dd56d5562e0d9c", null ],
-    [ "isUploaded", "a00428.html#a6bc40ee958a59a3f70a0146c7e9312e2", null ],
-    [ "operator==", "a00428.html#a4ae5258f9f0f0462ba2fa7b15fbde7e9", null ],
-    [ "refreshInfo", "a00428.html#a3c8b1b2f1741c02d38fd41b45461ec18", null ],
-    [ "toJson", "a00428.html#a34553da30d7a3753b72247654bc36e89", null ],
-    [ "toMiraiCode", "a00428.html#a10cd01f40a86dcd051722cc50baa2003", null ],
-    [ "type", "a00428.html#a8920fb2036cd75d06b0343b32886f610", null ],
-    [ "height", "a00428.html#a6d91d1442a67a40efea60fd8b21f0344", null ],
-    [ "id", "a00428.html#ac6a67525ab64646c9068bc98bd58e796", null ],
-    [ "imageType", "a00428.html#ad0f3d7f5356612a87bf1769577be8d88", null ],
-    [ "md5", "a00428.html#a0ac48e10b27d52864e36f65a154f4503", null ],
-    [ "size", "a00428.html#a90e338ad396d824807759601a7fa3b88", null ],
-    [ "url", "a00428.html#ae64873f7812cdc802bf61a7c77c5e21d", null ],
-    [ "width", "a00428.html#a32663d1a7c0f773d5e0edc245a503f5e", null ]
+    [ "Message", "a00428.html#a7de8dcb64a63016d9fd56e67521bf7bc", null ],
+    [ "Message", "a00428.html#afe2538f33d2579ab463fcbb8cf6ab7fa", null ],
+    [ "get", "a00428.html#ae4b04a6aa2a4a95f3729a2a3c8a8bed2", null ],
+    [ "operator!=", "a00428.html#a4e54488b5b28f7f606f4de2632a5f541", null ],
+    [ "operator==", "a00428.html#a88e760c0f2eb2790198ad336256dfdba", null ],
+    [ "toMiraiCode", "a00428.html#a487a379efa40cd0f4650491f0fb8e7bb", null ],
+    [ "type", "a00428.html#ae110eef981b54bd49c0807f8f29dcc3f", null ],
+    [ "content", "a00428.html#a4dc4f2ad7ed693e783e2aa9df3eec951", null ]
 ];

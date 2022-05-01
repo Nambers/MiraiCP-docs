@@ -1,5 +1,5 @@
 var a00277 =
 [
-    [ "TimeOutException", "a00277.html#a76c21b90257e3210947844ebeba803ae", null ],
-    [ "description", "a00277.html#a0021736917abbcd9e637c02b7a6eb981", null ]
+    [ "APIException", "a00277.html#a5ab35b388404f70eeccfe3474bdb9c90", null ],
+    [ "exceptionType", "a00277.html#aa95831ad20b7019b10241a25f8f41dd1", null ]
 ];

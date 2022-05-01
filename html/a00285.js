@@ -1,6 +1,6 @@
 var a00285 =
 [
-    [ "ForwardedMessage", "a00285.html#a5ede8cbc0849ad8f0b716f3581db967d", null ],
-    [ "sendTo", "a00285.html#a2ba47bfa3aef481a5e62527e6e1ff5e3", null ],
-    [ "sendmsg", "a00285.html#aa99a2f4399b53a576e6db44d08e11af8", null ]
+    [ "BotIsBeingMutedException", "a00285.html#a548111b99d412290281c43e90a1e8e16", null ],
+    [ "exceptionType", "a00285.html#a86c42cdc24c6bf1f85c143cdc5ef6941", null ],
+    [ "timeRemain", "a00285.html#aacccf1ba2a31c6a8901d87d166c85f3e", null ]
 ];

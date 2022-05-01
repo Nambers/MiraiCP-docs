@@ -1,7 +1,8 @@
 var a00247 =
 [
-    [ "eventNode", "a00247.html#ada1a211ec7334bd8271f5cb80c39e41b", null ],
-    [ "run", "a00247.html#ae2dec6d63790b7d7fe4c49549729867a", null ],
-    [ "enable", "a00247.html#aebe9d35974a43240e3ee02cb3bd1adfb", null ],
-    [ "func", "a00247.html#a5b68a33a87c4e2360c2f74cc1b52569f", null ]
+    [ "GroupTempMessageEvent", "a00247.html#a4cd87975d98bef10e520e2ca9e3bfcf4", null ],
+    [ "get_event_type", "a00247.html#a6129a5451a7602b73c8d04fe88ad2715", null ],
+    [ "group", "a00247.html#a29c18056652c7d36248f70f359f01e74", null ],
+    [ "message", "a00247.html#a2405f8a309e3b2de0d7cba313d795cee", null ],
+    [ "sender", "a00247.html#ac0252e17c1cb9a0d4f2ebf37720951db", null ]
 ];

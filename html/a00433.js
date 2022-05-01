@@ -1,8 +1,10 @@
 var a00433 =
 [
-    [ "MarketFace", "a00433.html#ae58c1c2293ec3c1c339c01e56d05f345", null ],
-    [ "operator==", "a00433.html#a06db9ba5cb8e759845fc44cabf5c4a8e", null ],
-    [ "toMiraiCode", "a00433.html#aa1db38d2412cf4cb0a8bdff6f7e4a182", null ],
-    [ "type", "a00433.html#a4b1a9e71197d9810f31b09b6e5ee5b0a", null ],
-    [ "faceId", "a00433.html#aded09c1fba7d8914cc9bf2f67f3df83a", null ]
+    [ "At", "a00433.html#ab5b225ea67cf995d13b384ec622c86e7", null ],
+    [ "At", "a00433.html#a3e12195fc4d9ae026ec8a438a368342a", null ],
+    [ "operator==", "a00433.html#a58dbd3db49d9d2fed357b791ff3ba816", null ],
+    [ "toJson", "a00433.html#a60af12c9073c8734f98ee682a61ce184", null ],
+    [ "toMiraiCode", "a00433.html#abaa95fab044eebb3e355da0040c0bfa7", null ],
+    [ "type", "a00433.html#a125a356ddd55ec22117d8fafb1f32dc9", null ],
+    [ "target", "a00433.html#a4c451a3d12d38f6a83d425cab2d2aa25", null ]
 ];

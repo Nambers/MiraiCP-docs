@@ -1,5 +1,5 @@
 var a00348 =
 [
-    [ "id", "a00348.html#a3731a10878ebebf220143bde1b6bf145", null ],
-    [ "path", "a00348.html#aed72e7f738908ff8beb5f3894c88d0ee", null ]
+    [ "EventCancelledException", "a00348.html#adcf3347e6e34ba912fafd4bdd48a44af", null ],
+    [ "exceptionType", "a00348.html#ade28f5ad66bc98f50ba3a537d4402c07", null ]
 ];

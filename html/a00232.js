@@ -1,8 +1,9 @@
 var a00232 =
 [
-    [ "MiraiCPExceptionEvent", "a00232.html#a67f475ec3ebcf1f185e5d9ef13fcd14c", null ],
-    [ "get_event_type", "a00232.html#ae1d7b10fffc99fba2cb4d08754e42365", null ],
-    [ "getEventType", "a00232.html#a95739c7970624a1ef395ba899e2bf68d", null ],
-    [ "getException", "a00232.html#a9e986a6f69f2fd33a7313827a1f75da0", null ],
-    [ "exceptionPtr", "a00232.html#abbe1679705abc11d256a39eb12ac6837", null ]
+    [ "MemberLeaveEvent", "a00232.html#acbd646bf783ca8d03b8b0a48e3a37cb7", null ],
+    [ "get_event_type", "a00232.html#ac16581cdd4e400c2a6e92889fb928d95", null ],
+    [ "group", "a00232.html#ab693afc3bdbfddc1ae88caf9ee052d54", null ],
+    [ "memberid", "a00232.html#ab1908decaccb41ea3bc74836dff63246", null ],
+    [ "operaterid", "a00232.html#aade41087ec629e2632628919d9df79fe", null ],
+    [ "type", "a00232.html#ad28ac4243630eab3bf7d65a737cac9ca", null ]
 ];

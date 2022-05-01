@@ -1,9 +1,11 @@
 var a00483 =
 [
-    [ "UnSupportMessage", "a00483.html#a23b8cc40f52162400793ef2dc9c592be", null ],
-    [ "UnSupportMessage", "a00483.html#a6be0a774db3dc14967b31ab49e057454", null ],
-    [ "operator==", "a00483.html#a0ab999563baa8193b226d442d1a7f5dc", null ],
-    [ "toJson", "a00483.html#ae28bab32ffb5b7520376b88cb0fb70e1", null ],
-    [ "toMiraiCode", "a00483.html#a911faf12ad83185a3f321c227461d636", null ],
-    [ "type", "a00483.html#ad5b8af135be7c2201fa5cc3d81fa8912", null ]
+    [ "ServiceMessage", "a00483.html#af2da1f54cc88abcddc68f96bde22d24e", null ],
+    [ "ServiceMessage", "a00483.html#ab5866201bea86658dadc054764fd1db6", null ],
+    [ "ServiceMessage", "a00483.html#a367f5b76f1716ba7b5fa31219274bc85", null ],
+    [ "operator==", "a00483.html#ac376e371ca5bd671ea8f3d98881b8052", null ],
+    [ "toJson", "a00483.html#ac6e0602d6b6eda201108025e7318d07b", null ],
+    [ "toMiraiCode", "a00483.html#a25240f7b9b413c65916c92035569a095", null ],
+    [ "type", "a00483.html#ab6d7d4b47233b30630c752945603d780", null ],
+    [ "id", "a00483.html#a71730c48bdb7186bd5be19dc87d0e629", null ]
 ];

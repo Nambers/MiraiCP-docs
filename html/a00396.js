@@ -1,4 +1,5 @@
 var a00396 =
 [
-    [ "toMiraiCode", "a00396.html#a96bdd3af5e564960b2b7f562032b1a15", null ]
+    [ "action", "a00396.html#aea306ee2e14936202c9a814a15e0d0bc", null ],
+    [ "enable", "a00396.html#a0fda6ed76658ebaa758e801a72b3d946", null ]
 ];

@@ -1,5 +1,7 @@
 var a00271 =
 [
-    [ "APIException", "a00271.html#a5ab35b388404f70eeccfe3474bdb9c90", null ],
-    [ "exceptionType", "a00271.html#aa95831ad20b7019b10241a25f8f41dd1", null ]
+    [ "MessagePreSendEvent", "a00271.html#a14ade975f492c912c43d9c6140f36a8d", null ],
+    [ "get_event_type", "a00271.html#af17073020ced82c02fa60c4640f80d8d", null ],
+    [ "message", "a00271.html#a2fe0731f2ede62683919e2af5deecb2c", null ],
+    [ "target", "a00271.html#a9f10bb0f95316175506f9f48d9ed148d", null ]
 ];

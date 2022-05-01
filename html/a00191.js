@@ -1,13 +1,8 @@
 var a00191 =
 [
-    [ "NewFriendRequestEvent", "a00191.html#aa7a60db5331de88e29455d07a6d9ccca", null ],
-    [ "accept", "a00191.html#a282335f850a9ab57d5a1d695940034a9", null ],
-    [ "get_event_type", "a00191.html#a84c455f8df829ea965c27fbba6e237ef", null ],
-    [ "operation0", "a00191.html#a3fb58755202dc30c9a460d10545c6a0a", null ],
-    [ "reject", "a00191.html#a9ad16173148b9c63b24860c06ce6b3c3", null ],
-    [ "fromgroupid", "a00191.html#a9d75cbeeaf4d484676bfc7090baa4b9b", null ],
-    [ "fromid", "a00191.html#a6c987dc795e5e1893caef8370bf6dfee", null ],
-    [ "message", "a00191.html#a914502cfd8ab0db7ea570240f0bb56e5", null ],
-    [ "nick", "a00191.html#aac9936ee444a019ef2c988a4ed369b55", null ],
-    [ "source", "a00191.html#a4b48f29f9ac4443abf0a76590690a897", null ]
+    [ "CommandManager", "a00191.html#acf247b0f4f71627dc920d3297be6314f", null ],
+    [ "operator[]", "a00191.html#a2cadbf9c0ff28ff16c544c0fc03b874d", null ],
+    [ "registerCommand", "a00191.html#accb883db18602dc65b5fdd264dd73bfd", null ],
+    [ "commandList", "a00191.html#af770c2433fdf62bee434d79f7118cbcc", null ],
+    [ "commandManager", "a00191.html#a772ce2c737ce39e63ed80b023019f152", null ]
 ];

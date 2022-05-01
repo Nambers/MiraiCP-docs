@@ -1,5 +1,6 @@
 var a00263 =
 [
-    [ "UploadException", "a00263.html#a1b5ca7e57cd117a0e45baae54a10019f", null ],
-    [ "exceptionType", "a00263.html#a75aa16afc81716cc340be44ee4950e18", null ]
+    [ "BotLeaveEvent", "a00263.html#a1d6901317417c45332686a1b148ea789", null ],
+    [ "get_event_type", "a00263.html#af477670377fef2ea1d76b5a36f738a3b", null ],
+    [ "groupid", "a00263.html#a75d1aed07afc1cc0c9a6985c406e68ee", null ]
 ];

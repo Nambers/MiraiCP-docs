@@ -1,19 +1,15 @@
 var a00435 =
 [
-    [ "Image", "a00435.html#a835ef3a1d15e9be52004125e6294ea0b", null ],
-    [ "Image", "a00435.html#a96926ef90fc6925d7d2f24605d7b9fbf", null ],
-    [ "deserialize", "a00435.html#a0e3fa5f500c071d484dd56d5562e0d9c", null ],
-    [ "isUploaded", "a00435.html#a6bc40ee958a59a3f70a0146c7e9312e2", null ],
-    [ "operator==", "a00435.html#a4ae5258f9f0f0462ba2fa7b15fbde7e9", null ],
-    [ "refreshInfo", "a00435.html#a3c8b1b2f1741c02d38fd41b45461ec18", null ],
-    [ "toJson", "a00435.html#a34553da30d7a3753b72247654bc36e89", null ],
-    [ "toMiraiCode", "a00435.html#a10cd01f40a86dcd051722cc50baa2003", null ],
-    [ "type", "a00435.html#a8920fb2036cd75d06b0343b32886f610", null ],
-    [ "height", "a00435.html#a6d91d1442a67a40efea60fd8b21f0344", null ],
-    [ "id", "a00435.html#ac6a67525ab64646c9068bc98bd58e796", null ],
-    [ "imageType", "a00435.html#ad0f3d7f5356612a87bf1769577be8d88", null ],
-    [ "md5", "a00435.html#a0ac48e10b27d52864e36f65a154f4503", null ],
-    [ "size", "a00435.html#a90e338ad396d824807759601a7fa3b88", null ],
-    [ "url", "a00435.html#ae64873f7812cdc802bf61a7c77c5e21d", null ],
-    [ "width", "a00435.html#a32663d1a7c0f773d5e0edc245a503f5e", null ]
+    [ "MessageSource", "a00435.html#a49210b1a4c711d50ab0acc17d0dae88d", null ],
+    [ "MessageSource", "a00435.html#a17c32c44e0af14a5f23f15ca56e527ae", null ],
+    [ "deserializeFromString", "a00435.html#a1f98db6bbdf6b7d178bf92f55fd2e4dc", null ],
+    [ "operator==", "a00435.html#a2d08aa9b079abe268966313e12a3496b", null ],
+    [ "recall", "a00435.html#afe1ce48e1c2ee0095202843e5df82f9e", null ],
+    [ "serializeToString", "a00435.html#aca51487498128b420019182e1331a282", null ],
+    [ "ShouldNotUse", "a00435.html#af746248b4f82c9832ace5b8b98e5295f", null ],
+    [ "env", "a00435.html#aedc35b34b91f500adf45ab31f088b2e0", null ],
+    [ "groupid", "a00435.html#af4796797483c9706ba534a2eff4c78c5", null ],
+    [ "ids", "a00435.html#a4b5fd176a16871dbb39e5be15b2b6c15", null ],
+    [ "internalids", "a00435.html#a358ba0250715b1c4692554995750675e", null ],
+    [ "source", "a00435.html#afc51041bfb7cc7cb0915b5131ee05805", null ]
 ];

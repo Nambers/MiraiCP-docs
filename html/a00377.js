@@ -1,8 +1,6 @@
 var a00377 =
 [
-    [ "brief", "a00377.html#a922825f2fe708a70c66ff6585d688bb6", null ],
-    [ "cover", "a00377.html#a38c4579d9ccb887f3cab0573a39b96fa", null ],
-    [ "summary", "a00377.html#a5927b32bbb8fc21efe5d183fb12ddd1a", null ],
-    [ "title", "a00377.html#a929d703d700b67f4a1c1d17111271922", null ],
-    [ "url", "a00377.html#aba141291ce2939583450057c338b1fc5", null ]
+    [ "IdLogger", "a00377.html#a50eb2703023973190ae65a949011166f", null ],
+    [ "log1", "a00377.html#ac00e0c40a6aafe1119dad61d840aa87c", null ],
+    [ "id", "a00377.html#a0780713691dbbe27226d2c4c6c13d226", null ]
 ];

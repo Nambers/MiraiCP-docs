@@ -1,5 +1,6 @@
 var a00292 =
 [
-    [ "RecallException", "a00292.html#a7efed6d5b4e2e7c655b53496fbff9710", null ],
-    [ "exceptionType", "a00292.html#abb3b6f5b42098376e6a195eb6f420410", null ]
+    [ "MiraiCPExceptionCRTP", "a00292.html#a02700530ff07249086c6556d7d270ec7", null ],
+    [ "MiraiCPExceptionCRTP", "a00292.html#a810ba1c8839e012b9c6c7827435e0374", null ],
+    [ "getExceptionType", "a00292.html#ad64ad9b96b50c93cd9d210eeb31b43ee", null ]
 ];

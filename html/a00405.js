@@ -1,11 +1,15 @@
 var a00405 =
 [
-    [ "ServiceMessage", "a00405.html#af2da1f54cc88abcddc68f96bde22d24e", null ],
-    [ "ServiceMessage", "a00405.html#ab5866201bea86658dadc054764fd1db6", null ],
-    [ "ServiceMessage", "a00405.html#a367f5b76f1716ba7b5fa31219274bc85", null ],
-    [ "operator==", "a00405.html#ac376e371ca5bd671ea8f3d98881b8052", null ],
-    [ "toJson", "a00405.html#ac6e0602d6b6eda201108025e7318d07b", null ],
-    [ "toMiraiCode", "a00405.html#a25240f7b9b413c65916c92035569a095", null ],
-    [ "type", "a00405.html#ab6d7d4b47233b30630c752945603d780", null ],
-    [ "id", "a00405.html#a71730c48bdb7186bd5be19dc87d0e629", null ]
+    [ "MessageSource", "a00405.html#a49210b1a4c711d50ab0acc17d0dae88d", null ],
+    [ "MessageSource", "a00405.html#a17c32c44e0af14a5f23f15ca56e527ae", null ],
+    [ "deserializeFromString", "a00405.html#a1f98db6bbdf6b7d178bf92f55fd2e4dc", null ],
+    [ "operator==", "a00405.html#a2d08aa9b079abe268966313e12a3496b", null ],
+    [ "recall", "a00405.html#afe1ce48e1c2ee0095202843e5df82f9e", null ],
+    [ "serializeToString", "a00405.html#aca51487498128b420019182e1331a282", null ],
+    [ "ShouldNotUse", "a00405.html#af746248b4f82c9832ace5b8b98e5295f", null ],
+    [ "env", "a00405.html#aedc35b34b91f500adf45ab31f088b2e0", null ],
+    [ "groupid", "a00405.html#af4796797483c9706ba534a2eff4c78c5", null ],
+    [ "ids", "a00405.html#a4b5fd176a16871dbb39e5be15b2b6c15", null ],
+    [ "internalids", "a00405.html#a358ba0250715b1c4692554995750675e", null ],
+    [ "source", "a00405.html#afc51041bfb7cc7cb0915b5131ee05805", null ]
 ];

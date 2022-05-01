@@ -1,13 +1,19 @@
 var a00468 =
 [
-    [ "MusicShare", "a00468.html#a36dd35e9834b873e11c98eae3602d0ac", null ],
-    [ "toMiraiCode", "a00468.html#a1bffdbd7cd143a903f22fb376b79c855", null ],
-    [ "type", "a00468.html#a0d066ebbca63439a3eea2e564e31403a", null ],
-    [ "appName", "a00468.html#a87a20d867c8dadbe4a8f55ef2b6d0d4d", null ],
-    [ "brief", "a00468.html#ab3e91b8220d2e80dbb84ff17b83ce3f8", null ],
-    [ "jumpUrl", "a00468.html#aa4239e8aadb82d6c79bc8986f55e68b6", null ],
-    [ "musicUrl", "a00468.html#a98dc3816bcdd57e551a55ff88b2ea4fa", null ],
-    [ "picUrl", "a00468.html#a0615bbf6886985e1438ab1493cdc012a", null ],
-    [ "summary", "a00468.html#a2da932b20adbdc6f9fa58bda8c0623ac", null ],
-    [ "title", "a00468.html#aa4f1eb91480d538d2aead5904f1cc4b9", null ]
+    [ "Image", "a00468.html#a835ef3a1d15e9be52004125e6294ea0b", null ],
+    [ "Image", "a00468.html#a96926ef90fc6925d7d2f24605d7b9fbf", null ],
+    [ "deserialize", "a00468.html#a0e3fa5f500c071d484dd56d5562e0d9c", null ],
+    [ "isUploaded", "a00468.html#a6bc40ee958a59a3f70a0146c7e9312e2", null ],
+    [ "operator==", "a00468.html#a4ae5258f9f0f0462ba2fa7b15fbde7e9", null ],
+    [ "refreshInfo", "a00468.html#a3c8b1b2f1741c02d38fd41b45461ec18", null ],
+    [ "toJson", "a00468.html#a34553da30d7a3753b72247654bc36e89", null ],
+    [ "toMiraiCode", "a00468.html#a10cd01f40a86dcd051722cc50baa2003", null ],
+    [ "type", "a00468.html#a8920fb2036cd75d06b0343b32886f610", null ],
+    [ "height", "a00468.html#a6d91d1442a67a40efea60fd8b21f0344", null ],
+    [ "id", "a00468.html#ac6a67525ab64646c9068bc98bd58e796", null ],
+    [ "imageType", "a00468.html#ad0f3d7f5356612a87bf1769577be8d88", null ],
+    [ "md5", "a00468.html#a0ac48e10b27d52864e36f65a154f4503", null ],
+    [ "size", "a00468.html#a90e338ad396d824807759601a7fa3b88", null ],
+    [ "url", "a00468.html#ae64873f7812cdc802bf61a7c77c5e21d", null ],
+    [ "width", "a00468.html#a32663d1a7c0f773d5e0edc245a503f5e", null ]
 ];

@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiraiCP: MessageChain.h 文件参考</title>
+<title>MiraiCP: ForwardedMessage.h 文件参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MiraiCP
-   &#160;<span id="projectnumber">v2.11.0-M2</span>
+   &#160;<span id="projectnumber">v2.11.0-M3</span>
    </div>
    <div id="projectbrief">MiraiCP api document</div>
   </td>
@@ -93,30 +93,34 @@ $(document).ready(function(){initNavTree('a00083.html',''); initResizable(); });
   <div class="summary">
 <a href="#nested-classes">类</a> &#124;
 <a href="#namespaces">命名空间</a>  </div>
-  <div class="headertitle"><div class="title">MessageChain.h 文件参考</div></div>
+  <div class="headertitle"><div class="title">ForwardedMessage.h 文件参考</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="a00041_source.html">Exception.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00107_source.html">SingleMessage.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="a00119_source.html">MessageChain.h</a>&quot;</code><br />
+<code>#include &lt;json.hpp&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> MessageChain.h 的引用(Include)关系图:</div>
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> ForwardedMessage.h 的引用(Include)关系图:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="a00084.png" border="0" usemap="#a_message_chain_8h" alt=""/></div>
-<map name="a_message_chain_8h" id="a_message_chain_8h">
-<area shape="rect" title=" " alt="" coords="183,5,301,32"/>
-<area shape="rect" href="a00041.html" title=" " alt="" coords="77,80,167,107"/>
-<area shape="rect" href="a00107.html" title=" " alt="" coords="302,80,425,107"/>
-<area shape="rect" title=" " alt="" coords="5,155,84,181"/>
-<area shape="rect" title=" " alt="" coords="532,229,587,256"/>
-<area shape="rect" title=" " alt="" coords="159,155,210,181"/>
-<area shape="rect" title=" " alt="" coords="235,155,305,181"/>
-<area shape="rect" title=" " alt="" coords="330,155,397,181"/>
-<area shape="rect" title=" " alt="" coords="421,155,490,181"/>
-<area shape="rect" href="a00089.html" title=" " alt="" coords="629,155,756,181"/>
-<area shape="rect" href="a00095.html" title=" " alt="" coords="514,155,605,181"/>
-<area shape="rect" title=" " alt="" coords="669,229,716,256"/>
+<div class="center"><img src="a00084.png" border="0" usemap="#a_forwarded_message_8h" alt=""/></div>
+<map name="a_forwarded_message_8h" id="a_forwarded_message_8h">
+<area shape="rect" title=" " alt="" coords="395,5,541,32"/>
+<area shape="rect" href="a00119.html" title=" " alt="" coords="409,80,527,107"/>
+<area shape="rect" title=" " alt="" coords="165,304,219,331"/>
+<area shape="rect" title=" " alt="" coords="702,229,773,256"/>
+<area shape="rect" href="a00077.html" title=" " alt="" coords="93,155,184,181"/>
+<area shape="rect" href="a00149.html" title=" " alt="" coords="407,155,529,181"/>
+<area shape="rect" title=" " alt="" coords="553,155,636,181"/>
+<area shape="rect" title=" " alt="" coords="22,229,101,256"/>
+<area shape="rect" title=" " alt="" coords="443,229,493,256"/>
+<area shape="rect" title=" " alt="" coords="517,229,584,256"/>
+<area shape="rect" title=" " alt="" coords="608,229,677,256"/>
+<area shape="rect" href="a00125.html" title=" " alt="" coords="291,229,418,256"/>
+<area shape="rect" href="a00131.html" title=" " alt="" coords="176,229,267,256"/>
+<area shape="rect" title=" " alt="" coords="269,304,315,331"/>
+<area shape="rect" href="a00137.html" title=" " alt="" coords="339,304,426,331"/>
 </map>
 </div>
 </div><div class="textblock"><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -124,24 +128,14 @@ $(document).ready(function(){initNavTree('a00083.html',''); initResizable(); });
 <div id="dynsection-1-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="a00085.png" border="0" usemap="#a_message_chain_8hdep" alt=""/></div>
-<map name="a_message_chain_8hdep" id="a_message_chain_8hdep">
-<area shape="rect" title=" " alt="" coords="141,5,259,32"/>
-<area shape="rect" href="a00023.html" title=" " alt="" coords="291,80,370,107"/>
-<area shape="rect" href="a00047.html" title=" " alt="" coords="52,80,199,107"/>
-<area shape="rect" href="a00020.html" title=" " alt="" coords="230,155,322,181"/>
-<area shape="rect" href="a00044.html" title=" " alt="" coords="45,155,205,181"/>
-<area shape="rect" href="a00053.html" title=" " alt="" coords="544,155,613,181"/>
-<area shape="rect" href="a00059.html" title=" " alt="" coords="451,155,519,181"/>
-<area shape="rect" href="a00077.html" title=" " alt="" coords="347,155,427,181"/>
-<area shape="rect" href="a00002.html" title=" " alt="" coords="543,229,609,256"/>
-<area shape="rect" href="a00035.html" title=" " alt="" coords="453,229,518,256"/>
-<area shape="rect" href="a00050.html" title=" " alt="" coords="633,229,716,256"/>
-<area shape="rect" href="a00032.html" title=" " alt="" coords="387,304,466,331"/>
-<area shape="rect" href="a00038.html" title=" " alt="" coords="490,304,595,331"/>
-<area shape="rect" href="a00056.html" title=" " alt="" coords="345,229,428,256"/>
-<area shape="rect" href="a00080.html" title=" " alt="" coords="5,229,139,256"/>
-<area shape="rect" href="a00074.html" title=" " alt="" coords="226,229,321,256"/>
+<div class="center"><img src="a00085.png" border="0" usemap="#a_forwarded_message_8hdep" alt=""/></div>
+<map name="a_forwarded_message_8hdep" id="a_forwarded_message_8hdep">
+<area shape="rect" title=" " alt="" coords="183,5,329,32"/>
+<area shape="rect" href="a00080.html" title=" " alt="" coords="5,80,165,107"/>
+<area shape="rect" href="a00116.html" title=" " alt="" coords="189,80,323,107"/>
+<area shape="rect" href="a00134.html" title=" " alt="" coords="347,80,440,107"/>
+<area shape="rect" href="a00032.html" title=" " alt="" coords="357,229,429,256"/>
+<area shape="rect" href="a00035.html" title=" " alt="" coords="397,155,456,181"/>
 </map>
 </div>
 </div>
@@ -149,15 +143,18 @@ $(document).ready(function(){initNavTree('a00083.html',''); initResizable(); });
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 类</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00391.html">MiraiCP::MessageChain</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">消息链, 一般由SingleMessage组成  <a href="a00391.html#details">更多...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00355.html">MiraiCP::ForwardedNode</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">聊天记录里每个消息  <a href="a00355.html#details">更多...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00395.html">MiraiCP::MessageChain::Message</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00359.html">MiraiCP::ForwardedMessage</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00363.html">MiraiCP::OnlineForwardedMessage</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">接收到的转发消息, 发送用 <a class="el" href="a00359.html">MiraiCP::ForwardedMessage</a>  <a href="a00363.html#details">更多...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
 命名空间</h2></td></tr>
-<tr class="memitem:a00135"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00135.html">MiraiCP</a></td></tr>
+<tr class="memitem:a00171"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00171.html">MiraiCP</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
@@ -166,8 +163,8 @@ $(document).ready(function(){initNavTree('a00083.html',''); initResizable(); });
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="a00083.html">MessageChain.h</a></li>
-    <li class="footer">生成于 2022年 四月 20日 星期三 10:36:30 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b0856f6b0d80ccb263b2f415c91f9e17.html">include</a></li><li class="navelem"><a class="el" href="a00083.html">ForwardedMessage.h</a></li>
+    <li class="footer">生成于 2022年 五月 1日 星期日 11:26:10 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
 <script type="text/javascript">

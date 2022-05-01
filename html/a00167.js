@@ -1,9 +1,11 @@
 var a00167 =
 [
-    [ "CPPPlugin", "a00167.html#a8757991e0396faf72a9e0ad06caa53f4", null ],
-    [ "onDisable", "a00167.html#a3ecc2c479d1ca6785e7cdcb0738c1597", null ],
-    [ "onEnable", "a00167.html#ad3d1188d089ab0fc945475f988c64fa7", null ],
-    [ "config", "a00167.html#a4ca2c5ec7d04d258a2da1ce7cdb09a75", null ],
-    [ "plugin", "a00167.html#a5bfd48cf68b997a48e04d141d831f6d3", null ],
-    [ "pluginLogger", "a00167.html#a77d8d4ed65a3beb60410f0659bf9aedf", null ]
+    [ "enrollPlugin", "a00167.html#a12d27be6730af4fc321ac1eb231db281", null ],
+    [ "enrollPlugin0", "a00167.html#ad5dfcfb8bbf110c31ac8a5288f395bba", null ],
+    [ "Event", "a00167.html#a66ecc9e4cce13730175b5bcb21801f72", null ],
+    [ "PluginDisable", "a00167.html#a977e2e597fe9020cba9806a7583d3894", null ],
+    [ "registerMethods", "a00167.html#acd50ba00052ee4194d336f41b0703d66", null ],
+    [ "returnNull", "a00167.html#a0eeb0de4ae4a15bc5b8c388124ae2ef6", null ],
+    [ "schedule", "a00167.html#ad274e5c7a685e18ad0b3817fd554b934", null ],
+    [ "Verify", "a00167.html#a069b5c9b3a753002b532970e025f91bd", null ]
 ];

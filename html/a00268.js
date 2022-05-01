@@ -1,6 +1,7 @@
 var a00268 =
 [
-    [ "BotException", "a00268.html#ac250396fe99586a5cf4edd42f708ba5f", null ],
-    [ "BotException", "a00268.html#a24ceda48b7072cd7cd3eeac8e781ec96", null ],
-    [ "exceptionType", "a00268.html#ac31df28b76fc89b362e1b94c4c866b43", null ]
+    [ "MessagePreSendEvent", "a00268.html#a14ade975f492c912c43d9c6140f36a8d", null ],
+    [ "get_event_type", "a00268.html#af17073020ced82c02fa60c4640f80d8d", null ],
+    [ "message", "a00268.html#a2fe0731f2ede62683919e2af5deecb2c", null ],
+    [ "target", "a00268.html#a9f10bb0f95316175506f9f48d9ed148d", null ]
 ];

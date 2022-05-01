@@ -1,5 +1,6 @@
 var a00311 =
 [
-    [ "TimeOutException", "a00311.html#a463bf6b96088ead25092aa265eb3ea97", null ],
-    [ "exceptionType", "a00311.html#a33b7cd14d774ca08c06e537ec6379841", null ]
+    [ "BotException", "a00311.html#ac250396fe99586a5cf4edd42f708ba5f", null ],
+    [ "BotException", "a00311.html#a24ceda48b7072cd7cd3eeac8e781ec96", null ],
+    [ "exceptionType", "a00311.html#ac31df28b76fc89b362e1b94c4c866b43", null ]
 ];
