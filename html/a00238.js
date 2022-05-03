@@ -1,7 +1,13 @@
 var a00238 =
 [
-    [ "MessagePreSendEvent", "a00238.html#a14ade975f492c912c43d9c6140f36a8d", null ],
-    [ "get_event_type", "a00238.html#af17073020ced82c02fa60c4640f80d8d", null ],
-    [ "message", "a00238.html#a2fe0731f2ede62683919e2af5deecb2c", null ],
-    [ "target", "a00238.html#a9f10bb0f95316175506f9f48d9ed148d", null ]
+    [ "GroupInviteEvent", "a00238.html#a9c76e0f986edef4d3915204a07085d11", null ],
+    [ "accept", "a00238.html#ae2666f5eac9e7bb256bad669a06a6e73", null ],
+    [ "get_event_type", "a00238.html#af6b33b5f4c0f29ebc3b8f8c9534a3bdf", null ],
+    [ "operation0", "a00238.html#a7e773d9868319834f338b3ebc963d1d5", null ],
+    [ "reject", "a00238.html#a9dae2fd6b842761d82641de62d97d5ff", null ],
+    [ "groupid", "a00238.html#ad0d2dad878885d82c78e5ef79efa9945", null ],
+    [ "groupName", "a00238.html#a578c8a027cb9f1574fba3de4b3646fc0", null ],
+    [ "inviterid", "a00238.html#a9e48a48c1429b8739da6e91cb8a04819", null ],
+    [ "inviterNick", "a00238.html#abf7cb41022c0cf81725c2925507f1d58", null ],
+    [ "source", "a00238.html#affaff17057d8b347a51ba2516f529596", null ]
 ];

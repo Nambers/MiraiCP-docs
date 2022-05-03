@@ -1,8 +1,8 @@
 var a00382 =
 [
-    [ "info", "a00386.html", "a00386" ],
-    [ "getInfoSource", "a00382.html#ac03aa9c815ce59030b0f2610e48b79b1", null ],
-    [ "info0", "a00382.html#a39064f9c2b148b3a3061f818bf237215", null ],
-    [ "send0", "a00382.html#a795f4093d390bd0205ae95aa0075d442", null ],
-    [ "uploadImg0", "a00382.html#a3effa0c77f4c1687cf8656cdf0b60e42", null ]
+    [ "Friend", "a00382.html#ab3ac94c426a7f2d61f77c970cedd838e", null ],
+    [ "Friend", "a00382.html#a00e6db35292ca302757e69e60c06f0eb", null ],
+    [ "deleteFriend", "a00382.html#a6e7e1a8a401f0ff1c636f11b988703d5", null ],
+    [ "refreshInfo", "a00382.html#a44dbdbe1a6cb81ad6dba5a51d0a4fca9", null ],
+    [ "sendNudge", "a00382.html#a0321140e76255aadcd1a23c92b0d5031", null ]
 ];

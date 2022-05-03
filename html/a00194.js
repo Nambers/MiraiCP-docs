@@ -1,13 +1,20 @@
 var a00194 =
 [
-    [ "NewFriendRequestEvent", "a00194.html#aa7a60db5331de88e29455d07a6d9ccca", null ],
-    [ "accept", "a00194.html#a282335f850a9ab57d5a1d695940034a9", null ],
-    [ "get_event_type", "a00194.html#a84c455f8df829ea965c27fbba6e237ef", null ],
-    [ "operation0", "a00194.html#a3fb58755202dc30c9a460d10545c6a0a", null ],
-    [ "reject", "a00194.html#a9ad16173148b9c63b24860c06ce6b3c3", null ],
-    [ "fromgroupid", "a00194.html#a9d75cbeeaf4d484676bfc7090baa4b9b", null ],
-    [ "fromid", "a00194.html#a6c987dc795e5e1893caef8370bf6dfee", null ],
-    [ "message", "a00194.html#a914502cfd8ab0db7ea570240f0bb56e5", null ],
-    [ "nick", "a00194.html#aac9936ee444a019ef2c988a4ed369b55", null ],
-    [ "source", "a00194.html#a4b48f29f9ac4443abf0a76590690a897", null ]
+    [ "Bot", "a00194.html#a924e47e8b0591f395f3dd085c16e16e5", null ],
+    [ "avatarUrl", "a00194.html#a6b0ebecc9de3fdf10852b341c88561c0", null ],
+    [ "check", "a00194.html#a717a5ccc1e5be516c5caacf9ce937b61", null ],
+    [ "FriendListToString", "a00194.html#aa4c59d6acabbfed3e0450cb3e2257c6b", null ],
+    [ "getFriend", "a00194.html#a04542119c4f726723e021579d472b4d1", null ],
+    [ "getFriendList", "a00194.html#a518c62e682ab5346b648ba3366b4acc4", null ],
+    [ "getGroup", "a00194.html#a5bcd0af0a545bba99477ddf6d82f4fff", null ],
+    [ "getGroupList", "a00194.html#abafb3a1a01b351503918eb92bc974916", null ],
+    [ "GroupListToString", "a00194.html#ac036f287d56751ca5e33bd4d0292e306", null ],
+    [ "nick", "a00194.html#a14f2c875a64bf63c487be2f45454f517", null ],
+    [ "operator==", "a00194.html#a2eccb558dd0dfe6adbd2245fd8ca5ca4", null ],
+    [ "operator==", "a00194.html#a75247962e7030cccc0013e3658573db2", null ],
+    [ "refreshInfo", "a00194.html#a9a212b3abcfcd50a91e79ff2cf87a6fa", null ],
+    [ "_avatarUrl", "a00194.html#a2347f261667afe42cbe52d1c38d6618b", null ],
+    [ "_nick", "a00194.html#ad38f34b4d2230de460573afd5a967e74", null ],
+    [ "id", "a00194.html#a6f3b849ef6eb4888b36d9883ba8aa8eb", null ],
+    [ "inited", "a00194.html#a0c7162dd94ffde65ac85e2fa31dd327e", null ]
 ];

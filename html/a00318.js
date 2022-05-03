@@ -1,5 +1,5 @@
 var a00318 =
 [
-    [ "EventCancelledException", "a00318.html#adcf3347e6e34ba912fafd4bdd48a44af", null ],
-    [ "exceptionType", "a00318.html#ade28f5ad66bc98f50ba3a537d4402c07", null ]
+    [ "IllegalStateException", "a00318.html#ac9b5a8d083dbad7de5a9fb0690f4da43", null ],
+    [ "exceptionType", "a00318.html#ac82814555a14e6acfce3398f230997fa", null ]
 ];

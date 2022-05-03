@@ -1,8 +1,7 @@
 var a00226 =
 [
-    [ "NudgeEvent", "a00226.html#a33de6a207ef920b7fee423674cc2e126", null ],
-    [ "get_event_type", "a00226.html#ac0f00b0b573c63f72bb2a6fbc0257c8e", null ],
-    [ "from", "a00226.html#a6b41c32519408428cb6fc302bf24b970", null ],
-    [ "subject", "a00226.html#a48c484cc7aeaa12cec54886697950dc6", null ],
-    [ "target", "a00226.html#af4e172354f69ce65c8d8d2cd1f188cca", null ]
+    [ "BotEvent", "a00226.html#a5da368a0e44891433b340288bc872df3", null ],
+    [ "getEventType", "a00226.html#ad176440a2b764c7a123c4efcb3bfece3", null ],
+    [ "bot", "a00226.html#a0b14bddb4baebbd348969dac6c9a8edc", null ],
+    [ "botlogger", "a00226.html#a864b09f1e3cf406c2e96ca7b4c10e18e", null ]
 ];

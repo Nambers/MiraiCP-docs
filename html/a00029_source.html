@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiraiCP: schedule.cpp 源文件</title>
+<title>MiraiCP: nextMessage.cpp 源文件</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -90,7 +90,7 @@ $(document).ready(function(){initNavTree('a00029_source.html',''); initResizable
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">schedule.cpp</div></div>
+  <div class="headertitle"><div class="title">nextMessage.cpp</div></div>
 </div><!--header-->
 <div class="contents">
 <a href="a00029.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// Copyright (c) 2020 - 2022. Eritque arcus and contributors.</span></div>
@@ -108,58 +108,51 @@ $(document).ready(function(){initNavTree('a00029_source.html',''); initResizable
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">// You should have received a copy of the GNU Affero General Public License</span></div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">// along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</span></div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">//</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;<a class="code" href="a00137.html">MiraiCP.hpp</a>&gt;</span></div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">using namespace </span><a class="code hl_namespace" href="a00174.html">MiraiCP</a>;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;<a class="code" href="a00140.html">MiraiCP.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">using namespace </span><a class="code hl_namespace" href="a00177.html">MiraiCP</a>;</div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">class </span>Main : <span class="keyword">public</span> <a class="code hl_class" href="a00215.html">CPPPlugin</a> {</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">class </span>Main : <span class="keyword">public</span> <a class="code hl_class" href="a00218.html">CPPPlugin</a> {</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    Main() : <a class="code hl_class" href="a00215.html">CPPPlugin</a>(<a class="code hl_class" href="a00459.html">PluginConfig</a>(</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    Main() : <a class="code hl_class" href="a00218.html">CPPPlugin</a>(<a class="code hl_class" href="a00462.html">PluginConfig</a>(</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>                     <span class="stringliteral">&quot;id&quot;</span>,</div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>                     <span class="stringliteral">&quot;test&quot;</span>,</div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>                     <span class="stringliteral">&quot;v1.0&quot;</span>,</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>                     <span class="stringliteral">&quot;a&quot;</span>)) {}</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="a00215.html#ad3d1188d089ab0fc945475f988c64fa7">onEnable</a>()<span class="keyword"> override </span>{</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        Event::processor.registerEvent&lt;<a class="code hl_class" href="a00227.html">GroupMessageEvent</a>&gt;([](<a class="code hl_class" href="a00227.html">GroupMessageEvent</a> a) {</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>            <span class="comment">// 一起传递过去的自定义信息</span></div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>            <a class="code hl_typedef" href="a00167.html#ab701e3ac61a85b337ec5c1abaad6742d">nlohmann::json</a> j;</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>            j[<span class="stringliteral">&quot;type&quot;</span>] = 1;</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>            j[<span class="stringliteral">&quot;id&quot;</span>] = 111;</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>            j[<span class="stringliteral">&quot;bid&quot;</span>] = 111;</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>            <a class="code hl_function" href="a00174.html#ad274e5c7a685e18ad0b3817fd554b934">schedule</a>(100, j.dump());</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>            Event::processor.registerEvent&lt;<a class="code hl_class" href="a00263.html">TimeOutEvent</a>&gt;([](<a class="code hl_class" href="a00263.html">TimeOutEvent</a> e) {</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>                <a class="code hl_typedef" href="a00167.html#ab701e3ac61a85b337ec5c1abaad6742d">nlohmann::json</a> j = nlohmann::json::parse(e.msg);</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>                <span class="keywordflow">if</span> (j[<span class="stringliteral">&quot;type&quot;</span>] == 1)</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>                    <span class="comment">// 发送群消息</span></div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>                    <a class="code hl_class" href="a00383.html">Group</a>(j[<span class="stringliteral">&quot;id&quot;</span>], j[<span class="stringliteral">&quot;bid&quot;</span>]).<a class="code hl_function" href="a00207.html#ad05051993a591b55847d87265f7691df">sendMessage</a>(<span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>            });</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        });</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    }</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>};</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="keywordtype">void</span> <a class="code hl_function" href="a00174.html#a12d27be6730af4fc321ac1eb231db281">MiraiCP::enrollPlugin</a>() {</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <a class="code hl_function" href="a00174.html#ad5dfcfb8bbf110c31ac8a5288f395bba">MiraiCP::enrollPlugin0</a>(<span class="keyword">new</span> Main());</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>}</div>
-<div class="ttc" id="aa00137_html"><div class="ttname"><a href="a00137.html">MiraiCP.hpp</a></div></div>
-<div class="ttc" id="aa00167_html_ab701e3ac61a85b337ec5c1abaad6742d"><div class="ttname"><a href="a00167.html#ab701e3ac61a85b337ec5c1abaad6742d">json</a></div><div class="ttdeci">nlohmann::json json</div><div class="ttdef"><b>Definition:</b> <a href="a00167_source.html#l00026">utils.cpp:26</a></div></div>
-<div class="ttc" id="aa00174_html"><div class="ttname"><a href="a00174.html">MiraiCP</a></div><div class="ttdef"><b>Definition:</b> <a href="a00041_source.html#l00023">Bot.cpp:23</a></div></div>
-<div class="ttc" id="aa00174_html_a12d27be6730af4fc321ac1eb231db281"><div class="ttname"><a href="a00174.html#a12d27be6730af4fc321ac1eb231db281">MiraiCP::enrollPlugin</a></div><div class="ttdeci">void enrollPlugin()</div><div class="ttdoc">注册插件函数, 需要被实现, 类似onStart();</div><div class="ttdef"><b>Definition:</b> <a href="a00774_source.html#l00044">examples/Command.cpp:44</a></div></div>
-<div class="ttc" id="aa00174_html_ad274e5c7a685e18ad0b3817fd554b934"><div class="ttname"><a href="a00174.html#ad274e5c7a685e18ad0b3817fd554b934">MiraiCP::schedule</a></div><div class="ttdeci">void schedule(long time, const std::string &amp;msg, JNIEnv *env=nullptr)</div><div class="ttdoc">定时任务, 在一定时间后广播**一次**TimeOutEvent</div><div class="ttdef"><b>Definition:</b> <a href="a00170_source.html#l00028">utils.h:28</a></div></div>
-<div class="ttc" id="aa00174_html_ad5dfcfb8bbf110c31ac8a5288f395bba"><div class="ttname"><a href="a00174.html#ad5dfcfb8bbf110c31ac8a5288f395bba">MiraiCP::enrollPlugin0</a></div><div class="ttdeci">void enrollPlugin0(CPPPlugin *p)</div><div class="ttdoc">用指针绑定插件</div><div class="ttdef"><b>Definition:</b> <a href="a00170_source.html#l00038">utils.h:38</a></div></div>
-<div class="ttc" id="aa00207_html_ad05051993a591b55847d87265f7691df"><div class="ttname"><a href="a00207.html#ad05051993a591b55847d87265f7691df">MiraiCP::Contact::sendMessage</a></div><div class="ttdeci">MessageSource sendMessage(T... msg)</div><div class="ttdoc">发送信息</div><div class="ttdef"><b>Definition:</b> <a href="a00062_source.html#l00205">Contact.h:205</a></div></div>
-<div class="ttc" id="aa00215_html"><div class="ttname"><a href="a00215.html">MiraiCP::CPPPlugin</a></div><div class="ttdoc">插件父类</div><div class="ttdef"><b>Definition:</b> <a href="a00068_source.html#l00025">CPPPlugin.h:25</a></div></div>
-<div class="ttc" id="aa00215_html_ad3d1188d089ab0fc945475f988c64fa7"><div class="ttname"><a href="a00215.html#ad3d1188d089ab0fc945475f988c64fa7">MiraiCP::CPPPlugin::onEnable</a></div><div class="ttdeci">virtual void onEnable()</div><div class="ttdoc">插件启用时调用一次</div><div class="ttdef"><b>Definition:</b> <a href="a00068_source.html#l00035">CPPPlugin.h:35</a></div></div>
-<div class="ttc" id="aa00227_html"><div class="ttname"><a href="a00227.html">MiraiCP::GroupMessageEvent</a></div><div class="ttdoc">群消息事件声明</div><div class="ttdef"><b>Definition:</b> <a href="a00074_source.html#l00085">Event.h:85</a></div></div>
-<div class="ttc" id="aa00263_html"><div class="ttname"><a href="a00263.html">MiraiCP::TimeOutEvent</a></div><div class="ttdoc">定时任务结束</div><div class="ttdef"><b>Definition:</b> <a href="a00074_source.html#l00431">Event.h:431</a></div></div>
-<div class="ttc" id="aa00383_html"><div class="ttname"><a href="a00383.html">MiraiCP::Group</a></div><div class="ttdef"><b>Definition:</b> <a href="a00098_source.html#l00029">Group.h:29</a></div></div>
-<div class="ttc" id="aa00459_html"><div class="ttname"><a href="a00459.html">MiraiCP::PluginConfig</a></div><div class="ttdef"><b>Definition:</b> <a href="a00146_source.html#l00023">PluginConfig.h:23</a></div></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="a00218.html#ad3d1188d089ab0fc945475f988c64fa7">onEnable</a>()<span class="keyword"> override </span>{</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        Event::registerEvent&lt;GroupMessageEvent&gt;([](<a class="code hl_class" href="a00230.html">GroupMessageEvent</a> e) {</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>            <span class="keyword">auto</span> tmp = e.<a class="code hl_function" href="a00230.html#a64b10968daea52b1209c8ff8e3922160">nextMessage</a>();</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>            e.<a class="code hl_variable" href="a00230.html#abac98c5b1373ad6c8483f9978952c553">group</a>.<a class="code hl_function" href="a00210.html#ad05051993a591b55847d87265f7691df">sendMessage</a>(tmp);</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        });</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        Event::registerEvent&lt;PrivateMessageEvent&gt;([](<a class="code hl_class" href="a00234.html">PrivateMessageEvent</a> e) -&gt; {</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>            <span class="keyword">auto</span> tmp = e.<a class="code hl_function" href="a00234.html#a5b1a60fcb2e527350742d362a5ee3b56">nextMessage</a>();</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        });</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    }</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>};</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="keywordtype">void</span> <a class="code hl_function" href="a00177.html#a12d27be6730af4fc321ac1eb231db281">MiraiCP::enrollPlugin</a>() {</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <a class="code hl_function" href="a00177.html#ad5dfcfb8bbf110c31ac8a5288f395bba">MiraiCP::enrollPlugin0</a>(<span class="keyword">new</span> Main());</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>}</div>
+<div class="ttc" id="aa00140_html"><div class="ttname"><a href="a00140.html">MiraiCP.hpp</a></div></div>
+<div class="ttc" id="aa00177_html"><div class="ttname"><a href="a00177.html">MiraiCP</a></div><div class="ttdef"><b>Definition:</b> <a href="a00044_source.html#l00023">Bot.cpp:23</a></div></div>
+<div class="ttc" id="aa00177_html_a12d27be6730af4fc321ac1eb231db281"><div class="ttname"><a href="a00177.html#a12d27be6730af4fc321ac1eb231db281">MiraiCP::enrollPlugin</a></div><div class="ttdeci">void enrollPlugin()</div><div class="ttdoc">注册插件函数, 需要被实现, 类似onStart();</div><div class="ttdef"><b>Definition:</b> <a href="a00002_source.html#l00051">callbackHandle.cpp:51</a></div></div>
+<div class="ttc" id="aa00177_html_ad5dfcfb8bbf110c31ac8a5288f395bba"><div class="ttname"><a href="a00177.html#ad5dfcfb8bbf110c31ac8a5288f395bba">MiraiCP::enrollPlugin0</a></div><div class="ttdeci">void enrollPlugin0(CPPPlugin *p)</div><div class="ttdoc">用指针绑定插件</div><div class="ttdef"><b>Definition:</b> <a href="a00173_source.html#l00038">utils.h:38</a></div></div>
+<div class="ttc" id="aa00210_html_ad05051993a591b55847d87265f7691df"><div class="ttname"><a href="a00210.html#ad05051993a591b55847d87265f7691df">MiraiCP::Contact::sendMessage</a></div><div class="ttdeci">MessageSource sendMessage(T... msg)</div><div class="ttdoc">发送信息</div><div class="ttdef"><b>Definition:</b> <a href="a00065_source.html#l00205">Contact.h:205</a></div></div>
+<div class="ttc" id="aa00218_html"><div class="ttname"><a href="a00218.html">MiraiCP::CPPPlugin</a></div><div class="ttdoc">插件父类</div><div class="ttdef"><b>Definition:</b> <a href="a00071_source.html#l00025">CPPPlugin.h:25</a></div></div>
+<div class="ttc" id="aa00218_html_ad3d1188d089ab0fc945475f988c64fa7"><div class="ttname"><a href="a00218.html#ad3d1188d089ab0fc945475f988c64fa7">MiraiCP::CPPPlugin::onEnable</a></div><div class="ttdeci">virtual void onEnable()</div><div class="ttdoc">插件启用时调用一次</div><div class="ttdef"><b>Definition:</b> <a href="a00071_source.html#l00035">CPPPlugin.h:35</a></div></div>
+<div class="ttc" id="aa00230_html"><div class="ttname"><a href="a00230.html">MiraiCP::GroupMessageEvent</a></div><div class="ttdoc">群消息事件声明</div><div class="ttdef"><b>Definition:</b> <a href="a00077_source.html#l00085">Event.h:85</a></div></div>
+<div class="ttc" id="aa00230_html_a64b10968daea52b1209c8ff8e3922160"><div class="ttname"><a href="a00230.html#a64b10968daea52b1209c8ff8e3922160">MiraiCP::GroupMessageEvent::nextMessage</a></div><div class="ttdeci">MessageChain nextMessage(long time=-1, bool halt=true, JNIEnv *env=nullptr) const</div><div class="ttdoc">取群聊下一个消息(群聊与本事件一样)</div><div class="ttdef"><b>Definition:</b> <a href="a00074_source.html#l00046">Event.cpp:46</a></div></div>
+<div class="ttc" id="aa00230_html_abac98c5b1373ad6c8483f9978952c553"><div class="ttname"><a href="a00230.html#abac98c5b1373ad6c8483f9978952c553">MiraiCP::GroupMessageEvent::group</a></div><div class="ttdeci">Group group</div><div class="ttdoc">来源群</div><div class="ttdef"><b>Definition:</b> <a href="a00077_source.html#l00093">Event.h:93</a></div></div>
+<div class="ttc" id="aa00234_html"><div class="ttname"><a href="a00234.html">MiraiCP::PrivateMessageEvent</a></div><div class="ttdef"><b>Definition:</b> <a href="a00077_source.html#l00124">Event.h:124</a></div></div>
+<div class="ttc" id="aa00234_html_a5b1a60fcb2e527350742d362a5ee3b56"><div class="ttname"><a href="a00234.html#a5b1a60fcb2e527350742d362a5ee3b56">MiraiCP::PrivateMessageEvent::nextMessage</a></div><div class="ttdeci">MessageChain nextMessage(long time=-1, bool halt=true, JNIEnv *env=nullptr) const</div><div class="ttdoc">取下一个消息(发送人和接收人和本事件一样)</div><div class="ttdef"><b>Definition:</b> <a href="a00074_source.html#l00034">Event.cpp:34</a></div></div>
+<div class="ttc" id="aa00462_html"><div class="ttname"><a href="a00462.html">MiraiCP::PluginConfig</a></div><div class="ttdef"><b>Definition:</b> <a href="a00149_source.html#l00023">PluginConfig.h:23</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_e931c1a3f0014e624d0645a271726ad2.html">examples</a></li><li class="navelem"><a class="el" href="a00029.html">schedule.cpp</a></li>
-    <li class="footer">生成于 2022年 五月 1日 星期日 11:46:57 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_e931c1a3f0014e624d0645a271726ad2.html">examples</a></li><li class="navelem"><a class="el" href="a00029.html">nextMessage.cpp</a></li>
+    <li class="footer">生成于 2022年 五月 3日 星期二 18:48:31 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
 <script type="text/javascript">

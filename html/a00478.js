@@ -1,13 +1,10 @@
 var a00478 =
 [
-    [ "MusicShare", "a00478.html#a36dd35e9834b873e11c98eae3602d0ac", null ],
-    [ "toMiraiCode", "a00478.html#a1bffdbd7cd143a903f22fb376b79c855", null ],
-    [ "type", "a00478.html#a0d066ebbca63439a3eea2e564e31403a", null ],
-    [ "appName", "a00478.html#a87a20d867c8dadbe4a8f55ef2b6d0d4d", null ],
-    [ "brief", "a00478.html#ab3e91b8220d2e80dbb84ff17b83ce3f8", null ],
-    [ "jumpUrl", "a00478.html#aa4239e8aadb82d6c79bc8986f55e68b6", null ],
-    [ "musicUrl", "a00478.html#a98dc3816bcdd57e551a55ff88b2ea4fa", null ],
-    [ "picUrl", "a00478.html#a0615bbf6886985e1438ab1493cdc012a", null ],
-    [ "summary", "a00478.html#a2da932b20adbdc6f9fa58bda8c0623ac", null ],
-    [ "title", "a00478.html#aa4f1eb91480d538d2aead5904f1cc4b9", null ]
+    [ "At", "a00478.html#ab5b225ea67cf995d13b384ec622c86e7", null ],
+    [ "At", "a00478.html#a3e12195fc4d9ae026ec8a438a368342a", null ],
+    [ "operator==", "a00478.html#a58dbd3db49d9d2fed357b791ff3ba816", null ],
+    [ "toJson", "a00478.html#a60af12c9073c8734f98ee682a61ce184", null ],
+    [ "toMiraiCode", "a00478.html#abaa95fab044eebb3e355da0040c0bfa7", null ],
+    [ "type", "a00478.html#a125a356ddd55ec22117d8fafb1f32dc9", null ],
+    [ "target", "a00478.html#a4c451a3d12d38f6a83d425cab2d2aa25", null ]
 ];

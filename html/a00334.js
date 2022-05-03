@@ -1,8 +1,5 @@
 var a00334 =
 [
-    [ "Friend", "a00334.html#ab3ac94c426a7f2d61f77c970cedd838e", null ],
-    [ "Friend", "a00334.html#a00e6db35292ca302757e69e60c06f0eb", null ],
-    [ "deleteFriend", "a00334.html#a6e7e1a8a401f0ff1c636f11b988703d5", null ],
-    [ "refreshInfo", "a00334.html#a44dbdbe1a6cb81ad6dba5a51d0a4fca9", null ],
-    [ "sendNudge", "a00334.html#a0321140e76255aadcd1a23c92b0d5031", null ]
+    [ "MuteException", "a00334.html#aabc181c072a55209b6a88f4a0f43fa9a", null ],
+    [ "exceptionType", "a00334.html#afae350ada0208f24022d4de92442b515", null ]
 ];

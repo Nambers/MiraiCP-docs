@@ -1,11 +1,7 @@
 var a00398 =
 [
-    [ "Message", "a00398.html#a6764fd0612611792dbb55df25f937c1a", null ],
-    [ "Message", "a00398.html#afe2538f33d2579ab463fcbb8cf6ab7fa", null ],
-    [ "get", "a00398.html#ae4b04a6aa2a4a95f3729a2a3c8a8bed2", null ],
-    [ "operator!=", "a00398.html#a4e54488b5b28f7f606f4de2632a5f541", null ],
-    [ "operator==", "a00398.html#a88e760c0f2eb2790198ad336256dfdba", null ],
-    [ "toMiraiCode", "a00398.html#a487a379efa40cd0f4650491f0fb8e7bb", null ],
-    [ "type", "a00398.html#ae110eef981b54bd49c0807f8f29dcc3f", null ],
-    [ "content", "a00398.html#a4dc4f2ad7ed693e783e2aa9df3eec951", null ]
+    [ "OfflineAnnouncement", "a00398.html#a01236de68a15c8de48ffeecc47f7d422", null ],
+    [ "publishTo", "a00398.html#ac5e2613306079cce18866fa1f2809357", null ],
+    [ "content", "a00398.html#ad41adfb9b859845999f24978087af62b", null ],
+    [ "params", "a00398.html#ab1ff075cae77526d00c8f96b135c2873", null ]
 ];

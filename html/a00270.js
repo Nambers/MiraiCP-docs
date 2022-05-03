@@ -1,5 +1,5 @@
 var a00270 =
 [
-    [ "IllegalStateException", "a00270.html#ac9b5a8d083dbad7de5a9fb0690f4da43", null ],
-    [ "exceptionType", "a00270.html#ac82814555a14e6acfce3398f230997fa", null ]
+    [ "BotOnlineEvent", "a00270.html#af599e4d871751e367033bb1e30a62b4d", null ],
+    [ "get_event_type", "a00270.html#a13962d4423c5fd5d2db3fd9b78055a70", null ]
 ];

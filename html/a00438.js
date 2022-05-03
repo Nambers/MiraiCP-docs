@@ -1,19 +1,17 @@
 var a00438 =
 [
-    [ "Image", "a00438.html#a835ef3a1d15e9be52004125e6294ea0b", null ],
-    [ "Image", "a00438.html#a96926ef90fc6925d7d2f24605d7b9fbf", null ],
-    [ "deserialize", "a00438.html#a0e3fa5f500c071d484dd56d5562e0d9c", null ],
-    [ "isUploaded", "a00438.html#a6bc40ee958a59a3f70a0146c7e9312e2", null ],
-    [ "operator==", "a00438.html#a4ae5258f9f0f0462ba2fa7b15fbde7e9", null ],
-    [ "refreshInfo", "a00438.html#a3c8b1b2f1741c02d38fd41b45461ec18", null ],
-    [ "toJson", "a00438.html#a34553da30d7a3753b72247654bc36e89", null ],
-    [ "toMiraiCode", "a00438.html#a10cd01f40a86dcd051722cc50baa2003", null ],
-    [ "type", "a00438.html#a8920fb2036cd75d06b0343b32886f610", null ],
-    [ "height", "a00438.html#a6d91d1442a67a40efea60fd8b21f0344", null ],
-    [ "id", "a00438.html#ac6a67525ab64646c9068bc98bd58e796", null ],
-    [ "imageType", "a00438.html#ad0f3d7f5356612a87bf1769577be8d88", null ],
-    [ "md5", "a00438.html#a0ac48e10b27d52864e36f65a154f4503", null ],
-    [ "size", "a00438.html#a90e338ad396d824807759601a7fa3b88", null ],
-    [ "url", "a00438.html#ae64873f7812cdc802bf61a7c77c5e21d", null ],
-    [ "width", "a00438.html#a32663d1a7c0f773d5e0edc245a503f5e", null ]
+    [ "Member", "a00438.html#a3cfdf6803d46393e79da5382d8189dd7", null ],
+    [ "Member", "a00438.html#a94779cdd0b802852a5d32ea71399413e", null ],
+    [ "at", "a00438.html#ace4950bd9191fdf90ecba764c870f90e", null ],
+    [ "changeNameCard", "a00438.html#a5aa1cde5b16fcbd72d942f038fd75b6e", null ],
+    [ "getPermission", "a00438.html#ade27b6ea619f27ec4823618a0cacf00a", null ],
+    [ "kick", "a00438.html#ad83478036b6ad5750b7b4de2c182353b", null ],
+    [ "modifyAdmin", "a00438.html#ad9b954fd548c29c1fcf7b6895605cfaf", null ],
+    [ "mute", "a00438.html#a068163bcb889d26bc8f8ac767472156d", null ],
+    [ "refreshInfo", "a00438.html#a82a34041332929299e293f81c6152ca0", null ],
+    [ "sendNudge", "a00438.html#aff2d2c3a907f051ca89d506b02caa5d0", null ],
+    [ "sendVoice", "a00438.html#aeeb58a0e84068d0b18bdb634093cf5d7", null ],
+    [ "unMute", "a00438.html#a218b3216bfc009ec7ca8b3535496f7c3", null ],
+    [ "isAnonymous", "a00438.html#a02c93da6f71f701f384aceef3746c9c2", null ],
+    [ "permission", "a00438.html#a348c726624fb4fe3e1d419f32f51031a", null ]
 ];

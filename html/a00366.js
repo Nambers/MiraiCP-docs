@@ -1,5 +1,5 @@
 var a00366 =
 [
-    [ "action", "a00366.html#aea306ee2e14936202c9a814a15e0d0bc", null ],
-    [ "enable", "a00366.html#a0fda6ed76658ebaa758e801a72b3d946", null ]
+    [ "EventCancelledException", "a00366.html#adcf3347e6e34ba912fafd4bdd48a44af", null ],
+    [ "exceptionType", "a00366.html#ade28f5ad66bc98f50ba3a537d4402c07", null ]
 ];

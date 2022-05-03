@@ -1,9 +1,11 @@
 var a00474 =
 [
-    [ "Face", "a00474.html#aa0b031aa2e11403be44150ebce3dbb93", null ],
-    [ "operator==", "a00474.html#a013671a618db0081ea79cbecec88190f", null ],
-    [ "toJson", "a00474.html#a866de1e28199fa542e760d0caeea434e", null ],
-    [ "toMiraiCode", "a00474.html#a6f40de2d5ca391a1fb5a67fefe55d3e8", null ],
-    [ "type", "a00474.html#a73da05ce5bcbf5d40106b2db705fecb5", null ],
-    [ "id", "a00474.html#a213699a327644eb13d2dc0a5f935cdd8", null ]
+    [ "PlainText", "a00474.html#af0ffa277c961cde9e5fc0ecc23ff224c", null ],
+    [ "PlainText", "a00474.html#a76de73df323ad93c427f73f6794981df", null ],
+    [ "PlainText", "a00474.html#a3efbf00d93c1133b1c41503c5c373043", null ],
+    [ "PlainText", "a00474.html#ab162399890922204a0e99424c16df2f5", null ],
+    [ "operator==", "a00474.html#a6c8a471bcf5cd3bcc65f6d75097ce286", null ],
+    [ "toJson", "a00474.html#a0fb7ad4530e4602d09c388d44fc4bc00", null ],
+    [ "toMiraiCode", "a00474.html#a2cbc08df42d84ad5c50e2dae680c0eb4", null ],
+    [ "type", "a00474.html#a440b92da26612820bd700e2ce9a5e999", null ]
 ];

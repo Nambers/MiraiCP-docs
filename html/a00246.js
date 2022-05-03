@@ -1,16 +1,15 @@
 var a00246 =
 [
-    [ "eventNode", "a00250.html", "a00250" ],
-    [ "NodeHandle", "a00254.html", "a00254" ],
-    [ "event_vector", "a00246.html#a6c4a73db045f973232347164dc42a21e", null ],
-    [ "eventNodeTable", "a00246.html#ab49f881b646783d970f6f87ddde0bcce", null ],
-    [ "priority_level", "a00246.html#a4cc658c6011e27187dd6660d6c33b7c9", null ],
-    [ "Event", "a00246.html#a9f36e22e23e02faaeba7f89736332c9c", null ],
-    [ "broadcast", "a00246.html#a491ec99324852b8a12aac5286877ac29", null ],
-    [ "id", "a00246.html#a546bbcb33bec161fb5977447ddf7c344", null ],
-    [ "noRegistered", "a00246.html#ac1aac60c33dd2e854f068e09b1eb4b43", null ],
-    [ "registerBlockingEvent", "a00246.html#adf53f2234a5b374d1064cbbdfc3fbb0b", null ],
-    [ "registerEvent", "a00246.html#a428c5d80ca6e2a51d7bece7193cba39e", null ],
-    [ "_all_events_", "a00246.html#a8976a4000c06dde8ff810aa5ed78a5dd", null ],
-    [ "processor", "a00246.html#ab78af8afd9a5121e7ed0a1d7237f2b20", null ]
+    [ "joinType", "a00246.html#a1d73fdd5e84653d078b859b37dd1bcc8", [
+      [ "error", "a00246.html#a1d73fdd5e84653d078b859b37dd1bcc8ac7223d287b6643e82449fdfc84a78b17", null ],
+      [ "invited", "a00246.html#a1d73fdd5e84653d078b859b37dd1bcc8aa328607b0546483fb4503bf453508821", null ],
+      [ "applied", "a00246.html#a1d73fdd5e84653d078b859b37dd1bcc8a24c75b1f74122bc5b2b618daa89b14c9", null ],
+      [ "rehab", "a00246.html#a1d73fdd5e84653d078b859b37dd1bcc8a0f0421157cba536506b325cefe9fac90", null ]
+    ] ],
+    [ "MemberJoinEvent", "a00246.html#a073cb4162b0f02a4497e9ea6912399d5", null ],
+    [ "get_event_type", "a00246.html#a5f50dec2d80a1d4041a0c35a0870f66c", null ],
+    [ "group", "a00246.html#a1f879c48cc7b54fa387853b5330b0caf", null ],
+    [ "inviterid", "a00246.html#a3342fd9e038a616a272ae8de9599ad31", null ],
+    [ "member", "a00246.html#aa1a42b944df9f40fc96629a1c5687f01", null ],
+    [ "type", "a00246.html#aaef692838d233a5ddcf8d54e1b02eb40", null ]
 ];

@@ -1,7 +1,12 @@
 var a00254 =
 [
-    [ "NodeHandle", "a00254.html#a31a3cfc6513ea6551e906a07f87bc289", null ],
-    [ "resume", "a00254.html#a9c869342e0ce720ef497ae87573f9c5e", null ],
-    [ "stop", "a00254.html#aa82d17b4317d7dc18bd54ba1ee7cafa2", null ],
-    [ "enable", "a00254.html#aa4a8ee8ae8dbf3d3d436abd162657b6c", null ]
+    [ "RecallEvent", "a00254.html#a8f34646f10c6059226357b96876cec3e", null ],
+    [ "get_event_type", "a00254.html#afef89bbbdb81e7158a71921cb70300ea", null ],
+    [ "authorid", "a00254.html#a38902ca6a35385461d1ebfd9dd5fe4c0", null ],
+    [ "groupid", "a00254.html#a224023cbc9f1e0e70e0c200e098a70e1", null ],
+    [ "ids", "a00254.html#ab921c8f46196c000301a49580c9c8731", null ],
+    [ "internalids", "a00254.html#a286b52d1fc395cffeb19867d174e8fa4", null ],
+    [ "operatorid", "a00254.html#abe1179293996af8fe9474805e125f748", null ],
+    [ "time", "a00254.html#afcf05164400a14a598aba4de6566b66c", null ],
+    [ "type", "a00254.html#ac986c53d844263a8af1ddf3e767e3a0c", null ]
 ];

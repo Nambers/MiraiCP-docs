@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiraiCP: LowLevelAPI.h 源文件</title>
+<title>MiraiCP: LowLevelAPI.cpp 源文件</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -90,7 +90,7 @@ $(document).ready(function(){initNavTree('a00110_source.html',''); initResizable
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">LowLevelAPI.h</div></div>
+  <div class="headertitle"><div class="title">LowLevelAPI.cpp</div></div>
 </div><!--header-->
 <div class="contents">
 <a href="a00110.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// Copyright (c) 2020 - 2022. Eritque arcus and contributors.</span></div>
@@ -108,52 +108,72 @@ $(document).ready(function(){initNavTree('a00110_source.html',''); initResizable
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">// You should have received a copy of the GNU Affero General Public License</span></div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">// along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</span></div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">//</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#ifndef MIRAICP_PRO_LOWLEVELAPI_H</span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#define MIRAICP_PRO_LOWLEVELAPI_H</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &lt;json.hpp&gt;</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &lt;jni.h&gt;</span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keyword">namespace </span><a class="code hl_namespace" href="a00174.html">MiraiCP</a> {</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="a00427.html">   24</a></span>    <span class="keyword">class </span><a class="code hl_class" href="a00427.html">LowLevelAPI</a> {</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <span class="keyword">static</span> std::string <a class="code hl_function" href="a00427.html#a795f4093d390bd0205ae95aa0075d442">send0</a>(<span class="keyword">const</span> std::string &amp;content, <a class="code hl_typedef" href="a00167.html#ab701e3ac61a85b337ec5c1abaad6742d">nlohmann::json</a> c, <span class="keywordtype">int</span> retryTime, <span class="keywordtype">bool</span> miraicode, JNIEnv *env,</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>                                 <span class="keyword">const</span> std::string &amp;errorInfo = <span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <span class="keyword">static</span> std::string <a class="code hl_function" href="a00427.html#ac03aa9c815ce59030b0f2610e48b79b1">getInfoSource</a>(<span class="keyword">const</span> std::string &amp;, JNIEnv *);</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        <span class="keyword">static</span> std::string <a class="code hl_function" href="a00427.html#a3effa0c77f4c1687cf8656cdf0b60e42">uploadImg0</a>(<span class="keyword">const</span> std::string &amp;, <span class="keyword">const</span> std::string &amp;, JNIEnv *);</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="a00431.html">   52</a></span>        <span class="keyword">struct </span><a class="code hl_struct" href="a00431.html">info</a> {</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="a00431.html#abc3f2c3176f05d64751446e8760595df">   53</a></span>            std::string <a class="code hl_variable" href="a00431.html#abc3f2c3176f05d64751446e8760595df">nickornamecard</a>;</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="a00431.html#a037b8d06c116200bdb37de924401ef46">   54</a></span>            std::string <a class="code hl_variable" href="a00431.html#a037b8d06c116200bdb37de924401ef46">avatarUrl</a>;</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        };</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        <span class="keyword">static</span> <a class="code hl_struct" href="a00431.html">info</a> <a class="code hl_function" href="a00427.html#a39064f9c2b148b3a3061f818bf237215">info0</a>(<span class="keyword">const</span> std::string &amp;source);</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    };</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>} <span class="comment">// namespace MiraiCP</span></div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="preprocessor">#endif </span><span class="comment">//MIRAICP_PRO_LOWLEVELAPI_H</span></div>
-<div class="ttc" id="aa00167_html_ab701e3ac61a85b337ec5c1abaad6742d"><div class="ttname"><a href="a00167.html#ab701e3ac61a85b337ec5c1abaad6742d">json</a></div><div class="ttdeci">nlohmann::json json</div><div class="ttdef"><b>Definition:</b> <a href="a00167_source.html#l00026">utils.cpp:26</a></div></div>
-<div class="ttc" id="aa00174_html"><div class="ttname"><a href="a00174.html">MiraiCP</a></div><div class="ttdef"><b>Definition:</b> <a href="a00041_source.html#l00023">Bot.cpp:23</a></div></div>
-<div class="ttc" id="aa00427_html"><div class="ttname"><a href="a00427.html">MiraiCP::LowLevelAPI</a></div><div class="ttdoc">较底层api</div><div class="ttdef"><b>Definition:</b> <a href="a00110_source.html#l00024">LowLevelAPI.h:24</a></div></div>
-<div class="ttc" id="aa00427_html_a39064f9c2b148b3a3061f818bf237215"><div class="ttname"><a href="a00427.html#a39064f9c2b148b3a3061f818bf237215">MiraiCP::LowLevelAPI::info0</a></div><div class="ttdeci">static info info0(const std::string &amp;source)</div><div class="ttdef"><b>Definition:</b> <a href="a00107_source.html#l00034">LowLevelAPI.cpp:34</a></div></div>
-<div class="ttc" id="aa00427_html_a3effa0c77f4c1687cf8656cdf0b60e42"><div class="ttname"><a href="a00427.html#a3effa0c77f4c1687cf8656cdf0b60e42">MiraiCP::LowLevelAPI::uploadImg0</a></div><div class="ttdeci">static std::string uploadImg0(const std::string &amp;, const std::string &amp;, JNIEnv *)</div><div class="ttdoc">上传图片</div><div class="ttdef"><b>Definition:</b> <a href="a00107_source.html#l00048">LowLevelAPI.cpp:48</a></div></div>
-<div class="ttc" id="aa00427_html_a795f4093d390bd0205ae95aa0075d442"><div class="ttname"><a href="a00427.html#a795f4093d390bd0205ae95aa0075d442">MiraiCP::LowLevelAPI::send0</a></div><div class="ttdeci">static std::string send0(const std::string &amp;content, nlohmann::json c, int retryTime, bool miraicode, JNIEnv *env, const std::string &amp;errorInfo=&quot;&quot;)</div><div class="ttdoc">抽象封装底层发送信息接口</div><div class="ttdef"><b>Definition:</b> <a href="a00107_source.html#l00023">LowLevelAPI.cpp:23</a></div></div>
-<div class="ttc" id="aa00427_html_ac03aa9c815ce59030b0f2610e48b79b1"><div class="ttname"><a href="a00427.html#ac03aa9c815ce59030b0f2610e48b79b1">MiraiCP::LowLevelAPI::getInfoSource</a></div><div class="ttdeci">static std::string getInfoSource(const std::string &amp;, JNIEnv *)</div><div class="ttdoc">取该联系人的一些信息</div><div class="ttdef"><b>Definition:</b> <a href="a00107_source.html#l00043">LowLevelAPI.cpp:43</a></div></div>
-<div class="ttc" id="aa00431_html"><div class="ttname"><a href="a00431.html">MiraiCP::LowLevelAPI::info</a></div><div class="ttdoc">每个对象的必有信息</div><div class="ttdef"><b>Definition:</b> <a href="a00110_source.html#l00052">LowLevelAPI.h:52</a></div></div>
-<div class="ttc" id="aa00431_html_a037b8d06c116200bdb37de924401ef46"><div class="ttname"><a href="a00431.html#a037b8d06c116200bdb37de924401ef46">MiraiCP::LowLevelAPI::info::avatarUrl</a></div><div class="ttdeci">std::string avatarUrl</div><div class="ttdef"><b>Definition:</b> <a href="a00110_source.html#l00054">LowLevelAPI.h:54</a></div></div>
-<div class="ttc" id="aa00431_html_abc3f2c3176f05d64751446e8760595df"><div class="ttname"><a href="a00431.html#abc3f2c3176f05d64751446e8760595df">MiraiCP::LowLevelAPI::info::nickornamecard</a></div><div class="ttdeci">std::string nickornamecard</div><div class="ttdef"><b>Definition:</b> <a href="a00110_source.html#l00053">LowLevelAPI.h:53</a></div></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &quot;<a class="code" href="a00113.html">LowLevelAPI.h</a>&quot;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &quot;<a class="code" href="a00059.html">Config.h</a>&quot;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &quot;<a class="code" href="a00083.html">Exception.h</a>&quot;</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &quot;<a class="code" href="a00143.html">MiraiDefs.h</a>&quot;</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keyword">namespace </span><a class="code hl_namespace" href="a00177.html">MiraiCP</a> {</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="keyword">using</span> <a class="code hl_typedef" href="a00170.html#ab701e3ac61a85b337ec5c1abaad6742d">json</a> = <a class="code hl_typedef" href="a00170.html#ab701e3ac61a85b337ec5c1abaad6742d">nlohmann::json</a>;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="a00430.html#a795f4093d390bd0205ae95aa0075d442">   23</a></span>    std::string <a class="code hl_function" href="a00430.html#a795f4093d390bd0205ae95aa0075d442">LowLevelAPI::send0</a>(<span class="keyword">const</span> std::string &amp;content, <a class="code hl_typedef" href="a00177.html#ac0a8a1bade77a57eeb1d94cfacfb75ce">json</a> c, <span class="keywordtype">int</span> retryTime, <span class="keywordtype">bool</span> miraicode, JNIEnv *env,</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>                                   <span class="keyword">const</span> std::string &amp;errorInfo) {</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        <a class="code hl_typedef" href="a00170.html#ab701e3ac61a85b337ec5c1abaad6742d">nlohmann::json</a> j;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        <a class="code hl_typedef" href="a00170.html#ab701e3ac61a85b337ec5c1abaad6742d">nlohmann::json</a> tmp;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        tmp[<span class="stringliteral">&quot;content&quot;</span>] = content;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        tmp[<span class="stringliteral">&quot;contact&quot;</span>] = c;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        j[<span class="stringliteral">&quot;source&quot;</span>] = tmp.dump();</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        j[<span class="stringliteral">&quot;miraiCode&quot;</span>] = miraicode;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        j[<span class="stringliteral">&quot;retryTime&quot;</span>] = retryTime;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="a00178.html#a6cc3a4fb89a9701380288f1c16f738b4">Config::koperation</a>(<a class="code hl_enumvalue" href="a00178.html#a1bc3c425340774687507c1683967231bacdf0600adf4945c8ae7493fdcfd5fad6">Config::Send</a>, j, env, <span class="keyword">true</span>, errorInfo);</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    }</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="a00430.html#a39064f9c2b148b3a3061f818bf237215">   34</a></span>    <a class="code hl_struct" href="a00434.html">LowLevelAPI::info</a> <a class="code hl_function" href="a00430.html#a39064f9c2b148b3a3061f818bf237215">LowLevelAPI::info0</a>(<span class="keyword">const</span> std::string &amp;source) {</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        <a class="code hl_struct" href="a00434.html">info</a> re;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        <a class="code hl_define" href="a00143.html#a10e0f2260bfde013500e04ba0d77a9fb">ErrorHandle</a>(source, <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        <a class="code hl_typedef" href="a00170.html#ab701e3ac61a85b337ec5c1abaad6742d">nlohmann::json</a> j = nlohmann::json::parse(source);</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        re.<a class="code hl_variable" href="a00434.html#a037b8d06c116200bdb37de924401ef46">avatarUrl</a> = j[<span class="stringliteral">&quot;avatarUrl&quot;</span>];</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        re.<a class="code hl_variable" href="a00434.html#abc3f2c3176f05d64751446e8760595df">nickornamecard</a> = j[<span class="stringliteral">&quot;nickornamecard&quot;</span>];</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <span class="keywordflow">return</span> re;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    }</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="a00430.html#ac03aa9c815ce59030b0f2610e48b79b1">   43</a></span>    std::string <a class="code hl_function" href="a00430.html#ac03aa9c815ce59030b0f2610e48b79b1">LowLevelAPI::getInfoSource</a>(<span class="keyword">const</span> std::string &amp;c, JNIEnv *env = <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        <a class="code hl_typedef" href="a00170.html#ab701e3ac61a85b337ec5c1abaad6742d">nlohmann::json</a> j;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        j[<span class="stringliteral">&quot;source&quot;</span>] = c;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="a00178.html#a6cc3a4fb89a9701380288f1c16f738b4">Config::koperation</a>(<a class="code hl_enumvalue" href="a00178.html#a1bc3c425340774687507c1683967231ba1117a41d69693010f5c5029f1eb2afe6">Config::RefreshInfo</a>, j, env);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    }</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="a00430.html#a3effa0c77f4c1687cf8656cdf0b60e42">   48</a></span>    std::string <a class="code hl_function" href="a00430.html#a3effa0c77f4c1687cf8656cdf0b60e42">LowLevelAPI::uploadImg0</a>(<span class="keyword">const</span> std::string &amp;path, <span class="keyword">const</span> std::string &amp;c, JNIEnv *env = <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        <a class="code hl_typedef" href="a00170.html#ab701e3ac61a85b337ec5c1abaad6742d">nlohmann::json</a> j;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        j[<span class="stringliteral">&quot;fileName&quot;</span>] = path;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        j[<span class="stringliteral">&quot;source&quot;</span>] = c;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="a00178.html#a6cc3a4fb89a9701380288f1c16f738b4">Config::koperation</a>(<a class="code hl_enumvalue" href="a00178.html#a1bc3c425340774687507c1683967231ba6acdff5cbcaa5a5e315c7dfe7fc9cc0c">Config::UploadImg</a>, j, env);</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    }</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>} <span class="comment">// namespace MiraiCP</span></div>
+<div class="ttc" id="aa00059_html"><div class="ttname"><a href="a00059.html">Config.h</a></div></div>
+<div class="ttc" id="aa00083_html"><div class="ttname"><a href="a00083.html">Exception.h</a></div></div>
+<div class="ttc" id="aa00113_html"><div class="ttname"><a href="a00113.html">LowLevelAPI.h</a></div></div>
+<div class="ttc" id="aa00143_html"><div class="ttname"><a href="a00143.html">MiraiDefs.h</a></div></div>
+<div class="ttc" id="aa00143_html_a10e0f2260bfde013500e04ba0d77a9fb"><div class="ttname"><a href="a00143.html#a10e0f2260bfde013500e04ba0d77a9fb">ErrorHandle</a></div><div class="ttdeci">#define ErrorHandle(x, y)</div><div class="ttdef"><b>Definition:</b> <a href="a00143_source.html#l00021">MiraiDefs.h:21</a></div></div>
+<div class="ttc" id="aa00170_html_ab701e3ac61a85b337ec5c1abaad6742d"><div class="ttname"><a href="a00170.html#ab701e3ac61a85b337ec5c1abaad6742d">json</a></div><div class="ttdeci">nlohmann::json json</div><div class="ttdef"><b>Definition:</b> <a href="a00170_source.html#l00026">utils.cpp:26</a></div></div>
+<div class="ttc" id="aa00177_html"><div class="ttname"><a href="a00177.html">MiraiCP</a></div><div class="ttdef"><b>Definition:</b> <a href="a00044_source.html#l00023">Bot.cpp:23</a></div></div>
+<div class="ttc" id="aa00177_html_ac0a8a1bade77a57eeb1d94cfacfb75ce"><div class="ttname"><a href="a00177.html#ac0a8a1bade77a57eeb1d94cfacfb75ce">MiraiCP::json</a></div><div class="ttdeci">nlohmann::json json</div><div class="ttdef"><b>Definition:</b> <a href="a00062_source.html#l00025">Contact.cpp:25</a></div></div>
+<div class="ttc" id="aa00178_html_a1bc3c425340774687507c1683967231ba1117a41d69693010f5c5029f1eb2afe6"><div class="ttname"><a href="a00178.html#a1bc3c425340774687507c1683967231ba1117a41d69693010f5c5029f1eb2afe6">MiraiCP::Config::RefreshInfo</a></div><div class="ttdeci">@ RefreshInfo</div><div class="ttdoc">查询信息接口</div><div class="ttdef"><b>Definition:</b> <a href="a00059_source.html#l00042">Config.h:42</a></div></div>
+<div class="ttc" id="aa00178_html_a1bc3c425340774687507c1683967231ba6acdff5cbcaa5a5e315c7dfe7fc9cc0c"><div class="ttname"><a href="a00178.html#a1bc3c425340774687507c1683967231ba6acdff5cbcaa5a5e315c7dfe7fc9cc0c">MiraiCP::Config::UploadImg</a></div><div class="ttdeci">@ UploadImg</div><div class="ttdoc">上传图片</div><div class="ttdef"><b>Definition:</b> <a href="a00059_source.html#l00044">Config.h:44</a></div></div>
+<div class="ttc" id="aa00178_html_a1bc3c425340774687507c1683967231bacdf0600adf4945c8ae7493fdcfd5fad6"><div class="ttname"><a href="a00178.html#a1bc3c425340774687507c1683967231bacdf0600adf4945c8ae7493fdcfd5fad6">MiraiCP::Config::Send</a></div><div class="ttdeci">@ Send</div><div class="ttdoc">发送信息</div><div class="ttdef"><b>Definition:</b> <a href="a00059_source.html#l00040">Config.h:40</a></div></div>
+<div class="ttc" id="aa00178_html_a6cc3a4fb89a9701380288f1c16f738b4"><div class="ttname"><a href="a00178.html#a6cc3a4fb89a9701380288f1c16f738b4">MiraiCP::Config::koperation</a></div><div class="ttdeci">std::string koperation(operation_set type, const nlohmann::json &amp;data, JNIEnv *env, bool catchErr, const std::string &amp;errorInfo)</div><div class="ttdoc">调用mirai操作</div><div class="ttdef"><b>Definition:</b> <a href="a00056_source.html#l00046">Config.cpp:46</a></div></div>
+<div class="ttc" id="aa00430_html_a39064f9c2b148b3a3061f818bf237215"><div class="ttname"><a href="a00430.html#a39064f9c2b148b3a3061f818bf237215">MiraiCP::LowLevelAPI::info0</a></div><div class="ttdeci">static info info0(const std::string &amp;source)</div><div class="ttdef"><b>Definition:</b> <a href="a00110_source.html#l00034">LowLevelAPI.cpp:34</a></div></div>
+<div class="ttc" id="aa00430_html_a3effa0c77f4c1687cf8656cdf0b60e42"><div class="ttname"><a href="a00430.html#a3effa0c77f4c1687cf8656cdf0b60e42">MiraiCP::LowLevelAPI::uploadImg0</a></div><div class="ttdeci">static std::string uploadImg0(const std::string &amp;, const std::string &amp;, JNIEnv *)</div><div class="ttdoc">上传图片</div><div class="ttdef"><b>Definition:</b> <a href="a00110_source.html#l00048">LowLevelAPI.cpp:48</a></div></div>
+<div class="ttc" id="aa00430_html_a795f4093d390bd0205ae95aa0075d442"><div class="ttname"><a href="a00430.html#a795f4093d390bd0205ae95aa0075d442">MiraiCP::LowLevelAPI::send0</a></div><div class="ttdeci">static std::string send0(const std::string &amp;content, nlohmann::json c, int retryTime, bool miraicode, JNIEnv *env, const std::string &amp;errorInfo=&quot;&quot;)</div><div class="ttdoc">抽象封装底层发送信息接口</div><div class="ttdef"><b>Definition:</b> <a href="a00110_source.html#l00023">LowLevelAPI.cpp:23</a></div></div>
+<div class="ttc" id="aa00430_html_ac03aa9c815ce59030b0f2610e48b79b1"><div class="ttname"><a href="a00430.html#ac03aa9c815ce59030b0f2610e48b79b1">MiraiCP::LowLevelAPI::getInfoSource</a></div><div class="ttdeci">static std::string getInfoSource(const std::string &amp;, JNIEnv *)</div><div class="ttdoc">取该联系人的一些信息</div><div class="ttdef"><b>Definition:</b> <a href="a00110_source.html#l00043">LowLevelAPI.cpp:43</a></div></div>
+<div class="ttc" id="aa00434_html"><div class="ttname"><a href="a00434.html">MiraiCP::LowLevelAPI::info</a></div><div class="ttdoc">每个对象的必有信息</div><div class="ttdef"><b>Definition:</b> <a href="a00113_source.html#l00052">LowLevelAPI.h:52</a></div></div>
+<div class="ttc" id="aa00434_html_a037b8d06c116200bdb37de924401ef46"><div class="ttname"><a href="a00434.html#a037b8d06c116200bdb37de924401ef46">MiraiCP::LowLevelAPI::info::avatarUrl</a></div><div class="ttdeci">std::string avatarUrl</div><div class="ttdef"><b>Definition:</b> <a href="a00113_source.html#l00054">LowLevelAPI.h:54</a></div></div>
+<div class="ttc" id="aa00434_html_abc3f2c3176f05d64751446e8760595df"><div class="ttname"><a href="a00434.html#abc3f2c3176f05d64751446e8760595df">MiraiCP::LowLevelAPI::info::nickornamecard</a></div><div class="ttdeci">std::string nickornamecard</div><div class="ttdef"><b>Definition:</b> <a href="a00113_source.html#l00053">LowLevelAPI.h:53</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b0856f6b0d80ccb263b2f415c91f9e17.html">include</a></li><li class="navelem"><a class="el" href="a00110.html">LowLevelAPI.h</a></li>
-    <li class="footer">生成于 2022年 五月 1日 星期日 11:46:57 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b0856f6b0d80ccb263b2f415c91f9e17.html">include</a></li><li class="navelem"><a class="el" href="a00110.html">LowLevelAPI.cpp</a></li>
+    <li class="footer">生成于 2022年 五月 3日 星期二 18:48:31 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
 <script type="text/javascript">

@@ -1,7 +1,9 @@
 var a00218 =
 [
-    [ "TimeOutEvent", "a00218.html#abcaf0a409f7f3a66e0da48ada27a6820", null ],
-    [ "get_event_type", "a00218.html#a2505c982f58e30adb636aec887e190f0", null ],
-    [ "getEventType", "a00218.html#a94fc9b8a91d0fa22f08fd085378498be", null ],
-    [ "msg", "a00218.html#ad6869868495ecef440a6d4b909188b77", null ]
+    [ "CPPPlugin", "a00218.html#a8757991e0396faf72a9e0ad06caa53f4", null ],
+    [ "onDisable", "a00218.html#a3ecc2c479d1ca6785e7cdcb0738c1597", null ],
+    [ "onEnable", "a00218.html#ad3d1188d089ab0fc945475f988c64fa7", null ],
+    [ "config", "a00218.html#a4ca2c5ec7d04d258a2da1ce7cdb09a75", null ],
+    [ "plugin", "a00218.html#a5bfd48cf68b997a48e04d141d831f6d3", null ],
+    [ "pluginLogger", "a00218.html#a77d8d4ed65a3beb60410f0659bf9aedf", null ]
 ];

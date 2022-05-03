@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiraiCP: group.cpp</title>
+<title>MiraiCP: MiraiCP::ThreadManager::ThreadInfo结构体 参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -90,65 +90,85 @@ $(document).ready(function(){initNavTree('a00542.html',''); initResizable(); });
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">group.cpp</div></div>
+  <div class="summary">
+<a href="#pub-attribs">Public 属性</a> &#124;
+<a href="a00539.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">MiraiCP::ThreadManager::ThreadInfo结构体 参考</div></div>
 </div><!--header-->
 <div class="contents">
-<p >群操作</p>
-<div class="fragment"><div class="line"><span class="comment">// Copyright (c) 2020 - 2022. Eritque arcus and contributors.</span></div>
-<div class="line"><span class="comment">//</span></div>
-<div class="line"><span class="comment">// This program is free software: you can redistribute it and/or modify</span></div>
-<div class="line"><span class="comment">// it under the terms of the GNU Affero General Public License as</span></div>
-<div class="line"><span class="comment">// published by the Free Software Foundation, either version 3 of the</span></div>
-<div class="line"><span class="comment">// License, or any later version(in your opinion).</span></div>
-<div class="line"><span class="comment">//</span></div>
-<div class="line"><span class="comment">// This program is distributed in the hope that it will be useful,</span></div>
-<div class="line"><span class="comment">// but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div>
-<div class="line"><span class="comment">// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span></div>
-<div class="line"><span class="comment">// GNU Affero General Public License for more details.</span></div>
-<div class="line"><span class="comment">//</span></div>
-<div class="line"><span class="comment">// You should have received a copy of the GNU Affero General Public License</span></div>
-<div class="line"><span class="comment">// along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</span></div>
-<div class="line"><span class="comment">//</span></div>
-<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00134.html">MiraiCP.hpp</a>&gt;</span></div>
-<div class="line"><span class="keyword">using namespace </span><a class="code hl_namespace" href="a00171.html">MiraiCP</a>;</div>
-<div class="line"> </div>
-<div class="line"><span class="keyword">class </span>Main : <span class="keyword">public</span> CPPPlugin {</div>
-<div class="line"><span class="keyword">public</span>:</div>
-<div class="line">    Main() : CPPPlugin(PluginConfig(</div>
-<div class="line">                     <span class="stringliteral">&quot;id&quot;</span>,</div>
-<div class="line">                     <span class="stringliteral">&quot;test&quot;</span>,</div>
-<div class="line">                     <span class="stringliteral">&quot;v1.0&quot;</span>,</div>
-<div class="line">                     <span class="stringliteral">&quot;a&quot;</span>)) {}</div>
-<div class="line">    <span class="keywordtype">void</span> onEnable()<span class="keyword"> override </span>{</div>
-<div class="line">        Event::processor.registerEvent&lt;<a class="code hl_enumvalue" href="a00171.html#a9978cdf5158c8fc2ed93dbd7bbf3efb5af85aaa2127f5b4f45bd92e1987105005">GroupMessageEvent</a>&gt;([](<a class="code hl_enumvalue" href="a00171.html#a9978cdf5158c8fc2ed93dbd7bbf3efb5af85aaa2127f5b4f45bd92e1987105005">GroupMessageEvent</a> e) {</div>
-<div class="line">            <span class="comment">// 用 id 构建群对象</span></div>
-<div class="line">            Group a(e.group.id(), e.bot.id);</div>
-<div class="line">            <span class="comment">// 发送D:\\ValveUnhandledExceptionFilter.txt本地文件到qq群的 /test.txt 路径</span></div>
-<div class="line">            RemoteFile tmp = e.group.sendFile(<span class="stringliteral">&quot;/test.txt&quot;</span>, <span class="stringliteral">&quot;D:\\ValveUnhandledExceptionFilter.txt&quot;</span>);</div>
-<div class="line">            e.group.sendMessage(e.group.getFile(<span class="stringliteral">&quot;/&quot;</span>, tmp.id).name);</div>
-<div class="line">            e.group.sendMessage(e.group.getFile(<span class="stringliteral">&quot;/test.txt&quot;</span>).name);</div>
-<div class="line">            e.group.sendMessage(e.group.getFileListString(<span class="stringliteral">&quot;/&quot;</span>));</div>
-<div class="line">            <span class="comment">// 取群文件列表</span></div>
-<div class="line">            e.group.getFileListString(<span class="stringliteral">&quot;/&quot;</span>);</div>
-<div class="line">        });</div>
-<div class="line">    }</div>
-<div class="line">};</div>
-<div class="line"> </div>
-<div class="line"><span class="keywordtype">void</span> <a id="a0" name="a0"></a><a class="code hl_function" href="a00171.html#a12d27be6730af4fc321ac1eb231db281">MiraiCP::enrollPlugin</a>() {</div>
-<div class="line">    <a id="a1" name="a1"></a><a class="code hl_function" href="a00171.html#ad5dfcfb8bbf110c31ac8a5288f395bba">MiraiCP::enrollPlugin0</a>(<span class="keyword">new</span> Main());</div>
-<div class="line">}</div>
-<div class="ttc" id="aa00134_html"><div class="ttname"><a href="a00134.html">MiraiCP.hpp</a></div></div>
-<div class="ttc" id="aa00171_html"><div class="ttname"><a href="a00171.html">MiraiCP</a></div><div class="ttdef"><b>Definition:</b> <a href="a00038_source.html#l00023">Bot.cpp:23</a></div></div>
-<div class="ttc" id="aa00171_html_a12d27be6730af4fc321ac1eb231db281"><div class="ttname"><a href="a00171.html#a12d27be6730af4fc321ac1eb231db281">MiraiCP::enrollPlugin</a></div><div class="ttdeci">void enrollPlugin()</div><div class="ttdoc">注册插件函数, 需要被实现, 类似onStart();</div><div class="ttdef"><b>Definition:</b> <a href="a00032_source.html#l00142">core.cpp:142</a></div></div>
-<div class="ttc" id="aa00171_html_a9978cdf5158c8fc2ed93dbd7bbf3efb5af85aaa2127f5b4f45bd92e1987105005"><div class="ttname"><a href="a00171.html#a9978cdf5158c8fc2ed93dbd7bbf3efb5af85aaa2127f5b4f45bd92e1987105005">MiraiCP::eventTypes::GroupMessageEvent</a></div><div class="ttdeci">@ GroupMessageEvent</div></div>
-<div class="ttc" id="aa00171_html_ad5dfcfb8bbf110c31ac8a5288f395bba"><div class="ttname"><a href="a00171.html#ad5dfcfb8bbf110c31ac8a5288f395bba">MiraiCP::enrollPlugin0</a></div><div class="ttdeci">void enrollPlugin0(CPPPlugin *p)</div><div class="ttdoc">用指针绑定插件</div><div class="ttdef"><b>Definition:</b> <a href="a00167_source.html#l00038">utils.h:38</a></div></div>
-</div><!-- fragment --> </div><!-- contents -->
+
+<p>每个线程实例.  
+ <a href="a00542.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="a00161_source.html">ThreadManager.h</a>&gt;</code></p>
+<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> MiraiCP::ThreadManager::ThreadInfo 的协作图:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="a00540.png" border="0" usemap="#a_mirai_c_p_1_1_thread_manager_1_1_thread_info_coll__map" alt="Collaboration graph"/></div>
+<map name="a_mirai_c_p_1_1_thread_manager_1_1_thread_info_coll__map" id="a_mirai_c_p_1_1_thread_manager_1_1_thread_info_coll__map">
+<area shape="rect" title="每个线程实例." alt="" coords="5,145,171,237"/>
+<area shape="rect" title=" " alt="" coords="11,5,82,83"/>
+<area shape="rect" title=" " alt="" coords="106,5,153,83"/>
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public 属性</h2></td></tr>
+<tr class="memitem:ad5e0fc94f06fd33fbc0c6db40c0486eb"><td class="memItemLeft" align="right" valign="top">JNIEnv *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00542.html#ad5e0fc94f06fd33fbc0c6db40c0486eb">e</a> {}</td></tr>
+<tr class="separator:ad5e0fc94f06fd33fbc0c6db40c0486eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20796cdd95ace90b1f56b825abf51032"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00542.html#a20796cdd95ace90b1f56b825abf51032">attach</a> {}</td></tr>
+<tr class="separator:a20796cdd95ace90b1f56b825abf51032"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p >每个线程实例. </p>
+
+<p class="definition">在文件 <a class="el" href="a00161_source.html">ThreadManager.h</a> 第 <a class="el" href="a00161_source.html#l00034">34</a> 行定义.</p>
+</div><h2 class="groupheader">类成员变量说明</h2>
+<a id="a20796cdd95ace90b1f56b825abf51032" name="a20796cdd95ace90b1f56b825abf51032"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20796cdd95ace90b1f56b825abf51032">&#9670;&nbsp;</a></span>attach</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MiraiCP::ThreadManager::ThreadInfo::attach {}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="a00161_source.html">ThreadManager.h</a> 第 <a class="el" href="a00161_source.html#l00036">36</a> 行定义.</p>
+
+</div>
+</div>
+<a id="ad5e0fc94f06fd33fbc0c6db40c0486eb" name="ad5e0fc94f06fd33fbc0c6db40c0486eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5e0fc94f06fd33fbc0c6db40c0486eb">&#9670;&nbsp;</a></span>e</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">JNIEnv* MiraiCP::ThreadManager::ThreadInfo::e {}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="a00161_source.html">ThreadManager.h</a> 第 <a class="el" href="a00161_source.html#l00035">35</a> 行定义.</p>
+
+</div>
+</div>
+<hr/>该结构体的文档由以下文件生成:<ul>
+<li><a class="el" href="a00161_source.html">ThreadManager.h</a></li>
+</ul>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">生成于 2022年 五月 1日 星期日 11:26:10 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="navelem"><a class="el" href="a00177.html">MiraiCP</a></li><li class="navelem"><a class="el" href="a00538.html">ThreadManager</a></li><li class="navelem"><a class="el" href="a00542.html">ThreadInfo</a></li>
+    <li class="footer">生成于 2022年 五月 3日 星期二 18:48:31 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
 <script type="text/javascript">

@@ -1,9 +1,10 @@
 var a00202 =
 [
-    [ "MemberLeaveEvent", "a00202.html#acbd646bf783ca8d03b8b0a48e3a37cb7", null ],
-    [ "get_event_type", "a00202.html#ac16581cdd4e400c2a6e92889fb928d95", null ],
-    [ "group", "a00202.html#ab693afc3bdbfddc1ae88caf9ee052d54", null ],
-    [ "memberid", "a00202.html#ab1908decaccb41ea3bc74836dff63246", null ],
-    [ "operaterid", "a00202.html#aade41087ec629e2632628919d9df79fe", null ],
-    [ "type", "a00202.html#ad28ac4243630eab3bf7d65a737cac9ca", null ]
+    [ "Config", "a00202.html#abc66a7ba8c5d1bfa0fa2a521554ea166", null ],
+    [ "description", "a00202.html#ae924c02b04ee3fec68c0838ee34bd45d", null ],
+    [ "override", "a00202.html#ad502d3f82eba6b75fcaa6e5acb16eed1", null ],
+    [ "preFixOption", "a00202.html#af40c74e212dd165a72e7b2e8769e0dcb", null ],
+    [ "primaryName", "a00202.html#a21a4c0a9fe2032ce10efbd76c5388dce", null ],
+    [ "secondNames", "a00202.html#a5211c63986e404f8edc7b36cbd0c3618", null ],
+    [ "usage", "a00202.html#a3f604db6531d4956520cf813d57aa544", null ]
 ];

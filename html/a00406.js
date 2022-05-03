@@ -1,4 +1,5 @@
 var a00406 =
 [
-    [ "toMiraiCode", "a00406.html#a96bdd3af5e564960b2b7f562032b1a15", null ]
+    [ "id", "a00406.html#a3731a10878ebebf220143bde1b6bf145", null ],
+    [ "path", "a00406.html#aed72e7f738908ff8beb5f3894c88d0ee", null ]
 ];

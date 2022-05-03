@@ -1,6 +1,6 @@
 var a00278 =
 [
-    [ "BotException", "a00278.html#ac250396fe99586a5cf4edd42f708ba5f", null ],
-    [ "BotException", "a00278.html#a24ceda48b7072cd7cd3eeac8e781ec96", null ],
-    [ "exceptionType", "a00278.html#ac31df28b76fc89b362e1b94c4c866b43", null ]
+    [ "BotLeaveEvent", "a00278.html#a1d6901317417c45332686a1b148ea789", null ],
+    [ "get_event_type", "a00278.html#af477670377fef2ea1d76b5a36f738a3b", null ],
+    [ "groupid", "a00278.html#a75d1aed07afc1cc0c9a6985c406e68ee", null ]
 ];

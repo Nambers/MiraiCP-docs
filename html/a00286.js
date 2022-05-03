@@ -1,5 +1,7 @@
 var a00286 =
 [
-    [ "MuteException", "a00286.html#aabc181c072a55209b6a88f4a0f43fa9a", null ],
-    [ "exceptionType", "a00286.html#afae350ada0208f24022d4de92442b515", null ]
+    [ "MessagePreSendEvent", "a00286.html#a14ade975f492c912c43d9c6140f36a8d", null ],
+    [ "get_event_type", "a00286.html#af17073020ced82c02fa60c4640f80d8d", null ],
+    [ "message", "a00286.html#a2fe0731f2ede62683919e2af5deecb2c", null ],
+    [ "target", "a00286.html#a9f10bb0f95316175506f9f48d9ed148d", null ]
 ];

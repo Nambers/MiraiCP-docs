@@ -1,12 +1,8 @@
 var a00206 =
 [
-    [ "RecallEvent", "a00206.html#a8f34646f10c6059226357b96876cec3e", null ],
-    [ "get_event_type", "a00206.html#afef89bbbdb81e7158a71921cb70300ea", null ],
-    [ "authorid", "a00206.html#a38902ca6a35385461d1ebfd9dd5fe4c0", null ],
-    [ "groupid", "a00206.html#a224023cbc9f1e0e70e0c200e098a70e1", null ],
-    [ "ids", "a00206.html#ab921c8f46196c000301a49580c9c8731", null ],
-    [ "internalids", "a00206.html#a286b52d1fc395cffeb19867d174e8fa4", null ],
-    [ "operatorid", "a00206.html#abe1179293996af8fe9474805e125f748", null ],
-    [ "time", "a00206.html#afcf05164400a14a598aba4de6566b66c", null ],
-    [ "type", "a00206.html#ac986c53d844263a8af1ddf3e767e3a0c", null ]
+    [ "CommandManager", "a00206.html#acf247b0f4f71627dc920d3297be6314f", null ],
+    [ "operator[]", "a00206.html#a2cadbf9c0ff28ff16c544c0fc03b874d", null ],
+    [ "registerCommand", "a00206.html#accb883db18602dc65b5fdd264dd73bfd", null ],
+    [ "commandList", "a00206.html#af770c2433fdf62bee434d79f7118cbcc", null ],
+    [ "commandManager", "a00206.html#a772ce2c737ce39e63ed80b023019f152", null ]
 ];

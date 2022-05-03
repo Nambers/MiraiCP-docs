@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiraiCP: 踢出群成员</title>
+<title>MiraiCP: MiraiCP::UnSupportMessage类 参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -90,33 +90,274 @@ $(document).ready(function(){initNavTree('a00534.html',''); initResizable(); });
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">踢出群成员</div></div>
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="a00531.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">MiraiCP::UnSupportMessage类 参考</div></div>
 </div><!--header-->
 <div class="contents">
-<p >(check in version 2.9.0) </p><div class="fragment"><div class="line">Event::processor.registerEvent&lt;<a class="code hl_enumvalue" href="a00156.html#a9978cdf5158c8fc2ed93dbd7bbf3efb5af85aaa2127f5b4f45bd92e1987105005">GroupMessageEvent</a>&gt;([](<a class="code hl_enumvalue" href="a00156.html#a9978cdf5158c8fc2ed93dbd7bbf3efb5af85aaa2127f5b4f45bd92e1987105005">GroupMessageEvent</a> e) {</div>
-<div class="line"> <span class="keywordflow">try</span> {</div>
-<div class="line">     Member m = Member(&lt;MemberId&gt;, e.group.id(), e.bot.id);</div>
-<div class="line">     m.kick(<span class="stringliteral">&quot;this_is_reason&quot;</span>);</div>
-<div class="line"> }<span class="keywordflow">catch</span> (BotException&amp; err) {</div>
-<div class="line">     <span class="comment">//权限不足</span></div>
-<div class="line">     Logger::logger.error(err.what());</div>
-<div class="line"> }<span class="keywordflow">catch</span> (MemberException&amp; err) {</div>
-<div class="line">     <span class="keywordflow">if</span> (err.type == 1) {</div>
-<div class="line">         <span class="comment">//找不到群</span></div>
-<div class="line">     }</div>
-<div class="line">     <span class="keywordflow">if</span> (err.type == 2) {</div>
-<div class="line">         <span class="comment">//找不到群成员</span></div>
-<div class="line">     }</div>
-<div class="line"> }</div>
-<div class="line"> });</div>
-<div class="ttc" id="aa00156_html_a9978cdf5158c8fc2ed93dbd7bbf3efb5af85aaa2127f5b4f45bd92e1987105005"><div class="ttname"><a href="a00156.html#a9978cdf5158c8fc2ed93dbd7bbf3efb5af85aaa2127f5b4f45bd92e1987105005">MiraiCP::eventTypes::GroupMessageEvent</a></div><div class="ttdeci">@ GroupMessageEvent</div></div>
-</div><!-- fragment --></div><!-- contents -->
+
+<p>目前不支持的消息类型, 不支持发送  
+ <a href="a00534.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="a00155_source.html">SingleMessage.h</a>&gt;</code></p>
+<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> 类 MiraiCP::UnSupportMessage 继承关系图:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="a00533.png" border="0" usemap="#a_mirai_c_p_1_1_un_support_message_inherit__map" alt="Inheritance graph"/></div>
+<map name="a_mirai_c_p_1_1_un_support_message_inherit__map" id="a_mirai_c_p_1_1_un_support_message_inherit__map">
+<area shape="rect" title="目前不支持的消息类型, 不支持发送" alt="" coords="5,549,279,759"/>
+<area shape="rect" href="a00470.html" title="MessageChain的组成部分" alt="" coords="33,145,251,501"/>
+<area shape="rect" href="a00454.html" title="MiraiCode父类, 指可以被转换成miraicode的类型" alt="" coords="63,5,221,97"/>
+</map>
+</div>
+<div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> MiraiCP::UnSupportMessage 的协作图:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="a00532.png" border="0" usemap="#a_mirai_c_p_1_1_un_support_message_coll__map" alt="Collaboration graph"/></div>
+<map name="a_mirai_c_p_1_1_un_support_message_coll__map" id="a_mirai_c_p_1_1_un_support_message_coll__map">
+<area shape="rect" title="目前不支持的消息类型, 不支持发送" alt="" coords="105,507,379,716"/>
+<area shape="rect" href="a00470.html" title="MessageChain的组成部分" alt="" coords="133,175,351,457"/>
+<area shape="rect" href="a00454.html" title="MiraiCode父类, 指可以被转换成miraicode的类型" alt="" coords="5,5,164,97"/>
+<area shape="rect" title=" " alt="" coords="188,13,227,90"/>
+<area shape="rect" title=" " alt="" coords="251,13,305,90"/>
+<area shape="rect" title=" " alt="" coords="329,13,448,90"/>
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:ae28bab32ffb5b7520376b88cb0fb70e1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00170.html#ab701e3ac61a85b337ec5c1abaad6742d">nlohmann::json</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00534.html#ae28bab32ffb5b7520376b88cb0fb70e1">toJson</a> () const override</td></tr>
+<tr class="separator:ae28bab32ffb5b7520376b88cb0fb70e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab59bb45f6a86d9eba8b7de54516de620"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00534.html#ab59bb45f6a86d9eba8b7de54516de620">ShouldNotUse</a> (&quot;不支持直接发送UnSupportMessage&quot;) std</td></tr>
+<tr class="memdesc:ab59bb45f6a86d9eba8b7de54516de620"><td class="mdescLeft">&#160;</td><td class="mdescRight">不支持发送  <a href="a00534.html#ab59bb45f6a86d9eba8b7de54516de620">更多...</a><br /></td></tr>
+<tr class="separator:ab59bb45f6a86d9eba8b7de54516de620"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6be0a774db3dc14967b31ab49e057454"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00534.html#a6be0a774db3dc14967b31ab49e057454">UnSupportMessage</a> (const std::string &amp;<a class="el" href="a00470.html#a7ebcc9775985874bb7a09bd1d8274a24">content</a>)</td></tr>
+<tr class="separator:a6be0a774db3dc14967b31ab49e057454"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ab999563baa8193b226d442d1a7f5dc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00534.html#a0ab999563baa8193b226d442d1a7f5dc">operator==</a> (const <a class="el" href="a00534.html">UnSupportMessage</a> &amp;m) const</td></tr>
+<tr class="separator:a0ab999563baa8193b226d442d1a7f5dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_a00470"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_a00470')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="a00470.html">MiraiCP::SingleMessage</a></td></tr>
+<tr class="memitem:a1e645ecfc57a7b630290d88e7cc9ae39 inherit pub_methods_a00470"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00470.html#a1e645ecfc57a7b630290d88e7cc9ae39">SingleMessage</a> (int <a class="el" href="a00470.html#a80942452883a814f0462e451982ffd39">type</a>, std::string <a class="el" href="a00470.html#a7ebcc9775985874bb7a09bd1d8274a24">content</a>, std::string <a class="el" href="a00470.html#a207f61ebfd79e0ae18833f2edf954595">prefix</a>=&quot;:&quot;)</td></tr>
+<tr class="memdesc:a1e645ecfc57a7b630290d88e7cc9ae39 inherit pub_methods_a00470"><td class="mdescLeft">&#160;</td><td class="mdescRight">构建单条  <a href="a00470.html#a1e645ecfc57a7b630290d88e7cc9ae39">更多...</a><br /></td></tr>
+<tr class="separator:a1e645ecfc57a7b630290d88e7cc9ae39 inherit pub_methods_a00470"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7602ba8b70c61feebadea2cb6744b9dc inherit pub_methods_a00470"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00470.html#a7602ba8b70c61feebadea2cb6744b9dc">~SingleMessage</a> ()=default</td></tr>
+<tr class="separator:a7602ba8b70c61feebadea2cb6744b9dc inherit pub_methods_a00470"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade93b603f22f584ada2a003c9e523b89 inherit pub_methods_a00470"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00470.html#ade93b603f22f584ada2a003c9e523b89">toMiraiCode</a> () const override</td></tr>
+<tr class="memdesc:ade93b603f22f584ada2a003c9e523b89 inherit pub_methods_a00470"><td class="mdescLeft">&#160;</td><td class="mdescRight">返回MiraiCode  <a href="a00470.html#ade93b603f22f584ada2a003c9e523b89">更多...</a><br /></td></tr>
+<tr class="separator:ade93b603f22f584ada2a003c9e523b89 inherit pub_methods_a00470"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d501cb4ed4cf97c4eb43246c35224b0 inherit pub_methods_a00470"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00470.html#a9d501cb4ed4cf97c4eb43246c35224b0">operator==</a> (const <a class="el" href="a00470.html">SingleMessage</a> &amp;m) const</td></tr>
+<tr class="separator:a9d501cb4ed4cf97c4eb43246c35224b0 inherit pub_methods_a00470"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2836bc9c5110cbada54ecbb65341b8f inherit pub_methods_a00470"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00470.html#aa2836bc9c5110cbada54ecbb65341b8f">operator==</a> (<a class="el" href="a00470.html">SingleMessage</a> *m) const</td></tr>
+<tr class="separator:aa2836bc9c5110cbada54ecbb65341b8f inherit pub_methods_a00470"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:ad5b8af135be7c2201fa5cc3d81fa8912"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00534.html#ad5b8af135be7c2201fa5cc3d81fa8912">type</a> ()</td></tr>
+<tr class="separator:ad5b8af135be7c2201fa5cc3d81fa8912"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_static_methods_a00470"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_a00470')"><img src="closed.png" alt="-"/>&#160;静态 Public 成员函数 继承自 <a class="el" href="a00470.html">MiraiCP::SingleMessage</a></td></tr>
+<tr class="memitem:a7412c91a4b45c7f1d77cf904af64b6d7 inherit pub_static_methods_a00470"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00470.html#a7412c91a4b45c7f1d77cf904af64b6d7">getKey</a> (const std::string &amp;value)</td></tr>
+<tr class="memdesc:a7412c91a4b45c7f1d77cf904af64b6d7 inherit pub_static_methods_a00470"><td class="mdescLeft">&#160;</td><td class="mdescRight">找对应类型的index key  <a href="a00470.html#a7412c91a4b45c7f1d77cf904af64b6d7">更多...</a><br /></td></tr>
+<tr class="separator:a7412c91a4b45c7f1d77cf904af64b6d7 inherit pub_static_methods_a00470"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+额外继承的成员函数</h2></td></tr>
+<tr class="inherit_header pub_attribs_a00470"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_a00470')"><img src="closed.png" alt="-"/>&#160;Public 属性 继承自 <a class="el" href="a00470.html">MiraiCP::SingleMessage</a></td></tr>
+<tr class="memitem:a80942452883a814f0462e451982ffd39 inherit pub_attribs_a00470"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00470.html#a80942452883a814f0462e451982ffd39">type</a></td></tr>
+<tr class="separator:a80942452883a814f0462e451982ffd39 inherit pub_attribs_a00470"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ebcc9775985874bb7a09bd1d8274a24 inherit pub_attribs_a00470"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00470.html#a7ebcc9775985874bb7a09bd1d8274a24">content</a></td></tr>
+<tr class="separator:a7ebcc9775985874bb7a09bd1d8274a24 inherit pub_attribs_a00470"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a207f61ebfd79e0ae18833f2edf954595 inherit pub_attribs_a00470"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00470.html#a207f61ebfd79e0ae18833f2edf954595">prefix</a></td></tr>
+<tr class="separator:a207f61ebfd79e0ae18833f2edf954595 inherit pub_attribs_a00470"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_static_attribs_a00470"><td colspan="2" onclick="javascript:toggleInherit('pub_static_attribs_a00470')"><img src="closed.png" alt="-"/>&#160;静态 Public 属性 继承自 <a class="el" href="a00470.html">MiraiCP::SingleMessage</a></td></tr>
+<tr class="memitem:a40ef6246fdbdce9e7a6c4c3d92696ffa inherit pub_static_attribs_a00470"><td class="memItemLeft" align="right" valign="top">static std::unordered_map&lt; int, std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00470.html#a40ef6246fdbdce9e7a6c4c3d92696ffa">messageType</a></td></tr>
+<tr class="separator:a40ef6246fdbdce9e7a6c4c3d92696ffa inherit pub_static_attribs_a00470"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p >目前不支持的消息类型, 不支持发送 </p>
+
+<p class="definition">在文件 <a class="el" href="a00155_source.html">SingleMessage.h</a> 第 <a class="el" href="a00155_source.html#l00507">507</a> 行定义.</p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a6be0a774db3dc14967b31ab49e057454" name="a6be0a774db3dc14967b31ab49e057454"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6be0a774db3dc14967b31ab49e057454">&#9670;&nbsp;</a></span>UnSupportMessage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">MiraiCP::UnSupportMessage::UnSupportMessage </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>content</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="a00155_source.html">SingleMessage.h</a> 第 <a class="el" href="a00155_source.html#l00518">518</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00518" name="l00518"></a><span class="lineno">  518</span>: <a class="code hl_function" href="a00470.html#a1e645ecfc57a7b630290d88e7cc9ae39">SingleMessage</a>(<a class="code hl_function" href="a00534.html#ad5b8af135be7c2201fa5cc3d81fa8912">UnSupportMessage::type</a>(), <a class="code hl_variable" href="a00470.html#a7ebcc9775985874bb7a09bd1d8274a24">content</a>) {}</div>
+<div class="ttc" id="aa00470_html_a1e645ecfc57a7b630290d88e7cc9ae39"><div class="ttname"><a href="a00470.html#a1e645ecfc57a7b630290d88e7cc9ae39">MiraiCP::SingleMessage::SingleMessage</a></div><div class="ttdeci">SingleMessage(int type, std::string content, std::string prefix=&quot;:&quot;)</div><div class="ttdoc">构建单条</div><div class="ttdef"><b>Definition:</b> <a href="a00155_source.html#l00060">SingleMessage.h:60</a></div></div>
+<div class="ttc" id="aa00470_html_a7ebcc9775985874bb7a09bd1d8274a24"><div class="ttname"><a href="a00470.html#a7ebcc9775985874bb7a09bd1d8274a24">MiraiCP::SingleMessage::content</a></div><div class="ttdeci">std::string content</div><div class="ttdef"><b>Definition:</b> <a href="a00155_source.html#l00049">SingleMessage.h:49</a></div></div>
+<div class="ttc" id="aa00534_html_ad5b8af135be7c2201fa5cc3d81fa8912"><div class="ttname"><a href="a00534.html#ad5b8af135be7c2201fa5cc3d81fa8912">MiraiCP::UnSupportMessage::type</a></div><div class="ttdeci">static int type()</div><div class="ttdef"><b>Definition:</b> <a href="a00155_source.html#l00509">SingleMessage.h:509</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a0ab999563baa8193b226d442d1a7f5dc" name="a0ab999563baa8193b226d442d1a7f5dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ab999563baa8193b226d442d1a7f5dc">&#9670;&nbsp;</a></span>operator==()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MiraiCP::UnSupportMessage::operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="a00534.html">UnSupportMessage</a> &amp;&#160;</td>
+          <td class="paramname"><em>m</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="a00155_source.html">SingleMessage.h</a> 第 <a class="el" href="a00155_source.html#l00520">520</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00520" name="l00520"></a><span class="lineno">  520</span>                                                         {</div>
+<div class="line"><a id="l00521" name="l00521"></a><span class="lineno">  521</span>            <span class="keywordflow">return</span> this-&gt;<a class="code hl_variable" href="a00470.html#a7ebcc9775985874bb7a09bd1d8274a24">content</a> == m.content;</div>
+<div class="line"><a id="l00522" name="l00522"></a><span class="lineno">  522</span>        }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ab59bb45f6a86d9eba8b7de54516de620" name="ab59bb45f6a86d9eba8b7de54516de620"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab59bb45f6a86d9eba8b7de54516de620">&#9670;&nbsp;</a></span>ShouldNotUse()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">MiraiCP::UnSupportMessage::ShouldNotUse </td>
+          <td>(</td>
+          <td class="paramtype">&quot;不支持直接发送UnSupportMessage&quot;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>不支持发送 </p>
+
+<p class="definition">在文件 <a class="el" href="a00155_source.html">SingleMessage.h</a> 第 <a class="el" href="a00155_source.html#l00512">512</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00512" name="l00512"></a><span class="lineno">  512</span>                                                                                                     {</div>
+<div class="line"><a id="l00513" name="l00513"></a><span class="lineno">  513</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a id="l00514" name="l00514"></a><span class="lineno">  514</span>        }</div>
+<div class="line"><a id="l00515" name="l00515"></a><span class="lineno">  515</span> </div>
+<div class="line"><a id="l00516" name="l00516"></a><span class="lineno">  516</span>        <span class="keyword">explicit</span> <a class="code hl_function" href="a00534.html#a6be0a774db3dc14967b31ab49e057454">UnSupportMessage</a>(<span class="keyword">const</span> <a class="code hl_function" href="a00470.html#a1e645ecfc57a7b630290d88e7cc9ae39">SingleMessage</a> &amp;s) : <a class="code hl_function" href="a00470.html#a1e645ecfc57a7b630290d88e7cc9ae39">SingleMessage</a>(s){};</div>
+<div class="ttc" id="aa00534_html_a6be0a774db3dc14967b31ab49e057454"><div class="ttname"><a href="a00534.html#a6be0a774db3dc14967b31ab49e057454">MiraiCP::UnSupportMessage::UnSupportMessage</a></div><div class="ttdeci">UnSupportMessage(const std::string &amp;content)</div><div class="ttdef"><b>Definition:</b> <a href="a00155_source.html#l00518">SingleMessage.h:518</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ae28bab32ffb5b7520376b88cb0fb70e1" name="ae28bab32ffb5b7520376b88cb0fb70e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae28bab32ffb5b7520376b88cb0fb70e1">&#9670;&nbsp;</a></span>toJson()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00170.html#ab701e3ac61a85b337ec5c1abaad6742d">nlohmann::json</a> MiraiCP::UnSupportMessage::toJson </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>重载 <a class="el" href="a00470.html#a0a408adbe935640d5b02b8ba084dfaa0">MiraiCP::SingleMessage</a> .</p>
+
+<p class="definition">在文件 <a class="el" href="a00152_source.html">SingleMessage.cpp</a> 第 <a class="el" href="a00152_source.html#l00166">166</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>                                                {</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>        <a class="code hl_typedef" href="a00170.html#ab701e3ac61a85b337ec5c1abaad6742d">nlohmann::json</a> j;</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>        j[<span class="stringliteral">&quot;key&quot;</span>] = <span class="stringliteral">&quot;unsupportmessage&quot;</span>;</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>        j[<span class="stringliteral">&quot;content&quot;</span>] = this-&gt;<a class="code hl_variable" href="a00470.html#a7ebcc9775985874bb7a09bd1d8274a24">content</a>;</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>        <span class="keywordflow">return</span> j;</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>    }</div>
+<div class="ttc" id="aa00170_html_ab701e3ac61a85b337ec5c1abaad6742d"><div class="ttname"><a href="a00170.html#ab701e3ac61a85b337ec5c1abaad6742d">json</a></div><div class="ttdeci">nlohmann::json json</div><div class="ttdef"><b>Definition:</b> <a href="a00170_source.html#l00026">utils.cpp:26</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ad5b8af135be7c2201fa5cc3d81fa8912" name="ad5b8af135be7c2201fa5cc3d81fa8912"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5b8af135be7c2201fa5cc3d81fa8912">&#9670;&nbsp;</a></span>type()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int MiraiCP::UnSupportMessage::type </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="a00155_source.html">SingleMessage.h</a> 第 <a class="el" href="a00155_source.html#l00509">509</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00509" name="l00509"></a><span class="lineno">  509</span>{ <span class="keywordflow">return</span> -1; }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li><a class="el" href="a00155_source.html">SingleMessage.h</a></li>
+<li><a class="el" href="a00152_source.html">SingleMessage.cpp</a></li>
+</ul>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">生成于 2022年 五月 1日 星期日 10:34:33 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="navelem"><a class="el" href="a00177.html">MiraiCP</a></li><li class="navelem"><a class="el" href="a00534.html">UnSupportMessage</a></li>
+    <li class="footer">生成于 2022年 五月 3日 星期二 18:48:31 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
 <script type="text/javascript">
