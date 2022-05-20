@@ -1,7 +1,7 @@
 var a00223 =
 [
-    [ "BotEvent", "a00223.html#a5da368a0e44891433b340288bc872df3", null ],
-    [ "getEventType", "a00223.html#ad176440a2b764c7a123c4efcb3bfece3", null ],
-    [ "bot", "a00223.html#a0b14bddb4baebbd348969dac6c9a8edc", null ],
-    [ "botlogger", "a00223.html#a864b09f1e3cf406c2e96ca7b4c10e18e", null ]
+    [ "MiraiCPEvent", "a00223.html#ac85886499f0138dbdd661dea59c7596d", null ],
+    [ "~MiraiCPEvent", "a00223.html#a42d37c121315a51870afcc0b9306675a", null ],
+    [ "get_event_type", "a00223.html#a4b47da50d047657111117e4cd6d895e9", null ],
+    [ "getEventType", "a00223.html#ae9be7c5b43cf85e524a55b9b3eaca522", null ]
 ];

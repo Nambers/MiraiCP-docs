@@ -1,5 +1,5 @@
 var a00347 =
 [
-    [ "RecallException", "a00347.html#a7efed6d5b4e2e7c655b53496fbff9710", null ],
-    [ "exceptionType", "a00347.html#abb3b6f5b42098376e6a195eb6f420410", null ]
+    [ "FriendException", "a00347.html#a73e9dd98256665fe2230a68df2cf2110", null ],
+    [ "exceptionType", "a00347.html#aa08c204826f37f656ed48413f331fe06", null ]
 ];

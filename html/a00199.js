@@ -1,10 +1,9 @@
 var a00199 =
 [
-    [ "Config", "a00199.html#abc66a7ba8c5d1bfa0fa2a521554ea166", null ],
-    [ "description", "a00199.html#ae924c02b04ee3fec68c0838ee34bd45d", null ],
-    [ "override", "a00199.html#ad502d3f82eba6b75fcaa6e5acb16eed1", null ],
-    [ "preFixOption", "a00199.html#af40c74e212dd165a72e7b2e8769e0dcb", null ],
-    [ "primaryName", "a00199.html#a21a4c0a9fe2032ce10efbd76c5388dce", null ],
-    [ "secondNames", "a00199.html#a5211c63986e404f8edc7b36cbd0c3618", null ],
-    [ "usage", "a00199.html#a3f604db6531d4956520cf813d57aa544", null ]
+    [ "Config", "a00203.html", "a00203" ],
+    [ "string", "a00199.html#a87541e84339783a5bfaece0be37988c3", null ],
+    [ "IRawCommand", "a00199.html#ad519bdd519964a086a9ae9df21144fb8", null ],
+    [ "~IRawCommand", "a00199.html#a63339f9bad4e8dfe025b1f59272d6d81", null ],
+    [ "config", "a00199.html#a562a5a0ef7a17c47efdc613b6bb7aa4f", null ],
+    [ "onCommand", "a00199.html#a0585cc4573fb9b4197c97b9c9f338a2e", null ]
 ];

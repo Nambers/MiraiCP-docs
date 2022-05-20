@@ -1,8 +1,9 @@
 var a00231 =
 [
-    [ "PrivateMessageEvent", "a00231.html#aad1f069d4e65a59adbe04f707896c8e5", null ],
-    [ "get_event_type", "a00231.html#ac3053b80946deed03cefda11255c7785", null ],
-    [ "nextMessage", "a00231.html#a5b1a60fcb2e527350742d362a5ee3b56", null ],
-    [ "message", "a00231.html#a8a85d06adc5634099288001409e51de0", null ],
-    [ "sender", "a00231.html#aa2ba8dfb74a6324a1a6ef5774d6ee793", null ]
+    [ "chat", "a00231.html#a930c906152af34e593924f80ac5dc7eb", null ],
+    [ "chat", "a00231.html#a78b187ed90120288f0440d57a245747c", null ],
+    [ "from", "a00231.html#ab111e527beadb4164803883e95dced37", null ],
+    [ "from", "a00231.html#acb096e180157bcbdd462d547c871cdd4", null ],
+    [ "getMessageChain", "a00231.html#a185ddf193c871cdc6cf66b8b1dfc4f2b", null ],
+    [ "getMessageChain", "a00231.html#afb3f475ad86c140f2ab3d21dff3c42dd", null ]
 ];

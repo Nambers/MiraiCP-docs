@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MiraiCP
-   &#160;<span id="projectnumber">v2.11.0-M3</span>
+   &#160;<span id="projectnumber">v2.11.0</span>
    </div>
    <div id="projectbrief">MiraiCP api document</div>
   </td>
@@ -90,30 +90,25 @@ $(document).ready(function(){initNavTree('a00231.html',''); initResizable(); });
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">MiraiCP::PrivateMessageEvent 成员列表</div></div>
+  <div class="headertitle"><div class="title">MiraiCP::MessageEvent 成员列表</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>成员的完整列表，这些成员属于 <a class="el" href="a00231.html">MiraiCP::PrivateMessageEvent</a>,包括所有继承而来的类成员</p>
+<p>成员的完整列表，这些成员属于 <a class="el" href="a00231.html">MiraiCP::MessageEvent</a>,包括所有继承而来的类成员</p>
 <table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="a00223.html#a0b14bddb4baebbd348969dac6c9a8edc">bot</a></td><td class="entry"><a class="el" href="a00223.html">MiraiCP::BotEvent&lt; PrivateMessageEvent &gt;</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00223.html#a5da368a0e44891433b340288bc872df3">BotEvent</a>(QQID botid)</td><td class="entry"><a class="el" href="a00223.html">MiraiCP::BotEvent&lt; PrivateMessageEvent &gt;</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">explicit</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00223.html#a864b09f1e3cf406c2e96ca7b4c10e18e">botlogger</a></td><td class="entry"><a class="el" href="a00223.html">MiraiCP::BotEvent&lt; PrivateMessageEvent &gt;</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00231.html#ac3053b80946deed03cefda11255c7785">get_event_type</a>()</td><td class="entry"><a class="el" href="a00231.html">MiraiCP::PrivateMessageEvent</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">static</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00223.html#ad176440a2b764c7a123c4efcb3bfece3">getEventType</a>() const override</td><td class="entry"><a class="el" href="a00223.html">MiraiCP::BotEvent&lt; PrivateMessageEvent &gt;</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00231.html#a8a85d06adc5634099288001409e51de0">message</a></td><td class="entry"><a class="el" href="a00231.html">MiraiCP::PrivateMessageEvent</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00219.html#ac85886499f0138dbdd661dea59c7596d">MiraiCPEvent</a>()=default</td><td class="entry"><a class="el" href="a00219.html">MiraiCP::MiraiCPEvent</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00231.html#a5b1a60fcb2e527350742d362a5ee3b56">nextMessage</a>(long time=-1, bool halt=true, JNIEnv *env=nullptr) const</td><td class="entry"><a class="el" href="a00231.html">MiraiCP::PrivateMessageEvent</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00231.html#aad1f069d4e65a59adbe04f707896c8e5">PrivateMessageEvent</a>(QQID botid, Friend sender, MessageChain mc)</td><td class="entry"><a class="el" href="a00231.html">MiraiCP::PrivateMessageEvent</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00231.html#aa2ba8dfb74a6324a1a6ef5774d6ee793">sender</a></td><td class="entry"><a class="el" href="a00231.html">MiraiCP::PrivateMessageEvent</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00219.html#a42d37c121315a51870afcc0b9306675a">~MiraiCPEvent</a>()=default</td><td class="entry"><a class="el" href="a00219.html">MiraiCP::MiraiCPEvent</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="a00231.html#a78b187ed90120288f0440d57a245747c">chat</a>()=0</td><td class="entry"><a class="el" href="a00231.html">MiraiCP::MessageEvent</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="a00231.html#a930c906152af34e593924f80ac5dc7eb">chat</a>() const =0</td><td class="entry"><a class="el" href="a00231.html">MiraiCP::MessageEvent</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="a00231.html#acb096e180157bcbdd462d547c871cdd4">from</a>()=0</td><td class="entry"><a class="el" href="a00231.html">MiraiCP::MessageEvent</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="a00231.html#ab111e527beadb4164803883e95dced37">from</a>() const =0</td><td class="entry"><a class="el" href="a00231.html">MiraiCP::MessageEvent</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="a00231.html#afb3f475ad86c140f2ab3d21dff3c42dd">getMessageChain</a>()=0</td><td class="entry"><a class="el" href="a00231.html">MiraiCP::MessageEvent</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="a00231.html#a185ddf193c871cdc6cf66b8b1dfc4f2b">getMessageChain</a>() const =0</td><td class="entry"><a class="el" href="a00231.html">MiraiCP::MessageEvent</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
 </table></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">生成于 2022年 五月 1日 星期日 11:46:58 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="footer">生成于 2022年 五月 20日 星期五 18:15:39 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
 <script type="text/javascript">

@@ -1,8 +1,7 @@
 var a00271 =
 [
-    [ "NudgeEvent", "a00271.html#a33de6a207ef920b7fee423674cc2e126", null ],
-    [ "get_event_type", "a00271.html#ac0f00b0b573c63f72bb2a6fbc0257c8e", null ],
-    [ "from", "a00271.html#a6b41c32519408428cb6fc302bf24b970", null ],
-    [ "subject", "a00271.html#a48c484cc7aeaa12cec54886697950dc6", null ],
-    [ "target", "a00271.html#af4e172354f69ce65c8d8d2cd1f188cca", null ]
+    [ "TimeOutEvent", "a00271.html#abcaf0a409f7f3a66e0da48ada27a6820", null ],
+    [ "get_event_type", "a00271.html#a2505c982f58e30adb636aec887e190f0", null ],
+    [ "getEventType", "a00271.html#a94fc9b8a91d0fa22f08fd085378498be", null ],
+    [ "msg", "a00271.html#ad6869868495ecef440a6d4b909188b77", null ]
 ];

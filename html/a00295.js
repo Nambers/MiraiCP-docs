@@ -1,7 +1,8 @@
 var a00295 =
 [
-    [ "eventNode", "a00295.html#a21f99c741cb8b0fe0f031e908732147b", null ],
-    [ "run", "a00295.html#aedef6da8603e38047a3de9006052568b", null ],
-    [ "enable", "a00295.html#aebe9d35974a43240e3ee02cb3bd1adfb", null ],
-    [ "func", "a00295.html#a64131ff795261b80c6b37223812a3ee8", null ]
+    [ "MiraiCPExceptionEvent", "a00295.html#a67f475ec3ebcf1f185e5d9ef13fcd14c", null ],
+    [ "get_event_type", "a00295.html#ae1d7b10fffc99fba2cb4d08754e42365", null ],
+    [ "getEventType", "a00295.html#a95739c7970624a1ef395ba899e2bf68d", null ],
+    [ "getException", "a00295.html#a1b2f3d9a99441fda4801a7e0119b7cb7", null ],
+    [ "exceptionPtr", "a00295.html#abbe1679705abc11d256a39eb12ac6837", null ]
 ];

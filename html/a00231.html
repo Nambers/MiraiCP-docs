@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiraiCP: 成员列表</title>
+<title>MiraiCP: MiraiCP::MessageEvent类 参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MiraiCP
-   &#160;<span id="projectnumber">v2.11.0-M3</span>
+   &#160;<span id="projectnumber">v2.11.0</span>
    </div>
    <div id="projectbrief">MiraiCP api document</div>
   </td>
@@ -71,7 +71,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('a00234.html',''); initResizable(); });
+$(document).ready(function(){initNavTree('a00231.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -90,30 +90,240 @@ $(document).ready(function(){initNavTree('a00234.html',''); initResizable(); });
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">MiraiCP::PrivateMessageEvent 成员列表</div></div>
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="a00228.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">MiraiCP::MessageEvent类 参考<span class="mlabels"><span class="mlabel">abstract</span></span></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>成员的完整列表，这些成员属于 <a class="el" href="a00234.html">MiraiCP::PrivateMessageEvent</a>,包括所有继承而来的类成员</p>
-<table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="a00226.html#a0b14bddb4baebbd348969dac6c9a8edc">bot</a></td><td class="entry"><a class="el" href="a00226.html">MiraiCP::BotEvent&lt; PrivateMessageEvent &gt;</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00226.html#a5da368a0e44891433b340288bc872df3">BotEvent</a>(QQID botid)</td><td class="entry"><a class="el" href="a00226.html">MiraiCP::BotEvent&lt; PrivateMessageEvent &gt;</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">explicit</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00226.html#a864b09f1e3cf406c2e96ca7b4c10e18e">botlogger</a></td><td class="entry"><a class="el" href="a00226.html">MiraiCP::BotEvent&lt; PrivateMessageEvent &gt;</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00234.html#ac3053b80946deed03cefda11255c7785">get_event_type</a>()</td><td class="entry"><a class="el" href="a00234.html">MiraiCP::PrivateMessageEvent</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">static</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00226.html#ad176440a2b764c7a123c4efcb3bfece3">getEventType</a>() const override</td><td class="entry"><a class="el" href="a00226.html">MiraiCP::BotEvent&lt; PrivateMessageEvent &gt;</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00234.html#a8a85d06adc5634099288001409e51de0">message</a></td><td class="entry"><a class="el" href="a00234.html">MiraiCP::PrivateMessageEvent</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00222.html#ac85886499f0138dbdd661dea59c7596d">MiraiCPEvent</a>()=default</td><td class="entry"><a class="el" href="a00222.html">MiraiCP::MiraiCPEvent</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00234.html#a5b1a60fcb2e527350742d362a5ee3b56">nextMessage</a>(long time=-1, bool halt=true, JNIEnv *env=nullptr) const</td><td class="entry"><a class="el" href="a00234.html">MiraiCP::PrivateMessageEvent</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00234.html#aad1f069d4e65a59adbe04f707896c8e5">PrivateMessageEvent</a>(QQID botid, Friend sender, MessageChain mc)</td><td class="entry"><a class="el" href="a00234.html">MiraiCP::PrivateMessageEvent</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00234.html#aa2ba8dfb74a6324a1a6ef5774d6ee793">sender</a></td><td class="entry"><a class="el" href="a00234.html">MiraiCP::PrivateMessageEvent</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00222.html#a42d37c121315a51870afcc0b9306675a">~MiraiCPEvent</a>()=default</td><td class="entry"><a class="el" href="a00222.html">MiraiCP::MiraiCPEvent</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-</table></div><!-- contents -->
+<p>MessageEvent类型的抽象接口，用于Message类型多态实现  
+ <a href="a00231.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="a00077_source.html">Event.h</a>&gt;</code></p>
+<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> 类 MiraiCP::MessageEvent 继承关系图:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="a00230.png" border="0" usemap="#a_mirai_c_p_1_1_message_event_inherit__map" alt="Inheritance graph"/></div>
+<map name="a_mirai_c_p_1_1_message_event_inherit__map" id="a_mirai_c_p_1_1_message_event_inherit__map">
+<area shape="rect" title="MessageEvent类型的抽象接口，用于Message类型多态实现" alt="" coords="276,5,479,215"/>
+<area shape="rect" href="a00235.html" title="群消息事件声明" alt="" coords="5,263,248,692"/>
+<area shape="rect" href="a00267.html" title="群临时会话" alt="" coords="272,299,483,655"/>
+<area shape="rect" href="a00239.html" title=" " alt="" coords="507,299,717,655"/>
+</map>
+</div>
+<div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> MiraiCP::MessageEvent 的协作图:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="a00229.png" border="0" usemap="#a_mirai_c_p_1_1_message_event_coll__map" alt="Collaboration graph"/></div>
+<map name="a_mirai_c_p_1_1_message_event_coll__map" id="a_mirai_c_p_1_1_message_event_coll__map">
+<area shape="rect" title="MessageEvent类型的抽象接口，用于Message类型多态实现" alt="" coords="5,5,208,215"/>
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a78b187ed90120288f0440d57a245747c"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="a00211.html">Contact</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00231.html#a78b187ed90120288f0440d57a245747c">chat</a> ()=0</td></tr>
+<tr class="memdesc:a78b187ed90120288f0440d57a245747c"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取当前聊天，可能是群，私聊，或群临时回话  <a href="a00231.html#a78b187ed90120288f0440d57a245747c">更多...</a><br /></td></tr>
+<tr class="separator:a78b187ed90120288f0440d57a245747c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb096e180157bcbdd462d547c871cdd4"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="a00211.html">Contact</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00231.html#acb096e180157bcbdd462d547c871cdd4">from</a> ()=0</td></tr>
+<tr class="memdesc:acb096e180157bcbdd462d547c871cdd4"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取当前聊天，可能是群，私聊，或群临时回话  <a href="a00231.html#acb096e180157bcbdd462d547c871cdd4">更多...</a><br /></td></tr>
+<tr class="separator:acb096e180157bcbdd462d547c871cdd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb3f475ad86c140f2ab3d21dff3c42dd"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="a00455.html">MessageChain</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00231.html#afb3f475ad86c140f2ab3d21dff3c42dd">getMessageChain</a> ()=0</td></tr>
+<tr class="separator:afb3f475ad86c140f2ab3d21dff3c42dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a930c906152af34e593924f80ac5dc7eb"><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="a00211.html">Contact</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00231.html#a930c906152af34e593924f80ac5dc7eb">chat</a> () const =0</td></tr>
+<tr class="separator:a930c906152af34e593924f80ac5dc7eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab111e527beadb4164803883e95dced37"><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="a00211.html">Contact</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00231.html#ab111e527beadb4164803883e95dced37">from</a> () const =0</td></tr>
+<tr class="separator:ab111e527beadb4164803883e95dced37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a185ddf193c871cdc6cf66b8b1dfc4f2b"><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="a00455.html">MessageChain</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00231.html#a185ddf193c871cdc6cf66b8b1dfc4f2b">getMessageChain</a> () const =0</td></tr>
+<tr class="separator:a185ddf193c871cdc6cf66b8b1dfc4f2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p >MessageEvent类型的抽象接口，用于Message类型多态实现 </p>
+
+<p class="definition">在文件 <a class="el" href="a00077_source.html">Event.h</a> 第 <a class="el" href="a00077_source.html#l00082">82</a> 行定义.</p>
+</div><h2 class="groupheader">成员函数说明</h2>
+<a id="a930c906152af34e593924f80ac5dc7eb" name="a930c906152af34e593924f80ac5dc7eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a930c906152af34e593924f80ac5dc7eb">&#9670;&nbsp;</a></span>chat() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual const <a class="el" href="a00211.html">Contact</a> * MiraiCP::MessageEvent::chat </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在 <a class="el" href="a00235.html#a4cdd74f8d9a12c115899afc53088cde5">MiraiCP::GroupMessageEvent</a>, <a class="el" href="a00239.html#a9a8d672f2936a6760e046c3a03790e07">MiraiCP::PrivateMessageEvent</a> , 以及 <a class="el" href="a00267.html#a55718d1fe9883ea24c47c8ebb503d807">MiraiCP::GroupTempMessageEvent</a> 内被实现.</p>
+
+</div>
+</div>
+<a id="a78b187ed90120288f0440d57a245747c" name="a78b187ed90120288f0440d57a245747c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78b187ed90120288f0440d57a245747c">&#9670;&nbsp;</a></span>chat() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="a00211.html">Contact</a> * MiraiCP::MessageEvent::chat </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取当前聊天，可能是群，私聊，或群临时回话 </p>
+
+<p>在 <a class="el" href="a00235.html#a8d3c0c5bbda48132c31dca900f9d4931">MiraiCP::GroupMessageEvent</a>, <a class="el" href="a00239.html#a3b70ad84f06df0b224c6dbd58d255a59">MiraiCP::PrivateMessageEvent</a> , 以及 <a class="el" href="a00267.html#ac9bee0cbf3838fa62837e62110e67067">MiraiCP::GroupTempMessageEvent</a> 内被实现.</p>
+
+</div>
+</div>
+<a id="ab111e527beadb4164803883e95dced37" name="ab111e527beadb4164803883e95dced37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab111e527beadb4164803883e95dced37">&#9670;&nbsp;</a></span>from() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual const <a class="el" href="a00211.html">Contact</a> * MiraiCP::MessageEvent::from </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在 <a class="el" href="a00235.html#ae81a0e1dec6235d786b79244ef3ae40b">MiraiCP::GroupMessageEvent</a>, <a class="el" href="a00239.html#a92d1a4aad3a0b4306986cea460b84fb7">MiraiCP::PrivateMessageEvent</a> , 以及 <a class="el" href="a00267.html#a40e9c959f267452a60b2d5e6549dd5bb">MiraiCP::GroupTempMessageEvent</a> 内被实现.</p>
+
+</div>
+</div>
+<a id="acb096e180157bcbdd462d547c871cdd4" name="acb096e180157bcbdd462d547c871cdd4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb096e180157bcbdd462d547c871cdd4">&#9670;&nbsp;</a></span>from() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="a00211.html">Contact</a> * MiraiCP::MessageEvent::from </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取当前聊天，可能是群，私聊，或群临时回话 </p>
+
+<p>在 <a class="el" href="a00235.html#a76b1e6102746a08259bef6d638a8c993">MiraiCP::GroupMessageEvent</a>, <a class="el" href="a00239.html#a9b4c13376dcef6dddab4cca9b57ffc48">MiraiCP::PrivateMessageEvent</a> , 以及 <a class="el" href="a00267.html#adf2a7d962bf5daba13db488d48f0da5d">MiraiCP::GroupTempMessageEvent</a> 内被实现.</p>
+
+</div>
+</div>
+<a id="a185ddf193c871cdc6cf66b8b1dfc4f2b" name="a185ddf193c871cdc6cf66b8b1dfc4f2b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a185ddf193c871cdc6cf66b8b1dfc4f2b">&#9670;&nbsp;</a></span>getMessageChain() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual const <a class="el" href="a00455.html">MessageChain</a> * MiraiCP::MessageEvent::getMessageChain </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在 <a class="el" href="a00235.html#a505491fdd1287b85705d706d4c54e8da">MiraiCP::GroupMessageEvent</a>, <a class="el" href="a00239.html#a547bf324dfbfbb2dbef03c3fef05168b">MiraiCP::PrivateMessageEvent</a> , 以及 <a class="el" href="a00267.html#af08cf89e9ec68ea7a71f491bac7af023">MiraiCP::GroupTempMessageEvent</a> 内被实现.</p>
+
+</div>
+</div>
+<a id="afb3f475ad86c140f2ab3d21dff3c42dd" name="afb3f475ad86c140f2ab3d21dff3c42dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb3f475ad86c140f2ab3d21dff3c42dd">&#9670;&nbsp;</a></span>getMessageChain() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="a00455.html">MessageChain</a> * MiraiCP::MessageEvent::getMessageChain </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在 <a class="el" href="a00235.html#a3dd489fc2c775cb0997402525d461877">MiraiCP::GroupMessageEvent</a>, <a class="el" href="a00239.html#a046a99377587f6d8278d7d6cfb55208b">MiraiCP::PrivateMessageEvent</a> , 以及 <a class="el" href="a00267.html#af4a3409f72b9feba0671804763390592">MiraiCP::GroupTempMessageEvent</a> 内被实现.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li><a class="el" href="a00077_source.html">Event.h</a></li>
+</ul>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">生成于 2022年 五月 3日 星期二 18:48:31 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="navelem"><a class="el" href="a00177.html">MiraiCP</a></li><li class="navelem"><a class="el" href="a00231.html">MessageEvent</a></li>
+    <li class="footer">生成于 2022年 五月 20日 星期五 18:15:39 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
 <script type="text/javascript">

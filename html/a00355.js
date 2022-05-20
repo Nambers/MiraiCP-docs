@@ -1,5 +1,5 @@
 var a00355 =
 [
-    [ "IllegalArgumentException", "a00355.html#a51c2e8914dcc244ab3ff8ca6f88b0c2a", null ],
-    [ "exceptionType", "a00355.html#a22651abf53cab34d8c117551bacd78f1", null ]
+    [ "RecallException", "a00355.html#a7efed6d5b4e2e7c655b53496fbff9710", null ],
+    [ "exceptionType", "a00355.html#abb3b6f5b42098376e6a195eb6f420410", null ]
 ];

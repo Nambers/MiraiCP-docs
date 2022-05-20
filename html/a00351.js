@@ -1,5 +1,5 @@
 var a00351 =
 [
-    [ "RemoteAssetException", "a00351.html#aebe23c969f37db35cc07993c6c53c9f4", null ],
-    [ "exceptionType", "a00351.html#a623ffa1b259b723ab191fe5adb52a2be", null ]
+    [ "GroupException", "a00351.html#a86d9f8647899ea7ec1c9bc29a0fab4e2", null ],
+    [ "exceptionType", "a00351.html#ad5423a44299fc74eca0a1be0e66529fd", null ]
 ];

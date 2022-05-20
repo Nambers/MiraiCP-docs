@@ -1,8 +1,9 @@
 var a00531 =
 [
-    [ "UnSupportMessage", "a00531.html#a6be0a774db3dc14967b31ab49e057454", null ],
-    [ "operator==", "a00531.html#a0ab999563baa8193b226d442d1a7f5dc", null ],
-    [ "ShouldNotUse", "a00531.html#ab59bb45f6a86d9eba8b7de54516de620", null ],
-    [ "toJson", "a00531.html#ae28bab32ffb5b7520376b88cb0fb70e1", null ],
-    [ "type", "a00531.html#ad5b8af135be7c2201fa5cc3d81fa8912", null ]
+    [ "Face", "a00531.html#aa0b031aa2e11403be44150ebce3dbb93", null ],
+    [ "operator==", "a00531.html#a013671a618db0081ea79cbecec88190f", null ],
+    [ "toJson", "a00531.html#a866de1e28199fa542e760d0caeea434e", null ],
+    [ "toMiraiCode", "a00531.html#a6f40de2d5ca391a1fb5a67fefe55d3e8", null ],
+    [ "type", "a00531.html#a73da05ce5bcbf5d40106b2db705fecb5", null ],
+    [ "id", "a00531.html#a213699a327644eb13d2dc0a5f935cdd8", null ]
 ];

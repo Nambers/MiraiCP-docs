@@ -1,6 +1,5 @@
 var a00327 =
 [
-    [ "BotIsBeingMutedException", "a00327.html#a548111b99d412290281c43e90a1e8e16", null ],
-    [ "exceptionType", "a00327.html#a86c42cdc24c6bf1f85c143cdc5ef6941", null ],
-    [ "timeRemain", "a00327.html#aacccf1ba2a31c6a8901d87d166c85f3e", null ]
+    [ "APIException", "a00327.html#a5ab35b388404f70eeccfe3474bdb9c90", null ],
+    [ "exceptionType", "a00327.html#aa95831ad20b7019b10241a25f8f41dd1", null ]
 ];

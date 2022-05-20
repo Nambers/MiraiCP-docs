@@ -1,6 +1,5 @@
 var a00323 =
 [
-    [ "BotException", "a00323.html#ac250396fe99586a5cf4edd42f708ba5f", null ],
-    [ "BotException", "a00323.html#a24ceda48b7072cd7cd3eeac8e781ec96", null ],
-    [ "exceptionType", "a00323.html#ac31df28b76fc89b362e1b94c4c866b43", null ]
+    [ "IllegalStateException", "a00323.html#ac9b5a8d083dbad7de5a9fb0690f4da43", null ],
+    [ "exceptionType", "a00323.html#ac82814555a14e6acfce3398f230997fa", null ]
 ];

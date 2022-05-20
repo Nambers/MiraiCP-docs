@@ -1,5 +1,5 @@
 var a00363 =
 [
-    [ "EventCancelledException", "a00363.html#adcf3347e6e34ba912fafd4bdd48a44af", null ],
-    [ "exceptionType", "a00363.html#ade28f5ad66bc98f50ba3a537d4402c07", null ]
+    [ "IllegalArgumentException", "a00363.html#a02715ae45b56dbcd02f81b07ce9d8232", null ],
+    [ "exceptionType", "a00363.html#a22651abf53cab34d8c117551bacd78f1", null ]
 ];

@@ -1,5 +1,5 @@
 var a00319 =
 [
-    [ "APIException", "a00319.html#a5ab35b388404f70eeccfe3474bdb9c90", null ],
-    [ "exceptionType", "a00319.html#aa95831ad20b7019b10241a25f8f41dd1", null ]
+    [ "UploadException", "a00319.html#a1b5ca7e57cd117a0e45baae54a10019f", null ],
+    [ "exceptionType", "a00319.html#a75aa16afc81716cc340be44ee4950e18", null ]
 ];

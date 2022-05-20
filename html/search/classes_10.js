@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['servicemessage_0',['ServiceMessage',['../a00498.html',1,'MiraiCP']]],
-  ['singlemessage_1',['SingleMessage',['../a00470.html',1,'MiraiCP']]]
+  ['servicemessage_0',['ServiceMessage',['../a00507.html',1,'MiraiCP']]],
+  ['singlemessage_1',['SingleMessage',['../a00479.html',1,'MiraiCP']]]
 ];

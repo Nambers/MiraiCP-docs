@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiraiCP: command.cpp</title>
+<title>MiraiCP: MiraiCP::Tools::MiraiCPDefer&lt; RT_TYPE &gt; 模板类 参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MiraiCP
-   &#160;<span id="projectnumber">v2.11.0-M3</span>
+   &#160;<span id="projectnumber">v2.11.0</span>
    </div>
    <div id="projectbrief">MiraiCP api document</div>
   </td>
@@ -90,70 +90,144 @@ $(document).ready(function(){initNavTree('a00555.html',''); initResizable(); });
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">command.cpp</div></div>
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-attribs">Public 属性</a> &#124;
+<a href="a00552.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">MiraiCP::Tools::MiraiCPDefer&lt; RT_TYPE &gt; 模板类 参考</div></div>
 </div><!--header-->
 <div class="contents">
-<p >所有加进doxygen doc的example</p>
-<p >监听指令</p>
-<div class="fragment"><div class="line"><span class="comment">// Copyright (c) 2020 - 2022. Eritque arcus and contributors.</span></div>
-<div class="line"><span class="comment">//</span></div>
-<div class="line"><span class="comment">// This program is free software: you can redistribute it and/or modify</span></div>
-<div class="line"><span class="comment">// it under the terms of the GNU Affero General Public License as</span></div>
-<div class="line"><span class="comment">// published by the Free Software Foundation, either version 3 of the</span></div>
-<div class="line"><span class="comment">// License, or any later version(in your opinion).</span></div>
-<div class="line"><span class="comment">//</span></div>
-<div class="line"><span class="comment">// This program is distributed in the hope that it will be useful,</span></div>
-<div class="line"><span class="comment">// but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div>
-<div class="line"><span class="comment">// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span></div>
-<div class="line"><span class="comment">// GNU Affero General Public License for more details.</span></div>
-<div class="line"><span class="comment">//</span></div>
-<div class="line"><span class="comment">// You should have received a copy of the GNU Affero General Public License</span></div>
-<div class="line"><span class="comment">// along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</span></div>
-<div class="line"><span class="comment">//</span></div>
-<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00140.html">MiraiCP.hpp</a>&gt;</span></div>
-<div class="line"><span class="keyword">using namespace </span><a class="code hl_namespace" href="a00177.html">MiraiCP</a>;</div>
-<div class="line"> </div>
-<div class="line"><span class="keyword">class </span>a : <span class="keyword">public</span> IRawCommand {</div>
-<div class="line"><span class="keyword">public</span>:</div>
-<div class="line">    IRawCommand::Config config()<span class="keyword"> override </span>{</div>
-<div class="line">        <span class="keywordflow">return</span> IRawCommand::Config(<span class="stringliteral">&quot;test&quot;</span>);</div>
-<div class="line">    }</div>
-<div class="line">    <span class="keywordtype">void</span> onCommand(std::optional&lt;Contact&gt; c, <span class="keyword">const</span> Bot &amp;b, <span class="keyword">const</span> MessageChain &amp;a)<span class="keyword"> override </span>{</div>
-<div class="line">        Logger::logger.info(a.toMiraiCode());</div>
-<div class="line">    }</div>
-<div class="line">    a() = <span class="keywordflow">default</span>;</div>
-<div class="line">};</div>
-<div class="line"> </div>
-<div class="line"><span class="keyword">class </span>Main : <span class="keyword">public</span> CPPPlugin {</div>
-<div class="line"><span class="keyword">public</span>:</div>
-<div class="line">    Main() : <a class="code hl_function" href="a00218.html#a8757991e0396faf72a9e0ad06caa53f4">CPPPlugin</a>(PluginConfig(</div>
-<div class="line">                     <span class="stringliteral">&quot;id&quot;</span>,</div>
-<div class="line">                     <span class="stringliteral">&quot;test&quot;</span>,</div>
-<div class="line">                     <span class="stringliteral">&quot;v1.0&quot;</span>,</div>
-<div class="line">                     <span class="stringliteral">&quot;a&quot;</span>)) {}</div>
-<div class="line">    <span class="keywordtype">void</span> onEnable()<span class="keyword"> override </span>{</div>
-<div class="line">        Event::processor.registerEvent&lt;<a class="code hl_enumvalue" href="a00177.html#a7311d4d7bd17d31ea37aceb87426056daf85aaa2127f5b4f45bd92e1987105005">GroupMessageEvent</a>&gt;([](<a class="code hl_enumvalue" href="a00177.html#a7311d4d7bd17d31ea37aceb87426056daf85aaa2127f5b4f45bd92e1987105005">GroupMessageEvent</a> e) {</div>
-<div class="line">            CommandManager::commandManager.registerCommand(a());</div>
-<div class="line">        });</div>
-<div class="line">    }</div>
-<div class="line">};</div>
-<div class="line"> </div>
-<div class="line"><span class="keywordtype">void</span> <a id="a0" name="a0"></a><a class="code hl_function" href="a00177.html#a12d27be6730af4fc321ac1eb231db281">MiraiCP::enrollPlugin</a>() {</div>
-<div class="line">    <a id="a1" name="a1"></a><a class="code hl_function" href="a00177.html#ad5dfcfb8bbf110c31ac8a5288f395bba">MiraiCP::enrollPlugin0</a>(<span class="keyword">new</span> Main());</div>
-<div class="line">}</div>
-<div class="ttc" id="aa00140_html"><div class="ttname"><a href="a00140.html">MiraiCP.hpp</a></div></div>
-<div class="ttc" id="aa00177_html"><div class="ttname"><a href="a00177.html">MiraiCP</a></div><div class="ttdef"><b>Definition:</b> <a href="a00044_source.html#l00023">Bot.cpp:23</a></div></div>
-<div class="ttc" id="aa00177_html_a12d27be6730af4fc321ac1eb231db281"><div class="ttname"><a href="a00177.html#a12d27be6730af4fc321ac1eb231db281">MiraiCP::enrollPlugin</a></div><div class="ttdeci">void enrollPlugin()</div><div class="ttdoc">注册插件函数, 需要被实现, 类似onStart();</div><div class="ttdef"><b>Definition:</b> <a href="a00002_source.html#l00051">callbackHandle.cpp:51</a></div></div>
-<div class="ttc" id="aa00177_html_a7311d4d7bd17d31ea37aceb87426056daf85aaa2127f5b4f45bd92e1987105005"><div class="ttname"><a href="a00177.html#a7311d4d7bd17d31ea37aceb87426056daf85aaa2127f5b4f45bd92e1987105005">MiraiCP::eventTypes::GroupMessageEvent</a></div><div class="ttdeci">@ GroupMessageEvent</div></div>
-<div class="ttc" id="aa00177_html_ad5dfcfb8bbf110c31ac8a5288f395bba"><div class="ttname"><a href="a00177.html#ad5dfcfb8bbf110c31ac8a5288f395bba">MiraiCP::enrollPlugin0</a></div><div class="ttdeci">void enrollPlugin0(CPPPlugin *p)</div><div class="ttdoc">用指针绑定插件</div><div class="ttdef"><b>Definition:</b> <a href="a00173_source.html#l00038">utils.h:38</a></div></div>
-<div class="ttc" id="aa00218_html_a8757991e0396faf72a9e0ad06caa53f4"><div class="ttname"><a href="a00218.html#a8757991e0396faf72a9e0ad06caa53f4">MiraiCP::CPPPlugin::CPPPlugin</a></div><div class="ttdeci">CPPPlugin(PluginConfig c)</div><div class="ttdef"><b>Definition:</b> <a href="a00071_source.html#l00039">CPPPlugin.h:39</a></div></div>
-</div><!-- fragment --> </div><!-- contents -->
+
+<p><code>#include &lt;<a class="el" href="a00167_source.html">Tools.h</a>&gt;</code></p>
+<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> MiraiCP::Tools::MiraiCPDefer&lt; RT_TYPE &gt; 的协作图:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="a00553.png" border="0" usemap="#a_mirai_c_p_1_1_tools_1_1_mirai_c_p_defer_3_01_r_t___t_y_p_e_01_4_coll__map" alt="Collaboration graph"/></div>
+<map name="a_mirai_c_p_1_1_tools_1_1_mirai_c_p_defer_3_01_r_t___t_y_p_e_01_4_coll__map" id="a_mirai_c_p_1_1_tools_1_1_mirai_c_p_defer_3_01_r_t___t_y_p_e_01_4_coll__map">
+<area shape="rect" title=" " alt="" coords="5,145,196,252"/>
+<area shape="rect" title=" " alt="" coords="63,5,138,83"/>
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a3973c844f3c12d276faa9e808f57a089"><td class="memTemplParams" colspan="2">template&lt;class F &gt; </td></tr>
+<tr class="memitem:a3973c844f3c12d276faa9e808f57a089"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00555.html#a3973c844f3c12d276faa9e808f57a089">MiraiCPDefer</a> (F &amp;&amp;<a class="el" href="a00035.html#a24f647174760cac13d2624b5ad74b00c">func</a>)</td></tr>
+<tr class="separator:a3973c844f3c12d276faa9e808f57a089"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d3aba8802266eba058aea22c438d382"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00555.html#a3d3aba8802266eba058aea22c438d382">~MiraiCPDefer</a> ()</td></tr>
+<tr class="separator:a3d3aba8802266eba058aea22c438d382"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public 属性</h2></td></tr>
+<tr class="memitem:a6bee05dab690b35a5ca50a3c523f2533"><td class="memItemLeft" align="right" valign="top">std::function&lt; RT_TYPE()&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00555.html#a6bee05dab690b35a5ca50a3c523f2533">defer_func</a></td></tr>
+<tr class="separator:a6bee05dab690b35a5ca50a3c523f2533"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename RT_TYPE&gt;<br />
+class MiraiCP::Tools::MiraiCPDefer&lt; RT_TYPE &gt;</div><p >defer class </p><dl class="section see"><dt>参见</dt><dd><a class="el" href="a00167.html#a7e8212fd73efa74415d83aa658eabf0b">MiraiCP_defer</a> </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="a00167_source.html">Tools.h</a> 第 <a class="el" href="a00167_source.html#l00112">112</a> 行定义.</p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a3973c844f3c12d276faa9e808f57a089" name="a3973c844f3c12d276faa9e808f57a089"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3973c844f3c12d276faa9e808f57a089">&#9670;&nbsp;</a></span>MiraiCPDefer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename RT_TYPE &gt; </div>
+<div class="memtemplate">
+template&lt;class F &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00555.html">MiraiCP::Tools::MiraiCPDefer</a>&lt; RT_TYPE &gt;::<a class="el" href="a00555.html">MiraiCPDefer</a> </td>
+          <td>(</td>
+          <td class="paramtype">F &amp;&amp;&#160;</td>
+          <td class="paramname"><em>func</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="a00167_source.html">Tools.h</a> 第 <a class="el" href="a00167_source.html#l00117">117</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>                                   : <a class="code hl_variable" href="a00555.html#a6bee05dab690b35a5ca50a3c523f2533">defer_func</a>(<a class="code hl_function" href="a00035.html#a24f647174760cac13d2624b5ad74b00c">func</a>) {</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>            }</div>
+<div class="ttc" id="aa00035_html_a24f647174760cac13d2624b5ad74b00c"><div class="ttname"><a href="a00035.html#a24f647174760cac13d2624b5ad74b00c">func</a></div><div class="ttdeci">void func()</div><div class="ttdef"><b>Definition:</b> <a href="a00035_source.html#l00020">thread.cpp:20</a></div></div>
+<div class="ttc" id="aa00555_html_a6bee05dab690b35a5ca50a3c523f2533"><div class="ttname"><a href="a00555.html#a6bee05dab690b35a5ca50a3c523f2533">MiraiCP::Tools::MiraiCPDefer::defer_func</a></div><div class="ttdeci">std::function&lt; RT_TYPE()&gt; defer_func</div><div class="ttdef"><b>Definition:</b> <a href="a00167_source.html#l00114">Tools.h:114</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a3d3aba8802266eba058aea22c438d382" name="a3d3aba8802266eba058aea22c438d382"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d3aba8802266eba058aea22c438d382">&#9670;&nbsp;</a></span>~MiraiCPDefer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename RT_TYPE &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="a00555.html">MiraiCP::Tools::MiraiCPDefer</a>&lt; RT_TYPE &gt;::~<a class="el" href="a00555.html">MiraiCPDefer</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="a00167_source.html">Tools.h</a> 第 <a class="el" href="a00167_source.html#l00120">120</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>                                    {</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>                <a class="code hl_variable" href="a00555.html#a6bee05dab690b35a5ca50a3c523f2533">defer_func</a>();</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>            }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="a6bee05dab690b35a5ca50a3c523f2533" name="a6bee05dab690b35a5ca50a3c523f2533"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6bee05dab690b35a5ca50a3c523f2533">&#9670;&nbsp;</a></span>defer_func</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename RT_TYPE &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::function&lt;RT_TYPE()&gt; <a class="el" href="a00555.html">MiraiCP::Tools::MiraiCPDefer</a>&lt; RT_TYPE &gt;::defer_func</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="a00167_source.html">Tools.h</a> 第 <a class="el" href="a00167_source.html#l00114">114</a> 行定义.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li><a class="el" href="a00167_source.html">Tools.h</a></li>
+</ul>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">生成于 2022年 五月 3日 星期二 18:48:31 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="navelem"><a class="el" href="a00177.html">MiraiCP</a></li><li class="navelem"><a class="el" href="a00180.html">Tools</a></li><li class="navelem"><a class="el" href="a00555.html">MiraiCPDefer</a></li>
+    <li class="footer">生成于 2022年 五月 20日 星期五 18:15:39 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
 <script type="text/javascript">

@@ -1,15 +1,17 @@
 var a00447 =
 [
-    [ "MessageSource", "a00447.html#a49210b1a4c711d50ab0acc17d0dae88d", null ],
-    [ "MessageSource", "a00447.html#a17c32c44e0af14a5f23f15ca56e527ae", null ],
-    [ "deserializeFromString", "a00447.html#a1f98db6bbdf6b7d178bf92f55fd2e4dc", null ],
-    [ "operator==", "a00447.html#a2d08aa9b079abe268966313e12a3496b", null ],
-    [ "recall", "a00447.html#afe1ce48e1c2ee0095202843e5df82f9e", null ],
-    [ "serializeToString", "a00447.html#aca51487498128b420019182e1331a282", null ],
-    [ "ShouldNotUse", "a00447.html#af746248b4f82c9832ace5b8b98e5295f", null ],
-    [ "env", "a00447.html#aedc35b34b91f500adf45ab31f088b2e0", null ],
-    [ "groupid", "a00447.html#af4796797483c9706ba534a2eff4c78c5", null ],
-    [ "ids", "a00447.html#a4b5fd176a16871dbb39e5be15b2b6c15", null ],
-    [ "internalids", "a00447.html#a358ba0250715b1c4692554995750675e", null ],
-    [ "source", "a00447.html#afc51041bfb7cc7cb0915b5131ee05805", null ]
+    [ "Member", "a00447.html#a3cfdf6803d46393e79da5382d8189dd7", null ],
+    [ "Member", "a00447.html#a94779cdd0b802852a5d32ea71399413e", null ],
+    [ "at", "a00447.html#ace4950bd9191fdf90ecba764c870f90e", null ],
+    [ "changeNameCard", "a00447.html#a5aa1cde5b16fcbd72d942f038fd75b6e", null ],
+    [ "getPermission", "a00447.html#ade27b6ea619f27ec4823618a0cacf00a", null ],
+    [ "kick", "a00447.html#ad83478036b6ad5750b7b4de2c182353b", null ],
+    [ "modifyAdmin", "a00447.html#ad9b954fd548c29c1fcf7b6895605cfaf", null ],
+    [ "mute", "a00447.html#a068163bcb889d26bc8f8ac767472156d", null ],
+    [ "refreshInfo", "a00447.html#a82a34041332929299e293f81c6152ca0", null ],
+    [ "sendNudge", "a00447.html#aff2d2c3a907f051ca89d506b02caa5d0", null ],
+    [ "sendVoice", "a00447.html#aeeb58a0e84068d0b18bdb634093cf5d7", null ],
+    [ "unMute", "a00447.html#a218b3216bfc009ec7ca8b3535496f7c3", null ],
+    [ "isAnonymous", "a00447.html#a02c93da6f71f701f384aceef3746c9c2", null ],
+    [ "permission", "a00447.html#a348c726624fb4fe3e1d419f32f51031a", null ]
 ];

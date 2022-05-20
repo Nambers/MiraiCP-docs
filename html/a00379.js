@@ -1,8 +1,12 @@
 var a00379 =
 [
-    [ "Friend", "a00379.html#ab3ac94c426a7f2d61f77c970cedd838e", null ],
-    [ "Friend", "a00379.html#a00e6db35292ca302757e69e60c06f0eb", null ],
-    [ "deleteFriend", "a00379.html#a6e7e1a8a401f0ff1c636f11b988703d5", null ],
-    [ "refreshInfo", "a00379.html#a44dbdbe1a6cb81ad6dba5a51d0a4fca9", null ],
-    [ "sendNudge", "a00379.html#a0321140e76255aadcd1a23c92b0d5031", null ]
+    [ "ForwardedNode", "a00379.html#acd0109a76b19e5643fc518e34f971747", null ],
+    [ "ForwardedNode", "a00379.html#ab85d3c12755094ff9185ec00a65046c7", null ],
+    [ "isForwarded", "a00379.html#ab7c98ea30d551fc60f09289338b100ea", null ],
+    [ "display", "a00379.html#a0e5eb31cbed88b6a38d695b4291bfbca", null ],
+    [ "id", "a00379.html#aaaa85af6ea1bea84767d5352fdc2c907", null ],
+    [ "isForwardedMessage", "a00379.html#a89e1eab9756347a42df11550365035b5", null ],
+    [ "message", "a00379.html#ab8ddc4de60c15af76e29ffee2eef2050", null ],
+    [ "name", "a00379.html#a7c1ccf827b401b609cfc8481909019e7", null ],
+    [ "time", "a00379.html#ac5f4d270eb51284f2f25051aaf1545f7", null ]
 ];

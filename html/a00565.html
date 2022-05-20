@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiraiCP: callbackHandle.cpp</title>
+<title>MiraiCP: forwardedMessage.cpp</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MiraiCP
-   &#160;<span id="projectnumber">v2.11.0-M3</span>
+   &#160;<span id="projectnumber">v2.11.0</span>
    </div>
    <div id="projectbrief">MiraiCP api document</div>
   </td>
@@ -90,10 +90,10 @@ $(document).ready(function(){initNavTree('a00565.html',''); initResizable(); });
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">callbackHandle.cpp</div></div>
+  <div class="headertitle"><div class="title">forwardedMessage.cpp</div></div>
 </div><!--header-->
 <div class="contents">
-<p >event handler</p>
+<p >构造转发信息</p>
 <div class="fragment"><div class="line"><span class="comment">// Copyright (c) 2020 - 2022. Eritque arcus and contributors.</span></div>
 <div class="line"><span class="comment">//</span></div>
 <div class="line"><span class="comment">// This program is free software: you can redistribute it and/or modify</span></div>
@@ -110,58 +110,60 @@ $(document).ready(function(){initNavTree('a00565.html',''); initResizable(); });
 <div class="line"><span class="comment">// along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</span></div>
 <div class="line"><span class="comment">//</span></div>
 <div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00140.html">MiraiCP.hpp</a>&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;string&gt;</span></div>
 <div class="line"><span class="keyword">using namespace </span><a class="code hl_namespace" href="a00177.html">MiraiCP</a>;</div>
 <div class="line"> </div>
 <div class="line"><span class="keyword">class </span>Main : <span class="keyword">public</span> CPPPlugin {</div>
 <div class="line"><span class="keyword">public</span>:</div>
-<div class="line">    <span class="comment">// 配置插件信息</span></div>
-<div class="line">    Main() : <a class="code hl_function" href="a00218.html#a8757991e0396faf72a9e0ad06caa53f4">CPPPlugin</a>(PluginConfig(</div>
+<div class="line">    Main() : <a class="code hl_function" href="a00219.html#a8757991e0396faf72a9e0ad06caa53f4">CPPPlugin</a>(PluginConfig(</div>
 <div class="line">                     <span class="stringliteral">&quot;id&quot;</span>,</div>
 <div class="line">                     <span class="stringliteral">&quot;test&quot;</span>,</div>
 <div class="line">                     <span class="stringliteral">&quot;v1.0&quot;</span>,</div>
 <div class="line">                     <span class="stringliteral">&quot;a&quot;</span>)) {}</div>
-<div class="line"> </div>
 <div class="line">    <span class="keywordtype">void</span> onEnable()<span class="keyword"> override </span>{</div>
-<div class="line">        <span class="keyword">auto</span> handle0 = Event::registerEvent&lt;GroupMessageEvent&gt;([](<span class="keyword">const</span> <a class="code hl_enumvalue" href="a00177.html#a7311d4d7bd17d31ea37aceb87426056daf85aaa2127f5b4f45bd92e1987105005">GroupMessageEvent</a> &amp;e) {</div>
-<div class="line">            e.group.sendMessage(<span class="stringliteral">&quot;Hello world!&quot;</span>);</div>
-<div class="line">        });</div>
+<div class="line">        Event::registerEvent&lt;GroupMessageEvent&gt;([](<a class="code hl_enumvalue" href="a00177.html#a7311d4d7bd17d31ea37aceb87426056daf85aaa2127f5b4f45bd92e1987105005">GroupMessageEvent</a> e) {</div>
+<div class="line">            <span class="keyword">auto</span> style1 = ForwardedMessageDisplayStrategy();</div>
+<div class="line">            style1.summary = <span class="stringliteral">&quot;Summarya&quot;</span>;</div>
+<div class="line">            style1.preview.emplace_back(<span class="stringliteral">&quot;preview1&quot;</span>);</div>
+<div class="line">            style1.source = <span class="stringliteral">&quot;SourceA&quot;</span>;</div>
+<div class="line">            style1.brief = <span class="stringliteral">&quot;BriefA&quot;</span>;</div>
+<div class="line">            e.group.sendMessage(<span class="stringliteral">&quot;Origin:&quot;</span>);</div>
+<div class="line">            ForwardedMessage(</div>
+<div class="line">                    {ForwardedNode(12, <span class="stringliteral">&quot;a&quot;</span>, MessageChain(PlainText(<span class="stringliteral">&quot;test&quot;</span>)), 1),</div>
+<div class="line">                     ForwardedNode(12, <span class="stringliteral">&quot;b&quot;</span>, ForwardedMessage({ForwardedNode(12, <span class="stringliteral">&quot;a&quot;</span>, MessageChain(PlainText(<span class="stringliteral">&quot;test&quot;</span>)), 1)}), 1)},</div>
+<div class="line">                    ForwardedMessageDisplayStrategy::defaultStrategy())</div>
+<div class="line">                    .sendTo(&amp;e.group);</div>
 <div class="line"> </div>
-<div class="line">        <span class="keyword">auto</span> handle1 = Event::registerEvent&lt;BotOnlineEvent&gt;([](<span class="keyword">const</span> <a class="code hl_enumvalue" href="a00177.html#a7311d4d7bd17d31ea37aceb87426056da76d3e6ad0a2a8365da8d9fca191fcae9">BotOnlineEvent</a> &amp;e) {</div>
-<div class="line">            <span class="keyword">auto</span> f = Friend(1234567890, 9876543210);</div>
-<div class="line">            f.sendMessage(<span class="stringliteral">&quot;Bot is live!&quot;</span>);</div>
-<div class="line">        });</div>
+<div class="line">            <span class="keywordflow">if</span> (e.message[0].type() == OnlineForwardedMessage::type())</div>
+<div class="line">                e.message[0].get&lt;OnlineForwardedMessage&gt;().toForwardedMessage(ForwardedMessageDisplayStrategy::defaultStrategy()).sendTo(&amp;e.group);</div>
+<div class="line">            e.group.sendMessage(<span class="stringliteral">&quot;style1&quot;</span>);</div>
+<div class="line">            ForwardedMessage(</div>
+<div class="line">                    {ForwardedNode(12, <span class="stringliteral">&quot;a&quot;</span>, MessageChain(PlainText(<span class="stringliteral">&quot;test&quot;</span>)), 1),</div>
+<div class="line">                     ForwardedNode(12, <span class="stringliteral">&quot;b&quot;</span>, ForwardedMessage({ForwardedNode(12, <span class="stringliteral">&quot;a&quot;</span>, MessageChain(PlainText(<span class="stringliteral">&quot;test&quot;</span>)), 1)}), 1)},</div>
+<div class="line">                    style1)</div>
+<div class="line">                    .sendTo(&amp;e.group);</div>
 <div class="line"> </div>
-<div class="line">        <span class="keyword">auto</span> handle2 = Event::registerEvent&lt;MiraiCPExceptionEvent&gt;([&amp;](<span class="keyword">const</span> <a class="code hl_enumvalue" href="a00177.html#a7311d4d7bd17d31ea37aceb87426056daf3dfeb621d756effa3acc2ac355d0803">MiraiCPExceptionEvent</a> &amp;e) {</div>
-<div class="line">            <span class="keyword">auto</span> ct = Friend(1234567890, 9876543210);</div>
-<div class="line">            Logger::logger.info(e.getException());</div>
-<div class="line">            ct.sendMessage(<span class="stringliteral">&quot;Error occurs, type: &quot;</span> + e.getException()-&gt;getExceptionType() + <span class="stringliteral">&quot;.\nError occurs in file: &quot;</span> + e.getException()-&gt;filename + <span class="stringliteral">&quot;, line: &quot;</span> + std::to_string(e.getException()-&gt;lineNum));</div>
+<div class="line">            <span class="keywordflow">if</span> (e.message[0].type() == OnlineForwardedMessage::type())</div>
+<div class="line">                e.message[0].get&lt;OnlineForwardedMessage&gt;().toForwardedMessage(style1).sendTo(&amp;e.group);</div>
 <div class="line">        });</div>
-<div class="line"> </div>
-<div class="line">        <span class="comment">// 停止handle0注册的GroupMessageEvent</span></div>
-<div class="line">        handle0-&gt;stop();</div>
 <div class="line">    }</div>
 <div class="line">};</div>
 <div class="line"> </div>
-<div class="line"><span class="comment">// 绑定当前插件实例</span></div>
 <div class="line"><span class="keywordtype">void</span> <a id="a0" name="a0"></a><a class="code hl_function" href="a00177.html#a12d27be6730af4fc321ac1eb231db281">MiraiCP::enrollPlugin</a>() {</div>
 <div class="line">    <a id="a1" name="a1"></a><a class="code hl_function" href="a00177.html#ad5dfcfb8bbf110c31ac8a5288f395bba">MiraiCP::enrollPlugin0</a>(<span class="keyword">new</span> Main());</div>
 <div class="line">}</div>
 <div class="ttc" id="aa00140_html"><div class="ttname"><a href="a00140.html">MiraiCP.hpp</a></div></div>
 <div class="ttc" id="aa00177_html"><div class="ttname"><a href="a00177.html">MiraiCP</a></div><div class="ttdef"><b>Definition:</b> <a href="a00044_source.html#l00023">Bot.cpp:23</a></div></div>
 <div class="ttc" id="aa00177_html_a12d27be6730af4fc321ac1eb231db281"><div class="ttname"><a href="a00177.html#a12d27be6730af4fc321ac1eb231db281">MiraiCP::enrollPlugin</a></div><div class="ttdeci">void enrollPlugin()</div><div class="ttdoc">注册插件函数, 需要被实现, 类似onStart();</div><div class="ttdef"><b>Definition:</b> <a href="a00002_source.html#l00051">callbackHandle.cpp:51</a></div></div>
-<div class="ttc" id="aa00177_html_a7311d4d7bd17d31ea37aceb87426056da76d3e6ad0a2a8365da8d9fca191fcae9"><div class="ttname"><a href="a00177.html#a7311d4d7bd17d31ea37aceb87426056da76d3e6ad0a2a8365da8d9fca191fcae9">MiraiCP::eventTypes::BotOnlineEvent</a></div><div class="ttdeci">@ BotOnlineEvent</div></div>
-<div class="ttc" id="aa00177_html_a7311d4d7bd17d31ea37aceb87426056daf3dfeb621d756effa3acc2ac355d0803"><div class="ttname"><a href="a00177.html#a7311d4d7bd17d31ea37aceb87426056daf3dfeb621d756effa3acc2ac355d0803">MiraiCP::eventTypes::MiraiCPExceptionEvent</a></div><div class="ttdeci">@ MiraiCPExceptionEvent</div></div>
 <div class="ttc" id="aa00177_html_a7311d4d7bd17d31ea37aceb87426056daf85aaa2127f5b4f45bd92e1987105005"><div class="ttname"><a href="a00177.html#a7311d4d7bd17d31ea37aceb87426056daf85aaa2127f5b4f45bd92e1987105005">MiraiCP::eventTypes::GroupMessageEvent</a></div><div class="ttdeci">@ GroupMessageEvent</div></div>
 <div class="ttc" id="aa00177_html_ad5dfcfb8bbf110c31ac8a5288f395bba"><div class="ttname"><a href="a00177.html#ad5dfcfb8bbf110c31ac8a5288f395bba">MiraiCP::enrollPlugin0</a></div><div class="ttdeci">void enrollPlugin0(CPPPlugin *p)</div><div class="ttdoc">用指针绑定插件</div><div class="ttdef"><b>Definition:</b> <a href="a00173_source.html#l00038">utils.h:38</a></div></div>
-<div class="ttc" id="aa00218_html_a8757991e0396faf72a9e0ad06caa53f4"><div class="ttname"><a href="a00218.html#a8757991e0396faf72a9e0ad06caa53f4">MiraiCP::CPPPlugin::CPPPlugin</a></div><div class="ttdeci">CPPPlugin(PluginConfig c)</div><div class="ttdef"><b>Definition:</b> <a href="a00071_source.html#l00039">CPPPlugin.h:39</a></div></div>
+<div class="ttc" id="aa00219_html_a8757991e0396faf72a9e0ad06caa53f4"><div class="ttname"><a href="a00219.html#a8757991e0396faf72a9e0ad06caa53f4">MiraiCP::CPPPlugin::CPPPlugin</a></div><div class="ttdeci">CPPPlugin(PluginConfig c)</div><div class="ttdef"><b>Definition:</b> <a href="a00071_source.html#l00039">CPPPlugin.h:39</a></div></div>
 </div><!-- fragment --> </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">生成于 2022年 五月 3日 星期二 18:48:31 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="footer">生成于 2022年 五月 20日 星期五 18:15:37 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
 <script type="text/javascript">

@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiraiCP: schedule.cpp</title>
+<title>MiraiCP: 成员列表</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MiraiCP
-   &#160;<span id="projectnumber">v2.11.0-M3</span>
+   &#160;<span id="projectnumber">v2.11.0</span>
    </div>
    <div id="projectbrief">MiraiCP api document</div>
   </td>
@@ -71,7 +71,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('a00548.html',''); initResizable(); });
+$(document).ready(function(){initNavTree('a00551.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -90,71 +90,21 @@ $(document).ready(function(){initNavTree('a00548.html',''); initResizable(); });
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">schedule.cpp</div></div>
+  <div class="headertitle"><div class="title">MiraiCP::ThreadManager::ThreadInfo 成员列表</div></div>
 </div><!--header-->
 <div class="contents">
-<p >定时事件</p>
-<div class="fragment"><div class="line"><span class="comment">// Copyright (c) 2020 - 2022. Eritque arcus and contributors.</span></div>
-<div class="line"><span class="comment">//</span></div>
-<div class="line"><span class="comment">// This program is free software: you can redistribute it and/or modify</span></div>
-<div class="line"><span class="comment">// it under the terms of the GNU Affero General Public License as</span></div>
-<div class="line"><span class="comment">// published by the Free Software Foundation, either version 3 of the</span></div>
-<div class="line"><span class="comment">// License, or any later version(in your opinion).</span></div>
-<div class="line"><span class="comment">//</span></div>
-<div class="line"><span class="comment">// This program is distributed in the hope that it will be useful,</span></div>
-<div class="line"><span class="comment">// but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div>
-<div class="line"><span class="comment">// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span></div>
-<div class="line"><span class="comment">// GNU Affero General Public License for more details.</span></div>
-<div class="line"><span class="comment">//</span></div>
-<div class="line"><span class="comment">// You should have received a copy of the GNU Affero General Public License</span></div>
-<div class="line"><span class="comment">// along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</span></div>
-<div class="line"><span class="comment">//</span></div>
-<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00134.html">MiraiCP.hpp</a>&gt;</span></div>
-<div class="line"><span class="keyword">using namespace </span><a class="code hl_namespace" href="a00171.html">MiraiCP</a>;</div>
-<div class="line"> </div>
-<div class="line"><span class="keyword">class </span>Main : <span class="keyword">public</span> CPPPlugin {</div>
-<div class="line"><span class="keyword">public</span>:</div>
-<div class="line">    Main() : CPPPlugin(PluginConfig(</div>
-<div class="line">                     <span class="stringliteral">&quot;id&quot;</span>,</div>
-<div class="line">                     <span class="stringliteral">&quot;test&quot;</span>,</div>
-<div class="line">                     <span class="stringliteral">&quot;v1.0&quot;</span>,</div>
-<div class="line">                     <span class="stringliteral">&quot;a&quot;</span>)) {}</div>
-<div class="line">    <span class="keywordtype">void</span> onEnable()<span class="keyword"> override </span>{</div>
-<div class="line">        Event::processor.registerEvent&lt;<a class="code hl_enumvalue" href="a00171.html#a9978cdf5158c8fc2ed93dbd7bbf3efb5af85aaa2127f5b4f45bd92e1987105005">GroupMessageEvent</a>&gt;([](<a class="code hl_enumvalue" href="a00171.html#a9978cdf5158c8fc2ed93dbd7bbf3efb5af85aaa2127f5b4f45bd92e1987105005">GroupMessageEvent</a> a) {</div>
-<div class="line">            <span class="comment">// 一起传递过去的自定义信息</span></div>
-<div class="line">            <a id="a0" name="a0"></a><a class="code hl_typedef" href="a00164.html#ab701e3ac61a85b337ec5c1abaad6742d">nlohmann::json</a> j;</div>
-<div class="line">            j[<span class="stringliteral">&quot;type&quot;</span>] = 1;</div>
-<div class="line">            j[<span class="stringliteral">&quot;id&quot;</span>] = 111;</div>
-<div class="line">            j[<span class="stringliteral">&quot;bid&quot;</span>] = 111;</div>
-<div class="line">            <a id="a1" name="a1"></a><a class="code hl_function" href="a00171.html#ad274e5c7a685e18ad0b3817fd554b934">schedule</a>(100, j.dump());</div>
-<div class="line">            Event::processor.registerEvent&lt;<a class="code hl_enumvalue" href="a00171.html#a9978cdf5158c8fc2ed93dbd7bbf3efb5ab912d6b062af313eba2f8c3ce7e957e2">TimeOutEvent</a>&gt;([](<a class="code hl_enumvalue" href="a00171.html#a9978cdf5158c8fc2ed93dbd7bbf3efb5ab912d6b062af313eba2f8c3ce7e957e2">TimeOutEvent</a> e) {</div>
-<div class="line">                <a class="code hl_typedef" href="a00164.html#ab701e3ac61a85b337ec5c1abaad6742d">nlohmann::json</a> j = nlohmann::json::parse(e.msg);</div>
-<div class="line">                <span class="keywordflow">if</span> (j[<span class="stringliteral">&quot;type&quot;</span>] == 1)</div>
-<div class="line">                    <span class="comment">// 发送群消息</span></div>
-<div class="line">                    Group(j[<span class="stringliteral">&quot;id&quot;</span>], j[<span class="stringliteral">&quot;bid&quot;</span>]).sendMessage(<span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line">            });</div>
-<div class="line">        });</div>
-<div class="line">    }</div>
-<div class="line">};</div>
-<div class="line"> </div>
-<div class="line"><span class="keywordtype">void</span> <a id="a2" name="a2"></a><a class="code hl_function" href="a00171.html#a12d27be6730af4fc321ac1eb231db281">MiraiCP::enrollPlugin</a>() {</div>
-<div class="line">    <a id="a3" name="a3"></a><a class="code hl_function" href="a00171.html#ad5dfcfb8bbf110c31ac8a5288f395bba">MiraiCP::enrollPlugin0</a>(<span class="keyword">new</span> Main());</div>
-<div class="line">}</div>
-<div class="ttc" id="aa00134_html"><div class="ttname"><a href="a00134.html">MiraiCP.hpp</a></div></div>
-<div class="ttc" id="aa00164_html_ab701e3ac61a85b337ec5c1abaad6742d"><div class="ttname"><a href="a00164.html#ab701e3ac61a85b337ec5c1abaad6742d">json</a></div><div class="ttdeci">nlohmann::json json</div><div class="ttdef"><b>Definition:</b> <a href="a00164_source.html#l00026">utils.cpp:26</a></div></div>
-<div class="ttc" id="aa00171_html"><div class="ttname"><a href="a00171.html">MiraiCP</a></div><div class="ttdef"><b>Definition:</b> <a href="a00038_source.html#l00023">Bot.cpp:23</a></div></div>
-<div class="ttc" id="aa00171_html_a12d27be6730af4fc321ac1eb231db281"><div class="ttname"><a href="a00171.html#a12d27be6730af4fc321ac1eb231db281">MiraiCP::enrollPlugin</a></div><div class="ttdeci">void enrollPlugin()</div><div class="ttdoc">注册插件函数, 需要被实现, 类似onStart();</div><div class="ttdef"><b>Definition:</b> <a href="a00032_source.html#l00142">core.cpp:142</a></div></div>
-<div class="ttc" id="aa00171_html_a9978cdf5158c8fc2ed93dbd7bbf3efb5ab912d6b062af313eba2f8c3ce7e957e2"><div class="ttname"><a href="a00171.html#a9978cdf5158c8fc2ed93dbd7bbf3efb5ab912d6b062af313eba2f8c3ce7e957e2">MiraiCP::eventTypes::TimeOutEvent</a></div><div class="ttdeci">@ TimeOutEvent</div></div>
-<div class="ttc" id="aa00171_html_a9978cdf5158c8fc2ed93dbd7bbf3efb5af85aaa2127f5b4f45bd92e1987105005"><div class="ttname"><a href="a00171.html#a9978cdf5158c8fc2ed93dbd7bbf3efb5af85aaa2127f5b4f45bd92e1987105005">MiraiCP::eventTypes::GroupMessageEvent</a></div><div class="ttdeci">@ GroupMessageEvent</div></div>
-<div class="ttc" id="aa00171_html_ad274e5c7a685e18ad0b3817fd554b934"><div class="ttname"><a href="a00171.html#ad274e5c7a685e18ad0b3817fd554b934">MiraiCP::schedule</a></div><div class="ttdeci">void schedule(long time, const std::string &amp;msg, JNIEnv *env=nullptr)</div><div class="ttdoc">定时任务, 在一定时间后广播**一次**TimeOutEvent</div><div class="ttdef"><b>Definition:</b> <a href="a00167_source.html#l00028">utils.h:28</a></div></div>
-<div class="ttc" id="aa00171_html_ad5dfcfb8bbf110c31ac8a5288f395bba"><div class="ttname"><a href="a00171.html#ad5dfcfb8bbf110c31ac8a5288f395bba">MiraiCP::enrollPlugin0</a></div><div class="ttdeci">void enrollPlugin0(CPPPlugin *p)</div><div class="ttdoc">用指针绑定插件</div><div class="ttdef"><b>Definition:</b> <a href="a00167_source.html#l00038">utils.h:38</a></div></div>
-</div><!-- fragment --> </div><!-- contents -->
+
+<p>成员的完整列表，这些成员属于 <a class="el" href="a00551.html">MiraiCP::ThreadManager::ThreadInfo</a>,包括所有继承而来的类成员</p>
+<table class="directory">
+  <tr class="even"><td class="entry"><a class="el" href="a00551.html#a20796cdd95ace90b1f56b825abf51032">attach</a></td><td class="entry"><a class="el" href="a00551.html">MiraiCP::ThreadManager::ThreadInfo</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="a00551.html#ad5e0fc94f06fd33fbc0c6db40c0486eb">e</a></td><td class="entry"><a class="el" href="a00551.html">MiraiCP::ThreadManager::ThreadInfo</a></td><td class="entry"></td></tr>
+</table></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">生成于 2022年 五月 1日 星期日 11:26:10 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="footer">生成于 2022年 五月 20日 星期五 18:15:39 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
 <script type="text/javascript">

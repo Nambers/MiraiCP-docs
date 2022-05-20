@@ -1,8 +1,12 @@
 var a00287 =
 [
-    [ "MiraiCPExceptionEvent", "a00287.html#a67f475ec3ebcf1f185e5d9ef13fcd14c", null ],
-    [ "get_event_type", "a00287.html#ae1d7b10fffc99fba2cb4d08754e42365", null ],
-    [ "getEventType", "a00287.html#a95739c7970624a1ef395ba899e2bf68d", null ],
-    [ "getException", "a00287.html#a9e986a6f69f2fd33a7313827a1f75da0", null ],
-    [ "exceptionPtr", "a00287.html#abbe1679705abc11d256a39eb12ac6837", null ]
+    [ "MemberJoinRequestEvent", "a00287.html#a0ee741bf6f005098ecd99b841dacf67e", null ],
+    [ "accept", "a00287.html#ace031723d310c72ed25b83485f66a034", null ],
+    [ "get_event_type", "a00287.html#a4575b38a0df0326b85e0927a3ff1484b", null ],
+    [ "operate", "a00287.html#a57e031d98608fde09fc098481effb799", null ],
+    [ "reject", "a00287.html#a855d60c9e71eda3fd438e45728a8799d", null ],
+    [ "group", "a00287.html#a7967276b662117dfae303235ce70fada", null ],
+    [ "inviter", "a00287.html#a1a2aa46fd5e85786f2e3858e12ceaeea", null ],
+    [ "requesterId", "a00287.html#a7e58fe5f7635d01343da6a1ea7a725e9", null ],
+    [ "source", "a00287.html#aa1b90d95a75a1e6b79aa54a777eb8bf7", null ]
 ];

@@ -1,8 +1,10 @@
 var a00203 =
 [
-    [ "CommandManager", "a00203.html#acf247b0f4f71627dc920d3297be6314f", null ],
-    [ "operator[]", "a00203.html#a2cadbf9c0ff28ff16c544c0fc03b874d", null ],
-    [ "registerCommand", "a00203.html#accb883db18602dc65b5fdd264dd73bfd", null ],
-    [ "commandList", "a00203.html#af770c2433fdf62bee434d79f7118cbcc", null ],
-    [ "commandManager", "a00203.html#a772ce2c737ce39e63ed80b023019f152", null ]
+    [ "Config", "a00203.html#abc66a7ba8c5d1bfa0fa2a521554ea166", null ],
+    [ "description", "a00203.html#ae924c02b04ee3fec68c0838ee34bd45d", null ],
+    [ "override", "a00203.html#ad502d3f82eba6b75fcaa6e5acb16eed1", null ],
+    [ "preFixOption", "a00203.html#af40c74e212dd165a72e7b2e8769e0dcb", null ],
+    [ "primaryName", "a00203.html#a21a4c0a9fe2032ce10efbd76c5388dce", null ],
+    [ "secondNames", "a00203.html#a5211c63986e404f8edc7b36cbd0c3618", null ],
+    [ "usage", "a00203.html#a3f604db6531d4956520cf813d57aa544", null ]
 ];

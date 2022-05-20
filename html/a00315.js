@@ -1,5 +1,5 @@
 var a00315 =
 [
-    [ "IllegalStateException", "a00315.html#ac9b5a8d083dbad7de5a9fb0690f4da43", null ],
-    [ "exceptionType", "a00315.html#ac82814555a14e6acfce3398f230997fa", null ]
+    [ "MiraiCPExceptionCRTP", "a00315.html#a3158432cce833ca29cf216c9e46130c0", null ],
+    [ "getExceptionType", "a00315.html#a959de8110940940b1b354def276e9923", null ]
 ];
