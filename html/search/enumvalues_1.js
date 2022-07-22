@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['baseevent_0',['BaseEvent',['../a00177.html#a7311d4d7bd17d31ea37aceb87426056da8dd7f15e8cd8d0e9e511171fe6495f39',1,'MiraiCP']]],
-  ['botjoingroupevent_1',['BotJoinGroupEvent',['../a00177.html#a7311d4d7bd17d31ea37aceb87426056dac66ca97964ea1d35a4250fa6a794f85f',1,'MiraiCP']]],
-  ['botleaveevent_2',['BotLeaveEvent',['../a00177.html#a7311d4d7bd17d31ea37aceb87426056da08a0b0fe21c21e8984578e791d1e9dcb',1,'MiraiCP']]],
-  ['botonlineevent_3',['BotOnlineEvent',['../a00177.html#a7311d4d7bd17d31ea37aceb87426056da76d3e6ad0a2a8365da8d9fca191fcae9',1,'MiraiCP']]],
-  ['buildforward_4',['Buildforward',['../a00178.html#a1bc3c425340774687507c1683967231bae5f8cd453ef5b1b8638c8c7cb6e3db4f',1,'MiraiCP::Config']]]
+  ['baseevent_0',['BaseEvent',['../a00199.html#abe9e9d8212ea8f23717b72db64393caba497dd3a8c7ae19e8a6a5e16e5e546e32',1,'MiraiCP::eventTypes']]],
+  ['botjoingroupevent_1',['BotJoinGroupEvent',['../a00199.html#abe9e9d8212ea8f23717b72db64393cabadc958c860c6a02731d1f2aaf73935643',1,'MiraiCP::eventTypes']]],
+  ['botleaveevent_2',['BotLeaveEvent',['../a00199.html#abe9e9d8212ea8f23717b72db64393cabab9a57352711dc24a722df5dc49b41807',1,'MiraiCP::eventTypes']]],
+  ['botonlineevent_3',['BotOnlineEvent',['../a00199.html#abe9e9d8212ea8f23717b72db64393cabac9323a42c3ef5f080ec21384295543f5',1,'MiraiCP::eventTypes']]],
+  ['buildforward_4',['Buildforward',['../a00200.html#a80a8ec1c1ed6fd9db32d9a878405d412a57986a65eaa7f47722f66d9c7e21cd09',1,'MiraiCP::KtOperation']]]
 ];

@@ -1,10 +1,13 @@
 var a00212 =
 [
-    [ "GroupMessageEvent", "a00212.html#a69a261b515fcfafc599a649684cea695", null ],
-    [ "get_event_type", "a00212.html#a09594d4b28823a009b03c9640a670fe8", null ],
-    [ "nextMessage", "a00212.html#a64b10968daea52b1209c8ff8e3922160", null ],
-    [ "senderNextMessage", "a00212.html#a3f151b658fd0fe0ddf7d6a5e16254529", null ],
-    [ "group", "a00212.html#abac98c5b1373ad6c8483f9978952c553", null ],
-    [ "message", "a00212.html#a722dc1ca031c471c953c710367067ae7", null ],
-    [ "sender", "a00212.html#acd0e90e4fb7862986215aae7e47cb2d6", null ]
+    [ "_disableAllPlugins", "a00212.html#aa2760a7e4d756b72e6276ec1bdd5b7e6", null ],
+    [ "_disablePluginById", "a00212.html#a437693917a5046f428dfe11ba6c80790", null ],
+    [ "_enableAllPlugins", "a00212.html#a05403f1c189f1d1f79e3a52d7a5bd2fd", null ],
+    [ "_enablePluginById", "a00212.html#a9929284110771da10cf03fa20f64c031", null ],
+    [ "_loadNewPlugin", "a00212.html#a4c78ddda104eba8648f4e0af07b0b096", null ],
+    [ "_loggerInterface", "a00212.html#abb27ebc287a0e953eabd2b5d99914131", null ],
+    [ "_pluginOperation", "a00212.html#a100b1d5be6374c56c62309e464636049", null ],
+    [ "_reloadPluginById", "a00212.html#ab49311076188b9664503708c26a2681a", null ],
+    [ "_showAllPluginId", "a00212.html#acad48745d4c03e4fff65310f954aa71c", null ],
+    [ "_unloadPluginById", "a00212.html#a50e6fe6397871b90f9e0231642bd6e4c", null ]
 ];

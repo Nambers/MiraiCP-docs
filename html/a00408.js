@@ -1,5 +1,5 @@
 var a00408 =
 [
-    [ "PluginLogger", "a00408.html#a91bffeaf24b473d9bd2db8ede443f03d", null ],
-    [ "log1", "a00408.html#ad8142764645f0f0e6c6e2ecd526ef9da", null ]
+    [ "EventCancelledException", "a00408.html#adcf3347e6e34ba912fafd4bdd48a44af", null ],
+    [ "exceptionType", "a00408.html#ade28f5ad66bc98f50ba3a537d4402c07", null ]
 ];

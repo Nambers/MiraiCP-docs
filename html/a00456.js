@@ -1,9 +1,7 @@
 var a00456 =
 [
-    [ "PlainText", "a00456.html#af0ffa277c961cde9e5fc0ecc23ff224c", null ],
-    [ "PlainText", "a00456.html#a76de73df323ad93c427f73f6794981df", null ],
-    [ "operator==", "a00456.html#a6c8a471bcf5cd3bcc65f6d75097ce286", null ],
-    [ "toJson", "a00456.html#a0fb7ad4530e4602d09c388d44fc4bc00", null ],
-    [ "toMiraiCode", "a00456.html#a2cbc08df42d84ad5c50e2dae680c0eb4", null ],
-    [ "type", "a00456.html#a440b92da26612820bd700e2ce9a5e999", null ]
+    [ "OfflineAnnouncement", "a00456.html#a01236de68a15c8de48ffeecc47f7d422", null ],
+    [ "publishTo", "a00456.html#ac5e2613306079cce18866fa1f2809357", null ],
+    [ "content", "a00456.html#ad41adfb9b859845999f24978087af62b", null ],
+    [ "params", "a00456.html#ab1ff075cae77526d00c8f96b135c2873", null ]
 ];

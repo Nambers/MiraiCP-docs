@@ -1,10 +1,11 @@
 var searchData=
 [
-  ['idlogger_0',['IdLogger',['../a00431.html',1,'MiraiCP']]],
-  ['illegalargumentexception_1',['IllegalArgumentException',['../a00363.html',1,'MiraiCP']]],
-  ['illegalstateexception_2',['IllegalStateException',['../a00323.html',1,'MiraiCP']]],
-  ['image_3',['Image',['../a00495.html',1,'MiraiCP']]],
-  ['info_4',['info',['../a00443.html',1,'MiraiCP::LowLevelAPI']]],
-  ['inudgesupport_5',['INudgeSupport',['../a00215.html',1,'MiraiCP']]],
-  ['irawcommand_6',['IRawCommand',['../a00199.html',1,'MiraiCP']]]
+  ['idlogger_0',['IdLogger',['../a00480.html',1,'MiraiCP']]],
+  ['illegalargumentexception_1',['IllegalArgumentException',['../a00400.html',1,'MiraiCP']]],
+  ['illegalstateexception_2',['IllegalStateException',['../a00360.html',1,'MiraiCP']]],
+  ['image_3',['Image',['../a00540.html',1,'MiraiCP']]],
+  ['info_4',['info',['../a00488.html',1,'MiraiCP::LowLevelAPI']]],
+  ['interface_5ffuncs_5',['interface_funcs',['../a00212.html',1,'LibLoader::LoaderApi']]],
+  ['inudgesupport_6',['INudgeSupport',['../a00252.html',1,'MiraiCP']]],
+  ['irawcommand_7',['IRawCommand',['../a00236.html',1,'MiraiCP']]]
 ];

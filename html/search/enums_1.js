@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['eventtypes_0',['eventTypes',['../a00177.html#a7311d4d7bd17d31ea37aceb87426056d',1,'MiraiCP']]]
+  ['jointype_0',['joinType',['../a00288.html#a1d73fdd5e84653d078b859b37dd1bcc8',1,'MiraiCP::MemberJoinEvent']]]
 ];

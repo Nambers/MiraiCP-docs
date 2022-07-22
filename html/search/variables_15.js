@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['version_0',['version',['../a00471.html#a8facb0a391626e527d52370ce7d14edb',1,'MiraiCP::PluginConfig']]]
+  ['width_0',['width',['../a00540.html#a32663d1a7c0f773d5e0edc245a503f5e',1,'MiraiCP::Image']]]
 ];

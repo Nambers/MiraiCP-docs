@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiraiCP: MiraiCP.hpp 源文件</title>
+<title>MiraiCP: MiraiCode.cpp 源文件</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MiraiCP
-   &#160;<span id="projectnumber">v2.11.0</span>
+   &#160;<span id="projectnumber">v2.12.0-RC2</span>
    </div>
    <div id="projectbrief">MiraiCP api document</div>
   </td>
@@ -90,10 +90,10 @@ $(document).ready(function(){initNavTree('a00140_source.html',''); initResizable
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">MiraiCP.hpp</div></div>
+  <div class="headertitle"><div class="title">MiraiCode.cpp</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="a00140.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// Copyright (c) 2021-2021. Eritque arcus and contributors.</span></div>
+<a href="a00140.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// Copyright (c) 2020 - 2022. Eritque arcus and contributors.</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">//</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">// This program is free software: you can redistribute it and/or modify</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">// it under the terms of the GNU Affero General Public License as</span></div>
@@ -108,64 +108,36 @@ $(document).ready(function(){initNavTree('a00140_source.html',''); initResizable
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">// You should have received a copy of the GNU Affero General Public License</span></div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">// along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</span></div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">//</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#ifndef MIRAICP_HPP_H</span></div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#define MIRAICP_HPP_H</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &quot;<a class="code" href="a00143.html">MiraiCode.h</a>&quot;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &quot;<a class="code" href="a00164.html">Tools.h</a>&quot;</span></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &quot;<a class="code" href="a00047.html">Bot.h</a>&quot;</span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &quot;<a class="code" href="a00071.html">CPPPlugin.h</a>&quot;</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &quot;<a class="code" href="a00053.html">Command.h</a>&quot;</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &quot;<a class="code" href="a00059.html">Config.h</a>&quot;</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#include &quot;<a class="code" href="a00065.html">Contact.h</a>&quot;</span></div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#include &quot;<a class="code" href="a00077.html">Event.h</a>&quot;</span></div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &quot;<a class="code" href="a00083.html">Exception.h</a>&quot;</span></div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &quot;<a class="code" href="a00089.html">ForwardedMessage.h</a>&quot;</span></div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &quot;<a class="code" href="a00095.html">Friend.h</a>&quot;</span></div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &quot;<a class="code" href="a00101.html">Group.h</a>&quot;</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#include &quot;<a class="code" href="a00107.html">Logger.h</a>&quot;</span></div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#include &quot;<a class="code" href="a00113.html">LowLevelAPI.h</a>&quot;</span></div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#include &quot;<a class="code" href="a00119.html">Member.h</a>&quot;</span></div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">#include &quot;<a class="code" href="a00125.html">MessageChain.h</a>&quot;</span></div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#include &quot;<a class="code" href="a00131.html">MessageSource.h</a>&quot;</span></div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="preprocessor">#include &quot;<a class="code" href="a00137.html">MiraiCode.h</a>&quot;</span></div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="preprocessor">#include &quot;<a class="code" href="a00143.html">MiraiDefs.h</a>&quot;</span></div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="preprocessor">#include &quot;<a class="code" href="a00149.html">PluginConfig.h</a>&quot;</span></div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="preprocessor">#include &quot;<a class="code" href="a00155.html">SingleMessage.h</a>&quot;</span></div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="preprocessor">#include &quot;<a class="code" href="a00161.html">ThreadManager.h</a>&quot;</span></div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="preprocessor">#include &quot;<a class="code" href="a00167.html">Tools.h</a>&quot;</span></div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="preprocessor">#include &quot;<a class="code" href="a00173.html">utils.h</a>&quot;</span></div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="preprocessor">#endif </span><span class="comment">//MIRAICP_HPP_H</span></div>
-<div class="ttc" id="aa00047_html"><div class="ttname"><a href="a00047.html">Bot.h</a></div></div>
-<div class="ttc" id="aa00053_html"><div class="ttname"><a href="a00053.html">Command.h</a></div></div>
-<div class="ttc" id="aa00059_html"><div class="ttname"><a href="a00059.html">Config.h</a></div></div>
-<div class="ttc" id="aa00065_html"><div class="ttname"><a href="a00065.html">Contact.h</a></div></div>
-<div class="ttc" id="aa00071_html"><div class="ttname"><a href="a00071.html">CPPPlugin.h</a></div></div>
-<div class="ttc" id="aa00077_html"><div class="ttname"><a href="a00077.html">Event.h</a></div></div>
-<div class="ttc" id="aa00083_html"><div class="ttname"><a href="a00083.html">Exception.h</a></div></div>
-<div class="ttc" id="aa00089_html"><div class="ttname"><a href="a00089.html">ForwardedMessage.h</a></div></div>
-<div class="ttc" id="aa00095_html"><div class="ttname"><a href="a00095.html">Friend.h</a></div></div>
-<div class="ttc" id="aa00101_html"><div class="ttname"><a href="a00101.html">Group.h</a></div></div>
-<div class="ttc" id="aa00107_html"><div class="ttname"><a href="a00107.html">Logger.h</a></div></div>
-<div class="ttc" id="aa00113_html"><div class="ttname"><a href="a00113.html">LowLevelAPI.h</a></div></div>
-<div class="ttc" id="aa00119_html"><div class="ttname"><a href="a00119.html">Member.h</a></div></div>
-<div class="ttc" id="aa00125_html"><div class="ttname"><a href="a00125.html">MessageChain.h</a></div></div>
-<div class="ttc" id="aa00131_html"><div class="ttname"><a href="a00131.html">MessageSource.h</a></div></div>
-<div class="ttc" id="aa00137_html"><div class="ttname"><a href="a00137.html">MiraiCode.h</a></div></div>
-<div class="ttc" id="aa00143_html"><div class="ttname"><a href="a00143.html">MiraiDefs.h</a></div></div>
-<div class="ttc" id="aa00149_html"><div class="ttname"><a href="a00149.html">PluginConfig.h</a></div></div>
-<div class="ttc" id="aa00155_html"><div class="ttname"><a href="a00155.html">SingleMessage.h</a></div></div>
-<div class="ttc" id="aa00161_html"><div class="ttname"><a href="a00161.html">ThreadManager.h</a></div></div>
-<div class="ttc" id="aa00167_html"><div class="ttname"><a href="a00167.html">Tools.h</a></div></div>
-<div class="ttc" id="aa00173_html"><div class="ttname"><a href="a00173.html">utils.h</a></div></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">namespace </span><a class="code hl_namespace" href="a00198.html">MiraiCP</a> {</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="a00512.html#a9b46bf5804f88f2504d97c87d3e1b7fc">   20</a></span>    std::string <a class="code hl_function" href="a00512.html#a9b46bf5804f88f2504d97c87d3e1b7fc">MiraiCode::toString</a>() {</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="a00202.html#ae7bf212fddf60af59042677c3a7753a5">Tools::escapeFromMiraiCode</a>(this-&gt;<a class="code hl_variable" href="a00512.html#a10f382c47adbdf7874ee6aff2c1b1850">content</a>);</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    }</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="a00512.html#a0d635f5decbaa8f14f9e255efb8654f0">   23</a></span>    <a class="code hl_function" href="a00512.html#a357aa786136dc94421877f5572ca150a">MiraiCode::MiraiCode</a>(<span class="keyword">const</span> std::string &amp;a, <span class="keywordtype">bool</span> convert) { <span class="comment">// NOLINT(google-explicit-constructor)</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        <span class="keywordflow">if</span> (!convert)</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>            <a class="code hl_variable" href="a00512.html#a10f382c47adbdf7874ee6aff2c1b1850">content</a> = a;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>            <a class="code hl_variable" href="a00512.html#a10f382c47adbdf7874ee6aff2c1b1850">content</a> = <a class="code hl_function" href="a00202.html#a01f4fe41f8bef55b95953750f5cfb0c2">Tools::escapeToMiraiCode</a>(a);</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    }</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>} <span class="comment">// namespace MiraiCP</span></div>
+<div class="ttc" id="aa00143_html"><div class="ttname"><a href="a00143.html">MiraiCode.h</a></div></div>
+<div class="ttc" id="aa00164_html"><div class="ttname"><a href="a00164.html">Tools.h</a></div></div>
+<div class="ttc" id="aa00198_html"><div class="ttname"><a href="a00198.html">MiraiCP</a></div><div class="ttdef"><b>Definition:</b> <a href="a00182_source.html#l00024">miraicpString.cpp:24</a></div></div>
+<div class="ttc" id="aa00202_html_a01f4fe41f8bef55b95953750f5cfb0c2"><div class="ttname"><a href="a00202.html#a01f4fe41f8bef55b95953750f5cfb0c2">MiraiCP::Tools::escapeToMiraiCode</a></div><div class="ttdeci">std::string escapeToMiraiCode(const std::string &amp;s)</div><div class="ttdoc">转义miraicode格式</div><div class="ttdef"><b>Definition:</b> <a href="a00161_source.html#l00064">Tools.cpp:64</a></div></div>
+<div class="ttc" id="aa00202_html_ae7bf212fddf60af59042677c3a7753a5"><div class="ttname"><a href="a00202.html#ae7bf212fddf60af59042677c3a7753a5">MiraiCP::Tools::escapeFromMiraiCode</a></div><div class="ttdeci">std::string escapeFromMiraiCode(const std::string &amp;s)</div><div class="ttdoc">从miraicode转义到正常</div><div class="ttdef"><b>Definition:</b> <a href="a00161_source.html#l00050">Tools.cpp:50</a></div></div>
+<div class="ttc" id="aa00512_html_a10f382c47adbdf7874ee6aff2c1b1850"><div class="ttname"><a href="a00512.html#a10f382c47adbdf7874ee6aff2c1b1850">MiraiCP::MiraiCode::content</a></div><div class="ttdeci">std::string content</div><div class="ttdef"><b>Definition:</b> <a href="a00143_source.html#l00035">MiraiCode.h:35</a></div></div>
+<div class="ttc" id="aa00512_html_a357aa786136dc94421877f5572ca150a"><div class="ttname"><a href="a00512.html#a357aa786136dc94421877f5572ca150a">MiraiCP::MiraiCode::MiraiCode</a></div><div class="ttdeci">MiraiCode(MiraiCodeable *a)</div><div class="ttdoc">从MiraiCodeable类型初始化一个miraicode字符串</div><div class="ttdef"><b>Definition:</b> <a href="a00143_source.html#l00047">MiraiCode.h:47</a></div></div>
+<div class="ttc" id="aa00512_html_a9b46bf5804f88f2504d97c87d3e1b7fc"><div class="ttname"><a href="a00512.html#a9b46bf5804f88f2504d97c87d3e1b7fc">MiraiCP::MiraiCode::toString</a></div><div class="ttdeci">std::string toString()</div><div class="ttdoc">输出当前内容, 会自动转码</div><div class="ttdef"><b>Definition:</b> <a href="a00140_source.html#l00020">MiraiCode.cpp:20</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b0856f6b0d80ccb263b2f415c91f9e17.html">include</a></li><li class="navelem"><a class="el" href="a00140.html">MiraiCP.hpp</a></li>
-    <li class="footer">生成于 2022年 五月 20日 星期五 18:15:37 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b0856f6b0d80ccb263b2f415c91f9e17.html">include</a></li><li class="navelem"><a class="el" href="a00140.html">MiraiCode.cpp</a></li>
+    <li class="footer">生成于 2022年 七月 22日 星期五 13:46:01 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
 <script type="text/javascript">

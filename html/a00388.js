@@ -1,5 +1,5 @@
 var a00388 =
 [
-    [ "id", "a00388.html#a3731a10878ebebf220143bde1b6bf145", null ],
-    [ "path", "a00388.html#aed72e7f738908ff8beb5f3894c88d0ee", null ]
+    [ "GroupException", "a00388.html#a86d9f8647899ea7ec1c9bc29a0fab4e2", null ],
+    [ "exceptionType", "a00388.html#ad5423a44299fc74eca0a1be0e66529fd", null ]
 ];

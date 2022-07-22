@@ -1,8 +1,9 @@
 var a00516 =
 [
-    [ "UnSupportMessage", "a00516.html#a6be0a774db3dc14967b31ab49e057454", null ],
-    [ "operator==", "a00516.html#a0ab999563baa8193b226d442d1a7f5dc", null ],
-    [ "ShouldNotUse", "a00516.html#ab59bb45f6a86d9eba8b7de54516de620", null ],
-    [ "toJson", "a00516.html#ae28bab32ffb5b7520376b88cb0fb70e1", null ],
-    [ "type", "a00516.html#ad5b8af135be7c2201fa5cc3d81fa8912", null ]
+    [ "MiraiCPNewThread", "a00516.html#aac9f1899dc2dd508fb87c393dce95569", null ],
+    [ "MiraiCPNewThread", "a00516.html#ae04a775fb43599b61f29e831f98bfee0", null ],
+    [ "operator=", "a00516.html#a72e06856d9b8a870c2405bd8345e4e9a", null ],
+    [ "operator=", "a00516.html#ab26297cb5d0e97dffe4983d75bbdf413", null ],
+    [ "operator=", "a00516.html#adff0ce4c4549e6803c61cb55128f41d7", null ],
+    [ "operator=", "a00516.html#afa2a7ce9f57f6c96fad78f347bcca5af", null ]
 ];

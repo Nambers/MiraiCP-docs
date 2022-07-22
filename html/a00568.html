@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiraiCP: logger.cpp</title>
+<title>MiraiCP: MiraiCP::RemoteFile::Dinfo结构体 参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MiraiCP
-   &#160;<span id="projectnumber">v2.11.0</span>
+   &#160;<span id="projectnumber">v2.12.0-RC2</span>
    </div>
    <div id="projectbrief">MiraiCP api document</div>
   </td>
@@ -90,60 +90,112 @@ $(document).ready(function(){initNavTree('a00568.html',''); initResizable(); });
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">logger.cpp</div></div>
+  <div class="summary">
+<a href="#pub-attribs">Public 属性</a> &#124;
+<a href="a00565.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">MiraiCP::RemoteFile::Dinfo结构体 参考</div></div>
 </div><!--header-->
 <div class="contents">
-<p >自定义logger handle以及启用禁用logger</p>
-<div class="fragment"><div class="line"><span class="comment">// Copyright (c) 2020 - 2022. Eritque arcus and contributors.</span></div>
-<div class="line"><span class="comment">//</span></div>
-<div class="line"><span class="comment">// This program is free software: you can redistribute it and/or modify</span></div>
-<div class="line"><span class="comment">// it under the terms of the GNU Affero General Public License as</span></div>
-<div class="line"><span class="comment">// published by the Free Software Foundation, either version 3 of the</span></div>
-<div class="line"><span class="comment">// License, or any later version(in your opinion).</span></div>
-<div class="line"><span class="comment">//</span></div>
-<div class="line"><span class="comment">// This program is distributed in the hope that it will be useful,</span></div>
-<div class="line"><span class="comment">// but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div>
-<div class="line"><span class="comment">// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span></div>
-<div class="line"><span class="comment">// GNU Affero General Public License for more details.</span></div>
-<div class="line"><span class="comment">//</span></div>
-<div class="line"><span class="comment">// You should have received a copy of the GNU Affero General Public License</span></div>
-<div class="line"><span class="comment">// along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</span></div>
-<div class="line"><span class="comment">//</span></div>
-<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00140.html">MiraiCP.hpp</a>&gt;</span></div>
-<div class="line"><span class="keyword">using namespace </span><a class="code hl_namespace" href="a00177.html">MiraiCP</a>;</div>
-<div class="line"> </div>
-<div class="line"><span class="keyword">class </span>Main : <span class="keyword">public</span> CPPPlugin {</div>
-<div class="line"><span class="keyword">public</span>:</div>
-<div class="line">    Main() : <a class="code hl_function" href="a00219.html#a8757991e0396faf72a9e0ad06caa53f4">CPPPlugin</a>(PluginConfig(</div>
-<div class="line">                     <span class="stringliteral">&quot;id&quot;</span>,</div>
-<div class="line">                     <span class="stringliteral">&quot;test&quot;</span>,</div>
-<div class="line">                     <span class="stringliteral">&quot;v1.0&quot;</span>,</div>
-<div class="line">                     <span class="stringliteral">&quot;a&quot;</span>)) {}</div>
-<div class="line">    <span class="keywordtype">void</span> onEnable()<span class="keyword"> override </span>{</div>
-<div class="line">        Logger::logger.registerHandle([](std::string content, <span class="keywordtype">int</span> level) {</div>
-<div class="line">            <span class="comment">//do some things</span></div>
-<div class="line">            <span class="comment">// eg. write file</span></div>
-<div class="line">        });</div>
-<div class="line">        <span class="comment">// 设置logger是否启用</span></div>
-<div class="line">        Logger::logger.setHandleState(<span class="keyword">true</span>);</div>
-<div class="line">    }</div>
-<div class="line">};</div>
-<div class="line"> </div>
-<div class="line"><span class="keywordtype">void</span> <a id="a0" name="a0"></a><a class="code hl_function" href="a00177.html#a12d27be6730af4fc321ac1eb231db281">MiraiCP::enrollPlugin</a>() {</div>
-<div class="line">    <a id="a1" name="a1"></a><a class="code hl_function" href="a00177.html#ad5dfcfb8bbf110c31ac8a5288f395bba">MiraiCP::enrollPlugin0</a>(<span class="keyword">new</span> Main());</div>
-<div class="line">}</div>
-<div class="ttc" id="aa00140_html"><div class="ttname"><a href="a00140.html">MiraiCP.hpp</a></div></div>
-<div class="ttc" id="aa00177_html"><div class="ttname"><a href="a00177.html">MiraiCP</a></div><div class="ttdef"><b>Definition:</b> <a href="a00044_source.html#l00023">Bot.cpp:23</a></div></div>
-<div class="ttc" id="aa00177_html_a12d27be6730af4fc321ac1eb231db281"><div class="ttname"><a href="a00177.html#a12d27be6730af4fc321ac1eb231db281">MiraiCP::enrollPlugin</a></div><div class="ttdeci">void enrollPlugin()</div><div class="ttdoc">注册插件函数, 需要被实现, 类似onStart();</div><div class="ttdef"><b>Definition:</b> <a href="a00002_source.html#l00051">callbackHandle.cpp:51</a></div></div>
-<div class="ttc" id="aa00177_html_ad5dfcfb8bbf110c31ac8a5288f395bba"><div class="ttname"><a href="a00177.html#ad5dfcfb8bbf110c31ac8a5288f395bba">MiraiCP::enrollPlugin0</a></div><div class="ttdeci">void enrollPlugin0(CPPPlugin *p)</div><div class="ttdoc">用指针绑定插件</div><div class="ttdef"><b>Definition:</b> <a href="a00173_source.html#l00038">utils.h:38</a></div></div>
-<div class="ttc" id="aa00219_html_a8757991e0396faf72a9e0ad06caa53f4"><div class="ttname"><a href="a00219.html#a8757991e0396faf72a9e0ad06caa53f4">MiraiCP::CPPPlugin::CPPPlugin</a></div><div class="ttdeci">CPPPlugin(PluginConfig c)</div><div class="ttdef"><b>Definition:</b> <a href="a00071_source.html#l00039">CPPPlugin.h:39</a></div></div>
-</div><!-- fragment --> </div><!-- contents -->
+
+<p>下载信息  
+ <a href="a00568.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="a00158_source.html">SingleMessage.h</a>&gt;</code></p>
+<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> MiraiCP::RemoteFile::Dinfo 的协作图:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="a00566.png" border="0" usemap="#a_mirai_c_p_1_1_remote_file_1_1_dinfo_coll__map" alt="Collaboration graph"/></div>
+<map name="a_mirai_c_p_1_1_remote_file_1_1_dinfo_coll__map" id="a_mirai_c_p_1_1_remote_file_1_1_dinfo_coll__map">
+<area shape="rect" title="下载信息" alt="" coords="5,175,148,267"/>
+<area shape="rect" title=" " alt="" coords="49,5,104,83"/>
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public 属性</h2></td></tr>
+<tr class="memitem:ae5ef128eb690329fceda096ddb1d3004"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00568.html#ae5ef128eb690329fceda096ddb1d3004">url</a></td></tr>
+<tr class="memdesc:ae5ef128eb690329fceda096ddb1d3004"><td class="mdescLeft">&#160;</td><td class="mdescRight">下载地址, 可能会是 <code>null</code> 当文件不存在  <a href="a00568.html#ae5ef128eb690329fceda096ddb1d3004">更多...</a><br /></td></tr>
+<tr class="separator:ae5ef128eb690329fceda096ddb1d3004"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0293f9419de31e1debe34fe84a38efc"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00568.html#ad0293f9419de31e1debe34fe84a38efc">md5</a></td></tr>
+<tr class="memdesc:ad0293f9419de31e1debe34fe84a38efc"><td class="mdescLeft">&#160;</td><td class="mdescRight">md5 可用于校验  <a href="a00568.html#ad0293f9419de31e1debe34fe84a38efc">更多...</a><br /></td></tr>
+<tr class="separator:ad0293f9419de31e1debe34fe84a38efc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a028dd19b1da21857fec0a606c4370427"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00568.html#a028dd19b1da21857fec0a606c4370427">sha1</a></td></tr>
+<tr class="memdesc:a028dd19b1da21857fec0a606c4370427"><td class="mdescLeft">&#160;</td><td class="mdescRight">sha1 可用于校验  <a href="a00568.html#a028dd19b1da21857fec0a606c4370427">更多...</a><br /></td></tr>
+<tr class="separator:a028dd19b1da21857fec0a606c4370427"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p >下载信息 </p>
+<dl class="section see"><dt>参见</dt><dd><a class="el" href="a00564.html" title="远程(群)文件类型">RemoteFile</a> </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="a00158_source.html">SingleMessage.h</a> 第 <a class="el" href="a00158_source.html#l00368">368</a> 行定义.</p>
+</div><h2 class="groupheader">类成员变量说明</h2>
+<a id="ad0293f9419de31e1debe34fe84a38efc" name="ad0293f9419de31e1debe34fe84a38efc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0293f9419de31e1debe34fe84a38efc">&#9670;&nbsp;</a></span>md5</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string MiraiCP::RemoteFile::Dinfo::md5</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>md5 可用于校验 </p>
+
+<p class="definition">在文件 <a class="el" href="a00158_source.html">SingleMessage.h</a> 第 <a class="el" href="a00158_source.html#l00372">372</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a028dd19b1da21857fec0a606c4370427" name="a028dd19b1da21857fec0a606c4370427"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a028dd19b1da21857fec0a606c4370427">&#9670;&nbsp;</a></span>sha1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string MiraiCP::RemoteFile::Dinfo::sha1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>sha1 可用于校验 </p>
+
+<p class="definition">在文件 <a class="el" href="a00158_source.html">SingleMessage.h</a> 第 <a class="el" href="a00158_source.html#l00374">374</a> 行定义.</p>
+
+</div>
+</div>
+<a id="ae5ef128eb690329fceda096ddb1d3004" name="ae5ef128eb690329fceda096ddb1d3004"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5ef128eb690329fceda096ddb1d3004">&#9670;&nbsp;</a></span>url</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string MiraiCP::RemoteFile::Dinfo::url</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>下载地址, 可能会是 <code>null</code> 当文件不存在 </p>
+
+<p class="definition">在文件 <a class="el" href="a00158_source.html">SingleMessage.h</a> 第 <a class="el" href="a00158_source.html#l00370">370</a> 行定义.</p>
+
+</div>
+</div>
+<hr/>该结构体的文档由以下文件生成:<ul>
+<li><a class="el" href="a00158_source.html">SingleMessage.h</a></li>
+</ul>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">生成于 2022年 五月 20日 星期五 18:15:37 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="navelem"><a class="el" href="a00198.html">MiraiCP</a></li><li class="navelem"><a class="el" href="a00564.html">RemoteFile</a></li><li class="navelem"><a class="el" href="a00568.html">Dinfo</a></li>
+    <li class="footer">生成于 2022年 七月 22日 星期五 13:46:02 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
 <script type="text/javascript">

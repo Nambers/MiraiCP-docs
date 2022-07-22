@@ -1,16 +1,14 @@
 var a00276 =
 [
-    [ "eventNode", "a00280.html", "a00280" ],
-    [ "NodeHandle", "a00284.html", "a00284" ],
-    [ "event_vector", "a00276.html#a6c4a73db045f973232347164dc42a21e", null ],
-    [ "eventNodeTable", "a00276.html#ab49f881b646783d970f6f87ddde0bcce", null ],
-    [ "priority_level", "a00276.html#a4cc658c6011e27187dd6660d6c33b7c9", null ],
-    [ "Event", "a00276.html#a9f36e22e23e02faaeba7f89736332c9c", null ],
-    [ "broadcast", "a00276.html#a491ec99324852b8a12aac5286877ac29", null ],
-    [ "id", "a00276.html#a546bbcb33bec161fb5977447ddf7c344", null ],
-    [ "noRegistered", "a00276.html#ac1aac60c33dd2e854f068e09b1eb4b43", null ],
-    [ "registerBlockingEvent", "a00276.html#adf53f2234a5b374d1064cbbdfc3fbb0b", null ],
-    [ "registerEvent", "a00276.html#a428c5d80ca6e2a51d7bece7193cba39e", null ],
-    [ "_all_events_", "a00276.html#a8976a4000c06dde8ff810aa5ed78a5dd", null ],
-    [ "processor", "a00276.html#ab78af8afd9a5121e7ed0a1d7237f2b20", null ]
+    [ "PrivateMessageEvent", "a00276.html#aad1f069d4e65a59adbe04f707896c8e5", null ],
+    [ "chat", "a00276.html#a9a8d672f2936a6760e046c3a03790e07", null ],
+    [ "chat", "a00276.html#a3b70ad84f06df0b224c6dbd58d255a59", null ],
+    [ "from", "a00276.html#a92d1a4aad3a0b4306986cea460b84fb7", null ],
+    [ "from", "a00276.html#a9b4c13376dcef6dddab4cca9b57ffc48", null ],
+    [ "get_event_type", "a00276.html#ac2cb5df8d7346169a074cb463bc85441", null ],
+    [ "getMessageChain", "a00276.html#a547bf324dfbfbb2dbef03c3fef05168b", null ],
+    [ "getMessageChain", "a00276.html#a046a99377587f6d8278d7d6cfb55208b", null ],
+    [ "nextMessage", "a00276.html#a2fadddd37811d8dcbf7183d98eba3034", null ],
+    [ "message", "a00276.html#a8a85d06adc5634099288001409e51de0", null ],
+    [ "sender", "a00276.html#aa2ba8dfb74a6324a1a6ef5774d6ee793", null ]
 ];

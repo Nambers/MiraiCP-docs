@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiraiCP: utils.h 源文件</title>
+<title>MiraiCP: commonTools.h 源文件</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MiraiCP
-   &#160;<span id="projectnumber">v2.11.0</span>
+   &#160;<span id="projectnumber">v2.12.0-RC2</span>
    </div>
    <div id="projectbrief">MiraiCP api document</div>
   </td>
@@ -90,10 +90,10 @@ $(document).ready(function(){initNavTree('a00173_source.html',''); initResizable
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">utils.h</div></div>
+  <div class="headertitle"><div class="title">commonTools.h</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="a00173.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// Copyright (c) 2020 - 2022. Eritque arcus and contributors.</span></div>
+<a href="a00173.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// Copyright (c) 2022. Eritque arcus and contributors.</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">//</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">// This program is free software: you can redistribute it and/or modify</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">// it under the terms of the GNU Affero General Public License as</span></div>
@@ -109,57 +109,51 @@ $(document).ready(function(){initNavTree('a00173_source.html',''); initResizable
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">// along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</span></div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">//</span></div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#ifndef MIRAICP_PRO_UTILS_H</span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#define MIRAICP_PRO_UTILS_H</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &quot;<a class="code" href="a00071.html">CPPPlugin.h</a>&quot;</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &quot;<a class="code" href="a00059.html">Config.h</a>&quot;</span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keyword">namespace </span><a class="code hl_namespace" href="a00177.html">MiraiCP</a> {</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="a00177.html#ad274e5c7a685e18ad0b3817fd554b934">   28</a></span>    <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="a00177.html#ad274e5c7a685e18ad0b3817fd554b934">schedule</a>(<span class="keywordtype">long</span> time, <span class="keyword">const</span> std::string &amp;msg, JNIEnv *env = <span class="keyword">nullptr</span>) {</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        <a class="code hl_typedef" href="a00170.html#ab701e3ac61a85b337ec5c1abaad6742d">nlohmann::json</a> j;</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        j[<span class="stringliteral">&quot;time&quot;</span>] = time;</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        j[<span class="stringliteral">&quot;msg&quot;</span>] = msg;</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <a class="code hl_function" href="a00178.html#a6cc3a4fb89a9701380288f1c16f738b4">Config::koperation</a>(<a class="code hl_enumvalue" href="a00178.html#a1bc3c425340774687507c1683967231bae5161956bb109433aa80ffd6872309df">Config::TimeOut</a>, j, env);</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    }</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="a00177.html#a12d27be6730af4fc321ac1eb231db281">enrollPlugin</a>();</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="a00177.html#ad5dfcfb8bbf110c31ac8a5288f395bba">   38</a></span>    <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="a00177.html#ad5dfcfb8bbf110c31ac8a5288f395bba">enrollPlugin0</a>(<a class="code hl_class" href="a00219.html">CPPPlugin</a> *p) {</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        <a class="code hl_variable" href="a00219.html#a5bfd48cf68b997a48e04d141d831f6d3">CPPPlugin::plugin</a> = p;</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    }</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keyword">namespace </span>JNIApi {</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <span class="comment">// todo 暴露了一些接口</span></div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        JNIEXPORT jstring <a class="code hl_function" href="a00181.html#a66ecc9e4cce13730175b5bcb21801f72">Event</a>(JNIEnv *env, jobject, jstring content);</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        JNIEXPORT jstring <a class="code hl_function" href="a00181.html#a0eeb0de4ae4a15bc5b8c388124ae2ef6">returnNull</a>();</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        JNIEXPORT jobject <a class="code hl_function" href="a00181.html#a977e2e597fe9020cba9806a7583d3894">PluginDisable</a>(JNIEnv *env, jobject job);</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        JNIEXPORT jstring <a class="code hl_function" href="a00181.html#a069b5c9b3a753002b532970e025f91bd">Verify</a>(JNIEnv *env, jobject, jstring <span class="keywordtype">id</span>);</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <span class="keywordtype">int</span> <a class="code hl_function" href="a00181.html#acd50ba00052ee4194d336f41b0703d66">registerMethods</a>(JNIEnv *env, <span class="keyword">const</span> <span class="keywordtype">char</span> *className, JNINativeMethod *gMethods, <span class="keywordtype">int</span> numMethods);</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    } <span class="comment">// namespace JNIApi</span></div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>} <span class="comment">// namespace MiraiCP</span></div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="preprocessor">#endif </span><span class="comment">//MIRAICP_PRO_UTILS_H</span></div>
-<div class="ttc" id="aa00059_html"><div class="ttname"><a href="a00059.html">Config.h</a></div></div>
-<div class="ttc" id="aa00071_html"><div class="ttname"><a href="a00071.html">CPPPlugin.h</a></div></div>
-<div class="ttc" id="aa00170_html_ab701e3ac61a85b337ec5c1abaad6742d"><div class="ttname"><a href="a00170.html#ab701e3ac61a85b337ec5c1abaad6742d">json</a></div><div class="ttdeci">nlohmann::json json</div><div class="ttdef"><b>Definition:</b> <a href="a00170_source.html#l00026">utils.cpp:26</a></div></div>
-<div class="ttc" id="aa00177_html"><div class="ttname"><a href="a00177.html">MiraiCP</a></div><div class="ttdef"><b>Definition:</b> <a href="a00044_source.html#l00023">Bot.cpp:23</a></div></div>
-<div class="ttc" id="aa00177_html_a12d27be6730af4fc321ac1eb231db281"><div class="ttname"><a href="a00177.html#a12d27be6730af4fc321ac1eb231db281">MiraiCP::enrollPlugin</a></div><div class="ttdeci">void enrollPlugin()</div><div class="ttdoc">注册插件函数, 需要被实现, 类似onStart();</div><div class="ttdef"><b>Definition:</b> <a href="a00002_source.html#l00051">callbackHandle.cpp:51</a></div></div>
-<div class="ttc" id="aa00177_html_ad274e5c7a685e18ad0b3817fd554b934"><div class="ttname"><a href="a00177.html#ad274e5c7a685e18ad0b3817fd554b934">MiraiCP::schedule</a></div><div class="ttdeci">void schedule(long time, const std::string &amp;msg, JNIEnv *env=nullptr)</div><div class="ttdoc">定时任务, 在一定时间后广播**一次**TimeOutEvent</div><div class="ttdef"><b>Definition:</b> <a href="a00173_source.html#l00028">utils.h:28</a></div></div>
-<div class="ttc" id="aa00177_html_ad5dfcfb8bbf110c31ac8a5288f395bba"><div class="ttname"><a href="a00177.html#ad5dfcfb8bbf110c31ac8a5288f395bba">MiraiCP::enrollPlugin0</a></div><div class="ttdeci">void enrollPlugin0(CPPPlugin *p)</div><div class="ttdoc">用指针绑定插件</div><div class="ttdef"><b>Definition:</b> <a href="a00173_source.html#l00038">utils.h:38</a></div></div>
-<div class="ttc" id="aa00178_html_a1bc3c425340774687507c1683967231bae5161956bb109433aa80ffd6872309df"><div class="ttname"><a href="a00178.html#a1bc3c425340774687507c1683967231bae5161956bb109433aa80ffd6872309df">MiraiCP::Config::TimeOut</a></div><div class="ttdeci">@ TimeOut</div><div class="ttdoc">定时任务</div><div class="ttdef"><b>Definition:</b> <a href="a00059_source.html#l00080">Config.h:80</a></div></div>
-<div class="ttc" id="aa00178_html_a6cc3a4fb89a9701380288f1c16f738b4"><div class="ttname"><a href="a00178.html#a6cc3a4fb89a9701380288f1c16f738b4">MiraiCP::Config::koperation</a></div><div class="ttdeci">std::string koperation(operation_set type, const nlohmann::json &amp;data, JNIEnv *env, bool catchErr, const std::string &amp;errorInfo)</div><div class="ttdoc">调用mirai操作</div><div class="ttdef"><b>Definition:</b> <a href="a00056_source.html#l00046">Config.cpp:46</a></div></div>
-<div class="ttc" id="aa00181_html_a069b5c9b3a753002b532970e025f91bd"><div class="ttname"><a href="a00181.html#a069b5c9b3a753002b532970e025f91bd">MiraiCP::JNIApi::Verify</a></div><div class="ttdeci">JNIEXPORT jstring Verify(JNIEnv *env, jobject, jstring id)</div><div class="ttdef"><b>Definition:</b> <a href="a00170_source.html#l00034">utils.cpp:34</a></div></div>
-<div class="ttc" id="aa00181_html_a0eeb0de4ae4a15bc5b8c388124ae2ef6"><div class="ttname"><a href="a00181.html#a0eeb0de4ae4a15bc5b8c388124ae2ef6">MiraiCP::JNIApi::returnNull</a></div><div class="ttdeci">JNIEXPORT jstring returnNull()</div><div class="ttdef"><b>Definition:</b> <a href="a00170_source.html#l00076">utils.cpp:76</a></div></div>
-<div class="ttc" id="aa00181_html_a66ecc9e4cce13730175b5bcb21801f72"><div class="ttname"><a href="a00181.html#a66ecc9e4cce13730175b5bcb21801f72">MiraiCP::JNIApi::Event</a></div><div class="ttdeci">JNIEXPORT jstring Event(JNIEnv *env, jobject, jstring content)</div><div class="ttdef"><b>Definition:</b> <a href="a00170_source.html#l00084">utils.cpp:84</a></div></div>
-<div class="ttc" id="aa00181_html_a977e2e597fe9020cba9806a7583d3894"><div class="ttname"><a href="a00181.html#a977e2e597fe9020cba9806a7583d3894">MiraiCP::JNIApi::PluginDisable</a></div><div class="ttdeci">JNIEXPORT jobject PluginDisable(JNIEnv *env, jobject job)</div><div class="ttdef"><b>Definition:</b> <a href="a00170_source.html#l00062">utils.cpp:62</a></div></div>
-<div class="ttc" id="aa00181_html_acd50ba00052ee4194d336f41b0703d66"><div class="ttname"><a href="a00181.html#acd50ba00052ee4194d336f41b0703d66">MiraiCP::JNIApi::registerMethods</a></div><div class="ttdeci">int registerMethods(JNIEnv *env, const char *className, JNINativeMethod *gMethods, int numMethods)</div><div class="ttdef"><b>Definition:</b> <a href="a00170_source.html#l00251">utils.cpp:251</a></div></div>
-<div class="ttc" id="aa00219_html"><div class="ttname"><a href="a00219.html">MiraiCP::CPPPlugin</a></div><div class="ttdoc">插件父类</div><div class="ttdef"><b>Definition:</b> <a href="a00071_source.html#l00025">CPPPlugin.h:25</a></div></div>
-<div class="ttc" id="aa00219_html_a5bfd48cf68b997a48e04d141d831f6d3"><div class="ttname"><a href="a00219.html#a5bfd48cf68b997a48e04d141d831f6d3">MiraiCP::CPPPlugin::plugin</a></div><div class="ttdeci">static CPPPlugin * plugin</div><div class="ttdef"><b>Definition:</b> <a href="a00071_source.html#l00032">CPPPlugin.h:32</a></div></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#ifndef MIRAICP_PRO_COMMONTOOLS_H</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#define MIRAICP_PRO_COMMONTOOLS_H</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &lt;functional&gt;</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="a00173.html#a7e8212fd73efa74415d83aa658eabf0b">   24</a></span><span class="preprocessor">#define MiraiCP_defer(code)                              \</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">    auto __defered_statement_wrapper__ = [&amp;]() { code }; \</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">    CommonTools::MiraiCPDefer&lt;void&gt; __defered_object__(__defered_statement_wrapper__)</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="a00173.html#a524c685931a2b5b965835d37072ce649">   28</a></span><span class="preprocessor">#define MiraiCP_defer_lambda(lambda)             \</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">    auto __defered_statement_wrapper__ = lambda; \</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">    CommonTools::MiraiCPDefer&lt;void&gt; __defered_object__(__defered_statement_wrapper__)</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="a00195.html">   32</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="a00195.html">CommonTools</a> {</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> RT_TYPE&gt;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="a00208.html">   36</a></span>    <span class="keyword">class </span><a class="code hl_class" href="a00208.html">MiraiCPDefer</a> {</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="a00208.html#a06d949cbfd2f12845ea9937af9156adc">   38</a></span>        std::function&lt;RT_TYPE()&gt; <a class="code hl_variable" href="a00208.html#a06d949cbfd2f12845ea9937af9156adc">defer_func</a>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <span class="keyword">template</span>&lt;<span class="keyword">class</span> F&gt;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="a00208.html#a9ff09c9eff4543a6db160d9bb9d479bf">   41</a></span>        <a class="code hl_function" href="a00208.html#a9ff09c9eff4543a6db160d9bb9d479bf">MiraiCPDefer</a>(F &amp;&amp;<a class="code hl_function" href="a00035.html#a9a37a193bc61a8127790f891efc1af05">func</a>) : <a class="code hl_variable" href="a00208.html#a06d949cbfd2f12845ea9937af9156adc">defer_func</a>(std::forward&lt;F&gt;(<a class="code hl_function" href="a00035.html#a9a37a193bc61a8127790f891efc1af05">func</a>)) {</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        }</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="a00208.html#a183952e159185601bb5b7561ac7d6ffe">   44</a></span>        <span class="keyword">virtual</span> <a class="code hl_function" href="a00208.html#a183952e159185601bb5b7561ac7d6ffe">~MiraiCPDefer</a>() {</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>            <a class="code hl_variable" href="a00208.html#a06d949cbfd2f12845ea9937af9156adc">defer_func</a>();</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        }</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    };</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>} <span class="comment">// namespace CommonTools</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="preprocessor">#endif </span><span class="comment">//MIRAICP_PRO_COMMONTOOLS_H</span></div>
+<div class="ttc" id="aa00035_html_a9a37a193bc61a8127790f891efc1af05"><div class="ttname"><a href="a00035.html#a9a37a193bc61a8127790f891efc1af05">func</a></div><div class="ttdeci">void func(int i, bool b)</div><div class="ttdef"><b>Definition:</b> <a href="a00035_source.html#l00030">thread.cpp:30</a></div></div>
+<div class="ttc" id="aa00195_html"><div class="ttname"><a href="a00195.html">CommonTools</a></div><div class="ttdef"><b>Definition:</b> <a href="a00173_source.html#l00032">commonTools.h:32</a></div></div>
+<div class="ttc" id="aa00208_html"><div class="ttname"><a href="a00208.html">CommonTools::MiraiCPDefer</a></div><div class="ttdef"><b>Definition:</b> <a href="a00173_source.html#l00036">commonTools.h:36</a></div></div>
+<div class="ttc" id="aa00208_html_a06d949cbfd2f12845ea9937af9156adc"><div class="ttname"><a href="a00208.html#a06d949cbfd2f12845ea9937af9156adc">CommonTools::MiraiCPDefer::defer_func</a></div><div class="ttdeci">std::function&lt; RT_TYPE()&gt; defer_func</div><div class="ttdef"><b>Definition:</b> <a href="a00173_source.html#l00038">commonTools.h:38</a></div></div>
+<div class="ttc" id="aa00208_html_a183952e159185601bb5b7561ac7d6ffe"><div class="ttname"><a href="a00208.html#a183952e159185601bb5b7561ac7d6ffe">CommonTools::MiraiCPDefer::~MiraiCPDefer</a></div><div class="ttdeci">virtual ~MiraiCPDefer()</div><div class="ttdef"><b>Definition:</b> <a href="a00173_source.html#l00044">commonTools.h:44</a></div></div>
+<div class="ttc" id="aa00208_html_a9ff09c9eff4543a6db160d9bb9d479bf"><div class="ttname"><a href="a00208.html#a9ff09c9eff4543a6db160d9bb9d479bf">CommonTools::MiraiCPDefer::MiraiCPDefer</a></div><div class="ttdeci">MiraiCPDefer(F &amp;&amp;func)</div><div class="ttdef"><b>Definition:</b> <a href="a00173_source.html#l00041">commonTools.h:41</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b0856f6b0d80ccb263b2f415c91f9e17.html">include</a></li><li class="navelem"><a class="el" href="a00173.html">utils.h</a></li>
-    <li class="footer">生成于 2022年 五月 20日 星期五 18:15:37 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_fdedb0aba14d44ce9d99bc100e026e6a.html">common</a></li><li class="navelem"><a class="el" href="a00173.html">commonTools.h</a></li>
+    <li class="footer">生成于 2022年 七月 22日 星期五 13:46:00 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
 <script type="text/javascript">

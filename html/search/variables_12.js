@@ -1,16 +1,9 @@
 var searchData=
 [
-  ['secondnames_0',['secondNames',['../a00203.html#a5211c63986e404f8edc7b36cbd0c3618',1,'MiraiCP::IRawCommand::Config']]],
-  ['send2new_1',['send2new',['../a00399.html#af941b1ec8148c2675bcad7a6a10a53f5',1,'MiraiCP::Group::AnnouncementParams']]],
-  ['sender_2',['sender',['../a00235.html#acd0e90e4fb7862986215aae7e47cb2d6',1,'MiraiCP::GroupMessageEvent::sender()'],['../a00239.html#aa2ba8dfb74a6324a1a6ef5774d6ee793',1,'MiraiCP::PrivateMessageEvent::sender()'],['../a00267.html#ac0252e17c1cb9a0d4f2ebf37720951db',1,'MiraiCP::GroupTempMessageEvent::sender()']]],
-  ['senderid_3',['senderid',['../a00403.html#a020798c5d023b56bdf62fd08ad4dce7f',1,'MiraiCP::Group::OnlineAnnouncement']]],
-  ['sendmsg_4',['sendmsg',['../a00383.html#aa99a2f4399b53a576e6db44d08e11af8',1,'MiraiCP::ForwardedMessage']]],
-  ['setting_5',['setting',['../a00395.html#a0076eeb69e08e5dee4399e424645a333',1,'MiraiCP::Group']]],
-  ['sha1_6',['sha1',['../a00523.html#a028dd19b1da21857fec0a606c4370427',1,'MiraiCP::RemoteFile::Dinfo']]],
-  ['showeditcard_7',['showEditCard',['../a00399.html#a92569e1952f8f1668db0df430928da8e',1,'MiraiCP::Group::AnnouncementParams']]],
-  ['showpopup_8',['showPopup',['../a00399.html#ab80e896e8ac632e75f5d5e98dff79a97',1,'MiraiCP::Group::AnnouncementParams']]],
-  ['size_9',['size',['../a00495.html#a90e338ad396d824807759601a7fa3b88',1,'MiraiCP::Image::size()'],['../a00515.html#a06c764f6c1f6f65def69fcfe378ebef1',1,'MiraiCP::OnlineAudio::size()'],['../a00527.html#a35cc1f23bf34db4184696833b12e4605',1,'MiraiCP::RemoteFile::Finfo::size()'],['../a00519.html#a9b15694dd4c005204268d161fd4760f1',1,'MiraiCP::RemoteFile::size()']]],
-  ['source_10',['source',['../a00243.html#affaff17057d8b347a51ba2516f529596',1,'MiraiCP::GroupInviteEvent::source()'],['../a00247.html#a4b48f29f9ac4443abf0a76590690a897',1,'MiraiCP::NewFriendRequestEvent::source()'],['../a00287.html#aa1b90d95a75a1e6b79aa54a777eb8bf7',1,'MiraiCP::MemberJoinRequestEvent::source()'],['../a00375.html#aaacb83b879ff1ab702fdf56b2d0fe9d9',1,'MiraiCP::ForwardedMessageDisplayStrategy::source()'],['../a00455.html#adcabe0cd3a5ca3e7188063aee5d03da1',1,'MiraiCP::MessageChain::source()'],['../a00459.html#afc51041bfb7cc7cb0915b5131ee05805',1,'MiraiCP::MessageSource::source()']]],
-  ['subject_11',['subject',['../a00279.html#a48c484cc7aeaa12cec54886697950dc6',1,'MiraiCP::NudgeEvent']]],
-  ['summary_12',['summary',['../a00375.html#aef4ccc8e214cc12ac1ca842c065762b8',1,'MiraiCP::ForwardedMessageDisplayStrategy::summary()'],['../a00475.html#a5927b32bbb8fc21efe5d183fb12ddd1a',1,'MiraiCP::URLSharer::summary()'],['../a00535.html#a2da932b20adbdc6f9fa58bda8c0623ac',1,'MiraiCP::MusicShare::summary()']]]
+  ['target_0',['target',['../a00316.html#af4e172354f69ce65c8d8d2cd1f188cca',1,'MiraiCP::NudgeEvent::target()'],['../a00328.html#a9f10bb0f95316175506f9f48d9ed148d',1,'MiraiCP::MessagePreSendEvent::target()'],['../a00532.html#a4c451a3d12d38f6a83d425cab2d2aa25',1,'MiraiCP::At::target()']]],
+  ['threadid_1',['threadId',['../a00420.html#aabed0e9baac6e2c9164c5b606b04bc97',1,'MiraiCP::MiraiCPThreadException']]],
+  ['time_2',['time',['../a00220.html#a72f4752e10dc44b50911e80e37c924c2',1,'MiraiCP::PluginConfig::time()'],['../a00296.html#afcf05164400a14a598aba4de6566b66c',1,'MiraiCP::RecallEvent::time()'],['../a00428.html#ac5f4d270eb51284f2f25051aaf1545f7',1,'MiraiCP::ForwardedNode::time()']]],
+  ['timeremain_3',['timeRemain',['../a00372.html#aacccf1ba2a31c6a8901d87d166c85f3e',1,'MiraiCP::BotIsBeingMutedException']]],
+  ['title_4',['title',['../a00424.html#a8ebae08a0a078281d1f4400e84040573',1,'MiraiCP::ForwardedMessageDisplayStrategy::title()'],['../a00520.html#a929d703d700b67f4a1c1d17111271922',1,'MiraiCP::URLSharer::title()'],['../a00580.html#aa4f1eb91480d538d2aead5904f1cc4b9',1,'MiraiCP::MusicShare::title()']]],
+  ['type_5',['type',['../a00288.html#aaef692838d233a5ddcf8d54e1b02eb40',1,'MiraiCP::MemberJoinEvent::type()'],['../a00292.html#ad28ac4243630eab3bf7d65a737cac9ca',1,'MiraiCP::MemberLeaveEvent::type()'],['../a00296.html#ac986c53d844263a8af1ddf3e767e3a0c',1,'MiraiCP::RecallEvent::type()'],['../a00300.html#afecd637a84090e12fa5721074711c05d',1,'MiraiCP::BotJoinGroupEvent::type()'],['../a00380.html#aeedca55477d89e61d8449fd22aeeff04',1,'MiraiCP::MemberException::type()'],['../a00524.html#a80942452883a814f0462e451982ffd39',1,'MiraiCP::SingleMessage::type()']]]
 ];

@@ -1,10 +1,11 @@
 var searchData=
 [
-  ['unmute_0',['unMute',['../a00447.html#a218b3216bfc009ec7ca8b3535496f7c3',1,'MiraiCP::Member']]],
-  ['unsupportmessage_1',['UnSupportMessage',['../a00543.html#a6be0a774db3dc14967b31ab49e057454',1,'MiraiCP::UnSupportMessage']]],
-  ['updatesetting_2',['updateSetting',['../a00395.html#a2976015b96b67dd8be26b973b6f07989',1,'MiraiCP::Group']]],
-  ['uploadexception_3',['UploadException',['../a00319.html#a1b5ca7e57cd117a0e45baae54a10019f',1,'MiraiCP::UploadException']]],
-  ['uploadflashimg_4',['uploadFlashImg',['../a00211.html#ab764736fc0b82924ede105fd8dc41778',1,'MiraiCP::Contact']]],
-  ['uploadimg_5',['uploadImg',['../a00211.html#a2afe293fd81628ce7467afd6036b31c0',1,'MiraiCP::Contact']]],
-  ['uploadimg0_6',['uploadImg0',['../a00439.html#a3effa0c77f4c1687cf8656cdf0b60e42',1,'MiraiCP::LowLevelAPI']]]
+  ['unloadpluginbyid_0',['unloadPluginById',['../a00197.html#ace6aa7d8b5baf1f2be8908a5e103c92a',1,'LibLoader::LoaderApi']]],
+  ['unmute_1',['unMute',['../a00492.html#a2b2cc860cc9ae83f1c50f0ec832583d0',1,'MiraiCP::Member']]],
+  ['unsupportmessage_2',['UnSupportMessage',['../a00588.html#a6be0a774db3dc14967b31ab49e057454',1,'MiraiCP::UnSupportMessage']]],
+  ['updatesetting_3',['updateSetting',['../a00444.html#ae80ccbcd4143641c95df2127806f1180',1,'MiraiCP::Group']]],
+  ['uploadexception_4',['UploadException',['../a00356.html#a1b5ca7e57cd117a0e45baae54a10019f',1,'MiraiCP::UploadException']]],
+  ['uploadflashimg_5',['uploadFlashImg',['../a00248.html#a9303e08a1a3d8cbcd264d52076c752ed',1,'MiraiCP::Contact']]],
+  ['uploadimg_6',['uploadImg',['../a00248.html#adcdb311ac635604b435ccd8761bd5009',1,'MiraiCP::Contact']]],
+  ['uploadimg0_7',['uploadImg0',['../a00484.html#ae0924b93545215a82fb6a96d01acad61',1,'MiraiCP::LowLevelAPI']]]
 ];

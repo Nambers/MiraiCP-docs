@@ -1,8 +1,8 @@
 var a00244 =
 [
-    [ "GroupTempMessageEvent", "a00244.html#a4cd87975d98bef10e520e2ca9e3bfcf4", null ],
-    [ "get_event_type", "a00244.html#a6129a5451a7602b73c8d04fe88ad2715", null ],
-    [ "group", "a00244.html#a29c18056652c7d36248f70f359f01e74", null ],
-    [ "message", "a00244.html#a2405f8a309e3b2de0d7cba313d795cee", null ],
-    [ "sender", "a00244.html#ac0252e17c1cb9a0d4f2ebf37720951db", null ]
+    [ "CommandManager", "a00244.html#acf247b0f4f71627dc920d3297be6314f", null ],
+    [ "operator[]", "a00244.html#a2cadbf9c0ff28ff16c544c0fc03b874d", null ],
+    [ "registerCommand", "a00244.html#accb883db18602dc65b5fdd264dd73bfd", null ],
+    [ "commandList", "a00244.html#af770c2433fdf62bee434d79f7118cbcc", null ],
+    [ "commandManager", "a00244.html#a772ce2c737ce39e63ed80b023019f152", null ]
 ];

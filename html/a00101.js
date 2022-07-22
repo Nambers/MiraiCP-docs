@@ -1,0 +1,35 @@
+var a00101 =
+[
+    [ "operation_set", "a00101.html#a80a8ec1c1ed6fd9db32d9a878405d412", [
+      [ "Recall", "a00101.html#a80a8ec1c1ed6fd9db32d9a878405d412adf0c989f1aec4e71c3bf15c539da30f2", null ],
+      [ "Send", "a00101.html#a80a8ec1c1ed6fd9db32d9a878405d412a34075584a0b1bcb26b7fe6da90c17dc6", null ],
+      [ "RefreshInfo", "a00101.html#a80a8ec1c1ed6fd9db32d9a878405d412a1c1f12c6ba67788e4fa35854ba398262", null ],
+      [ "UploadImg", "a00101.html#a80a8ec1c1ed6fd9db32d9a878405d412a46ac938377bea3e99fd597903c2dec05", null ],
+      [ "QueryBFL", "a00101.html#a80a8ec1c1ed6fd9db32d9a878405d412afca69c54eeceae7e04852d9cb690fdea", null ],
+      [ "QueryBGL", "a00101.html#a80a8ec1c1ed6fd9db32d9a878405d412a4e51c062ef17ed5d02e087057ea73a0d", null ],
+      [ "SendFile", "a00101.html#a80a8ec1c1ed6fd9db32d9a878405d412a0634045bdef9eaba89da2ae1ba8b1e9f", null ],
+      [ "RemoteFileInfo", "a00101.html#a80a8ec1c1ed6fd9db32d9a878405d412a8f9b804c8b15efd89b27e29cbfa01e85", null ],
+      [ "QueryImgInfo", "a00101.html#a80a8ec1c1ed6fd9db32d9a878405d412a3ff130679ed5e51cdff18703faec6b10", null ],
+      [ "MuteM", "a00101.html#a80a8ec1c1ed6fd9db32d9a878405d412acb9f1372eda7d9b8f0bd44b43a73e8a2", null ],
+      [ "QueryM", "a00101.html#a80a8ec1c1ed6fd9db32d9a878405d412af3caa4ff5ef913398ab5d559713b2608", null ],
+      [ "KickM", "a00101.html#a80a8ec1c1ed6fd9db32d9a878405d412ad433fae5ad25a07de672621200576da7", null ],
+      [ "QueryOwner", "a00101.html#a80a8ec1c1ed6fd9db32d9a878405d412a4738713b4a5266d60e968576dbb75646", null ],
+      [ "Voice", "a00101.html#a80a8ec1c1ed6fd9db32d9a878405d412a40054e0c19d7566214cb665bfd8a142a", null ],
+      [ "QueryML", "a00101.html#a80a8ec1c1ed6fd9db32d9a878405d412aae1a72d88634c56dcc6dedb620e8aa0b", null ],
+      [ "GroupSetting", "a00101.html#a80a8ec1c1ed6fd9db32d9a878405d412a5c293c8a0900960a23381288bf9b0065", null ],
+      [ "Buildforward", "a00101.html#a80a8ec1c1ed6fd9db32d9a878405d412a57986a65eaa7f47722f66d9c7e21cd09", null ],
+      [ "Nfroperation", "a00101.html#a80a8ec1c1ed6fd9db32d9a878405d412a59eafab3051beae58fcde2228a7980f7", null ],
+      [ "Gioperation", "a00101.html#a80a8ec1c1ed6fd9db32d9a878405d412acc38c460d69662fbc68a4c7c1a8e7dab", null ],
+      [ "SendWithQuote", "a00101.html#a80a8ec1c1ed6fd9db32d9a878405d412a77c34f076eac875e461525c1dd9402c1", null ],
+      [ "Announcement", "a00101.html#a80a8ec1c1ed6fd9db32d9a878405d412a635cbeb51b20c7eb46c01fb98503a2cf", null ],
+      [ "TimeOut", "a00101.html#a80a8ec1c1ed6fd9db32d9a878405d412adfbf1b357c575589300ce82ad95ce0f3", null ],
+      [ "SendNudge", "a00101.html#a80a8ec1c1ed6fd9db32d9a878405d412a6edac563a1399474e7b8205864b04c6c", null ],
+      [ "NextMsg", "a00101.html#a80a8ec1c1ed6fd9db32d9a878405d412a5dc50037a994852e41e27f3a3d192e54", null ],
+      [ "ModifyAdmin", "a00101.html#a80a8ec1c1ed6fd9db32d9a878405d412a6c300cad8ed8917f070e926d67de7b3a", null ],
+      [ "MemberJoinRequest", "a00101.html#a80a8ec1c1ed6fd9db32d9a878405d412a20a788490e262b1b5745ebfcebedd9f9", null ],
+      [ "ImageUploaded", "a00101.html#a80a8ec1c1ed6fd9db32d9a878405d412a32d12f7dd6c0bd466c899d35ec3d03ef", null ],
+      [ "CommandReg", "a00101.html#a80a8ec1c1ed6fd9db32d9a878405d412a36091c0aa5ea549b9f7d462db3ad2259", null ],
+      [ "ChangeNameCard", "a00101.html#a80a8ec1c1ed6fd9db32d9a878405d412a946c3750205c2698925b6f328020add3", null ]
+    ] ],
+    [ "ktOperation", "a00101.html#a22b667b08eb5bb1bb8b603212b55f5e2", null ]
+];

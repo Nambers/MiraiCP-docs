@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiraiCP: LowLevelAPI.h 源文件</title>
+<title>MiraiCP: Logger.h 源文件</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MiraiCP
-   &#160;<span id="projectnumber">v2.11.0</span>
+   &#160;<span id="projectnumber">v2.12.0-RC2</span>
    </div>
    <div id="projectbrief">MiraiCP api document</div>
   </td>
@@ -90,7 +90,7 @@ $(document).ready(function(){initNavTree('a00113_source.html',''); initResizable
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">LowLevelAPI.h</div></div>
+  <div class="headertitle"><div class="title">Logger.h</div></div>
 </div><!--header-->
 <div class="contents">
 <a href="a00113.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// Copyright (c) 2020 - 2022. Eritque arcus and contributors.</span></div>
@@ -109,49 +109,146 @@ $(document).ready(function(){initNavTree('a00113_source.html',''); initResizable
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">// along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</span></div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">//</span></div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#ifndef MIRAICP_PRO_LOWLEVELAPI_H</span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#define MIRAICP_PRO_LOWLEVELAPI_H</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &lt;jni.h&gt;</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &lt;json.hpp&gt;</span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keyword">namespace </span><a class="code hl_namespace" href="a00177.html">MiraiCP</a> {</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="a00439.html">   24</a></span>    <span class="keyword">class </span><a class="code hl_class" href="a00439.html">LowLevelAPI</a> {</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <span class="keyword">static</span> std::string <a class="code hl_function" href="a00439.html#a795f4093d390bd0205ae95aa0075d442">send0</a>(<span class="keyword">const</span> std::string &amp;content, <a class="code hl_typedef" href="a00170.html#ab701e3ac61a85b337ec5c1abaad6742d">nlohmann::json</a> c, <span class="keywordtype">int</span> retryTime, <span class="keywordtype">bool</span> miraicode, JNIEnv *env,</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>                                 <span class="keyword">const</span> std::string &amp;errorInfo = <span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <span class="keyword">static</span> std::string <a class="code hl_function" href="a00439.html#ac03aa9c815ce59030b0f2610e48b79b1">getInfoSource</a>(<span class="keyword">const</span> std::string &amp;, JNIEnv *);</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <span class="keyword">static</span> std::string <a class="code hl_function" href="a00439.html#a3effa0c77f4c1687cf8656cdf0b60e42">uploadImg0</a>(<span class="keyword">const</span> std::string &amp;, <span class="keyword">const</span> std::string &amp;, JNIEnv *);</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="a00443.html">   50</a></span>        <span class="keyword">struct </span><a class="code hl_struct" href="a00443.html">info</a> {</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="a00443.html#abc3f2c3176f05d64751446e8760595df">   51</a></span>            std::string <a class="code hl_variable" href="a00443.html#abc3f2c3176f05d64751446e8760595df">nickornamecard</a>;</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="a00443.html#a037b8d06c116200bdb37de924401ef46">   52</a></span>            std::string <a class="code hl_variable" href="a00443.html#a037b8d06c116200bdb37de924401ef46">avatarUrl</a>;</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        };</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        <span class="keyword">static</span> <a class="code hl_struct" href="a00443.html">info</a> <a class="code hl_function" href="a00439.html#a39064f9c2b148b3a3061f818bf237215">info0</a>(<span class="keyword">const</span> std::string &amp;source);</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    };</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>} <span class="comment">// namespace MiraiCP</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#ifndef MIRAICP_PRO_LOGGER_H</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#define MIRAICP_PRO_LOGGER_H</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &quot;<a class="code" href="a00143.html">MiraiCode.h</a>&quot;</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &quot;<a class="code" href="a00152.html">MiraiDefs.h</a>&quot;</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &lt;functional&gt;</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#include &lt;sstream&gt;</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="keyword">namespace </span><a class="code hl_namespace" href="a00198.html">MiraiCP</a> {</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="keyword">class </span>MiraiCodeable; <span class="comment">// forward declaration</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="a00468.html">   41</a></span>    <span class="keyword">class </span><a class="code hl_class" href="a00468.html">Logger_interface</a> {</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="a00468.html#a22429d5974d2c062b424e0c0297cb897">   42</a></span>        <span class="keyword">using</span> <span class="keywordtype">string</span> = std::string;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="a00468.html#ac8323ef8b0f1c81161e08c4fded239a3">   51</a></span>        <span class="keyword">typedef</span> std::function&lt;void(<span class="keywordtype">string</span>, <span class="keywordtype">int</span>)&gt; <a class="code hl_typedef" href="a00468.html#ac8323ef8b0f1c81161e08c4fded239a3">Action</a>;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="a00472.html">   54</a></span>        <span class="keyword">struct </span><a class="code hl_struct" href="a00472.html">Handler</a> {</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="a00472.html#a0fda6ed76658ebaa758e801a72b3d946">   56</a></span>            <span class="keywordtype">bool</span> <a class="code hl_variable" href="a00472.html#a0fda6ed76658ebaa758e801a72b3d946">enable</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="a00472.html#aea306ee2e14936202c9a814a15e0d0bc">   58</a></span>            <a class="code hl_typedef" href="a00468.html#ac8323ef8b0f1c81161e08c4fded239a3">Action</a> <a class="code hl_variable" href="a00472.html#aea306ee2e14936202c9a814a15e0d0bc">action</a> = [](<span class="keyword">const</span> <span class="keywordtype">string</span> &amp;content, <span class="keywordtype">int</span> level) {};</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        };</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="preprocessor">#endif </span><span class="comment">//MIRAICP_PRO_LOWLEVELAPI_H</span></div>
-<div class="ttc" id="aa00170_html_ab701e3ac61a85b337ec5c1abaad6742d"><div class="ttname"><a href="a00170.html#ab701e3ac61a85b337ec5c1abaad6742d">json</a></div><div class="ttdeci">nlohmann::json json</div><div class="ttdef"><b>Definition:</b> <a href="a00170_source.html#l00026">utils.cpp:26</a></div></div>
-<div class="ttc" id="aa00177_html"><div class="ttname"><a href="a00177.html">MiraiCP</a></div><div class="ttdef"><b>Definition:</b> <a href="a00044_source.html#l00023">Bot.cpp:23</a></div></div>
-<div class="ttc" id="aa00439_html"><div class="ttname"><a href="a00439.html">MiraiCP::LowLevelAPI</a></div><div class="ttdoc">较底层api</div><div class="ttdef"><b>Definition:</b> <a href="a00113_source.html#l00024">LowLevelAPI.h:24</a></div></div>
-<div class="ttc" id="aa00439_html_a39064f9c2b148b3a3061f818bf237215"><div class="ttname"><a href="a00439.html#a39064f9c2b148b3a3061f818bf237215">MiraiCP::LowLevelAPI::info0</a></div><div class="ttdeci">static info info0(const std::string &amp;source)</div><div class="ttdef"><b>Definition:</b> <a href="a00110_source.html#l00034">LowLevelAPI.cpp:34</a></div></div>
-<div class="ttc" id="aa00439_html_a3effa0c77f4c1687cf8656cdf0b60e42"><div class="ttname"><a href="a00439.html#a3effa0c77f4c1687cf8656cdf0b60e42">MiraiCP::LowLevelAPI::uploadImg0</a></div><div class="ttdeci">static std::string uploadImg0(const std::string &amp;, const std::string &amp;, JNIEnv *)</div><div class="ttdoc">上传图片</div><div class="ttdef"><b>Definition:</b> <a href="a00110_source.html#l00048">LowLevelAPI.cpp:48</a></div></div>
-<div class="ttc" id="aa00439_html_a795f4093d390bd0205ae95aa0075d442"><div class="ttname"><a href="a00439.html#a795f4093d390bd0205ae95aa0075d442">MiraiCP::LowLevelAPI::send0</a></div><div class="ttdeci">static std::string send0(const std::string &amp;content, nlohmann::json c, int retryTime, bool miraicode, JNIEnv *env, const std::string &amp;errorInfo=&quot;&quot;)</div><div class="ttdoc">抽象封装底层发送信息接口</div><div class="ttdef"><b>Definition:</b> <a href="a00110_source.html#l00023">LowLevelAPI.cpp:23</a></div></div>
-<div class="ttc" id="aa00439_html_ac03aa9c815ce59030b0f2610e48b79b1"><div class="ttname"><a href="a00439.html#ac03aa9c815ce59030b0f2610e48b79b1">MiraiCP::LowLevelAPI::getInfoSource</a></div><div class="ttdeci">static std::string getInfoSource(const std::string &amp;, JNIEnv *)</div><div class="ttdoc">取该联系人的一些信息</div><div class="ttdef"><b>Definition:</b> <a href="a00110_source.html#l00043">LowLevelAPI.cpp:43</a></div></div>
-<div class="ttc" id="aa00443_html"><div class="ttname"><a href="a00443.html">MiraiCP::LowLevelAPI::info</a></div><div class="ttdoc">每个对象的必有信息</div><div class="ttdef"><b>Definition:</b> <a href="a00113_source.html#l00050">LowLevelAPI.h:50</a></div></div>
-<div class="ttc" id="aa00443_html_a037b8d06c116200bdb37de924401ef46"><div class="ttname"><a href="a00443.html#a037b8d06c116200bdb37de924401ef46">MiraiCP::LowLevelAPI::info::avatarUrl</a></div><div class="ttdeci">std::string avatarUrl</div><div class="ttdef"><b>Definition:</b> <a href="a00113_source.html#l00052">LowLevelAPI.h:52</a></div></div>
-<div class="ttc" id="aa00443_html_abc3f2c3176f05d64751446e8760595df"><div class="ttname"><a href="a00443.html#abc3f2c3176f05d64751446e8760595df">MiraiCP::LowLevelAPI::info::nickornamecard</a></div><div class="ttdeci">std::string nickornamecard</div><div class="ttdef"><b>Definition:</b> <a href="a00113_source.html#l00051">LowLevelAPI.h:51</a></div></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="a00468.html#aa5e38fc4b466c0bc6b02972a3b549728">   61</a></span>        <a class="code hl_struct" href="a00472.html">Handler</a> <a class="code hl_variable" href="a00468.html#aa5e38fc4b466c0bc6b02972a3b549728">loggerhandler</a>;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="a00468.html#a98af60f864a0446e23a7a27a3419d9b8">   64</a></span>        <span class="keyword">static</span> std::string <a class="code hl_function" href="a00468.html#a98af60f864a0446e23a7a27a3419d9b8">constructString</a>() {</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        }</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        <span class="keyword">template</span>&lt;<span class="keyword">class </span>T, <span class="keyword">class</span>... T1&gt;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="a00468.html#a39c7ccab868d2811de64c9342a7e31d0">   69</a></span>        <span class="keyword">static</span> std::string <a class="code hl_function" href="a00468.html#a39c7ccab868d2811de64c9342a7e31d0">constructString</a>(T val, T1... val1) {</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>            std::stringstream sstream;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>            sstream &lt;&lt; val;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>            <span class="keywordflow">return</span> sstream.str() + <a class="code hl_function" href="a00468.html#a98af60f864a0446e23a7a27a3419d9b8">constructString</a>(val1...);</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        }</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        <span class="keyword">template</span>&lt;<span class="keyword">class</span>... T&gt;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="a00468.html#a18ee44bbbc35633aa48086f39d4b6728">   76</a></span>        <span class="keyword">static</span> std::string <a class="code hl_function" href="a00468.html#a18ee44bbbc35633aa48086f39d4b6728">constructString</a>(std::string a, T... val1) {</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>            <span class="keywordflow">return</span> a + <a class="code hl_function" href="a00468.html#a98af60f864a0446e23a7a27a3419d9b8">constructString</a>(val1...);</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        }</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        <span class="keyword">template</span>&lt;<span class="keyword">class</span>... T&gt;</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="a00468.html#a37e95f52e2cd6e34ee64975279257e0f">   81</a></span>        <span class="keyword">static</span> std::string <a class="code hl_function" href="a00468.html#a37e95f52e2cd6e34ee64975279257e0f">constructString</a>(<a class="code hl_class" href="a00508.html">MiraiCodeable</a> &amp;val, T... val1) {</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>            <span class="keywordflow">return</span> val.<a class="code hl_function" href="a00508.html#a96bdd3af5e564960b2b7f562032b1a15">toMiraiCode</a>() + <a class="code hl_function" href="a00468.html#a98af60f864a0446e23a7a27a3419d9b8">constructString</a>(val1...);</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        }</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno"><a class="line" href="a00468.html#a86ea9d57475a3004be2a32b2c4c76371">   89</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="a00468.html#a86ea9d57475a3004be2a32b2c4c76371">log_interface</a>(<span class="keyword">const</span> <span class="keywordtype">string</span> &amp;log, <span class="keywordtype">int</span> level) = 0;</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        <span class="keyword">template</span>&lt;<span class="keyword">class</span>... T&gt;</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno"><a class="line" href="a00468.html#af487216ad90334b62a970ad6e5a796a4">   94</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="a00468.html#af487216ad90334b62a970ad6e5a796a4">info</a>(T... val) {</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>            this-&gt;<a class="code hl_function" href="a00468.html#a86ea9d57475a3004be2a32b2c4c76371">log_interface</a>(<a class="code hl_function" href="a00468.html#a98af60f864a0446e23a7a27a3419d9b8">constructString</a>(val...), 0);</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        }</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        <span class="keyword">template</span>&lt;<span class="keyword">class</span>... T&gt;</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno"><a class="line" href="a00468.html#a19b06047f8959a3bfb100c0006767c83">  100</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="a00468.html#a19b06047f8959a3bfb100c0006767c83">warning</a>(T... val) {</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>            this-&gt;<a class="code hl_function" href="a00468.html#a86ea9d57475a3004be2a32b2c4c76371">log_interface</a>(<a class="code hl_function" href="a00468.html#a98af60f864a0446e23a7a27a3419d9b8">constructString</a>(val...), 1);</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        }</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>        <span class="keyword">template</span>&lt;<span class="keyword">class</span>... T&gt;</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno"><a class="line" href="a00468.html#a418fad5b082009c5e40871d3cd88cacf">  106</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="a00468.html#a418fad5b082009c5e40871d3cd88cacf">error</a>(T... val) {</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>            this-&gt;<a class="code hl_function" href="a00468.html#a86ea9d57475a3004be2a32b2c4c76371">log_interface</a>(<a class="code hl_function" href="a00468.html#a98af60f864a0446e23a7a27a3419d9b8">constructString</a>(val...), 2);</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>        }</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span> </div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno"><a class="line" href="a00468.html#aa3e0ad0c5771cee4583b577981105114">  113</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="a00468.html#aa3e0ad0c5771cee4583b577981105114">registerHandle</a>(<a class="code hl_typedef" href="a00468.html#ac8323ef8b0f1c81161e08c4fded239a3">Action</a> action) {</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>            this-&gt;loggerhandler.<a class="code hl_variable" href="a00472.html#aea306ee2e14936202c9a814a15e0d0bc">action</a> = std::move(action);</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>        }</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno"><a class="line" href="a00468.html#a3ed1680508618b446c94ed004c211ea9">  120</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="a00468.html#a3ed1680508618b446c94ed004c211ea9">setHandleState</a>(<span class="keywordtype">bool</span> state) {</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>            this-&gt;loggerhandler.<a class="code hl_variable" href="a00472.html#a0fda6ed76658ebaa758e801a72b3d946">enable</a> = state;</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>        }</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    };</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span> </div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno"><a class="line" href="a00476.html">  125</a></span>    <span class="keyword">class </span><a class="code hl_class" href="a00476.html">Logger</a> : <span class="keyword">public</span> <a class="code hl_class" href="a00468.html">Logger_interface</a> {</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno"><a class="line" href="a00476.html#a0707bf07c1d709abf854a3592fb2f1f0">  127</a></span>        <a class="code hl_function" href="a00476.html#a0707bf07c1d709abf854a3592fb2f1f0">Logger</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span> </div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    <span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="a00476.html#ae75bdd405eddd5650979feb9e9ee2a9b">log_interface</a>(<span class="keyword">const</span> std::string &amp;content, <span class="keywordtype">int</span> level) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span> </div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno"><a class="line" href="a00476.html#a268fd602157c3fa49616a8872c82bfb1">  136</a></span>        <span class="keyword">static</span> <a class="code hl_class" href="a00476.html">Logger</a> <a class="code hl_variable" href="a00476.html#a268fd602157c3fa49616a8872c82bfb1">logger</a>;</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    };</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span> </div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno"><a class="line" href="a00480.html">  140</a></span>    <span class="keyword">class </span><a class="code hl_class" href="a00480.html">IdLogger</a> : <span class="keyword">public</span> <a class="code hl_class" href="a00468.html">Logger_interface</a> {</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno"><a class="line" href="a00480.html#a0780713691dbbe27226d2c4c6c13d226">  142</a></span>        <a class="code hl_typedef" href="a00198.html#a3ae2ebfdaa4574d341b8e7935f29ddb8">QQID</a> <a class="code hl_variable" href="a00480.html#a0780713691dbbe27226d2c4c6c13d226">id</a>;</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span> </div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>    <span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="a00480.html#a4c6ec76d433a890ff1c95cae4cfff59c">log_interface</a>(<span class="keyword">const</span> std::string &amp;content, <span class="keywordtype">int</span> level) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span> </div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno"><a class="line" href="a00480.html#a50eb2703023973190ae65a949011166f">  148</a></span>        <a class="code hl_function" href="a00480.html#a50eb2703023973190ae65a949011166f">IdLogger</a>(<a class="code hl_typedef" href="a00198.html#a3ae2ebfdaa4574d341b8e7935f29ddb8">QQID</a> <span class="keywordtype">id</span>, <a class="code hl_class" href="a00476.html">Logger</a> *l) : <a class="code hl_variable" href="a00480.html#a0780713691dbbe27226d2c4c6c13d226">id</a>(<a class="code hl_variable" href="a00480.html#a0780713691dbbe27226d2c4c6c13d226">id</a>) {</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>            this-&gt;<a class="code hl_variable" href="a00468.html#aa5e38fc4b466c0bc6b02972a3b549728">loggerhandler</a> = l-&gt;<a class="code hl_variable" href="a00468.html#aa5e38fc4b466c0bc6b02972a3b549728">loggerhandler</a>;</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>        }</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>    };</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>} <span class="comment">// namespace MiraiCP</span></div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span> </div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span><span class="preprocessor">#endif </span><span class="comment">//MIRAICP_PRO_LOGGER_H</span></div>
+<div class="ttc" id="aa00143_html"><div class="ttname"><a href="a00143.html">MiraiCode.h</a></div></div>
+<div class="ttc" id="aa00152_html"><div class="ttname"><a href="a00152.html">MiraiDefs.h</a></div></div>
+<div class="ttc" id="aa00198_html"><div class="ttname"><a href="a00198.html">MiraiCP</a></div><div class="ttdef"><b>Definition:</b> <a href="a00182_source.html#l00024">miraicpString.cpp:24</a></div></div>
+<div class="ttc" id="aa00198_html_a3ae2ebfdaa4574d341b8e7935f29ddb8"><div class="ttname"><a href="a00198.html#a3ae2ebfdaa4574d341b8e7935f29ddb8">MiraiCP::QQID</a></div><div class="ttdeci">unsigned long long QQID</div><div class="ttdef"><b>Definition:</b> <a href="a00152_source.html#l00036">MiraiDefs.h:36</a></div></div>
+<div class="ttc" id="aa00468_html"><div class="ttname"><a href="a00468.html">MiraiCP::Logger_interface</a></div><div class="ttdef"><b>Definition:</b> <a href="a00113_source.html#l00041">Logger.h:41</a></div></div>
+<div class="ttc" id="aa00468_html_a18ee44bbbc35633aa48086f39d4b6728"><div class="ttname"><a href="a00468.html#a18ee44bbbc35633aa48086f39d4b6728">MiraiCP::Logger_interface::constructString</a></div><div class="ttdeci">static std::string constructString(std::string a, T... val1)</div><div class="ttdef"><b>Definition:</b> <a href="a00113_source.html#l00076">Logger.h:76</a></div></div>
+<div class="ttc" id="aa00468_html_a19b06047f8959a3bfb100c0006767c83"><div class="ttname"><a href="a00468.html#a19b06047f8959a3bfb100c0006767c83">MiraiCP::Logger_interface::warning</a></div><div class="ttdeci">void warning(T... val)</div><div class="ttdoc">发送警告(warning级日志)</div><div class="ttdef"><b>Definition:</b> <a href="a00113_source.html#l00100">Logger.h:100</a></div></div>
+<div class="ttc" id="aa00468_html_a37e95f52e2cd6e34ee64975279257e0f"><div class="ttname"><a href="a00468.html#a37e95f52e2cd6e34ee64975279257e0f">MiraiCP::Logger_interface::constructString</a></div><div class="ttdeci">static std::string constructString(MiraiCodeable &amp;val, T... val1)</div><div class="ttdef"><b>Definition:</b> <a href="a00113_source.html#l00081">Logger.h:81</a></div></div>
+<div class="ttc" id="aa00468_html_a39c7ccab868d2811de64c9342a7e31d0"><div class="ttname"><a href="a00468.html#a39c7ccab868d2811de64c9342a7e31d0">MiraiCP::Logger_interface::constructString</a></div><div class="ttdeci">static std::string constructString(T val, T1... val1)</div><div class="ttdef"><b>Definition:</b> <a href="a00113_source.html#l00069">Logger.h:69</a></div></div>
+<div class="ttc" id="aa00468_html_a3ed1680508618b446c94ed004c211ea9"><div class="ttname"><a href="a00468.html#a3ed1680508618b446c94ed004c211ea9">MiraiCP::Logger_interface::setHandleState</a></div><div class="ttdeci">void setHandleState(bool state)</div><div class="ttdoc">设置handler的启用状态</div><div class="ttdef"><b>Definition:</b> <a href="a00113_source.html#l00120">Logger.h:120</a></div></div>
+<div class="ttc" id="aa00468_html_a418fad5b082009c5e40871d3cd88cacf"><div class="ttname"><a href="a00468.html#a418fad5b082009c5e40871d3cd88cacf">MiraiCP::Logger_interface::error</a></div><div class="ttdeci">void error(T... val)</div><div class="ttdoc">发送错误(error级日志)</div><div class="ttdef"><b>Definition:</b> <a href="a00113_source.html#l00106">Logger.h:106</a></div></div>
+<div class="ttc" id="aa00468_html_a86ea9d57475a3004be2a32b2c4c76371"><div class="ttname"><a href="a00468.html#a86ea9d57475a3004be2a32b2c4c76371">MiraiCP::Logger_interface::log_interface</a></div><div class="ttdeci">virtual void log_interface(const string &amp;log, int level)=0</div><div class="ttdoc">日志底层实现封装</div></div>
+<div class="ttc" id="aa00468_html_a98af60f864a0446e23a7a27a3419d9b8"><div class="ttname"><a href="a00468.html#a98af60f864a0446e23a7a27a3419d9b8">MiraiCP::Logger_interface::constructString</a></div><div class="ttdeci">static std::string constructString()</div><div class="ttdef"><b>Definition:</b> <a href="a00113_source.html#l00064">Logger.h:64</a></div></div>
+<div class="ttc" id="aa00468_html_aa3e0ad0c5771cee4583b577981105114"><div class="ttname"><a href="a00468.html#aa3e0ad0c5771cee4583b577981105114">MiraiCP::Logger_interface::registerHandle</a></div><div class="ttdeci">void registerHandle(Action action)</div><div class="ttdoc">设置loggerhandler的action</div><div class="ttdef"><b>Definition:</b> <a href="a00113_source.html#l00113">Logger.h:113</a></div></div>
+<div class="ttc" id="aa00468_html_aa5e38fc4b466c0bc6b02972a3b549728"><div class="ttname"><a href="a00468.html#aa5e38fc4b466c0bc6b02972a3b549728">MiraiCP::Logger_interface::loggerhandler</a></div><div class="ttdeci">Handler loggerhandler</div><div class="ttdef"><b>Definition:</b> <a href="a00113_source.html#l00061">Logger.h:61</a></div></div>
+<div class="ttc" id="aa00468_html_ac8323ef8b0f1c81161e08c4fded239a3"><div class="ttname"><a href="a00468.html#ac8323ef8b0f1c81161e08c4fded239a3">MiraiCP::Logger_interface::Action</a></div><div class="ttdeci">std::function&lt; void(string, int)&gt; Action</div><div class="ttdoc">封装lambda类型</div><div class="ttdef"><b>Definition:</b> <a href="a00113_source.html#l00051">Logger.h:51</a></div></div>
+<div class="ttc" id="aa00468_html_af487216ad90334b62a970ad6e5a796a4"><div class="ttname"><a href="a00468.html#af487216ad90334b62a970ad6e5a796a4">MiraiCP::Logger_interface::info</a></div><div class="ttdeci">void info(T... val)</div><div class="ttdoc">发送普通(info级日志)</div><div class="ttdef"><b>Definition:</b> <a href="a00113_source.html#l00094">Logger.h:94</a></div></div>
+<div class="ttc" id="aa00472_html"><div class="ttname"><a href="a00472.html">MiraiCP::Logger_interface::Handler</a></div><div class="ttdoc">loggerhandler会在每次log执行前执行一遍，可用于执行自定义的保存操作等</div><div class="ttdef"><b>Definition:</b> <a href="a00113_source.html#l00054">Logger.h:54</a></div></div>
+<div class="ttc" id="aa00472_html_a0fda6ed76658ebaa758e801a72b3d946"><div class="ttname"><a href="a00472.html#a0fda6ed76658ebaa758e801a72b3d946">MiraiCP::Logger_interface::Handler::enable</a></div><div class="ttdeci">bool enable</div><div class="ttdoc">是否启用</div><div class="ttdef"><b>Definition:</b> <a href="a00113_source.html#l00056">Logger.h:56</a></div></div>
+<div class="ttc" id="aa00472_html_aea306ee2e14936202c9a814a15e0d0bc"><div class="ttname"><a href="a00472.html#aea306ee2e14936202c9a814a15e0d0bc">MiraiCP::Logger_interface::Handler::action</a></div><div class="ttdeci">Action action</div><div class="ttdoc">执行的操作，格式为lambda</div><div class="ttdef"><b>Definition:</b> <a href="a00113_source.html#l00058">Logger.h:58</a></div></div>
+<div class="ttc" id="aa00476_html"><div class="ttname"><a href="a00476.html">MiraiCP::Logger</a></div><div class="ttdoc">以MiraiCP的名义发送日志, 日志表现格式是: 2021-06-28 09:37:22 [log level]/MiraiCP: [log content], 为最底层的logger 发送消息级日志</div><div class="ttdef"><b>Definition:</b> <a href="a00113_source.html#l00125">Logger.h:125</a></div></div>
+<div class="ttc" id="aa00476_html_a0707bf07c1d709abf854a3592fb2f1f0"><div class="ttname"><a href="a00476.html#a0707bf07c1d709abf854a3592fb2f1f0">MiraiCP::Logger::Logger</a></div><div class="ttdeci">Logger()=default</div></div>
+<div class="ttc" id="aa00476_html_a268fd602157c3fa49616a8872c82bfb1"><div class="ttname"><a href="a00476.html#a268fd602157c3fa49616a8872c82bfb1">MiraiCP::Logger::logger</a></div><div class="ttdeci">static Logger logger</div><div class="ttdef"><b>Definition:</b> <a href="a00113_source.html#l00136">Logger.h:136</a></div></div>
+<div class="ttc" id="aa00476_html_ae75bdd405eddd5650979feb9e9ee2a9b"><div class="ttname"><a href="a00476.html#ae75bdd405eddd5650979feb9e9ee2a9b">MiraiCP::Logger::log_interface</a></div><div class="ttdeci">void log_interface(const std::string &amp;content, int level) override</div><div class="ttdoc">日志底层实现封装</div><div class="ttdef"><b>Definition:</b> <a href="a00909_source.html#l00026">include/Logger.cpp:26</a></div></div>
+<div class="ttc" id="aa00480_html"><div class="ttname"><a href="a00480.html">MiraiCP::IdLogger</a></div><div class="ttdoc">带id(一般为bot账号)的logger</div><div class="ttdef"><b>Definition:</b> <a href="a00113_source.html#l00140">Logger.h:140</a></div></div>
+<div class="ttc" id="aa00480_html_a0780713691dbbe27226d2c4c6c13d226"><div class="ttname"><a href="a00480.html#a0780713691dbbe27226d2c4c6c13d226">MiraiCP::IdLogger::id</a></div><div class="ttdeci">QQID id</div><div class="ttdef"><b>Definition:</b> <a href="a00113_source.html#l00142">Logger.h:142</a></div></div>
+<div class="ttc" id="aa00480_html_a4c6ec76d433a890ff1c95cae4cfff59c"><div class="ttname"><a href="a00480.html#a4c6ec76d433a890ff1c95cae4cfff59c">MiraiCP::IdLogger::log_interface</a></div><div class="ttdeci">void log_interface(const std::string &amp;content, int level) override</div><div class="ttdoc">日志底层实现封装</div><div class="ttdef"><b>Definition:</b> <a href="a00909_source.html#l00030">include/Logger.cpp:30</a></div></div>
+<div class="ttc" id="aa00480_html_a50eb2703023973190ae65a949011166f"><div class="ttname"><a href="a00480.html#a50eb2703023973190ae65a949011166f">MiraiCP::IdLogger::IdLogger</a></div><div class="ttdeci">IdLogger(QQID id, Logger *l)</div><div class="ttdef"><b>Definition:</b> <a href="a00113_source.html#l00148">Logger.h:148</a></div></div>
+<div class="ttc" id="aa00508_html"><div class="ttname"><a href="a00508.html">MiraiCP::MiraiCodeable</a></div><div class="ttdoc">MiraiCode父类, 指可以被转换成miraicode的类型</div><div class="ttdef"><b>Definition:</b> <a href="a00143_source.html#l00024">MiraiCode.h:24</a></div></div>
+<div class="ttc" id="aa00508_html_a96bdd3af5e564960b2b7f562032b1a15"><div class="ttname"><a href="a00508.html#a96bdd3af5e564960b2b7f562032b1a15">MiraiCP::MiraiCodeable::toMiraiCode</a></div><div class="ttdeci">virtual std::string toMiraiCode() const =0</div><div class="ttdoc">返回MiraiCode</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b0856f6b0d80ccb263b2f415c91f9e17.html">include</a></li><li class="navelem"><a class="el" href="a00113.html">LowLevelAPI.h</a></li>
-    <li class="footer">生成于 2022年 五月 20日 星期五 18:15:37 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b0856f6b0d80ccb263b2f415c91f9e17.html">include</a></li><li class="navelem"><a class="el" href="a00113.html">Logger.h</a></li>
+    <li class="footer">生成于 2022年 七月 22日 星期五 13:46:01 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
 <script type="text/javascript">

@@ -1,8 +1,16 @@
 var a00272 =
 [
-    [ "MiraiCPExceptionEvent", "a00272.html#a67f475ec3ebcf1f185e5d9ef13fcd14c", null ],
-    [ "get_event_type", "a00272.html#ae1d7b10fffc99fba2cb4d08754e42365", null ],
-    [ "getEventType", "a00272.html#a95739c7970624a1ef395ba899e2bf68d", null ],
-    [ "getException", "a00272.html#a9e986a6f69f2fd33a7313827a1f75da0", null ],
-    [ "exceptionPtr", "a00272.html#abbe1679705abc11d256a39eb12ac6837", null ]
+    [ "GroupMessageEvent", "a00272.html#a69a261b515fcfafc599a649684cea695", null ],
+    [ "chat", "a00272.html#a4cdd74f8d9a12c115899afc53088cde5", null ],
+    [ "chat", "a00272.html#a8d3c0c5bbda48132c31dca900f9d4931", null ],
+    [ "from", "a00272.html#ae81a0e1dec6235d786b79244ef3ae40b", null ],
+    [ "from", "a00272.html#a76b1e6102746a08259bef6d638a8c993", null ],
+    [ "get_event_type", "a00272.html#ad54cdae9c5b4b8119d307931278b0dab", null ],
+    [ "getMessageChain", "a00272.html#a505491fdd1287b85705d706d4c54e8da", null ],
+    [ "getMessageChain", "a00272.html#a3dd489fc2c775cb0997402525d461877", null ],
+    [ "nextMessage", "a00272.html#addb043788194a8bffd2eeddff17080ef", null ],
+    [ "senderNextMessage", "a00272.html#a67d98fb7d7214cb2bc916da47e3e5ce3", null ],
+    [ "group", "a00272.html#abac98c5b1373ad6c8483f9978952c553", null ],
+    [ "message", "a00272.html#a722dc1ca031c471c953c710367067ae7", null ],
+    [ "sender", "a00272.html#acd0e90e4fb7862986215aae7e47cb2d6", null ]
 ];

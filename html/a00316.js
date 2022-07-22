@@ -1,5 +1,8 @@
 var a00316 =
 [
-    [ "MuteException", "a00316.html#aabc181c072a55209b6a88f4a0f43fa9a", null ],
-    [ "exceptionType", "a00316.html#afae350ada0208f24022d4de92442b515", null ]
+    [ "NudgeEvent", "a00316.html#a33de6a207ef920b7fee423674cc2e126", null ],
+    [ "get_event_type", "a00316.html#a74e2d3893cc0879c00c226fe03283b81", null ],
+    [ "from", "a00316.html#a6b41c32519408428cb6fc302bf24b970", null ],
+    [ "subject", "a00316.html#a48c484cc7aeaa12cec54886697950dc6", null ],
+    [ "target", "a00316.html#af4e172354f69ce65c8d8d2cd1f188cca", null ]
 ];

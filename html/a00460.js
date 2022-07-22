@@ -1,10 +1,8 @@
 var a00460 =
 [
-    [ "At", "a00460.html#ab5b225ea67cf995d13b384ec622c86e7", null ],
-    [ "At", "a00460.html#a3e12195fc4d9ae026ec8a438a368342a", null ],
-    [ "operator==", "a00460.html#a58dbd3db49d9d2fed357b791ff3ba816", null ],
-    [ "toJson", "a00460.html#a60af12c9073c8734f98ee682a61ce184", null ],
-    [ "toMiraiCode", "a00460.html#abaa95fab044eebb3e355da0040c0bfa7", null ],
-    [ "type", "a00460.html#a125a356ddd55ec22117d8fafb1f32dc9", null ],
-    [ "target", "a00460.html#a4c451a3d12d38f6a83d425cab2d2aa25", null ]
+    [ "isAllowMemberInvite", "a00460.html#adccf862ef0e617a47afb0df587edf59f", null ],
+    [ "isAnonymousChatEnabled", "a00460.html#ab0bf5bfb9c998204ca668855c09a9b8a", null ],
+    [ "isAutoApproveEnabled", "a00460.html#a625ca6d44d9d06a2af48cab1962e73fa", null ],
+    [ "isMuteAll", "a00460.html#a6bfb635769917d4f2c84c4e9cfc813d0", null ],
+    [ "name", "a00460.html#ae29352ebb0325fd3b035b1c65be1092f", null ]
 ];

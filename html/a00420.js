@@ -1,17 +1,8 @@
 var a00420 =
 [
-    [ "Member", "a00420.html#a3cfdf6803d46393e79da5382d8189dd7", null ],
-    [ "Member", "a00420.html#a94779cdd0b802852a5d32ea71399413e", null ],
-    [ "at", "a00420.html#ace4950bd9191fdf90ecba764c870f90e", null ],
-    [ "changeNameCard", "a00420.html#a5aa1cde5b16fcbd72d942f038fd75b6e", null ],
-    [ "getPermission", "a00420.html#ade27b6ea619f27ec4823618a0cacf00a", null ],
-    [ "kick", "a00420.html#ad83478036b6ad5750b7b4de2c182353b", null ],
-    [ "modifyAdmin", "a00420.html#ad9b954fd548c29c1fcf7b6895605cfaf", null ],
-    [ "mute", "a00420.html#a068163bcb889d26bc8f8ac767472156d", null ],
-    [ "refreshInfo", "a00420.html#a82a34041332929299e293f81c6152ca0", null ],
-    [ "sendNudge", "a00420.html#aff2d2c3a907f051ca89d506b02caa5d0", null ],
-    [ "sendVoice", "a00420.html#aeeb58a0e84068d0b18bdb634093cf5d7", null ],
-    [ "unMute", "a00420.html#a218b3216bfc009ec7ca8b3535496f7c3", null ],
-    [ "isAnonymous", "a00420.html#a02c93da6f71f701f384aceef3746c9c2", null ],
-    [ "permission", "a00420.html#a348c726624fb4fe3e1d419f32f51031a", null ]
+    [ "MiraiCPThreadException", "a00420.html#a4b4c5caac34747b3ecb483f4deed965f", null ],
+    [ "exceptionType", "a00420.html#aad0c4ccc8e691b6d4a078b1ea85c3207", null ],
+    [ "getThreadIdStr", "a00420.html#ae296a1ee1626dd34c9028ae8a33179a5", null ],
+    [ "getThreadIdStr", "a00420.html#a2737c993eb841b4dcc04805f7e060839", null ],
+    [ "threadId", "a00420.html#aabed0e9baac6e2c9164c5b606b04bc97", null ]
 ];

@@ -1,8 +1,9 @@
 var a00240 =
 [
-    [ "BotJoinGroupEvent", "a00240.html#a52f6947edde412772cc67609f9414b61", null ],
-    [ "get_event_type", "a00240.html#adf48f18ecbec794027b76670d1ba22e0", null ],
-    [ "group", "a00240.html#ad3643d9978133be026420f1d71594ec7", null ],
-    [ "inviterid", "a00240.html#aec3b3e13b9dedba8e0a06ae45b146e51", null ],
-    [ "type", "a00240.html#afecd637a84090e12fa5721074711c05d", null ]
+    [ "description", "a00240.html#ae924c02b04ee3fec68c0838ee34bd45d", null ],
+    [ "overrideOrigin", "a00240.html#acb9a0a0c0b1933c9aa28bb361f284489", null ],
+    [ "preFixOption", "a00240.html#af40c74e212dd165a72e7b2e8769e0dcb", null ],
+    [ "primaryName", "a00240.html#a21a4c0a9fe2032ce10efbd76c5388dce", null ],
+    [ "secondNames", "a00240.html#a5211c63986e404f8edc7b36cbd0c3618", null ],
+    [ "usage", "a00240.html#a3f604db6531d4956520cf813d57aa544", null ]
 ];

@@ -1,15 +1,12 @@
 var a00176 =
 [
-    [ "MiraiCPDefer", "a00543.html", "a00543" ],
-    [ "escapeFromMiraiCode", "a00176.html#ae7bf212fddf60af59042677c3a7753a5", null ],
-    [ "escapeToMiraiCode", "a00176.html#a01f4fe41f8bef55b95953750f5cfb0c2", null ],
-    [ "icompareChar", "a00176.html#a795aadb1af1cd4b85e9b48b5bb5b246d", null ],
-    [ "iequal", "a00176.html#a0b52c701b3d96bf42b4d67c21f1dab2d", null ],
-    [ "jstring2str", "a00176.html#aca81fb0894771f60fbf64c3b776044e5", null ],
-    [ "replace", "a00176.html#a939c6b8139fec1968a2d8b45bf3e46d0", null ],
-    [ "split", "a00176.html#aa9d4bfd5269173c2f6aed44f79bf976e", null ],
-    [ "starts_with", "a00176.html#ac1c9173c6218044be45605d07874e99b", null ],
-    [ "str2jstring", "a00176.html#ad6af583021178966fa57f1290f69c0ff", null ],
-    [ "StringToVector", "a00176.html#a5e3ca5f1b36ef97a2cc8255fd07ccd69", null ],
-    [ "VectorToString", "a00176.html#a2cc70adde692e966e1d4530ac572dbbb", null ]
+    [ "FUNC_ENTRANCE", "a00176.html#a530f8aa8a579c0ec728d5e7a46515ba4", null ],
+    [ "FUNC_EVENT", "a00176.html#a06af3829abc05f3902ed69ee480b66fa", null ],
+    [ "FUNC_EXIT", "a00176.html#a6505e9c7b381013fa532556439fb8bd0", null ],
+    [ "PLUGIN_INFO", "a00176.html#ac4ea748794ca932109fca8a936954720", null ],
+    [ "plugin_entrance_func_ptr", "a00176.html#a737c0a0b70ea90a5fda61002ec9f1ec5", null ],
+    [ "plugin_event_func_ptr", "a00176.html#a7b1a774df603b5f53af084662a207fa6", null ],
+    [ "plugin_func_ptr", "a00176.html#aae50308f3b68967bcf9279e9e4bfe578", null ],
+    [ "plugin_handle", "a00176.html#a927f212ce2db84cca1f02ec95aa62322", null ],
+    [ "plugin_info_func_ptr", "a00176.html#afcd5af8d60fb564a8735b6283c0a3881", null ]
 ];

@@ -1,6 +1,5 @@
 var a00400 =
 [
-    [ "Logger", "a00400.html#a0707bf07c1d709abf854a3592fb2f1f0", null ],
-    [ "log1", "a00400.html#a9fdef28aa50fd451675ebb2bc591b8cf", null ],
-    [ "logger", "a00400.html#a268fd602157c3fa49616a8872c82bfb1", null ]
+    [ "IllegalArgumentException", "a00400.html#a02715ae45b56dbcd02f81b07ce9d8232", null ],
+    [ "exceptionType", "a00400.html#a22651abf53cab34d8c117551bacd78f1", null ]
 ];

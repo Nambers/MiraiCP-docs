@@ -1,15 +1,15 @@
 var a00288 =
 [
-    [ "string", "a00288.html#ae7cf7e3913c2067517d3f40ff1c9a14d", null ],
-    [ "MiraiCPExceptionBase", "a00288.html#aa33dfd137a1d21ff9f4240b400865835", null ],
-    [ "~MiraiCPExceptionBase", "a00288.html#ac7fe834dc2b81b3c0d44dde55b796ac6", null ],
-    [ "basicRaise", "a00288.html#aec8e8e400265242bd3a9998af6b55880", null ],
-    [ "exception_broadcast", "a00288.html#a66e38f87a11492d7313a4e662be20d22", null ],
-    [ "exceptionType", "a00288.html#a62ccfc566b59f882d0623f8e24757809", null ],
-    [ "getExceptionType", "a00288.html#a0a228ccbc5fe53336db964b2be823249", null ],
-    [ "raise", "a00288.html#a27e4eaeb594e067089585f1975b7eb74", null ],
-    [ "what", "a00288.html#aaac831e38c70fa529b8894b825dba04c", null ],
-    [ "filename", "a00288.html#a5d5876720c98c5c3ef2fcd2a20a0cb72", null ],
-    [ "lineNum", "a00288.html#a8724c76817d0af9f3f8fef9a6ca7f60a", null ],
-    [ "re", "a00288.html#a2eb4b42c95d1ecbc6333129ecf8c5592", null ]
+    [ "joinType", "a00288.html#a1d73fdd5e84653d078b859b37dd1bcc8", [
+      [ "error", "a00288.html#a1d73fdd5e84653d078b859b37dd1bcc8ac7223d287b6643e82449fdfc84a78b17", null ],
+      [ "invited", "a00288.html#a1d73fdd5e84653d078b859b37dd1bcc8aa328607b0546483fb4503bf453508821", null ],
+      [ "applied", "a00288.html#a1d73fdd5e84653d078b859b37dd1bcc8a24c75b1f74122bc5b2b618daa89b14c9", null ],
+      [ "rehab", "a00288.html#a1d73fdd5e84653d078b859b37dd1bcc8a0f0421157cba536506b325cefe9fac90", null ]
+    ] ],
+    [ "MemberJoinEvent", "a00288.html#a073cb4162b0f02a4497e9ea6912399d5", null ],
+    [ "get_event_type", "a00288.html#a314da8d93a0056d08d6fb8b87929584d", null ],
+    [ "group", "a00288.html#a1f879c48cc7b54fa387853b5330b0caf", null ],
+    [ "inviterid", "a00288.html#a3342fd9e038a616a272ae8de9599ad31", null ],
+    [ "member", "a00288.html#aa1a42b944df9f40fc96629a1c5687f01", null ],
+    [ "type", "a00288.html#aaef692838d233a5ddcf8d54e1b02eb40", null ]
 ];

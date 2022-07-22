@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['voice_0',['Voice',['../a00178.html#a1bc3c425340774687507c1683967231ba0577caa08b343f0af855ab29af9c7b33',1,'MiraiCP::Config']]]
+  ['voice_0',['Voice',['../a00200.html#a80a8ec1c1ed6fd9db32d9a878405d412a40054e0c19d7566214cb665bfd8a142a',1,'MiraiCP::KtOperation']]]
 ];

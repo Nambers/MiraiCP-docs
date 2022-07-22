@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiraiCP: schedule.cpp</title>
+<title>MiraiCP: MiraiCP::RemoteFile::Finfo结构体 参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MiraiCP
-   &#160;<span id="projectnumber">v2.11.0</span>
+   &#160;<span id="projectnumber">v2.12.0-RC2</span>
    </div>
    <div id="projectbrief">MiraiCP api document</div>
   </td>
@@ -90,72 +90,155 @@ $(document).ready(function(){initNavTree('a00572.html',''); initResizable(); });
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">schedule.cpp</div></div>
+  <div class="summary">
+<a href="#pub-attribs">Public 属性</a> &#124;
+<a href="a00569.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">MiraiCP::RemoteFile::Finfo结构体 参考</div></div>
 </div><!--header-->
 <div class="contents">
-<p >定时事件</p>
-<div class="fragment"><div class="line"><span class="comment">// Copyright (c) 2020 - 2022. Eritque arcus and contributors.</span></div>
-<div class="line"><span class="comment">//</span></div>
-<div class="line"><span class="comment">// This program is free software: you can redistribute it and/or modify</span></div>
-<div class="line"><span class="comment">// it under the terms of the GNU Affero General Public License as</span></div>
-<div class="line"><span class="comment">// published by the Free Software Foundation, either version 3 of the</span></div>
-<div class="line"><span class="comment">// License, or any later version(in your opinion).</span></div>
-<div class="line"><span class="comment">//</span></div>
-<div class="line"><span class="comment">// This program is distributed in the hope that it will be useful,</span></div>
-<div class="line"><span class="comment">// but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div>
-<div class="line"><span class="comment">// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span></div>
-<div class="line"><span class="comment">// GNU Affero General Public License for more details.</span></div>
-<div class="line"><span class="comment">//</span></div>
-<div class="line"><span class="comment">// You should have received a copy of the GNU Affero General Public License</span></div>
-<div class="line"><span class="comment">// along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</span></div>
-<div class="line"><span class="comment">//</span></div>
-<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00140.html">MiraiCP.hpp</a>&gt;</span></div>
-<div class="line"><span class="keyword">using namespace </span><a class="code hl_namespace" href="a00177.html">MiraiCP</a>;</div>
-<div class="line"> </div>
-<div class="line"><span class="keyword">class </span>Main : <span class="keyword">public</span> CPPPlugin {</div>
-<div class="line"><span class="keyword">public</span>:</div>
-<div class="line">    Main() : <a class="code hl_function" href="a00219.html#a8757991e0396faf72a9e0ad06caa53f4">CPPPlugin</a>(PluginConfig(</div>
-<div class="line">                     <span class="stringliteral">&quot;id&quot;</span>,</div>
-<div class="line">                     <span class="stringliteral">&quot;test&quot;</span>,</div>
-<div class="line">                     <span class="stringliteral">&quot;v1.0&quot;</span>,</div>
-<div class="line">                     <span class="stringliteral">&quot;a&quot;</span>)) {}</div>
-<div class="line">    <span class="keywordtype">void</span> onEnable()<span class="keyword"> override </span>{</div>
-<div class="line">        Event::registerEvent&lt;GroupMessageEvent&gt;([](<a class="code hl_enumvalue" href="a00177.html#a7311d4d7bd17d31ea37aceb87426056daf85aaa2127f5b4f45bd92e1987105005">GroupMessageEvent</a> a) {</div>
-<div class="line">            <span class="comment">// 一起传递过去的自定义信息</span></div>
-<div class="line">            <a id="a0" name="a0"></a><a class="code hl_typedef" href="a00170.html#ab701e3ac61a85b337ec5c1abaad6742d">nlohmann::json</a> j;</div>
-<div class="line">            j[<span class="stringliteral">&quot;type&quot;</span>] = 1;</div>
-<div class="line">            j[<span class="stringliteral">&quot;id&quot;</span>] = 111;</div>
-<div class="line">            j[<span class="stringliteral">&quot;bid&quot;</span>] = 111;</div>
-<div class="line">            <a id="a1" name="a1"></a><a class="code hl_function" href="a00177.html#ad274e5c7a685e18ad0b3817fd554b934">schedule</a>(100, j.dump());</div>
-<div class="line">            Event::processor.registerEvent&lt;<a class="code hl_enumvalue" href="a00177.html#a7311d4d7bd17d31ea37aceb87426056dab912d6b062af313eba2f8c3ce7e957e2">TimeOutEvent</a>&gt;([](<a class="code hl_enumvalue" href="a00177.html#a7311d4d7bd17d31ea37aceb87426056dab912d6b062af313eba2f8c3ce7e957e2">TimeOutEvent</a> e) {</div>
-<div class="line">                <a class="code hl_typedef" href="a00170.html#ab701e3ac61a85b337ec5c1abaad6742d">nlohmann::json</a> j = nlohmann::json::parse(e.msg);</div>
-<div class="line">                <span class="keywordflow">if</span> (j[<span class="stringliteral">&quot;type&quot;</span>] == 1)</div>
-<div class="line">                    <span class="comment">// 发送群消息</span></div>
-<div class="line">                    Group(j[<span class="stringliteral">&quot;id&quot;</span>], j[<span class="stringliteral">&quot;bid&quot;</span>]).sendMessage(<span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line">            });</div>
-<div class="line">        });</div>
-<div class="line">    }</div>
-<div class="line">};</div>
-<div class="line"> </div>
-<div class="line"><span class="keywordtype">void</span> <a id="a2" name="a2"></a><a class="code hl_function" href="a00177.html#a12d27be6730af4fc321ac1eb231db281">MiraiCP::enrollPlugin</a>() {</div>
-<div class="line">    <a id="a3" name="a3"></a><a class="code hl_function" href="a00177.html#ad5dfcfb8bbf110c31ac8a5288f395bba">MiraiCP::enrollPlugin0</a>(<span class="keyword">new</span> Main());</div>
-<div class="line">}</div>
-<div class="ttc" id="aa00140_html"><div class="ttname"><a href="a00140.html">MiraiCP.hpp</a></div></div>
-<div class="ttc" id="aa00170_html_ab701e3ac61a85b337ec5c1abaad6742d"><div class="ttname"><a href="a00170.html#ab701e3ac61a85b337ec5c1abaad6742d">json</a></div><div class="ttdeci">nlohmann::json json</div><div class="ttdef"><b>Definition:</b> <a href="a00170_source.html#l00026">utils.cpp:26</a></div></div>
-<div class="ttc" id="aa00177_html"><div class="ttname"><a href="a00177.html">MiraiCP</a></div><div class="ttdef"><b>Definition:</b> <a href="a00044_source.html#l00023">Bot.cpp:23</a></div></div>
-<div class="ttc" id="aa00177_html_a12d27be6730af4fc321ac1eb231db281"><div class="ttname"><a href="a00177.html#a12d27be6730af4fc321ac1eb231db281">MiraiCP::enrollPlugin</a></div><div class="ttdeci">void enrollPlugin()</div><div class="ttdoc">注册插件函数, 需要被实现, 类似onStart();</div><div class="ttdef"><b>Definition:</b> <a href="a00002_source.html#l00051">callbackHandle.cpp:51</a></div></div>
-<div class="ttc" id="aa00177_html_a7311d4d7bd17d31ea37aceb87426056dab912d6b062af313eba2f8c3ce7e957e2"><div class="ttname"><a href="a00177.html#a7311d4d7bd17d31ea37aceb87426056dab912d6b062af313eba2f8c3ce7e957e2">MiraiCP::eventTypes::TimeOutEvent</a></div><div class="ttdeci">@ TimeOutEvent</div></div>
-<div class="ttc" id="aa00177_html_a7311d4d7bd17d31ea37aceb87426056daf85aaa2127f5b4f45bd92e1987105005"><div class="ttname"><a href="a00177.html#a7311d4d7bd17d31ea37aceb87426056daf85aaa2127f5b4f45bd92e1987105005">MiraiCP::eventTypes::GroupMessageEvent</a></div><div class="ttdeci">@ GroupMessageEvent</div></div>
-<div class="ttc" id="aa00177_html_ad274e5c7a685e18ad0b3817fd554b934"><div class="ttname"><a href="a00177.html#ad274e5c7a685e18ad0b3817fd554b934">MiraiCP::schedule</a></div><div class="ttdeci">void schedule(long time, const std::string &amp;msg, JNIEnv *env=nullptr)</div><div class="ttdoc">定时任务, 在一定时间后广播**一次**TimeOutEvent</div><div class="ttdef"><b>Definition:</b> <a href="a00173_source.html#l00028">utils.h:28</a></div></div>
-<div class="ttc" id="aa00177_html_ad5dfcfb8bbf110c31ac8a5288f395bba"><div class="ttname"><a href="a00177.html#ad5dfcfb8bbf110c31ac8a5288f395bba">MiraiCP::enrollPlugin0</a></div><div class="ttdeci">void enrollPlugin0(CPPPlugin *p)</div><div class="ttdoc">用指针绑定插件</div><div class="ttdef"><b>Definition:</b> <a href="a00173_source.html#l00038">utils.h:38</a></div></div>
-<div class="ttc" id="aa00219_html_a8757991e0396faf72a9e0ad06caa53f4"><div class="ttname"><a href="a00219.html#a8757991e0396faf72a9e0ad06caa53f4">MiraiCP::CPPPlugin::CPPPlugin</a></div><div class="ttdeci">CPPPlugin(PluginConfig c)</div><div class="ttdef"><b>Definition:</b> <a href="a00071_source.html#l00039">CPPPlugin.h:39</a></div></div>
-</div><!-- fragment --> </div><!-- contents -->
+
+<p>文件信息  
+ <a href="a00572.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="a00158_source.html">SingleMessage.h</a>&gt;</code></p>
+<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> MiraiCP::RemoteFile::Finfo 的协作图:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="a00570.png" border="0" usemap="#a_mirai_c_p_1_1_remote_file_1_1_finfo_coll__map" alt="Collaboration graph"/></div>
+<map name="a_mirai_c_p_1_1_remote_file_1_1_finfo_coll__map" id="a_mirai_c_p_1_1_remote_file_1_1_finfo_coll__map">
+<area shape="rect" title="文件信息" alt="" coords="55,175,198,267"/>
+<area shape="rect" title=" " alt="" coords="5,5,136,83"/>
+<area shape="rect" title=" " alt="" coords="161,5,207,83"/>
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public 属性</h2></td></tr>
+<tr class="memitem:a35cc1f23bf34db4184696833b12e4605"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00198.html#a3ae2ebfdaa4574d341b8e7935f29ddb8">QQID</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00572.html#a35cc1f23bf34db4184696833b12e4605">size</a></td></tr>
+<tr class="memdesc:a35cc1f23bf34db4184696833b12e4605"><td class="mdescLeft">&#160;</td><td class="mdescRight">文件大小  <a href="a00572.html#a35cc1f23bf34db4184696833b12e4605">更多...</a><br /></td></tr>
+<tr class="separator:a35cc1f23bf34db4184696833b12e4605"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:accf1835e308104bde941d72053d5c5a7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00198.html#a3ae2ebfdaa4574d341b8e7935f29ddb8">QQID</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00572.html#accf1835e308104bde941d72053d5c5a7">uploaderid</a></td></tr>
+<tr class="memdesc:accf1835e308104bde941d72053d5c5a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">上传者id  <a href="a00572.html#accf1835e308104bde941d72053d5c5a7">更多...</a><br /></td></tr>
+<tr class="separator:accf1835e308104bde941d72053d5c5a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a666efd0312dcc5805394a02ff7c326bb"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00572.html#a666efd0312dcc5805394a02ff7c326bb">expirytime</a></td></tr>
+<tr class="memdesc:a666efd0312dcc5805394a02ff7c326bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">过期时间  <a href="a00572.html#a666efd0312dcc5805394a02ff7c326bb">更多...</a><br /></td></tr>
+<tr class="separator:a666efd0312dcc5805394a02ff7c326bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5f94fd436b08eb8963d7c5d8d4907b4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00198.html#a3ae2ebfdaa4574d341b8e7935f29ddb8">QQID</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00572.html#ab5f94fd436b08eb8963d7c5d8d4907b4">uploadtime</a></td></tr>
+<tr class="memdesc:ab5f94fd436b08eb8963d7c5d8d4907b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">上传时间, 时间戳格式  <a href="a00572.html#ab5f94fd436b08eb8963d7c5d8d4907b4">更多...</a><br /></td></tr>
+<tr class="separator:ab5f94fd436b08eb8963d7c5d8d4907b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8597f745a6869003efa097519bf34148"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00198.html#a3ae2ebfdaa4574d341b8e7935f29ddb8">QQID</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00572.html#a8597f745a6869003efa097519bf34148">lastmodifytime</a></td></tr>
+<tr class="memdesc:a8597f745a6869003efa097519bf34148"><td class="mdescLeft">&#160;</td><td class="mdescRight">上次更改时间, 时间戳格式  <a href="a00572.html#a8597f745a6869003efa097519bf34148">更多...</a><br /></td></tr>
+<tr class="separator:a8597f745a6869003efa097519bf34148"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p >文件信息 </p>
+<dl class="section see"><dt>参见</dt><dd><a class="el" href="a00564.html" title="远程(群)文件类型">RemoteFile</a> </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="a00158_source.html">SingleMessage.h</a> 第 <a class="el" href="a00158_source.html#l00378">378</a> 行定义.</p>
+</div><h2 class="groupheader">类成员变量说明</h2>
+<a id="a666efd0312dcc5805394a02ff7c326bb" name="a666efd0312dcc5805394a02ff7c326bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a666efd0312dcc5805394a02ff7c326bb">&#9670;&nbsp;</a></span>expirytime</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">long MiraiCP::RemoteFile::Finfo::expirytime</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>过期时间 </p>
+
+<p class="definition">在文件 <a class="el" href="a00158_source.html">SingleMessage.h</a> 第 <a class="el" href="a00158_source.html#l00384">384</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a8597f745a6869003efa097519bf34148" name="a8597f745a6869003efa097519bf34148"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8597f745a6869003efa097519bf34148">&#9670;&nbsp;</a></span>lastmodifytime</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00198.html#a3ae2ebfdaa4574d341b8e7935f29ddb8">QQID</a> MiraiCP::RemoteFile::Finfo::lastmodifytime</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>上次更改时间, 时间戳格式 </p>
+
+<p class="definition">在文件 <a class="el" href="a00158_source.html">SingleMessage.h</a> 第 <a class="el" href="a00158_source.html#l00388">388</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a35cc1f23bf34db4184696833b12e4605" name="a35cc1f23bf34db4184696833b12e4605"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35cc1f23bf34db4184696833b12e4605">&#9670;&nbsp;</a></span>size</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00198.html#a3ae2ebfdaa4574d341b8e7935f29ddb8">QQID</a> MiraiCP::RemoteFile::Finfo::size</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>文件大小 </p>
+
+<p class="definition">在文件 <a class="el" href="a00158_source.html">SingleMessage.h</a> 第 <a class="el" href="a00158_source.html#l00380">380</a> 行定义.</p>
+
+</div>
+</div>
+<a id="accf1835e308104bde941d72053d5c5a7" name="accf1835e308104bde941d72053d5c5a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#accf1835e308104bde941d72053d5c5a7">&#9670;&nbsp;</a></span>uploaderid</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00198.html#a3ae2ebfdaa4574d341b8e7935f29ddb8">QQID</a> MiraiCP::RemoteFile::Finfo::uploaderid</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>上传者id </p>
+
+<p class="definition">在文件 <a class="el" href="a00158_source.html">SingleMessage.h</a> 第 <a class="el" href="a00158_source.html#l00382">382</a> 行定义.</p>
+
+</div>
+</div>
+<a id="ab5f94fd436b08eb8963d7c5d8d4907b4" name="ab5f94fd436b08eb8963d7c5d8d4907b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5f94fd436b08eb8963d7c5d8d4907b4">&#9670;&nbsp;</a></span>uploadtime</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00198.html#a3ae2ebfdaa4574d341b8e7935f29ddb8">QQID</a> MiraiCP::RemoteFile::Finfo::uploadtime</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>上传时间, 时间戳格式 </p>
+
+<p class="definition">在文件 <a class="el" href="a00158_source.html">SingleMessage.h</a> 第 <a class="el" href="a00158_source.html#l00386">386</a> 行定义.</p>
+
+</div>
+</div>
+<hr/>该结构体的文档由以下文件生成:<ul>
+<li><a class="el" href="a00158_source.html">SingleMessage.h</a></li>
+</ul>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">生成于 2022年 五月 20日 星期五 18:15:37 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="navelem"><a class="el" href="a00198.html">MiraiCP</a></li><li class="navelem"><a class="el" href="a00564.html">RemoteFile</a></li><li class="navelem"><a class="el" href="a00572.html">Finfo</a></li>
+    <li class="footer">生成于 2022年 七月 22日 星期五 13:46:02 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
 <script type="text/javascript">

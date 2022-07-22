@@ -1,14 +1,15 @@
 var a00452 =
 [
-    [ "~SingleMessage", "a00452.html#a7602ba8b70c61feebadea2cb6744b9dc", null ],
-    [ "SingleMessage", "a00452.html#a1e645ecfc57a7b630290d88e7cc9ae39", null ],
-    [ "getKey", "a00452.html#a7412c91a4b45c7f1d77cf904af64b6d7", null ],
-    [ "operator==", "a00452.html#a9d501cb4ed4cf97c4eb43246c35224b0", null ],
-    [ "operator==", "a00452.html#aa2836bc9c5110cbada54ecbb65341b8f", null ],
-    [ "toJson", "a00452.html#a0a408adbe935640d5b02b8ba084dfaa0", null ],
-    [ "toMiraiCode", "a00452.html#ade93b603f22f584ada2a003c9e523b89", null ],
-    [ "content", "a00452.html#a7ebcc9775985874bb7a09bd1d8274a24", null ],
-    [ "messageType", "a00452.html#a40ef6246fdbdce9e7a6c4c3d92696ffa", null ],
-    [ "prefix", "a00452.html#a207f61ebfd79e0ae18833f2edf954595", null ],
-    [ "type", "a00452.html#a80942452883a814f0462e451982ffd39", null ]
+    [ "OnlineAnnouncement", "a00452.html#ae7b3c5f6cbb8874f93e286529e624fdb", null ],
+    [ "deleteThis", "a00452.html#a04aaabd735ed542b313a8df2a3fd9ecb", null ],
+    [ "deserializeFromJson", "a00452.html#a720239cba555515909088bc5404c483f", null ],
+    [ "botid", "a00452.html#a507cd3e23d5d5204b0deaa6b1c6cad3c", null ],
+    [ "confirmNum", "a00452.html#af210882e3d89a4843c05c92ca7c83dd1", null ],
+    [ "content", "a00452.html#afbc4d030c34bf815a8b8466cc0661f61", null ],
+    [ "fid", "a00452.html#a24d4711f1da5a6f5e952b77e198b0f3f", null ],
+    [ "groupid", "a00452.html#a73fcfc8f32a547eaa9704afa706c5a38", null ],
+    [ "imageid", "a00452.html#a562cac2ea3788ef5268396101b08e7de", null ],
+    [ "params", "a00452.html#a0be35844059d66dc274fcf84de90e368", null ],
+    [ "publicationTime", "a00452.html#a60b71b2b35023e7774485f696c0c84f7", null ],
+    [ "senderid", "a00452.html#a020798c5d023b56bdf62fd08ad4dce7f", null ]
 ];

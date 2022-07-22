@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MiraiCP
-   &#160;<span id="projectnumber">v2.11.0</span>
+   &#160;<span id="projectnumber">v2.12.0-RC2</span>
    </div>
    <div id="projectbrief">MiraiCP api document</div>
   </td>
@@ -95,7 +95,8 @@ $(document).ready(function(){initNavTree('a00035.html',''); initResizable(); });
   <div class="headertitle"><div class="title">thread.cpp 文件参考</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;<a class="el" href="a00140_source.html">MiraiCP.hpp</a>&gt;</code><br />
+<div class="textblock"><code>#include &lt;<a class="el" href="a00146_source.html">MiraiCP.hpp</a>&gt;</code><br />
+<code>#include &lt;iostream&gt;</code><br />
 <code>#include &lt;thread&gt;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> thread.cpp 的引用(Include)关系图:</div>
@@ -104,44 +105,49 @@ $(document).ready(function(){initNavTree('a00035.html',''); initResizable(); });
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="a00036.png" border="0" usemap="#athread_8cpp" alt=""/></div>
 <map name="athread_8cpp" id="athread_8cpp">
-<area shape="rect" title=" " alt="" coords="1060,5,1143,32"/>
-<area shape="rect" href="a00140.html" title=" " alt="" coords="680,80,774,107"/>
-<area shape="rect" title=" " alt="" coords="1471,229,1530,256"/>
-<area shape="rect" href="a00047.html" title=" " alt="" coords="1410,453,1463,480"/>
-<area shape="rect" href="a00143.html" title=" " alt="" coords="1156,603,1242,629"/>
-<area shape="rect" href="a00071.html" title=" " alt="" coords="694,379,790,405"/>
-<area shape="rect" href="a00107.html" title=" " alt="" coords="958,453,1030,480"/>
-<area shape="rect" href="a00137.html" title=" " alt="" coords="176,528,267,555"/>
-<area shape="rect" href="a00149.html" title=" " alt="" coords="604,453,709,480"/>
-<area shape="rect" href="a00053.html" title=" " alt="" coords="476,379,568,405"/>
-<area shape="rect" href="a00059.html" title=" " alt="" coords="734,453,803,480"/>
-<area shape="rect" href="a00083.html" title=" " alt="" coords="11,453,102,480"/>
-<area shape="rect" href="a00065.html" title=" " alt="" coords="288,304,366,331"/>
-<area shape="rect" href="a00125.html" title=" " alt="" coords="170,379,289,405"/>
-<area shape="rect" href="a00155.html" title=" " alt="" coords="227,453,350,480"/>
-<area shape="rect" href="a00131.html" title=" " alt="" coords="366,528,493,555"/>
-<area shape="rect" href="a00077.html" title=" " alt="" coords="624,155,689,181"/>
-<area shape="rect" href="a00095.html" title=" " alt="" coords="375,229,444,256"/>
-<area shape="rect" href="a00101.html" title=" " alt="" coords="570,229,638,256"/>
-<area shape="rect" href="a00119.html" title=" " alt="" coords="271,229,351,256"/>
-<area shape="rect" href="a00089.html" title=" " alt="" coords="1360,304,1507,331"/>
-<area shape="rect" href="a00113.html" title=" " alt="" coords="827,453,934,480"/>
-<area shape="rect" href="a00161.html" title=" " alt="" coords="1224,155,1347,181"/>
-<area shape="rect" href="a00167.html" title=" " alt="" coords="1168,453,1232,480"/>
-<area shape="rect" href="a00173.html" title=" " alt="" coords="782,304,840,331"/>
-<area shape="rect" title=" " alt="" coords="809,603,856,629"/>
-<area shape="rect" title=" " alt="" coords="402,677,457,704"/>
-<area shape="rect" title=" " alt="" coords="1318,528,1374,555"/>
-<area shape="rect" title=" " alt="" coords="1014,528,1091,555"/>
-<area shape="rect" title=" " alt="" coords="920,528,990,555"/>
-<area shape="rect" title=" " alt="" coords="621,528,692,555"/>
-<area shape="rect" title=" " alt="" coords="518,528,584,555"/>
-<area shape="rect" title=" " alt="" coords="22,528,101,555"/>
-<area shape="rect" title=" " alt="" coords="291,528,342,555"/>
-<area shape="rect" title=" " alt="" coords="1335,379,1388,405"/>
-<area shape="rect" title=" " alt="" coords="1412,379,1471,405"/>
-<area shape="rect" title=" " alt="" coords="1349,229,1396,256"/>
-<area shape="rect" title=" " alt="" coords="1266,229,1324,256"/>
+<area shape="rect" title=" " alt="" coords="1268,5,1351,32"/>
+<area shape="rect" href="a00146.html" title=" " alt="" coords="1263,80,1356,107"/>
+<area shape="rect" title=" " alt="" coords="891,603,949,629"/>
+<area shape="rect" title=" " alt="" coords="1380,80,1452,107"/>
+<area shape="rect" href="a00047.html" title=" " alt="" coords="2136,677,2189,704"/>
+<area shape="rect" href="a00152.html" title=" " alt="" coords="1878,752,1965,779"/>
+<area shape="rect" href="a00065.html" title=" " alt="" coords="395,603,491,629"/>
+<area shape="rect" href="a00113.html" title=" " alt="" coords="1280,677,1352,704"/>
+<area shape="rect" href="a00143.html" title=" " alt="" coords="1712,752,1803,779"/>
+<area shape="rect" href="a00191.html" title=" " alt="" coords="390,677,495,704"/>
+<area shape="rect" href="a00053.html" title=" " alt="" coords="618,453,710,480"/>
+<area shape="rect" href="a00077.html" title=" " alt="" coords="912,528,1003,555"/>
+<area shape="rect" href="a00101.html" title=" " alt="" coords="387,528,490,555"/>
+<area shape="rect" href="a00059.html" title=" " alt="" coords="1250,379,1329,405"/>
+<area shape="rect" href="a00131.html" title=" " alt="" coords="1230,453,1349,480"/>
+<area shape="rect" href="a00158.html" title=" " alt="" coords="1531,603,1653,629"/>
+<area shape="rect" href="a00137.html" title=" " alt="" coords="1934,677,2061,704"/>
+<area shape="rect" href="a00071.html" title=" " alt="" coords="1181,229,1246,256"/>
+<area shape="rect" href="a00089.html" title=" " alt="" coords="1179,304,1248,331"/>
+<area shape="rect" href="a00095.html" title=" " alt="" coords="1035,304,1103,331"/>
+<area shape="rect" href="a00125.html" title=" " alt="" coords="1272,304,1352,331"/>
+<area shape="rect" href="a00083.html" title=" " alt="" coords="701,379,848,405"/>
+<area shape="rect" href="a00119.html" title=" " alt="" coords="43,379,149,405"/>
+<area shape="rect" href="a00149.html" title=" " alt="" coords="911,155,1054,181"/>
+<area shape="rect" href="a00164.html" title=" " alt="" coords="1845,677,1909,704"/>
+<area shape="rect" href="a00107.html" title=" " alt="" coords="1873,155,1959,181"/>
+<area shape="rect" href="a00179.html" title=" " alt="" coords="1830,603,1959,629"/>
+<area shape="rect" href="a00185.html" title=" " alt="" coords="2213,677,2323,704"/>
+<area shape="rect" href="a00170.html" title=" " alt="" coords="410,453,467,480"/>
+<area shape="rect" href="a00176.html" title=" " alt="" coords="718,528,837,555"/>
+<area shape="rect" href="a00173.html" title=" " alt="" coords="1597,229,1777,256"/>
+<area shape="rect" title=" " alt="" coords="1853,827,1907,853"/>
+<area shape="rect" title=" " alt="" coords="2043,752,2099,779"/>
+<area shape="rect" title=" " alt="" coords="536,677,589,704"/>
+<area shape="rect" title=" " alt="" coords="1363,752,1440,779"/>
+<area shape="rect" title=" " alt="" coords="1547,752,1616,779"/>
+<area shape="rect" title=" " alt="" coords="731,752,802,779"/>
+<area shape="rect" title=" " alt="" coords="1376,677,1443,704"/>
+<area shape="rect" title=" " alt="" coords="974,603,1053,629"/>
+<area shape="rect" title=" " alt="" coords="1619,677,1669,704"/>
+<area shape="rect" title=" " alt="" coords="739,453,797,480"/>
+<area shape="rect" title=" " alt="" coords="985,229,1055,256"/>
+<area shape="rect" title=" " alt="" coords="2235,752,2301,779"/>
 </map>
 </div>
 </div>
@@ -149,12 +155,12 @@ $(document).ready(function(){initNavTree('a00035.html',''); initResizable(); });
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 函数</h2></td></tr>
-<tr class="memitem:a24f647174760cac13d2624b5ad74b00c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00035.html#a24f647174760cac13d2624b5ad74b00c">func</a> ()</td></tr>
-<tr class="separator:a24f647174760cac13d2624b5ad74b00c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a37a193bc61a8127790f891efc1af05"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00035.html#a9a37a193bc61a8127790f891efc1af05">func</a> (int i, bool b)</td></tr>
+<tr class="separator:a9a37a193bc61a8127790f891efc1af05"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">函数说明</h2>
-<a id="a24f647174760cac13d2624b5ad74b00c" name="a24f647174760cac13d2624b5ad74b00c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a24f647174760cac13d2624b5ad74b00c">&#9670;&nbsp;</a></span>func()</h2>
+<a id="a9a37a193bc61a8127790f891efc1af05" name="a9a37a193bc61a8127790f891efc1af05"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a37a193bc61a8127790f891efc1af05">&#9670;&nbsp;</a></span>func()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -162,29 +168,38 @@ $(document).ready(function(){initNavTree('a00035.html',''); initResizable(); });
         <tr>
           <td class="memname">void func </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl class="section examples"><dt>示例</dt><dd><a class="el" href="a00573.html#a0">thread.cpp</a>.</dd>
+<dl class="section examples"><dt>示例</dt><dd><a class="el" href="a00602.html#a0">thread.cpp</a>.</dd>
 </dl>
 
-<p class="definition">在文件 <a class="el" href="a00035_source.html">thread.cpp</a> 第 <a class="el" href="a00035_source.html#l00020">20</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>            {</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="comment">//do some things</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="comment">// 一个完整的线程应该在结束时调用detach来释放env的空间</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    ThreadManager::detach();</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>}</div>
+<p class="definition">在文件 <a class="el" href="a00035_source.html">thread.cpp</a> 第 <a class="el" href="a00035_source.html#l00030">30</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>                         {</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;hello world&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>}</div>
 </div><!-- fragment --><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-1-trigger" src="closed.png" alt="+"/> 这是这个函数的调用关系图:</div>
 <div id="dynsection-1-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="a00035_a24f647174760cac13d2624b5ad74b00c_icgraph.png" border="0" usemap="#aa00035_a24f647174760cac13d2624b5ad74b00c_icgraph" alt=""/></div>
-<map name="aa00035_a24f647174760cac13d2624b5ad74b00c_icgraph" id="aa00035_a24f647174760cac13d2624b5ad74b00c_icgraph">
+<div class="center"><img src="a00035_a9a37a193bc61a8127790f891efc1af05_icgraph.png" border="0" usemap="#aa00035_a9a37a193bc61a8127790f891efc1af05_icgraph" alt=""/></div>
+<map name="aa00035_a9a37a193bc61a8127790f891efc1af05_icgraph" id="aa00035_a9a37a193bc61a8127790f891efc1af05_icgraph">
 <area shape="rect" title=" " alt="" coords="216,13,263,39"/>
-<area shape="rect" href="a00455.html#a3efab78ab867f61f84885c63b45734bd" title="自定义筛选器" alt="" coords="5,5,168,47"/>
+<area shape="rect" href="a00500.html#a3efab78ab867f61f84885c63b45734bd" title="自定义筛选器" alt="" coords="5,5,168,47"/>
 </map>
 </div>
 
@@ -197,7 +212,7 @@ $(document).ready(function(){initNavTree('a00035.html',''); initResizable(); });
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_e931c1a3f0014e624d0645a271726ad2.html">examples</a></li><li class="navelem"><a class="el" href="a00035.html">thread.cpp</a></li>
-    <li class="footer">生成于 2022年 五月 20日 星期五 18:15:38 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="footer">生成于 2022年 七月 22日 星期五 13:46:01 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
 <script type="text/javascript">

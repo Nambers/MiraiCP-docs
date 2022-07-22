@@ -1,7 +1,8 @@
 var searchData=
 [
-  ['kick_0',['kick',['../a00447.html#ad83478036b6ad5750b7b4de2c182353b',1,'MiraiCP::Member']]],
-  ['kickm_1',['KickM',['../a00178.html#a1bc3c425340774687507c1683967231ba514d8030f7853defda3dc5808177784c',1,'MiraiCP::Config']]],
-  ['koperation_2',['koperation',['../a00178.html#a6cc3a4fb89a9701380288f1c16f738b4',1,'MiraiCP::Config']]],
-  ['koperation_3',['KOperation',['../a00178.html#a8bd741acc7e85315b8c254b39a922514',1,'MiraiCP::Config']]]
+  ['kick_0',['kick',['../a00492.html#a76bd4d77a4da2bbe5ba1b4cb47dd3a71',1,'MiraiCP::Member']]],
+  ['kickm_1',['KickM',['../a00200.html#a80a8ec1c1ed6fd9db32d9a878405d412ad433fae5ad25a07de672621200576da7',1,'MiraiCP::KtOperation']]],
+  ['ktoperation_2',['ktOperation',['../a00200.html#a22b667b08eb5bb1bb8b603212b55f5e2',1,'MiraiCP::KtOperation']]],
+  ['ktoperation_2ecpp_3',['KtOperation.cpp',['../a00098.html',1,'']]],
+  ['ktoperation_2eh_4',['KtOperation.h',['../a00101.html',1,'']]]
 ];

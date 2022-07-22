@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiraiCP: 成员列表</title>
+<title>MiraiCP: MiraiCP::Logger类 参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MiraiCP
-   &#160;<span id="projectnumber">v2.11.0</span>
+   &#160;<span id="projectnumber">v2.12.0-RC2</span>
    </div>
    <div id="projectbrief">MiraiCP api document</div>
   </td>
@@ -71,7 +71,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('a00479.html',''); initResizable(); });
+$(document).ready(function(){initNavTree('a00476.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -90,30 +90,281 @@ $(document).ready(function(){initNavTree('a00479.html',''); initResizable(); });
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">MiraiCP::SingleMessage 成员列表</div></div>
+  <div class="summary">
+<a href="#pub-static-attribs">静态 Public 属性</a> &#124;
+<a href="#pro-methods">Protected 成员函数</a> &#124;
+<a href="#pri-methods">Private 成员函数</a> &#124;
+<a href="a00473.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">MiraiCP::Logger类 参考</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>成员的完整列表，这些成员属于 <a class="el" href="a00479.html">MiraiCP::SingleMessage</a>,包括所有继承而来的类成员</p>
-<table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="a00479.html#a7ebcc9775985874bb7a09bd1d8274a24">content</a></td><td class="entry"><a class="el" href="a00479.html">MiraiCP::SingleMessage</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00479.html#a7412c91a4b45c7f1d77cf904af64b6d7">getKey</a>(const std::string &amp;value)</td><td class="entry"><a class="el" href="a00479.html">MiraiCP::SingleMessage</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00479.html#a40ef6246fdbdce9e7a6c4c3d92696ffa">messageType</a></td><td class="entry"><a class="el" href="a00479.html">MiraiCP::SingleMessage</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00479.html#a9d501cb4ed4cf97c4eb43246c35224b0">operator==</a>(const SingleMessage &amp;m) const</td><td class="entry"><a class="el" href="a00479.html">MiraiCP::SingleMessage</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00479.html#aa2836bc9c5110cbada54ecbb65341b8f">operator==</a>(SingleMessage *m) const</td><td class="entry"><a class="el" href="a00479.html">MiraiCP::SingleMessage</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00479.html#a207f61ebfd79e0ae18833f2edf954595">prefix</a></td><td class="entry"><a class="el" href="a00479.html">MiraiCP::SingleMessage</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00479.html#a1e645ecfc57a7b630290d88e7cc9ae39">SingleMessage</a>(int type, std::string content, std::string prefix=&quot;:&quot;)</td><td class="entry"><a class="el" href="a00479.html">MiraiCP::SingleMessage</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00479.html#a0a408adbe935640d5b02b8ba084dfaa0">toJson</a>() const</td><td class="entry"><a class="el" href="a00479.html">MiraiCP::SingleMessage</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00479.html#ade93b603f22f584ada2a003c9e523b89">toMiraiCode</a>() const override</td><td class="entry"><a class="el" href="a00479.html">MiraiCP::SingleMessage</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00479.html#a80942452883a814f0462e451982ffd39">type</a></td><td class="entry"><a class="el" href="a00479.html">MiraiCP::SingleMessage</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00479.html#a7602ba8b70c61feebadea2cb6744b9dc">~SingleMessage</a>()=default</td><td class="entry"><a class="el" href="a00479.html">MiraiCP::SingleMessage</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-</table></div><!-- contents -->
+<p>以MiraiCP的名义发送日志, 日志表现格式是: 2021-06-28 09:37:22 [log level]/MiraiCP: [log content], 为最底层的logger 发送消息级日志  
+ <a href="a00476.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="a00113_source.html">Logger.h</a>&gt;</code></p>
+<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> 类 MiraiCP::Logger 继承关系图:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="a00475.png" border="0" usemap="#a_mirai_c_p_1_1_logger_inherit__map" alt="Inheritance graph"/></div>
+<map name="a_mirai_c_p_1_1_logger_inherit__map" id="a_mirai_c_p_1_1_logger_inherit__map">
+<area shape="rect" title="以MiraiCP的名义发送日志, 日志表现格式是: 2021&#45;06&#45;28 09:37:22 [log level]/MiraiCP: [log content], 为最底层的logger 发送消息级日志" alt="" coords="15,424,195,545"/>
+<area shape="rect" href="a00468.html" title=" " alt="" coords="5,5,205,376"/>
+</map>
+</div>
+<div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> MiraiCP::Logger 的协作图:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="a00474.png" border="0" usemap="#a_mirai_c_p_1_1_logger_coll__map" alt="Collaboration graph"/></div>
+<map name="a_mirai_c_p_1_1_logger_coll__map" id="a_mirai_c_p_1_1_logger_coll__map">
+<area shape="rect" title="以MiraiCP的名义发送日志, 日志表现格式是: 2021&#45;06&#45;28 09:37:22 [log level]/MiraiCP: [log content], 为最底层的logger 发送消息级日志" alt="" coords="15,735,195,856"/>
+<area shape="rect" href="a00468.html" title=" " alt="" coords="5,315,205,685"/>
+<area shape="rect" href="a00472.html" title="loggerhandler会在每次log执行前执行一遍，可用于执行自定义的保存操作等" alt="" coords="20,160,191,252"/>
+<area shape="rect" title=" " alt="" coords="23,13,70,90"/>
+<area shape="rect" title=" " alt="" coords="95,5,236,97"/>
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
+静态 Public 属性</h2></td></tr>
+<tr class="memitem:a268fd602157c3fa49616a8872c82bfb1"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="a00476.html">Logger</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00476.html#a268fd602157c3fa49616a8872c82bfb1">logger</a></td></tr>
+<tr class="separator:a268fd602157c3fa49616a8872c82bfb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+Protected 成员函数</h2></td></tr>
+<tr class="memitem:ae75bdd405eddd5650979feb9e9ee2a9b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00476.html#ae75bdd405eddd5650979feb9e9ee2a9b">log_interface</a> (const std::string &amp;content, int level) override</td></tr>
+<tr class="memdesc:ae75bdd405eddd5650979feb9e9ee2a9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">日志底层实现封装  <a href="a00476.html#ae75bdd405eddd5650979feb9e9ee2a9b">更多...</a><br /></td></tr>
+<tr class="separator:ae75bdd405eddd5650979feb9e9ee2a9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:a0707bf07c1d709abf854a3592fb2f1f0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00476.html#a0707bf07c1d709abf854a3592fb2f1f0">Logger</a> ()=default</td></tr>
+<tr class="separator:a0707bf07c1d709abf854a3592fb2f1f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+额外继承的成员函数</h2></td></tr>
+<tr class="inherit_header pub_types_a00468"><td colspan="2" onclick="javascript:toggleInherit('pub_types_a00468')"><img src="closed.png" alt="-"/>&#160;Public 类型 继承自 <a class="el" href="a00468.html">MiraiCP::Logger_interface</a></td></tr>
+<tr class="memitem:ac8323ef8b0f1c81161e08c4fded239a3 inherit pub_types_a00468"><td class="memItemLeft" align="right" valign="top">typedef std::function&lt; void(<a class="el" href="a00468.html#a22429d5974d2c062b424e0c0297cb897">string</a>, int)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00468.html#ac8323ef8b0f1c81161e08c4fded239a3">Action</a></td></tr>
+<tr class="memdesc:ac8323ef8b0f1c81161e08c4fded239a3 inherit pub_types_a00468"><td class="mdescLeft">&#160;</td><td class="mdescRight">封装lambda类型  <a href="a00468.html#ac8323ef8b0f1c81161e08c4fded239a3">更多...</a><br /></td></tr>
+<tr class="separator:ac8323ef8b0f1c81161e08c4fded239a3 inherit pub_types_a00468"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_a00468"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_a00468')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="a00468.html">MiraiCP::Logger_interface</a></td></tr>
+<tr class="memitem:af487216ad90334b62a970ad6e5a796a4 inherit pub_methods_a00468"><td class="memTemplParams" colspan="2">template&lt;class... T&gt; </td></tr>
+<tr class="memitem:af487216ad90334b62a970ad6e5a796a4 inherit pub_methods_a00468"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00468.html#af487216ad90334b62a970ad6e5a796a4">info</a> (T... val)</td></tr>
+<tr class="memdesc:af487216ad90334b62a970ad6e5a796a4 inherit pub_methods_a00468"><td class="mdescLeft">&#160;</td><td class="mdescRight">发送普通(info级日志)  <a href="a00468.html#af487216ad90334b62a970ad6e5a796a4">更多...</a><br /></td></tr>
+<tr class="separator:af487216ad90334b62a970ad6e5a796a4 inherit pub_methods_a00468"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19b06047f8959a3bfb100c0006767c83 inherit pub_methods_a00468"><td class="memTemplParams" colspan="2">template&lt;class... T&gt; </td></tr>
+<tr class="memitem:a19b06047f8959a3bfb100c0006767c83 inherit pub_methods_a00468"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00468.html#a19b06047f8959a3bfb100c0006767c83">warning</a> (T... val)</td></tr>
+<tr class="memdesc:a19b06047f8959a3bfb100c0006767c83 inherit pub_methods_a00468"><td class="mdescLeft">&#160;</td><td class="mdescRight">发送警告(warning级日志)  <a href="a00468.html#a19b06047f8959a3bfb100c0006767c83">更多...</a><br /></td></tr>
+<tr class="separator:a19b06047f8959a3bfb100c0006767c83 inherit pub_methods_a00468"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a418fad5b082009c5e40871d3cd88cacf inherit pub_methods_a00468"><td class="memTemplParams" colspan="2">template&lt;class... T&gt; </td></tr>
+<tr class="memitem:a418fad5b082009c5e40871d3cd88cacf inherit pub_methods_a00468"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00468.html#a418fad5b082009c5e40871d3cd88cacf">error</a> (T... val)</td></tr>
+<tr class="memdesc:a418fad5b082009c5e40871d3cd88cacf inherit pub_methods_a00468"><td class="mdescLeft">&#160;</td><td class="mdescRight">发送错误(error级日志)  <a href="a00468.html#a418fad5b082009c5e40871d3cd88cacf">更多...</a><br /></td></tr>
+<tr class="separator:a418fad5b082009c5e40871d3cd88cacf inherit pub_methods_a00468"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3e0ad0c5771cee4583b577981105114 inherit pub_methods_a00468"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00468.html#aa3e0ad0c5771cee4583b577981105114">registerHandle</a> (<a class="el" href="a00468.html#ac8323ef8b0f1c81161e08c4fded239a3">Action</a> action)</td></tr>
+<tr class="memdesc:aa3e0ad0c5771cee4583b577981105114 inherit pub_methods_a00468"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置loggerhandler的action  <a href="a00468.html#aa3e0ad0c5771cee4583b577981105114">更多...</a><br /></td></tr>
+<tr class="separator:aa3e0ad0c5771cee4583b577981105114 inherit pub_methods_a00468"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ed1680508618b446c94ed004c211ea9 inherit pub_methods_a00468"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00468.html#a3ed1680508618b446c94ed004c211ea9">setHandleState</a> (bool state)</td></tr>
+<tr class="memdesc:a3ed1680508618b446c94ed004c211ea9 inherit pub_methods_a00468"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置handler的启用状态  <a href="a00468.html#a3ed1680508618b446c94ed004c211ea9">更多...</a><br /></td></tr>
+<tr class="separator:a3ed1680508618b446c94ed004c211ea9 inherit pub_methods_a00468"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_attribs_a00468"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_a00468')"><img src="closed.png" alt="-"/>&#160;Public 属性 继承自 <a class="el" href="a00468.html">MiraiCP::Logger_interface</a></td></tr>
+<tr class="memitem:aa5e38fc4b466c0bc6b02972a3b549728 inherit pub_attribs_a00468"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00472.html">Handler</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00468.html#aa5e38fc4b466c0bc6b02972a3b549728">loggerhandler</a></td></tr>
+<tr class="separator:aa5e38fc4b466c0bc6b02972a3b549728 inherit pub_attribs_a00468"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p >以MiraiCP的名义发送日志, 日志表现格式是: 2021-06-28 09:37:22 [log level]/MiraiCP: [log content], 为最底层的logger 发送消息级日志 </p>
+<div class="fragment"><div class="line"><a class="code hl_variable" href="a00476.html#a268fd602157c3fa49616a8872c82bfb1">Logger::logger</a>.<a class="code hl_function" href="a00468.html#af487216ad90334b62a970ad6e5a796a4">info</a>(<span class="keywordtype">string</span>) </div>
+<div class="ttc" id="aa00468_html_af487216ad90334b62a970ad6e5a796a4"><div class="ttname"><a href="a00468.html#af487216ad90334b62a970ad6e5a796a4">MiraiCP::Logger_interface::info</a></div><div class="ttdeci">void info(T... val)</div><div class="ttdoc">发送普通(info级日志)</div><div class="ttdef"><b>Definition:</b> <a href="a00113_source.html#l00094">Logger.h:94</a></div></div>
+<div class="ttc" id="aa00476_html_a268fd602157c3fa49616a8872c82bfb1"><div class="ttname"><a href="a00476.html#a268fd602157c3fa49616a8872c82bfb1">MiraiCP::Logger::logger</a></div><div class="ttdeci">static Logger logger</div><div class="ttdef"><b>Definition:</b> <a href="a00113_source.html#l00136">Logger.h:136</a></div></div>
+</div><!-- fragment --><p> 发送警告级日志 </p><div class="fragment"><div class="line"><a class="code hl_variable" href="a00476.html#a268fd602157c3fa49616a8872c82bfb1">Logger::logger</a>.<a class="code hl_function" href="a00468.html#a19b06047f8959a3bfb100c0006767c83">warning</a>(<span class="keywordtype">string</span>) </div>
+<div class="ttc" id="aa00468_html_a19b06047f8959a3bfb100c0006767c83"><div class="ttname"><a href="a00468.html#a19b06047f8959a3bfb100c0006767c83">MiraiCP::Logger_interface::warning</a></div><div class="ttdeci">void warning(T... val)</div><div class="ttdoc">发送警告(warning级日志)</div><div class="ttdef"><b>Definition:</b> <a href="a00113_source.html#l00100">Logger.h:100</a></div></div>
+</div><!-- fragment --><p> 发送错误级日志 </p><div class="fragment"><div class="line"><a class="code hl_variable" href="a00476.html#a268fd602157c3fa49616a8872c82bfb1">Logger::logger</a>.<a class="code hl_function" href="a00468.html#a418fad5b082009c5e40871d3cd88cacf">error</a>(<span class="keywordtype">string</span>) </div>
+<div class="ttc" id="aa00468_html_a418fad5b082009c5e40871d3cd88cacf"><div class="ttname"><a href="a00468.html#a418fad5b082009c5e40871d3cd88cacf">MiraiCP::Logger_interface::error</a></div><div class="ttdeci">void error(T... val)</div><div class="ttdoc">发送错误(error级日志)</div><div class="ttdef"><b>Definition:</b> <a href="a00113_source.html#l00106">Logger.h:106</a></div></div>
+</div><!-- fragment --> <div id="dynsection-1011" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;"><img src="closed.png" alt="+" id="dynsection-1011-trigger" class="inline"/> 自定义日志handle例子:</div><div id="dynsection-1011-content" class="dynsummary" style="display: none;"><div class="fragment"><div class="line"><span class="comment">// Copyright (c) 2020 - 2022. Eritque arcus and contributors.</span></div>
+<div class="line"><span class="comment">//</span></div>
+<div class="line"><span class="comment">// This program is free software: you can redistribute it and/or modify</span></div>
+<div class="line"><span class="comment">// it under the terms of the GNU Affero General Public License as</span></div>
+<div class="line"><span class="comment">// published by the Free Software Foundation, either version 3 of the</span></div>
+<div class="line"><span class="comment">// License, or any later version(in your opinion).</span></div>
+<div class="line"><span class="comment">//</span></div>
+<div class="line"><span class="comment">// This program is distributed in the hope that it will be useful,</span></div>
+<div class="line"><span class="comment">// but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div>
+<div class="line"><span class="comment">// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span></div>
+<div class="line"><span class="comment">// GNU Affero General Public License for more details.</span></div>
+<div class="line"><span class="comment">//</span></div>
+<div class="line"><span class="comment">// You should have received a copy of the GNU Affero General Public License</span></div>
+<div class="line"><span class="comment">// along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</span></div>
+<div class="line"><span class="comment">//</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00146.html">MiraiCP.hpp</a>&gt;</span></div>
+<div class="line"><span class="keyword">using namespace </span><a class="code hl_namespace" href="a00198.html">MiraiCP</a>;</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">const</span> PluginConfig <a class="code hl_variable" href="a00256.html#a9decdc01d74780d3b32c19ce6653a513">CPPPlugin::config</a>{</div>
+<div class="line">        <span class="stringliteral">&quot;id&quot;</span>,   <span class="comment">// 插件id</span></div>
+<div class="line">        <span class="stringliteral">&quot;test&quot;</span>, <span class="comment">// 插件名称</span></div>
+<div class="line">        <span class="stringliteral">&quot;v1.0&quot;</span>, <span class="comment">// 插件版本</span></div>
+<div class="line">        <span class="stringliteral">&quot;a&quot;</span>,    <span class="comment">// 插件作者</span></div>
+<div class="line">                <span class="comment">// 可选：插件描述</span></div>
+<div class="line">                <span class="comment">// 可选：日期</span></div>
+<div class="line">};</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">class </span>Main : <span class="keyword">public</span> CPPPlugin {</div>
+<div class="line"><span class="keyword">public</span>:</div>
+<div class="line">    Main() : CPPPlugin() {}</div>
+<div class="line">    <span class="keywordtype">void</span> onEnable()<span class="keyword"> override </span>{</div>
+<div class="line">        <a class="code hl_variable" href="a00476.html#a268fd602157c3fa49616a8872c82bfb1">Logger::logger</a>.<a class="code hl_function" href="a00468.html#aa3e0ad0c5771cee4583b577981105114">registerHandle</a>([](std::string content, <span class="keywordtype">int</span> level) {</div>
+<div class="line">            <span class="comment">//do some things</span></div>
+<div class="line">            <span class="comment">// eg. write file</span></div>
+<div class="line">        });</div>
+<div class="line">        <span class="comment">// 设置logger是否启用</span></div>
+<div class="line">        <a class="code hl_variable" href="a00476.html#a268fd602157c3fa49616a8872c82bfb1">Logger::logger</a>.<a class="code hl_function" href="a00468.html#a3ed1680508618b446c94ed004c211ea9">setHandleState</a>(<span class="keyword">true</span>);</div>
+<div class="line">    }</div>
+<div class="line">};</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> <a class="code hl_function" href="a00198.html#a12d27be6730af4fc321ac1eb231db281">MiraiCP::enrollPlugin</a>() {</div>
+<div class="line">    <a class="code hl_function" href="a00198.html#a12d27be6730af4fc321ac1eb231db281">MiraiCP::enrollPlugin</a>(<span class="keyword">new</span> Main());</div>
+<div class="line">}</div>
+<div class="ttc" id="aa00146_html"><div class="ttname"><a href="a00146.html">MiraiCP.hpp</a></div></div>
+<div class="ttc" id="aa00198_html"><div class="ttname"><a href="a00198.html">MiraiCP</a></div><div class="ttdef"><b>Definition:</b> <a href="a00182_source.html#l00024">miraicpString.cpp:24</a></div></div>
+<div class="ttc" id="aa00198_html_a12d27be6730af4fc321ac1eb231db281"><div class="ttname"><a href="a00198.html#a12d27be6730af4fc321ac1eb231db281">MiraiCP::enrollPlugin</a></div><div class="ttdeci">void enrollPlugin()</div><div class="ttdoc">注册插件函数, 需要被实现, 类似onStart();</div><div class="ttdef"><b>Definition:</b> <a href="a00002_source.html#l00058">callbackHandle.cpp:58</a></div></div>
+<div class="ttc" id="aa00256_html_a9decdc01d74780d3b32c19ce6653a513"><div class="ttname"><a href="a00256.html#a9decdc01d74780d3b32c19ce6653a513">MiraiCP::CPPPlugin::config</a></div><div class="ttdeci">static const PluginConfig config</div><div class="ttdoc">插件信息，一个插件中该内容不应变化</div><div class="ttdef"><b>Definition:</b> <a href="a00065_source.html#l00038">CPPPlugin.h:38</a></div></div>
+<div class="ttc" id="aa00468_html_a3ed1680508618b446c94ed004c211ea9"><div class="ttname"><a href="a00468.html#a3ed1680508618b446c94ed004c211ea9">MiraiCP::Logger_interface::setHandleState</a></div><div class="ttdeci">void setHandleState(bool state)</div><div class="ttdoc">设置handler的启用状态</div><div class="ttdef"><b>Definition:</b> <a href="a00113_source.html#l00120">Logger.h:120</a></div></div>
+<div class="ttc" id="aa00468_html_aa3e0ad0c5771cee4583b577981105114"><div class="ttname"><a href="a00468.html#aa3e0ad0c5771cee4583b577981105114">MiraiCP::Logger_interface::registerHandle</a></div><div class="ttdeci">void registerHandle(Action action)</div><div class="ttdoc">设置loggerhandler的action</div><div class="ttdef"><b>Definition:</b> <a href="a00113_source.html#l00113">Logger.h:113</a></div></div>
+</div><!-- fragment --> </div> 
+<p class="definition">在文件 <a class="el" href="a00113_source.html">Logger.h</a> 第 <a class="el" href="a00113_source.html#l00125">125</a> 行定义.</p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a0707bf07c1d709abf854a3592fb2f1f0" name="a0707bf07c1d709abf854a3592fb2f1f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0707bf07c1d709abf854a3592fb2f1f0">&#9670;&nbsp;</a></span>Logger()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">MiraiCP::Logger::Logger </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="ae75bdd405eddd5650979feb9e9ee2a9b" name="ae75bdd405eddd5650979feb9e9ee2a9b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae75bdd405eddd5650979feb9e9ee2a9b">&#9670;&nbsp;</a></span>log_interface()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MiraiCP::Logger::log_interface </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>content</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>level</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>日志底层实现封装 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">content</td><td>日志内容 </td></tr>
+    <tr><td class="paramname">level</td><td>日志等级 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>实现了 <a class="el" href="a00468.html#a86ea9d57475a3004be2a32b2c4c76371">MiraiCP::Logger_interface</a>.</p>
+
+<p class="definition">在文件 <a class="el" href="a00909_source.html">include/Logger.cpp</a> 第 <a class="el" href="a00909_source.html#l00026">26</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>                                                                  {</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        <a class="code hl_function" href="a00197.html#a4def9f25b87d48d142d6752184aadc92">LibLoader::LoaderApi::loggerInterface</a>(content.c_str(), (<span class="stringliteral">&quot;plugin/&quot;</span> + <a class="code hl_variable" href="a00256.html#a9decdc01d74780d3b32c19ce6653a513">MiraiCP::CPPPlugin::config</a>.<a class="code hl_function" href="a00220.html#a75b62773306f64d5de37fc60f700b534">getName</a>()).c_str(), -1, level);</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    }</div>
+<div class="ttc" id="aa00197_html_a4def9f25b87d48d142d6752184aadc92"><div class="ttname"><a href="a00197.html#a4def9f25b87d48d142d6752184aadc92">LibLoader::LoaderApi::loggerInterface</a></div><div class="ttdeci">LOADER_API_COUNT void loggerInterface(const MiraiCPString &amp;content, const MiraiCPString &amp;name, long long id, int level)</div><div class="ttdef"><b>Definition:</b> <a href="a00104_source.html#l00060">loaderApi.cpp:60</a></div></div>
+<div class="ttc" id="aa00220_html_a75b62773306f64d5de37fc60f700b534"><div class="ttname"><a href="a00220.html#a75b62773306f64d5de37fc60f700b534">MiraiCP::PluginConfig::getName</a></div><div class="ttdeci">std::string getName() const</div><div class="ttdef"><b>Definition:</b> <a href="a00191_source.html#l00044">PluginConfig.h:44</a></div></div>
+</div><!-- fragment --><div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-2-trigger" src="closed.png" alt="+"/> 函数调用图:</div>
+<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-2-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="a00476_ae75bdd405eddd5650979feb9e9ee2a9b_cgraph.png" border="0" usemap="#aa00476_ae75bdd405eddd5650979feb9e9ee2a9b_cgraph" alt=""/></div>
+<map name="aa00476_ae75bdd405eddd5650979feb9e9ee2a9b_cgraph" id="aa00476_ae75bdd405eddd5650979feb9e9ee2a9b_cgraph">
+<area shape="rect" title="日志底层实现封装" alt="" coords="5,39,145,80"/>
+<area shape="rect" href="a00220.html#a75b62773306f64d5de37fc60f700b534" title=" " alt="" coords="193,5,341,47"/>
+<area shape="rect" href="a00197.html#a4def9f25b87d48d142d6752184aadc92" title=" " alt="" coords="195,71,339,112"/>
+<area shape="rect" href="a00197.html#a013eeafb41e39a774e3b353a5f61fdb7" title=" " alt="" coords="389,71,533,112"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="a268fd602157c3fa49616a8872c82bfb1" name="a268fd602157c3fa49616a8872c82bfb1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a268fd602157c3fa49616a8872c82bfb1">&#9670;&nbsp;</a></span>logger</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00476.html">Logger</a> MiraiCP::Logger::logger</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="a00113_source.html">Logger.h</a> 第 <a class="el" href="a00113_source.html#l00136">136</a> 行定义.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li><a class="el" href="a00113_source.html">Logger.h</a></li>
+<li><a class="el" href="a00909_source.html">include/Logger.cpp</a></li>
+</ul>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">生成于 2022年 五月 20日 星期五 18:15:39 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="navelem"><a class="el" href="a00198.html">MiraiCP</a></li><li class="navelem"><a class="el" href="a00476.html">Logger</a></li>
+    <li class="footer">生成于 2022年 七月 22日 星期五 13:46:01 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
 <script type="text/javascript">

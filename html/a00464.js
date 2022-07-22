@@ -1,7 +1,5 @@
 var a00464 =
 [
-    [ "AtAll", "a00464.html#aa19455c0291e5f1ebe7f6ed85b6cdea6", null ],
-    [ "toJson", "a00464.html#a4a0c42473de5f646c9d5ff5864c7d1e1", null ],
-    [ "toMiraiCode", "a00464.html#a0b99f7dc0cd4d328e7105a34395c8019", null ],
-    [ "type", "a00464.html#ac3a9e58d6562b04ed3eaefb26d137a9a", null ]
+    [ "id", "a00464.html#a3731a10878ebebf220143bde1b6bf145", null ],
+    [ "path", "a00464.html#aed72e7f738908ff8beb5f3894c88d0ee", null ]
 ];
