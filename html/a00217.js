@@ -1,8 +1,9 @@
 var a00217 =
 [
-    [ "GroupTempMessageEvent", "a00217.html#a4cd87975d98bef10e520e2ca9e3bfcf4", null ],
-    [ "get_event_type", "a00217.html#a6129a5451a7602b73c8d04fe88ad2715", null ],
-    [ "group", "a00217.html#a29c18056652c7d36248f70f359f01e74", null ],
-    [ "message", "a00217.html#a2405f8a309e3b2de0d7cba313d795cee", null ],
-    [ "sender", "a00217.html#ac0252e17c1cb9a0d4f2ebf37720951db", null ]
+    [ "LoaderApi", "a00219.html", "a00219" ],
+    [ "plugin_entrance_func_ptr", "a00217.html#a737c0a0b70ea90a5fda61002ec9f1ec5", null ],
+    [ "plugin_event_func_ptr", "a00217.html#ad75d14c4f8a5192c9e2a8ef36f9919ee", null ],
+    [ "plugin_func_ptr", "a00217.html#aae50308f3b68967bcf9279e9e4bfe578", null ],
+    [ "plugin_handle", "a00217.html#a927f212ce2db84cca1f02ec95aa62322", null ],
+    [ "plugin_info_func_ptr", "a00217.html#a776f4f6bb745b814e23461c7742b9682", null ]
 ];

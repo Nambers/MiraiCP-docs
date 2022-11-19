@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiraiCP: MiraiCP::BotLeaveEvent类 参考</title>
+<title>MiraiCP: MiraiCP::IMessageEvent类 参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -22,6 +22,9 @@
 <link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 <link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+ <script type="text/javascript">
+      DoxygenAwesomeDarkModeToggle.init()
+</script>
 </head>
 <body>
 <a href="https://github.com/Nambers/MiraiCP" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#64CEAA; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
@@ -32,7 +35,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MiraiCP
-   &#160;<span id="projectnumber">v2.12.0-RC2</span>
+   &#160;<span id="projectnumber">v2.13.0-alpha-3</span>
    </div>
    <div id="projectbrief">MiraiCP api document</div>
   </td>
@@ -92,94 +95,63 @@ $(document).ready(function(){initNavTree('a00320.html',''); initResizable(); });
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public 成员函数</a> &#124;
-<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
-<a href="#pub-attribs">Public 属性</a> &#124;
 <a href="a00317.html">所有成员列表</a>  </div>
-  <div class="headertitle"><div class="title">MiraiCP::BotLeaveEvent类 参考</div></div>
+  <div class="headertitle"><div class="title">MiraiCP::IMessageEvent类 参考<span class="mlabels"><span class="mlabel">abstract</span></span></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>机器人退群事件 可能有3种类型, 主动退/被踢/解散 目前mirai的botLeave事件还不稳定暂时不支持类型  
+<p>MessageEvent类型的抽象接口，用于Message类型多态实现  
  <a href="a00320.html#details">更多...</a></p>
 
-<p><code>#include &lt;<a class="el" href="a00071_source.html">Event.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="a00065_source.html">Event.h</a>&gt;</code></p>
 <div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> 类 MiraiCP::BotLeaveEvent 继承关系图:</div>
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> 类 MiraiCP::IMessageEvent 继承关系图:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="a00319.png" border="0" usemap="#a_mirai_c_p_1_1_bot_leave_event_inherit__map" alt="Inheritance graph"/></div>
-<map name="a_mirai_c_p_1_1_bot_leave_event_inherit__map" id="a_mirai_c_p_1_1_bot_leave_event_inherit__map">
-<area shape="rect" title="机器人退群事件 可能有3种类型, 主动退/被踢/解散 目前mirai的botLeave事件还不稳定暂时不支持类型" alt="" coords="23,604,184,725"/>
-<area shape="rect" href="a00264.html" title=" " alt="" coords="5,419,201,555"/>
-<area shape="rect" href="a00260.html" title="Event抽象父类" alt="" coords="15,5,181,185"/>
-<area shape="rect" href="a00264.html" title="所有事件处理timeoutevent都是机器人事件，指都有机器人实例" alt="" coords="120,235,316,356"/>
+<div class="center"><img src="a00319.png" border="0" usemap="#a_mirai_c_p_1_1_i_message_event_inherit__map" alt="Inheritance graph"/></div>
+<map name="a_mirai_c_p_1_1_i_message_event_inherit__map" id="a_mirai_c_p_1_1_i_message_event_inherit__map">
+<area shape="rect" title="MessageEvent类型的抽象接口，用于Message类型多态实现" alt="" coords="273,5,476,215"/>
+<area shape="rect" href="a00324.html" title="群消息事件声明" alt="" coords="5,263,248,648"/>
+<area shape="rect" href="a00356.html" title="群临时会话" alt="" coords="273,292,477,619"/>
+<area shape="rect" href="a00328.html" title=" " alt="" coords="501,285,705,626"/>
 </map>
 </div>
 <div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> MiraiCP::BotLeaveEvent 的协作图:</div>
+  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> MiraiCP::IMessageEvent 的协作图:</div>
 <div id="dynsection-1-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="a00318.png" border="0" usemap="#a_mirai_c_p_1_1_bot_leave_event_coll__map" alt="Collaboration graph"/></div>
-<map name="a_mirai_c_p_1_1_bot_leave_event_coll__map" id="a_mirai_c_p_1_1_bot_leave_event_coll__map">
-<area shape="rect" title="机器人退群事件 可能有3种类型, 主动退/被踢/解散 目前mirai的botLeave事件还不稳定暂时不支持类型" alt="" coords="490,1551,651,1672"/>
-<area shape="rect" href="a00264.html" title=" " alt="" coords="405,1365,601,1501"/>
-<area shape="rect" href="a00260.html" title="Event抽象父类" alt="" coords="434,858,601,1038"/>
-<area shape="rect" href="a00264.html" title="所有事件处理timeoutevent都是机器人事件，指都有机器人实例" alt="" coords="250,1196,446,1303"/>
-<area shape="rect" href="a00232.html" title="当前bot账号信息" alt="" coords="5,763,205,1133"/>
-<area shape="rect" title=" " alt="" coords="102,13,149,90"/>
-<area shape="rect" href="a00472.html" title="loggerhandler会在每次log执行前执行一遍，可用于执行自定义的保存操作等" alt="" coords="161,160,332,252"/>
-<area shape="rect" title=" " alt="" coords="94,461,149,539"/>
-<area shape="rect" title=" " alt="" coords="397,461,528,539"/>
-<area shape="rect" href="a00480.html" title="带id(一般为bot账号)的logger" alt="" coords="230,880,410,1016"/>
-<area shape="rect" href="a00468.html" title=" " alt="" coords="173,315,373,685"/>
-<area shape="rect" title=" " alt="" coords="176,5,317,97"/>
+<div class="center"><img src="a00318.png" border="0" usemap="#a_mirai_c_p_1_1_i_message_event_coll__map" alt="Collaboration graph"/></div>
+<map name="a_mirai_c_p_1_1_i_message_event_coll__map" id="a_mirai_c_p_1_1_i_message_event_coll__map">
+<area shape="rect" title="MessageEvent类型的抽象接口，用于Message类型多态实现" alt="" coords="5,5,208,215"/>
 </map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public 成员函数</h2></td></tr>
-<tr class="memitem:a1d6901317417c45332686a1b148ea789"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00320.html#a1d6901317417c45332686a1b148ea789">BotLeaveEvent</a> (<a class="el" href="a00198.html#a3ae2ebfdaa4574d341b8e7935f29ddb8">QQID</a> g, <a class="el" href="a00198.html#a3ae2ebfdaa4574d341b8e7935f29ddb8">QQID</a> botid)</td></tr>
-<tr class="separator:a1d6901317417c45332686a1b148ea789"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_methods_a00264"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_a00264')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="a00264.html">MiraiCP::BotEvent&lt; BotLeaveEvent &gt;</a></td></tr>
-<tr class="memitem:a9e02a5aa59b72a0667260d8d487a66f8 inherit pub_methods_a00264"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00199.html#abe9e9d8212ea8f23717b72db64393cab">eventTypes::Types</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00264.html#a9e02a5aa59b72a0667260d8d487a66f8">getEventType</a> () const override</td></tr>
-<tr class="separator:a9e02a5aa59b72a0667260d8d487a66f8 inherit pub_methods_a00264"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5da368a0e44891433b340288bc872df3 inherit pub_methods_a00264"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00264.html#a5da368a0e44891433b340288bc872df3">BotEvent</a> (<a class="el" href="a00198.html#a3ae2ebfdaa4574d341b8e7935f29ddb8">QQID</a> botid)</td></tr>
-<tr class="separator:a5da368a0e44891433b340288bc872df3 inherit pub_methods_a00264"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_methods_a00260"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_a00260')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="a00260.html">MiraiCP::MiraiCPEvent</a></td></tr>
-<tr class="memitem:ac85886499f0138dbdd661dea59c7596d inherit pub_methods_a00260"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00260.html#ac85886499f0138dbdd661dea59c7596d">MiraiCPEvent</a> ()=default</td></tr>
-<tr class="separator:ac85886499f0138dbdd661dea59c7596d inherit pub_methods_a00260"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a42d37c121315a51870afcc0b9306675a inherit pub_methods_a00260"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00260.html#a42d37c121315a51870afcc0b9306675a">~MiraiCPEvent</a> ()=default</td></tr>
-<tr class="separator:a42d37c121315a51870afcc0b9306675a inherit pub_methods_a00260"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
-静态 Public 成员函数</h2></td></tr>
-<tr class="memitem:a6181c5b90aece0c558943c71d9a037ed"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="a00199.html#abe9e9d8212ea8f23717b72db64393cab">eventTypes::Types</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00320.html#a6181c5b90aece0c558943c71d9a037ed">get_event_type</a> ()</td></tr>
-<tr class="separator:a6181c5b90aece0c558943c71d9a037ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_static_methods_a00260"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_a00260')"><img src="closed.png" alt="-"/>&#160;静态 Public 成员函数 继承自 <a class="el" href="a00260.html">MiraiCP::MiraiCPEvent</a></td></tr>
-<tr class="memitem:a2df44719d2520c5197b90a9b17ffb34d inherit pub_static_methods_a00260"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="a00199.html#abe9e9d8212ea8f23717b72db64393cab">eventTypes::Types</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00260.html#a2df44719d2520c5197b90a9b17ffb34d">get_event_type</a> ()</td></tr>
-<tr class="separator:a2df44719d2520c5197b90a9b17ffb34d inherit pub_static_methods_a00260"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
-Public 属性</h2></td></tr>
-<tr class="memitem:a75d1aed07afc1cc0c9a6985c406e68ee"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00198.html#a3ae2ebfdaa4574d341b8e7935f29ddb8">QQID</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00320.html#a75d1aed07afc1cc0c9a6985c406e68ee">groupid</a></td></tr>
-<tr class="memdesc:a75d1aed07afc1cc0c9a6985c406e68ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">退出的群 @attension 收到这个事件时已经退出该群, 可能取不到相关信息  <a href="a00320.html#a75d1aed07afc1cc0c9a6985c406e68ee">更多...</a><br /></td></tr>
-<tr class="separator:a75d1aed07afc1cc0c9a6985c406e68ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_attribs_a00264"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_a00264')"><img src="closed.png" alt="-"/>&#160;Public 属性 继承自 <a class="el" href="a00264.html">MiraiCP::BotEvent&lt; BotLeaveEvent &gt;</a></td></tr>
-<tr class="memitem:a0b14bddb4baebbd348969dac6c9a8edc inherit pub_attribs_a00264"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00232.html">Bot</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00264.html#a0b14bddb4baebbd348969dac6c9a8edc">bot</a></td></tr>
-<tr class="memdesc:a0b14bddb4baebbd348969dac6c9a8edc inherit pub_attribs_a00264"><td class="mdescLeft">&#160;</td><td class="mdescRight">该事件接受的机器人  <a href="a00264.html#a0b14bddb4baebbd348969dac6c9a8edc">更多...</a><br /></td></tr>
-<tr class="separator:a0b14bddb4baebbd348969dac6c9a8edc inherit pub_attribs_a00264"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a864b09f1e3cf406c2e96ca7b4c10e18e inherit pub_attribs_a00264"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00480.html">IdLogger</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00264.html#a864b09f1e3cf406c2e96ca7b4c10e18e">botlogger</a></td></tr>
-<tr class="separator:a864b09f1e3cf406c2e96ca7b4c10e18e inherit pub_attribs_a00264"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a240d9d0df62738e43f8de576c6b26acf"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="a00296.html">Contact</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00320.html#a240d9d0df62738e43f8de576c6b26acf">chat</a> ()=0</td></tr>
+<tr class="memdesc:a240d9d0df62738e43f8de576c6b26acf"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取当前聊天，可能是群，私聊，或群临时回话  <a href="a00320.html#a240d9d0df62738e43f8de576c6b26acf">更多...</a><br /></td></tr>
+<tr class="separator:a240d9d0df62738e43f8de576c6b26acf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77875102a2c9021981c942d16e15435a"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="a00296.html">Contact</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00320.html#a77875102a2c9021981c942d16e15435a">from</a> ()=0</td></tr>
+<tr class="memdesc:a77875102a2c9021981c942d16e15435a"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取当前聊天，可能是群，私聊，或群临时回话  <a href="a00320.html#a77875102a2c9021981c942d16e15435a">更多...</a><br /></td></tr>
+<tr class="separator:a77875102a2c9021981c942d16e15435a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab05db28ad76f89f09b38ad345f557803"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="a00572.html">MessageChain</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00320.html#ab05db28ad76f89f09b38ad345f557803">getMessageChain</a> ()=0</td></tr>
+<tr class="separator:ab05db28ad76f89f09b38ad345f557803"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc868fb91c60975d5862d0691c80ec54"><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="a00296.html">Contact</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00320.html#afc868fb91c60975d5862d0691c80ec54">chat</a> () const =0</td></tr>
+<tr class="separator:afc868fb91c60975d5862d0691c80ec54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace8d5250eaff54abb3631cccf37b4b49"><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="a00296.html">Contact</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00320.html#ace8d5250eaff54abb3631cccf37b4b49">from</a> () const =0</td></tr>
+<tr class="separator:ace8d5250eaff54abb3631cccf37b4b49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40be4514c0111359a8388cb0c079ec76"><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="a00572.html">MessageChain</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00320.html#a40be4514c0111359a8388cb0c079ec76">getMessageChain</a> () const =0</td></tr>
+<tr class="separator:a40be4514c0111359a8388cb0c079ec76"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
-<div class="textblock"><p >机器人退群事件 可能有3种类型, 主动退/被踢/解散 目前mirai的botLeave事件还不稳定暂时不支持类型 </p>
+<div class="textblock"><p >MessageEvent类型的抽象接口，用于Message类型多态实现 </p>
 
-<p class="definition">在文件 <a class="el" href="a00071_source.html">Event.h</a> 第 <a class="el" href="a00071_source.html#l00556">556</a> 行定义.</p>
-</div><h2 class="groupheader">构造及析构函数说明</h2>
-<a id="a1d6901317417c45332686a1b148ea789" name="a1d6901317417c45332686a1b148ea789"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1d6901317417c45332686a1b148ea789">&#9670;&nbsp;</a></span>BotLeaveEvent()</h2>
+<p class="definition">在文件 <a class="el" href="a00065_source.html">Event.h</a> 第 <a class="el" href="a00065_source.html#l00085">85</a> 行定义.</p>
+</div><h2 class="groupheader">成员函数说明</h2>
+<a id="afc868fb91c60975d5862d0691c80ec54" name="afc868fb91c60975d5862d0691c80ec54"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc868fb91c60975d5862d0691c80ec54">&#9670;&nbsp;</a></span>chat() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -188,40 +160,25 @@ Public 属性</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">MiraiCP::BotLeaveEvent::BotLeaveEvent </td>
+          <td class="memname">virtual const <a class="el" href="a00296.html">Contact</a> * MiraiCP::IMessageEvent::chat </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="a00198.html#a3ae2ebfdaa4574d341b8e7935f29ddb8">QQID</a>&#160;</td>
-          <td class="paramname"><em>g</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="a00198.html#a3ae2ebfdaa4574d341b8e7935f29ddb8">QQID</a>&#160;</td>
-          <td class="paramname"><em>botid</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="a00071_source.html">Event.h</a> 第 <a class="el" href="a00071_source.html#l00567">567</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l00567" name="l00567"></a><span class="lineno">  567</span>: <a class="code hl_function" href="a00264.html#a5da368a0e44891433b340288bc872df3">BotEvent</a>(botid), <a class="code hl_variable" href="a00320.html#a75d1aed07afc1cc0c9a6985c406e68ee">groupid</a>(g) {}</div>
-<div class="ttc" id="aa00264_html_a5da368a0e44891433b340288bc872df3"><div class="ttname"><a href="a00264.html#a5da368a0e44891433b340288bc872df3">MiraiCP::BotEvent&lt; BotLeaveEvent &gt;::BotEvent</a></div><div class="ttdeci">BotEvent(QQID botid)</div><div class="ttdef"><b>Definition:</b> <a href="a00071_source.html#l00080">Event.h:80</a></div></div>
-<div class="ttc" id="aa00320_html_a75d1aed07afc1cc0c9a6985c406e68ee"><div class="ttname"><a href="a00320.html#a75d1aed07afc1cc0c9a6985c406e68ee">MiraiCP::BotLeaveEvent::groupid</a></div><div class="ttdeci">QQID groupid</div><div class="ttdoc">退出的群 @attension 收到这个事件时已经退出该群, 可能取不到相关信息</div><div class="ttdef"><b>Definition:</b> <a href="a00071_source.html#l00565">Event.h:565</a></div></div>
-</div><!-- fragment -->
+<p>在 <a class="el" href="a00324.html#a4cdd74f8d9a12c115899afc53088cde5">MiraiCP::GroupMessageEvent</a>, <a class="el" href="a00328.html#a9a8d672f2936a6760e046c3a03790e07">MiraiCP::PrivateMessageEvent</a> , 以及 <a class="el" href="a00356.html#a55718d1fe9883ea24c47c8ebb503d807">MiraiCP::GroupTempMessageEvent</a> 内被实现.</p>
+
 </div>
 </div>
-<h2 class="groupheader">成员函数说明</h2>
-<a id="a6181c5b90aece0c558943c71d9a037ed" name="a6181c5b90aece0c558943c71d9a037ed"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6181c5b90aece0c558943c71d9a037ed">&#9670;&nbsp;</a></span>get_event_type()</h2>
+<a id="a240d9d0df62738e43f8de576c6b26acf" name="a240d9d0df62738e43f8de576c6b26acf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a240d9d0df62738e43f8de576c6b26acf">&#9670;&nbsp;</a></span>chat() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -230,7 +187,7 @@ Public 属性</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static <a class="el" href="a00199.html#abe9e9d8212ea8f23717b72db64393cab">eventTypes::Types</a> MiraiCP::BotLeaveEvent::get_event_type </td>
+          <td class="memname">virtual <a class="el" href="a00296.html">Contact</a> * MiraiCP::IMessageEvent::chat </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -238,40 +195,129 @@ Public 属性</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="a00071_source.html">Event.h</a> 第 <a class="el" href="a00071_source.html#l00558">558</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l00558" name="l00558"></a><span class="lineno">  558</span>                                                {</div>
-<div class="line"><a id="l00559" name="l00559"></a><span class="lineno">  559</span>            <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="a00199.html#abe9e9d8212ea8f23717b72db64393cabab9a57352711dc24a722df5dc49b41807">eventTypes::Types::BotLeaveEvent</a>;</div>
-<div class="line"><a id="l00560" name="l00560"></a><span class="lineno">  560</span>        }</div>
-<div class="ttc" id="aa00199_html_abe9e9d8212ea8f23717b72db64393cabab9a57352711dc24a722df5dc49b41807"><div class="ttname"><a href="a00199.html#abe9e9d8212ea8f23717b72db64393cabab9a57352711dc24a722df5dc49b41807">MiraiCP::eventTypes::BotLeaveEvent</a></div><div class="ttdeci">@ BotLeaveEvent</div><div class="ttdef"><b>Definition:</b> <a href="a00071_source.html#l00043">Event.h:43</a></div></div>
-</div><!-- fragment -->
+<p>获取当前聊天，可能是群，私聊，或群临时回话 </p>
+
+<p>在 <a class="el" href="a00324.html#a8d3c0c5bbda48132c31dca900f9d4931">MiraiCP::GroupMessageEvent</a>, <a class="el" href="a00328.html#a3b70ad84f06df0b224c6dbd58d255a59">MiraiCP::PrivateMessageEvent</a> , 以及 <a class="el" href="a00356.html#ac9bee0cbf3838fa62837e62110e67067">MiraiCP::GroupTempMessageEvent</a> 内被实现.</p>
+
 </div>
 </div>
-<h2 class="groupheader">类成员变量说明</h2>
-<a id="a75d1aed07afc1cc0c9a6985c406e68ee" name="a75d1aed07afc1cc0c9a6985c406e68ee"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a75d1aed07afc1cc0c9a6985c406e68ee">&#9670;&nbsp;</a></span>groupid</h2>
+<a id="ace8d5250eaff54abb3631cccf37b4b49" name="ace8d5250eaff54abb3631cccf37b4b49"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace8d5250eaff54abb3631cccf37b4b49">&#9670;&nbsp;</a></span>from() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a00198.html#a3ae2ebfdaa4574d341b8e7935f29ddb8">QQID</a> MiraiCP::BotLeaveEvent::groupid</td>
+          <td class="memname">virtual const <a class="el" href="a00296.html">Contact</a> * MiraiCP::IMessageEvent::from </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>退出的群 @attension 收到这个事件时已经退出该群, 可能取不到相关信息 </p>
+<p>在 <a class="el" href="a00324.html#ae81a0e1dec6235d786b79244ef3ae40b">MiraiCP::GroupMessageEvent</a>, <a class="el" href="a00328.html#a92d1a4aad3a0b4306986cea460b84fb7">MiraiCP::PrivateMessageEvent</a> , 以及 <a class="el" href="a00356.html#a40e9c959f267452a60b2d5e6549dd5bb">MiraiCP::GroupTempMessageEvent</a> 内被实现.</p>
 
-<p class="definition">在文件 <a class="el" href="a00071_source.html">Event.h</a> 第 <a class="el" href="a00071_source.html#l00565">565</a> 行定义.</p>
+</div>
+</div>
+<a id="a77875102a2c9021981c942d16e15435a" name="a77875102a2c9021981c942d16e15435a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77875102a2c9021981c942d16e15435a">&#9670;&nbsp;</a></span>from() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="a00296.html">Contact</a> * MiraiCP::IMessageEvent::from </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取当前聊天，可能是群，私聊，或群临时回话 </p>
+
+<p>在 <a class="el" href="a00324.html#a76b1e6102746a08259bef6d638a8c993">MiraiCP::GroupMessageEvent</a>, <a class="el" href="a00328.html#a9b4c13376dcef6dddab4cca9b57ffc48">MiraiCP::PrivateMessageEvent</a> , 以及 <a class="el" href="a00356.html#adf2a7d962bf5daba13db488d48f0da5d">MiraiCP::GroupTempMessageEvent</a> 内被实现.</p>
+
+</div>
+</div>
+<a id="a40be4514c0111359a8388cb0c079ec76" name="a40be4514c0111359a8388cb0c079ec76"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40be4514c0111359a8388cb0c079ec76">&#9670;&nbsp;</a></span>getMessageChain() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual const <a class="el" href="a00572.html">MessageChain</a> * MiraiCP::IMessageEvent::getMessageChain </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在 <a class="el" href="a00324.html#a505491fdd1287b85705d706d4c54e8da">MiraiCP::GroupMessageEvent</a>, <a class="el" href="a00328.html#a547bf324dfbfbb2dbef03c3fef05168b">MiraiCP::PrivateMessageEvent</a> , 以及 <a class="el" href="a00356.html#af08cf89e9ec68ea7a71f491bac7af023">MiraiCP::GroupTempMessageEvent</a> 内被实现.</p>
+
+</div>
+</div>
+<a id="ab05db28ad76f89f09b38ad345f557803" name="ab05db28ad76f89f09b38ad345f557803"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab05db28ad76f89f09b38ad345f557803">&#9670;&nbsp;</a></span>getMessageChain() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="a00572.html">MessageChain</a> * MiraiCP::IMessageEvent::getMessageChain </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在 <a class="el" href="a00324.html#a3dd489fc2c775cb0997402525d461877">MiraiCP::GroupMessageEvent</a>, <a class="el" href="a00328.html#a046a99377587f6d8278d7d6cfb55208b">MiraiCP::PrivateMessageEvent</a> , 以及 <a class="el" href="a00356.html#af4a3409f72b9feba0671804763390592">MiraiCP::GroupTempMessageEvent</a> 内被实现.</p>
 
 </div>
 </div>
 <hr/>该类的文档由以下文件生成:<ul>
-<li><a class="el" href="a00071_source.html">Event.h</a></li>
+<li><a class="el" href="a00065_source.html">Event.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -279,8 +325,8 @@ Public 属性</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="a00198.html">MiraiCP</a></li><li class="navelem"><a class="el" href="a00320.html">BotLeaveEvent</a></li>
-    <li class="footer">生成于 2022年 七月 22日 星期五 13:46:01 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="navelem"><a class="el" href="a00218.html">MiraiCP</a></li><li class="navelem"><a class="el" href="a00320.html">IMessageEvent</a></li>
+    <li class="footer">生成于 2022年 十一月 19日 星期六 12:45:48 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
 <script type="text/javascript">

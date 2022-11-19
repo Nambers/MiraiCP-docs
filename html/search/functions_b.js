@@ -1,28 +1,5 @@
 var searchData=
 [
-  ['marketface_0',['MarketFace',['../a00584.html#a4caebb2c1479ca9039f6102f25e5547f',1,'MiraiCP::MarketFace']]],
-  ['member_1',['Member',['../a00492.html#a1efa452b6a65f50574eb3f380aa67544',1,'MiraiCP::Member::Member(QQID qqid, QQID groupid, QQID botid)'],['../a00492.html#a94779cdd0b802852a5d32ea71399413e',1,'MiraiCP::Member::Member(const Contact &amp;c)']]],
-  ['memberexception_2',['MemberException',['../a00380.html#a5a77bb2dee827ef89cb7fab2e62b160c',1,'MiraiCP::MemberException']]],
-  ['memberjoinevent_3',['MemberJoinEvent',['../a00288.html#a073cb4162b0f02a4497e9ea6912399d5',1,'MiraiCP::MemberJoinEvent']]],
-  ['memberjoinrequestevent_4',['MemberJoinRequestEvent',['../a00324.html#a0ee741bf6f005098ecd99b841dacf67e',1,'MiraiCP::MemberJoinRequestEvent']]],
-  ['memberleaveevent_5',['MemberLeaveEvent',['../a00292.html#acbd646bf783ca8d03b8b0a48e3a37cb7',1,'MiraiCP::MemberLeaveEvent']]],
-  ['memberlisttostring_6',['MemberListToString',['../a00444.html#a7e4a285e03aac96ef4152d852958329d',1,'MiraiCP::Group']]],
-  ['message_7',['Message',['../a00496.html#a35c768dbc74d8ea6b218d56ed6937977',1,'MiraiCP::internal::Message::Message(const T &amp;_singleMessage)'],['../a00496.html#a45cfa8a68c1a3dd1071db597a605d944',1,'MiraiCP::internal::Message::Message(std::shared_ptr&lt; SingleMessage &gt; msgptr)']]],
-  ['messagechain_8',['MessageChain',['../a00500.html#a8f234741fc3e067e17e6f94c64d3320c',1,'MiraiCP::MessageChain::MessageChain(const MessageChain &amp;_o)=default'],['../a00500.html#af6e0627041ba1b2774d29b4ab2c399e9',1,'MiraiCP::MessageChain::MessageChain(MessageChain &amp;&amp;_o)=default'],['../a00500.html#ab2e4f1dddf8908c5e4da129223dc0591',1,'MiraiCP::MessageChain::MessageChain(MessageSource ms, T... args)'],['../a00500.html#a691f349d987f89403a4c52751854ea24',1,'MiraiCP::MessageChain::MessageChain(T... args)'],['../a00500.html#abc8a31e0b95f58d3355037be5e2dde94',1,'MiraiCP::MessageChain::MessageChain(const T &amp;msg)']]],
-  ['messagepresendevent_9',['MessagePreSendEvent',['../a00328.html#a14ade975f492c912c43d9c6140f36a8d',1,'MiraiCP::MessagePreSendEvent']]],
-  ['messagesource_10',['MessageSource',['../a00504.html#a49210b1a4c711d50ab0acc17d0dae88d',1,'MiraiCP::MessageSource::MessageSource()=default'],['../a00504.html#a17c32c44e0af14a5f23f15ca56e527ae',1,'MiraiCP::MessageSource::MessageSource(std::string ids, std::string internalids, std::string source)']]],
-  ['miraicode_11',['MiraiCode',['../a00512.html#a357aa786136dc94421877f5572ca150a',1,'MiraiCP::MiraiCode::MiraiCode(MiraiCodeable *a)'],['../a00512.html#a0d635f5decbaa8f14f9e255efb8654f0',1,'MiraiCP::MiraiCode::MiraiCode(const std::string &amp;a, bool convert=false)']]],
-  ['miraicodewithoutescape_12',['MiraiCodeWithoutEscape',['../a00512.html#a91e0549cd91bb441980909cc5b32bee0',1,'MiraiCP::MiraiCode::MiraiCodeWithoutEscape(const std::string &amp;a)'],['../a00512.html#ad116a6d05b09bb93b637ead57b499042',1,'MiraiCP::MiraiCode::MiraiCodeWithoutEscape(MiraiCodeable *a)']]],
-  ['miraicpdefer_13',['MiraiCPDefer',['../a00208.html#a9ff09c9eff4543a6db160d9bb9d479bf',1,'CommonTools::MiraiCPDefer']]],
-  ['miraicpevent_14',['MiraiCPEvent',['../a00260.html#ac85886499f0138dbdd661dea59c7596d',1,'MiraiCP::MiraiCPEvent']]],
-  ['miraicpexceptionbase_15',['MiraiCPExceptionBase',['../a00348.html#a055eb6e4a0899678793b0e4106fbf493',1,'MiraiCP::MiraiCPExceptionBase']]],
-  ['miraicpexceptioncrtp_16',['MiraiCPExceptionCRTP',['../a00352.html#a3158432cce833ca29cf216c9e46130c0',1,'MiraiCP::MiraiCPExceptionCRTP']]],
-  ['miraicpexceptionevent_17',['MiraiCPExceptionEvent',['../a00332.html#a67f475ec3ebcf1f185e5d9ef13fcd14c',1,'MiraiCP::MiraiCPExceptionEvent']]],
-  ['miraicpnewthread_18',['MiraiCPNewThread',['../a00516.html#aac9f1899dc2dd508fb87c393dce95569',1,'MiraiCP::MiraiCPNewThread::MiraiCPNewThread() noexcept=default'],['../a00516.html#ae04a775fb43599b61f29e831f98bfee0',1,'MiraiCP::MiraiCPNewThread::MiraiCPNewThread(Callable &amp;&amp;func, Args &amp;&amp;...args)']]],
-  ['miraicpstring_19',['MiraiCPString',['../a00216.html#ab6a4828a690e6cbe4fe83fff9ef11e3b',1,'MiraiCP::MiraiCPString::MiraiCPString()'],['../a00216.html#aa1fda8f92269bd871c94c56e793373f1',1,'MiraiCP::MiraiCPString::MiraiCPString(const MiraiCPString &amp;other)'],['../a00216.html#aa22e9e3bf45ad23003f5f44c964bd546',1,'MiraiCP::MiraiCPString::MiraiCPString(MiraiCPString &amp;&amp;temp) noexcept'],['../a00216.html#a5e97ad52cb215cb213026ce45e355dfe',1,'MiraiCP::MiraiCPString::MiraiCPString(const char *char_str)'],['../a00216.html#a2f46607eea7c6f093e385bb9e70a3ae6',1,'MiraiCP::MiraiCPString::MiraiCPString(const std::string &amp;string_str)']]],
-  ['miraicpthreadexception_20',['MiraiCPThreadException',['../a00420.html#a4b4c5caac34747b3ecb483f4deed965f',1,'MiraiCP::MiraiCPThreadException']]],
-  ['modifyadmin_21',['modifyAdmin',['../a00492.html#a7207187ce22e9e1910fd3188e7140cd5',1,'MiraiCP::Member']]],
-  ['musicshare_22',['MusicShare',['../a00580.html#a36dd35e9834b873e11c98eae3602d0ac',1,'MiraiCP::MusicShare']]],
-  ['mute_23',['mute',['../a00492.html#ac0f48caaf4d4b8bf1fcdb33460a3dc6b',1,'MiraiCP::Member']]],
-  ['muteexception_24',['MuteException',['../a00376.html#aabc181c072a55209b6a88f4a0f43fa9a',1,'MiraiCP::MuteException']]]
+  ['kick_0',['kick',['../a00564.html#a2d1bc8f2dcdc9048ded62a0f5f53041a',1,'MiraiCP::Member']]],
+  ['ktoperation_1',['ktOperation',['../a00222.html#a22b667b08eb5bb1bb8b603212b55f5e2',1,'MiraiCP::KtOperation']]]
 ];

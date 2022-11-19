@@ -1,12 +1,11 @@
 var a00176 =
 [
-    [ "FUNC_ENTRANCE", "a00176.html#a530f8aa8a579c0ec728d5e7a46515ba4", null ],
-    [ "FUNC_EVENT", "a00176.html#a06af3829abc05f3902ed69ee480b66fa", null ],
-    [ "FUNC_EXIT", "a00176.html#a6505e9c7b381013fa532556439fb8bd0", null ],
-    [ "PLUGIN_INFO", "a00176.html#ac4ea748794ca932109fca8a936954720", null ],
-    [ "plugin_entrance_func_ptr", "a00176.html#a737c0a0b70ea90a5fda61002ec9f1ec5", null ],
-    [ "plugin_event_func_ptr", "a00176.html#a7b1a774df603b5f53af084662a207fa6", null ],
-    [ "plugin_func_ptr", "a00176.html#aae50308f3b68967bcf9279e9e4bfe578", null ],
-    [ "plugin_handle", "a00176.html#a927f212ce2db84cca1f02ec95aa62322", null ],
-    [ "plugin_info_func_ptr", "a00176.html#afcd5af8d60fb564a8735b6283c0a3881", null ]
+    [ "json", "a00176.html#ab701e3ac61a85b337ec5c1abaad6742d", null ],
+    [ "FUNC_ENTRANCE", "a00176.html#a0585646fd17d1cc5d88b09d4ee9b73d4", null ],
+    [ "FUNC_EVENT", "a00176.html#a9e8bbe776f60cdd3a4cb2f58b7db3a44", null ],
+    [ "FUNC_EXIT", "a00176.html#a86f1ff0184932e6c32b8b543c5527559", null ],
+    [ "get_loader_apis", "a00176.html#adbbf9fc9fc8afe6108ac756d7da23ddb", null ],
+    [ "PLUGIN_INFO", "a00176.html#ae002060e3c187e7426d85d81f5caccb8", null ],
+    [ "reset_loader_apis", "a00176.html#ad7be0fa205a71a85052d08ef0797b7c6", null ],
+    [ "set_loader_apis", "a00176.html#afafdec05224ec27cf2a6473f4b6bbc17", null ]
 ];

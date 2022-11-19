@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['contacttype_0',['contactType',['../a00198.html#a7d9b371f9b8f4edb8d27026ad2d8a12c',1,'MiraiCP']]]
+  ['contacttype_0',['ContactType',['../a00218.html#a0d1866090dd6e204aff05337260f3a57',1,'MiraiCP']]]
 ];

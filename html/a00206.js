@@ -1,8 +1,6 @@
 var a00206 =
 [
-    [ "CommandManager", "a00206.html#acf247b0f4f71627dc920d3297be6314f", null ],
-    [ "operator[]", "a00206.html#a2cadbf9c0ff28ff16c544c0fc03b874d", null ],
-    [ "registerCommand", "a00206.html#accb883db18602dc65b5fdd264dd73bfd", null ],
-    [ "commandList", "a00206.html#af770c2433fdf62bee434d79f7118cbcc", null ],
-    [ "commandManager", "a00206.html#a772ce2c737ce39e63ed80b023019f152", null ]
+    [ "MiraiCP::PluginConfig", "a00240.html", "a00240" ],
+    [ "m_MiraiCPVersion", "a00206.html#a5e92a4c931c8d67dcc35b7b9d5de0f4e", null ],
+    [ "MiraiCPVersion", "a00206.html#ae471c96f73a019b792a82629b6bdfdf5", null ]
 ];

@@ -1,11 +1,8 @@
 var a00552 =
 [
-    [ "ServiceMessage", "a00552.html#af2da1f54cc88abcddc68f96bde22d24e", null ],
-    [ "ServiceMessage", "a00552.html#ab5866201bea86658dadc054764fd1db6", null ],
-    [ "ServiceMessage", "a00552.html#a367f5b76f1716ba7b5fa31219274bc85", null ],
-    [ "operator==", "a00552.html#ac376e371ca5bd671ea8f3d98881b8052", null ],
-    [ "toJson", "a00552.html#ac6e0602d6b6eda201108025e7318d07b", null ],
-    [ "toMiraiCode", "a00552.html#a25240f7b9b413c65916c92035569a095", null ],
-    [ "type", "a00552.html#ab6d7d4b47233b30630c752945603d780", null ],
-    [ "id", "a00552.html#a71730c48bdb7186bd5be19dc87d0e629", null ]
+    [ "info", "a00556.html", "a00556" ],
+    [ "getInfoSource", "a00552.html#a04754201316711504a8f91780ec90edd", null ],
+    [ "info0", "a00552.html#a39064f9c2b148b3a3061f818bf237215", null ],
+    [ "send0", "a00552.html#afab3eb34b164a00d8540b201dcfc857f", null ],
+    [ "uploadImg0", "a00552.html#af29f9c85ac7e2ef536e9a5487f5ef4ab", null ]
 ];

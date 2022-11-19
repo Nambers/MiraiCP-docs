@@ -1,10 +1,9 @@
 var a00185 =
 [
-    [ "GroupMessageEvent", "a00185.html#a69a261b515fcfafc599a649684cea695", null ],
-    [ "get_event_type", "a00185.html#a09594d4b28823a009b03c9640a670fe8", null ],
-    [ "nextMessage", "a00185.html#a64b10968daea52b1209c8ff8e3922160", null ],
-    [ "senderNextMessage", "a00185.html#a3f151b658fd0fe0ddf7d6a5e16254529", null ],
-    [ "group", "a00185.html#abac98c5b1373ad6c8483f9978952c553", null ],
-    [ "message", "a00185.html#a722dc1ca031c471c953c710367067ae7", null ],
-    [ "sender", "a00185.html#acd0e90e4fb7862986215aae7e47cb2d6", null ]
+    [ "plugin_entrance_func_ptr", "a00185.html#a737c0a0b70ea90a5fda61002ec9f1ec5", null ],
+    [ "plugin_event_func_ptr", "a00185.html#ad75d14c4f8a5192c9e2a8ef36f9919ee", null ],
+    [ "plugin_func_ptr", "a00185.html#aae50308f3b68967bcf9279e9e4bfe578", null ],
+    [ "plugin_handle", "a00185.html#a927f212ce2db84cca1f02ec95aa62322", null ],
+    [ "plugin_info_func_ptr", "a00185.html#a776f4f6bb745b814e23461c7742b9682", null ],
+    [ "QQID", "a00185.html#a3ae2ebfdaa4574d341b8e7935f29ddb8", null ]
 ];

@@ -1,12 +1,12 @@
 var a00170 =
 [
-    [ "MIRAICP_EXPORT", "a00170.html#aa40df2b825bdde9207f3e87b140235c3", null ],
-    [ "enrollPlugin", "a00170.html#a12d27be6730af4fc321ac1eb231db281", null ],
-    [ "enrollPlugin", "a00170.html#a20f1478e77515c6bf43c43ad4b558e91", null ],
-    [ "enrollPlugin0", "a00170.html#ad5dfcfb8bbf110c31ac8a5288f395bba", null ],
-    [ "FUNC_ENTRANCE", "a00170.html#aaf0a8850a3f539c0e677950a08f684da", null ],
-    [ "FUNC_EVENT", "a00170.html#a731ebb4ec1cb8b6e7d6a7ba7ace91e24", null ],
-    [ "FUNC_EXIT", "a00170.html#a86f1ff0184932e6c32b8b543c5527559", null ],
-    [ "PLUGIN_INFO", "a00170.html#ab942c1901914a42a382972365e8286f8", null ],
-    [ "schedule", "a00170.html#a05844a74e528504116835588abcac2f3", null ]
+    [ "escapeFromMiraiCode", "a00170.html#aeb6882f78946da286be5a537d6822942", null ],
+    [ "escapeToMiraiCode", "a00170.html#ac15a5eafd20bc4384646b0eab91020fe", null ],
+    [ "icompareChar", "a00170.html#a156d48b1f6406fb281d2f2a0aaf1bcac", null ],
+    [ "iequal", "a00170.html#a0c0c80e8b67da28c85e9c9ed29706640", null ],
+    [ "replace", "a00170.html#af94dc9ea92b274dd9812677345c37001", null ],
+    [ "split", "a00170.html#a3737839941b231fed645a2213fd2e896", null ],
+    [ "split", "a00170.html#a1e344543f4bd5d61385bb3aab3f576c5", null ],
+    [ "starts_with", "a00170.html#a333aca8c3c07a3b11b28724efc37a674", null ],
+    [ "StringToVector", "a00170.html#a1f51ef9bfde7fb64caab73b2c784c405", null ]
 ];

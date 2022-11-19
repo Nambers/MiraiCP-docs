@@ -1,16 +1,16 @@
 var a00272 =
 [
-    [ "GroupMessageEvent", "a00272.html#a69a261b515fcfafc599a649684cea695", null ],
-    [ "chat", "a00272.html#a4cdd74f8d9a12c115899afc53088cde5", null ],
-    [ "chat", "a00272.html#a8d3c0c5bbda48132c31dca900f9d4931", null ],
-    [ "from", "a00272.html#ae81a0e1dec6235d786b79244ef3ae40b", null ],
-    [ "from", "a00272.html#a76b1e6102746a08259bef6d638a8c993", null ],
-    [ "get_event_type", "a00272.html#ad54cdae9c5b4b8119d307931278b0dab", null ],
-    [ "getMessageChain", "a00272.html#a505491fdd1287b85705d706d4c54e8da", null ],
-    [ "getMessageChain", "a00272.html#a3dd489fc2c775cb0997402525d461877", null ],
-    [ "nextMessage", "a00272.html#addb043788194a8bffd2eeddff17080ef", null ],
-    [ "senderNextMessage", "a00272.html#a67d98fb7d7214cb2bc916da47e3e5ce3", null ],
-    [ "group", "a00272.html#abac98c5b1373ad6c8483f9978952c553", null ],
-    [ "message", "a00272.html#a722dc1ca031c471c953c710367067ae7", null ],
-    [ "sender", "a00272.html#acd0e90e4fb7862986215aae7e47cb2d6", null ]
+    [ "Bot", "a00272.html#a779666a5cea6df0dca4247a3943ede91", null ],
+    [ "avatarUrl", "a00272.html#a6b0ebecc9de3fdf10852b341c88561c0", null ],
+    [ "FriendListToString", "a00272.html#a6803e521b4209f73e70d3a20b1e20195", null ],
+    [ "getFriend", "a00272.html#a2758676cf03748603d57ef31fc5cbec0", null ],
+    [ "getFriendList", "a00272.html#ae3c41bbf773ad22ee9a0b29f4ed769ea", null ],
+    [ "getGroup", "a00272.html#a9306303b8bb86a920e32290b0d167d85", null ],
+    [ "getGroupList", "a00272.html#a93687b7b6b881aa74a011dc0b979cae1", null ],
+    [ "GroupListToString", "a00272.html#ac036f287d56751ca5e33bd4d0292e306", null ],
+    [ "id", "a00272.html#ae163fd2ae43d2cbf05c0bbf210097499", null ],
+    [ "nick", "a00272.html#a14f2c875a64bf63c487be2f45454f517", null ],
+    [ "operator==", "a00272.html#a2eccb558dd0dfe6adbd2245fd8ca5ca4", null ],
+    [ "refreshInfo", "a00272.html#a20f5d666f1a0c58d9fd24f39b5d0442f", null ],
+    [ "InternalData", "a00272.html#acf4074dfd364c59c6345d74858f0f5c0", null ]
 ];

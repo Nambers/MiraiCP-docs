@@ -1,5 +1,5 @@
 var a00364 =
 [
-    [ "APIException", "a00364.html#a5ab35b388404f70eeccfe3474bdb9c90", null ],
-    [ "exceptionType", "a00364.html#aa95831ad20b7019b10241a25f8f41dd1", null ]
+    [ "BotOnlineEvent", "a00364.html#af599e4d871751e367033bb1e30a62b4d", null ],
+    [ "get_event_type", "a00364.html#abff84efdb87bb73184f38794f564ce85", null ]
 ];

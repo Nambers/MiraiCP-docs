@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['plugin_5finfo_0',['PLUGIN_INFO',['../a00176.html#ac4ea748794ca932109fca8a936954720',1,'commonTypes.h']]]
+  ['impl_5fgetter_0',['IMPL_GETTER',['../a00191.html#ad4170428a925927fbb2312a07e19810d',1,'MiraiCPMacros.h']]],
+  ['inline_5fgetter_1',['INLINE_GETTER',['../a00191.html#a17be62d7e0b9ec5a41fd88613e49f027',1,'MiraiCPMacros.h']]]
 ];

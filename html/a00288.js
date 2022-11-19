@@ -1,15 +1,13 @@
 var a00288 =
 [
-    [ "joinType", "a00288.html#a1d73fdd5e84653d078b859b37dd1bcc8", [
-      [ "error", "a00288.html#a1d73fdd5e84653d078b859b37dd1bcc8ac7223d287b6643e82449fdfc84a78b17", null ],
-      [ "invited", "a00288.html#a1d73fdd5e84653d078b859b37dd1bcc8aa328607b0546483fb4503bf453508821", null ],
-      [ "applied", "a00288.html#a1d73fdd5e84653d078b859b37dd1bcc8a24c75b1f74122bc5b2b618daa89b14c9", null ],
-      [ "rehab", "a00288.html#a1d73fdd5e84653d078b859b37dd1bcc8a0f0421157cba536506b325cefe9fac90", null ]
-    ] ],
-    [ "MemberJoinEvent", "a00288.html#a073cb4162b0f02a4497e9ea6912399d5", null ],
-    [ "get_event_type", "a00288.html#a314da8d93a0056d08d6fb8b87929584d", null ],
-    [ "group", "a00288.html#a1f879c48cc7b54fa387853b5330b0caf", null ],
-    [ "inviterid", "a00288.html#a3342fd9e038a616a272ae8de9599ad31", null ],
-    [ "member", "a00288.html#aa1a42b944df9f40fc96629a1c5687f01", null ],
-    [ "type", "a00288.html#aaef692838d233a5ddcf8d54e1b02eb40", null ]
+    [ "deserialize", "a00288.html#ab9cf06d58e4562680e5dcabec8556758", null ],
+    [ "getQuoteSign", "a00288.html#ab12263eb0f0eac4096e1c9bad430ff82", null ],
+    [ "internalToJson", "a00288.html#af673a2e404372cc90719f38b9cced144", null ],
+    [ "refreshInfo", "a00288.html#a1632df966247f52553c17e25e5d47280", null ],
+    [ "updateJson", "a00288.html#ab8bb03098fb7c84497eb7f10610855e5", null ],
+    [ "_avatarUrl", "a00288.html#a79b6e3d759b6f3e77198dc15c8a29057", null ],
+    [ "_botid", "a00288.html#a0332d954c57c39e6f546d4aa09317a3c", null ],
+    [ "_id", "a00288.html#ab6222713565fc32fb53f1ff1300caa07", null ],
+    [ "_nickOrNameCard", "a00288.html#a9e2084ee904597c3dcd486a833173d6d", null ],
+    [ "_type", "a00288.html#a5d9cc201cdb3660afcd69128ec7f5784", null ]
 ];

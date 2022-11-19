@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiraiCP: miraicpString.cpp 文件参考</title>
+<title>MiraiCP: commonTools.h 文件参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -22,6 +22,9 @@
 <link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 <link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+ <script type="text/javascript">
+      DoxygenAwesomeDarkModeToggle.init()
+</script>
 </head>
 <body>
 <a href="https://github.com/Nambers/MiraiCP" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#64CEAA; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
@@ -32,7 +35,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MiraiCP
-   &#160;<span id="projectnumber">v2.12.0-RC2</span>
+   &#160;<span id="projectnumber">v2.13.0-alpha-3</span>
    </div>
    <div id="projectbrief">MiraiCP api document</div>
   </td>
@@ -91,39 +94,84 @@ $(document).ready(function(){initNavTree('a00182.html',''); initResizable(); });
 
 <div class="header">
   <div class="summary">
-<a href="#namespaces">命名空间</a> &#124;
-<a href="#func-members">函数</a>  </div>
-  <div class="headertitle"><div class="title">miraicpString.cpp 文件参考</div></div>
+<a href="#nested-classes">类</a> &#124;
+<a href="#namespaces">命名空间</a>  </div>
+  <div class="headertitle"><div class="title">commonTools.h 文件参考</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="a00185_source.html">miraicpString.h</a>&quot;</code><br />
-<code>#include &lt;cstring&gt;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="a00191_source.html">MiraiCPMacros.h</a>&quot;</code><br />
+<code>#include &lt;functional&gt;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> miraicpString.cpp 的引用(Include)关系图:</div>
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> commonTools.h 的引用(Include)关系图:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="a00183.png" border="0" usemap="#amiraicp_string_8cpp" alt=""/></div>
-<map name="amiraicp_string_8cpp" id="amiraicp_string_8cpp">
-<area shape="rect" title=" " alt="" coords="73,5,195,32"/>
-<area shape="rect" href="a00185.html" title=" " alt="" coords="25,80,134,107"/>
-<area shape="rect" title=" " alt="" coords="158,80,219,107"/>
-<area shape="rect" title=" " alt="" coords="5,155,71,181"/>
-<area shape="rect" title=" " alt="" coords="95,155,149,181"/>
+<div class="center"><img src="a00183.png" border="0" usemap="#acommon_tools_8h" alt=""/></div>
+<map name="acommon_tools_8h" id="acommon_tools_8h">
+<area shape="rect" title=" " alt="" coords="71,5,185,32"/>
+<area shape="rect" href="a00191.html" title=" " alt="" coords="5,80,128,107"/>
+<area shape="rect" title=" " alt="" coords="152,80,229,107"/>
+<area shape="rect" title=" " alt="" coords="34,155,99,181"/>
+</map>
+</div>
+</div><div class="textblock"><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> 此图展示该文件直接或间接的被哪些文件引用了:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="a00184.png" border="0" usemap="#acommon_tools_8hdep" alt=""/></div>
+<map name="acommon_tools_8hdep" id="acommon_tools_8hdep">
+<area shape="rect" title=" " alt="" coords="1344,5,1459,32"/>
+<area shape="rect" href="a00047.html" title=" " alt="" coords="77,304,169,331"/>
+<area shape="rect" href="a00146.html" title=" " alt="" coords="797,453,891,480"/>
+<area shape="rect" href="a00131.html" title=" " alt="" coords="1213,80,1331,107"/>
+<area shape="rect" href="a00176.html" title=" " alt="" coords="341,379,411,405"/>
+<area shape="rect" href="a00134.html" title=" " alt="" coords="1439,80,1580,107"/>
+<area shape="rect" href="a00158.html" title=" " alt="" coords="1604,80,1740,107"/>
+<area shape="rect" href="a00104.html" title=" " alt="" coords="1764,80,1865,107"/>
+<area shape="rect" href="a01023.html" title=" " alt="" coords="5,379,112,405"/>
+<area shape="rect" href="a00062.html" title=" " alt="" coords="238,379,317,405"/>
+<area shape="rect" href="a00002.html" title=" " alt="" coords="114,528,249,555"/>
+<area shape="rect" href="a01020.html" title=" " alt="" coords="273,528,377,555"/>
+<area shape="rect" href="a01026.html" title=" " alt="" coords="401,528,556,555"/>
+<area shape="rect" href="a01032.html" title=" " alt="" coords="581,528,659,555"/>
+<area shape="rect" href="a00017.html" title=" " alt="" coords="683,528,778,555"/>
+<area shape="rect" href="a01038.html" title=" " alt="" coords="803,528,885,555"/>
+<area shape="rect" href="a01044.html" title=" " alt="" coords="910,528,1005,555"/>
+<area shape="rect" href="a00026.html" title=" " alt="" coords="1029,528,1129,555"/>
+<area shape="rect" href="a00029.html" title=" " alt="" coords="1153,528,1279,555"/>
+<area shape="rect" href="a01050.html" title=" " alt="" coords="1303,528,1401,555"/>
+<area shape="rect" href="a00035.html" title=" " alt="" coords="1425,528,1508,555"/>
+<area shape="rect" href="a00053.html" title=" " alt="" coords="765,155,843,181"/>
+<area shape="rect" href="a00077.html" title=" " alt="" coords="1167,155,1313,181"/>
+<area shape="rect" href="a00041.html" title=" " alt="" coords="551,229,604,256"/>
+<area shape="rect" href="a00050.html" title=" " alt="" coords="685,304,777,331"/>
+<area shape="rect" href="a01029.html" title=" " alt="" coords="1052,229,1212,256"/>
+<area shape="rect" href="a00083.html" title=" " alt="" coords="420,229,489,256"/>
+<area shape="rect" href="a00089.html" title=" " alt="" coords="659,229,727,256"/>
+<area shape="rect" href="a00125.html" title=" " alt="" coords="803,229,883,256"/>
+<area shape="rect" href="a00038.html" title=" " alt="" coords="401,304,468,331"/>
+<area shape="rect" href="a00065.html" title=" " alt="" coords="493,304,558,331"/>
+<area shape="rect" href="a00149.html" title=" " alt="" coords="487,379,630,405"/>
+<area shape="rect" href="a01053.html" title=" " alt="" coords="655,379,756,405"/>
+<area shape="rect" href="a00080.html" title=" " alt="" coords="295,304,377,331"/>
+<area shape="rect" href="a01035.html" title=" " alt="" coords="801,304,884,331"/>
+<area shape="rect" href="a00128.html" title=" " alt="" coords="959,304,1092,331"/>
+<area shape="rect" href="a01047.html" title=" " alt="" coords="1117,304,1211,331"/>
 </map>
 </div>
 </div>
 <p><a href="a00182_source.html">浏览源代码.</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
-命名空间</h2></td></tr>
-<tr class="memitem:a00198"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00198.html">MiraiCP</a></td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00232.html">CommonTools::MiraiCPDefer</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
-函数</h2></td></tr>
-<tr class="memitem:ae45b9b759305b0719c2e0e6ed243f452"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00198.html#ae45b9b759305b0719c2e0e6ed243f452">MiraiCP::swap</a> (MiraiCPString &amp;a, MiraiCPString &amp;b) noexcept</td></tr>
-<tr class="separator:ae45b9b759305b0719c2e0e6ed243f452"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
+命名空间</h2></td></tr>
+<tr class="memitem:a00216"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00216.html">CommonTools</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -131,8 +179,8 @@ $(document).ready(function(){initNavTree('a00182.html',''); initResizable(); });
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_fdedb0aba14d44ce9d99bc100e026e6a.html">common</a></li><li class="navelem"><a class="el" href="a00182.html">miraicpString.cpp</a></li>
-    <li class="footer">生成于 2022年 七月 22日 星期五 13:46:01 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_fdedb0aba14d44ce9d99bc100e026e6a.html">common</a></li><li class="navelem"><a class="el" href="a00182.html">commonTools.h</a></li>
+    <li class="footer">生成于 2022年 十一月 19日 星期六 12:45:48 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
 <script type="text/javascript">

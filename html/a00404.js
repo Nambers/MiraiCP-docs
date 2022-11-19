@@ -1,5 +1,5 @@
 var a00404 =
 [
-    [ "TimeOutException", "a00404.html#afa9ae4c40114187959202926f3414b3b", null ],
-    [ "exceptionType", "a00404.html#a33b7cd14d774ca08c06e537ec6379841", null ]
+    [ "MiraiCPExceptionCRTP", "a00404.html#a221340d3ff17b5dddda9aff9a161756e", null ],
+    [ "getExceptionType", "a00404.html#a959de8110940940b1b354def276e9923", null ]
 ];

@@ -1,18 +1,15 @@
 var a00564 =
 [
-    [ "Dinfo", "a00568.html", "a00568" ],
-    [ "Finfo", "a00572.html", "a00572" ],
-    [ "RemoteFile", "a00564.html#a42e9c8d14e1da508881201dbd46d54e1", null ],
-    [ "RemoteFile", "a00564.html#a4ecead51c171d61e1a858ef473e9bc36", null ],
-    [ "deserializeFromString", "a00564.html#a86d0f3d9b2d7ef5aab70d377297528fc", null ],
-    [ "plus", "a00564.html#a6d3851415c16a7976def77a81a9b38d6", null ],
-    [ "serializeToString", "a00564.html#a037f0b6bb7ad3900335080fc4f219618", null ],
-    [ "type", "a00564.html#a36fe9c5c7c10560d1e4a7b62cb49164b", null ],
-    [ "dinfo", "a00564.html#ac51de6637e95569a0a56f15334d10ab3", null ],
-    [ "finfo", "a00564.html#a851391e82ecb74f624a397109a87bf48", null ],
-    [ "id", "a00564.html#a8e4443d5a31bd8a4e986a133596a4503", null ],
-    [ "internalid", "a00564.html#a7271af23428cf4ad419a053b9860b63e", null ],
-    [ "name", "a00564.html#ab349943782949b60cd117b5fc8b645e2", null ],
-    [ "path", "a00564.html#ad5c2c64b98d4ac3ee79f40640090b649", null ],
-    [ "size", "a00564.html#a9b15694dd4c005204268d161fd4760f1", null ]
+    [ "Member", "a00564.html#a69e77e737f0547520c2c206fce997eac", null ],
+    [ "Member", "a00564.html#a1efa452b6a65f50574eb3f380aa67544", null ],
+    [ "Member", "a00564.html#a3ca40feb7ca17732c87e770daf133891", null ],
+    [ "at", "a00564.html#ace4950bd9191fdf90ecba764c870f90e", null ],
+    [ "changeNameCard", "a00564.html#afa172c24046945b1208344d3be9d5cfe", null ],
+    [ "kick", "a00564.html#a2d1bc8f2dcdc9048ded62a0f5f53041a", null ],
+    [ "mute", "a00564.html#ab26f7832af43cee20fcdc76d0f876219", null ],
+    [ "mute", "a00564.html#a7298e2edbbe9c1866c730ad1fef8fb23", null ],
+    [ "sendNudge", "a00564.html#aff2d2c3a907f051ca89d506b02caa5d0", null ],
+    [ "sendVoice", "a00564.html#a431eb2e918eb9ad810c293a76b0d12d8", null ],
+    [ "unMute", "a00564.html#ac815c8a919d5f2b8143c8ee552acdf72", null ],
+    [ "Contact", "a00564.html#a76d4b1c8c6040df20040808941b7e764", null ]
 ];

@@ -1,6 +1,9 @@
 var a00320 =
 [
-    [ "BotLeaveEvent", "a00320.html#a1d6901317417c45332686a1b148ea789", null ],
-    [ "get_event_type", "a00320.html#a6181c5b90aece0c558943c71d9a037ed", null ],
-    [ "groupid", "a00320.html#a75d1aed07afc1cc0c9a6985c406e68ee", null ]
+    [ "chat", "a00320.html#afc868fb91c60975d5862d0691c80ec54", null ],
+    [ "chat", "a00320.html#a240d9d0df62738e43f8de576c6b26acf", null ],
+    [ "from", "a00320.html#ace8d5250eaff54abb3631cccf37b4b49", null ],
+    [ "from", "a00320.html#a77875102a2c9021981c942d16e15435a", null ],
+    [ "getMessageChain", "a00320.html#a40be4514c0111359a8388cb0c079ec76", null ],
+    [ "getMessageChain", "a00320.html#ab05db28ad76f89f09b38ad345f557803", null ]
 ];

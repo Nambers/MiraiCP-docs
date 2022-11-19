@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['privatemessageevent_0',['PrivateMessageEvent',['../a00199.html#abe9e9d8212ea8f23717b72db64393cabaf823b9c98e3d49aecbf9be0cfaba7f24',1,'MiraiCP::eventTypes']]]
+  ['othertype_0',['OtherType',['../a00436.html#a5d79da819adcd25a5b51a498762067a2a10d7175ae7e717fa50187eff06445f9b',1,'MiraiCP::MemberException']]]
 ];

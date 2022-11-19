@@ -1,6 +1,8 @@
 var a00368 =
 [
-    [ "BotException", "a00368.html#ac250396fe99586a5cf4edd42f708ba5f", null ],
-    [ "BotException", "a00368.html#a153b578a5e2dba1a34b660c3cfff1f36", null ],
-    [ "exceptionType", "a00368.html#ac31df28b76fc89b362e1b94c4c866b43", null ]
+    [ "NudgeEvent", "a00368.html#a9e3ab43ca2a6441e874540581a853c2c", null ],
+    [ "get_event_type", "a00368.html#a74e2d3893cc0879c00c226fe03283b81", null ],
+    [ "from", "a00368.html#a25165f804cb60432ca3c556d46700278", null ],
+    [ "subject", "a00368.html#ab0297663148696544a00e4f9efed6dab", null ],
+    [ "target", "a00368.html#afcb1a236f88bb0dcb30b3131c0e11ee8", null ]
 ];

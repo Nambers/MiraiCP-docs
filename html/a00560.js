@@ -1,12 +1,9 @@
 var a00560 =
 [
-    [ "operator==", "a00560.html#adf77a906cd6705425a28ab4483c634b5", null ],
-    [ "ShouldNotUse", "a00560.html#a66690e9c31bc7daf8a1c7c15261f83b3", null ],
-    [ "type", "a00560.html#ab55cc2add22064ea6437677abc6d2555", null ],
-    [ "codec", "a00560.html#afe96592ba24d9c3f1887c7668d788c97", null ],
-    [ "filename", "a00560.html#a9cf8841f7297be7d0b8404aeaf1727a1", null ],
-    [ "length", "a00560.html#a963774ddebf115bebd86386cb84a5117", null ],
-    [ "md5", "a00560.html#a403a5a5837bbf02f5e0c5a4327f51ff3", null ],
-    [ "size", "a00560.html#a06c764f6c1f6f65def69fcfe378ebef1", null ],
-    [ "url", "a00560.html#aedf31534944297bea3c997cc49329443", null ]
+    [ "Super", "a00560.html#aaea4d406d7045381eee7914a5595f76d", null ],
+    [ "MemberData", "a00560.html#a438176d2b44593c197a36703fe1ea66e", null ],
+    [ "deserialize", "a00560.html#a1681ff4e1859f24abec68681fcf8b40e", null ],
+    [ "refreshInfo", "a00560.html#a904da5608fbac3b2258168b2f62e8c4b", null ],
+    [ "_anonymous", "a00560.html#abb4f4f2a91f1b18ab4d21f14b4d073ed", null ],
+    [ "_permission", "a00560.html#a556b696baad932311d072131f4ce1ab0", null ]
 ];

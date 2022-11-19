@@ -22,6 +22,9 @@
 <link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 <link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+ <script type="text/javascript">
+      DoxygenAwesomeDarkModeToggle.init()
+</script>
 </head>
 <body>
 <a href="https://github.com/Nambers/MiraiCP" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#64CEAA; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
@@ -32,7 +35,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MiraiCP
-   &#160;<span id="projectnumber">v2.12.0-RC2</span>
+   &#160;<span id="projectnumber">v2.13.0-alpha-3</span>
    </div>
    <div id="projectbrief">MiraiCP api document</div>
   </td>
@@ -91,11 +94,13 @@ $(document).ready(function(){initNavTree('a00107.html',''); initResizable(); });
 
 <div class="header">
   <div class="summary">
-<a href="#namespaces">命名空间</a>  </div>
+<a href="#namespaces">命名空间</a> &#124;
+<a href="#func-members">函数</a>  </div>
   <div class="headertitle"><div class="title">loaderApi.h 文件参考</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="a00179_source.html">loaderApiInternal.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &lt;string&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> loaderApi.h 的引用(Include)关系图:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
@@ -103,11 +108,9 @@ $(document).ready(function(){initNavTree('a00107.html',''); initResizable(); });
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="a00108.png" border="0" usemap="#aloader_api_8h" alt=""/></div>
 <map name="aloader_api_8h" id="aloader_api_8h">
-<area shape="rect" title=" " alt="" coords="36,5,123,32"/>
-<area shape="rect" href="a00179.html" title=" " alt="" coords="15,80,144,107"/>
-<area shape="rect" href="a00185.html" title=" " alt="" coords="25,155,134,181"/>
-<area shape="rect" title=" " alt="" coords="5,229,71,256"/>
-<area shape="rect" title=" " alt="" coords="95,229,149,256"/>
+<area shape="rect" title=" " alt="" coords="29,5,116,32"/>
+<area shape="rect" title=" " alt="" coords="5,80,60,107"/>
+<area shape="rect" title=" " alt="" coords="85,80,141,107"/>
 </map>
 </div>
 </div><div class="textblock"><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -117,22 +120,20 @@ $(document).ready(function(){initNavTree('a00107.html',''); initResizable(); });
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="a00109.png" border="0" usemap="#aloader_api_8hdep" alt=""/></div>
 <map name="aloader_api_8hdep" id="aloader_api_8hdep">
-<area shape="rect" title=" " alt="" coords="772,5,859,32"/>
-<area shape="rect" href="a00146.html" title=" " alt="" coords="709,80,802,107"/>
-<area shape="rect" href="a00104.html" title=" " alt="" coords="826,80,927,107"/>
+<area shape="rect" title=" " alt="" coords="752,5,839,32"/>
+<area shape="rect" href="a00146.html" title=" " alt="" coords="689,80,782,107"/>
+<area shape="rect" href="a00104.html" title=" " alt="" coords="806,80,907,107"/>
 <area shape="rect" href="a00002.html" title=" " alt="" coords="5,155,140,181"/>
-<area shape="rect" href="a00888.html" title=" " alt="" coords="165,155,269,181"/>
-<area shape="rect" href="a00038.html" title=" " alt="" coords="303,229,375,256"/>
-<area shape="rect" href="a00041.html" title=" " alt="" coords="343,155,402,181"/>
-<area shape="rect" href="a00894.html" title=" " alt="" coords="426,155,581,181"/>
-<area shape="rect" href="a00900.html" title=" " alt="" coords="605,155,684,181"/>
-<area shape="rect" href="a00017.html" title=" " alt="" coords="708,155,803,181"/>
-<area shape="rect" href="a00906.html" title=" " alt="" coords="827,155,910,181"/>
-<area shape="rect" href="a00912.html" title=" " alt="" coords="935,155,1029,181"/>
-<area shape="rect" href="a00026.html" title=" " alt="" coords="1053,155,1153,181"/>
-<area shape="rect" href="a00029.html" title=" " alt="" coords="1178,155,1303,181"/>
-<area shape="rect" href="a00032.html" title=" " alt="" coords="1327,155,1426,181"/>
-<area shape="rect" href="a00035.html" title=" " alt="" coords="1450,155,1533,181"/>
+<area shape="rect" href="a01020.html" title=" " alt="" coords="165,155,269,181"/>
+<area shape="rect" href="a01026.html" title=" " alt="" coords="293,155,447,181"/>
+<area shape="rect" href="a01032.html" title=" " alt="" coords="472,155,551,181"/>
+<area shape="rect" href="a00017.html" title=" " alt="" coords="575,155,669,181"/>
+<area shape="rect" href="a01038.html" title=" " alt="" coords="694,155,777,181"/>
+<area shape="rect" href="a01044.html" title=" " alt="" coords="801,155,896,181"/>
+<area shape="rect" href="a00026.html" title=" " alt="" coords="920,155,1020,181"/>
+<area shape="rect" href="a00029.html" title=" " alt="" coords="1045,155,1170,181"/>
+<area shape="rect" href="a01050.html" title=" " alt="" coords="1194,155,1293,181"/>
+<area shape="rect" href="a00035.html" title=" " alt="" coords="1317,155,1399,181"/>
 </map>
 </div>
 </div>
@@ -140,10 +141,37 @@ $(document).ready(function(){initNavTree('a00107.html',''); initResizable(); });
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
 命名空间</h2></td></tr>
-<tr class="memitem:a00196"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00196.html">LibLoader</a></td></tr>
+<tr class="memitem:a00218"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00218.html">MiraiCP</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00197"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00197.html">LibLoader::LoaderApi</a></td></tr>
+<tr class="memitem:a00223"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00223.html">MiraiCP::LoaderApi</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:a733d3f3f90c6925034b10116fb6510e6"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00223.html#a733d3f3f90c6925034b10116fb6510e6">MiraiCP::LoaderApi::showAllPluginId</a> ()</td></tr>
+<tr class="memdesc:a733d3f3f90c6925034b10116fb6510e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">返回所有plugin的id  <a href="a00223.html#a733d3f3f90c6925034b10116fb6510e6">更多...</a><br /></td></tr>
+<tr class="separator:a733d3f3f90c6925034b10116fb6510e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acab9ccd86eed6b2d17836f5f2899b2a7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00223.html#acab9ccd86eed6b2d17836f5f2899b2a7">MiraiCP::LoaderApi::enablePluginById</a> (const std::string &amp;id)</td></tr>
+<tr class="memdesc:acab9ccd86eed6b2d17836f5f2899b2a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">启用一个已经加载的插件，仅限有管理权限的插件使用，否则没有任何效果  <a href="a00223.html#acab9ccd86eed6b2d17836f5f2899b2a7">更多...</a><br /></td></tr>
+<tr class="separator:acab9ccd86eed6b2d17836f5f2899b2a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c00ba2c6c7b08c0ff508ed5e0cd518d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00223.html#a5c00ba2c6c7b08c0ff508ed5e0cd518d">MiraiCP::LoaderApi::disablePluginById</a> (const std::string &amp;)</td></tr>
+<tr class="memdesc:a5c00ba2c6c7b08c0ff508ed5e0cd518d"><td class="mdescLeft">&#160;</td><td class="mdescRight">禁用一个已经启用的插件，仅限有管理权限的插件使用，否则没有任何效果  <a href="a00223.html#a5c00ba2c6c7b08c0ff508ed5e0cd518d">更多...</a><br /></td></tr>
+<tr class="separator:a5c00ba2c6c7b08c0ff508ed5e0cd518d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56e5dba3d6eb86e12b5ae7037c7d3f9d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00223.html#a56e5dba3d6eb86e12b5ae7037c7d3f9d">MiraiCP::LoaderApi::enableAllPlugins</a> ()</td></tr>
+<tr class="memdesc:a56e5dba3d6eb86e12b5ae7037c7d3f9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">启用全部已加载的插件，仅限有管理权限的插件使用，否则没有任何效果  <a href="a00223.html#a56e5dba3d6eb86e12b5ae7037c7d3f9d">更多...</a><br /></td></tr>
+<tr class="separator:a56e5dba3d6eb86e12b5ae7037c7d3f9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa19d655cf9e65dd8d3bba348fa438c2d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00223.html#aa19d655cf9e65dd8d3bba348fa438c2d">MiraiCP::LoaderApi::disableAllPlugins</a> ()</td></tr>
+<tr class="memdesc:aa19d655cf9e65dd8d3bba348fa438c2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">禁用全部已启用的插件，仅限有管理权限的插件使用，否则没有任何效果  <a href="a00223.html#aa19d655cf9e65dd8d3bba348fa438c2d">更多...</a><br /></td></tr>
+<tr class="separator:aa19d655cf9e65dd8d3bba348fa438c2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f62240a571dd6678c453ae47f79bed8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00223.html#a5f62240a571dd6678c453ae47f79bed8">MiraiCP::LoaderApi::loadNewPlugin</a> (const std::string &amp;path, bool enableNow)</td></tr>
+<tr class="memdesc:a5f62240a571dd6678c453ae47f79bed8"><td class="mdescLeft">&#160;</td><td class="mdescRight">加载新的插件，仅限有管理权限的插件使用，否则没有任何效果  <a href="a00223.html#a5f62240a571dd6678c453ae47f79bed8">更多...</a><br /></td></tr>
+<tr class="separator:a5f62240a571dd6678c453ae47f79bed8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae24eb5a6ee67766c25d797ed382d4f08"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00223.html#ae24eb5a6ee67766c25d797ed382d4f08">MiraiCP::LoaderApi::unloadPluginById</a> (const std::string &amp;id)</td></tr>
+<tr class="memdesc:ae24eb5a6ee67766c25d797ed382d4f08"><td class="mdescLeft">&#160;</td><td class="mdescRight">卸载一个插件，仅限有管理权限的插件使用，否则没有任何效果  <a href="a00223.html#ae24eb5a6ee67766c25d797ed382d4f08">更多...</a><br /></td></tr>
+<tr class="separator:ae24eb5a6ee67766c25d797ed382d4f08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa358aae502cc1dd8e86b25616f6956bf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00223.html#aa358aae502cc1dd8e86b25616f6956bf">MiraiCP::LoaderApi::reloadPluginById</a> (const std::string &amp;id)</td></tr>
+<tr class="memdesc:aa358aae502cc1dd8e86b25616f6956bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">重载一个插件，仅限有管理权限的插件使用，否则没有任何效果  <a href="a00223.html#aa358aae502cc1dd8e86b25616f6956bf">更多...</a><br /></td></tr>
+<tr class="separator:aa358aae502cc1dd8e86b25616f6956bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -152,7 +180,7 @@ $(document).ready(function(){initNavTree('a00107.html',''); initResizable(); });
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b0856f6b0d80ccb263b2f415c91f9e17.html">include</a></li><li class="navelem"><a class="el" href="a00107.html">loaderApi.h</a></li>
-    <li class="footer">生成于 2022年 七月 22日 星期五 13:46:01 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="footer">生成于 2022年 十一月 19日 星期六 12:45:48 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
 <script type="text/javascript">

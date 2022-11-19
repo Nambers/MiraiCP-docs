@@ -1,10 +1,5 @@
 var a00448 =
 [
-    [ "AnnouncementParams", "a00448.html#ad9cd7b9ca38c4268c6f625034107a584", null ],
-    [ "serializeToJson", "a00448.html#ac87021b1e71d8d3334c4d197813924bc", null ],
-    [ "pinned", "a00448.html#a1045432e9f2c822b1150bc278e99de05", null ],
-    [ "requireConfirm", "a00448.html#a2641ceb16f0da11938027e7bf67c5c8a", null ],
-    [ "send2new", "a00448.html#af941b1ec8148c2675bcad7a6a10a53f5", null ],
-    [ "showEditCard", "a00448.html#a92569e1952f8f1668db0df430928da8e", null ],
-    [ "showPopup", "a00448.html#ab80e896e8ac632e75f5d5e98dff79a97", null ]
+    [ "RecallException", "a00448.html#a7efed6d5b4e2e7c655b53496fbff9710", null ],
+    [ "exceptionType", "a00448.html#abb3b6f5b42098376e6a195eb6f420410", null ]
 ];

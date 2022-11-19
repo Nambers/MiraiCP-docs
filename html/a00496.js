@@ -1,10 +1,11 @@
 var a00496 =
 [
-    [ "Message", "a00496.html#a35c768dbc74d8ea6b218d56ed6937977", null ],
-    [ "Message", "a00496.html#a45cfa8a68c1a3dd1071db597a605d944", null ],
-    [ "get", "a00496.html#aafff624f0035ae7f6c0590a7d15be4a9", null ],
-    [ "operator!=", "a00496.html#a7bf0df1c342858b560bd037b575d6d58", null ],
-    [ "operator==", "a00496.html#ac09fb6e7ab5e00c405e7bd969ffd39c4", null ],
-    [ "toMiraiCode", "a00496.html#a0cef774c0356349acaca5f78271f3849", null ],
-    [ "type", "a00496.html#ac130224ec94852a7b12d1e65df7988a1", null ]
+    [ "OnlineForwardedMessage", "a00496.html#a751236d8d80be1b95a94670c8a97ee03", null ],
+    [ "OnlineForwardedMessage", "a00496.html#a395408d305f9b586935b579ef57f6caf", null ],
+    [ "OnlineForwardedMessage", "a00496.html#ade77a68afb87e90372c8a11d4a521a54", null ],
+    [ "~OnlineForwardedMessage", "a00496.html#a8f86cf77fedf4de1fb0d068ee9a292c7", null ],
+    [ "deserializationFromMessageSourceJson", "a00496.html#a450128d01ed1de99ca0f5d95b0661d4a", null ],
+    [ "ShouldNotUse", "a00496.html#a15d4967ce3048246204b78a134bc4c2e", null ],
+    [ "toForwardedMessage", "a00496.html#a04d1f06e7db79a63c469fd0a33b3d361", null ],
+    [ "origin", "a00496.html#a75805d847603df24ade1c924ee288249", null ]
 ];

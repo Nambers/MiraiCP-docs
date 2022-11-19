@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['memberexceptiontype_0',['MemberExceptionType',['../a00380.html#a5d79da819adcd25a5b51a498762067a2',1,'MiraiCP::MemberException']]]
+  ['jointype_0',['joinType',['../a00340.html#a1d73fdd5e84653d078b859b37dd1bcc8',1,'MiraiCP::MemberJoinEvent']]]
 ];

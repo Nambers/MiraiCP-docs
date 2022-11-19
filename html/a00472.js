@@ -1,5 +1,5 @@
 var a00472 =
 [
-    [ "action", "a00472.html#aea306ee2e14936202c9a814a15e0d0bc", null ],
-    [ "enable", "a00472.html#a0fda6ed76658ebaa758e801a72b3d946", null ]
+    [ "PluginNotEnabledException", "a00472.html#abac3d25ed4d52ec224f927a1882120e2", null ],
+    [ "exceptionType", "a00472.html#aa6b0e6afbe65bd68c470c952e6419a01", null ]
 ];

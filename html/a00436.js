@@ -1,12 +1,11 @@
 var a00436 =
 [
-    [ "OnlineForwardedMessage", "a00436.html#a751236d8d80be1b95a94670c8a97ee03", null ],
-    [ "deserializationFromMessageSourceJson", "a00436.html#a450128d01ed1de99ca0f5d95b0661d4a", null ],
-    [ "operator==", "a00436.html#a36cb67be0ffb52568cc6211b9b8c3d65", null ],
-    [ "operator[]", "a00436.html#a72524282bc7276a585c9a591a8bbfdad", null ],
-    [ "ShouldNotUse", "a00436.html#a15d4967ce3048246204b78a134bc4c2e", null ],
-    [ "toForwardedMessage", "a00436.html#a04d1f06e7db79a63c469fd0a33b3d361", null ],
-    [ "type", "a00436.html#a5b7f35a7b72d29102b39f560343ec05c", null ],
-    [ "nodelist", "a00436.html#a3fcb5073c4ec3f07fb918cf2055cc40c", null ],
-    [ "origin", "a00436.html#a75805d847603df24ade1c924ee288249", null ]
+    [ "MemberExceptionType", "a00436.html#a5d79da819adcd25a5b51a498762067a2", [
+      [ "OtherType", "a00436.html#a5d79da819adcd25a5b51a498762067a2a10d7175ae7e717fa50187eff06445f9b", null ],
+      [ "NoSuchGroup", "a00436.html#a5d79da819adcd25a5b51a498762067a2af45ac2de0a67bb83ddabbe90de94b759", null ],
+      [ "NoSuchMember", "a00436.html#a5d79da819adcd25a5b51a498762067a2aec2ea117521b98eb6ceed80c5b155716", null ]
+    ] ],
+    [ "MemberException", "a00436.html#a5a77bb2dee827ef89cb7fab2e62b160c", null ],
+    [ "exceptionType", "a00436.html#a7d8014930572cc2e598c2709e240d429", null ],
+    [ "type", "a00436.html#aeedca55477d89e61d8449fd22aeeff04", null ]
 ];

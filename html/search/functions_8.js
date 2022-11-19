@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['jstring2str_0',['jstring2str',['../a00202.html#a4e3815360de73232618c212fce699deb',1,'MiraiCP::Tools']]]
+  ['handler_5ftrigger_0',['handler_trigger',['../a00536.html#a38fe440d115714de3600d804eed00d99',1,'MiraiCP::Logger_interface']]]
 ];

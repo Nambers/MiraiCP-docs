@@ -1,17 +1,15 @@
 var a00340 =
 [
-    [ "eventNode", "a00344.html", "a00344" ],
-    [ "event_vector", "a00340.html#a6c4a73db045f973232347164dc42a21e", null ],
-    [ "eventNodeTable", "a00340.html#ab49f881b646783d970f6f87ddde0bcce", null ],
-    [ "priority_level", "a00340.html#a4cc658c6011e27187dd6660d6c33b7c9", null ],
-    [ "Event", "a00340.html#a9f36e22e23e02faaeba7f89736332c9c", null ],
-    [ "broadcast", "a00340.html#adbdeabc1c1a6797391ba47201320047c", null ],
-    [ "clear", "a00340.html#a128890b09ae22c509007cc2daea4aeac", null ],
-    [ "id", "a00340.html#a45303f38b1dcec3f8f1cda7df7eb4426", null ],
-    [ "incomingEvent", "a00340.html#aa134aa66618c8f06d79e8d868c453bd9", null ],
-    [ "noRegistered", "a00340.html#ad55bfc3d37cf45b0ca146d1355e1f486", null ],
-    [ "registerBlockingEvent", "a00340.html#a38a7a5c9795712e2f5839ffc1e46c5d0", null ],
-    [ "registerEvent", "a00340.html#ae00f75f32055f085290929d3c2294bba", null ],
-    [ "_all_events_", "a00340.html#a8976a4000c06dde8ff810aa5ed78a5dd", null ],
-    [ "processor", "a00340.html#ab78af8afd9a5121e7ed0a1d7237f2b20", null ]
+    [ "joinType", "a00340.html#a1d73fdd5e84653d078b859b37dd1bcc8", [
+      [ "error", "a00340.html#a1d73fdd5e84653d078b859b37dd1bcc8ac7223d287b6643e82449fdfc84a78b17", null ],
+      [ "invited", "a00340.html#a1d73fdd5e84653d078b859b37dd1bcc8aa328607b0546483fb4503bf453508821", null ],
+      [ "applied", "a00340.html#a1d73fdd5e84653d078b859b37dd1bcc8a24c75b1f74122bc5b2b618daa89b14c9", null ],
+      [ "rehab", "a00340.html#a1d73fdd5e84653d078b859b37dd1bcc8a0f0421157cba536506b325cefe9fac90", null ]
+    ] ],
+    [ "MemberJoinEvent", "a00340.html#ab9c0f84e9bdafb44d9c09f047686f9b9", null ],
+    [ "get_event_type", "a00340.html#a314da8d93a0056d08d6fb8b87929584d", null ],
+    [ "group", "a00340.html#a1f879c48cc7b54fa387853b5330b0caf", null ],
+    [ "inviterid", "a00340.html#a3342fd9e038a616a272ae8de9599ad31", null ],
+    [ "member", "a00340.html#aa1a42b944df9f40fc96629a1c5687f01", null ],
+    [ "type", "a00340.html#aaef692838d233a5ddcf8d54e1b02eb40", null ]
 ];

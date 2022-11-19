@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['jnicreateproc_0',['JNICREATEPROC',['../a00038.html#a0eab3ea242457bb1654c44df15cdc4db',1,'core.cpp']]],
-  ['json_1',['json',['../a00198.html#ac0a8a1bade77a57eeb1d94cfacfb75ce',1,'MiraiCP::json()'],['../a00167.html#ab701e3ac61a85b337ec5c1abaad6742d',1,'json():&#160;utils.cpp']]]
+  ['event_5fvector_0',['event_vector',['../a00392.html#a6c4a73db045f973232347164dc42a21e',1,'MiraiCP::Event']]],
+  ['eventnodetable_1',['eventNodeTable',['../a00392.html#ab49f881b646783d970f6f87ddde0bcce',1,'MiraiCP::Event']]]
 ];

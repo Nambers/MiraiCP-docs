@@ -1,5 +1,5 @@
 var a00412 =
 [
-    [ "PluginNotAuthorizedException", "a00412.html#ac88316ddaf010113ecf97f605faf3d6d", null ],
-    [ "exceptionType", "a00412.html#a457d9e14fc294fd058e09e1a1d022144", null ]
+    [ "UploadException", "a00412.html#a1b5ca7e57cd117a0e45baae54a10019f", null ],
+    [ "exceptionType", "a00412.html#a75aa16afc81716cc340be44ee4950e18", null ]
 ];

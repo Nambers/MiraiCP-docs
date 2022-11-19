@@ -1,11 +1,7 @@
 var a00380 =
 [
-    [ "MemberExceptionType", "a00380.html#a5d79da819adcd25a5b51a498762067a2", [
-      [ "OtherType", "a00380.html#a5d79da819adcd25a5b51a498762067a2a10d7175ae7e717fa50187eff06445f9b", null ],
-      [ "NoSuchGroup", "a00380.html#a5d79da819adcd25a5b51a498762067a2af45ac2de0a67bb83ddabbe90de94b759", null ],
-      [ "NoSuchMember", "a00380.html#a5d79da819adcd25a5b51a498762067a2aec2ea117521b98eb6ceed80c5b155716", null ]
-    ] ],
-    [ "MemberException", "a00380.html#a5a77bb2dee827ef89cb7fab2e62b160c", null ],
-    [ "exceptionType", "a00380.html#a7d8014930572cc2e598c2709e240d429", null ],
-    [ "type", "a00380.html#aeedca55477d89e61d8449fd22aeeff04", null ]
+    [ "MessagePreSendEvent", "a00380.html#a6eee57bfbb912ecf4557558cad236b59", null ],
+    [ "get_event_type", "a00380.html#a3db8d323a115f3b68b06da7dc1733293", null ],
+    [ "message", "a00380.html#a2fe0731f2ede62683919e2af5deecb2c", null ],
+    [ "target", "a00380.html#aa15c8687b9e358b91851d3228c0a4d70", null ]
 ];

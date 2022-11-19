@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiraiCP: MiraiCP::MemberException类 参考</title>
+<title>MiraiCP: MiraiCP::MessagePreSendEvent类 参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -22,6 +22,9 @@
 <link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 <link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+ <script type="text/javascript">
+      DoxygenAwesomeDarkModeToggle.init()
+</script>
 </head>
 <body>
 <a href="https://github.com/Nambers/MiraiCP" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#64CEAA; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
@@ -32,7 +35,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MiraiCP
-   &#160;<span id="projectnumber">v2.12.0-RC2</span>
+   &#160;<span id="projectnumber">v2.13.0-alpha-3</span>
    </div>
    <div id="projectbrief">MiraiCP api document</div>
   </td>
@@ -91,151 +94,99 @@ $(document).ready(function(){initNavTree('a00380.html',''); initResizable(); });
 
 <div class="header">
   <div class="summary">
-<a href="#pub-types">Public 类型</a> &#124;
 <a href="#pub-methods">Public 成员函数</a> &#124;
 <a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
 <a href="#pub-attribs">Public 属性</a> &#124;
 <a href="a00377.html">所有成员列表</a>  </div>
-  <div class="headertitle"><div class="title">MiraiCP::MemberException类 参考</div></div>
+  <div class="headertitle"><div class="title">MiraiCP::MessagePreSendEvent类 参考</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="a00077_source.html">Exception.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="a00065_source.html">Event.h</a>&gt;</code></p>
 <div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> 类 MiraiCP::MemberException 继承关系图:</div>
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> 类 MiraiCP::MessagePreSendEvent 继承关系图:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="a00379.png" border="0" usemap="#a_mirai_c_p_1_1_member_exception_inherit__map" alt="Inheritance graph"/></div>
-<map name="a_mirai_c_p_1_1_member_exception_inherit__map" id="a_mirai_c_p_1_1_member_exception_inherit__map">
-<area shape="rect" title=" " alt="" coords="17,892,215,1013"/>
-<area shape="rect" href="a00352.html" title=" " alt="" coords="23,692,209,843"/>
-<area shape="rect" href="a00348.html" title="总异常抽象类，用于一般捕获，不要直接抛出该类，不知道抛出什么的时候请抛出 MiraiCPException" alt="" coords="5,132,216,429"/>
-<area shape="rect" href="a00352.html" title="总异常CRTP抽象类，不要直接抛出该类，不知道抛出什么的时候请抛出 MiraiCPException。 该类是用于继承的基类，需要新的异常类型时，继承该类并以子类作为模板参数。 子类需要实现的方法：" alt="" coords="133,479,313,629"/>
-<area shape="rect" title=" " alt="" coords="59,5,163,83"/>
+<div class="center"><img src="a00379.png" border="0" usemap="#a_mirai_c_p_1_1_message_pre_send_event_inherit__map" alt="Inheritance graph"/></div>
+<map name="a_mirai_c_p_1_1_message_pre_send_event_inherit__map" id="a_mirai_c_p_1_1_message_pre_send_event_inherit__map">
+<area shape="rect" title=" " alt="" coords="5,663,216,813"/>
+<area shape="rect" href="a00316.html" title=" " alt="" coords="13,448,209,613"/>
+<area shape="rect" href="a00312.html" title="Event抽象父类" alt="" coords="22,5,189,185"/>
+<area shape="rect" href="a00316.html" title="所有事件处理timeoutevent都是机器人事件，指都有机器人实例" alt="" coords="127,235,323,385"/>
 </map>
 </div>
 <div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> MiraiCP::MemberException 的协作图:</div>
+  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> MiraiCP::MessagePreSendEvent 的协作图:</div>
 <div id="dynsection-1-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="a00378.png" border="0" usemap="#a_mirai_c_p_1_1_member_exception_coll__map" alt="Collaboration graph"/></div>
-<map name="a_mirai_c_p_1_1_member_exception_coll__map" id="a_mirai_c_p_1_1_member_exception_coll__map">
-<area shape="rect" title=" " alt="" coords="165,904,363,1025"/>
-<area shape="rect" href="a00352.html" title=" " alt="" coords="74,691,259,841"/>
-<area shape="rect" href="a00348.html" title="总异常抽象类，用于一般捕获，不要直接抛出该类，不知道抛出什么的时候请抛出 MiraiCPException" alt="" coords="56,160,267,428"/>
-<area shape="rect" href="a00352.html" title="总异常CRTP抽象类，不要直接抛出该类，不知道抛出什么的时候请抛出 MiraiCPException。 该类是用于继承的基类，需要新的异常类型时，继承该类并以子类作为模板参数。 子类需要实现的方法：" alt="" coords="183,477,363,628"/>
-<area shape="rect" title=" " alt="" coords="5,5,109,83"/>
-<area shape="rect" title=" " alt="" coords="134,5,189,83"/>
-<area shape="rect" title=" " alt="" coords="230,5,269,83"/>
-<area shape="rect" title=" " alt="" coords="284,727,439,805"/>
+<div class="center"><img src="a00378.png" border="0" usemap="#a_mirai_c_p_1_1_message_pre_send_event_coll__map" alt="Collaboration graph"/></div>
+<map name="a_mirai_c_p_1_1_message_pre_send_event_coll__map" id="a_mirai_c_p_1_1_message_pre_send_event_coll__map">
+<area shape="rect" title=" " alt="" coords="69,2573,280,2695"/>
+<area shape="rect" href="a00316.html" title=" " alt="" coords="77,2359,273,2524"/>
+<area shape="rect" href="a00312.html" title="Event抽象父类" alt="" coords="43,1441,210,1621"/>
+<area shape="rect" href="a00316.html" title="所有事件处理timeoutevent都是机器人事件，指都有机器人实例" alt="" coords="162,2160,358,2296"/>
+<area shape="rect" href="a00272.html" title="当前bot账号信息" alt="" coords="91,599,291,940"/>
+<area shape="rect" title=" " alt="" coords="115,5,205,83"/>
+<area shape="rect" href="a00536.html" title=" " alt="" coords="197,145,381,575"/>
+<area shape="rect" href="a00548.html" title="带id(一般为bot账号)的logger" alt="" coords="314,1463,494,1599"/>
+<area shape="rect" title=" " alt="" coords="405,321,536,399"/>
+<area shape="rect" href="a00572.html" title="消息链, 一般由SingleMessage组成" alt="" coords="518,964,802,2097"/>
+<area shape="rect" title=" " alt="" coords="560,314,696,406"/>
+<area shape="rect" href="a00580.html" title="MiraiCode父类, 指可以被转换成miraicode的类型" alt="" coords="721,314,879,406"/>
+<area shape="rect" title=" " alt="" coords="904,321,979,399"/>
 </map>
 </div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
-Public 类型</h2></td></tr>
-<tr class="memitem:a5d79da819adcd25a5b51a498762067a2"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00380.html#a5d79da819adcd25a5b51a498762067a2">MemberExceptionType</a> : int { <a class="el" href="a00380.html#a5d79da819adcd25a5b51a498762067a2a10d7175ae7e717fa50187eff06445f9b">OtherType</a>
-, <a class="el" href="a00380.html#a5d79da819adcd25a5b51a498762067a2af45ac2de0a67bb83ddabbe90de94b759">NoSuchGroup</a>
-, <a class="el" href="a00380.html#a5d79da819adcd25a5b51a498762067a2aec2ea117521b98eb6ceed80c5b155716">NoSuchMember</a>
- }</td></tr>
-<tr class="separator:a5d79da819adcd25a5b51a498762067a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public 成员函数</h2></td></tr>
-<tr class="memitem:a5a77bb2dee827ef89cb7fab2e62b160c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00380.html#a5a77bb2dee827ef89cb7fab2e62b160c">MemberException</a> (int _type, <a class="el" href="a00348.html#ae7cf7e3913c2067517d3f40ff1c9a14d">string</a> _filename, int _lineNum)</td></tr>
-<tr class="separator:a5a77bb2dee827ef89cb7fab2e62b160c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_methods_a00352"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_a00352')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="a00352.html">MiraiCP::MiraiCPExceptionCRTP&lt; MemberException &gt;</a></td></tr>
-<tr class="memitem:a3158432cce833ca29cf216c9e46130c0 inherit pub_methods_a00352"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00352.html#a3158432cce833ca29cf216c9e46130c0">MiraiCPExceptionCRTP</a> (std::string _re, <a class="el" href="a00348.html#ae7cf7e3913c2067517d3f40ff1c9a14d">string</a> _filename, int _lineNum)</td></tr>
-<tr class="memdesc:a3158432cce833ca29cf216c9e46130c0 inherit pub_methods_a00352"><td class="mdescLeft">&#160;</td><td class="mdescRight">委托构造函数  <a href="a00352.html#a3158432cce833ca29cf216c9e46130c0">更多...</a><br /></td></tr>
-<tr class="separator:a3158432cce833ca29cf216c9e46130c0 inherit pub_methods_a00352"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a959de8110940940b1b354def276e9923 inherit pub_methods_a00352"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00348.html#ae7cf7e3913c2067517d3f40ff1c9a14d">string</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00352.html#a959de8110940940b1b354def276e9923">getExceptionType</a> () const override</td></tr>
-<tr class="memdesc:a959de8110940940b1b354def276e9923 inherit pub_methods_a00352"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取异常类型，通用接口  <a href="a00352.html#a959de8110940940b1b354def276e9923">更多...</a><br /></td></tr>
-<tr class="separator:a959de8110940940b1b354def276e9923 inherit pub_methods_a00352"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_methods_a00348"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_a00348')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="a00348.html">MiraiCP::MiraiCPExceptionBase</a></td></tr>
-<tr class="memitem:ac7fe834dc2b81b3c0d44dde55b796ac6 inherit pub_methods_a00348"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00348.html#ac7fe834dc2b81b3c0d44dde55b796ac6">~MiraiCPExceptionBase</a> () override=default</td></tr>
-<tr class="separator:ac7fe834dc2b81b3c0d44dde55b796ac6 inherit pub_methods_a00348"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaac831e38c70fa529b8894b825dba04c inherit pub_methods_a00348"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00348.html#aaac831e38c70fa529b8894b825dba04c">what</a> () const noexcept override</td></tr>
-<tr class="memdesc:aaac831e38c70fa529b8894b825dba04c inherit pub_methods_a00348"><td class="mdescLeft">&#160;</td><td class="mdescRight">异常信息  <a href="a00348.html#aaac831e38c70fa529b8894b825dba04c">更多...</a><br /></td></tr>
-<tr class="separator:aaac831e38c70fa529b8894b825dba04c inherit pub_methods_a00348"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a68c0d665c09da7144da6a63fd26f2dd0 inherit pub_methods_a00348"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00348.html#ae7cf7e3913c2067517d3f40ff1c9a14d">string</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00348.html#a68c0d665c09da7144da6a63fd26f2dd0">getError</a> () const</td></tr>
-<tr class="memdesc:a68c0d665c09da7144da6a63fd26f2dd0 inherit pub_methods_a00348"><td class="mdescLeft">&#160;</td><td class="mdescRight">返回std::string的异常信息  <a href="a00348.html#a68c0d665c09da7144da6a63fd26f2dd0">更多...</a><br /></td></tr>
-<tr class="separator:a68c0d665c09da7144da6a63fd26f2dd0 inherit pub_methods_a00348"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a27e4eaeb594e067089585f1975b7eb74 inherit pub_methods_a00348"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00348.html#a27e4eaeb594e067089585f1975b7eb74">raise</a> () const</td></tr>
-<tr class="memdesc:a27e4eaeb594e067089585f1975b7eb74 inherit pub_methods_a00348"><td class="mdescLeft">&#160;</td><td class="mdescRight">实际抛出方法  <a href="a00348.html#a27e4eaeb594e067089585f1975b7eb74">更多...</a><br /></td></tr>
-<tr class="separator:a27e4eaeb594e067089585f1975b7eb74 inherit pub_methods_a00348"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aec8e8e400265242bd3a9998af6b55880 inherit pub_methods_a00348"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00348.html#aec8e8e400265242bd3a9998af6b55880">basicRaise</a> () const</td></tr>
-<tr class="memdesc:aec8e8e400265242bd3a9998af6b55880 inherit pub_methods_a00348"><td class="mdescLeft">&#160;</td><td class="mdescRight">basicRaise 基本抛出方法，子类重写该方法  <a href="a00348.html#aec8e8e400265242bd3a9998af6b55880">更多...</a><br /></td></tr>
-<tr class="separator:aec8e8e400265242bd3a9998af6b55880 inherit pub_methods_a00348"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6eee57bfbb912ecf4557558cad236b59"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00380.html#a6eee57bfbb912ecf4557558cad236b59">MessagePreSendEvent</a> (<a class="el" href="a00176.html#ab701e3ac61a85b337ec5c1abaad6742d">nlohmann::json</a> j)</td></tr>
+<tr class="separator:a6eee57bfbb912ecf4557558cad236b59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_a00316"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_a00316')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="a00316.html">MiraiCP::BotEvent&lt; MessagePreSendEvent &gt;</a></td></tr>
+<tr class="memitem:a9e02a5aa59b72a0667260d8d487a66f8 inherit pub_methods_a00316"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00221.html#abe9e9d8212ea8f23717b72db64393cab">eventTypes::Types</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00316.html#a9e02a5aa59b72a0667260d8d487a66f8">getEventType</a> () const override</td></tr>
+<tr class="separator:a9e02a5aa59b72a0667260d8d487a66f8 inherit pub_methods_a00316"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5da368a0e44891433b340288bc872df3 inherit pub_methods_a00316"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00316.html#a5da368a0e44891433b340288bc872df3">BotEvent</a> (<a class="el" href="a00218.html#a3ae2ebfdaa4574d341b8e7935f29ddb8">QQID</a> botid)</td></tr>
+<tr class="separator:a5da368a0e44891433b340288bc872df3 inherit pub_methods_a00316"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29d6794160e0ea7cdd1598ad48185d6c inherit pub_methods_a00316"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00316.html#a29d6794160e0ea7cdd1598ad48185d6c">~BotEvent</a> ()=default</td></tr>
+<tr class="separator:a29d6794160e0ea7cdd1598ad48185d6c inherit pub_methods_a00316"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_a00312"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_a00312')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="a00312.html">MiraiCP::MiraiCPEvent</a></td></tr>
+<tr class="memitem:ac85886499f0138dbdd661dea59c7596d inherit pub_methods_a00312"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00312.html#ac85886499f0138dbdd661dea59c7596d">MiraiCPEvent</a> ()=default</td></tr>
+<tr class="separator:ac85886499f0138dbdd661dea59c7596d inherit pub_methods_a00312"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42d37c121315a51870afcc0b9306675a inherit pub_methods_a00312"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00312.html#a42d37c121315a51870afcc0b9306675a">~MiraiCPEvent</a> ()=default</td></tr>
+<tr class="separator:a42d37c121315a51870afcc0b9306675a inherit pub_methods_a00312"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 静态 Public 成员函数</h2></td></tr>
-<tr class="memitem:a7d8014930572cc2e598c2709e240d429"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="a00348.html#ae7cf7e3913c2067517d3f40ff1c9a14d">string</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00380.html#a7d8014930572cc2e598c2709e240d429">exceptionType</a> ()</td></tr>
-<tr class="separator:a7d8014930572cc2e598c2709e240d429"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3db8d323a115f3b68b06da7dc1733293"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="a00221.html#abe9e9d8212ea8f23717b72db64393cab">eventTypes::Types</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00380.html#a3db8d323a115f3b68b06da7dc1733293">get_event_type</a> ()</td></tr>
+<tr class="separator:a3db8d323a115f3b68b06da7dc1733293"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_static_methods_a00312"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_a00312')"><img src="closed.png" alt="-"/>&#160;静态 Public 成员函数 继承自 <a class="el" href="a00312.html">MiraiCP::MiraiCPEvent</a></td></tr>
+<tr class="memitem:a2df44719d2520c5197b90a9b17ffb34d inherit pub_static_methods_a00312"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="a00221.html#abe9e9d8212ea8f23717b72db64393cab">eventTypes::Types</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00312.html#a2df44719d2520c5197b90a9b17ffb34d">get_event_type</a> ()</td></tr>
+<tr class="separator:a2df44719d2520c5197b90a9b17ffb34d inherit pub_static_methods_a00312"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public 属性</h2></td></tr>
-<tr class="memitem:aeedca55477d89e61d8449fd22aeeff04"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00380.html#a5d79da819adcd25a5b51a498762067a2">MemberExceptionType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00380.html#aeedca55477d89e61d8449fd22aeeff04">type</a> = <a class="el" href="a00380.html#a5d79da819adcd25a5b51a498762067a2a10d7175ae7e717fa50187eff06445f9b">OtherType</a></td></tr>
-<tr class="separator:aeedca55477d89e61d8449fd22aeeff04"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_attribs_a00348"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_a00348')"><img src="closed.png" alt="-"/>&#160;Public 属性 继承自 <a class="el" href="a00348.html">MiraiCP::MiraiCPExceptionBase</a></td></tr>
-<tr class="memitem:a5d5876720c98c5c3ef2fcd2a20a0cb72 inherit pub_attribs_a00348"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00348.html#ae7cf7e3913c2067517d3f40ff1c9a14d">string</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00348.html#a5d5876720c98c5c3ef2fcd2a20a0cb72">filename</a></td></tr>
-<tr class="memdesc:a5d5876720c98c5c3ef2fcd2a20a0cb72 inherit pub_attribs_a00348"><td class="mdescLeft">&#160;</td><td class="mdescRight">发生异常的文件名  <a href="a00348.html#a5d5876720c98c5c3ef2fcd2a20a0cb72">更多...</a><br /></td></tr>
-<tr class="separator:a5d5876720c98c5c3ef2fcd2a20a0cb72 inherit pub_attribs_a00348"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8724c76817d0af9f3f8fef9a6ca7f60a inherit pub_attribs_a00348"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00348.html#a8724c76817d0af9f3f8fef9a6ca7f60a">lineNum</a> = 0</td></tr>
-<tr class="memdesc:a8724c76817d0af9f3f8fef9a6ca7f60a inherit pub_attribs_a00348"><td class="mdescLeft">&#160;</td><td class="mdescRight">发生异常的行号  <a href="a00348.html#a8724c76817d0af9f3f8fef9a6ca7f60a">更多...</a><br /></td></tr>
-<tr class="separator:a8724c76817d0af9f3f8fef9a6ca7f60a inherit pub_attribs_a00348"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
-额外继承的成员函数</h2></td></tr>
-<tr class="inherit_header pro_types_a00348"><td colspan="2" onclick="javascript:toggleInherit('pro_types_a00348')"><img src="closed.png" alt="-"/>&#160;Protected 类型 继承自 <a class="el" href="a00348.html">MiraiCP::MiraiCPExceptionBase</a></td></tr>
-<tr class="memitem:ae7cf7e3913c2067517d3f40ff1c9a14d inherit pro_types_a00348"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00348.html#ae7cf7e3913c2067517d3f40ff1c9a14d">string</a> = std::string</td></tr>
-<tr class="separator:ae7cf7e3913c2067517d3f40ff1c9a14d inherit pro_types_a00348"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pro_methods_a00348"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_a00348')"><img src="closed.png" alt="-"/>&#160;Protected 成员函数 继承自 <a class="el" href="a00348.html">MiraiCP::MiraiCPExceptionBase</a></td></tr>
-<tr class="memitem:a055eb6e4a0899678793b0e4106fbf493 inherit pro_methods_a00348"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00348.html#a055eb6e4a0899678793b0e4106fbf493">MiraiCPExceptionBase</a> (<a class="el" href="a00348.html#ae7cf7e3913c2067517d3f40ff1c9a14d">string</a> info, <a class="el" href="a00348.html#ae7cf7e3913c2067517d3f40ff1c9a14d">string</a> _filename, int _lineNum)</td></tr>
-<tr class="memdesc:a055eb6e4a0899678793b0e4106fbf493 inherit pro_methods_a00348"><td class="mdescLeft">&#160;</td><td class="mdescRight">受保护构造函数，供子类调用  <a href="a00348.html#a055eb6e4a0899678793b0e4106fbf493">更多...</a><br /></td></tr>
-<tr class="separator:a055eb6e4a0899678793b0e4106fbf493 inherit pro_methods_a00348"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pro_attribs_a00348"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_a00348')"><img src="closed.png" alt="-"/>&#160;Protected 属性 继承自 <a class="el" href="a00348.html">MiraiCP::MiraiCPExceptionBase</a></td></tr>
-<tr class="memitem:a2eb4b42c95d1ecbc6333129ecf8c5592 inherit pro_attribs_a00348"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00348.html#ae7cf7e3913c2067517d3f40ff1c9a14d">string</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00348.html#a2eb4b42c95d1ecbc6333129ecf8c5592">re</a></td></tr>
-<tr class="memdesc:a2eb4b42c95d1ecbc6333129ecf8c5592 inherit pro_attribs_a00348"><td class="mdescLeft">&#160;</td><td class="mdescRight">异常内容  <a href="a00348.html#a2eb4b42c95d1ecbc6333129ecf8c5592">更多...</a><br /></td></tr>
-<tr class="separator:a2eb4b42c95d1ecbc6333129ecf8c5592 inherit pro_attribs_a00348"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa15c8687b9e358b91851d3228c0a4d70"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="a00296.html">Contact</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00380.html#aa15c8687b9e358b91851d3228c0a4d70">target</a></td></tr>
+<tr class="memdesc:aa15c8687b9e358b91851d3228c0a4d70"><td class="mdescLeft">&#160;</td><td class="mdescRight">发送目标  <a href="a00380.html#aa15c8687b9e358b91851d3228c0a4d70">更多...</a><br /></td></tr>
+<tr class="separator:aa15c8687b9e358b91851d3228c0a4d70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2fe0731f2ede62683919e2af5deecb2c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00572.html">MessageChain</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00380.html#a2fe0731f2ede62683919e2af5deecb2c">message</a></td></tr>
+<tr class="memdesc:a2fe0731f2ede62683919e2af5deecb2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">消息  <a href="a00380.html#a2fe0731f2ede62683919e2af5deecb2c">更多...</a><br /></td></tr>
+<tr class="separator:a2fe0731f2ede62683919e2af5deecb2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_attribs_a00316"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_a00316')"><img src="closed.png" alt="-"/>&#160;Public 属性 继承自 <a class="el" href="a00316.html">MiraiCP::BotEvent&lt; MessagePreSendEvent &gt;</a></td></tr>
+<tr class="memitem:a0b14bddb4baebbd348969dac6c9a8edc inherit pub_attribs_a00316"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00272.html">Bot</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00316.html#a0b14bddb4baebbd348969dac6c9a8edc">bot</a></td></tr>
+<tr class="memdesc:a0b14bddb4baebbd348969dac6c9a8edc inherit pub_attribs_a00316"><td class="mdescLeft">&#160;</td><td class="mdescRight">该事件接受的机器人  <a href="a00316.html#a0b14bddb4baebbd348969dac6c9a8edc">更多...</a><br /></td></tr>
+<tr class="separator:a0b14bddb4baebbd348969dac6c9a8edc inherit pub_attribs_a00316"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a864b09f1e3cf406c2e96ca7b4c10e18e inherit pub_attribs_a00316"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00548.html">IdLogger</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00316.html#a864b09f1e3cf406c2e96ca7b4c10e18e">botlogger</a></td></tr>
+<tr class="separator:a864b09f1e3cf406c2e96ca7b4c10e18e inherit pub_attribs_a00316"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
-<div class="textblock"><p >获取群成员错误 </p><dl class="section see"><dt>参见</dt><dd><a class="el" href="a00348.html" title="总异常抽象类，用于一般捕获，不要直接抛出该类，不知道抛出什么的时候请抛出 MiraiCPException">MiraiCPExceptionBase</a> </dd></dl>
+<div class="textblock"><p >每条消息发送前的事件, 总是在消息实际上被发送和广播MessagePostSendEvent前广播 </p><dl class="section see"><dt>参见</dt><dd>MessagePostSendEvent </dd></dl>
+<dl class="section warning"><dt>警告</dt><dd>在这个事件里小心使用sendMessage, 可能会触发无限递归 preSend -&gt; sendMessage -&gt; preSend -&gt; ... </dd></dl>
 
-<p class="definition">在文件 <a class="el" href="a00077_source.html">Exception.h</a> 第 <a class="el" href="a00077_source.html#l00163">163</a> 行定义.</p>
-</div><h2 class="groupheader">成员枚举类型说明</h2>
-<a id="a5d79da819adcd25a5b51a498762067a2" name="a5d79da819adcd25a5b51a498762067a2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5d79da819adcd25a5b51a498762067a2">&#9670;&nbsp;</a></span>MemberExceptionType</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum <a class="el" href="a00380.html#a5d79da819adcd25a5b51a498762067a2">MiraiCP::MemberException::MemberExceptionType</a> : int</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<table class="fieldtable">
-<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="a5d79da819adcd25a5b51a498762067a2a10d7175ae7e717fa50187eff06445f9b" name="a5d79da819adcd25a5b51a498762067a2a10d7175ae7e717fa50187eff06445f9b"></a>OtherType&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a5d79da819adcd25a5b51a498762067a2af45ac2de0a67bb83ddabbe90de94b759" name="a5d79da819adcd25a5b51a498762067a2af45ac2de0a67bb83ddabbe90de94b759"></a>NoSuchGroup&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a5d79da819adcd25a5b51a498762067a2aec2ea117521b98eb6ceed80c5b155716" name="a5d79da819adcd25a5b51a498762067a2aec2ea117521b98eb6ceed80c5b155716"></a>NoSuchMember&#160;</td><td class="fielddoc"></td></tr>
-</table>
-
-<p class="definition">在文件 <a class="el" href="a00077_source.html">Exception.h</a> 第 <a class="el" href="a00077_source.html#l00165">165</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>                                 : <span class="keywordtype">int</span> {</div>
-<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>            <a class="code hl_enumvalue" href="a00380.html#a5d79da819adcd25a5b51a498762067a2a10d7175ae7e717fa50187eff06445f9b">OtherType</a>,</div>
-<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>            <a class="code hl_enumvalue" href="a00380.html#a5d79da819adcd25a5b51a498762067a2af45ac2de0a67bb83ddabbe90de94b759">NoSuchGroup</a>,</div>
-<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>            <a class="code hl_enumvalue" href="a00380.html#a5d79da819adcd25a5b51a498762067a2aec2ea117521b98eb6ceed80c5b155716">NoSuchMember</a></div>
-<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>        };</div>
-<div class="ttc" id="aa00380_html_a5d79da819adcd25a5b51a498762067a2a10d7175ae7e717fa50187eff06445f9b"><div class="ttname"><a href="a00380.html#a5d79da819adcd25a5b51a498762067a2a10d7175ae7e717fa50187eff06445f9b">MiraiCP::MemberException::OtherType</a></div><div class="ttdeci">@ OtherType</div><div class="ttdef"><b>Definition:</b> <a href="a00077_source.html#l00166">Exception.h:166</a></div></div>
-<div class="ttc" id="aa00380_html_a5d79da819adcd25a5b51a498762067a2aec2ea117521b98eb6ceed80c5b155716"><div class="ttname"><a href="a00380.html#a5d79da819adcd25a5b51a498762067a2aec2ea117521b98eb6ceed80c5b155716">MiraiCP::MemberException::NoSuchMember</a></div><div class="ttdeci">@ NoSuchMember</div><div class="ttdef"><b>Definition:</b> <a href="a00077_source.html#l00169">Exception.h:168</a></div></div>
-<div class="ttc" id="aa00380_html_a5d79da819adcd25a5b51a498762067a2af45ac2de0a67bb83ddabbe90de94b759"><div class="ttname"><a href="a00380.html#a5d79da819adcd25a5b51a498762067a2af45ac2de0a67bb83ddabbe90de94b759">MiraiCP::MemberException::NoSuchGroup</a></div><div class="ttdeci">@ NoSuchGroup</div><div class="ttdef"><b>Definition:</b> <a href="a00077_source.html#l00167">Exception.h:167</a></div></div>
-</div><!-- fragment -->
-</div>
-</div>
-<h2 class="groupheader">构造及析构函数说明</h2>
-<a id="a5a77bb2dee827ef89cb7fab2e62b160c" name="a5a77bb2dee827ef89cb7fab2e62b160c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5a77bb2dee827ef89cb7fab2e62b160c">&#9670;&nbsp;</a></span>MemberException()</h2>
+<p class="definition">在文件 <a class="el" href="a00065_source.html">Event.h</a> 第 <a class="el" href="a00065_source.html#l00663">663</a> 行定义.</p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a6eee57bfbb912ecf4557558cad236b59" name="a6eee57bfbb912ecf4557558cad236b59"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6eee57bfbb912ecf4557558cad236b59">&#9670;&nbsp;</a></span>MessagePreSendEvent()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -244,59 +195,37 @@ Public 属性</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">MiraiCP::MemberException::MemberException </td>
+          <td class="memname">MiraiCP::MessagePreSendEvent::MessagePreSendEvent </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>_type</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramtype"><a class="el" href="a00176.html#ab701e3ac61a85b337ec5c1abaad6742d">nlohmann::json</a>&#160;</td>
+          <td class="paramname"><em>j</em></td><td>)</td>
           <td></td>
-          <td class="paramtype"><a class="el" href="a00348.html#ae7cf7e3913c2067517d3f40ff1c9a14d">string</a>&#160;</td>
-          <td class="paramname"><em>_filename</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>_lineNum</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="a00077_source.html">Exception.h</a> 第 <a class="el" href="a00077_source.html#l00176">176</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>                                                                            : <a class="code hl_function" href="a00352.html#a3158432cce833ca29cf216c9e46130c0">MiraiCPExceptionCRTP</a>(</div>
-<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>                                                                                      [&amp;]() -&gt; <span class="keywordtype">string</span> {</div>
-<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>                                                                                          <a class="code hl_variable" href="a00380.html#aeedca55477d89e61d8449fd22aeeff04">type</a> = <a class="code hl_enumeration" href="a00380.html#a5d79da819adcd25a5b51a498762067a2">MemberExceptionType</a>(_type);</div>
-<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>                                                                                          <span class="keywordflow">switch</span> (<a class="code hl_variable" href="a00380.html#aeedca55477d89e61d8449fd22aeeff04">type</a>) {</div>
-<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>                                                                                              <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="a00380.html#a5d79da819adcd25a5b51a498762067a2af45ac2de0a67bb83ddabbe90de94b759">NoSuchGroup</a>:</div>
-<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>                                                                                                  <span class="keywordflow">return</span> <span class="stringliteral">&quot;找不到群&quot;</span>;</div>
-<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>                                                                                              <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="a00380.html#a5d79da819adcd25a5b51a498762067a2aec2ea117521b98eb6ceed80c5b155716">NoSuchMember</a>:</div>
-<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>                                                                                                  <span class="keywordflow">return</span> <span class="stringliteral">&quot;找不到群成员&quot;</span>;</div>
-<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>                                                                                              <span class="keywordflow">default</span>:</div>
-<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>                                                                                                  <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>                                                                                          }</div>
-<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>                                                                                      }(),</div>
-<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>                                                                                      std::move(_filename), _lineNum) {}</div>
-<div class="ttc" id="aa00352_html_a3158432cce833ca29cf216c9e46130c0"><div class="ttname"><a href="a00352.html#a3158432cce833ca29cf216c9e46130c0">MiraiCP::MiraiCPExceptionCRTP&lt; MemberException &gt;::MiraiCPExceptionCRTP</a></div><div class="ttdeci">MiraiCPExceptionCRTP(std::string _re, string _filename, int _lineNum)</div><div class="ttdoc">委托构造函数</div><div class="ttdef"><b>Definition:</b> <a href="a00077_source.html#l00086">Exception.h:86</a></div></div>
-<div class="ttc" id="aa00380_html_a5d79da819adcd25a5b51a498762067a2"><div class="ttname"><a href="a00380.html#a5d79da819adcd25a5b51a498762067a2">MiraiCP::MemberException::MemberExceptionType</a></div><div class="ttdeci">MemberExceptionType</div><div class="ttdef"><b>Definition:</b> <a href="a00077_source.html#l00165">Exception.h:165</a></div></div>
-<div class="ttc" id="aa00380_html_aeedca55477d89e61d8449fd22aeeff04"><div class="ttname"><a href="a00380.html#aeedca55477d89e61d8449fd22aeeff04">MiraiCP::MemberException::type</a></div><div class="ttdeci">MemberExceptionType type</div><div class="ttdef"><b>Definition:</b> <a href="a00077_source.html#l00170">Exception.h:170</a></div></div>
+<p class="definition">在文件 <a class="el" href="a00062_source.html">Event.cpp</a> 第 <a class="el" href="a00062_source.html#l00164">164</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>                                                           : <a class="code hl_function" href="a00316.html#a5da368a0e44891433b340288bc872df3">BotEvent</a>(j[<span class="stringliteral">&quot;botid&quot;</span>]),</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>                                                                 <a class="code hl_variable" href="a00380.html#aa15c8687b9e358b91851d3228c0a4d70">target</a>(<a class="code hl_function" href="a00296.html#a76bc51237847ebb3cca3d2d8478f527f">Contact::deserializeToPointer</a>(<a class="code hl_function" href="a00227.html#a11295231b2e9ee99ea748ce3132ef63c">Tools::json_jsonmover</a>(j, <span class="stringliteral">&quot;target&quot;</span>))),</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>                                                                 <a class="code hl_variable" href="a00380.html#a2fe0731f2ede62683919e2af5deecb2c">message</a>(<a class="code hl_function" href="a00572.html#aa18c3f2a8e8a26558e37dfa6cfe326db">MessageChain::deserializationFromMessageSourceJson</a>(j[<span class="stringliteral">&quot;message&quot;</span>].get&lt;std::string&gt;(), <span class="keyword">false</span>)) {</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>    }</div>
+<div class="ttc" id="aa00227_html_a11295231b2e9ee99ea748ce3132ef63c"><div class="ttname"><a href="a00227.html#a11295231b2e9ee99ea748ce3132ef63c">MiraiCP::Tools::json_jsonmover</a></div><div class="ttdeci">nlohmann::json json_jsonmover(nlohmann::json &amp;j, const std::string &amp;key)</div><div class="ttdef"><b>Definition:</b> <a href="a00173_source.html#l00100">Tools.h:100</a></div></div>
+<div class="ttc" id="aa00296_html_a76bc51237847ebb3cca3d2d8478f527f"><div class="ttname"><a href="a00296.html#a76bc51237847ebb3cca3d2d8478f527f">MiraiCP::Contact::deserializeToPointer</a></div><div class="ttdeci">static std::shared_ptr&lt; Contact &gt; deserializeToPointer(nlohmann::json source)</div><div class="ttdef"><b>Definition:</b> <a href="a00050_source.html#l00045">Contact.cpp:45</a></div></div>
+<div class="ttc" id="aa00316_html_a5da368a0e44891433b340288bc872df3"><div class="ttname"><a href="a00316.html#a5da368a0e44891433b340288bc872df3">MiraiCP::BotEvent&lt; MessagePreSendEvent &gt;::BotEvent</a></div><div class="ttdeci">BotEvent(QQID botid)</div><div class="ttdef"><b>Definition:</b> <a href="a00065_source.html#l00080">Event.h:80</a></div></div>
+<div class="ttc" id="aa00380_html_a2fe0731f2ede62683919e2af5deecb2c"><div class="ttname"><a href="a00380.html#a2fe0731f2ede62683919e2af5deecb2c">MiraiCP::MessagePreSendEvent::message</a></div><div class="ttdeci">MessageChain message</div><div class="ttdoc">消息</div><div class="ttdef"><b>Definition:</b> <a href="a00065_source.html#l00673">Event.h:673</a></div></div>
+<div class="ttc" id="aa00380_html_aa15c8687b9e358b91851d3228c0a4d70"><div class="ttname"><a href="a00380.html#aa15c8687b9e358b91851d3228c0a4d70">MiraiCP::MessagePreSendEvent::target</a></div><div class="ttdeci">std::shared_ptr&lt; Contact &gt; target</div><div class="ttdoc">发送目标</div><div class="ttdef"><b>Definition:</b> <a href="a00065_source.html#l00671">Event.h:671</a></div></div>
+<div class="ttc" id="aa00572_html_aa18c3f2a8e8a26558e37dfa6cfe326db"><div class="ttname"><a href="a00572.html#aa18c3f2a8e8a26558e37dfa6cfe326db">MiraiCP::MessageChain::deserializationFromMessageSourceJson</a></div><div class="ttdeci">static MessageChain deserializationFromMessageSourceJson(const std::string &amp;msg, bool origin=true)</div><div class="ttdef"><b>Definition:</b> <a href="a00131_source.html#l00264">MessageChain.h:264</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">成员函数说明</h2>
-<a id="a7d8014930572cc2e598c2709e240d429" name="a7d8014930572cc2e598c2709e240d429"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7d8014930572cc2e598c2709e240d429">&#9670;&nbsp;</a></span>exceptionType()</h2>
+<a id="a3db8d323a115f3b68b06da7dc1733293" name="a3db8d323a115f3b68b06da7dc1733293"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3db8d323a115f3b68b06da7dc1733293">&#9670;&nbsp;</a></span>get_event_type()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -305,7 +234,7 @@ Public 属性</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static <a class="el" href="a00348.html#ae7cf7e3913c2067517d3f40ff1c9a14d">string</a> MiraiCP::MemberException::exceptionType </td>
+          <td class="memname">static <a class="el" href="a00221.html#abe9e9d8212ea8f23717b72db64393cab">eventTypes::Types</a> MiraiCP::MessagePreSendEvent::get_event_type </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -317,34 +246,55 @@ Public 属性</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p >返回异常的类型，该静态方法无法正确实现多态，请使用 getExceptionType </p><dl class="section see"><dt>参见</dt><dd><a class="el" href="a00352.html#a959de8110940940b1b354def276e9923">getExceptionType</a> </dd></dl>
 
-<p>实现了 <a class="el" href="a00348.html#a62ccfc566b59f882d0623f8e24757809">MiraiCP::MiraiCPExceptionBase</a>.</p>
-
-<p class="definition">在文件 <a class="el" href="a00077_source.html">Exception.h</a> 第 <a class="el" href="a00077_source.html#l00190">190</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>{ <span class="keywordflow">return</span> <span class="stringliteral">&quot;MemberException&quot;</span>; }</div>
+<p class="definition">在文件 <a class="el" href="a00065_source.html">Event.h</a> 第 <a class="el" href="a00065_source.html#l00665">665</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00665" name="l00665"></a><span class="lineno">  665</span>                                                {</div>
+<div class="line"><a id="l00666" name="l00666"></a><span class="lineno">  666</span>            <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="a00221.html#abe9e9d8212ea8f23717b72db64393cabaa46d082c80e10281a6f1f0ca942f0a1b">eventTypes::Types::MessagePreSendEvent</a>;</div>
+<div class="line"><a id="l00667" name="l00667"></a><span class="lineno">  667</span>        }</div>
+<div class="ttc" id="aa00221_html_abe9e9d8212ea8f23717b72db64393cabaa46d082c80e10281a6f1f0ca942f0a1b"><div class="ttname"><a href="a00221.html#abe9e9d8212ea8f23717b72db64393cabaa46d082c80e10281a6f1f0ca942f0a1b">MiraiCP::eventTypes::MessagePreSendEvent</a></div><div class="ttdeci">@ MessagePreSendEvent</div><div class="ttdef"><b>Definition:</b> <a href="a00065_source.html#l00047">Event.h:47</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">类成员变量说明</h2>
-<a id="aeedca55477d89e61d8449fd22aeeff04" name="aeedca55477d89e61d8449fd22aeeff04"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aeedca55477d89e61d8449fd22aeeff04">&#9670;&nbsp;</a></span>type</h2>
+<a id="a2fe0731f2ede62683919e2af5deecb2c" name="a2fe0731f2ede62683919e2af5deecb2c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2fe0731f2ede62683919e2af5deecb2c">&#9670;&nbsp;</a></span>message</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a00380.html#a5d79da819adcd25a5b51a498762067a2">MemberExceptionType</a> MiraiCP::MemberException::type = <a class="el" href="a00380.html#a5d79da819adcd25a5b51a498762067a2a10d7175ae7e717fa50187eff06445f9b">OtherType</a></td>
+          <td class="memname"><a class="el" href="a00572.html">MessageChain</a> MiraiCP::MessagePreSendEvent::message</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="a00077_source.html">Exception.h</a> 第 <a class="el" href="a00077_source.html#l00170">170</a> 行定义.</p>
+<p>消息 </p>
+
+<p class="definition">在文件 <a class="el" href="a00065_source.html">Event.h</a> 第 <a class="el" href="a00065_source.html#l00673">673</a> 行定义.</p>
+
+</div>
+</div>
+<a id="aa15c8687b9e358b91851d3228c0a4d70" name="aa15c8687b9e358b91851d3228c0a4d70"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa15c8687b9e358b91851d3228c0a4d70">&#9670;&nbsp;</a></span>target</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt;<a class="el" href="a00296.html">Contact</a>&gt; MiraiCP::MessagePreSendEvent::target</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>发送目标 </p>
+
+<p class="definition">在文件 <a class="el" href="a00065_source.html">Event.h</a> 第 <a class="el" href="a00065_source.html#l00671">671</a> 行定义.</p>
 
 </div>
 </div>
 <hr/>该类的文档由以下文件生成:<ul>
-<li><a class="el" href="a00077_source.html">Exception.h</a></li>
+<li><a class="el" href="a00065_source.html">Event.h</a></li>
+<li><a class="el" href="a00062_source.html">Event.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -352,8 +302,8 @@ Public 属性</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="a00198.html">MiraiCP</a></li><li class="navelem"><a class="el" href="a00380.html">MemberException</a></li>
-    <li class="footer">生成于 2022年 七月 22日 星期五 13:46:02 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="navelem"><a class="el" href="a00218.html">MiraiCP</a></li><li class="navelem"><a class="el" href="a00380.html">MessagePreSendEvent</a></li>
+    <li class="footer">生成于 2022年 十一月 19日 星期六 12:45:48 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
 <script type="text/javascript">

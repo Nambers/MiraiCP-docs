@@ -1,8 +1,5 @@
 var a00460 =
 [
-    [ "isAllowMemberInvite", "a00460.html#adccf862ef0e617a47afb0df587edf59f", null ],
-    [ "isAnonymousChatEnabled", "a00460.html#ab0bf5bfb9c998204ca668855c09a9b8a", null ],
-    [ "isAutoApproveEnabled", "a00460.html#a625ca6d44d9d06a2af48cab1962e73fa", null ],
-    [ "isMuteAll", "a00460.html#a6bfb635769917d4f2c84c4e9cfc813d0", null ],
-    [ "name", "a00460.html#ae29352ebb0325fd3b035b1c65be1092f", null ]
+    [ "TimeOutException", "a00460.html#afa9ae4c40114187959202926f3414b3b", null ],
+    [ "exceptionType", "a00460.html#a33b7cd14d774ca08c06e537ec6379841", null ]
 ];

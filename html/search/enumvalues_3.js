@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['error_0',['error',['../a00288.html#a1d73fdd5e84653d078b859b37dd1bcc8ac7223d287b6643e82449fdfc84a78b17',1,'MiraiCP::MemberJoinEvent::error()'],['../a00199.html#abe9e9d8212ea8f23717b72db64393caba9b91a91250df41da2b9434cca56ada58',1,'MiraiCP::eventTypes::error()']]]
+  ['disband_0',['Disband',['../a00372.html#ac1df44d7400ad221500364c7b3de6737aeee6f05922080480c6043305c9d6b329',1,'MiraiCP::BotLeaveEvent']]]
 ];

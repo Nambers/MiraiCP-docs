@@ -1,9 +1,9 @@
 var a00344 =
 [
-    [ "eventNode", "a00344.html#a21f99c741cb8b0fe0f031e908732147b", null ],
-    [ "eventNode", "a00344.html#a19665f22ce5e4fe9fdbc50970dab72c5", null ],
-    [ "getHandle", "a00344.html#a9840c901a9c3e81f06f84b13252b181d", null ],
-    [ "run", "a00344.html#aedef6da8603e38047a3de9006052568b", null ],
-    [ "_handle", "a00344.html#ab8b560004af0fe0e513879955328cffd", null ],
-    [ "func", "a00344.html#a64131ff795261b80c6b37223812a3ee8", null ]
+    [ "MemberLeaveEvent", "a00344.html#a9bb6e6d282c83e1a89a09fad6d57e050", null ],
+    [ "get_event_type", "a00344.html#a1af0fe4ad2efd5f078d1203e37080ba8", null ],
+    [ "group", "a00344.html#ab693afc3bdbfddc1ae88caf9ee052d54", null ],
+    [ "memberid", "a00344.html#ab1908decaccb41ea3bc74836dff63246", null ],
+    [ "operaterid", "a00344.html#aade41087ec629e2632628919d9df79fe", null ],
+    [ "type", "a00344.html#ad28ac4243630eab3bf7d65a737cac9ca", null ]
 ];

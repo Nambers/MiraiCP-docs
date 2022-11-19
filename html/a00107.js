@@ -1,8 +1,11 @@
 var a00107 =
 [
-    [ "ErrorHandle", "a00107.html#a10e0f2260bfde013500e04ba0d77a9fb", null ],
-    [ "MIRAICP_EXCEPTION_WHERE", "a00107.html#a64a15c1bd1292eb8eb8b5874281372c6", null ],
-    [ "ShouldNotUse", "a00107.html#ae1d03b516481fc8bce7d91943b41aaad", null ],
-    [ "QQID", "a00107.html#a3ae2ebfdaa4574d341b8e7935f29ddb8", null ],
-    [ "MiraiCPVersion", "a00107.html#ae471c96f73a019b792a82629b6bdfdf5", null ]
+    [ "disableAllPlugins", "a00107.html#aa19d655cf9e65dd8d3bba348fa438c2d", null ],
+    [ "disablePluginById", "a00107.html#a5c00ba2c6c7b08c0ff508ed5e0cd518d", null ],
+    [ "enableAllPlugins", "a00107.html#a56e5dba3d6eb86e12b5ae7037c7d3f9d", null ],
+    [ "enablePluginById", "a00107.html#acab9ccd86eed6b2d17836f5f2899b2a7", null ],
+    [ "loadNewPlugin", "a00107.html#a5f62240a571dd6678c453ae47f79bed8", null ],
+    [ "reloadPluginById", "a00107.html#aa358aae502cc1dd8e86b25616f6956bf", null ],
+    [ "showAllPluginId", "a00107.html#a733d3f3f90c6925034b10116fb6510e6", null ],
+    [ "unloadPluginById", "a00107.html#ae24eb5a6ee67766c25d797ed382d4f08", null ]
 ];

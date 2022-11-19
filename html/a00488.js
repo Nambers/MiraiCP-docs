@@ -1,5 +1,15 @@
 var a00488 =
 [
-    [ "avatarUrl", "a00488.html#a037b8d06c116200bdb37de924401ef46", null ],
-    [ "nickornamecard", "a00488.html#abc3f2c3176f05d64751446e8760595df", null ]
+    [ "BaseForwardedMessage", "a00488.html#a881301ba473c86b660950937eeae7b9b", null ],
+    [ "BaseForwardedMessage", "a00488.html#ae17c75201e5cb22c2547e45dbfbc2a33", null ],
+    [ "BaseForwardedMessage", "a00488.html#a471c465f8b615d6021fab72a2e4e6919", null ],
+    [ "~BaseForwardedMessage", "a00488.html#a9b507d9958e5f9615514c8b9a922b143", null ],
+    [ "add", "a00488.html#a66fe7c812d5c22d11d7ae4c480b3a9ae", null ],
+    [ "add", "a00488.html#af4fb03b1f9266a6691d66c0d62e33fa5", null ],
+    [ "operator+=", "a00488.html#afb8f99c42c171250abfe3387fec2c490", null ],
+    [ "operator+=", "a00488.html#a0ed99b5e15e93f4a4901107bf8188b14", null ],
+    [ "operator==", "a00488.html#a7dff007b7b60438abafa3ef089411531", null ],
+    [ "operator[]", "a00488.html#a16aa6e3ebb8de7613c8c30130e61cc2b", null ],
+    [ "operator[]", "a00488.html#a254fa8bba86f2cefb69e1c944e65793b", null ],
+    [ "nodes", "a00488.html#aff916106159979a68f107172f2376967", null ]
 ];

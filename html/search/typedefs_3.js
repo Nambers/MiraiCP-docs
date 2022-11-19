@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['message_0',['Message',['../a00500.html#a20c956b141205bb3b3fc17b936e08fb8',1,'MiraiCP::MessageChain']]],
-  ['miraicpexception_1',['MiraiCPException',['../a00198.html#a04c8b0950b0853de75d31539b66410b1',1,'MiraiCP']]]
+  ['functionpointertype_0',['functionPointerType',['../a00226.html#ae4923f6c201a288de0e0224e8a8d35a1',1,'MiraiCP::ThreadTask::internal']]],
+  ['functiontype_1',['functionType',['../a00226.html#a203c69b79e476ef8c6e13bfb9bba4ff7',1,'MiraiCP::ThreadTask::internal']]]
 ];
