@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiraiCP: thread.cpp</title>
+<title>MiraiCP: logger.cpp</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -93,10 +93,10 @@ $(document).ready(function(){initNavTree('a00678.html',''); initResizable(); });
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">thread.cpp</div></div>
+  <div class="headertitle"><div class="title">logger.cpp</div></div>
 </div><!--header-->
 <div class="contents">
-<p >多线程</p>
+<p >自定义logger handle以及启用禁用logger</p>
 <div class="fragment"><div class="line"><span class="comment">// Copyright (c) 2020 - 2022. Eritque arcus and contributors.</span></div>
 <div class="line"><span class="comment">//</span></div>
 <div class="line"><span class="comment">// This program is free software: you can redistribute it and/or modify</span></div>
@@ -113,8 +113,6 @@ $(document).ready(function(){initNavTree('a00678.html',''); initResizable(); });
 <div class="line"><span class="comment">// along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</span></div>
 <div class="line"><span class="comment">//</span></div>
 <div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00146.html">MiraiCP.hpp</a>&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;iostream&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;thread&gt;</span></div>
 <div class="line"><span class="keyword">using namespace </span><a class="code hl_namespace" href="a00218.html">MiraiCP</a>;</div>
 <div class="line"> </div>
 <div class="line"><span class="keyword">const</span> PluginConfig CPPPlugin::config{</div>
@@ -126,49 +124,34 @@ $(document).ready(function(){initNavTree('a00678.html',''); initResizable(); });
 <div class="line">                <span class="comment">// 可选：日期</span></div>
 <div class="line">};</div>
 <div class="line"> </div>
-<div class="line"><span class="keywordtype">void</span> <a id="a0" name="a0"></a><a class="code hl_function" href="a00035.html#a9a37a193bc61a8127790f891efc1af05">func</a>(<span class="keywordtype">int</span> i, <span class="keywordtype">bool</span> b) {</div>
-<div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;hello world&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line">}</div>
-<div class="line"> </div>
 <div class="line"><span class="keyword">class </span>Main : <span class="keyword">public</span> CPPPlugin {</div>
 <div class="line"><span class="keyword">public</span>:</div>
-<div class="line">    Main() : <a class="code hl_function" href="a00308.html#aeeaafebf5e61e1da8a2c5e3e07dac64b">CPPPlugin</a>() {}</div>
+<div class="line">    Main() : <a class="code hl_function" href="a00313.html#aeeaafebf5e61e1da8a2c5e3e07dac64b">CPPPlugin</a>() {}</div>
 <div class="line">    <span class="keywordtype">void</span> onEnable()<span class="keyword"> override </span>{</div>
-<div class="line">        Event::registerEvent&lt;GroupMessageEvent&gt;([](<a id="a1" name="a1"></a><a class="code hl_enumvalue" href="a00221.html#abe9e9d8212ea8f23717b72db64393cabaca8073196614a985e9fcc7d2f964473c">GroupMessageEvent</a> a) {</div>
-<div class="line">            MiraiCPNewThread(<a class="code hl_function" href="a00035.html#a9a37a193bc61a8127790f891efc1af05">func</a>, 1, <span class="keyword">true</span>).detach();</div>
+<div class="line">        Logger::logger.registerHandle([](std::string content, <span class="keywordtype">int</span> level) {</div>
+<div class="line">            <span class="comment">//do some things</span></div>
+<div class="line">            <span class="comment">// eg. write file</span></div>
 <div class="line">        });</div>
+<div class="line">        <span class="comment">// 设置logger是否启用</span></div>
+<div class="line">        Logger::logger.setHandleState(<span class="keyword">true</span>);</div>
 <div class="line">    }</div>
 <div class="line">};</div>
 <div class="line"> </div>
-<div class="line"><span class="keywordtype">void</span> <a id="a2" name="a2"></a><a class="code hl_function" href="a00218.html#a12d27be6730af4fc321ac1eb231db281">MiraiCP::enrollPlugin</a>() {</div>
+<div class="line"><span class="keywordtype">void</span> <a id="a0" name="a0"></a><a class="code hl_function" href="a00218.html#a12d27be6730af4fc321ac1eb231db281">MiraiCP::enrollPlugin</a>() {</div>
 <div class="line">    <a class="code hl_function" href="a00218.html#a12d27be6730af4fc321ac1eb231db281">MiraiCP::enrollPlugin</a>(<span class="keyword">new</span> Main());</div>
 <div class="line">}</div>
-<div class="ttc" id="aa00035_html_a9a37a193bc61a8127790f891efc1af05"><div class="ttname"><a href="a00035.html#a9a37a193bc61a8127790f891efc1af05">func</a></div><div class="ttdeci">void func(int i, bool b)</div><div class="ttdef"><b>Definition:</b> <a href="a00035_source.html#l00030">thread.cpp:30</a></div></div>
 <div class="ttc" id="aa00146_html"><div class="ttname"><a href="a00146.html">MiraiCP.hpp</a></div></div>
 <div class="ttc" id="aa00218_html"><div class="ttname"><a href="a00218.html">MiraiCP</a></div><div class="ttdef"><b>Definition:</b> <a href="a00185_source.html#l00041">commonTypes.h:41</a></div></div>
 <div class="ttc" id="aa00218_html_a12d27be6730af4fc321ac1eb231db281"><div class="ttname"><a href="a00218.html#a12d27be6730af4fc321ac1eb231db281">MiraiCP::enrollPlugin</a></div><div class="ttdeci">void enrollPlugin()</div><div class="ttdoc">注册插件函数, 需要被插件实现, 类似onStart();</div><div class="ttdef"><b>Definition:</b> <a href="a00179_source.html#l00037">utils.h:37</a></div></div>
-<div class="ttc" id="aa00221_html_abe9e9d8212ea8f23717b72db64393cabaca8073196614a985e9fcc7d2f964473c"><div class="ttname"><a href="a00221.html#abe9e9d8212ea8f23717b72db64393cabaca8073196614a985e9fcc7d2f964473c">MiraiCP::eventTypes::GroupMessageEvent</a></div><div class="ttdeci">@ GroupMessageEvent</div><div class="ttdef"><b>Definition:</b> <a href="a00065_source.html#l00033">Event.h:33</a></div></div>
-<div class="ttc" id="aa00308_html_aeeaafebf5e61e1da8a2c5e3e07dac64b"><div class="ttname"><a href="a00308.html#aeeaafebf5e61e1da8a2c5e3e07dac64b">MiraiCP::CPPPlugin::CPPPlugin</a></div><div class="ttdeci">CPPPlugin()=default</div></div>
+<div class="ttc" id="aa00313_html_aeeaafebf5e61e1da8a2c5e3e07dac64b"><div class="ttname"><a href="a00313.html#aeeaafebf5e61e1da8a2c5e3e07dac64b">MiraiCP::CPPPlugin::CPPPlugin</a></div><div class="ttdeci">CPPPlugin()=default</div></div>
 </div><!-- fragment --> </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">生成于 2022年 十一月 19日 星期六 12:45:48 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="footer">生成于 2022年 十一月 23日 星期三 10:27:50 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
-<script type="text/javascript">
-            $(function() {
-			  toggleButton = document.createElement('doxygen-awesome-dark-mode-toggle')
-			  toggleButton.title = "Toggle Light/Dark Mode"
-			  $(document).ready(function(){
-				document.getElementById("MSearchBox").parentNode.appendChild(toggleButton)
-			  })
-			  $(window).resize(function(){
-				document.getElementById("MSearchBox").parentNode.appendChild(toggleButton)
-			  })
-			})
-        </script>
     </body>
 </html>

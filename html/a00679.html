@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiraiCP: callbackHandle.cpp</title>
+<title>MiraiCP: member.cpp</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -93,10 +93,10 @@ $(document).ready(function(){initNavTree('a00679.html',''); initResizable(); });
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">callbackHandle.cpp</div></div>
+  <div class="headertitle"><div class="title">member.cpp</div></div>
 </div><!--header-->
 <div class="contents">
-<p >event handler</p>
+<p >群成员操作</p>
 <div class="fragment"><div class="line"><span class="comment">// Copyright (c) 2020 - 2022. Eritque arcus and contributors.</span></div>
 <div class="line"><span class="comment">//</span></div>
 <div class="line"><span class="comment">// This program is free software: you can redistribute it and/or modify</span></div>
@@ -113,7 +113,6 @@ $(document).ready(function(){initNavTree('a00679.html',''); initResizable(); });
 <div class="line"><span class="comment">// along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</span></div>
 <div class="line"><span class="comment">//</span></div>
 <div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00146.html">MiraiCP.hpp</a>&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;string&gt;</span></div>
 <div class="line"><span class="keyword">using namespace </span><a class="code hl_namespace" href="a00218.html">MiraiCP</a>;</div>
 <div class="line"> </div>
 <div class="line"><span class="keyword">const</span> PluginConfig CPPPlugin::config{</div>
@@ -127,64 +126,46 @@ $(document).ready(function(){initNavTree('a00679.html',''); initResizable(); });
 <div class="line"> </div>
 <div class="line"><span class="keyword">class </span>Main : <span class="keyword">public</span> CPPPlugin {</div>
 <div class="line"><span class="keyword">public</span>:</div>
-<div class="line">    <span class="comment">// 配置插件信息</span></div>
-<div class="line">    Main() : <a class="code hl_function" href="a00308.html#aeeaafebf5e61e1da8a2c5e3e07dac64b">CPPPlugin</a>() {}</div>
-<div class="line"> </div>
+<div class="line">    Main() : <a class="code hl_function" href="a00313.html#aeeaafebf5e61e1da8a2c5e3e07dac64b">CPPPlugin</a>() {}</div>
 <div class="line">    <span class="keywordtype">void</span> onEnable()<span class="keyword"> override </span>{</div>
-<div class="line">        <span class="keyword">auto</span> handle0 = Event::registerEvent&lt;GroupMessageEvent&gt;([](<a id="a0" name="a0"></a><a class="code hl_enumvalue" href="a00221.html#abe9e9d8212ea8f23717b72db64393cabaca8073196614a985e9fcc7d2f964473c">GroupMessageEvent</a> e) {</div>
-<div class="line">            e.group.sendMessage(<span class="stringliteral">&quot;Hello world!&quot;</span>);</div>
-<div class="line">        });</div>
-<div class="line"> </div>
-<div class="line">        Event::registerEvent&lt;PrivateMessageEvent&gt;([=](<a id="a1" name="a1"></a><a class="code hl_enumvalue" href="a00221.html#abe9e9d8212ea8f23717b72db64393cabaf823b9c98e3d49aecbf9be0cfaba7f24">PrivateMessageEvent</a> e) {</div>
-<div class="line">            <span class="comment">// 停止handle0注册的GroupMessageEvent</span></div>
-<div class="line">            handle0-&gt;stop();</div>
-<div class="line">        });</div>
-<div class="line"> </div>
-<div class="line">        <span class="keyword">auto</span> handle1 = Event::registerEvent&lt;BotOnlineEvent&gt;([](<a id="a2" name="a2"></a><a class="code hl_enumvalue" href="a00221.html#abe9e9d8212ea8f23717b72db64393cabac9323a42c3ef5f080ec21384295543f5">BotOnlineEvent</a> e) {</div>
-<div class="line">            <span class="keyword">auto</span> f = Friend(1234567890, 9876543210);</div>
-<div class="line">            f.sendMessage(<span class="stringliteral">&quot;Bot is live!&quot;</span>);</div>
-<div class="line">        });</div>
-<div class="line"> </div>
-<div class="line">        <span class="keyword">auto</span> handle2 = Event::registerEvent&lt;MiraiCPExceptionEvent&gt;([&amp;](<span class="keyword">const</span> <a id="a3" name="a3"></a><a class="code hl_enumvalue" href="a00221.html#abe9e9d8212ea8f23717b72db64393cabae45271795e11748f69a8762e52630d6e">MiraiCPExceptionEvent</a> &amp;e) {</div>
-<div class="line">            <span class="keyword">auto</span> ct = Friend(1234567890, 9876543210);</div>
-<div class="line">            Logger::logger.info(e.getException());</div>
-<div class="line">            ct.sendMessage(<span class="stringliteral">&quot;Error occurs, type: &quot;</span> + e.getException()-&gt;getExceptionType() + <span class="stringliteral">&quot;.\nError occurs in file: &quot;</span> + e.getException()-&gt;filename + <span class="stringliteral">&quot;, line: &quot;</span> + std::to_string(e.getException()-&gt;lineNum));</div>
+<div class="line">        Event::registerEvent&lt;GroupMessageEvent&gt;([](<a id="a0" name="a0"></a><a class="code hl_enumvalue" href="a00221.html#abe9e9d8212ea8f23717b72db64393cabaca8073196614a985e9fcc7d2f964473c">GroupMessageEvent</a> e) {</div>
+<div class="line">            <span class="comment">// 从id构造群成员</span></div>
+<div class="line">            Member a(e.sender.id(), e.group.id(), e.bot.id);</div>
+<div class="line">            <span class="comment">// 踢出群成员</span></div>
+<div class="line">            <span class="keywordflow">try</span> {</div>
+<div class="line">                Member m = Member(e.sender.id(), e.group.id(), e.bot.id);</div>
+<div class="line">                m.kick(<span class="stringliteral">&quot;this_is_reason&quot;</span>);</div>
+<div class="line">            } <span class="keywordflow">catch</span> (BotException &amp;err) {</div>
+<div class="line">                <span class="comment">//权限不足</span></div>
+<div class="line">                Logger::logger.error(err.what());</div>
+<div class="line">            } <span class="keywordflow">catch</span> (MemberException &amp;err) {</div>
+<div class="line">                <span class="keywordflow">if</span> (err.type == 1) {</div>
+<div class="line">                    <span class="comment">//找不到群</span></div>
+<div class="line">                }</div>
+<div class="line">                <span class="keywordflow">if</span> (err.type == 2) {</div>
+<div class="line">                    <span class="comment">//找不到群成员</span></div>
+<div class="line">                }</div>
+<div class="line">            }</div>
 <div class="line">        });</div>
 <div class="line">    }</div>
 <div class="line">};</div>
 <div class="line"> </div>
-<div class="line"><span class="comment">// 绑定当前插件实例</span></div>
-<div class="line"><span class="keywordtype">void</span> <a id="a4" name="a4"></a><a class="code hl_function" href="a00218.html#a12d27be6730af4fc321ac1eb231db281">MiraiCP::enrollPlugin</a>() {</div>
+<div class="line"><span class="keywordtype">void</span> <a id="a1" name="a1"></a><a class="code hl_function" href="a00218.html#a12d27be6730af4fc321ac1eb231db281">MiraiCP::enrollPlugin</a>() {</div>
 <div class="line">    <a class="code hl_function" href="a00218.html#a12d27be6730af4fc321ac1eb231db281">MiraiCP::enrollPlugin</a>(<span class="keyword">new</span> Main());</div>
 <div class="line">}</div>
 <div class="ttc" id="aa00146_html"><div class="ttname"><a href="a00146.html">MiraiCP.hpp</a></div></div>
 <div class="ttc" id="aa00218_html"><div class="ttname"><a href="a00218.html">MiraiCP</a></div><div class="ttdef"><b>Definition:</b> <a href="a00185_source.html#l00041">commonTypes.h:41</a></div></div>
 <div class="ttc" id="aa00218_html_a12d27be6730af4fc321ac1eb231db281"><div class="ttname"><a href="a00218.html#a12d27be6730af4fc321ac1eb231db281">MiraiCP::enrollPlugin</a></div><div class="ttdeci">void enrollPlugin()</div><div class="ttdoc">注册插件函数, 需要被插件实现, 类似onStart();</div><div class="ttdef"><b>Definition:</b> <a href="a00179_source.html#l00037">utils.h:37</a></div></div>
-<div class="ttc" id="aa00221_html_abe9e9d8212ea8f23717b72db64393cabac9323a42c3ef5f080ec21384295543f5"><div class="ttname"><a href="a00221.html#abe9e9d8212ea8f23717b72db64393cabac9323a42c3ef5f080ec21384295543f5">MiraiCP::eventTypes::BotOnlineEvent</a></div><div class="ttdeci">@ BotOnlineEvent</div><div class="ttdef"><b>Definition:</b> <a href="a00065_source.html#l00043">Event.h:43</a></div></div>
 <div class="ttc" id="aa00221_html_abe9e9d8212ea8f23717b72db64393cabaca8073196614a985e9fcc7d2f964473c"><div class="ttname"><a href="a00221.html#abe9e9d8212ea8f23717b72db64393cabaca8073196614a985e9fcc7d2f964473c">MiraiCP::eventTypes::GroupMessageEvent</a></div><div class="ttdeci">@ GroupMessageEvent</div><div class="ttdef"><b>Definition:</b> <a href="a00065_source.html#l00033">Event.h:33</a></div></div>
-<div class="ttc" id="aa00221_html_abe9e9d8212ea8f23717b72db64393cabae45271795e11748f69a8762e52630d6e"><div class="ttname"><a href="a00221.html#abe9e9d8212ea8f23717b72db64393cabae45271795e11748f69a8762e52630d6e">MiraiCP::eventTypes::MiraiCPExceptionEvent</a></div><div class="ttdeci">@ MiraiCPExceptionEvent</div><div class="ttdef"><b>Definition:</b> <a href="a00065_source.html#l00048">Event.h:48</a></div></div>
-<div class="ttc" id="aa00221_html_abe9e9d8212ea8f23717b72db64393cabaf823b9c98e3d49aecbf9be0cfaba7f24"><div class="ttname"><a href="a00221.html#abe9e9d8212ea8f23717b72db64393cabaf823b9c98e3d49aecbf9be0cfaba7f24">MiraiCP::eventTypes::PrivateMessageEvent</a></div><div class="ttdeci">@ PrivateMessageEvent</div><div class="ttdef"><b>Definition:</b> <a href="a00065_source.html#l00034">Event.h:34</a></div></div>
-<div class="ttc" id="aa00308_html_aeeaafebf5e61e1da8a2c5e3e07dac64b"><div class="ttname"><a href="a00308.html#aeeaafebf5e61e1da8a2c5e3e07dac64b">MiraiCP::CPPPlugin::CPPPlugin</a></div><div class="ttdeci">CPPPlugin()=default</div></div>
+<div class="ttc" id="aa00313_html_aeeaafebf5e61e1da8a2c5e3e07dac64b"><div class="ttname"><a href="a00313.html#aeeaafebf5e61e1da8a2c5e3e07dac64b">MiraiCP::CPPPlugin::CPPPlugin</a></div><div class="ttdeci">CPPPlugin()=default</div></div>
 </div><!-- fragment --> </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">生成于 2022年 十一月 19日 星期六 12:45:48 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="footer">生成于 2022年 十一月 23日 星期三 10:27:50 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
-<script type="text/javascript">
-            $(function() {
-			  toggleButton = document.createElement('doxygen-awesome-dark-mode-toggle')
-			  toggleButton.title = "Toggle Light/Dark Mode"
-			  $(document).ready(function(){
-				document.getElementById("MSearchBox").parentNode.appendChild(toggleButton)
-			  })
-			  $(window).resize(function(){
-				document.getElementById("MSearchBox").parentNode.appendChild(toggleButton)
-			  })
-			})
-        </script>
     </body>
 </html>

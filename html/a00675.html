@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiraiCP: message.cpp</title>
+<title>MiraiCP: forwardedMessage.cpp</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -93,10 +93,10 @@ $(document).ready(function(){initNavTree('a00675.html',''); initResizable(); });
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">message.cpp</div></div>
+  <div class="headertitle"><div class="title">forwardedMessage.cpp</div></div>
 </div><!--header-->
 <div class="contents">
-<p >消息操作</p>
+<p >构造转发信息</p>
 <div class="fragment"><div class="line"><span class="comment">// Copyright (c) 2020 - 2022. Eritque arcus and contributors.</span></div>
 <div class="line"><span class="comment">//</span></div>
 <div class="line"><span class="comment">// This program is free software: you can redistribute it and/or modify</span></div>
@@ -126,19 +126,32 @@ $(document).ready(function(){initNavTree('a00675.html',''); initResizable(); });
 <div class="line"> </div>
 <div class="line"><span class="keyword">class </span>Main : <span class="keyword">public</span> CPPPlugin {</div>
 <div class="line"><span class="keyword">public</span>:</div>
-<div class="line">    Main() : <a class="code hl_function" href="a00308.html#aeeaafebf5e61e1da8a2c5e3e07dac64b">CPPPlugin</a>() {}</div>
+<div class="line">    Main() : <a class="code hl_function" href="a00313.html#aeeaafebf5e61e1da8a2c5e3e07dac64b">CPPPlugin</a>() {}</div>
 <div class="line">    <span class="keywordtype">void</span> onEnable()<span class="keyword"> override </span>{</div>
 <div class="line">        Event::registerEvent&lt;GroupMessageEvent&gt;([](<a id="a0" name="a0"></a><a class="code hl_enumvalue" href="a00221.html#abe9e9d8212ea8f23717b72db64393cabaca8073196614a985e9fcc7d2f964473c">GroupMessageEvent</a> e) {</div>
-<div class="line">            <span class="comment">// 发送MessageChain</span></div>
-<div class="line">            e.group.sendMessage(e.message);</div>
-<div class="line">            <span class="comment">// 发送SingleMessage</span></div>
-<div class="line">            e.group.sendMessage(PlainText(<span class="stringliteral">&quot;a&quot;</span>));</div>
-<div class="line">            e.group.sendMessage(e.sender.at(), PlainText(<span class="stringliteral">&quot;&quot;</span>), Face(5));</div>
-<div class="line">            <span class="comment">// 回复信息</span></div>
-<div class="line">            e.group.quoteAndSendMessage(PlainText(<span class="stringliteral">&quot;a&quot;</span>), e.message.source.value());</div>
-<div class="line">            <span class="comment">// 撤回信息</span></div>
-<div class="line">            e.message.source.value().recall();</div>
-<div class="line">            e.group.sendMessage(<span class="stringliteral">&quot;hi&quot;</span>).recall();</div>
+<div class="line">            <span class="keyword">auto</span> style1 = ForwardedMessageDisplayStrategy();</div>
+<div class="line">            style1.summary = <span class="stringliteral">&quot;Summarya&quot;</span>;</div>
+<div class="line">            style1.preview.emplace_back(<span class="stringliteral">&quot;preview1&quot;</span>);</div>
+<div class="line">            style1.source = <span class="stringliteral">&quot;SourceA&quot;</span>;</div>
+<div class="line">            style1.brief = <span class="stringliteral">&quot;BriefA&quot;</span>;</div>
+<div class="line">            e.group.sendMessage(<span class="stringliteral">&quot;Origin:&quot;</span>);</div>
+<div class="line">            ForwardedMessage(</div>
+<div class="line">                    {ForwardedNode(12, <span class="stringliteral">&quot;a&quot;</span>, MessageChain(PlainText(<span class="stringliteral">&quot;test&quot;</span>)), 1),</div>
+<div class="line">                     ForwardedNode(12, <span class="stringliteral">&quot;b&quot;</span>, ForwardedMessage({ForwardedNode(12, <span class="stringliteral">&quot;a&quot;</span>, MessageChain(PlainText(<span class="stringliteral">&quot;test&quot;</span>)), 1)}), 1)},</div>
+<div class="line">                    ForwardedMessageDisplayStrategy::defaultStrategy())</div>
+<div class="line">                    .sendTo(&amp;e.group);</div>
+<div class="line"> </div>
+<div class="line">            <span class="keywordflow">if</span> (e.message[0].type() == OnlineForwardedMessage::type())</div>
+<div class="line">                e.message[0].get&lt;OnlineForwardedMessage&gt;().toForwardedMessage(ForwardedMessageDisplayStrategy::defaultStrategy()).sendTo(&amp;e.group);</div>
+<div class="line">            e.group.sendMessage(<span class="stringliteral">&quot;style1&quot;</span>);</div>
+<div class="line">            ForwardedMessage(</div>
+<div class="line">                    {ForwardedNode(12, <span class="stringliteral">&quot;a&quot;</span>, MessageChain(PlainText(<span class="stringliteral">&quot;test&quot;</span>)), 1),</div>
+<div class="line">                     ForwardedNode(12, <span class="stringliteral">&quot;b&quot;</span>, ForwardedMessage({ForwardedNode(12, <span class="stringliteral">&quot;a&quot;</span>, MessageChain(PlainText(<span class="stringliteral">&quot;test&quot;</span>)), 1)}), 1)},</div>
+<div class="line">                    style1)</div>
+<div class="line">                    .sendTo(&amp;e.group);</div>
+<div class="line"> </div>
+<div class="line">            <span class="keywordflow">if</span> (e.message[0].type() == OnlineForwardedMessage::type())</div>
+<div class="line">                e.message[0].get&lt;OnlineForwardedMessage&gt;().toForwardedMessage(style1).sendTo(&amp;e.group);</div>
 <div class="line">        });</div>
 <div class="line">    }</div>
 <div class="line">};</div>
@@ -150,27 +163,15 @@ $(document).ready(function(){initNavTree('a00675.html',''); initResizable(); });
 <div class="ttc" id="aa00218_html"><div class="ttname"><a href="a00218.html">MiraiCP</a></div><div class="ttdef"><b>Definition:</b> <a href="a00185_source.html#l00041">commonTypes.h:41</a></div></div>
 <div class="ttc" id="aa00218_html_a12d27be6730af4fc321ac1eb231db281"><div class="ttname"><a href="a00218.html#a12d27be6730af4fc321ac1eb231db281">MiraiCP::enrollPlugin</a></div><div class="ttdeci">void enrollPlugin()</div><div class="ttdoc">注册插件函数, 需要被插件实现, 类似onStart();</div><div class="ttdef"><b>Definition:</b> <a href="a00179_source.html#l00037">utils.h:37</a></div></div>
 <div class="ttc" id="aa00221_html_abe9e9d8212ea8f23717b72db64393cabaca8073196614a985e9fcc7d2f964473c"><div class="ttname"><a href="a00221.html#abe9e9d8212ea8f23717b72db64393cabaca8073196614a985e9fcc7d2f964473c">MiraiCP::eventTypes::GroupMessageEvent</a></div><div class="ttdeci">@ GroupMessageEvent</div><div class="ttdef"><b>Definition:</b> <a href="a00065_source.html#l00033">Event.h:33</a></div></div>
-<div class="ttc" id="aa00308_html_aeeaafebf5e61e1da8a2c5e3e07dac64b"><div class="ttname"><a href="a00308.html#aeeaafebf5e61e1da8a2c5e3e07dac64b">MiraiCP::CPPPlugin::CPPPlugin</a></div><div class="ttdeci">CPPPlugin()=default</div></div>
+<div class="ttc" id="aa00313_html_aeeaafebf5e61e1da8a2c5e3e07dac64b"><div class="ttname"><a href="a00313.html#aeeaafebf5e61e1da8a2c5e3e07dac64b">MiraiCP::CPPPlugin::CPPPlugin</a></div><div class="ttdeci">CPPPlugin()=default</div></div>
 </div><!-- fragment --> </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">生成于 2022年 十一月 19日 星期六 12:45:48 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="footer">生成于 2022年 十一月 23日 星期三 10:27:50 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
-<script type="text/javascript">
-            $(function() {
-			  toggleButton = document.createElement('doxygen-awesome-dark-mode-toggle')
-			  toggleButton.title = "Toggle Light/Dark Mode"
-			  $(document).ready(function(){
-				document.getElementById("MSearchBox").parentNode.appendChild(toggleButton)
-			  })
-			  $(window).resize(function(){
-				document.getElementById("MSearchBox").parentNode.appendChild(toggleButton)
-			  })
-			})
-        </script>
     </body>
 </html>

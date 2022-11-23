@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiraiCP: command.cpp</title>
+<title>MiraiCP: MiraiCP::Tools::idpair结构体 参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -93,85 +93,126 @@ $(document).ready(function(){initNavTree('a00669.html',''); initResizable(); });
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">command.cpp</div></div>
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-attribs">Public 属性</a> &#124;
+<a href="a00666.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">MiraiCP::Tools::idpair结构体 参考</div></div>
 </div><!--header-->
 <div class="contents">
-<p >所有加进doxygen doc的example</p>
-<p >监听指令</p>
-<div class="fragment"><div class="line"><span class="comment">// Copyright (c) 2020 - 2022. Eritque arcus and contributors.</span></div>
-<div class="line"><span class="comment">//</span></div>
-<div class="line"><span class="comment">// This program is free software: you can redistribute it and/or modify</span></div>
-<div class="line"><span class="comment">// it under the terms of the GNU Affero General Public License as</span></div>
-<div class="line"><span class="comment">// published by the Free Software Foundation, either version 3 of the</span></div>
-<div class="line"><span class="comment">// License, or any later version(in your opinion).</span></div>
-<div class="line"><span class="comment">//</span></div>
-<div class="line"><span class="comment">// This program is distributed in the hope that it will be useful,</span></div>
-<div class="line"><span class="comment">// but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div>
-<div class="line"><span class="comment">// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span></div>
-<div class="line"><span class="comment">// GNU Affero General Public License for more details.</span></div>
-<div class="line"><span class="comment">//</span></div>
-<div class="line"><span class="comment">// You should have received a copy of the GNU Affero General Public License</span></div>
-<div class="line"><span class="comment">// along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</span></div>
-<div class="line"><span class="comment">//</span></div>
-<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00146.html">MiraiCP.hpp</a>&gt;</span></div>
-<div class="line"><span class="keyword">using namespace </span><a class="code hl_namespace" href="a00218.html">MiraiCP</a>;</div>
-<div class="line"> </div>
-<div class="line"><span class="keyword">const</span> PluginConfig CPPPlugin::config{</div>
-<div class="line">        <span class="stringliteral">&quot;id&quot;</span>,   <span class="comment">// 插件id</span></div>
-<div class="line">        <span class="stringliteral">&quot;test&quot;</span>, <span class="comment">// 插件名称</span></div>
-<div class="line">        <span class="stringliteral">&quot;v1.0&quot;</span>, <span class="comment">// 插件版本</span></div>
-<div class="line">        <span class="stringliteral">&quot;a&quot;</span>,    <span class="comment">// 插件作者</span></div>
-<div class="line">                <span class="comment">// 可选：插件描述</span></div>
-<div class="line">                <span class="comment">// 可选：日期</span></div>
-<div class="line">};</div>
-<div class="line"> </div>
-<div class="line"><span class="keyword">class </span>a : <span class="keyword">public</span> IRawCommand {</div>
-<div class="line"><span class="keyword">public</span>:</div>
-<div class="line">    IRawCommand::Config config()<span class="keyword"> override </span>{</div>
-<div class="line">        <span class="keywordflow">return</span> {<span class="stringliteral">&quot;test&quot;</span>, {<span class="stringliteral">&quot;sname1&quot;</span>, <span class="stringliteral">&quot;sname2&quot;</span>}};</div>
-<div class="line">    }</div>
-<div class="line">    <span class="keywordtype">void</span> <a class="code hl_function" href="a00276.html#a7acc9f2c8c4640659e9447e3b79d41be">onCommand</a>(std::optional&lt;Contact&gt; c, <span class="keyword">const</span> Bot &amp;b, <span class="keyword">const</span> MessageChain &amp;a)<span class="keyword"> override </span>{</div>
-<div class="line">        Logger::logger.info(a.toMiraiCode());</div>
-<div class="line">    }</div>
-<div class="line">    a() = <span class="keywordflow">default</span>;</div>
-<div class="line">};</div>
-<div class="line"> </div>
-<div class="line"><span class="keyword">class </span>Main : <span class="keyword">public</span> CPPPlugin {</div>
-<div class="line"><span class="keyword">public</span>:</div>
-<div class="line">    Main() : <a class="code hl_function" href="a00308.html#aeeaafebf5e61e1da8a2c5e3e07dac64b">CPPPlugin</a>() {}</div>
-<div class="line">    <span class="keywordtype">void</span> onEnable()<span class="keyword"> override </span>{</div>
-<div class="line">        CommandManager::commandManager.registerCommand(a());</div>
-<div class="line">    }</div>
-<div class="line">};</div>
-<div class="line"> </div>
-<div class="line"><span class="keywordtype">void</span> <a id="a0" name="a0"></a><a class="code hl_function" href="a00218.html#a12d27be6730af4fc321ac1eb231db281">MiraiCP::enrollPlugin</a>() {</div>
-<div class="line">    <a class="code hl_function" href="a00218.html#a12d27be6730af4fc321ac1eb231db281">MiraiCP::enrollPlugin</a>(<span class="keyword">new</span> Main());</div>
-<div class="line">}</div>
-<div class="ttc" id="aa00146_html"><div class="ttname"><a href="a00146.html">MiraiCP.hpp</a></div></div>
-<div class="ttc" id="aa00218_html"><div class="ttname"><a href="a00218.html">MiraiCP</a></div><div class="ttdef"><b>Definition:</b> <a href="a00185_source.html#l00041">commonTypes.h:41</a></div></div>
-<div class="ttc" id="aa00218_html_a12d27be6730af4fc321ac1eb231db281"><div class="ttname"><a href="a00218.html#a12d27be6730af4fc321ac1eb231db281">MiraiCP::enrollPlugin</a></div><div class="ttdeci">void enrollPlugin()</div><div class="ttdoc">注册插件函数, 需要被插件实现, 类似onStart();</div><div class="ttdef"><b>Definition:</b> <a href="a00179_source.html#l00037">utils.h:37</a></div></div>
-<div class="ttc" id="aa00276_html_a7acc9f2c8c4640659e9447e3b79d41be"><div class="ttname"><a href="a00276.html#a7acc9f2c8c4640659e9447e3b79d41be">MiraiCP::IRawCommand::onCommand</a></div><div class="ttdeci">virtual void onCommand(std::shared_ptr&lt; Contact &gt;, const Bot &amp;, const MessageChain &amp;)=0</div></div>
-<div class="ttc" id="aa00308_html_aeeaafebf5e61e1da8a2c5e3e07dac64b"><div class="ttname"><a href="a00308.html#aeeaafebf5e61e1da8a2c5e3e07dac64b">MiraiCP::CPPPlugin::CPPPlugin</a></div><div class="ttdeci">CPPPlugin()=default</div></div>
-</div><!-- fragment --> </div><!-- contents -->
+
+<p>id pair工具结构体声明，仅内部使用  
+ <a href="a00669.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="a00173_source.html">Tools.h</a>&gt;</code></p>
+<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> MiraiCP::Tools::idpair 的协作图:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="a00667.png" border="0" usemap="#a_mirai_c_p_1_1_tools_1_1idpair_coll__map" alt="Collaboration graph"/></div>
+<map name="a_mirai_c_p_1_1_tools_1_1idpair_coll__map" id="a_mirai_c_p_1_1_tools_1_1idpair_coll__map">
+<area shape="rect" title="id pair工具结构体声明，仅内部使用" alt="" coords="5,160,167,252"/>
+<area shape="rect" title=" " alt="" coords="63,5,109,83"/>
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a02842b77c8eadf88e697a941eea4dbd0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00669.html#a02842b77c8eadf88e697a941eea4dbd0">operator==</a> (const <a class="el" href="a00669.html">idpair</a> &amp;other) const</td></tr>
+<tr class="separator:a02842b77c8eadf88e697a941eea4dbd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public 属性</h2></td></tr>
+<tr class="memitem:ad4e6abbfad6c129c9bb65ac030daef27"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00218.html#a3ae2ebfdaa4574d341b8e7935f29ddb8">QQID</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00669.html#ad4e6abbfad6c129c9bb65ac030daef27">id1</a></td></tr>
+<tr class="separator:ad4e6abbfad6c129c9bb65ac030daef27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72ed897c677869530b1ebbcb4bd0782c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00218.html#a3ae2ebfdaa4574d341b8e7935f29ddb8">QQID</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00669.html#a72ed897c677869530b1ebbcb4bd0782c">id2</a></td></tr>
+<tr class="separator:a72ed897c677869530b1ebbcb4bd0782c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p >id pair工具结构体声明，仅内部使用 </p>
+<dl class="section note"><dt>注解</dt><dd>dev: 为保证可读性请仅在局部作用域使用，且使用聚合初始化 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="a00173_source.html">Tools.h</a> 第 <a class="el" href="a00173_source.html#l00106">106</a> 行定义.</p>
+</div><h2 class="groupheader">成员函数说明</h2>
+<a id="a02842b77c8eadf88e697a941eea4dbd0" name="a02842b77c8eadf88e697a941eea4dbd0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02842b77c8eadf88e697a941eea4dbd0">&#9670;&nbsp;</a></span>operator==()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MiraiCP::Tools::idpair::operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="a00669.html">idpair</a> &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="a00173_source.html">Tools.h</a> 第 <a class="el" href="a00173_source.html#l00110">110</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>                                                       {</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>                <span class="keywordflow">return</span> <a class="code hl_variable" href="a00669.html#ad4e6abbfad6c129c9bb65ac030daef27">id1</a> == other.id1 &amp;&amp; <a class="code hl_variable" href="a00669.html#a72ed897c677869530b1ebbcb4bd0782c">id2</a> == other.id2;</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>            }</div>
+<div class="ttc" id="aa00669_html_a72ed897c677869530b1ebbcb4bd0782c"><div class="ttname"><a href="a00669.html#a72ed897c677869530b1ebbcb4bd0782c">MiraiCP::Tools::idpair::id2</a></div><div class="ttdeci">QQID id2</div><div class="ttdef"><b>Definition:</b> <a href="a00173_source.html#l00108">Tools.h:108</a></div></div>
+<div class="ttc" id="aa00669_html_ad4e6abbfad6c129c9bb65ac030daef27"><div class="ttname"><a href="a00669.html#ad4e6abbfad6c129c9bb65ac030daef27">MiraiCP::Tools::idpair::id1</a></div><div class="ttdeci">QQID id1</div><div class="ttdef"><b>Definition:</b> <a href="a00173_source.html#l00107">Tools.h:107</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="ad4e6abbfad6c129c9bb65ac030daef27" name="ad4e6abbfad6c129c9bb65ac030daef27"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4e6abbfad6c129c9bb65ac030daef27">&#9670;&nbsp;</a></span>id1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00218.html#a3ae2ebfdaa4574d341b8e7935f29ddb8">QQID</a> MiraiCP::Tools::idpair::id1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="a00173_source.html">Tools.h</a> 第 <a class="el" href="a00173_source.html#l00107">107</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a72ed897c677869530b1ebbcb4bd0782c" name="a72ed897c677869530b1ebbcb4bd0782c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72ed897c677869530b1ebbcb4bd0782c">&#9670;&nbsp;</a></span>id2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00218.html#a3ae2ebfdaa4574d341b8e7935f29ddb8">QQID</a> MiraiCP::Tools::idpair::id2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="a00173_source.html">Tools.h</a> 第 <a class="el" href="a00173_source.html#l00108">108</a> 行定义.</p>
+
+</div>
+</div>
+<hr/>该结构体的文档由以下文件生成:<ul>
+<li><a class="el" href="a00173_source.html">Tools.h</a></li>
+</ul>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">生成于 2022年 十一月 19日 星期六 12:45:48 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="navelem"><a class="el" href="a00218.html">MiraiCP</a></li><li class="navelem"><a class="el" href="a00228.html">Tools</a></li><li class="navelem"><a class="el" href="a00669.html">idpair</a></li>
+    <li class="footer">生成于 2022年 十一月 23日 星期三 10:27:51 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
-<script type="text/javascript">
-            $(function() {
-			  toggleButton = document.createElement('doxygen-awesome-dark-mode-toggle')
-			  toggleButton.title = "Toggle Light/Dark Mode"
-			  $(document).ready(function(){
-				document.getElementById("MSearchBox").parentNode.appendChild(toggleButton)
-			  })
-			  $(window).resize(function(){
-				document.getElementById("MSearchBox").parentNode.appendChild(toggleButton)
-			  })
-			})
-        </script>
     </body>
 </html>

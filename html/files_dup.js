@@ -1,13 +1,15 @@
 var files_dup =
 [
     [ "commonTools.h", "a00182.html", [
-      [ "CommonTools::MiraiCPDefer", "a00232.html", "a00232" ]
+      [ "CommonTools::MiraiCPDefer", "a00233.html", "a00233" ]
     ] ],
     [ "commonTypes.h", "a00185.html", "a00185" ],
     [ "loaderApiInternal.h", "a00188.html", "a00188" ],
     [ "MiraiCPMacros.h", "a00191.html", "a00191" ],
     [ "MiraiCPStringInternal.cpp", "a00194.html", null ],
-    [ "MiraiCPStringInternal.h", "a00197.html", "a00197" ],
+    [ "MiraiCPStringInternal.h", "a00197.html", [
+      [ "MiraiCP::MiraiCPString", "a00241.html", "a00241" ]
+    ] ],
     [ "PlatformThreading.h", "a00200.html", "a00200" ],
     [ "PluginConfig.cpp", "a00203.html", "a00203" ],
     [ "PluginConfig.h", "a00206.html", "a00206" ],
@@ -21,115 +23,96 @@ var files_dup =
     [ "thread.cpp", "a00035.html", "a00035" ],
     [ "Bot.cpp", "a00038.html", "a00038" ],
     [ "Bot.h", "a00041.html", [
-      [ "MiraiCP::Bot", "a00272.html", "a00272" ]
+      [ "MiraiCP::Bot", "a00277.html", "a00277" ]
     ] ],
-    [ "examples/Command.cpp", "a01020.html", null ],
-    [ "include/Command.cpp", "a01023.html", null ],
+    [ "examples/Command.cpp", "a00985.html", null ],
+    [ "include/Command.cpp", "a00988.html", null ],
     [ "Command.h", "a00047.html", [
-      [ "MiraiCP::IRawCommand", "a00276.html", "a00276" ],
-      [ "MiraiCP::IRawCommand::Config", "a00280.html", "a00280" ],
-      [ "MiraiCP::CommandManager", "a00284.html", "a00284" ]
+      [ "MiraiCP::IRawCommand", "a00281.html", "a00281" ],
+      [ "MiraiCP::IRawCommand::Config", "a00285.html", "a00285" ],
+      [ "MiraiCP::CommandManager", "a00289.html", "a00289" ]
     ] ],
     [ "Contact.cpp", "a00050.html", null ],
     [ "Contact.h", "a00053.html", "a00053" ],
     [ "CPPPlugin.cpp", "a00056.html", null ],
     [ "CPPPlugin.h", "a00059.html", [
-      [ "MiraiCP::CPPPlugin", "a00308.html", "a00308" ]
+      [ "MiraiCP::CPPPlugin", "a00313.html", "a00313" ]
     ] ],
     [ "Event.cpp", "a00062.html", null ],
     [ "Event.h", "a00065.html", "a00065" ],
     [ "Exception.cpp", "a00068.html", null ],
     [ "Exception.h", "a00071.html", "a00071" ],
-    [ "examples/ForwardedMessage.cpp", "a01026.html", null ],
-    [ "include/ForwardedMessage.cpp", "a01029.html", null ],
+    [ "examples/ForwardedMessage.cpp", "a00991.html", null ],
+    [ "include/ForwardedMessage.cpp", "a00994.html", null ],
     [ "ForwardedMessage.h", "a00077.html", [
-      [ "MiraiCP::ForwardedMessageDisplayStrategy", "a00480.html", "a00480" ],
-      [ "MiraiCP::ForwardedNode", "a00484.html", "a00484" ],
-      [ "MiraiCP::BaseForwardedMessage", "a00488.html", "a00488" ],
-      [ "MiraiCP::ForwardedMessage", "a00492.html", "a00492" ],
-      [ "MiraiCP::OnlineForwardedMessage", "a00496.html", "a00496" ]
+      [ "MiraiCP::ForwardedMessageDisplayStrategy", "a00485.html", "a00485" ],
+      [ "MiraiCP::ForwardedNode", "a00489.html", "a00489" ],
+      [ "MiraiCP::BaseForwardedMessage", "a00493.html", "a00493" ],
+      [ "MiraiCP::ForwardedMessage", "a00497.html", "a00497" ],
+      [ "MiraiCP::OnlineForwardedMessage", "a00501.html", "a00501" ]
     ] ],
     [ "Friend.cpp", "a00080.html", "a00080" ],
     [ "Friend.h", "a00083.html", [
-      [ "MiraiCP::Friend", "a00500.html", "a00500" ]
+      [ "MiraiCP::Friend", "a00505.html", "a00505" ]
     ] ],
-    [ "examples/Group.cpp", "a01032.html", null ],
-    [ "include/Group.cpp", "a01035.html", "a01035" ],
+    [ "examples/Group.cpp", "a00997.html", null ],
+    [ "include/Group.cpp", "a01000.html", "a01000" ],
     [ "Group.h", "a00089.html", [
-      [ "MiraiCP::GroupData", "a00504.html", "a00504" ],
-      [ "MiraiCP::GroupData::GroupSetting", "a00508.html", "a00508" ],
-      [ "MiraiCP::Group", "a00512.html", "a00512" ],
-      [ "MiraiCP::Group::AnnouncementParams", "a00516.html", "a00516" ],
-      [ "MiraiCP::Group::OnlineAnnouncement", "a00520.html", "a00520" ],
-      [ "MiraiCP::Group::OfflineAnnouncement", "a00524.html", "a00524" ]
+      [ "MiraiCP::GroupData", "a00509.html", "a00509" ],
+      [ "MiraiCP::GroupData::GroupSetting", "a00513.html", "a00513" ],
+      [ "MiraiCP::Group", "a00517.html", "a00517" ],
+      [ "MiraiCP::Group::AnnouncementParams", "a00521.html", "a00521" ],
+      [ "MiraiCP::Group::OnlineAnnouncement", "a00525.html", "a00525" ],
+      [ "MiraiCP::Group::OfflineAnnouncement", "a00529.html", "a00529" ]
     ] ],
     [ "IMiraiData.cpp", "a00092.html", null ],
     [ "IMiraiData.h", "a00095.html", [
-      [ "MiraiCP::IMiraiData", "a00528.html", "a00528" ],
-      [ "MiraiCP::IMiraiData::MiraiDataLocker", "a00532.html", "a00532" ]
+      [ "MiraiCP::IMiraiData", "a00533.html", "a00533" ],
+      [ "MiraiCP::IMiraiData::MiraiDataLocker", "a00537.html", "a00537" ]
     ] ],
     [ "KtOperation.cpp", "a00098.html", "a00098" ],
     [ "KtOperation.h", "a00101.html", "a00101" ],
     [ "loaderApi.cpp", "a00104.html", "a00104" ],
     [ "loaderApi.h", "a00107.html", "a00107" ],
-    [ "examples/Logger.cpp", "a01038.html", null ],
-    [ "include/Logger.cpp", "a01041.html", null ],
+    [ "examples/Logger.cpp", "a01003.html", null ],
+    [ "include/Logger.cpp", "a01006.html", null ],
     [ "Logger.h", "a00113.html", [
-      [ "MiraiCP::Logger_interface", "a00536.html", "a00536" ],
-      [ "MiraiCP::Logger_interface::Handler", "a00540.html", "a00540" ],
-      [ "MiraiCP::Logger", "a00544.html", "a00544" ],
-      [ "MiraiCP::IdLogger", "a00548.html", "a00548" ]
+      [ "MiraiCP::Logger_interface", "a00541.html", "a00541" ],
+      [ "MiraiCP::Logger_interface::Handler", "a00545.html", "a00545" ],
+      [ "MiraiCP::Logger", "a00549.html", "a00549" ],
+      [ "MiraiCP::IdLogger", "a00553.html", "a00553" ]
     ] ],
     [ "LowLevelAPI.cpp", "a00116.html", "a00116" ],
     [ "LowLevelAPI.h", "a00119.html", "a00119" ],
-    [ "examples/Member.cpp", "a01044.html", null ],
-    [ "include/Member.cpp", "a01047.html", "a01047" ],
+    [ "examples/Member.cpp", "a01009.html", null ],
+    [ "include/Member.cpp", "a01012.html", "a01012" ],
     [ "Member.h", "a00125.html", [
-      [ "MiraiCP::MemberData", "a00560.html", "a00560" ],
-      [ "MiraiCP::Member", "a00564.html", "a00564" ]
+      [ "MiraiCP::MemberData", "a00565.html", "a00565" ],
+      [ "MiraiCP::Member", "a00569.html", "a00569" ]
     ] ],
     [ "MessageChain.cpp", "a00128.html", null ],
     [ "MessageChain.h", "a00131.html", [
-      [ "MiraiCP::internal::Message", "a00568.html", "a00568" ],
-      [ "MiraiCP::MessageChain", "a00572.html", "a00572" ]
+      [ "MiraiCP::internal::Message", "a00573.html", "a00573" ],
+      [ "MiraiCP::MessageChain", "a00577.html", "a00577" ]
     ] ],
     [ "MessageSource.cpp", "a00134.html", null ],
     [ "MessageSource.h", "a00137.html", [
-      [ "MiraiCP::MessageSource", "a00576.html", "a00576" ]
+      [ "MiraiCP::MessageSource", "a00581.html", "a00581" ]
     ] ],
     [ "MiraiCode.cpp", "a00140.html", null ],
     [ "MiraiCode.h", "a00143.html", [
-      [ "MiraiCP::MiraiCodeable", "a00580.html", "a00580" ],
-      [ "MiraiCP::MiraiCode", "a00584.html", "a00584" ]
+      [ "MiraiCP::MiraiCodeable", "a00585.html", "a00585" ],
+      [ "MiraiCP::MiraiCode", "a00589.html", "a00589" ]
     ] ],
     [ "MiraiCP.hpp", "a00146.html", null ],
     [ "MiraiCPNewThread.h", "a00149.html", [
-      [ "MiraiCP::MiraiCPNewThread", "a00588.html", "a00588" ]
+      [ "MiraiCP::MiraiCPNewThread", "a00593.html", "a00593" ]
     ] ],
-    [ "examples/Schedule.cpp", "a01050.html", null ],
-    [ "include/Schedule.cpp", "a01053.html", null ],
+    [ "examples/Schedule.cpp", "a01015.html", null ],
+    [ "include/Schedule.cpp", "a01018.html", null ],
     [ "Schedule.h", "a00155.html", "a00155" ],
     [ "SingleMessage.cpp", "a00158.html", null ],
-    [ "SingleMessage.h", "a00161.html", [
-      [ "MiraiCP::URLSharer", "a00592.html", "a00592" ],
-      [ "MiraiCP::SingleMessage", "a00596.html", "a00596" ],
-      [ "MiraiCP::PlainText", "a00600.html", "a00600" ],
-      [ "MiraiCP::At", "a00604.html", "a00604" ],
-      [ "MiraiCP::AtAll", "a00608.html", "a00608" ],
-      [ "MiraiCP::Image", "a00612.html", "a00612" ],
-      [ "MiraiCP::FlashImage", "a00616.html", "a00616" ],
-      [ "MiraiCP::LightApp", "a00620.html", "a00620" ],
-      [ "MiraiCP::ServiceMessage", "a00624.html", "a00624" ],
-      [ "MiraiCP::QuoteReply", "a00628.html", "a00628" ],
-      [ "MiraiCP::OnlineAudio", "a00632.html", "a00632" ],
-      [ "MiraiCP::RemoteFile", "a00636.html", "a00636" ],
-      [ "MiraiCP::RemoteFile::Dinfo", "a00640.html", "a00640" ],
-      [ "MiraiCP::RemoteFile::Finfo", "a00644.html", "a00644" ],
-      [ "MiraiCP::Face", "a00648.html", "a00648" ],
-      [ "MiraiCP::MusicShare", "a00652.html", "a00652" ],
-      [ "MiraiCP::MarketFace", "a00656.html", "a00656" ],
-      [ "MiraiCP::UnSupportMessage", "a00660.html", "a00660" ]
-    ] ],
+    [ "SingleMessage.h", "a00161.html", "a00161" ],
     [ "ThreadTask.cpp", "a00164.html", "a00164" ],
     [ "ThreadTask.h", "a00167.html", "a00167" ],
     [ "Tools.cpp", "a00170.html", "a00170" ],

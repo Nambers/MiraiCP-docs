@@ -1,6 +1,6 @@
 var a00188 =
 [
-    [ "LibLoader::LoaderApi::interface_funcs", "a00236.html", "a00236" ],
+    [ "LibLoader::LoaderApi::interface_funcs", "a00237.html", "a00237" ],
     [ "LOADER_API_COUNT", "a00188.html#acbac5e7c5f4941a592808414fe5caada", null ],
     [ "task_func", "a00188.html#a495bf58ac891b805834e2cc7fa49f2f9", null ],
     [ "task_func_with_id", "a00188.html#a78fdbf75bfb384856ebf9ffb28b21b1f", null ],

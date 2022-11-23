@@ -1,0 +1,25 @@
+var a00517 =
+[
+    [ "AnnouncementParams", "a00521.html", "a00521" ],
+    [ "OfflineAnnouncement", "a00529.html", "a00529" ],
+    [ "OnlineAnnouncement", "a00525.html", "a00525" ],
+    [ "Group", "a00517.html#af1928cbfbc63c41ae8bc6e9af2c83299", null ],
+    [ "Group", "a00517.html#ac37320efdba19e1071762cbd6443dfbe", null ],
+    [ "Group", "a00517.html#a7fb7df3616eea314fce8b3bb61656e8d", null ],
+    [ "DECL_GETTER", "a00517.html#aaabcfcb9b04545fb6dfdb3ce86e7f622", null ],
+    [ "getAnnouncementsList", "a00517.html#a4e01ea12b1be658a14fbd10b26e81fb8", null ],
+    [ "getFile", "a00517.html#a65f239346553568ddc1d75099dbedb6a", null ],
+    [ "getFileByFile", "a00517.html#a2a2d2d51902d818f7e52a72229446a57", null ],
+    [ "getFileById", "a00517.html#a0f975b9bfbedb9d5d4fee9b95c9dbe65", null ],
+    [ "getFileList", "a00517.html#a970ea88f55047e041eaffc2fd7cb7a91", null ],
+    [ "getFileListString", "a00517.html#a2e01dc1b39b189302df6bc9ab9bb779d", null ],
+    [ "getMember", "a00517.html#ac0732b23857cec08f18fec0978de718c", null ],
+    [ "getMemberList", "a00517.html#afbdcfefc41001a3aadbed13b2aed05a9", null ],
+    [ "getOwner", "a00517.html#a49e685a85945a1f7b414e230fa2c27e6", null ],
+    [ "MemberListToString", "a00517.html#a7e4a285e03aac96ef4152d852958329d", null ],
+    [ "operator[]", "a00517.html#a541ba170580c0851bc494b5e038538e4", null ],
+    [ "quit", "a00517.html#a3eddcdf9f6c83da134e878d6815da796", null ],
+    [ "sendFile", "a00517.html#aed703d0ece4a7a9e8a1fe8e5f80eadbc", null ],
+    [ "sendVoice", "a00517.html#aeee3b1999006e12a1ba98fc28448b68b", null ],
+    [ "Contact", "a00517.html#a76d4b1c8c6040df20040808941b7e764", null ]
+];

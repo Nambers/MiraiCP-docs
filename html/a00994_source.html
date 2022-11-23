@@ -1,0 +1,260 @@
+<!-- HTML header for doxygen 1.9.1-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>MiraiCP: ForwardedMessage.cpp 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+ <script type="text/javascript">
+      DoxygenAwesomeDarkModeToggle.init()
+</script>
+</head>
+<body>
+<a href="https://github.com/Nambers/MiraiCP" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#64CEAA; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">MiraiCP
+   &#160;<span id="projectnumber">v2.13.0-alpha-3</span>
+   </div>
+   <div id="projectbrief">MiraiCP api document</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('a00994_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">include/ForwardedMessage.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="a00994.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// Copyright (c) 2020 - 2022. Eritque arcus and contributors.</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">//</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">// This program is free software: you can redistribute it and/or modify</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">// it under the terms of the GNU Affero General Public License as</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">// published by the Free Software Foundation, either version 3 of the</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">// License, or any later version(in your opinion).</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment">//</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment">// This program is distributed in the hope that it will be useful,</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment">// but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment">// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment">// GNU Affero General Public License for more details.</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment">//</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">// You should have received a copy of the GNU Affero General Public License</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">// along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">//</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &quot;<a class="code" href="a00077.html">ForwardedMessage.h</a>&quot;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &quot;<a class="code" href="a00053.html">Contact.h</a>&quot;</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &quot;<a class="code" href="a00101.html">KtOperation.h</a>&quot;</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keyword">namespace </span><a class="code hl_namespace" href="a00218.html">MiraiCP</a> {</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keyword">using</span> <a class="code hl_typedef" href="a00176.html#ab701e3ac61a85b337ec5c1abaad6742d">json</a> = <a class="code hl_typedef" href="a00176.html#ab701e3ac61a85b337ec5c1abaad6742d">nlohmann::json</a>;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="a00489.html#ab85d3c12755094ff9185ec00a65046c7">   25</a></span>    <a class="code hl_function" href="a00489.html#acd0109a76b19e5643fc518e34f971747">ForwardedNode::ForwardedNode</a>(<a class="code hl_typedef" href="a00218.html#a3ae2ebfdaa4574d341b8e7935f29ddb8">QQID</a> <span class="keywordtype">id</span>, std::string name, <a class="code hl_class" href="a00497.html">ForwardedMessage</a> _message, <span class="keywordtype">int</span> t, std::optional&lt;ForwardedMessageDisplayStrategy&gt; display)</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        : id(id), name(std::move(name)),</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>          message(std::make_shared&lt;<a class="code hl_class" href="a00497.html">ForwardedMessage</a>&gt;(std::move(_message))),</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>          time(t), isForwardedMessage(true), display(std::move(display)) {}</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="a00493.html#a7dff007b7b60438abafa3ef089411531">   30</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="a00493.html#a7dff007b7b60438abafa3ef089411531">BaseForwardedMessage::operator==</a>(<span class="keyword">const</span> <a class="code hl_class" href="a00493.html">BaseForwardedMessage</a> &amp;m)<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        <span class="keywordflow">if</span> (this-&gt;<a class="code hl_variable" href="a00493.html#aff916106159979a68f107172f2376967">nodes</a>.size() != m.<a class="code hl_variable" href="a00493.html#aff916106159979a68f107172f2376967">nodes</a>.size()) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        <span class="keywordtype">int</span> i = 0;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        <span class="keywordflow">return</span> std::all_of(this-&gt;<a class="code hl_variable" href="a00493.html#aff916106159979a68f107172f2376967">nodes</a>.begin(), this-&gt;nodes.end(), [&amp;i, &amp;m](<span class="keyword">const</span> <span class="keyword">auto</span> &amp;n) {</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>            return n.message == m[i++].message;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        });</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    }</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="a00497.html#a640db561e48842d35f3c8f574c490cd1">   39</a></span>    <a class="code hl_typedef" href="a00218.html#ac0a8a1bade77a57eeb1d94cfacfb75ce">json</a> <a class="code hl_function" href="a00497.html#a640db561e48842d35f3c8f574c490cd1">ForwardedMessage::nodesToJson</a>() { <span class="comment">// NOLINT(misc-no-recursion)</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <span class="keyword">auto</span> value = json::array();</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <a class="code hl_class" href="a00489.html">ForwardedNode</a> &amp;node: <a class="code hl_variable" href="a00493.html#aff916106159979a68f107172f2376967">nodes</a>) {</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            <a class="code hl_typedef" href="a00218.html#ac0a8a1bade77a57eeb1d94cfacfb75ce">json</a> temp{{<span class="stringliteral">&quot;id&quot;</span>, node.id}, {<span class="stringliteral">&quot;time&quot;</span>, node.time}, {<span class="stringliteral">&quot;name&quot;</span>, node.name}};</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>            <span class="keywordflow">if</span> (node.isForwarded()) {</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>                temp[<span class="stringliteral">&quot;isForwardedMessage&quot;</span>] = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>                temp[<span class="stringliteral">&quot;message&quot;</span>] = std::get&lt;std::shared_ptr&lt;ForwardedMessage&gt;&gt;(node.message)-&gt;<a class="code hl_function" href="a00497.html#a640db561e48842d35f3c8f574c490cd1">nodesToJson</a>().dump();</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="a00497.html#aace4b7f3e015aa6ccb84534231b2a645">display</a>.has_value())</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>                    temp[<span class="stringliteral">&quot;display&quot;</span>] = <a class="code hl_variable" href="a00497.html#aace4b7f3e015aa6ccb84534231b2a645">display</a>-&gt;toJson();</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>            } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>                temp[<span class="stringliteral">&quot;message&quot;</span>] = std::get&lt;MessageChain&gt;(node.message).toMiraiCode();</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            }</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>            value.emplace_back(std::move(temp));</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        }</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        <a class="code hl_typedef" href="a00218.html#ac0a8a1bade77a57eeb1d94cfacfb75ce">json</a> tmp2 = this-&gt;<a class="code hl_variable" href="a00497.html#aa99a2f4399b53a576e6db44d08e11af8">sendmsg</a>;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        tmp2[<span class="stringliteral">&quot;value&quot;</span>] = std::move(value);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        <span class="keywordflow">return</span> tmp2;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    }</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="comment">//发送这个聊天记录</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="a00497.html#ad292bc828145dc9551541dd7852b1ffc">   59</a></span>    <a class="code hl_class" href="a00581.html">MessageSource</a> <a class="code hl_function" href="a00497.html#ad292bc828145dc9551541dd7852b1ffc">ForwardedMessage::sendTo</a>(<a class="code hl_class" href="a00301.html">Contact</a> *c) {</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        <a class="code hl_typedef" href="a00218.html#ac0a8a1bade77a57eeb1d94cfacfb75ce">json</a> text = c-&gt;<a class="code hl_function" href="a00301.html#a89fb588a12ff2d4de10722788945ea55">toJson</a>();</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        text[<span class="stringliteral">&quot;content&quot;</span>] = this-&gt;<a class="code hl_function" href="a00497.html#a640db561e48842d35f3c8f574c490cd1">nodesToJson</a>();</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        <a class="code hl_typedef" href="a00218.html#ac0a8a1bade77a57eeb1d94cfacfb75ce">json</a> temp{{<span class="stringliteral">&quot;text&quot;</span>, text.dump()}};</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        temp[<span class="stringliteral">&quot;botid&quot;</span>] = c-&gt;<a class="code hl_function" href="a00301.html#ac257ebdd1591ea5acf6e045abf28ecba">botid</a>();</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="a00497.html#aace4b7f3e015aa6ccb84534231b2a645">display</a>.has_value())</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>            temp[<span class="stringliteral">&quot;display&quot;</span>] = <a class="code hl_variable" href="a00497.html#aace4b7f3e015aa6ccb84534231b2a645">display</a>-&gt;toJson();</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        std::string re = <a class="code hl_function" href="a00222.html#a22b667b08eb5bb1bb8b603212b55f5e2">KtOperation::ktOperation</a>(<a class="code hl_enumvalue" href="a00222.html#a80a8ec1c1ed6fd9db32d9a878405d412a57986a65eaa7f47722f66d9c7e21cd09">KtOperation::Buildforward</a>, std::move(temp));</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        <a class="code hl_define" href="a00191.html#af2fbe0c25ca6b1307e4581da87ace385">MIRAICP_ERROR_HANDLE</a>(re, <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="a00581.html#a1f98db6bbdf6b7d178bf92f55fd2e4dc">MessageSource::deserializeFromString</a>(re);</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    }</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="a00497.html#a66648f9851b560d2690e8bff0591be49">   71</a></span>    <a class="code hl_class" href="a00497.html">ForwardedMessage</a> <a class="code hl_function" href="a00497.html#a66648f9851b560d2690e8bff0591be49">ForwardedMessage::deserializationFromMessageSourceJson</a>(<span class="keyword">const</span> <a class="code hl_typedef" href="a00218.html#ac0a8a1bade77a57eeb1d94cfacfb75ce">json</a> &amp;j) {</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        std::vector&lt;ForwardedNode&gt; <a class="code hl_variable" href="a00493.html#aff916106159979a68f107172f2376967">nodes</a>;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        <span class="keywordflow">try</span> {</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>            <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;&amp;a: j) {</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>                <span class="keywordflow">if</span> (a.empty() || !a[<span class="stringliteral">&quot;messageChain&quot;</span>].is_array() || a[<span class="stringliteral">&quot;messageChain&quot;</span>].empty()) <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>                <span class="keyword">const</span> json::array_t &amp;messageChainArray = a[<span class="stringliteral">&quot;messageChain&quot;</span>];</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>                <span class="keywordflow">if</span> (messageChainArray[0].contains(<span class="stringliteral">&quot;kind&quot;</span>) &amp;&amp; messageChainArray[0][<span class="stringliteral">&quot;kind&quot;</span>] == <span class="stringliteral">&quot;FORWARD&quot;</span>) {</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>                    <a class="code hl_variable" href="a00493.html#aff916106159979a68f107172f2376967">nodes</a>.emplace_back(a[<span class="stringliteral">&quot;senderId&quot;</span>], a[<span class="stringliteral">&quot;senderName&quot;</span>], <a class="code hl_function" href="a00497.html#a66648f9851b560d2690e8bff0591be49">ForwardedMessage::deserializationFromMessageSourceJson</a>(messageChainArray[1][<span class="stringliteral">&quot;nodeList&quot;</span>]), a[<span class="stringliteral">&quot;time&quot;</span>], <a class="code hl_function" href="a00485.html#a9b7ce691ab8e30900bf0d1085b667bd7">ForwardedMessageDisplayStrategy::defaultStrategy</a>());</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>                } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>                    <a class="code hl_variable" href="a00493.html#aff916106159979a68f107172f2376967">nodes</a>.emplace_back(a[<span class="stringliteral">&quot;senderId&quot;</span>], a[<span class="stringliteral">&quot;senderName&quot;</span>], <a class="code hl_function" href="a00577.html#aa18c3f2a8e8a26558e37dfa6cfe326db">MessageChain::deserializationFromMessageSourceJson</a>(messageChainArray, <span class="keyword">false</span>), a[<span class="stringliteral">&quot;time&quot;</span>]);</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>                }</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>            }</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        } <span class="keywordflow">catch</span> (<span class="keyword">const</span> json::exception &amp;) {</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>            <span class="keywordflow">throw</span> <a class="code hl_class" href="a00425.html">APIException</a>(<span class="stringliteral">&quot;ForwardedMessage格式化异常&quot;</span>, <a class="code hl_define" href="a00191.html#a64a15c1bd1292eb8eb8b5874281372c6">MIRAICP_EXCEPTION_WHERE</a>);</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        }</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="a00497.html#af762297e66b2e0dc83744455eec4addd">ForwardedMessage</a>(std::move(<a class="code hl_variable" href="a00493.html#aff916106159979a68f107172f2376967">nodes</a>));</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    }</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno"><a class="line" href="a00501.html#a450128d01ed1de99ca0f5d95b0661d4a">   90</a></span>    <a class="code hl_class" href="a00501.html">OnlineForwardedMessage</a> <a class="code hl_function" href="a00501.html#a450128d01ed1de99ca0f5d95b0661d4a">OnlineForwardedMessage::deserializationFromMessageSourceJson</a>(<span class="keyword">const</span> <a class="code hl_typedef" href="a00218.html#ac0a8a1bade77a57eeb1d94cfacfb75ce">json</a> &amp;j) {</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        std::vector&lt;ForwardedNode&gt; <a class="code hl_variable" href="a00493.html#aff916106159979a68f107172f2376967">nodes</a>;</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        <span class="keywordflow">try</span> {</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>            <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;&amp;a: j[1][<span class="stringliteral">&quot;nodeList&quot;</span>]) {</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>                <span class="keywordflow">if</span> (a[<span class="stringliteral">&quot;messageChain&quot;</span>][0].contains(<span class="stringliteral">&quot;kind&quot;</span>) &amp;&amp; a[<span class="stringliteral">&quot;messageChain&quot;</span>][0][<span class="stringliteral">&quot;kind&quot;</span>] == <span class="stringliteral">&quot;FORWARD&quot;</span>) {</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>                    <a class="code hl_variable" href="a00493.html#aff916106159979a68f107172f2376967">nodes</a>.emplace_back(a[<span class="stringliteral">&quot;senderId&quot;</span>], a[<span class="stringliteral">&quot;senderName&quot;</span>], <a class="code hl_function" href="a00497.html#a66648f9851b560d2690e8bff0591be49">ForwardedMessage::deserializationFromMessageSourceJson</a>(a[<span class="stringliteral">&quot;messageChain&quot;</span>][1][<span class="stringliteral">&quot;nodeList&quot;</span>]), a[<span class="stringliteral">&quot;time&quot;</span>], <a class="code hl_function" href="a00485.html#a9b7ce691ab8e30900bf0d1085b667bd7">ForwardedMessageDisplayStrategy::defaultStrategy</a>());</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>                } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>                    <a class="code hl_variable" href="a00493.html#aff916106159979a68f107172f2376967">nodes</a>.emplace_back(a[<span class="stringliteral">&quot;senderId&quot;</span>], a[<span class="stringliteral">&quot;senderName&quot;</span>], <a class="code hl_function" href="a00577.html#aa18c3f2a8e8a26558e37dfa6cfe326db">MessageChain::deserializationFromMessageSourceJson</a>(a[<span class="stringliteral">&quot;messageChain&quot;</span>], <span class="keyword">false</span>), a[<span class="stringliteral">&quot;time&quot;</span>]);</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>                }</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>            }</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        } <span class="keywordflow">catch</span> (<span class="keyword">const</span> json::parse_error &amp;) {</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>            <span class="keywordflow">throw</span> <a class="code hl_class" href="a00425.html">APIException</a>(<span class="stringliteral">&quot;OnlineForwardedMessage格式化异常&quot;</span>, <a class="code hl_define" href="a00191.html#a64a15c1bd1292eb8eb8b5874281372c6">MIRAICP_EXCEPTION_WHERE</a>);</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        }</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>        <span class="comment">//if (j[0].contains(&quot;resourceId&quot;) &amp;&amp; !j[0][&quot;resourceId&quot;].is_null())</span></div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="a00501.html#a751236d8d80be1b95a94670c8a97ee03">OnlineForwardedMessage</a>(j[0][<span class="stringliteral">&quot;origin&quot;</span>], <span class="comment">/*j[0][&quot;resourceId&quot;],*/</span> std::move(<a class="code hl_variable" href="a00493.html#aff916106159979a68f107172f2376967">nodes</a>));</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>        <span class="comment">//else</span></div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        <span class="comment">// return OnlineForwardedMessage(j[0][&quot;origin&quot;], std::nullopt, std::move(nodes));</span></div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    }</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span> </div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno"><a class="line" href="a00501.html#a04d1f06e7db79a63c469fd0a33b3d361">  112</a></span>    <a class="code hl_class" href="a00497.html">ForwardedMessage</a> <a class="code hl_function" href="a00501.html#a04d1f06e7db79a63c469fd0a33b3d361">OnlineForwardedMessage::toForwardedMessage</a>(std::optional&lt;ForwardedMessageDisplayStrategy&gt; display)<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="a00497.html">ForwardedMessage</a>(this-&gt;<a class="code hl_variable" href="a00493.html#aff916106159979a68f107172f2376967">nodes</a>, std::move(display));</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    }</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>} <span class="comment">// namespace MiraiCP</span></div>
+<div class="ttc" id="aa00053_html"><div class="ttname"><a href="a00053.html">Contact.h</a></div></div>
+<div class="ttc" id="aa00077_html"><div class="ttname"><a href="a00077.html">ForwardedMessage.h</a></div></div>
+<div class="ttc" id="aa00101_html"><div class="ttname"><a href="a00101.html">KtOperation.h</a></div></div>
+<div class="ttc" id="aa00176_html_ab701e3ac61a85b337ec5c1abaad6742d"><div class="ttname"><a href="a00176.html#ab701e3ac61a85b337ec5c1abaad6742d">json</a></div><div class="ttdeci">nlohmann::json json</div><div class="ttdef"><b>Definition:</b> <a href="a00176_source.html#l00031">utils.cpp:31</a></div></div>
+<div class="ttc" id="aa00191_html_a64a15c1bd1292eb8eb8b5874281372c6"><div class="ttname"><a href="a00191.html#a64a15c1bd1292eb8eb8b5874281372c6">MIRAICP_EXCEPTION_WHERE</a></div><div class="ttdeci">#define MIRAICP_EXCEPTION_WHERE</div><div class="ttdef"><b>Definition:</b> <a href="a00191_source.html#l00120">MiraiCPMacros.h:120</a></div></div>
+<div class="ttc" id="aa00191_html_af2fbe0c25ca6b1307e4581da87ace385"><div class="ttname"><a href="a00191.html#af2fbe0c25ca6b1307e4581da87ace385">MIRAICP_ERROR_HANDLE</a></div><div class="ttdeci">#define MIRAICP_ERROR_HANDLE(x, y)</div><div class="ttdef"><b>Definition:</b> <a href="a00191_source.html#l00151">MiraiCPMacros.h:151</a></div></div>
+<div class="ttc" id="aa00218_html"><div class="ttname"><a href="a00218.html">MiraiCP</a></div><div class="ttdef"><b>Definition:</b> <a href="a00185_source.html#l00041">commonTypes.h:41</a></div></div>
+<div class="ttc" id="aa00218_html_a3ae2ebfdaa4574d341b8e7935f29ddb8"><div class="ttname"><a href="a00218.html#a3ae2ebfdaa4574d341b8e7935f29ddb8">MiraiCP::QQID</a></div><div class="ttdeci">unsigned long long QQID</div><div class="ttdef"><b>Definition:</b> <a href="a00185_source.html#l00042">commonTypes.h:42</a></div></div>
+<div class="ttc" id="aa00218_html_ac0a8a1bade77a57eeb1d94cfacfb75ce"><div class="ttname"><a href="a00218.html#ac0a8a1bade77a57eeb1d94cfacfb75ce">MiraiCP::json</a></div><div class="ttdeci">nlohmann::json json</div><div class="ttdef"><b>Definition:</b> <a href="a00203_source.html#l00022">PluginConfig.cpp:22</a></div></div>
+<div class="ttc" id="aa00222_html_a22b667b08eb5bb1bb8b603212b55f5e2"><div class="ttname"><a href="a00222.html#a22b667b08eb5bb1bb8b603212b55f5e2">MiraiCP::KtOperation::ktOperation</a></div><div class="ttdeci">std::string ktOperation(operation_set type, nlohmann::json data, bool catchErr, const std::string &amp;errorInfo)</div><div class="ttdoc">调用mirai操作</div><div class="ttdef"><b>Definition:</b> <a href="a00098_source.html#l00025">KtOperation.cpp:25</a></div></div>
+<div class="ttc" id="aa00222_html_a80a8ec1c1ed6fd9db32d9a878405d412a57986a65eaa7f47722f66d9c7e21cd09"><div class="ttname"><a href="a00222.html#a80a8ec1c1ed6fd9db32d9a878405d412a57986a65eaa7f47722f66d9c7e21cd09">MiraiCP::KtOperation::Buildforward</a></div><div class="ttdeci">@ Buildforward</div><div class="ttdoc">构建转发信息</div><div class="ttdef"><b>Definition:</b> <a href="a00101_source.html#l00062">KtOperation.h:62</a></div></div>
+<div class="ttc" id="aa00301_html"><div class="ttname"><a href="a00301.html">MiraiCP::Contact</a></div><div class="ttdoc">group, friend, member的父类</div><div class="ttdef"><b>Definition:</b> <a href="a00053_source.html#l00092">Contact.h:92</a></div></div>
+<div class="ttc" id="aa00301_html_a89fb588a12ff2d4de10722788945ea55"><div class="ttname"><a href="a00301.html#a89fb588a12ff2d4de10722788945ea55">MiraiCP::Contact::toJson</a></div><div class="ttdeci">nlohmann::json toJson() const</div><div class="ttdoc">序列化到json对象</div><div class="ttdef"><b>Definition:</b> <a href="a00053_source.html#l00258">Contact.h:258</a></div></div>
+<div class="ttc" id="aa00301_html_ac257ebdd1591ea5acf6e045abf28ecba"><div class="ttname"><a href="a00301.html#ac257ebdd1591ea5acf6e045abf28ecba">MiraiCP::Contact::botid</a></div><div class="ttdeci">QQID botid() const</div><div class="ttdef"><b>Definition:</b> <a href="a00053_source.html#l00178">Contact.h:178</a></div></div>
+<div class="ttc" id="aa00425_html"><div class="ttname"><a href="a00425.html">MiraiCP::APIException</a></div><div class="ttdef"><b>Definition:</b> <a href="a00071_source.html#l00122">Exception.h:122</a></div></div>
+<div class="ttc" id="aa00485_html_a9b7ce691ab8e30900bf0d1085b667bd7"><div class="ttname"><a href="a00485.html#a9b7ce691ab8e30900bf0d1085b667bd7">MiraiCP::ForwardedMessageDisplayStrategy::defaultStrategy</a></div><div class="ttdeci">static std::optional&lt; ForwardedMessageDisplayStrategy &gt; defaultStrategy()</div><div class="ttdef"><b>Definition:</b> <a href="a00077_source.html#l00042">ForwardedMessage.h:42</a></div></div>
+<div class="ttc" id="aa00489_html"><div class="ttname"><a href="a00489.html">MiraiCP::ForwardedNode</a></div><div class="ttdef"><b>Definition:</b> <a href="a00077_source.html#l00063">ForwardedMessage.h:63</a></div></div>
+<div class="ttc" id="aa00489_html_acd0109a76b19e5643fc518e34f971747"><div class="ttname"><a href="a00489.html#acd0109a76b19e5643fc518e34f971747">MiraiCP::ForwardedNode::ForwardedNode</a></div><div class="ttdeci">ForwardedNode(QQID id, std::string name, MessageChain message, int time)</div><div class="ttdoc">聊天记录里的每条信息</div><div class="ttdef"><b>Definition:</b> <a href="a00077_source.html#l00084">ForwardedMessage.h:84</a></div></div>
+<div class="ttc" id="aa00493_html"><div class="ttname"><a href="a00493.html">MiraiCP::BaseForwardedMessage</a></div><div class="ttdef"><b>Definition:</b> <a href="a00077_source.html#l00103">ForwardedMessage.h:103</a></div></div>
+<div class="ttc" id="aa00493_html_a7dff007b7b60438abafa3ef089411531"><div class="ttname"><a href="a00493.html#a7dff007b7b60438abafa3ef089411531">MiraiCP::BaseForwardedMessage::operator==</a></div><div class="ttdeci">bool operator==(const BaseForwardedMessage &amp;m) const</div><div class="ttdef"><b>Definition:</b> <a href="a00994_source.html#l00030">include/ForwardedMessage.cpp:30</a></div></div>
+<div class="ttc" id="aa00493_html_aff916106159979a68f107172f2376967"><div class="ttname"><a href="a00493.html#aff916106159979a68f107172f2376967">MiraiCP::BaseForwardedMessage::nodes</a></div><div class="ttdeci">std::vector&lt; ForwardedNode &gt; nodes</div><div class="ttdoc">每条信息</div><div class="ttdef"><b>Definition:</b> <a href="a00077_source.html#l00106">ForwardedMessage.h:106</a></div></div>
+<div class="ttc" id="aa00497_html"><div class="ttname"><a href="a00497.html">MiraiCP::ForwardedMessage</a></div><div class="ttdef"><b>Definition:</b> <a href="a00077_source.html#l00144">ForwardedMessage.h:144</a></div></div>
+<div class="ttc" id="aa00497_html_a640db561e48842d35f3c8f574c490cd1"><div class="ttname"><a href="a00497.html#a640db561e48842d35f3c8f574c490cd1">MiraiCP::ForwardedMessage::nodesToJson</a></div><div class="ttdeci">nlohmann::json nodesToJson()</div><div class="ttdef"><b>Definition:</b> <a href="a00994_source.html#l00039">include/ForwardedMessage.cpp:39</a></div></div>
+<div class="ttc" id="aa00497_html_a66648f9851b560d2690e8bff0591be49"><div class="ttname"><a href="a00497.html#a66648f9851b560d2690e8bff0591be49">MiraiCP::ForwardedMessage::deserializationFromMessageSourceJson</a></div><div class="ttdeci">static ForwardedMessage deserializationFromMessageSourceJson(const nlohmann::json &amp;j)</div><div class="ttdef"><b>Definition:</b> <a href="a00994_source.html#l00071">include/ForwardedMessage.cpp:71</a></div></div>
+<div class="ttc" id="aa00497_html_aa99a2f4399b53a576e6db44d08e11af8"><div class="ttname"><a href="a00497.html#aa99a2f4399b53a576e6db44d08e11af8">MiraiCP::ForwardedMessage::sendmsg</a></div><div class="ttdeci">nlohmann::json sendmsg</div><div class="ttdoc">json except value</div><div class="ttdef"><b>Definition:</b> <a href="a00077_source.html#l00147">ForwardedMessage.h:147</a></div></div>
+<div class="ttc" id="aa00497_html_aace4b7f3e015aa6ccb84534231b2a645"><div class="ttname"><a href="a00497.html#aace4b7f3e015aa6ccb84534231b2a645">MiraiCP::ForwardedMessage::display</a></div><div class="ttdeci">std::optional&lt; ForwardedMessageDisplayStrategy &gt; display</div><div class="ttdoc">显示策略</div><div class="ttdef"><b>Definition:</b> <a href="a00077_source.html#l00151">ForwardedMessage.h:151</a></div></div>
+<div class="ttc" id="aa00497_html_ad292bc828145dc9551541dd7852b1ffc"><div class="ttname"><a href="a00497.html#ad292bc828145dc9551541dd7852b1ffc">MiraiCP::ForwardedMessage::sendTo</a></div><div class="ttdeci">MessageSource sendTo(Contact *c)</div><div class="ttdoc">发送给群或好友或群成员</div><div class="ttdef"><b>Definition:</b> <a href="a00994_source.html#l00059">include/ForwardedMessage.cpp:59</a></div></div>
+<div class="ttc" id="aa00497_html_af762297e66b2e0dc83744455eec4addd"><div class="ttname"><a href="a00497.html#af762297e66b2e0dc83744455eec4addd">MiraiCP::ForwardedMessage::ForwardedMessage</a></div><div class="ttdeci">ForwardedMessage(std::initializer_list&lt; ForwardedNode &gt; nodes, std::optional&lt; ForwardedMessageDisplayStrategy &gt; display=ForwardedMessageDisplayStrategy::defaultStrategy())</div><div class="ttdoc">构建一条聊天记录</div><div class="ttdef"><b>Definition:</b> <a href="a00077_source.html#l00158">ForwardedMessage.h:158</a></div></div>
+<div class="ttc" id="aa00501_html"><div class="ttname"><a href="a00501.html">MiraiCP::OnlineForwardedMessage</a></div><div class="ttdoc">接收到的转发消息, 发送用 MiraiCP::ForwardedMessage</div><div class="ttdef"><b>Definition:</b> <a href="a00077_source.html#l00180">ForwardedMessage.h:180</a></div></div>
+<div class="ttc" id="aa00501_html_a04d1f06e7db79a63c469fd0a33b3d361"><div class="ttname"><a href="a00501.html#a04d1f06e7db79a63c469fd0a33b3d361">MiraiCP::OnlineForwardedMessage::toForwardedMessage</a></div><div class="ttdeci">ForwardedMessage toForwardedMessage(std::optional&lt; ForwardedMessageDisplayStrategy &gt; display=ForwardedMessageDisplayStrategy::defaultStrategy()) const</div><div class="ttdef"><b>Definition:</b> <a href="a00994_source.html#l00112">include/ForwardedMessage.cpp:112</a></div></div>
+<div class="ttc" id="aa00501_html_a450128d01ed1de99ca0f5d95b0661d4a"><div class="ttname"><a href="a00501.html#a450128d01ed1de99ca0f5d95b0661d4a">MiraiCP::OnlineForwardedMessage::deserializationFromMessageSourceJson</a></div><div class="ttdeci">static OnlineForwardedMessage deserializationFromMessageSourceJson(const nlohmann::json &amp;j)</div><div class="ttdef"><b>Definition:</b> <a href="a00994_source.html#l00090">include/ForwardedMessage.cpp:90</a></div></div>
+<div class="ttc" id="aa00501_html_a751236d8d80be1b95a94670c8a97ee03"><div class="ttname"><a href="a00501.html#a751236d8d80be1b95a94670c8a97ee03">MiraiCP::OnlineForwardedMessage::OnlineForwardedMessage</a></div><div class="ttdeci">OnlineForwardedMessage(nlohmann::json o, std::vector&lt; ForwardedNode &gt; nodes)</div><div class="ttdef"><b>Definition:</b> <a href="a00077_source.html#l00188">ForwardedMessage.h:188</a></div></div>
+<div class="ttc" id="aa00577_html_aa18c3f2a8e8a26558e37dfa6cfe326db"><div class="ttname"><a href="a00577.html#aa18c3f2a8e8a26558e37dfa6cfe326db">MiraiCP::MessageChain::deserializationFromMessageSourceJson</a></div><div class="ttdeci">static MessageChain deserializationFromMessageSourceJson(const std::string &amp;msg, bool origin=true)</div><div class="ttdef"><b>Definition:</b> <a href="a00131_source.html#l00266">MessageChain.h:266</a></div></div>
+<div class="ttc" id="aa00581_html"><div class="ttname"><a href="a00581.html">MiraiCP::MessageSource</a></div><div class="ttdef"><b>Definition:</b> <a href="a00137_source.html#l00031">MessageSource.h:31</a></div></div>
+<div class="ttc" id="aa00581_html_a1f98db6bbdf6b7d178bf92f55fd2e4dc"><div class="ttname"><a href="a00581.html#a1f98db6bbdf6b7d178bf92f55fd2e4dc">MiraiCP::MessageSource::deserializeFromString</a></div><div class="ttdeci">static MessageSource deserializeFromString(const std::string &amp;source)</div><div class="ttdoc">从json字符串反序列化到MessageSource对象</div><div class="ttdef"><b>Definition:</b> <a href="a00134_source.html#l00043">MessageSource.cpp:43</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b0856f6b0d80ccb263b2f415c91f9e17.html">include</a></li><li class="navelem"><a class="el" href="a00994.html">ForwardedMessage.cpp</a></li>
+    <li class="footer">生成于 2022年 十一月 23日 星期三 10:27:50 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+  </ul>
+</div>
+    </body>
+</html>

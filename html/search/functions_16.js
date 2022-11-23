@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['vector_0',['vector',['../a00572.html#a50c0cf1556ee9547aa6d1e3f100bafc7',1,'MiraiCP::MessageChain']]],
-  ['vectortostring_1',['VectorToString',['../a00227.html#a913031600a073d2166b905a535e599f2',1,'MiraiCP::Tools']]]
+  ['warning_0',['warning',['../a00541.html#a279a66d53b8b825f4a9ebc8fe30f20d6',1,'MiraiCP::Logger_interface']]],
+  ['what_1',['what',['../a00405.html#aaac831e38c70fa529b8894b825dba04c',1,'MiraiCP::MiraiCPExceptionBase']]]
 ];
