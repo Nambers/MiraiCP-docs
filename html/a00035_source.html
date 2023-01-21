@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiraiCP: thread.cpp 源文件</title>
+<title>MiraiCP: ktInterface.h 源文件</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -35,7 +35,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MiraiCP
-   &#160;<span id="projectnumber">v2.13.0-alpha-3</span>
+   &#160;<span id="projectnumber">v2.13.1</span>
    </div>
    <div id="projectbrief">MiraiCP api document</div>
   </td>
@@ -93,10 +93,10 @@ $(document).ready(function(){initNavTree('a00035_source.html',''); initResizable
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">thread.cpp</div></div>
+  <div class="headertitle"><div class="title">ktInterface.h</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="a00035.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// Copyright (c) 2020 - 2022. Eritque arcus and contributors.</span></div>
+<a href="a00035.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// Copyright (c) 2022 - 2022. Antares, Eritque arcus and contributors.</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">//</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">// This program is free software: you can redistribute it and/or modify</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">// it under the terms of the GNU Affero General Public License as</span></div>
@@ -111,54 +111,51 @@ $(document).ready(function(){initNavTree('a00035_source.html',''); initResizable
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">// You should have received a copy of the GNU Affero General Public License</span></div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">// along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</span></div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">//</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;<a class="code" href="a00146.html">MiraiCP.hpp</a>&gt;</span></div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &lt;thread&gt;</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">using namespace </span><a class="code hl_namespace" href="a00218.html">MiraiCP</a>;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#ifndef MIRAICP_PRO_KTINTERFACE_H</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#define MIRAICP_PRO_KTINTERFACE_H</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keyword">const</span> <a class="code hl_struct" href="a00245.html">PluginConfig</a> CPPPlugin::config{</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        <span class="stringliteral">&quot;id&quot;</span>,   <span class="comment">// 插件id</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        <span class="stringliteral">&quot;test&quot;</span>, <span class="comment">// 插件名称</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        <span class="stringliteral">&quot;v1.0&quot;</span>, <span class="comment">// 插件版本</span></div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        <span class="stringliteral">&quot;a&quot;</span>,    <span class="comment">// 插件作者</span></div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>                <span class="comment">// 可选：插件描述</span></div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>                <span class="comment">// 可选：日期</span></div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>};</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="a00035.html#a9a37a193bc61a8127790f891efc1af05">   30</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="a00035.html#a9a37a193bc61a8127790f891efc1af05">func</a>(<span class="keywordtype">int</span> i, <span class="keywordtype">bool</span> b) {</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;hello world&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>}</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &quot;<a class="code" href="a00047.html">LoaderMacro.h</a>&quot;</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment">// EXPORT functions</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="a00035.html#a3d68440994d4ab2136706628a2e6f77f">   25</a></span><a class="code hl_define" href="a00047.html#acad5926f07c36447dfe9c95bc44c6569">LOADER_EXPORT</a> <a class="code hl_define" href="a00047.html#aa59fc32caa9a0e627c60a03a7a446c98">JRETURNTYPE</a> <a class="code hl_define" href="a00047.html#a70f859fa14d7c0bb2a19e4af118ee014">DECL_EXPORT_NAME</a>(<a class="code hl_function" href="a00035.html#a3d68440994d4ab2136706628a2e6f77f">Verify</a>)(<a class="code hl_define" href="a00047.html#a959f3b2a150b26823662a8c5de4af002">J_ARGS_AND_STRING</a>, <a class="code hl_define" href="a00047.html#aae63af684167e1a19dc5e3332dbc7238">JSTRING</a>);</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="a00035.html#a73d4a4e502a17765df566b528d6a9484">   27</a></span><a class="code hl_define" href="a00047.html#acad5926f07c36447dfe9c95bc44c6569">LOADER_EXPORT</a> <a class="code hl_define" href="a00047.html#aa59fc32caa9a0e627c60a03a7a446c98">JRETURNTYPE</a> <a class="code hl_define" href="a00047.html#a70f859fa14d7c0bb2a19e4af118ee014">DECL_EXPORT_NAME</a>(<a class="code hl_function" href="a00035.html#a73d4a4e502a17765df566b528d6a9484">Event</a>)(<a class="code hl_define" href="a00047.html#a959f3b2a150b26823662a8c5de4af002">J_ARGS_AND_STRING</a>);</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="a00035.html#a3b230352980d44ad05ac47ceae3f007c">   29</a></span><a class="code hl_define" href="a00047.html#acad5926f07c36447dfe9c95bc44c6569">LOADER_EXPORT</a> <a class="code hl_define" href="a00047.html#aa59fc32caa9a0e627c60a03a7a446c98">JRETURNTYPE</a> <a class="code hl_define" href="a00047.html#a70f859fa14d7c0bb2a19e4af118ee014">DECL_EXPORT_NAME</a>(<a class="code hl_function" href="a00035.html#a3b230352980d44ad05ac47ceae3f007c">PluginDisable</a>)(<a class="code hl_define" href="a00047.html#a919c2f594760ce688ff10318059a02b6">J_ARGS</a>);</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#ifndef LOADER_NATIVE</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="keywordtype">int</span> <a class="code hl_function" href="a00035.html#a0c4a7b01410b519eeff58a050bc194cb">registerMethods</a>(JNIEnv *env, <span class="keyword">const</span> <span class="keywordtype">char</span> *className, <span class="keyword">const</span> JNINativeMethod *gMethods, <span class="keywordtype">int</span> numMethods);</div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="keyword">class </span>Main : <span class="keyword">public</span> <a class="code hl_class" href="a00313.html">CPPPlugin</a> {</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    Main() : <a class="code hl_class" href="a00313.html">CPPPlugin</a>() {}</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="a00313.html#ad3d1188d089ab0fc945475f988c64fa7">onEnable</a>()<span class="keyword"> override </span>{</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        Event::registerEvent&lt;GroupMessageEvent&gt;([](<a class="code hl_class" href="a00329.html">GroupMessageEvent</a> a) {</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>            <a class="code hl_class" href="a00593.html">MiraiCPNewThread</a>(<a class="code hl_function" href="a00035.html#a9a37a193bc61a8127790f891efc1af05">func</a>, 1, <span class="keyword">true</span>).detach();</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        });</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    }</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>};</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="keywordtype">void</span> <a class="code hl_function" href="a00218.html#a12d27be6730af4fc321ac1eb231db281">MiraiCP::enrollPlugin</a>() {</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <a class="code hl_function" href="a00218.html#a12d27be6730af4fc321ac1eb231db281">MiraiCP::enrollPlugin</a>(<span class="keyword">new</span> Main());</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>}</div>
-<div class="ttc" id="aa00035_html_a9a37a193bc61a8127790f891efc1af05"><div class="ttname"><a href="a00035.html#a9a37a193bc61a8127790f891efc1af05">func</a></div><div class="ttdeci">void func(int i, bool b)</div><div class="ttdef"><b>Definition:</b> <a href="a00035_source.html#l00030">thread.cpp:30</a></div></div>
-<div class="ttc" id="aa00146_html"><div class="ttname"><a href="a00146.html">MiraiCP.hpp</a></div></div>
-<div class="ttc" id="aa00218_html"><div class="ttname"><a href="a00218.html">MiraiCP</a></div><div class="ttdef"><b>Definition:</b> <a href="a00185_source.html#l00041">commonTypes.h:41</a></div></div>
-<div class="ttc" id="aa00218_html_a12d27be6730af4fc321ac1eb231db281"><div class="ttname"><a href="a00218.html#a12d27be6730af4fc321ac1eb231db281">MiraiCP::enrollPlugin</a></div><div class="ttdeci">void enrollPlugin()</div><div class="ttdoc">注册插件函数, 需要被插件实现, 类似onStart();</div><div class="ttdef"><b>Definition:</b> <a href="a00179_source.html#l00037">utils.h:37</a></div></div>
-<div class="ttc" id="aa00245_html"><div class="ttname"><a href="a00245.html">MiraiCP::PluginConfig</a></div><div class="ttdef"><b>Definition:</b> <a href="a00206_source.html#l00029">PluginConfig.h:29</a></div></div>
-<div class="ttc" id="aa00313_html"><div class="ttname"><a href="a00313.html">MiraiCP::CPPPlugin</a></div><div class="ttdoc">插件父类</div><div class="ttdef"><b>Definition:</b> <a href="a00059_source.html#l00027">CPPPlugin.h:27</a></div></div>
-<div class="ttc" id="aa00313_html_ad3d1188d089ab0fc945475f988c64fa7"><div class="ttname"><a href="a00313.html#ad3d1188d089ab0fc945475f988c64fa7">MiraiCP::CPPPlugin::onEnable</a></div><div class="ttdeci">virtual void onEnable()</div><div class="ttdoc">插件启用时调用一次</div><div class="ttdef"><b>Definition:</b> <a href="a00059_source.html#l00047">CPPPlugin.h:47</a></div></div>
-<div class="ttc" id="aa00329_html"><div class="ttname"><a href="a00329.html">MiraiCP::GroupMessageEvent</a></div><div class="ttdoc">群消息事件声明</div><div class="ttdef"><b>Definition:</b> <a href="a00065_source.html#l00101">Event.h:101</a></div></div>
-<div class="ttc" id="aa00593_html"><div class="ttname"><a href="a00593.html">MiraiCP::MiraiCPNewThread</a></div><div class="ttdoc">MiraiCP 对 std::thread 的封装</div><div class="ttdef"><b>Definition:</b> <a href="a00149_source.html#l00033">MiraiCPNewThread.h:33</a></div></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="a00035.html#a54c4b6ec7b4876213ab9e9f888da04ec">   34</a></span><span class="keyword">const</span> JNINativeMethod <a class="code hl_variable" href="a00035.html#a54c4b6ec7b4876213ab9e9f888da04ec">method_table</a>[]{</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        {(<span class="keywordtype">char</span> *) <span class="stringliteral">&quot;Verify&quot;</span>, (<span class="keywordtype">char</span> *) <span class="stringliteral">&quot;(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Void;&quot;</span>, (jstring *) <a class="code hl_function" href="a00035.html#a3d68440994d4ab2136706628a2e6f77f">Verify</a>},</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        {(<span class="keywordtype">char</span> *) <span class="stringliteral">&quot;Event&quot;</span>, (<span class="keywordtype">char</span> *) <span class="stringliteral">&quot;(Ljava/lang/String;)Ljava/lang/Void;&quot;</span>, (jstring *) <a class="code hl_function" href="a00035.html#a73d4a4e502a17765df566b528d6a9484">Event</a>},</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        {(<span class="keywordtype">char</span> *) <span class="stringliteral">&quot;PluginDisable&quot;</span>, (<span class="keywordtype">char</span> *) <span class="stringliteral">&quot;()Ljava/lang/Void;&quot;</span>, (jobject *) <a class="code hl_function" href="a00035.html#a3b230352980d44ad05ac47ceae3f007c">PluginDisable</a>}};</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="preprocessor">#endif </span><span class="comment">//MIRAICP_PRO_KTINTERFACE_H</span></div>
+<div class="ttc" id="aa00035_html_a0c4a7b01410b519eeff58a050bc194cb"><div class="ttname"><a href="a00035.html#a0c4a7b01410b519eeff58a050bc194cb">registerMethods</a></div><div class="ttdeci">int registerMethods(JNIEnv *env, const char *className, const JNINativeMethod *gMethods, int numMethods)</div><div class="ttdef"><b>Definition:</b> <a href="a00200_source.html#l00141">ktInterface.cpp:141</a></div></div>
+<div class="ttc" id="aa00035_html_a3b230352980d44ad05ac47ceae3f007c"><div class="ttname"><a href="a00035.html#a3b230352980d44ad05ac47ceae3f007c">PluginDisable</a></div><div class="ttdeci">LOADER_EXPORT JRETURNTYPE DECL_EXPORT_NAME() PluginDisable(J_ARGS)</div></div>
+<div class="ttc" id="aa00035_html_a3d68440994d4ab2136706628a2e6f77f"><div class="ttname"><a href="a00035.html#a3d68440994d4ab2136706628a2e6f77f">Verify</a></div><div class="ttdeci">LOADER_EXPORT JRETURNTYPE DECL_EXPORT_NAME() Verify(J_ARGS_AND_STRING, JSTRING)</div></div>
+<div class="ttc" id="aa00035_html_a54c4b6ec7b4876213ab9e9f888da04ec"><div class="ttname"><a href="a00035.html#a54c4b6ec7b4876213ab9e9f888da04ec">method_table</a></div><div class="ttdeci">const JNINativeMethod method_table[]</div><div class="ttdef"><b>Definition:</b> <a href="a00035_source.html#l00034">ktInterface.h:34</a></div></div>
+<div class="ttc" id="aa00035_html_a73d4a4e502a17765df566b528d6a9484"><div class="ttname"><a href="a00035.html#a73d4a4e502a17765df566b528d6a9484">Event</a></div><div class="ttdeci">LOADER_EXPORT JRETURNTYPE DECL_EXPORT_NAME() Event(J_ARGS_AND_STRING)</div></div>
+<div class="ttc" id="aa00047_html"><div class="ttname"><a href="a00047.html">LoaderMacro.h</a></div></div>
+<div class="ttc" id="aa00047_html_a70f859fa14d7c0bb2a19e4af118ee014"><div class="ttname"><a href="a00047.html#a70f859fa14d7c0bb2a19e4af118ee014">DECL_EXPORT_NAME</a></div><div class="ttdeci">#define DECL_EXPORT_NAME(x)</div><div class="ttdef"><b>Definition:</b> <a href="a00047_source.html#l00030">LoaderMacro.h:30</a></div></div>
+<div class="ttc" id="aa00047_html_a919c2f594760ce688ff10318059a02b6"><div class="ttname"><a href="a00047.html#a919c2f594760ce688ff10318059a02b6">J_ARGS</a></div><div class="ttdeci">#define J_ARGS</div><div class="ttdef"><b>Definition:</b> <a href="a00047_source.html#l00031">LoaderMacro.h:31</a></div></div>
+<div class="ttc" id="aa00047_html_a959f3b2a150b26823662a8c5de4af002"><div class="ttname"><a href="a00047.html#a959f3b2a150b26823662a8c5de4af002">J_ARGS_AND_STRING</a></div><div class="ttdeci">#define J_ARGS_AND_STRING</div><div class="ttdef"><b>Definition:</b> <a href="a00047_source.html#l00032">LoaderMacro.h:32</a></div></div>
+<div class="ttc" id="aa00047_html_aa59fc32caa9a0e627c60a03a7a446c98"><div class="ttname"><a href="a00047.html#aa59fc32caa9a0e627c60a03a7a446c98">JRETURNTYPE</a></div><div class="ttdeci">#define JRETURNTYPE</div><div class="ttdef"><b>Definition:</b> <a href="a00047_source.html#l00024">LoaderMacro.h:24</a></div></div>
+<div class="ttc" id="aa00047_html_aae63af684167e1a19dc5e3332dbc7238"><div class="ttname"><a href="a00047.html#aae63af684167e1a19dc5e3332dbc7238">JSTRING</a></div><div class="ttdeci">#define JSTRING</div><div class="ttdef"><b>Definition:</b> <a href="a00047_source.html#l00026">LoaderMacro.h:26</a></div></div>
+<div class="ttc" id="aa00047_html_acad5926f07c36447dfe9c95bc44c6569"><div class="ttname"><a href="a00047.html#acad5926f07c36447dfe9c95bc44c6569">LOADER_EXPORT</a></div><div class="ttdeci">#define LOADER_EXPORT</div><div class="ttdef"><b>Definition:</b> <a href="a00047_source.html#l00029">LoaderMacro.h:29</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_e931c1a3f0014e624d0645a271726ad2.html">examples</a></li><li class="navelem"><a class="el" href="a00035.html">thread.cpp</a></li>
-    <li class="footer">生成于 2022年 十一月 23日 星期三 10:27:50 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_bda05eb71e068b870dbf680d28584ff8.html">libloader</a></li><li class="navelem"><a class="el" href="a00035.html">ktInterface.h</a></li>
+    <li class="footer">生成于 2023年 一月 21日 星期六 14:32:48 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
     </body>

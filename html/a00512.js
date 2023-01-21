@@ -1,25 +1,10 @@
 var a00512 =
 [
-    [ "AnnouncementParams", "a00516.html", "a00516" ],
-    [ "OfflineAnnouncement", "a00524.html", "a00524" ],
-    [ "OnlineAnnouncement", "a00520.html", "a00520" ],
-    [ "Group", "a00512.html#af1928cbfbc63c41ae8bc6e9af2c83299", null ],
-    [ "Group", "a00512.html#ac37320efdba19e1071762cbd6443dfbe", null ],
-    [ "Group", "a00512.html#a7fb7df3616eea314fce8b3bb61656e8d", null ],
-    [ "DECL_GETTER", "a00512.html#aaabcfcb9b04545fb6dfdb3ce86e7f622", null ],
-    [ "getAnnouncementsList", "a00512.html#a4e01ea12b1be658a14fbd10b26e81fb8", null ],
-    [ "getFile", "a00512.html#a65f239346553568ddc1d75099dbedb6a", null ],
-    [ "getFileByFile", "a00512.html#a2a2d2d51902d818f7e52a72229446a57", null ],
-    [ "getFileById", "a00512.html#a0f975b9bfbedb9d5d4fee9b95c9dbe65", null ],
-    [ "getFileList", "a00512.html#a970ea88f55047e041eaffc2fd7cb7a91", null ],
-    [ "getFileListString", "a00512.html#a2e01dc1b39b189302df6bc9ab9bb779d", null ],
-    [ "getMember", "a00512.html#ac0732b23857cec08f18fec0978de718c", null ],
-    [ "getMemberList", "a00512.html#afbdcfefc41001a3aadbed13b2aed05a9", null ],
-    [ "getOwner", "a00512.html#a49e685a85945a1f7b414e230fa2c27e6", null ],
-    [ "MemberListToString", "a00512.html#a7e4a285e03aac96ef4152d852958329d", null ],
-    [ "operator[]", "a00512.html#a541ba170580c0851bc494b5e038538e4", null ],
-    [ "quit", "a00512.html#a3eddcdf9f6c83da134e878d6815da796", null ],
-    [ "sendFile", "a00512.html#aed703d0ece4a7a9e8a1fe8e5f80eadbc", null ],
-    [ "sendVoice", "a00512.html#aeee3b1999006e12a1ba98fc28448b68b", null ],
-    [ "Contact", "a00512.html#a76d4b1c8c6040df20040808941b7e764", null ]
+    [ "BotJoinGroupEvent", "a00512.html#a8f7dc98e36bb978d811374c320a477d3", null ],
+    [ "BotJoinGroupEvent", "a00512.html#a8f7dc98e36bb978d811374c320a477d3", null ],
+    [ "get_event_type", "a00512.html#a878210850980c87c542d850fe2f17521", null ],
+    [ "get_event_type", "a00512.html#a878210850980c87c542d850fe2f17521", null ],
+    [ "group", "a00512.html#ad3643d9978133be026420f1d71594ec7", null ],
+    [ "inviter", "a00512.html#a23678fc7ad0df051549f0abc8933b1ee", null ],
+    [ "type", "a00512.html#afecd637a84090e12fa5721074711c05d", null ]
 ];

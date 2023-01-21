@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['unsupportmessage_0',['UnSupportMessage',['../a00665.html',1,'MiraiCP']]],
-  ['uploadexception_1',['UploadException',['../a00417.html',1,'MiraiCP']]],
-  ['urlsharer_2',['URLSharer',['../a00597.html',1,'MiraiCP']]]
+  ['timeoutevent_0',['TimeOutEvent',['../a00501.html',1,'MiraiCP']]],
+  ['timeoutexception_1',['TimeOutException',['../a00601.html',1,'MiraiCP']]]
 ];

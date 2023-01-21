@@ -1,11 +1,13 @@
 var a00401 =
 [
-    [ "eventNode", "a00401.html#a7c0d9e7b800ebff2dbfe29d508e5904f", null ],
-    [ "eventNode", "a00401.html#a21f99c741cb8b0fe0f031e908732147b", null ],
-    [ "eventNode", "a00401.html#a3d10d8495761b35348a9729036280b91", null ],
-    [ "eventNode", "a00401.html#a19665f22ce5e4fe9fdbc50970dab72c5", null ],
-    [ "getHandle", "a00401.html#a9840c901a9c3e81f06f84b13252b181d", null ],
-    [ "run", "a00401.html#aedef6da8603e38047a3de9006052568b", null ],
-    [ "_handle", "a00401.html#ab8b560004af0fe0e513879955328cffd", null ],
-    [ "func", "a00401.html#a64131ff795261b80c6b37223812a3ee8", null ]
+    [ "Bot", "a00401.html#a779666a5cea6df0dca4247a3943ede91", null ],
+    [ "avatarUrl", "a00401.html#a6b0ebecc9de3fdf10852b341c88561c0", null ],
+    [ "FriendListToString", "a00401.html#a6803e521b4209f73e70d3a20b1e20195", null ],
+    [ "getFriend", "a00401.html#a2758676cf03748603d57ef31fc5cbec0", null ],
+    [ "getFriendList", "a00401.html#ae3c41bbf773ad22ee9a0b29f4ed769ea", null ],
+    [ "getGroup", "a00401.html#a9306303b8bb86a920e32290b0d167d85", null ],
+    [ "getGroupList", "a00401.html#a93687b7b6b881aa74a011dc0b979cae1", null ],
+    [ "GroupListToString", "a00401.html#ac036f287d56751ca5e33bd4d0292e306", null ],
+    [ "nick", "a00401.html#a14f2c875a64bf63c487be2f45454f517", null ],
+    [ "operator==", "a00401.html#a2eccb558dd0dfe6adbd2245fd8ca5ca4", null ]
 ];

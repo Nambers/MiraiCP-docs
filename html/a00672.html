@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiraiCP: lightApp.cpp</title>
+<title>MiraiCP: MiraiCP::Group::OnlineAnnouncement结构体 参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -35,7 +35,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MiraiCP
-   &#160;<span id="projectnumber">v2.13.0-alpha-3</span>
+   &#160;<span id="projectnumber">v2.13.1</span>
    </div>
    <div id="projectbrief">MiraiCP api document</div>
   </td>
@@ -93,121 +93,414 @@ $(document).ready(function(){initNavTree('a00672.html',''); initResizable(); });
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">lightApp.cpp</div></div>
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="#pub-attribs">Public 属性</a> &#124;
+<a href="a00669.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">MiraiCP::Group::OnlineAnnouncement结构体 参考</div></div>
 </div><!--header-->
 <div class="contents">
-<p >构建并发送lightApp</p>
-<div class="fragment"><div class="line"><span class="comment">// Copyright (c) 2020 - 2022. Eritque arcus and contributors.</span></div>
-<div class="line"><span class="comment">//</span></div>
-<div class="line"><span class="comment">// This program is free software: you can redistribute it and/or modify</span></div>
-<div class="line"><span class="comment">// it under the terms of the GNU Affero General Public License as</span></div>
-<div class="line"><span class="comment">// published by the Free Software Foundation, either version 3 of the</span></div>
-<div class="line"><span class="comment">// License, or any later version(in your opinion).</span></div>
-<div class="line"><span class="comment">//</span></div>
-<div class="line"><span class="comment">// This program is distributed in the hope that it will be useful,</span></div>
-<div class="line"><span class="comment">// but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div>
-<div class="line"><span class="comment">// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span></div>
-<div class="line"><span class="comment">// GNU Affero General Public License for more details.</span></div>
-<div class="line"><span class="comment">//</span></div>
-<div class="line"><span class="comment">// You should have received a copy of the GNU Affero General Public License</span></div>
-<div class="line"><span class="comment">// along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</span></div>
-<div class="line"><span class="comment">//</span></div>
-<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00146.html">MiraiCP.hpp</a>&gt;</span></div>
-<div class="line"><span class="keyword">using namespace </span><a class="code hl_namespace" href="a00218.html">MiraiCP</a>;</div>
-<div class="line"><span class="keyword">using namespace </span>std;</div>
-<div class="line"> </div>
-<div class="line"><span class="keyword">const</span> PluginConfig CPPPlugin::config{</div>
-<div class="line">        <span class="stringliteral">&quot;id&quot;</span>,   <span class="comment">// 插件id</span></div>
-<div class="line">        <span class="stringliteral">&quot;test&quot;</span>, <span class="comment">// 插件名称</span></div>
-<div class="line">        <span class="stringliteral">&quot;v1.0&quot;</span>, <span class="comment">// 插件版本</span></div>
-<div class="line">        <span class="stringliteral">&quot;a&quot;</span>,    <span class="comment">// 插件作者</span></div>
-<div class="line">                <span class="comment">// 可选：插件描述</span></div>
-<div class="line">                <span class="comment">// 可选：日期</span></div>
-<div class="line">};</div>
-<div class="line"> </div>
-<div class="line"><span class="keyword">class </span>Main : <span class="keyword">public</span> CPPPlugin {</div>
-<div class="line"><span class="keyword">public</span>:</div>
-<div class="line">    Main() : <a class="code hl_function" href="a00308.html#aeeaafebf5e61e1da8a2c5e3e07dac64b">CPPPlugin</a>() {}</div>
-<div class="line">    <span class="keywordtype">void</span> onEnable()<span class="keyword"> override </span>{</div>
-<div class="line">        Event::registerEvent&lt;GroupMessageEvent&gt;([](<a id="a0" name="a0"></a><a class="code hl_enumvalue" href="a00221.html#abe9e9d8212ea8f23717b72db64393cabaca8073196614a985e9fcc7d2f964473c">GroupMessageEvent</a> e) {</div>
-<div class="line">            <span class="comment">// 从文本构造</span></div>
-<div class="line">            <span class="comment">//风格1，适合文字展示，不能交互,无大图</span></div>
-<div class="line">            <span class="comment">//图标地址，应该是要qq的服务器里有的图片，也就是说先上传(发送)图片然后取下载链接</span></div>
-<div class="line">            <span class="keywordtype">string</span> icon = <span class="stringliteral">&quot;http://gchat.qpic.cn/gchatpic_new/1924306130/1044565129-2580521429-8ECE44863FC01DBD17FB8A177B355356/0&quot;</span>;</div>
-<div class="line">            <span class="comment">//小标题</span></div>
-<div class="line">            <span class="keywordtype">string</span> titles = <span class="stringliteral">&quot;{\&quot;title\&quot;:\&quot;hi\&quot;, \&quot;value\&quot;:\&quot;test3\&quot;}&quot;</span>;</div>
-<div class="line">            <span class="comment">//下面的按钮，但是不能按</span></div>
-<div class="line">            <span class="keywordtype">string</span> buttons = <span class="stringliteral">&quot;{\&quot;name\&quot;:\&quot;Test4\&quot;,\&quot;action\&quot;:\&quot;plugin\&quot;,\&quot;actionData\&quot;:\&quot;https://baidu.com\&quot;}&quot;</span>;</div>
-<div class="line">            <span class="keywordtype">string</span> x = <span class="stringliteral">&quot;{\&quot;app\&quot;:\&quot;com.tencent.miniapp\&quot;,\&quot;desc\&quot;:\&quot;\&quot;,\&quot;view\&quot;:\&quot;notification\&quot;,\&quot;ver\&quot;:\&quot;0.0.0.1\&quot;,\&quot;prompt\&quot;:\&quot;[应用]\&quot;,\&quot;appID\&quot;:\&quot;\&quot;,\&quot;sourceName\&quot;:\&quot;\&quot;,\&quot;actionData\&quot;:\&quot;\&quot;,\&quot;actionData_A\&quot;:\&quot;\&quot;,\&quot;sourceUrl\&quot;:\&quot;\&quot;,\&quot;meta\&quot;:{\&quot;notification\&quot;:{\&quot;appInfo\&quot;:&quot;</span></div>
-<div class="line">                       <span class="stringliteral">&quot;{\&quot;appName\&quot;:\&quot;Test1\&quot;,\&quot;appType\&quot;:4,\&quot;appid\&quot;:1109659848,&quot;</span></div>
-<div class="line">                       <span class="stringliteral">&quot;\&quot;iconUrl\&quot;:\&quot;&quot;</span> +</div>
-<div class="line">                       icon + <span class="stringliteral">&quot;\&quot;},&quot;</span></div>
-<div class="line">                              <span class="stringliteral">&quot;\&quot;data\&quot;:[&quot;</span> +</div>
-<div class="line">                       titles + <span class="stringliteral">&quot;],&quot;</span></div>
-<div class="line">                                <span class="stringliteral">&quot;\&quot;title\&quot;:\&quot;Test2\&quot;,\&quot;button\&quot;:&quot;</span></div>
-<div class="line">                                <span class="stringliteral">&quot;[&quot;</span> +</div>
-<div class="line">                       buttons + <span class="stringliteral">&quot;],&quot;</span></div>
-<div class="line">                                 <span class="stringliteral">&quot;\&quot;emphasis_keyword\&quot;:\&quot;\&quot;}},\&quot;text\&quot;:\&quot;\&quot;,\&quot;sourceAd\&quot;:\&quot;\&quot;}&quot;</span>;</div>
-<div class="line">            e.group.sendMessage(LightApp(x));</div>
-<div class="line">            <span class="comment">//风格2，不能交互，有预览图</span></div>
-<div class="line">            <span class="comment">//icon图标,应该是要qq的服务器里有的图片，也就是说先上传(发送)图片然后取下载链接</span></div>
-<div class="line">            <span class="keywordtype">string</span> icon1 = <span class="stringliteral">&quot;http://gchat.qpic.cn/gchatpic_new/1924306130/1044565129-2580521429-8ECE44863FC01DBD17FB8A177B355356/0&quot;</span>;</div>
-<div class="line">            <span class="comment">//预览图(大图),应该是要qq的服务器里有的图片，也就是说先上传(发送)图片然后取下载链接</span></div>
-<div class="line">            <span class="keywordtype">string</span> preview1 = icon1;</div>
-<div class="line">            <span class="keywordtype">string</span> a = <span class="stringliteral">&quot;{\&quot;config\&quot;:&quot;</span></div>
-<div class="line">                       <span class="stringliteral">&quot;{\&quot;height\&quot;:0,\&quot;forward\&quot;:1,\&quot;ctime\&quot;:0,\&quot;width\&quot;:0,\&quot;type\&quot;:\&quot;normal\&quot;,\&quot;token\&quot;:\&quot;\&quot;,\&quot;autoSize\&quot;:0},&quot;</span></div>
-<div class="line">                       <span class="stringliteral">&quot;\&quot;prompt\&quot;:\&quot;[QQ小程序]\&quot;,\&quot;app\&quot;:\&quot;com.tencent.miniapp_01\&quot;,\&quot;ver\&quot;:\&quot;1.0.0.103\&quot;,\&quot;view\&quot;:\&quot;view_8C8E89B49BE609866298ADDFF2DBABA4\&quot;,&quot;</span></div>
-<div class="line">                       <span class="stringliteral">&quot;\&quot;meta\&quot;:{\&quot;detail_1\&quot;:{\&quot;appid\&quot;:\&quot;1110081493\&quot;,\&quot;preview\&quot;:\&quot;&quot;</span> +</div>
-<div class="line">                       preview1 + <span class="stringliteral">&quot;\&quot;,\&quot;shareTemplateData\&quot;:{},&quot;</span></div>
-<div class="line">                                  <span class="stringliteral">&quot;\&quot;gamePointsUrl\&quot;:\&quot;\&quot;,\&quot;gamePoints\&quot;:\&quot;\&quot;,\&quot;url\&quot;:\&quot;m.q.qq.com\&quot;,\&quot;scene\&quot;:0,\&quot;desc\&quot;:\&quot;Test5\&quot;,\&quot;title\&quot;:\&quot;Test6\&quot;,&quot;</span></div>
-<div class="line">                                  <span class="stringliteral">&quot;\&quot;host\&quot;:{\&quot;uin\&quot;:1000000,\&quot;nick\&quot;:\&quot;应用消息\&quot;},&quot;</span></div>
-<div class="line">                                  <span class="stringliteral">&quot;\&quot;shareTemplateId\&quot;:\&quot;8C8E89B49BE609866298ADDFF2DBABA4\&quot;,\&quot;icon\&quot;:\&quot;&quot;</span> +</div>
-<div class="line">                       icon1 + <span class="stringliteral">&quot;\&quot;,\&quot;showLittleTail\&quot;:\&quot;\&quot;}},\&quot;desc\&quot;:\&quot;\&quot;}&quot;</span>;</div>
-<div class="line">            e.group.sendMessage(LightApp(a));</div>
-<div class="line">            <span class="comment">//风格3，可以跳转到网址，有预览图</span></div>
-<div class="line">            <span class="comment">//跳转链接</span></div>
-<div class="line">            <span class="keywordtype">string</span> url = <span class="stringliteral">&quot;https://www.baidu.com&quot;</span>;</div>
-<div class="line">            <span class="comment">//icon图标,应该是要qq的服务器里有的图片，也就是说先上传(发送)图片然后取下载链接</span></div>
-<div class="line">            <span class="keywordtype">string</span> icon2 = <span class="stringliteral">&quot;http://gchat.qpic.cn/gchatpic_new/1924306130/1044565129-2580521429-8ECE44863FC01DBD17FB8A177B355356/0&quot;</span>;</div>
-<div class="line">            <span class="comment">//预览图(大图),应该是要qq的服务器里有的图片，也就是说先上传(发送)图片然后取下载链接</span></div>
-<div class="line">            <span class="keywordtype">string</span> preview = icon2;</div>
-<div class="line">            <span class="keywordtype">string</span> b = <span class="stringliteral">&quot;{\&quot;config\&quot;:{\&quot;height\&quot;:0,\&quot;forward\&quot;:1,\&quot;ctime\&quot;:0,\&quot;width\&quot;:0,\&quot;type\&quot;:\&quot;normal\&quot;,\&quot;token\&quot;:\&quot;\&quot;,\&quot;autoSize\&quot;:0},&quot;</span></div>
-<div class="line">                       <span class="stringliteral">&quot;\&quot;prompt\&quot;:\&quot;[QQ小程序]\&quot;,\&quot;app\&quot;:\&quot;com.tencent.miniapp_01\&quot;,\&quot;ver\&quot;:\&quot;0.0.0.1\&quot;,\&quot;view\&quot;:\&quot;view_8C8E89B49BE609866298ADDFF2DBABA4\&quot;,&quot;</span></div>
-<div class="line">                       <span class="stringliteral">&quot;\&quot;meta\&quot;:{\&quot;detail_1\&quot;:{\&quot;appid\&quot;:\&quot;1109937557\&quot;,\&quot;preview\&quot;:\&quot;&quot;</span> +</div>
-<div class="line">                       preview + <span class="stringliteral">&quot;\&quot;,\&quot;shareTemplateData\&quot;:{},\&quot;gamePointsUrl\&quot;:\&quot;\&quot;,\&quot;gamePoints\&quot;:\&quot;\&quot;,\&quot;url\&quot;:\&quot;m.q.qq.com\&quot;,\&quot;scene\&quot;:0,\&quot;desc\&quot;:\&quot;Test1\&quot;,\&quot;title\&quot;:\&quot;Test3\&quot;,\&quot;host\&quot;:{\&quot;uin\&quot;:0,\&quot;nick\&quot;:\&quot;\&quot;},\&quot;shareTemplateId\&quot;:\&quot;8C8E89B49BE609866298ADDFF2DBABA4\&quot;,\&quot;icon\&quot;:\&quot;&quot;</span> + icon + <span class="stringliteral">&quot;\&quot;,\&quot;qqdocurl\&quot;:\&quot;&quot;</span> + url + <span class="stringliteral">&quot;\&quot;,\&quot;showLittleTail\&quot;:\&quot;\&quot;}},\&quot;desc\&quot;:\&quot;\&quot;}&quot;</span>;</div>
-<div class="line">            e.group.sendMessage(LightApp(b));</div>
-<div class="line">        });</div>
-<div class="line">    }</div>
-<div class="line">};</div>
-<div class="line"> </div>
-<div class="line"><span class="keywordtype">void</span> <a id="a1" name="a1"></a><a class="code hl_function" href="a00218.html#a12d27be6730af4fc321ac1eb231db281">MiraiCP::enrollPlugin</a>() {</div>
-<div class="line">    MiraiCP::enrollPlugin0(<span class="keyword">new</span> Main());</div>
-<div class="line">}</div>
-<div class="ttc" id="aa00146_html"><div class="ttname"><a href="a00146.html">MiraiCP.hpp</a></div></div>
-<div class="ttc" id="aa00218_html"><div class="ttname"><a href="a00218.html">MiraiCP</a></div><div class="ttdef"><b>Definition:</b> <a href="a00185_source.html#l00041">commonTypes.h:41</a></div></div>
-<div class="ttc" id="aa00218_html_a12d27be6730af4fc321ac1eb231db281"><div class="ttname"><a href="a00218.html#a12d27be6730af4fc321ac1eb231db281">MiraiCP::enrollPlugin</a></div><div class="ttdeci">void enrollPlugin()</div><div class="ttdoc">注册插件函数, 需要被插件实现, 类似onStart();</div><div class="ttdef"><b>Definition:</b> <a href="a00179_source.html#l00037">utils.h:37</a></div></div>
-<div class="ttc" id="aa00221_html_abe9e9d8212ea8f23717b72db64393cabaca8073196614a985e9fcc7d2f964473c"><div class="ttname"><a href="a00221.html#abe9e9d8212ea8f23717b72db64393cabaca8073196614a985e9fcc7d2f964473c">MiraiCP::eventTypes::GroupMessageEvent</a></div><div class="ttdeci">@ GroupMessageEvent</div><div class="ttdef"><b>Definition:</b> <a href="a00065_source.html#l00033">Event.h:33</a></div></div>
-<div class="ttc" id="aa00308_html_aeeaafebf5e61e1da8a2c5e3e07dac64b"><div class="ttname"><a href="a00308.html#aeeaafebf5e61e1da8a2c5e3e07dac64b">MiraiCP::CPPPlugin::CPPPlugin</a></div><div class="ttdeci">CPPPlugin()=default</div></div>
-</div><!-- fragment --> </div><!-- contents -->
+
+<p>在线群公告  
+ <a href="a00672.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="a00098_source.html">Group.h</a>&gt;</code></p>
+<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> MiraiCP::Group::OnlineAnnouncement 的协作图:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00670.svg" width="646" height="618"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a04aaabd735ed542b313a8df2a3fd9ecb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00672.html#a04aaabd735ed542b313a8df2a3fd9ecb">deleteThis</a> ()</td></tr>
+<tr class="separator:a04aaabd735ed542b313a8df2a3fd9ecb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04aaabd735ed542b313a8df2a3fd9ecb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00672.html#a04aaabd735ed542b313a8df2a3fd9ecb">deleteThis</a> ()</td></tr>
+<tr class="separator:a04aaabd735ed542b313a8df2a3fd9ecb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:a720239cba555515909088bc5404c483f"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="a00672.html">OnlineAnnouncement</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00672.html#a720239cba555515909088bc5404c483f">deserializeFromJson</a> (const <a class="el" href="a00302.html#ab701e3ac61a85b337ec5c1abaad6742d">nlohmann::json</a> &amp;)</td></tr>
+<tr class="memdesc:a720239cba555515909088bc5404c483f"><td class="mdescLeft">&#160;</td><td class="mdescRight">反序列化  <a href="a00672.html#a720239cba555515909088bc5404c483f">更多...</a><br /></td></tr>
+<tr class="separator:a720239cba555515909088bc5404c483f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56e60edbd7d9250443d65e76c4546e33"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="a00672.html">OnlineAnnouncement</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00672.html#a56e60edbd7d9250443d65e76c4546e33">deserializeFromJson</a> (const <a class="el" href="a00302.html#ab701e3ac61a85b337ec5c1abaad6742d">nlohmann::json</a> &amp;)</td></tr>
+<tr class="memdesc:a56e60edbd7d9250443d65e76c4546e33"><td class="mdescLeft">&#160;</td><td class="mdescRight">反序列化  <a href="a00672.html#a56e60edbd7d9250443d65e76c4546e33">更多...</a><br /></td></tr>
+<tr class="separator:a56e60edbd7d9250443d65e76c4546e33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public 属性</h2></td></tr>
+<tr class="memitem:afbc4d030c34bf815a8b8466cc0661f61"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00672.html#afbc4d030c34bf815a8b8466cc0661f61">content</a></td></tr>
+<tr class="memdesc:afbc4d030c34bf815a8b8466cc0661f61"><td class="mdescLeft">&#160;</td><td class="mdescRight">内容  <a href="a00672.html#afbc4d030c34bf815a8b8466cc0661f61">更多...</a><br /></td></tr>
+<tr class="separator:afbc4d030c34bf815a8b8466cc0661f61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed972cb699c7efe6533ef81fcf8e7ad7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00308.html#a59ef86b4ef19e525734fc04811fa9681">QQID</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00672.html#aed972cb699c7efe6533ef81fcf8e7ad7">botId</a></td></tr>
+<tr class="memdesc:aed972cb699c7efe6533ef81fcf8e7ad7"><td class="mdescLeft">&#160;</td><td class="mdescRight">所属bot  <a href="a00672.html#aed972cb699c7efe6533ef81fcf8e7ad7">更多...</a><br /></td></tr>
+<tr class="separator:aed972cb699c7efe6533ef81fcf8e7ad7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec97399fd5c720f3591588a71bc05fd3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00308.html#a59ef86b4ef19e525734fc04811fa9681">QQID</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00672.html#aec97399fd5c720f3591588a71bc05fd3">groupId</a></td></tr>
+<tr class="memdesc:aec97399fd5c720f3591588a71bc05fd3"><td class="mdescLeft">&#160;</td><td class="mdescRight">所在群id  <a href="a00672.html#aec97399fd5c720f3591588a71bc05fd3">更多...</a><br /></td></tr>
+<tr class="separator:aec97399fd5c720f3591588a71bc05fd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b6c6aaefc69cfd50b47f03c2cc8fb04"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00308.html#a59ef86b4ef19e525734fc04811fa9681">QQID</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00672.html#a6b6c6aaefc69cfd50b47f03c2cc8fb04">senderId</a></td></tr>
+<tr class="memdesc:a6b6c6aaefc69cfd50b47f03c2cc8fb04"><td class="mdescLeft">&#160;</td><td class="mdescRight">发送者id  <a href="a00672.html#a6b6c6aaefc69cfd50b47f03c2cc8fb04">更多...</a><br /></td></tr>
+<tr class="separator:a6b6c6aaefc69cfd50b47f03c2cc8fb04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60b71b2b35023e7774485f696c0c84f7"><td class="memItemLeft" align="right" valign="top">long long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00672.html#a60b71b2b35023e7774485f696c0c84f7">publicationTime</a></td></tr>
+<tr class="memdesc:a60b71b2b35023e7774485f696c0c84f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">发送时间戳  <a href="a00672.html#a60b71b2b35023e7774485f696c0c84f7">更多...</a><br /></td></tr>
+<tr class="separator:a60b71b2b35023e7774485f696c0c84f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24d4711f1da5a6f5e952b77e198b0f3f"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00672.html#a24d4711f1da5a6f5e952b77e198b0f3f">fid</a></td></tr>
+<tr class="memdesc:a24d4711f1da5a6f5e952b77e198b0f3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">唯一识别属性  <a href="a00672.html#a24d4711f1da5a6f5e952b77e198b0f3f">更多...</a><br /></td></tr>
+<tr class="separator:a24d4711f1da5a6f5e952b77e198b0f3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70e1e2aa6153b05f08cf2c499c45b3e8"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00672.html#a70e1e2aa6153b05f08cf2c499c45b3e8">imageId</a></td></tr>
+<tr class="memdesc:a70e1e2aa6153b05f08cf2c499c45b3e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">图片id, 如果不存在即为空  <a href="a00672.html#a70e1e2aa6153b05f08cf2c499c45b3e8">更多...</a><br /></td></tr>
+<tr class="separator:a70e1e2aa6153b05f08cf2c499c45b3e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af210882e3d89a4843c05c92ca7c83dd1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00672.html#af210882e3d89a4843c05c92ca7c83dd1">confirmNum</a></td></tr>
+<tr class="memdesc:af210882e3d89a4843c05c92ca7c83dd1"><td class="mdescLeft">&#160;</td><td class="mdescRight">如果需要确认，即为确认的人数  <a href="a00672.html#af210882e3d89a4843c05c92ca7c83dd1">更多...</a><br /></td></tr>
+<tr class="separator:af210882e3d89a4843c05c92ca7c83dd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0be35844059d66dc274fcf84de90e368"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00668.html">AnnouncementParams</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00672.html#a0be35844059d66dc274fcf84de90e368">params</a></td></tr>
+<tr class="memdesc:a0be35844059d66dc274fcf84de90e368"><td class="mdescLeft">&#160;</td><td class="mdescRight">公告属性  <a href="a00672.html#a0be35844059d66dc274fcf84de90e368">更多...</a><br /></td></tr>
+<tr class="separator:a0be35844059d66dc274fcf84de90e368"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p >在线群公告 </p>
+
+<p class="definition">在文件 <a class="el" href="a00098_source.html">Group.h</a> 第 <a class="el" href="a00098_source.html#l00088">88</a> 行定义.</p>
+</div><h2 class="groupheader">成员函数说明</h2>
+<a id="a04aaabd735ed542b313a8df2a3fd9ecb" name="a04aaabd735ed542b313a8df2a3fd9ecb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04aaabd735ed542b313a8df2a3fd9ecb">&#9670;&nbsp;</a></span>deleteThis() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MiraiCP::Group::OnlineAnnouncement::deleteThis </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >删除当前群公告 </p><dl class="exception"><dt>异常</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="a00584.html">BotException</a></td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="a01291_source.html">src/sdk/group.cpp</a> 第 <a class="el" href="a01291_source.html#l00084">84</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>                                             {</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        <a class="code hl_typedef" href="a00299.html#ab701e3ac61a85b337ec5c1abaad6742d">json</a> j{{<span class="stringliteral">&quot;botId&quot;</span>,   <a class="code hl_variable" href="a00672.html#aed972cb699c7efe6533ef81fcf8e7ad7">botId</a>},</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>               {<span class="stringliteral">&quot;groupId&quot;</span>, <a class="code hl_variable" href="a00672.html#aec97399fd5c720f3591588a71bc05fd3">groupId</a>},</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>               {<span class="stringliteral">&quot;fid&quot;</span>,     <a class="code hl_variable" href="a00672.html#a24d4711f1da5a6f5e952b77e198b0f3f">fid</a>},</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>               {<span class="stringliteral">&quot;type&quot;</span>,    <a class="code hl_enumvalue" href="a00316.html#a5f17c2867d211e285ca55f455683a273a787d3020d1554ec910e50ca0c6bcc1d3">KtOperation::AnnouncementOperationCode::Delete</a>}};</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        std::string re = <a class="code hl_function" href="a00316.html#a309e8d7f316e8b5e947ea3bcddeb84a8">KtOperation::ktOperation</a>(<a class="code hl_enumvalue" href="a00316.html#a80a8ec1c1ed6fd9db32d9a878405d412a57ca15be4ba9a48455759ee29a5f820c">KtOperation::Announcement</a>, j);</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        <span class="keywordflow">if</span> (re == <span class="stringliteral">&quot;E1&quot;</span>)</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>            <span class="keywordflow">throw</span> IllegalArgumentException(<span class="stringliteral">&quot;无法根据fid找到群公告(群公告不存在)&quot;</span>, <a class="code hl_define" href="a00011.html#a64a15c1bd1292eb8eb8b5874281372c6">MIRAICP_EXCEPTION_WHERE</a>);</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        <span class="keywordflow">if</span> (re == <span class="stringliteral">&quot;E3&quot;</span>)</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>            <span class="keywordflow">throw</span> IllegalStateException(<span class="stringliteral">&quot;群公告状态异常&quot;</span>, <a class="code hl_define" href="a00011.html#a64a15c1bd1292eb8eb8b5874281372c6">MIRAICP_EXCEPTION_WHERE</a>);</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    }</div>
+<div class="ttc" id="aa00011_html_a64a15c1bd1292eb8eb8b5874281372c6"><div class="ttname"><a href="a00011.html#a64a15c1bd1292eb8eb8b5874281372c6">MIRAICP_EXCEPTION_WHERE</a></div><div class="ttdeci">#define MIRAICP_EXCEPTION_WHERE</div><div class="ttdef"><b>Definition:</b> <a href="a00011_source.html#l00120">MiraiCPMacros.h:120</a></div></div>
+<div class="ttc" id="aa00299_html_ab701e3ac61a85b337ec5c1abaad6742d"><div class="ttname"><a href="a00299.html#ab701e3ac61a85b337ec5c1abaad6742d">json</a></div><div class="ttdeci">nlohmann::json json</div><div class="ttdef"><b>Definition:</b> <a href="a00299_source.html#l00031">utils.cpp:31</a></div></div>
+<div class="ttc" id="aa00316_html_a309e8d7f316e8b5e947ea3bcddeb84a8"><div class="ttname"><a href="a00316.html#a309e8d7f316e8b5e947ea3bcddeb84a8">MiraiCP::KtOperation::ktOperation</a></div><div class="ttdeci">std::string ktOperation(operation_set type, const nlohmann::json &amp;data, bool catchErr=true, const std::string &amp;errorInfo=&quot;&quot;)</div><div class="ttdoc">调用 Mirai 操作</div><div class="ttdef"><b>Definition:</b> <a href="a00266_source.html#l00025">KtOperation.cpp:25</a></div></div>
+<div class="ttc" id="aa00316_html_a5f17c2867d211e285ca55f455683a273a787d3020d1554ec910e50ca0c6bcc1d3"><div class="ttname"><a href="a00316.html#a5f17c2867d211e285ca55f455683a273a787d3020d1554ec910e50ca0c6bcc1d3">MiraiCP::KtOperation::Delete</a></div><div class="ttdeci">@ Delete</div><div class="ttdoc">发布公告</div><div class="ttdef"><b>Definition:</b> <a href="a00104_source.html#l00092">KtOperation.h:92</a></div></div>
+<div class="ttc" id="aa00316_html_a80a8ec1c1ed6fd9db32d9a878405d412a57ca15be4ba9a48455759ee29a5f820c"><div class="ttname"><a href="a00316.html#a80a8ec1c1ed6fd9db32d9a878405d412a57ca15be4ba9a48455759ee29a5f820c">MiraiCP::KtOperation::Announcement</a></div><div class="ttdeci">@ Announcement</div><div class="ttdoc">群公告操作</div><div class="ttdef"><b>Definition:</b> <a href="a00104_source.html#l00066">KtOperation.h:66</a></div></div>
+<div class="ttc" id="aa00672_html_a24d4711f1da5a6f5e952b77e198b0f3f"><div class="ttname"><a href="a00672.html#a24d4711f1da5a6f5e952b77e198b0f3f">MiraiCP::Group::OnlineAnnouncement::fid</a></div><div class="ttdeci">std::string fid</div><div class="ttdoc">唯一识别属性</div><div class="ttdef"><b>Definition:</b> <a href="a00098_source.html#l00100">Group.h:100</a></div></div>
+<div class="ttc" id="aa00672_html_aec97399fd5c720f3591588a71bc05fd3"><div class="ttname"><a href="a00672.html#aec97399fd5c720f3591588a71bc05fd3">MiraiCP::Group::OnlineAnnouncement::groupId</a></div><div class="ttdeci">QQID groupId</div><div class="ttdoc">所在群id</div><div class="ttdef"><b>Definition:</b> <a href="a00098_source.html#l00094">Group.h:94</a></div></div>
+<div class="ttc" id="aa00672_html_aed972cb699c7efe6533ef81fcf8e7ad7"><div class="ttname"><a href="a00672.html#aed972cb699c7efe6533ef81fcf8e7ad7">MiraiCP::Group::OnlineAnnouncement::botId</a></div><div class="ttdeci">QQID botId</div><div class="ttdoc">所属bot</div><div class="ttdef"><b>Definition:</b> <a href="a00098_source.html#l00092">Group.h:92</a></div></div>
+</div><!-- fragment --><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> 函数调用图:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00672_a04aaabd735ed542b313a8df2a3fd9ecb_cgraph.svg" width="2172" height="292"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a04aaabd735ed542b313a8df2a3fd9ecb" name="a04aaabd735ed542b313a8df2a3fd9ecb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04aaabd735ed542b313a8df2a3fd9ecb">&#9670;&nbsp;</a></span>deleteThis() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MiraiCP::Group::OnlineAnnouncement::deleteThis </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >删除当前群公告 </p><dl class="exception"><dt>异常</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="a00584.html">BotException</a></td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a720239cba555515909088bc5404c483f" name="a720239cba555515909088bc5404c483f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a720239cba555515909088bc5404c483f">&#9670;&nbsp;</a></span>deserializeFromJson() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00672.html">Group::OnlineAnnouncement</a> MiraiCP::Group::OnlineAnnouncement::deserializeFromJson </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="a00302.html#ab701e3ac61a85b337ec5c1abaad6742d">nlohmann::json</a> &amp;&#160;</td>
+          <td class="paramname"><em>j</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>反序列化 </p>
+
+<p class="definition">在文件 <a class="el" href="a01291_source.html">src/sdk/group.cpp</a> 第 <a class="el" href="a01291_source.html#l00116">116</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>                                                                                      {</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>        <span class="keywordflow">return</span> Group::OnlineAnnouncement{</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>                j[<span class="stringliteral">&quot;content&quot;</span>],</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>                j[<span class="stringliteral">&quot;botId&quot;</span>],</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>                j[<span class="stringliteral">&quot;groupId&quot;</span>],</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>                j[<span class="stringliteral">&quot;senderId&quot;</span>],</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>                j[<span class="stringliteral">&quot;time&quot;</span>],</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>                j[<span class="stringliteral">&quot;fid&quot;</span>],</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>                j[<span class="stringliteral">&quot;imageId&quot;</span>],</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>                j[<span class="stringliteral">&quot;confirmationNum&quot;</span>],</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>                {j[<span class="stringliteral">&quot;params&quot;</span>][<span class="stringliteral">&quot;sendToNewMember&quot;</span>],</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>                 j[<span class="stringliteral">&quot;params&quot;</span>][<span class="stringliteral">&quot;requireConfirmation&quot;</span>],</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>                 j[<span class="stringliteral">&quot;params&quot;</span>][<span class="stringliteral">&quot;isPinned&quot;</span>],</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>                 j[<span class="stringliteral">&quot;params&quot;</span>][<span class="stringliteral">&quot;showEditCard&quot;</span>],</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>                 j[<span class="stringliteral">&quot;params&quot;</span>][<span class="stringliteral">&quot;showPopup&quot;</span>]}};</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>    }</div>
+</div><!-- fragment --><div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-2-trigger" src="closed.png" alt="+"/> 这是这个函数的调用关系图:</div>
+<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-2-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00672_a720239cba555515909088bc5404c483f_icgraph.svg" width="554" height="104"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a56e60edbd7d9250443d65e76c4546e33" name="a56e60edbd7d9250443d65e76c4546e33"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56e60edbd7d9250443d65e76c4546e33">&#9670;&nbsp;</a></span>deserializeFromJson() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="a00672.html">OnlineAnnouncement</a> MiraiCP::Group::OnlineAnnouncement::deserializeFromJson </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="a00302.html#ab701e3ac61a85b337ec5c1abaad6742d">nlohmann::json</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>反序列化 </p>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="aed972cb699c7efe6533ef81fcf8e7ad7" name="aed972cb699c7efe6533ef81fcf8e7ad7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed972cb699c7efe6533ef81fcf8e7ad7">&#9670;&nbsp;</a></span>botId</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00308.html#a59ef86b4ef19e525734fc04811fa9681">QQID</a> MiraiCP::Group::OnlineAnnouncement::botId</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>所属bot </p>
+
+<p class="definition">在文件 <a class="el" href="a00098_source.html">Group.h</a> 第 <a class="el" href="a00098_source.html#l00092">92</a> 行定义.</p>
+
+</div>
+</div>
+<a id="af210882e3d89a4843c05c92ca7c83dd1" name="af210882e3d89a4843c05c92ca7c83dd1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af210882e3d89a4843c05c92ca7c83dd1">&#9670;&nbsp;</a></span>confirmNum</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int MiraiCP::Group::OnlineAnnouncement::confirmNum</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>如果需要确认，即为确认的人数 </p>
+
+<p class="definition">在文件 <a class="el" href="a00098_source.html">Group.h</a> 第 <a class="el" href="a00098_source.html#l00104">104</a> 行定义.</p>
+
+</div>
+</div>
+<a id="afbc4d030c34bf815a8b8466cc0661f61" name="afbc4d030c34bf815a8b8466cc0661f61"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afbc4d030c34bf815a8b8466cc0661f61">&#9670;&nbsp;</a></span>content</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string MiraiCP::Group::OnlineAnnouncement::content</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>内容 </p>
+
+<p class="definition">在文件 <a class="el" href="a00098_source.html">Group.h</a> 第 <a class="el" href="a00098_source.html#l00090">90</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a24d4711f1da5a6f5e952b77e198b0f3f" name="a24d4711f1da5a6f5e952b77e198b0f3f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24d4711f1da5a6f5e952b77e198b0f3f">&#9670;&nbsp;</a></span>fid</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string MiraiCP::Group::OnlineAnnouncement::fid</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>唯一识别属性 </p>
+
+<p class="definition">在文件 <a class="el" href="a00098_source.html">Group.h</a> 第 <a class="el" href="a00098_source.html#l00100">100</a> 行定义.</p>
+
+</div>
+</div>
+<a id="aec97399fd5c720f3591588a71bc05fd3" name="aec97399fd5c720f3591588a71bc05fd3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec97399fd5c720f3591588a71bc05fd3">&#9670;&nbsp;</a></span>groupId</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00308.html#a59ef86b4ef19e525734fc04811fa9681">QQID</a> MiraiCP::Group::OnlineAnnouncement::groupId</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>所在群id </p>
+
+<p class="definition">在文件 <a class="el" href="a00098_source.html">Group.h</a> 第 <a class="el" href="a00098_source.html#l00094">94</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a70e1e2aa6153b05f08cf2c499c45b3e8" name="a70e1e2aa6153b05f08cf2c499c45b3e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70e1e2aa6153b05f08cf2c499c45b3e8">&#9670;&nbsp;</a></span>imageId</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string MiraiCP::Group::OnlineAnnouncement::imageId</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>图片id, 如果不存在即为空 </p>
+
+<p class="definition">在文件 <a class="el" href="a00098_source.html">Group.h</a> 第 <a class="el" href="a00098_source.html#l00102">102</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a0be35844059d66dc274fcf84de90e368" name="a0be35844059d66dc274fcf84de90e368"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0be35844059d66dc274fcf84de90e368">&#9670;&nbsp;</a></span>params</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00668.html">AnnouncementParams</a> MiraiCP::Group::OnlineAnnouncement::params</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>公告属性 </p>
+
+<p class="definition">在文件 <a class="el" href="a00098_source.html">Group.h</a> 第 <a class="el" href="a00098_source.html#l00106">106</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a60b71b2b35023e7774485f696c0c84f7" name="a60b71b2b35023e7774485f696c0c84f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60b71b2b35023e7774485f696c0c84f7">&#9670;&nbsp;</a></span>publicationTime</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">long long MiraiCP::Group::OnlineAnnouncement::publicationTime</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>发送时间戳 </p>
+
+<p class="definition">在文件 <a class="el" href="a00098_source.html">Group.h</a> 第 <a class="el" href="a00098_source.html#l00098">98</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a6b6c6aaefc69cfd50b47f03c2cc8fb04" name="a6b6c6aaefc69cfd50b47f03c2cc8fb04"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b6c6aaefc69cfd50b47f03c2cc8fb04">&#9670;&nbsp;</a></span>senderId</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00308.html#a59ef86b4ef19e525734fc04811fa9681">QQID</a> MiraiCP::Group::OnlineAnnouncement::senderId</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>发送者id </p>
+
+<p class="definition">在文件 <a class="el" href="a00098_source.html">Group.h</a> 第 <a class="el" href="a00098_source.html#l00096">96</a> 行定义.</p>
+
+</div>
+</div>
+<hr/>该结构体的文档由以下文件生成:<ul>
+<li><a class="el" href="a00098_source.html">Group.h</a></li>
+<li><a class="el" href="a01315_source.html">src/single_include/MiraiCP/MiraiCP.hpp</a></li>
+<li><a class="el" href="a01291_source.html">src/sdk/group.cpp</a></li>
+<li><a class="el" href="a00302_source.html">MiraiCP.cpp</a></li>
+</ul>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">生成于 2022年 十一月 20日 星期日 11:48:43 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="navelem"><a class="el" href="a00308.html">MiraiCP</a></li><li class="navelem"><a class="el" href="a00664.html">Group</a></li><li class="navelem"><a class="el" href="a00672.html">OnlineAnnouncement</a></li>
+    <li class="footer">生成于 2023年 一月 21日 星期六 14:15:23 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
-<script type="text/javascript">
-            $(function() {
-			  toggleButton = document.createElement('doxygen-awesome-dark-mode-toggle')
-			  toggleButton.title = "Toggle Light/Dark Mode"
-			  $(document).ready(function(){
-				document.getElementById("MSearchBox").parentNode.appendChild(toggleButton)
-			  })
-			  $(window).resize(function(){
-				document.getElementById("MSearchBox").parentNode.appendChild(toggleButton)
-			  })
-			})
-        </script>
     </body>
 </html>

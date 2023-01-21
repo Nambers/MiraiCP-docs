@@ -1,8 +1,9 @@
 var a00649 =
 [
-    [ "expirytime", "a00649.html#a666efd0312dcc5805394a02ff7c326bb", null ],
-    [ "lastmodifytime", "a00649.html#a8597f745a6869003efa097519bf34148", null ],
-    [ "size", "a00649.html#a35cc1f23bf34db4184696833b12e4605", null ],
-    [ "uploaderid", "a00649.html#accf1835e308104bde941d72053d5c5a7", null ],
-    [ "uploadtime", "a00649.html#ab5f94fd436b08eb8963d7c5d8d4907b4", null ]
+    [ "serializeToJson", "a00649.html#ac87021b1e71d8d3334c4d197813924bc", null ],
+    [ "pinned", "a00649.html#a1045432e9f2c822b1150bc278e99de05", null ],
+    [ "requireConfirm", "a00649.html#a2641ceb16f0da11938027e7bf67c5c8a", null ],
+    [ "send2new", "a00649.html#af941b1ec8148c2675bcad7a6a10a53f5", null ],
+    [ "showEditCard", "a00649.html#a92569e1952f8f1668db0df430928da8e", null ],
+    [ "showPopup", "a00649.html#ab80e896e8ac632e75f5d5e98dff79a97", null ]
 ];

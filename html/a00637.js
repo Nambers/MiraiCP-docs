@@ -1,12 +1,8 @@
 var a00637 =
 [
-    [ "operator==", "a00637.html#adf77a906cd6705425a28ab4483c634b5", null ],
-    [ "ShouldNotUse", "a00637.html#a66690e9c31bc7daf8a1c7c15261f83b3", null ],
-    [ "type", "a00637.html#ab55cc2add22064ea6437677abc6d2555", null ],
-    [ "codec", "a00637.html#afe96592ba24d9c3f1887c7668d788c97", null ],
-    [ "filename", "a00637.html#a9cf8841f7297be7d0b8404aeaf1727a1", null ],
-    [ "length", "a00637.html#a963774ddebf115bebd86386cb84a5117", null ],
-    [ "md5", "a00637.html#a403a5a5837bbf02f5e0c5a4327f51ff3", null ],
-    [ "size", "a00637.html#a06c764f6c1f6f65def69fcfe378ebef1", null ],
-    [ "url", "a00637.html#aedf31534944297bea3c997cc49329443", null ]
+    [ "GroupSetting", "a00641.html", "a00641" ],
+    [ "GroupData", "a00637.html#afe85f107ef0e196801af97e7246414d4", null ],
+    [ "deserialize", "a00637.html#a8a0e56e1504a3da673550f0b6ea5990f", null ],
+    [ "refreshInfo", "a00637.html#a0722821fb76ee11411d65c4c79c08538", null ],
+    [ "_setting", "a00637.html#a939dc83c0a53345b8c5f9a71209299a7", null ]
 ];

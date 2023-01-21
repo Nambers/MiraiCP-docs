@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiraiCP: MiraiCP::eventTypes 命名空间参考</title>
+<title>MiraiCP: PlatformException.cpp 文件参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -35,7 +35,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MiraiCP
-   &#160;<span id="projectnumber">v2.13.0-alpha-3</span>
+   &#160;<span id="projectnumber">v2.13.1</span>
    </div>
    <div id="projectbrief">MiraiCP api document</div>
   </td>
@@ -94,126 +94,49 @@ $(document).ready(function(){initNavTree('a00221.html',''); initResizable(); });
 
 <div class="header">
   <div class="summary">
-<a href="#enum-members">枚举</a>  </div>
-  <div class="headertitle"><div class="title">MiraiCP::eventTypes 命名空间参考</div></div>
+<a href="#var-members">变量</a>  </div>
+  <div class="headertitle"><div class="title">PlatformException.cpp 文件参考</div></div>
 </div><!--header-->
 <div class="contents">
-
-<p><a class="el" href="a00397.html">Event</a> 工厂  
-<a href="a00221.html#details">更多...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="a00011_source.html">MiraiCPMacros.h</a>&quot;</code><br />
+<code>#include &quot;BS_thread_pool.hpp&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00053_source.html">LoaderTaskQueue.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00017_source.html">PlatformThreading.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00065_source.html">PluginListManager.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00002_source.html">commonTools.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00044_source.html">LoaderLogger.h</a>&quot;</code><br />
+<code>#include &lt;csignal&gt;</code><br />
+<code>#include &lt;thread&gt;</code><br />
+</div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> PlatformException.cpp 的引用(Include)关系图:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00222.svg" width="1140" height="486"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+<p><a href="a00221_source.html">浏览源代码.</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
-枚举</h2></td></tr>
-<tr class="memitem:abe9e9d8212ea8f23717b72db64393cab"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00221.html#abe9e9d8212ea8f23717b72db64393cab">Types</a> { <br />
-&#160;&#160;<a class="el" href="a00221.html#abe9e9d8212ea8f23717b72db64393caba497dd3a8c7ae19e8a6a5e16e5e546e32">BaseEvent</a>
-, <a class="el" href="a00221.html#abe9e9d8212ea8f23717b72db64393cabaca8073196614a985e9fcc7d2f964473c">GroupMessageEvent</a>
-, <a class="el" href="a00221.html#abe9e9d8212ea8f23717b72db64393cabaf823b9c98e3d49aecbf9be0cfaba7f24">PrivateMessageEvent</a>
-, <a class="el" href="a00221.html#abe9e9d8212ea8f23717b72db64393cabaa0c1608d4d5428440a6880a212510e8e">GroupInviteEvent</a>
-, <br />
-&#160;&#160;<a class="el" href="a00221.html#abe9e9d8212ea8f23717b72db64393caba8a554c168e28786de2f8f8991085ebd4">NewFriendRequestEvent</a>
-, <a class="el" href="a00221.html#abe9e9d8212ea8f23717b72db64393cabaf84be9f6031b8901001ee5c3d880d3ce">MemberJoinEvent</a>
-, <a class="el" href="a00221.html#abe9e9d8212ea8f23717b72db64393cabae02e88376bb6d48bad1e5bcd1da1e581">MemberLeaveEvent</a>
-, <a class="el" href="a00221.html#abe9e9d8212ea8f23717b72db64393caba0fb229b7779bb3a4989702dcbf3c2c47">RecallEvent</a>
-, <br />
-&#160;&#160;<a class="el" href="a00221.html#abe9e9d8212ea8f23717b72db64393cabadc958c860c6a02731d1f2aaf73935643">BotJoinGroupEvent</a>
-, <a class="el" href="a00221.html#abe9e9d8212ea8f23717b72db64393caba82138ba7d5017c9976f29de9213836dd">GroupTempMessageEvent</a>
-, <a class="el" href="a00221.html#abe9e9d8212ea8f23717b72db64393caba8a7946c3deb653b0fa55009d6373403c">TimeOutEvent</a>
-, <a class="el" href="a00221.html#abe9e9d8212ea8f23717b72db64393cabac9323a42c3ef5f080ec21384295543f5">BotOnlineEvent</a>
-, <br />
-&#160;&#160;<a class="el" href="a00221.html#abe9e9d8212ea8f23717b72db64393cabac32189a68a5af3a5c766f1a66d3b6e9f">NudgeEvent</a>
-, <a class="el" href="a00221.html#abe9e9d8212ea8f23717b72db64393cabab9a57352711dc24a722df5dc49b41807">BotLeaveEvent</a>
-, <a class="el" href="a00221.html#abe9e9d8212ea8f23717b72db64393cabaa4feb188b3065acdf14ff19265a4ddb6">MemberJoinRequestEvent</a>
-, <a class="el" href="a00221.html#abe9e9d8212ea8f23717b72db64393cabaa46d082c80e10281a6f1f0ca942f0a1b">MessagePreSendEvent</a>
-, <br />
-&#160;&#160;<a class="el" href="a00221.html#abe9e9d8212ea8f23717b72db64393cabae45271795e11748f69a8762e52630d6e">MiraiCPExceptionEvent</a>
-, <a class="el" href="a00221.html#abe9e9d8212ea8f23717b72db64393caba5c5efe6fe256e4eb53a217cac3a84233">Command</a>
-, <a class="el" href="a00221.html#abe9e9d8212ea8f23717b72db64393caba19263cbf330b3b5fac1b6dbd09ccc34b">count</a>
-, <a class="el" href="a00221.html#abe9e9d8212ea8f23717b72db64393caba9b91a91250df41da2b9434cca56ada58">error</a>
-<br />
- }</td></tr>
-<tr class="separator:abe9e9d8212ea8f23717b72db64393cab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+变量</h2></td></tr>
+<tr class="memitem:a610f6add140f1df3ef983b0d2cf9a745"><td class="memItemLeft" align="right" valign="top">thread_local bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00221.html#a610f6add140f1df3ef983b0d2cf9a745">alreadyInHandler</a> = false</td></tr>
+<tr class="separator:a610f6add140f1df3ef983b0d2cf9a745"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
-<div class="textblock"><p ><a class="el" href="a00397.html">Event</a> 工厂 </p>
-</div><h2 class="groupheader">枚举类型说明</h2>
-<a id="abe9e9d8212ea8f23717b72db64393cab" name="abe9e9d8212ea8f23717b72db64393cab"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abe9e9d8212ea8f23717b72db64393cab">&#9670;&nbsp;</a></span>Types</h2>
+<h2 class="groupheader">变量说明</h2>
+<a id="a610f6add140f1df3ef983b0d2cf9a745" name="a610f6add140f1df3ef983b0d2cf9a745"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a610f6add140f1df3ef983b0d2cf9a745">&#9670;&nbsp;</a></span>alreadyInHandler</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">enum <a class="el" href="a00221.html#abe9e9d8212ea8f23717b72db64393cab">MiraiCP::eventTypes::Types</a></td>
+          <td class="memname">thread_local bool alreadyInHandler = false</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<table class="fieldtable">
-<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="abe9e9d8212ea8f23717b72db64393caba497dd3a8c7ae19e8a6a5e16e5e546e32" name="abe9e9d8212ea8f23717b72db64393caba497dd3a8c7ae19e8a6a5e16e5e546e32"></a>BaseEvent&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="abe9e9d8212ea8f23717b72db64393cabaca8073196614a985e9fcc7d2f964473c" name="abe9e9d8212ea8f23717b72db64393cabaca8073196614a985e9fcc7d2f964473c"></a>GroupMessageEvent&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="abe9e9d8212ea8f23717b72db64393cabaf823b9c98e3d49aecbf9be0cfaba7f24" name="abe9e9d8212ea8f23717b72db64393cabaf823b9c98e3d49aecbf9be0cfaba7f24"></a>PrivateMessageEvent&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="abe9e9d8212ea8f23717b72db64393cabaa0c1608d4d5428440a6880a212510e8e" name="abe9e9d8212ea8f23717b72db64393cabaa0c1608d4d5428440a6880a212510e8e"></a>GroupInviteEvent&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="abe9e9d8212ea8f23717b72db64393caba8a554c168e28786de2f8f8991085ebd4" name="abe9e9d8212ea8f23717b72db64393caba8a554c168e28786de2f8f8991085ebd4"></a>NewFriendRequestEvent&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="abe9e9d8212ea8f23717b72db64393cabaf84be9f6031b8901001ee5c3d880d3ce" name="abe9e9d8212ea8f23717b72db64393cabaf84be9f6031b8901001ee5c3d880d3ce"></a>MemberJoinEvent&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="abe9e9d8212ea8f23717b72db64393cabae02e88376bb6d48bad1e5bcd1da1e581" name="abe9e9d8212ea8f23717b72db64393cabae02e88376bb6d48bad1e5bcd1da1e581"></a>MemberLeaveEvent&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="abe9e9d8212ea8f23717b72db64393caba0fb229b7779bb3a4989702dcbf3c2c47" name="abe9e9d8212ea8f23717b72db64393caba0fb229b7779bb3a4989702dcbf3c2c47"></a>RecallEvent&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="abe9e9d8212ea8f23717b72db64393cabadc958c860c6a02731d1f2aaf73935643" name="abe9e9d8212ea8f23717b72db64393cabadc958c860c6a02731d1f2aaf73935643"></a>BotJoinGroupEvent&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="abe9e9d8212ea8f23717b72db64393caba82138ba7d5017c9976f29de9213836dd" name="abe9e9d8212ea8f23717b72db64393caba82138ba7d5017c9976f29de9213836dd"></a>GroupTempMessageEvent&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="abe9e9d8212ea8f23717b72db64393caba8a7946c3deb653b0fa55009d6373403c" name="abe9e9d8212ea8f23717b72db64393caba8a7946c3deb653b0fa55009d6373403c"></a>TimeOutEvent&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="abe9e9d8212ea8f23717b72db64393cabac9323a42c3ef5f080ec21384295543f5" name="abe9e9d8212ea8f23717b72db64393cabac9323a42c3ef5f080ec21384295543f5"></a>BotOnlineEvent&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="abe9e9d8212ea8f23717b72db64393cabac32189a68a5af3a5c766f1a66d3b6e9f" name="abe9e9d8212ea8f23717b72db64393cabac32189a68a5af3a5c766f1a66d3b6e9f"></a>NudgeEvent&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="abe9e9d8212ea8f23717b72db64393cabab9a57352711dc24a722df5dc49b41807" name="abe9e9d8212ea8f23717b72db64393cabab9a57352711dc24a722df5dc49b41807"></a>BotLeaveEvent&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="abe9e9d8212ea8f23717b72db64393cabaa4feb188b3065acdf14ff19265a4ddb6" name="abe9e9d8212ea8f23717b72db64393cabaa4feb188b3065acdf14ff19265a4ddb6"></a>MemberJoinRequestEvent&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="abe9e9d8212ea8f23717b72db64393cabaa46d082c80e10281a6f1f0ca942f0a1b" name="abe9e9d8212ea8f23717b72db64393cabaa46d082c80e10281a6f1f0ca942f0a1b"></a>MessagePreSendEvent&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="abe9e9d8212ea8f23717b72db64393cabae45271795e11748f69a8762e52630d6e" name="abe9e9d8212ea8f23717b72db64393cabae45271795e11748f69a8762e52630d6e"></a>MiraiCPExceptionEvent&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="abe9e9d8212ea8f23717b72db64393caba5c5efe6fe256e4eb53a217cac3a84233" name="abe9e9d8212ea8f23717b72db64393caba5c5efe6fe256e4eb53a217cac3a84233"></a>Command&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="abe9e9d8212ea8f23717b72db64393caba19263cbf330b3b5fac1b6dbd09ccc34b" name="abe9e9d8212ea8f23717b72db64393caba19263cbf330b3b5fac1b6dbd09ccc34b"></a>count&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="abe9e9d8212ea8f23717b72db64393caba9b91a91250df41da2b9434cca56ada58" name="abe9e9d8212ea8f23717b72db64393caba9b91a91250df41da2b9434cca56ada58"></a>error&#160;</td><td class="fielddoc"></td></tr>
-</table>
 
-<p class="definition">在文件 <a class="el" href="a00065_source.html">Event.h</a> 第 <a class="el" href="a00065_source.html#l00031">31</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>                   {</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>            <a class="code hl_enumvalue" href="a00221.html#abe9e9d8212ea8f23717b72db64393caba497dd3a8c7ae19e8a6a5e16e5e546e32">BaseEvent</a> [[maybe_unused]], <span class="comment">// 0</span></div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>            <a class="code hl_enumvalue" href="a00221.html#abe9e9d8212ea8f23717b72db64393cabaca8073196614a985e9fcc7d2f964473c">GroupMessageEvent</a>,          <span class="comment">// 1</span></div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>            <a class="code hl_enumvalue" href="a00221.html#abe9e9d8212ea8f23717b72db64393cabaf823b9c98e3d49aecbf9be0cfaba7f24">PrivateMessageEvent</a>,        <span class="comment">// 2</span></div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>            <a class="code hl_enumvalue" href="a00221.html#abe9e9d8212ea8f23717b72db64393cabaa0c1608d4d5428440a6880a212510e8e">GroupInviteEvent</a>,           <span class="comment">// 3</span></div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>            <a class="code hl_enumvalue" href="a00221.html#abe9e9d8212ea8f23717b72db64393caba8a554c168e28786de2f8f8991085ebd4">NewFriendRequestEvent</a>,      <span class="comment">// 4</span></div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>            <a class="code hl_enumvalue" href="a00221.html#abe9e9d8212ea8f23717b72db64393cabaf84be9f6031b8901001ee5c3d880d3ce">MemberJoinEvent</a>,            <span class="comment">// 5</span></div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>            <a class="code hl_enumvalue" href="a00221.html#abe9e9d8212ea8f23717b72db64393cabae02e88376bb6d48bad1e5bcd1da1e581">MemberLeaveEvent</a>,           <span class="comment">// 6</span></div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>            <a class="code hl_enumvalue" href="a00221.html#abe9e9d8212ea8f23717b72db64393caba0fb229b7779bb3a4989702dcbf3c2c47">RecallEvent</a>,                <span class="comment">// 7</span></div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>            <a class="code hl_enumvalue" href="a00221.html#abe9e9d8212ea8f23717b72db64393cabadc958c860c6a02731d1f2aaf73935643">BotJoinGroupEvent</a>,          <span class="comment">// 8</span></div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>            <a class="code hl_enumvalue" href="a00221.html#abe9e9d8212ea8f23717b72db64393caba82138ba7d5017c9976f29de9213836dd">GroupTempMessageEvent</a>,      <span class="comment">// 9</span></div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            <a class="code hl_enumvalue" href="a00221.html#abe9e9d8212ea8f23717b72db64393caba8a7946c3deb653b0fa55009d6373403c">TimeOutEvent</a>,               <span class="comment">// 10</span></div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>            <a class="code hl_enumvalue" href="a00221.html#abe9e9d8212ea8f23717b72db64393cabac9323a42c3ef5f080ec21384295543f5">BotOnlineEvent</a>,             <span class="comment">// 11</span></div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>            <a class="code hl_enumvalue" href="a00221.html#abe9e9d8212ea8f23717b72db64393cabac32189a68a5af3a5c766f1a66d3b6e9f">NudgeEvent</a>,                 <span class="comment">// 12</span></div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>            <a class="code hl_enumvalue" href="a00221.html#abe9e9d8212ea8f23717b72db64393cabab9a57352711dc24a722df5dc49b41807">BotLeaveEvent</a>,              <span class="comment">// 13</span></div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>            <a class="code hl_enumvalue" href="a00221.html#abe9e9d8212ea8f23717b72db64393cabaa4feb188b3065acdf14ff19265a4ddb6">MemberJoinRequestEvent</a>,     <span class="comment">// 14</span></div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>            <a class="code hl_enumvalue" href="a00221.html#abe9e9d8212ea8f23717b72db64393cabaa46d082c80e10281a6f1f0ca942f0a1b">MessagePreSendEvent</a>,        <span class="comment">// 15</span></div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>            <a class="code hl_enumvalue" href="a00221.html#abe9e9d8212ea8f23717b72db64393cabae45271795e11748f69a8762e52630d6e">MiraiCPExceptionEvent</a>,      <span class="comment">// 16</span></div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>            <a class="code hl_enumvalue" href="a00221.html#abe9e9d8212ea8f23717b72db64393caba5c5efe6fe256e4eb53a217cac3a84233">Command</a>,                    <span class="comment">// 17</span></div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            <a class="code hl_enumvalue" href="a00221.html#abe9e9d8212ea8f23717b72db64393caba19263cbf330b3b5fac1b6dbd09ccc34b">count</a>,                      <span class="comment">// 事件在此位置前定义，此时count为事件种类数</span></div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>            <a class="code hl_enumvalue" href="a00221.html#abe9e9d8212ea8f23717b72db64393caba9b91a91250df41da2b9434cca56ada58">error</a>                       <span class="comment">// 出现问题时使用此enum</span></div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        };</div>
-<div class="ttc" id="aa00221_html_abe9e9d8212ea8f23717b72db64393caba0fb229b7779bb3a4989702dcbf3c2c47"><div class="ttname"><a href="a00221.html#abe9e9d8212ea8f23717b72db64393caba0fb229b7779bb3a4989702dcbf3c2c47">MiraiCP::eventTypes::RecallEvent</a></div><div class="ttdeci">@ RecallEvent</div><div class="ttdef"><b>Definition:</b> <a href="a00065_source.html#l00039">Event.h:39</a></div></div>
-<div class="ttc" id="aa00221_html_abe9e9d8212ea8f23717b72db64393caba19263cbf330b3b5fac1b6dbd09ccc34b"><div class="ttname"><a href="a00221.html#abe9e9d8212ea8f23717b72db64393caba19263cbf330b3b5fac1b6dbd09ccc34b">MiraiCP::eventTypes::count</a></div><div class="ttdeci">@ count</div><div class="ttdef"><b>Definition:</b> <a href="a00065_source.html#l00050">Event.h:50</a></div></div>
-<div class="ttc" id="aa00221_html_abe9e9d8212ea8f23717b72db64393caba497dd3a8c7ae19e8a6a5e16e5e546e32"><div class="ttname"><a href="a00221.html#abe9e9d8212ea8f23717b72db64393caba497dd3a8c7ae19e8a6a5e16e5e546e32">MiraiCP::eventTypes::BaseEvent</a></div><div class="ttdeci">@ BaseEvent</div><div class="ttdef"><b>Definition:</b> <a href="a00065_source.html#l00032">Event.h:32</a></div></div>
-<div class="ttc" id="aa00221_html_abe9e9d8212ea8f23717b72db64393caba5c5efe6fe256e4eb53a217cac3a84233"><div class="ttname"><a href="a00221.html#abe9e9d8212ea8f23717b72db64393caba5c5efe6fe256e4eb53a217cac3a84233">MiraiCP::eventTypes::Command</a></div><div class="ttdeci">@ Command</div><div class="ttdef"><b>Definition:</b> <a href="a00065_source.html#l00049">Event.h:49</a></div></div>
-<div class="ttc" id="aa00221_html_abe9e9d8212ea8f23717b72db64393caba82138ba7d5017c9976f29de9213836dd"><div class="ttname"><a href="a00221.html#abe9e9d8212ea8f23717b72db64393caba82138ba7d5017c9976f29de9213836dd">MiraiCP::eventTypes::GroupTempMessageEvent</a></div><div class="ttdeci">@ GroupTempMessageEvent</div><div class="ttdef"><b>Definition:</b> <a href="a00065_source.html#l00041">Event.h:41</a></div></div>
-<div class="ttc" id="aa00221_html_abe9e9d8212ea8f23717b72db64393caba8a554c168e28786de2f8f8991085ebd4"><div class="ttname"><a href="a00221.html#abe9e9d8212ea8f23717b72db64393caba8a554c168e28786de2f8f8991085ebd4">MiraiCP::eventTypes::NewFriendRequestEvent</a></div><div class="ttdeci">@ NewFriendRequestEvent</div><div class="ttdef"><b>Definition:</b> <a href="a00065_source.html#l00036">Event.h:36</a></div></div>
-<div class="ttc" id="aa00221_html_abe9e9d8212ea8f23717b72db64393caba8a7946c3deb653b0fa55009d6373403c"><div class="ttname"><a href="a00221.html#abe9e9d8212ea8f23717b72db64393caba8a7946c3deb653b0fa55009d6373403c">MiraiCP::eventTypes::TimeOutEvent</a></div><div class="ttdeci">@ TimeOutEvent</div><div class="ttdef"><b>Definition:</b> <a href="a00065_source.html#l00042">Event.h:42</a></div></div>
-<div class="ttc" id="aa00221_html_abe9e9d8212ea8f23717b72db64393caba9b91a91250df41da2b9434cca56ada58"><div class="ttname"><a href="a00221.html#abe9e9d8212ea8f23717b72db64393caba9b91a91250df41da2b9434cca56ada58">MiraiCP::eventTypes::error</a></div><div class="ttdeci">@ error</div><div class="ttdef"><b>Definition:</b> <a href="a00065_source.html#l00052">Event.h:51</a></div></div>
-<div class="ttc" id="aa00221_html_abe9e9d8212ea8f23717b72db64393cabaa0c1608d4d5428440a6880a212510e8e"><div class="ttname"><a href="a00221.html#abe9e9d8212ea8f23717b72db64393cabaa0c1608d4d5428440a6880a212510e8e">MiraiCP::eventTypes::GroupInviteEvent</a></div><div class="ttdeci">@ GroupInviteEvent</div><div class="ttdef"><b>Definition:</b> <a href="a00065_source.html#l00035">Event.h:35</a></div></div>
-<div class="ttc" id="aa00221_html_abe9e9d8212ea8f23717b72db64393cabaa46d082c80e10281a6f1f0ca942f0a1b"><div class="ttname"><a href="a00221.html#abe9e9d8212ea8f23717b72db64393cabaa46d082c80e10281a6f1f0ca942f0a1b">MiraiCP::eventTypes::MessagePreSendEvent</a></div><div class="ttdeci">@ MessagePreSendEvent</div><div class="ttdef"><b>Definition:</b> <a href="a00065_source.html#l00047">Event.h:47</a></div></div>
-<div class="ttc" id="aa00221_html_abe9e9d8212ea8f23717b72db64393cabaa4feb188b3065acdf14ff19265a4ddb6"><div class="ttname"><a href="a00221.html#abe9e9d8212ea8f23717b72db64393cabaa4feb188b3065acdf14ff19265a4ddb6">MiraiCP::eventTypes::MemberJoinRequestEvent</a></div><div class="ttdeci">@ MemberJoinRequestEvent</div><div class="ttdef"><b>Definition:</b> <a href="a00065_source.html#l00046">Event.h:46</a></div></div>
-<div class="ttc" id="aa00221_html_abe9e9d8212ea8f23717b72db64393cabab9a57352711dc24a722df5dc49b41807"><div class="ttname"><a href="a00221.html#abe9e9d8212ea8f23717b72db64393cabab9a57352711dc24a722df5dc49b41807">MiraiCP::eventTypes::BotLeaveEvent</a></div><div class="ttdeci">@ BotLeaveEvent</div><div class="ttdef"><b>Definition:</b> <a href="a00065_source.html#l00045">Event.h:45</a></div></div>
-<div class="ttc" id="aa00221_html_abe9e9d8212ea8f23717b72db64393cabac32189a68a5af3a5c766f1a66d3b6e9f"><div class="ttname"><a href="a00221.html#abe9e9d8212ea8f23717b72db64393cabac32189a68a5af3a5c766f1a66d3b6e9f">MiraiCP::eventTypes::NudgeEvent</a></div><div class="ttdeci">@ NudgeEvent</div><div class="ttdef"><b>Definition:</b> <a href="a00065_source.html#l00044">Event.h:44</a></div></div>
-<div class="ttc" id="aa00221_html_abe9e9d8212ea8f23717b72db64393cabac9323a42c3ef5f080ec21384295543f5"><div class="ttname"><a href="a00221.html#abe9e9d8212ea8f23717b72db64393cabac9323a42c3ef5f080ec21384295543f5">MiraiCP::eventTypes::BotOnlineEvent</a></div><div class="ttdeci">@ BotOnlineEvent</div><div class="ttdef"><b>Definition:</b> <a href="a00065_source.html#l00043">Event.h:43</a></div></div>
-<div class="ttc" id="aa00221_html_abe9e9d8212ea8f23717b72db64393cabaca8073196614a985e9fcc7d2f964473c"><div class="ttname"><a href="a00221.html#abe9e9d8212ea8f23717b72db64393cabaca8073196614a985e9fcc7d2f964473c">MiraiCP::eventTypes::GroupMessageEvent</a></div><div class="ttdeci">@ GroupMessageEvent</div><div class="ttdef"><b>Definition:</b> <a href="a00065_source.html#l00033">Event.h:33</a></div></div>
-<div class="ttc" id="aa00221_html_abe9e9d8212ea8f23717b72db64393cabadc958c860c6a02731d1f2aaf73935643"><div class="ttname"><a href="a00221.html#abe9e9d8212ea8f23717b72db64393cabadc958c860c6a02731d1f2aaf73935643">MiraiCP::eventTypes::BotJoinGroupEvent</a></div><div class="ttdeci">@ BotJoinGroupEvent</div><div class="ttdef"><b>Definition:</b> <a href="a00065_source.html#l00040">Event.h:40</a></div></div>
-<div class="ttc" id="aa00221_html_abe9e9d8212ea8f23717b72db64393cabae02e88376bb6d48bad1e5bcd1da1e581"><div class="ttname"><a href="a00221.html#abe9e9d8212ea8f23717b72db64393cabae02e88376bb6d48bad1e5bcd1da1e581">MiraiCP::eventTypes::MemberLeaveEvent</a></div><div class="ttdeci">@ MemberLeaveEvent</div><div class="ttdef"><b>Definition:</b> <a href="a00065_source.html#l00038">Event.h:38</a></div></div>
-<div class="ttc" id="aa00221_html_abe9e9d8212ea8f23717b72db64393cabae45271795e11748f69a8762e52630d6e"><div class="ttname"><a href="a00221.html#abe9e9d8212ea8f23717b72db64393cabae45271795e11748f69a8762e52630d6e">MiraiCP::eventTypes::MiraiCPExceptionEvent</a></div><div class="ttdeci">@ MiraiCPExceptionEvent</div><div class="ttdef"><b>Definition:</b> <a href="a00065_source.html#l00048">Event.h:48</a></div></div>
-<div class="ttc" id="aa00221_html_abe9e9d8212ea8f23717b72db64393cabaf823b9c98e3d49aecbf9be0cfaba7f24"><div class="ttname"><a href="a00221.html#abe9e9d8212ea8f23717b72db64393cabaf823b9c98e3d49aecbf9be0cfaba7f24">MiraiCP::eventTypes::PrivateMessageEvent</a></div><div class="ttdeci">@ PrivateMessageEvent</div><div class="ttdef"><b>Definition:</b> <a href="a00065_source.html#l00034">Event.h:34</a></div></div>
-<div class="ttc" id="aa00221_html_abe9e9d8212ea8f23717b72db64393cabaf84be9f6031b8901001ee5c3d880d3ce"><div class="ttname"><a href="a00221.html#abe9e9d8212ea8f23717b72db64393cabaf84be9f6031b8901001ee5c3d880d3ce">MiraiCP::eventTypes::MemberJoinEvent</a></div><div class="ttdeci">@ MemberJoinEvent</div><div class="ttdef"><b>Definition:</b> <a href="a00065_source.html#l00037">Event.h:37</a></div></div>
-</div><!-- fragment -->
+<p class="definition">在文件 <a class="el" href="a00221_source.html">PlatformException.cpp</a> 第 <a class="el" href="a00221_source.html#l00105">105</a> 行定义.</p>
+
 </div>
 </div>
 </div><!-- contents -->
@@ -222,8 +145,8 @@ $(document).ready(function(){initNavTree('a00221.html',''); initResizable(); });
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="a00218.html">MiraiCP</a></li><li class="navelem"><a class="el" href="a00221.html">eventTypes</a></li>
-    <li class="footer">生成于 2022年 十一月 23日 星期三 10:27:51 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_23c80554d3059e776f1fa3b42eea10c0.html">libloader</a></li><li class="navelem"><a class="el" href="a00221.html">PlatformException.cpp</a></li>
+    <li class="footer">生成于 2023年 一月 21日 星期六 14:32:48 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
     </body>

@@ -1,11 +1,9 @@
 var a00441 =
 [
-    [ "MemberExceptionType", "a00441.html#a5d79da819adcd25a5b51a498762067a2", [
-      [ "OtherType", "a00441.html#a5d79da819adcd25a5b51a498762067a2a10d7175ae7e717fa50187eff06445f9b", null ],
-      [ "NoSuchGroup", "a00441.html#a5d79da819adcd25a5b51a498762067a2af45ac2de0a67bb83ddabbe90de94b759", null ],
-      [ "NoSuchMember", "a00441.html#a5d79da819adcd25a5b51a498762067a2aec2ea117521b98eb6ceed80c5b155716", null ]
-    ] ],
-    [ "MemberException", "a00441.html#a5a77bb2dee827ef89cb7fab2e62b160c", null ],
-    [ "exceptionType", "a00441.html#a7d8014930572cc2e598c2709e240d429", null ],
-    [ "type", "a00441.html#aeedca55477d89e61d8449fd22aeeff04", null ]
+    [ "BuiltInContact", "a00445.html", "a00445" ],
+    [ "BaseEventData", "a00441.html#add7fec6ff79d938ab121f57d10ffa1a7", null ],
+    [ "botId", "a00441.html#a0ef2979d2f7e44318fcc251026a7b109", null ],
+    [ "eventData", "a00441.html#abd44451921253c4eb235eff3fa3fb857", null ],
+    [ "object", "a00441.html#a9d1c4b300f7c6602c21aff985e9f1757", null ],
+    [ "subject", "a00441.html#a7afa1ecf74f25007146b46f4381c736d", null ]
 ];

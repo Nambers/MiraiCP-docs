@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiraiCP: Bot.cpp 文件参考</title>
+<title>MiraiCP: libOpen.h 文件参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -35,7 +35,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MiraiCP
-   &#160;<span id="projectnumber">v2.13.0-alpha-3</span>
+   &#160;<span id="projectnumber">v2.13.1</span>
    </div>
    <div id="projectbrief">MiraiCP api document</div>
   </td>
@@ -96,78 +96,42 @@ $(document).ready(function(){initNavTree('a00038.html',''); initResizable(); });
   <div class="summary">
 <a href="#namespaces">命名空间</a> &#124;
 <a href="#func-members">函数</a>  </div>
-  <div class="headertitle"><div class="title">Bot.cpp 文件参考</div></div>
+  <div class="headertitle"><div class="title">libOpen.h 文件参考</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="a00041_source.html">Bot.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00083_source.html">Friend.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00089_source.html">Group.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00101_source.html">KtOperation.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00119_source.html">LowLevelAPI.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00173_source.html">Tools.h</a>&quot;</code><br />
-<code>#include &lt;atomic&gt;</code><br />
-<code>#include &lt;memory&gt;</code><br />
-<code>#include &lt;mutex&gt;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="a00005_source.html">commonTypes.h</a>&quot;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Bot.cpp 的引用(Include)关系图:</div>
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> libOpen.h 的引用(Include)关系图:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="a00039.png" border="0" usemap="#a_bot_8cpp" alt=""/></div>
-<map name="a_bot_8cpp" id="a_bot_8cpp">
-<area shape="rect" title=" " alt="" coords="1100,5,1167,32"/>
-<area shape="rect" href="a00041.html" title=" " alt="" coords="153,80,207,107"/>
-<area shape="rect" title=" " alt="" coords="389,304,451,331"/>
-<area shape="rect" href="a00101.html" title=" " alt="" coords="1143,229,1246,256"/>
-<area shape="rect" href="a00119.html" title=" " alt="" coords="1271,229,1377,256"/>
-<area shape="rect" href="a00083.html" title=" " alt="" coords="1024,80,1093,107"/>
-<area shape="rect" href="a00089.html" title=" " alt="" coords="1222,80,1290,107"/>
-<area shape="rect" href="a00173.html" title=" " alt="" coords="205,453,269,480"/>
-<area shape="rect" title=" " alt="" coords="1315,80,1384,107"/>
-<area shape="rect" title=" " alt="" coords="1408,80,1467,107"/>
-<area shape="rect" href="a00053.html" title=" " alt="" coords="1017,155,1095,181"/>
-<area shape="rect" title=" " alt="" coords="242,752,297,779"/>
-<area shape="rect" href="a00185.html" title=" " alt="" coords="523,528,642,555"/>
-<area shape="rect" title=" " alt="" coords="93,528,149,555"/>
-<area shape="rect" href="a00095.html" title=" " alt="" coords="705,229,796,256"/>
-<area shape="rect" title=" " alt="" coords="1307,379,1405,405"/>
-<area shape="rect" href="a00131.html" title=" " alt="" coords="949,229,1067,256"/>
-<area shape="rect" title=" " alt="" coords="536,304,640,331"/>
-<area shape="rect" href="a00191.html" title=" " alt="" coords="736,752,859,779"/>
-<area shape="rect" href="a00071.html" title=" " alt="" coords="963,304,1053,331"/>
-<area shape="rect" href="a00161.html" title=" " alt="" coords="664,304,787,331"/>
-<area shape="rect" href="a00182.html" title=" " alt="" coords="1256,453,1371,480"/>
-<area shape="rect" title=" " alt="" coords="685,827,750,853"/>
-<area shape="rect" href="a00059.html" title=" " alt="" coords="797,379,893,405"/>
-<area shape="rect" title=" " alt="" coords="969,379,1047,405"/>
-<area shape="rect" title=" " alt="" coords="1072,379,1131,405"/>
-<area shape="rect" href="a00113.html" title=" " alt="" coords="693,453,765,480"/>
-<area shape="rect" href="a00206.html" title=" " alt="" coords="629,603,734,629"/>
-<area shape="rect" title=" " alt="" coords="963,453,1016,480"/>
-<area shape="rect" href="a00143.html" title=" " alt="" coords="325,528,416,555"/>
-<area shape="rect" title=" " alt="" coords="811,528,888,555"/>
-<area shape="rect" title=" " alt="" coords="717,528,787,555"/>
-<area shape="rect" href="a00188.html" title=" " alt="" coords="475,603,605,629"/>
-<area shape="rect" href="a00197.html" title=" " alt="" coords="480,677,635,704"/>
-<area shape="rect" title=" " alt="" coords="659,677,730,704"/>
-<area shape="rect" href="a00137.html" title=" " alt="" coords="542,453,669,480"/>
-<area shape="rect" title=" " alt="" coords="344,379,395,405"/>
-<area shape="rect" title=" " alt="" coords="419,379,485,405"/>
-<area shape="rect" title=" " alt="" coords="510,379,621,405"/>
-</map>
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00039.svg" width="366" height="411"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div><div class="textblock"><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> 此图展示该文件直接或间接的被哪些文件引用了:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00040.svg" width="387" height="112"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 <p><a href="a00038_source.html">浏览源代码.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
 命名空间</h2></td></tr>
-<tr class="memitem:a00218"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00218.html">MiraiCP</a></td></tr>
+<tr class="memitem:a00301"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00301.html">LibLoader</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00303"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00303.html">LibLoader::LoaderApi</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 函数</h2></td></tr>
-<tr class="memitem:adad1279fb69c7e1aa6ca387300eef632"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; InternalBot &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00218.html#adad1279fb69c7e1aa6ca387300eef632">MiraiCP::get_bot</a> (QQID id)</td></tr>
-<tr class="separator:adad1279fb69c7e1aa6ca387300eef632"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7765f4c313a98cf08466f0a6ed291aac"><td class="memItemLeft" align="right" valign="top">plugin_handle&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00303.html#a7765f4c313a98cf08466f0a6ed291aac">LibLoader::LoaderApi::libOpen</a> (const std::string &amp;path)</td></tr>
+<tr class="separator:a7765f4c313a98cf08466f0a6ed291aac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96701ab7dcebb86755310b5c9c434842"><td class="memItemLeft" align="right" valign="top">plugin_func_ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00303.html#a96701ab7dcebb86755310b5c9c434842">LibLoader::LoaderApi::libSymbolLookup</a> (void *handle, const char *symbol)</td></tr>
+<tr class="separator:a96701ab7dcebb86755310b5c9c434842"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a830b51c74068e1461e1baf677dd10ac2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00303.html#a830b51c74068e1461e1baf677dd10ac2">LibLoader::LoaderApi::libClose</a> (void *handle)</td></tr>
+<tr class="separator:a830b51c74068e1461e1baf677dd10ac2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -175,8 +139,8 @@ $(document).ready(function(){initNavTree('a00038.html',''); initResizable(); });
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b0856f6b0d80ccb263b2f415c91f9e17.html">include</a></li><li class="navelem"><a class="el" href="a00038.html">Bot.cpp</a></li>
-    <li class="footer">生成于 2022年 十一月 23日 星期三 10:27:50 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_bda05eb71e068b870dbf680d28584ff8.html">libloader</a></li><li class="navelem"><a class="el" href="a00038.html">libOpen.h</a></li>
+    <li class="footer">生成于 2023年 一月 21日 星期六 14:32:48 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
     </body>

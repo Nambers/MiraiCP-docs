@@ -1,8 +1,8 @@
 var a00509 =
 [
-    [ "GroupSetting", "a00513.html", "a00513" ],
-    [ "GroupData", "a00509.html#afe85f107ef0e196801af97e7246414d4", null ],
-    [ "deserialize", "a00509.html#a8a0e56e1504a3da673550f0b6ea5990f", null ],
-    [ "refreshInfo", "a00509.html#a0722821fb76ee11411d65c4c79c08538", null ],
-    [ "_setting", "a00509.html#a939dc83c0a53345b8c5f9a71209299a7", null ]
+    [ "NudgeEvent", "a00509.html#abac2712b508c1d09155fb8112abc7a15", null ],
+    [ "get_event_type", "a00509.html#a74e2d3893cc0879c00c226fe03283b81", null ],
+    [ "from", "a00509.html#a25165f804cb60432ca3c556d46700278", null ],
+    [ "subject", "a00509.html#ab0297663148696544a00e4f9efed6dab", null ],
+    [ "target", "a00509.html#afcb1a236f88bb0dcb30b3131c0e11ee8", null ]
 ];

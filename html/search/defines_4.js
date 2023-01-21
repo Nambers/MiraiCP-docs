@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['impl_5fgetter_0',['IMPL_GETTER',['../a00191.html#ad4170428a925927fbb2312a07e19810d',1,'MiraiCPMacros.h']]],
-  ['inline_5fgetter_1',['INLINE_GETTER',['../a00191.html#a17be62d7e0b9ec5a41fd88613e49f027',1,'MiraiCPMacros.h']]]
+  ['func_5fentrance_0',['FUNC_ENTRANCE',['../a00011.html#a530f8aa8a579c0ec728d5e7a46515ba4',1,'MiraiCPMacros.h']]],
+  ['func_5fevent_1',['FUNC_EVENT',['../a00011.html#a06af3829abc05f3902ed69ee480b66fa',1,'MiraiCPMacros.h']]],
+  ['func_5fexit_2',['FUNC_EXIT',['../a00011.html#a6505e9c7b381013fa532556439fb8bd0',1,'MiraiCPMacros.h']]]
 ];

@@ -1,9 +1,13 @@
 var searchData=
 [
-  ['kick_0',['Kick',['../a00377.html#ac1df44d7400ad221500364c7b3de6737a3e07960fcc45408894cf1402257bd9fd',1,'MiraiCP::BotLeaveEvent']]],
-  ['kick_1',['kick',['../a00569.html#a2d1bc8f2dcdc9048ded62a0f5f53041a',1,'MiraiCP::Member']]],
-  ['kickm_2',['KickM',['../a00222.html#a80a8ec1c1ed6fd9db32d9a878405d412ad433fae5ad25a07de672621200576da7',1,'MiraiCP::KtOperation']]],
-  ['ktoperation_3',['ktOperation',['../a00222.html#a22b667b08eb5bb1bb8b603212b55f5e2',1,'MiraiCP::KtOperation']]],
-  ['ktoperation_2ecpp_4',['KtOperation.cpp',['../a00098.html',1,'']]],
-  ['ktoperation_2eh_5',['KtOperation.h',['../a00101.html',1,'']]]
+  ['kick_0',['Kick',['../a00513.html#ac1df44d7400ad221500364c7b3de6737a3e07960fcc45408894cf1402257bd9fd',1,'MiraiCP::BotLeaveEvent']]],
+  ['kick_1',['kick',['../a00697.html#a2d1bc8f2dcdc9048ded62a0f5f53041a',1,'MiraiCP::Member']]],
+  ['kickm_2',['KickM',['../a00309.html#a80a8ec1c1ed6fd9db32d9a878405d412ad433fae5ad25a07de672621200576da7',1,'MiraiCP::KtOperation']]],
+  ['koper_3',['koper',['../a00305.html#a36a424ce478704cdd3eb5c14302351df',1,'LibLoader::JNIEnvs']]],
+  ['ktinterface_2ecpp_4',['ktInterface.cpp',['../a00200.html',1,'']]],
+  ['ktinterface_2eh_5',['ktInterface.h',['../a00035.html',1,'']]],
+  ['ktoperation_6',['ktOperation',['../a00309.html#a309e8d7f316e8b5e947ea3bcddeb84a8',1,'MiraiCP::KtOperation']]],
+  ['ktoperation_2ecpp_7',['KtOperation.cpp',['../a00263.html',1,'']]],
+  ['ktoperation_2eh_8',['KtOperation.h',['../a00101.html',1,'']]],
+  ['ktoperationstr_9',['ktOperationStr',['../a00309.html#a1e1e498928eeaa1d7107033ff5fa881a',1,'MiraiCP::KtOperation']]]
 ];

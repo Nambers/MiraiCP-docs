@@ -1,6 +1,9 @@
 var a00206 =
 [
-    [ "MiraiCP::PluginConfig", "a00245.html", "a00245" ],
-    [ "m_MiraiCPVersion", "a00206.html#a5e92a4c931c8d67dcc35b7b9d5de0f4e", null ],
-    [ "MiraiCPVersion", "a00206.html#ae471c96f73a019b792a82629b6bdfdf5", null ]
+    [ "CLOSE_LIBRARY", "a00206.html#a071a5a9d769c6e787e4101850fff1a54", null ],
+    [ "GET_SYMBOL", "a00206.html#a59a1df0cff1ee36d72e98032ab2594ff", null ],
+    [ "OPEN_LIBRARY", "a00206.html#a8d9660e662b6e570295b95769dc5bf32", null ],
+    [ "libClose", "a00206.html#a830b51c74068e1461e1baf677dd10ac2", null ],
+    [ "libOpen", "a00206.html#a7765f4c313a98cf08466f0a6ed291aac", null ],
+    [ "libSymbolLookup", "a00206.html#a96701ab7dcebb86755310b5c9c434842", null ]
 ];

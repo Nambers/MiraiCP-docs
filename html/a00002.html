@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiraiCP: callbackHandle.cpp 文件参考</title>
+<title>MiraiCP: commonTools.h 文件参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -35,7 +35,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MiraiCP
-   &#160;<span id="projectnumber">v2.13.0-alpha-3</span>
+   &#160;<span id="projectnumber">v2.13.1</span>
    </div>
    <div id="projectbrief">MiraiCP api document</div>
   </td>
@@ -93,80 +93,49 @@ $(document).ready(function(){initNavTree('a00002.html',''); initResizable(); });
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">callbackHandle.cpp 文件参考</div></div>
+  <div class="summary">
+<a href="#nested-classes">类</a> &#124;
+<a href="#namespaces">命名空间</a>  </div>
+  <div class="headertitle"><div class="title">commonTools.h 文件参考</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;<a class="el" href="a00146_source.html">MiraiCP.hpp</a>&gt;</code><br />
-<code>#include &lt;string&gt;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="a00011_source.html">MiraiCPMacros.h</a>&quot;</code><br />
+<code>#include &lt;functional&gt;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> callbackHandle.cpp 的引用(Include)关系图:</div>
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> commonTools.h 的引用(Include)关系图:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="a00003.png" border="0" usemap="#acallback_handle_8cpp" alt=""/></div>
-<map name="acallback_handle_8cpp" id="acallback_handle_8cpp">
-<area shape="rect" title=" " alt="" coords="2094,5,2229,32"/>
-<area shape="rect" href="a00146.html" title=" " alt="" coords="1359,80,1452,107"/>
-<area shape="rect" title=" " alt="" coords="2498,976,2553,1003"/>
-<area shape="rect" href="a00041.html" title=" " alt="" coords="2333,304,2387,331"/>
-<area shape="rect" href="a00053.html" title=" " alt="" coords="995,379,1074,405"/>
-<area shape="rect" href="a00095.html" title=" " alt="" coords="376,453,467,480"/>
-<area shape="rect" href="a00101.html" title=" " alt="" coords="611,528,714,555"/>
-<area shape="rect" href="a00119.html" title=" " alt="" coords="764,453,871,480"/>
-<area shape="rect" href="a00131.html" title=" " alt="" coords="997,453,1115,480"/>
-<area shape="rect" href="a00191.html" title=" " alt="" coords="1392,976,1515,1003"/>
-<area shape="rect" href="a00071.html" title=" " alt="" coords="1781,528,1872,555"/>
-<area shape="rect" href="a00059.html" title=" " alt="" coords="1571,603,1667,629"/>
-<area shape="rect" href="a00113.html" title=" " alt="" coords="1756,677,1828,704"/>
-<area shape="rect" href="a00143.html" title=" " alt="" coords="2269,752,2360,779"/>
-<area shape="rect" href="a00185.html" title=" " alt="" coords="1937,752,2055,779"/>
-<area shape="rect" href="a00206.html" title=" " alt="" coords="1401,827,1506,853"/>
-<area shape="rect" href="a00197.html" title=" " alt="" coords="1376,901,1531,928"/>
-<area shape="rect" href="a00188.html" title=" " alt="" coords="2027,827,2157,853"/>
-<area shape="rect" href="a00161.html" title=" " alt="" coords="1080,528,1203,555"/>
-<area shape="rect" href="a00137.html" title=" " alt="" coords="1190,677,1317,704"/>
-<area shape="rect" href="a00182.html" title=" " alt="" coords="891,528,1005,555"/>
-<area shape="rect" href="a00047.html" title=" " alt="" coords="1245,453,1337,480"/>
-<area shape="rect" href="a00065.html" title=" " alt="" coords="1443,229,1509,256"/>
-<area shape="rect" href="a00083.html" title=" " alt="" coords="1000,304,1069,331"/>
-<area shape="rect" href="a00089.html" title=" " alt="" coords="1299,304,1367,331"/>
-<area shape="rect" href="a00125.html" title=" " alt="" coords="1093,304,1173,331"/>
-<area shape="rect" href="a00077.html" title=" " alt="" coords="1707,379,1853,405"/>
-<area shape="rect" href="a00149.html" title=" " alt="" coords="1937,155,2079,181"/>
-<area shape="rect" href="a00200.html" title=" " alt="" coords="1545,379,1682,405"/>
-<area shape="rect" href="a00155.html" title=" " alt="" coords="2689,155,2775,181"/>
-<area shape="rect" href="a00167.html" title=" " alt="" coords="2435,603,2535,629"/>
-<area shape="rect" href="a00173.html" title=" " alt="" coords="2523,677,2587,704"/>
-<area shape="rect" href="a00107.html" title=" " alt="" coords="2793,677,2879,704"/>
-<area shape="rect" href="a00179.html" title=" " alt="" coords="530,453,587,480"/>
-<area shape="rect" href="a00212.html" title=" " alt="" coords="145,677,247,704"/>
-<area shape="rect" title=" " alt="" coords="2661,752,2717,779"/>
-<area shape="rect" title=" " alt="" coords="539,603,637,629"/>
-<area shape="rect" title=" " alt="" coords="195,528,256,555"/>
-<area shape="rect" title=" " alt="" coords="280,528,384,555"/>
-<area shape="rect" title=" " alt="" coords="1793,603,1871,629"/>
-<area shape="rect" title=" " alt="" coords="1997,603,2056,629"/>
-<area shape="rect" title=" " alt="" coords="1507,677,1560,704"/>
-<area shape="rect" title=" " alt="" coords="1019,752,1096,779"/>
-<area shape="rect" title=" " alt="" coords="1741,752,1811,779"/>
-<area shape="rect" title=" " alt="" coords="813,603,864,629"/>
-<area shape="rect" title=" " alt="" coords="1277,603,1344,629"/>
-<area shape="rect" title=" " alt="" coords="889,603,999,629"/>
-<area shape="rect" title=" " alt="" coords="1795,453,1853,480"/>
-<area shape="rect" title=" " alt="" coords="1987,229,2056,256"/>
-<area shape="rect" title=" " alt="" coords="2688,229,2749,256"/>
-</map>
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00003.svg" width="235" height="187"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div><div class="textblock"><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> 此图展示该文件直接或间接的被哪些文件引用了:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00004.svg" width="2516" height="560"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 <p><a href="a00002_source.html">浏览源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00329.html">CommonTools::MiraiCPDefer</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
+命名空间</h2></td></tr>
+<tr class="memitem:a00300"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00300.html">CommonTools</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_e931c1a3f0014e624d0645a271726ad2.html">examples</a></li><li class="navelem"><a class="el" href="a00002.html">callbackHandle.cpp</a></li>
-    <li class="footer">生成于 2022年 十一月 23日 星期三 10:27:50 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_0966d06610f72609fd9aa4979c2b5a92.html">common</a></li><li class="navelem"><a class="el" href="a00002.html">commonTools.h</a></li>
+    <li class="footer">生成于 2023年 一月 21日 星期六 14:32:48 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
     </body>

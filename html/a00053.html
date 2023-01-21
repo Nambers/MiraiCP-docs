@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiraiCP: Contact.h 文件参考</title>
+<title>MiraiCP: LoaderTaskQueue.h 文件参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -35,7 +35,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MiraiCP
-   &#160;<span id="projectnumber">v2.13.0-alpha-3</span>
+   &#160;<span id="projectnumber">v2.13.1</span>
    </div>
    <div id="projectbrief">MiraiCP api document</div>
   </td>
@@ -94,133 +94,80 @@ $(document).ready(function(){initNavTree('a00053.html',''); initResizable(); });
 
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">类</a> &#124;
 <a href="#namespaces">命名空间</a> &#124;
-<a href="#enum-members">枚举</a>  </div>
-  <div class="headertitle"><div class="title">Contact.h 文件参考</div></div>
+<a href="#typedef-members">类型定义</a> &#124;
+<a href="#enum-members">枚举</a> &#124;
+<a href="#func-members">函数</a> &#124;
+<a href="#var-members">变量</a>  </div>
+  <div class="headertitle"><div class="title">LoaderTaskQueue.h 文件参考</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="a00095_source.html">IMiraiData.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00101_source.html">KtOperation.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00119_source.html">LowLevelAPI.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00131_source.html">MessageChain.h</a>&quot;</code><br />
-<code>#include &lt;json_fwd.hpp&gt;</code><br />
+<div class="textblock"><code>#include &lt;condition_variable&gt;</code><br />
+<code>#include &lt;mutex&gt;</code><br />
+<code>#include &lt;queue&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Contact.h 的引用(Include)关系图:</div>
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> LoaderTaskQueue.h 的引用(Include)关系图:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="a00054.png" border="0" usemap="#a_contact_8h" alt=""/></div>
-<map name="a_contact_8h" id="a_contact_8h">
-<area shape="rect" title=" " alt="" coords="333,5,412,32"/>
-<area shape="rect" href="a00095.html" title=" " alt="" coords="286,80,377,107"/>
-<area shape="rect" title=" " alt="" coords="319,229,416,256"/>
-<area shape="rect" href="a00101.html" title=" " alt="" coords="5,80,108,107"/>
-<area shape="rect" href="a00119.html" title=" " alt="" coords="147,80,254,107"/>
-<area shape="rect" href="a00131.html" title=" " alt="" coords="1151,80,1269,107"/>
-<area shape="rect" title=" " alt="" coords="780,603,835,629"/>
-<area shape="rect" title=" " alt="" coords="269,155,330,181"/>
-<area shape="rect" title=" " alt="" coords="141,155,245,181"/>
-<area shape="rect" href="a00191.html" title=" " alt="" coords="1214,603,1337,629"/>
-<area shape="rect" href="a00071.html" title=" " alt="" coords="1165,155,1255,181"/>
-<area shape="rect" href="a00161.html" title=" " alt="" coords="717,155,839,181"/>
-<area shape="rect" href="a00182.html" title=" " alt="" coords="1418,304,1533,331"/>
-<area shape="rect" title=" " alt="" coords="1175,677,1240,704"/>
-<area shape="rect" href="a00059.html" title=" " alt="" coords="1061,229,1157,256"/>
-<area shape="rect" title=" " alt="" coords="1264,229,1343,256"/>
-<area shape="rect" title=" " alt="" coords="1181,229,1239,256"/>
-<area shape="rect" href="a00113.html" title=" " alt="" coords="1087,304,1159,331"/>
-<area shape="rect" href="a00206.html" title=" " alt="" coords="1132,453,1237,480"/>
-<area shape="rect" title=" " alt="" coords="1010,304,1063,331"/>
-<area shape="rect" href="a00143.html" title=" " alt="" coords="762,379,853,405"/>
-<area shape="rect" href="a00185.html" title=" " alt="" coords="979,379,1097,405"/>
-<area shape="rect" title=" " alt="" coords="1215,379,1293,405"/>
-<area shape="rect" title=" " alt="" coords="1122,379,1191,405"/>
-<area shape="rect" href="a00188.html" title=" " alt="" coords="979,453,1108,480"/>
-<area shape="rect" href="a00197.html" title=" " alt="" coords="927,528,1082,555"/>
-<area shape="rect" title=" " alt="" coords="1157,528,1228,555"/>
-<area shape="rect" href="a00137.html" title=" " alt="" coords="757,304,884,331"/>
-<area shape="rect" title=" " alt="" coords="557,229,607,256"/>
-<area shape="rect" title=" " alt="" coords="631,229,698,256"/>
-<area shape="rect" title=" " alt="" coords="723,229,833,256"/>
-</map>
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00054.svg" width="379" height="112"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div><div class="textblock"><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-1-trigger" src="closed.png" alt="+"/> 此图展示该文件直接或间接的被哪些文件引用了:</div>
 <div id="dynsection-1-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="a00055.png" border="0" usemap="#a_contact_8hdep" alt=""/></div>
-<map name="a_contact_8hdep" id="a_contact_8hdep">
-<area shape="rect" title=" " alt="" coords="944,5,1023,32"/>
-<area shape="rect" href="a00041.html" title=" " alt="" coords="734,80,787,107"/>
-<area shape="rect" href="a00146.html" title=" " alt="" coords="689,304,782,331"/>
-<area shape="rect" href="a00050.html" title=" " alt="" coords="1160,155,1252,181"/>
-<area shape="rect" href="a00994.html" title=" " alt="" coords="1270,80,1430,107"/>
-<area shape="rect" href="a00083.html" title=" " alt="" coords="839,80,909,107"/>
-<area shape="rect" href="a00089.html" title=" " alt="" coords="949,80,1017,107"/>
-<area shape="rect" href="a00125.html" title=" " alt="" coords="1166,80,1246,107"/>
-<area shape="rect" href="a00038.html" title=" " alt="" coords="719,155,786,181"/>
-<area shape="rect" href="a00065.html" title=" " alt="" coords="861,155,927,181"/>
-<area shape="rect" href="a00062.html" title=" " alt="" coords="831,229,909,256"/>
-<area shape="rect" href="a00149.html" title=" " alt="" coords="664,229,807,256"/>
-<area shape="rect" href="a01018.html" title=" " alt="" coords="934,229,1035,256"/>
-<area shape="rect" href="a00176.html" title=" " alt="" coords="1060,229,1131,256"/>
-<area shape="rect" href="a00002.html" title=" " alt="" coords="5,379,140,405"/>
-<area shape="rect" href="a00985.html" title=" " alt="" coords="165,379,269,405"/>
-<area shape="rect" href="a00991.html" title=" " alt="" coords="293,379,447,405"/>
-<area shape="rect" href="a00997.html" title=" " alt="" coords="472,379,551,405"/>
-<area shape="rect" href="a00017.html" title=" " alt="" coords="575,379,669,405"/>
-<area shape="rect" href="a01003.html" title=" " alt="" coords="694,379,777,405"/>
-<area shape="rect" href="a01009.html" title=" " alt="" coords="801,379,896,405"/>
-<area shape="rect" href="a00026.html" title=" " alt="" coords="920,379,1020,405"/>
-<area shape="rect" href="a00029.html" title=" " alt="" coords="1045,379,1170,405"/>
-<area shape="rect" href="a01015.html" title=" " alt="" coords="1194,379,1293,405"/>
-<area shape="rect" href="a00035.html" title=" " alt="" coords="1317,379,1399,405"/>
-<area shape="rect" href="a00080.html" title=" " alt="" coords="613,155,695,181"/>
-<area shape="rect" href="a01000.html" title=" " alt="" coords="1277,155,1359,181"/>
-<area shape="rect" href="a00128.html" title=" " alt="" coords="1002,155,1135,181"/>
-<area shape="rect" href="a01012.html" title=" " alt="" coords="1435,155,1529,181"/>
-</map>
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00055.svg" width="426" height="112"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 <p><a href="a00053_source.html">浏览源代码.</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
-类</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00293.html">MiraiCP::IContactData</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00301.html" title="group, friend, member的父类">Contact</a> 内部储存数据抽象类  <a href="a00293.html#details">更多...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00297.html">MiraiCP::GroupRelatedData</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00301.html">MiraiCP::Contact</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">group, friend, member的父类  <a href="a00301.html#details">更多...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00305.html">MiraiCP::ContactDataHelper&lt; ClassType, InternalDataType &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Contact类型的数据接口模板类  <a href="a00305.html#details">更多...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00309.html">MiraiCP::INudgeSupport</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
 命名空间</h2></td></tr>
-<tr class="memitem:a00218"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00218.html">MiraiCP</a></td></tr>
+<tr class="memitem:a00301"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00301.html">LibLoader</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+类型定义</h2></td></tr>
+<tr class="memitem:a7d3f947f188b83a2b84f3c7e009d4e1a"><td class="memItemLeft" align="right" valign="top">typedef std::pair&lt; LOADER_TASKS, std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00301.html#a7d3f947f188b83a2b84f3c7e009d4e1a">LibLoader::loadertask</a></td></tr>
+<tr class="separator:a7d3f947f188b83a2b84f3c7e009d4e1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 枚举</h2></td></tr>
-<tr class="memitem:a0d1866090dd6e204aff05337260f3a57"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00218.html#a0d1866090dd6e204aff05337260f3a57">MiraiCP::ContactType</a> { <br />
-&#160;&#160;<a class="el" href="a00218.html#a0d1866090dd6e204aff05337260f3a57aeb5e49b11f2d1ca3eb284cae0513f35e">MiraiCP::MIRAI_CONTACT</a> = 0
-, <a class="el" href="a00218.html#a0d1866090dd6e204aff05337260f3a57a00d007921a890e2b7d340dd1f4c0d4cd">MiraiCP::MIRAI_FRIEND</a> = 1
-, <a class="el" href="a00218.html#a0d1866090dd6e204aff05337260f3a57a93f95481bb236ec2172ca1b026f86d22">MiraiCP::MIRAI_GROUP</a> = 2
-, <a class="el" href="a00218.html#a0d1866090dd6e204aff05337260f3a57a6e5aadebf597a6ed3505ca7268a9f902">MiraiCP::MIRAI_MEMBER</a> = 3
+<tr class="memitem:a30aa31bdebda65b5dc09459f065cf482"><td class="memItemLeft" align="right" valign="top">enum struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00301.html#a30aa31bdebda65b5dc09459f065cf482">LibLoader::LOADER_TASKS</a> { <br />
+&#160;&#160;<a class="el" href="a00301.html#a30aa31bdebda65b5dc09459f065cf482a445daa5b99398472138b7322b561fb27">LibLoader::ADD_THREAD</a>
+, <a class="el" href="a00301.html#a30aa31bdebda65b5dc09459f065cf482a9f868a91fcfde74e1293e5c89498b376">LibLoader::END_THREAD</a>
+, <a class="el" href="a00301.html#a30aa31bdebda65b5dc09459f065cf482af7642b9b513ebc4d2d35907325564f6a">LibLoader::ENABLE_ALL</a>
+, <a class="el" href="a00301.html#a30aa31bdebda65b5dc09459f065cf482aa4f23572e2e2fcd98c6396ea9d77312e">LibLoader::DISABLE_ALL</a>
 , <br />
-&#160;&#160;<a class="el" href="a00218.html#a0d1866090dd6e204aff05337260f3a57a1817a8a73e3d0a8896c90a346e40c819">MiraiCP::MIRAI_OTHERTYPE</a> = 4
+&#160;&#160;<a class="el" href="a00301.html#a30aa31bdebda65b5dc09459f065cf482a97392091ce14839af90239bab1cc6b08">LibLoader::LOAD_NEW_ACTIVATENOW</a>
+, <a class="el" href="a00301.html#a30aa31bdebda65b5dc09459f065cf482a2ec891fb94aefae87f6effc99b18e8d0">LibLoader::LOAD_NEW_DONTACTIVATE</a>
+, <a class="el" href="a00301.html#a30aa31bdebda65b5dc09459f065cf482a4fd5807b5d875b53ba16d14054cdfaad">LibLoader::UNLOAD</a>
+, <a class="el" href="a00301.html#a30aa31bdebda65b5dc09459f065cf482a07d14e40a82f0a38be9b2d0e4f5f8278">LibLoader::RELOAD</a>
+, <br />
+&#160;&#160;<a class="el" href="a00301.html#a30aa31bdebda65b5dc09459f065cf482a7092e85ca968b7860da2894c65d3132e">LibLoader::EXCEPTION_PLUGINEND</a>
+, <a class="el" href="a00301.html#a30aa31bdebda65b5dc09459f065cf482a582cbc208af43808f67f4c736fc431fb">LibLoader::RESET_THREAD</a>
+, <a class="el" href="a00301.html#a30aa31bdebda65b5dc09459f065cf482a51f7dec58bc9cd93ab07ef616f71baaa">LibLoader::TASK_TYPES_COUNT</a>
 <br />
  }</td></tr>
-<tr class="memdesc:a0d1866090dd6e204aff05337260f3a57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Contact 类型  <a href="a00218.html#a0d1866090dd6e204aff05337260f3a57">更多...</a><br /></td></tr>
-<tr class="separator:a0d1866090dd6e204aff05337260f3a57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:a30aa31bdebda65b5dc09459f065cf482"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:a46f4ab12479d61956e7dc81cfb19fef5"><td class="memItemLeft" align="right" valign="top">std::condition_variable &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00301.html#a46f4ab12479d61956e7dc81cfb19fef5">LibLoader::loaderWakeCV</a> ()</td></tr>
+<tr class="separator:a46f4ab12479d61956e7dc81cfb19fef5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afbf560680f6b525ee0240f614a0177b6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00301.html#afbf560680f6b525ee0240f614a0177b6">LibLoader::sendPluginException</a> (std::string plugin_id)</td></tr>
+<tr class="separator:afbf560680f6b525ee0240f614a0177b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ee448e1b260709b6a8d73fa41ec5c15"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00301.html#a7ee448e1b260709b6a8d73fa41ec5c15">LibLoader::sendThreadReset</a> (size_t index)</td></tr>
+<tr class="separator:a7ee448e1b260709b6a8d73fa41ec5c15"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+变量</h2></td></tr>
+<tr class="memitem:a0c277357f066f384f6b2a05a472a47c6"><td class="memItemLeft" align="right" valign="top">std::queue&lt; loadertask &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00301.html#a0c277357f066f384f6b2a05a472a47c6">LibLoader::loader_thread_task_queue</a></td></tr>
+<tr class="separator:a0c277357f066f384f6b2a05a472a47c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af93aa0663e3f029f87f90ab64f7f8c19"><td class="memItemLeft" align="right" valign="top">std::recursive_mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00301.html#af93aa0663e3f029f87f90ab64f7f8c19">LibLoader::task_mtx</a></td></tr>
+<tr class="separator:af93aa0663e3f029f87f90ab64f7f8c19"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -228,8 +175,8 @@ $(document).ready(function(){initNavTree('a00053.html',''); initResizable(); });
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b0856f6b0d80ccb263b2f415c91f9e17.html">include</a></li><li class="navelem"><a class="el" href="a00053.html">Contact.h</a></li>
-    <li class="footer">生成于 2022年 十一月 23日 星期三 10:27:50 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_bda05eb71e068b870dbf680d28584ff8.html">libloader</a></li><li class="navelem"><a class="el" href="a00053.html">LoaderTaskQueue.h</a></li>
+    <li class="footer">生成于 2023年 一月 21日 星期六 14:32:48 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
     </body>

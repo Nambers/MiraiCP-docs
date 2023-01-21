@@ -1,9 +1,12 @@
 var namespaces_dup =
 [
-    [ "CommonTools", "a00216.html", "a00216" ],
-    [ "LibLoader", "a00217.html", "a00217" ],
-    [ "MiraiCP", "a00218.html", "a00218" ],
+    [ "CommonTools", "a00300.html", "a00300" ],
+    [ "EnvMocker", "a00316.html", [
+      [ "force_reset_env", "a00316.html#a4fe7994937d5b8906830f48192a6990f", null ]
+    ] ],
+    [ "LibLoader", "a00301.html", "a00301" ],
+    [ "MiraiCP", "a00302.html", "a00302" ],
     [ "std", null, [
-      [ "hash< MiraiCP::Tools::idpair >", "a00673.html", "a00673" ]
+      [ "hash< MiraiCP::Tools::idpair >", "a00801.html", "a00801" ]
     ] ]
 ];

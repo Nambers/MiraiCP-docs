@@ -1,14 +1,13 @@
 var a00356 =
 [
-    [ "GroupTempMessageEvent", "a00356.html#ac5b934f48abd45f8499ec3c6dbedba1a", null ],
-    [ "chat", "a00356.html#a55718d1fe9883ea24c47c8ebb503d807", null ],
-    [ "chat", "a00356.html#ac9bee0cbf3838fa62837e62110e67067", null ],
-    [ "from", "a00356.html#a40e9c959f267452a60b2d5e6549dd5bb", null ],
-    [ "from", "a00356.html#adf2a7d962bf5daba13db488d48f0da5d", null ],
-    [ "get_event_type", "a00356.html#aab7402e84e7d27152ee337a20d70233a", null ],
-    [ "getMessageChain", "a00356.html#af08cf89e9ec68ea7a71f491bac7af023", null ],
-    [ "getMessageChain", "a00356.html#af4a3409f72b9feba0671804763390592", null ],
-    [ "group", "a00356.html#a29c18056652c7d36248f70f359f01e74", null ],
-    [ "message", "a00356.html#a2405f8a309e3b2de0d7cba313d795cee", null ],
-    [ "sender", "a00356.html#ac0252e17c1cb9a0d4f2ebf37720951db", null ]
+    [ "blocks", "a00356.html#a2e938fc32ea845e8a0cf23025c6830c7", null ],
+    [ "end", "a00356.html#a0f0e08f9eff06a0d8e3b05bf59833c7b", null ],
+    [ "get_num_blocks", "a00356.html#aed50be83dbe428959cb600197df32c95", null ],
+    [ "get_total_size", "a00356.html#a5f1214e4fdf05ff4d825d08cf8c66b2b", null ],
+    [ "start", "a00356.html#a7d659984a82cf57e54773d9a88d863ae", null ],
+    [ "block_size", "a00356.html#a00be565e32c27f12daabcad3372e4427", null ],
+    [ "first_index", "a00356.html#a280d8dc59f615cf7880dc455849b8daf", null ],
+    [ "index_after_last", "a00356.html#a1a85a9337c465b6e8f0f58de55ad9404", null ],
+    [ "num_blocks", "a00356.html#ae07e5d2a3a7ee244222f9045f69c64da", null ],
+    [ "total_size", "a00356.html#a2fe0f1dc1c6cdcb40e255512ad38213f", null ]
 ];

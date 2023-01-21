@@ -1,8 +1,13 @@
 var a00513 =
 [
-    [ "isAllowMemberInvite", "a00513.html#a5ee2eac5a690124b1353ebc988ac10a8", null ],
-    [ "isAnonymousChatEnabled", "a00513.html#aeee24196a164dc3c657dae0e89b54185", null ],
-    [ "isAutoApproveEnabled", "a00513.html#aeb6075c0251e693cce643900a9604129", null ],
-    [ "isMuteAll", "a00513.html#a322ca9203cd26388e96da414634ae8b4", null ],
-    [ "name", "a00513.html#ab20b1e639b93e0379ec3d8ea0ecf6c53", null ]
+    [ "EventType", "a00513.html#ac1df44d7400ad221500364c7b3de6737", [
+      [ "Active", "a00513.html#ac1df44d7400ad221500364c7b3de6737a4d3d769b812b6faa6b76e1a8abaece2d", null ],
+      [ "Kick", "a00513.html#ac1df44d7400ad221500364c7b3de6737a3e07960fcc45408894cf1402257bd9fd", null ],
+      [ "Disband", "a00513.html#ac1df44d7400ad221500364c7b3de6737aeee6f05922080480c6043305c9d6b329", null ]
+    ] ],
+    [ "BotLeaveEvent", "a00513.html#adf7d87e720725c6db5fb39f0f666b9a4", null ],
+    [ "get_event_type", "a00513.html#a6181c5b90aece0c558943c71d9a037ed", null ],
+    [ "group", "a00513.html#a8d792f877c523fc85423263a3ff60242", null ],
+    [ "operater", "a00513.html#aa8e91ea7bff0f0211728c25ee5402ccc", null ],
+    [ "type", "a00513.html#ae417bdaa1e08bf29b51b97fd1f8f4d80", null ]
 ];

@@ -1,6 +1,8 @@
 var a00429 =
 [
-    [ "BotException", "a00429.html#ac250396fe99586a5cf4edd42f708ba5f", null ],
-    [ "BotException", "a00429.html#a153b578a5e2dba1a34b660c3cfff1f36", null ],
-    [ "exceptionType", "a00429.html#ac31df28b76fc89b362e1b94c4c866b43", null ]
+    [ "DataType", "a00429.html#a43b7d1c1b54bb89e33ad610bbd46953f", null ],
+    [ "json", "a00429.html#a5b3c9b7d906d4cb7ee220e5e7e12c57f", null ],
+    [ "avatarUrl", "a00429.html#ac3f8a47de4224ae6fa769171cf657d40", null ],
+    [ "GetDataInternal", "a00429.html#ace946a4a220bd1573f1e42c9628a3a08", null ],
+    [ "nickOrNameCard", "a00429.html#a8b43a586164fafff5f807494d997ad5d", null ]
 ];

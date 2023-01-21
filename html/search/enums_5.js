@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['types_0',['Types',['../a00221.html#abe9e9d8212ea8f23717b72db64393cab',1,'MiraiCP::eventTypes']]]
+  ['memberexceptiontype_0',['MemberExceptionType',['../a00577.html#a5d79da819adcd25a5b51a498762067a2',1,'MiraiCP::MemberException']]]
 ];

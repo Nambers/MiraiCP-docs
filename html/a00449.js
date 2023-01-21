@@ -1,5 +1,7 @@
 var a00449 =
 [
-    [ "GroupException", "a00449.html#a86d9f8647899ea7ec1c9bc29a0fab4e2", null ],
-    [ "exceptionType", "a00449.html#ad5423a44299fc74eca0a1be0e66529fd", null ]
+    [ "MiraiCPEvent", "a00449.html#ac85886499f0138dbdd661dea59c7596d", null ],
+    [ "~MiraiCPEvent", "a00449.html#a42d37c121315a51870afcc0b9306675a", null ],
+    [ "get_event_type", "a00449.html#a2df44719d2520c5197b90a9b17ffb34d", null ],
+    [ "getEventType", "a00449.html#a8b6261853c107755fd808ba2879c06d8", null ]
 ];

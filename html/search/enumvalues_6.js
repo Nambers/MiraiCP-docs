@@ -1,5 +1,9 @@
 var searchData=
 [
-  ['imageuploaded_0',['ImageUploaded',['../a00222.html#a80a8ec1c1ed6fd9db32d9a878405d412a32d12f7dd6c0bd466c899d35ec3d03ef',1,'MiraiCP::KtOperation']]],
-  ['invited_1',['invited',['../a00345.html#a1d73fdd5e84653d078b859b37dd1bcc8aa328607b0546483fb4503bf453508821',1,'MiraiCP::MemberJoinEvent']]]
+  ['gioperation_0',['Gioperation',['../a00309.html#a80a8ec1c1ed6fd9db32d9a878405d412acc38c460d69662fbc68a4c7c1a8e7dab',1,'MiraiCP::KtOperation']]],
+  ['groupinviteevent_1',['GroupInviteEvent',['../a00307.html#abe9e9d8212ea8f23717b72db64393cabaa0c1608d4d5428440a6880a212510e8e',1,'MiraiCP::eventTypes']]],
+  ['grouplist_2',['GroupList',['../a00309.html#a61a85abb353bc8cd9f7715938014d86ea7a587378b9a8bd2d44dbe89b0b016e27',1,'MiraiCP::KtOperation']]],
+  ['groupmessageevent_3',['GroupMessageEvent',['../a00307.html#abe9e9d8212ea8f23717b72db64393cabaca8073196614a985e9fcc7d2f964473c',1,'MiraiCP::eventTypes']]],
+  ['groupsetting_4',['GroupSetting',['../a00309.html#a80a8ec1c1ed6fd9db32d9a878405d412a5c293c8a0900960a23381288bf9b0065',1,'MiraiCP::KtOperation']]],
+  ['grouptempmessageevent_5',['GroupTempMessageEvent',['../a00307.html#abe9e9d8212ea8f23717b72db64393caba82138ba7d5017c9976f29de9213836dd',1,'MiraiCP::eventTypes']]]
 ];

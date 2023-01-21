@@ -1,11 +1,7 @@
 var a00600 =
 [
-    [ "PlainText", "a00600.html#af0ffa277c961cde9e5fc0ecc23ff224c", null ],
-    [ "PlainText", "a00600.html#a76de73df323ad93c427f73f6794981df", null ],
-    [ "PlainText", "a00600.html#a3efbf00d93c1133b1c41503c5c373043", null ],
-    [ "PlainText", "a00600.html#ab162399890922204a0e99424c16df2f5", null ],
-    [ "operator==", "a00600.html#a6c8a471bcf5cd3bcc65f6d75097ce286", null ],
-    [ "toJson", "a00600.html#a0fb7ad4530e4602d09c388d44fc4bc00", null ],
-    [ "toMiraiCode", "a00600.html#a2cbc08df42d84ad5c50e2dae680c0eb4", null ],
-    [ "type", "a00600.html#a440b92da26612820bd700e2ce9a5e999", null ]
+    [ "FriendException", "a00600.html#a73e9dd98256665fe2230a68df2cf2110", null ],
+    [ "FriendException", "a00600.html#a73e9dd98256665fe2230a68df2cf2110", null ],
+    [ "exceptionType", "a00600.html#aa08c204826f37f656ed48413f331fe06", null ],
+    [ "exceptionType", "a00600.html#aa08c204826f37f656ed48413f331fe06", null ]
 ];

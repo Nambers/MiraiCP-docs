@@ -1,18 +1,12 @@
 var a00636 =
 [
-    [ "Dinfo", "a00640.html", "a00640" ],
-    [ "Finfo", "a00644.html", "a00644" ],
-    [ "RemoteFile", "a00636.html#a42e9c8d14e1da508881201dbd46d54e1", null ],
-    [ "RemoteFile", "a00636.html#a4ecead51c171d61e1a858ef473e9bc36", null ],
-    [ "deserializeFromString", "a00636.html#a86d0f3d9b2d7ef5aab70d377297528fc", null ],
-    [ "plus", "a00636.html#a6d3851415c16a7976def77a81a9b38d6", null ],
-    [ "serializeToString", "a00636.html#a037f0b6bb7ad3900335080fc4f219618", null ],
-    [ "type", "a00636.html#a36fe9c5c7c10560d1e4a7b62cb49164b", null ],
-    [ "dinfo", "a00636.html#ac51de6637e95569a0a56f15334d10ab3", null ],
-    [ "finfo", "a00636.html#a851391e82ecb74f624a397109a87bf48", null ],
-    [ "id", "a00636.html#a8e4443d5a31bd8a4e986a133596a4503", null ],
-    [ "internalid", "a00636.html#a7271af23428cf4ad419a053b9860b63e", null ],
-    [ "name", "a00636.html#ab349943782949b60cd117b5fc8b645e2", null ],
-    [ "path", "a00636.html#ad5c2c64b98d4ac3ee79f40640090b649", null ],
-    [ "size", "a00636.html#a9b15694dd4c005204268d161fd4760f1", null ]
+    [ "MiraiCPThreadException", "a00636.html#a4b4c5caac34747b3ecb483f4deed965f", null ],
+    [ "MiraiCPThreadException", "a00636.html#a4b4c5caac34747b3ecb483f4deed965f", null ],
+    [ "exceptionType", "a00636.html#aad0c4ccc8e691b6d4a078b1ea85c3207", null ],
+    [ "exceptionType", "a00636.html#aad0c4ccc8e691b6d4a078b1ea85c3207", null ],
+    [ "getThreadIdStr", "a00636.html#ae296a1ee1626dd34c9028ae8a33179a5", null ],
+    [ "getThreadIdStr", "a00636.html#ae296a1ee1626dd34c9028ae8a33179a5", null ],
+    [ "getThreadIdStr", "a00636.html#a6beb35a9023dec7d8f0fc7de6c2c6257", null ],
+    [ "getThreadIdStr", "a00636.html#a202c30a4d2762c873c10628388b6b4fc", null ],
+    [ "threadId", "a00636.html#aabed0e9baac6e2c9164c5b606b04bc97", null ]
 ];

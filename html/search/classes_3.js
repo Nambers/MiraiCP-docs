@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['dinfo_0',['Dinfo',['../a00645.html',1,'MiraiCP::RemoteFile']]]
+  ['dinfo_0',['Dinfo',['../a00773.html',1,'MiraiCP::RemoteFile']]]
 ];

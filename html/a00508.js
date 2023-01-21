@@ -1,8 +1,12 @@
 var a00508 =
 [
-    [ "isAllowMemberInvite", "a00508.html#a5ee2eac5a690124b1353ebc988ac10a8", null ],
-    [ "isAnonymousChatEnabled", "a00508.html#aeee24196a164dc3c657dae0e89b54185", null ],
-    [ "isAutoApproveEnabled", "a00508.html#aeb6075c0251e693cce643900a9604129", null ],
-    [ "isMuteAll", "a00508.html#a322ca9203cd26388e96da414634ae8b4", null ],
-    [ "name", "a00508.html#ab20b1e639b93e0379ec3d8ea0ecf6c53", null ]
+    [ "MemberRecallEvent", "a00508.html#ae2531a88731e49d91180cc0c890fa24d", null ],
+    [ "MemberRecallEvent", "a00508.html#ae2531a88731e49d91180cc0c890fa24d", null ],
+    [ "get_event_type", "a00508.html#aa6f3ad8649a79e18d462e9ec112ecd81", null ],
+    [ "get_event_type", "a00508.html#aa6f3ad8649a79e18d462e9ec112ecd81", null ],
+    [ "author", "a00508.html#a42b790ec3a63e1e3681153d4450ff61c", null ],
+    [ "ids", "a00508.html#aa89c57b7458608b67fecce4cb3aec205", null ],
+    [ "internalIds", "a00508.html#a7ae3f1f378e6191e0825aaeb4e0a32d7", null ],
+    [ "operater", "a00508.html#a36111b48542b165bd42014c05b565e63", null ],
+    [ "time", "a00508.html#a10924542380ed62cbf690d8754cc7a10", null ]
 ];

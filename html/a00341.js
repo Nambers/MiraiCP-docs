@@ -1,13 +1,20 @@
 var a00341 =
 [
-    [ "NewFriendRequestEvent", "a00341.html#accad15b5249d3af4de37a21ae5614f3f", null ],
-    [ "accept", "a00341.html#a460bb7fc7e69cf313e3902ae0101b459", null ],
-    [ "get_event_type", "a00341.html#a53ffb1428471bb194297d75715d964cf", null ],
-    [ "operation0", "a00341.html#a6744740744f4712087d408655867f5ff", null ],
-    [ "reject", "a00341.html#a887c0777813d171d8fd4241e5d6c7357", null ],
-    [ "fromgroupid", "a00341.html#a9d75cbeeaf4d484676bfc7090baa4b9b", null ],
-    [ "fromid", "a00341.html#a6c987dc795e5e1893caef8370bf6dfee", null ],
-    [ "message", "a00341.html#a914502cfd8ab0db7ea570240f0bb56e5", null ],
-    [ "nick", "a00341.html#aac9936ee444a019ef2c988a4ed369b55", null ],
-    [ "source", "a00341.html#a4b48f29f9ac4443abf0a76590690a897", null ]
+    [ "getAuthor", "a00341.html#abfdf0bbad2700204a5deced1ff272ff2", null ],
+    [ "getDescription", "a00341.html#a7164279987822e9aab5a2dd15e017de3", null ],
+    [ "getId", "a00341.html#a812cdc9b9e9c46af8980f1aea9a4233c", null ],
+    [ "getMVersion", "a00341.html#a89f1f77ffc39dfa0481e7c1ddc318b23", null ],
+    [ "getName", "a00341.html#a75b62773306f64d5de37fc60f700b534", null ],
+    [ "getTime", "a00341.html#aa9519385a55e29fa632d31d97b734ac4", null ],
+    [ "getVersion", "a00341.html#a8f0131520e982b41e3c62364b9eaf2fa", null ],
+    [ "isValid", "a00341.html#a37c32e82eb4c921a9f66db00cc7a0010", null ],
+    [ "serialize", "a00341.html#a074fac12f573e3ec8ea2bb2bced66f08", null ],
+    [ "serialize2string", "a00341.html#af92596a34de37970ec76538dc2817e98", null ],
+    [ "author", "a00341.html#a6e9f61e66186687264c2020b1d6c3afe", null ],
+    [ "description", "a00341.html#a6912f54ff186c8903ce5b55000bcbc6f", null ],
+    [ "id", "a00341.html#a2c5e718b4b8ceb1cb2b5b8bbb876146a", null ],
+    [ "mversion", "a00341.html#a3c74ed2b89e386c82452f1b510d99c57", null ],
+    [ "name", "a00341.html#a2b542fc65ab1b1d6720bfcc1a9ce1602", null ],
+    [ "time", "a00341.html#a72f4752e10dc44b50911e80e37c924c2", null ],
+    [ "version", "a00341.html#a5754922ee11dbea499f6454b86357d16", null ]
 ];

@@ -1,10 +1,7 @@
 var a00604 =
 [
-    [ "At", "a00604.html#ab5b225ea67cf995d13b384ec622c86e7", null ],
-    [ "At", "a00604.html#a3e12195fc4d9ae026ec8a438a368342a", null ],
-    [ "operator==", "a00604.html#a58dbd3db49d9d2fed357b791ff3ba816", null ],
-    [ "toJson", "a00604.html#a60af12c9073c8734f98ee682a61ce184", null ],
-    [ "toMiraiCode", "a00604.html#abaa95fab044eebb3e355da0040c0bfa7", null ],
-    [ "type", "a00604.html#a125a356ddd55ec22117d8fafb1f32dc9", null ],
-    [ "target", "a00604.html#a4c451a3d12d38f6a83d425cab2d2aa25", null ]
+    [ "GroupException", "a00604.html#a86d9f8647899ea7ec1c9bc29a0fab4e2", null ],
+    [ "GroupException", "a00604.html#a86d9f8647899ea7ec1c9bc29a0fab4e2", null ],
+    [ "exceptionType", "a00604.html#ad5423a44299fc74eca0a1be0e66529fd", null ],
+    [ "exceptionType", "a00604.html#ad5423a44299fc74eca0a1be0e66529fd", null ]
 ];

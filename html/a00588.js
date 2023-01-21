@@ -1,9 +1,8 @@
 var a00588 =
 [
-    [ "MiraiCPNewThread", "a00588.html#aac9f1899dc2dd508fb87c393dce95569", null ],
-    [ "MiraiCPNewThread", "a00588.html#ae04a775fb43599b61f29e831f98bfee0", null ],
-    [ "operator=", "a00588.html#a72e06856d9b8a870c2405bd8345e4e9a", null ],
-    [ "operator=", "a00588.html#ab26297cb5d0e97dffe4983d75bbdf413", null ],
-    [ "operator=", "a00588.html#adff0ce4c4549e6803c61cb55128f41d7", null ],
-    [ "operator=", "a00588.html#afa2a7ce9f57f6c96fad78f347bcca5af", null ]
+    [ "BotIsBeingMutedException", "a00588.html#a548111b99d412290281c43e90a1e8e16", null ],
+    [ "BotIsBeingMutedException", "a00588.html#a548111b99d412290281c43e90a1e8e16", null ],
+    [ "exceptionType", "a00588.html#a86c42cdc24c6bf1f85c143cdc5ef6941", null ],
+    [ "exceptionType", "a00588.html#a86c42cdc24c6bf1f85c143cdc5ef6941", null ],
+    [ "timeRemain", "a00588.html#aacccf1ba2a31c6a8901d87d166c85f3e", null ]
 ];

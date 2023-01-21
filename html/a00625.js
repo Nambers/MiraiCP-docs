@@ -1,9 +1,11 @@
 var a00625 =
 [
-    [ "LightApp", "a00625.html#a7cfcefeb788e3046fb321fab0a7b813a", null ],
-    [ "LightApp", "a00625.html#a1803b5deeb42af5f4770751aa4160a25", null ],
-    [ "operator==", "a00625.html#ae69ac9a6359eb6848ce09f7671395969", null ],
-    [ "toJson", "a00625.html#a95599fbda45f4240f9241f6dfa6fe05d", null ],
-    [ "toMiraiCode", "a00625.html#ad1637240306cd3dd587044054381d991", null ],
-    [ "type", "a00625.html#abba0c279393369d31f7ebc88ee6756fd", null ]
+    [ "ForwardedNode", "a00625.html#acd0109a76b19e5643fc518e34f971747", null ],
+    [ "ForwardedNode", "a00625.html#a061475e039e06649ee0e36bdba3786ac", null ],
+    [ "isForwarded", "a00625.html#ab7c98ea30d551fc60f09289338b100ea", null ],
+    [ "id", "a00625.html#aaaa85af6ea1bea84767d5352fdc2c907", null ],
+    [ "isForwardedMessage", "a00625.html#a89e1eab9756347a42df11550365035b5", null ],
+    [ "message", "a00625.html#acb5969070d29271a128fc95d5b503fc0", null ],
+    [ "name", "a00625.html#a7c1ccf827b401b609cfc8481909019e7", null ],
+    [ "time", "a00625.html#ac5f4d270eb51284f2f25051aaf1545f7", null ]
 ];

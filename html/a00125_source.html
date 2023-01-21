@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiraiCP: Member.h 源文件</title>
+<title>MiraiCP: MiraiCP.hpp 源文件</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -35,7 +35,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MiraiCP
-   &#160;<span id="projectnumber">v2.13.0-alpha-3</span>
+   &#160;<span id="projectnumber">v2.13.1</span>
    </div>
    <div id="projectbrief">MiraiCP api document</div>
   </td>
@@ -93,7 +93,7 @@ $(document).ready(function(){initNavTree('a00125_source.html',''); initResizable
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">Member.h</div></div>
+  <div class="headertitle"><div class="title">MiraiCP.hpp</div></div>
 </div><!--header-->
 <div class="contents">
 <a href="a00125.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// Copyright (c) 2020 - 2022. Eritque arcus and contributors.</span></div>
@@ -111,108 +111,84 @@ $(document).ready(function(){initNavTree('a00125_source.html',''); initResizable
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">// You should have received a copy of the GNU Affero General Public License</span></div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">// along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</span></div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">//</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#ifndef MIRAICP_PRO_MEMBER_H</span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#define MIRAICP_PRO_MEMBER_H</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#ifndef MIRAICP_HPP_H</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#define MIRAICP_HPP_H</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &quot;<a class="code" href="a00053.html">Contact.h</a>&quot;</span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keyword">namespace </span><a class="code hl_namespace" href="a00218.html">MiraiCP</a> {</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="a00565.html">   27</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="a00565.html">MemberData</a> : <span class="keyword">public</span> <a class="code hl_struct" href="a00297.html">GroupRelatedData</a> {</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="a00565.html#aaea4d406d7045381eee7914a5595f76d">   28</a></span>        <span class="keyword">typedef</span> <a class="code hl_struct" href="a00293.html">IContactData</a> <a class="code hl_typedef" href="a00565.html#aaea4d406d7045381eee7914a5595f76d">Super</a>;</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="a00565.html#a556b696baad932311d072131f4ce1ab0">   34</a></span>        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="a00565.html#a556b696baad932311d072131f4ce1ab0">_permission</a> = 0;</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="a00565.html#abb4f4f2a91f1b18ab4d21f14b4d073ed">   36</a></span>        <span class="keywordtype">bool</span> <a class="code hl_variable" href="a00565.html#abb4f4f2a91f1b18ab4d21f14b4d073ed">_anonymous</a> = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="a00565.html#a438176d2b44593c197a36703fe1ea66e">   38</a></span>        <span class="keyword">explicit</span> <a class="code hl_function" href="a00565.html#a438176d2b44593c197a36703fe1ea66e">MemberData</a>(<a class="code hl_typedef" href="a00218.html#a3ae2ebfdaa4574d341b8e7935f29ddb8">QQID</a> in_groupid) : <a class="code hl_struct" href="a00297.html">GroupRelatedData</a>(in_groupid) {}</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="a00565.html#a1681ff4e1859f24abec68681fcf8b40e">deserialize</a>(<a class="code hl_typedef" href="a00176.html#ab701e3ac61a85b337ec5c1abaad6742d">nlohmann::json</a> in_json) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="a00565.html#a904da5608fbac3b2258168b2f62e8c4b">refreshInfo</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    };</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="a00569.html">   47</a></span>    <span class="keyword">class </span><a class="code hl_class" href="a00569.html">Member</a> : <span class="keyword">public</span> <a class="code hl_class" href="a00301.html">Contact</a>, <span class="keyword">public</span> <a class="code hl_class" href="a00309.html">INudgeSupport</a>, <span class="keyword">public</span> <a class="code hl_struct" href="a00305.html">ContactDataHelper</a>&lt;Member, MemberData&gt; {</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="a00569.html#a76d4b1c8c6040df20040808941b7e764">   48</a></span>        <span class="keyword">friend</span> <span class="keyword">class </span><a class="code hl_class" href="a00301.html">Contact</a>;</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        <span class="keyword">explicit</span> <a class="code hl_function" href="a00569.html#a69e77e737f0547520c2c206fce997eac">Member</a>(<a class="code hl_typedef" href="a00176.html#ab701e3ac61a85b337ec5c1abaad6742d">nlohmann::json</a> in_json);</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        <span class="keyword">explicit</span> <a class="code hl_function" href="a00569.html#a69e77e737f0547520c2c206fce997eac">Member</a>(<a class="code hl_typedef" href="a00218.html#a3ae2ebfdaa4574d341b8e7935f29ddb8">QQID</a> qqid, <a class="code hl_typedef" href="a00218.html#a3ae2ebfdaa4574d341b8e7935f29ddb8">QQID</a> groupid, <a class="code hl_typedef" href="a00218.html#a3ae2ebfdaa4574d341b8e7935f29ddb8">QQID</a> <a class="code hl_function" href="a00301.html#ac257ebdd1591ea5acf6e045abf28ecba">botid</a>);</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="a00569.html#a3ca40feb7ca17732c87e770daf133891">   63</a></span>        <a class="code hl_function" href="a00569.html#a3ca40feb7ca17732c87e770daf133891">Member</a>(<span class="keywordtype">bool</span>) = <span class="keyword">delete</span>;</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        <a class="code hl_define" href="a00191.html#a080ecbb1030f954f1e64f613d97b2468">DECL_GETTER</a>(anonymous)</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        <a class="code hl_define" href="a00191.html#a080ecbb1030f954f1e64f613d97b2468">DECL_GETTER</a>(permission)</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        <a class="code hl_define" href="a00191.html#a17be62d7e0b9ec5a41fd88613e49f027">INLINE_GETTER</a>(groupid)</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        <span class="keywordtype">void</span> modifyAdmin(<span class="keywordtype">bool</span> admin);</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="a00569.html#a431eb2e918eb9ad810c293a76b0d12d8">   77</a></span>        <a class="code hl_class" href="a00581.html">MessageSource</a> <a class="code hl_function" href="a00569.html#a431eb2e918eb9ad810c293a76b0d12d8">sendVoice</a>(std::string path) {</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>            <span class="keywordflow">return</span> <a class="code hl_function" href="a00301.html#a1a09f38d4bf01b99f04ffdbc9168727a">sendVoiceImpl</a>(std::move(path));</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        }</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="a00569.html#ab26f7832af43cee20fcdc76d0f876219">mute</a>(<span class="keywordtype">long</span> <span class="keywordtype">long</span> sec) <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno"><a class="line" href="a00569.html#a7298e2edbbe9c1866c730ad1fef8fb23">   91</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="a00569.html#a7298e2edbbe9c1866c730ad1fef8fb23">mute</a>(std::chrono::seconds time)<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>            <a class="code hl_function" href="a00569.html#ab26f7832af43cee20fcdc76d0f876219">mute</a>(time.count());</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        }</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno"><a class="line" href="a00569.html#ac815c8a919d5f2b8143c8ee552acdf72">   97</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="a00569.html#ac815c8a919d5f2b8143c8ee552acdf72">unMute</a>()<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>            <a class="code hl_function" href="a00569.html#ab26f7832af43cee20fcdc76d0f876219">mute</a>(0);</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        }</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="a00569.html#a2d1bc8f2dcdc9048ded62a0f5f53041a">kick</a>(std::string reason);</div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno"><a class="line" href="a00569.html#ace4950bd9191fdf90ecba764c870f90e">  107</a></span>        <a class="code hl_class" href="a00609.html">At</a> <a class="code hl_function" href="a00569.html#ace4950bd9191fdf90ecba764c870f90e">at</a>() { <span class="keywordflow">return</span> <a class="code hl_class" href="a00609.html">At</a>(this-&gt;<span class="keywordtype">id</span>()); }</div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="a00569.html#afa172c24046945b1208344d3be9d5cfe">changeNameCard</a>(std::string_view newName);</div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span> </div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="a00569.html#aff2d2c3a907f051ca89d506b02caa5d0">sendNudge</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    };</div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>} <span class="comment">// namespace MiraiCP</span></div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span> </div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span><span class="preprocessor">#endif </span><span class="comment">//MIRAICP_PRO_MEMBER_H</span></div>
-<div class="ttc" id="aa00053_html"><div class="ttname"><a href="a00053.html">Contact.h</a></div></div>
-<div class="ttc" id="aa00176_html_ab701e3ac61a85b337ec5c1abaad6742d"><div class="ttname"><a href="a00176.html#ab701e3ac61a85b337ec5c1abaad6742d">json</a></div><div class="ttdeci">nlohmann::json json</div><div class="ttdef"><b>Definition:</b> <a href="a00176_source.html#l00031">utils.cpp:31</a></div></div>
-<div class="ttc" id="aa00191_html_a080ecbb1030f954f1e64f613d97b2468"><div class="ttname"><a href="a00191.html#a080ecbb1030f954f1e64f613d97b2468">DECL_GETTER</a></div><div class="ttdeci">#define DECL_GETTER(attr)</div><div class="ttdef"><b>Definition:</b> <a href="a00191_source.html#l00179">MiraiCPMacros.h:179</a></div></div>
-<div class="ttc" id="aa00191_html_a17be62d7e0b9ec5a41fd88613e49f027"><div class="ttname"><a href="a00191.html#a17be62d7e0b9ec5a41fd88613e49f027">INLINE_GETTER</a></div><div class="ttdeci">#define INLINE_GETTER(attr)</div><div class="ttdef"><b>Definition:</b> <a href="a00191_source.html#l00186">MiraiCPMacros.h:186</a></div></div>
-<div class="ttc" id="aa00218_html"><div class="ttname"><a href="a00218.html">MiraiCP</a></div><div class="ttdef"><b>Definition:</b> <a href="a00185_source.html#l00041">commonTypes.h:41</a></div></div>
-<div class="ttc" id="aa00218_html_a3ae2ebfdaa4574d341b8e7935f29ddb8"><div class="ttname"><a href="a00218.html#a3ae2ebfdaa4574d341b8e7935f29ddb8">MiraiCP::QQID</a></div><div class="ttdeci">unsigned long long QQID</div><div class="ttdef"><b>Definition:</b> <a href="a00185_source.html#l00042">commonTypes.h:42</a></div></div>
-<div class="ttc" id="aa00293_html"><div class="ttname"><a href="a00293.html">MiraiCP::IContactData</a></div><div class="ttdoc">Contact 内部储存数据抽象类</div><div class="ttdef"><b>Definition:</b> <a href="a00053_source.html#l00043">Contact.h:43</a></div></div>
-<div class="ttc" id="aa00297_html"><div class="ttname"><a href="a00297.html">MiraiCP::GroupRelatedData</a></div><div class="ttdef"><b>Definition:</b> <a href="a00053_source.html#l00076">Contact.h:76</a></div></div>
-<div class="ttc" id="aa00301_html"><div class="ttname"><a href="a00301.html">MiraiCP::Contact</a></div><div class="ttdoc">group, friend, member的父类</div><div class="ttdef"><b>Definition:</b> <a href="a00053_source.html#l00092">Contact.h:92</a></div></div>
-<div class="ttc" id="aa00301_html_a1a09f38d4bf01b99f04ffdbc9168727a"><div class="ttname"><a href="a00301.html#a1a09f38d4bf01b99f04ffdbc9168727a">MiraiCP::Contact::sendVoiceImpl</a></div><div class="ttdeci">MessageSource sendVoiceImpl(std::string path) const</div><div class="ttdoc">发送语音</div><div class="ttdef"><b>Definition:</b> <a href="a00050_source.html#l00089">Contact.cpp:89</a></div></div>
-<div class="ttc" id="aa00301_html_ac257ebdd1591ea5acf6e045abf28ecba"><div class="ttname"><a href="a00301.html#ac257ebdd1591ea5acf6e045abf28ecba">MiraiCP::Contact::botid</a></div><div class="ttdeci">QQID botid() const</div><div class="ttdef"><b>Definition:</b> <a href="a00053_source.html#l00178">Contact.h:178</a></div></div>
-<div class="ttc" id="aa00305_html"><div class="ttname"><a href="a00305.html">MiraiCP::ContactDataHelper</a></div><div class="ttdoc">Contact类型的数据接口模板类</div><div class="ttdef"><b>Definition:</b> <a href="a00053_source.html#l00318">Contact.h:318</a></div></div>
-<div class="ttc" id="aa00309_html"><div class="ttname"><a href="a00309.html">MiraiCP::INudgeSupport</a></div><div class="ttdef"><b>Definition:</b> <a href="a00053_source.html#l00354">Contact.h:354</a></div></div>
-<div class="ttc" id="aa00565_html"><div class="ttname"><a href="a00565.html">MiraiCP::MemberData</a></div><div class="ttdoc">Member数据声明</div><div class="ttdef"><b>Definition:</b> <a href="a00125_source.html#l00027">Member.h:27</a></div></div>
-<div class="ttc" id="aa00565_html_a1681ff4e1859f24abec68681fcf8b40e"><div class="ttname"><a href="a00565.html#a1681ff4e1859f24abec68681fcf8b40e">MiraiCP::MemberData::deserialize</a></div><div class="ttdeci">void deserialize(nlohmann::json in_json) override</div><div class="ttdoc">读入json数据, 由子类实现, 无锁</div><div class="ttdef"><b>Definition:</b> <a href="a01012_source.html#l00108">include/Member.cpp:108</a></div></div>
-<div class="ttc" id="aa00565_html_a438176d2b44593c197a36703fe1ea66e"><div class="ttname"><a href="a00565.html#a438176d2b44593c197a36703fe1ea66e">MiraiCP::MemberData::MemberData</a></div><div class="ttdeci">MemberData(QQID in_groupid)</div><div class="ttdef"><b>Definition:</b> <a href="a00125_source.html#l00038">Member.h:38</a></div></div>
-<div class="ttc" id="aa00565_html_a556b696baad932311d072131f4ce1ab0"><div class="ttname"><a href="a00565.html#a556b696baad932311d072131f4ce1ab0">MiraiCP::MemberData::_permission</a></div><div class="ttdeci">unsigned int _permission</div><div class="ttdoc">权限等级</div><div class="ttdef"><b>Definition:</b> <a href="a00125_source.html#l00034">Member.h:34</a></div></div>
-<div class="ttc" id="aa00565_html_a904da5608fbac3b2258168b2f62e8c4b"><div class="ttname"><a href="a00565.html#a904da5608fbac3b2258168b2f62e8c4b">MiraiCP::MemberData::refreshInfo</a></div><div class="ttdeci">void refreshInfo() override</div><div class="ttdoc">刷新数据</div><div class="ttdef"><b>Definition:</b> <a href="a01012_source.html#l00114">include/Member.cpp:114</a></div></div>
-<div class="ttc" id="aa00565_html_aaea4d406d7045381eee7914a5595f76d"><div class="ttname"><a href="a00565.html#aaea4d406d7045381eee7914a5595f76d">MiraiCP::MemberData::Super</a></div><div class="ttdeci">IContactData Super</div><div class="ttdef"><b>Definition:</b> <a href="a00125_source.html#l00028">Member.h:28</a></div></div>
-<div class="ttc" id="aa00565_html_abb4f4f2a91f1b18ab4d21f14b4d073ed"><div class="ttname"><a href="a00565.html#abb4f4f2a91f1b18ab4d21f14b4d073ed">MiraiCP::MemberData::_anonymous</a></div><div class="ttdeci">bool _anonymous</div><div class="ttdoc">是否是匿名群成员, 如果是匿名群成员一些功能会受限</div><div class="ttdef"><b>Definition:</b> <a href="a00125_source.html#l00036">Member.h:36</a></div></div>
-<div class="ttc" id="aa00569_html"><div class="ttname"><a href="a00569.html">MiraiCP::Member</a></div><div class="ttdoc">群成员类声明</div><div class="ttdef"><b>Definition:</b> <a href="a00125_source.html#l00047">Member.h:47</a></div></div>
-<div class="ttc" id="aa00569_html_a2d1bc8f2dcdc9048ded62a0f5f53041a"><div class="ttname"><a href="a00569.html#a2d1bc8f2dcdc9048ded62a0f5f53041a">MiraiCP::Member::kick</a></div><div class="ttdeci">void kick(std::string reason)</div><div class="ttdef"><b>Definition:</b> <a href="a01012_source.html#l00080">include/Member.cpp:80</a></div></div>
-<div class="ttc" id="aa00569_html_a3ca40feb7ca17732c87e770daf133891"><div class="ttname"><a href="a00569.html#a3ca40feb7ca17732c87e770daf133891">MiraiCP::Member::Member</a></div><div class="ttdeci">Member(bool)=delete</div></div>
-<div class="ttc" id="aa00569_html_a431eb2e918eb9ad810c293a76b0d12d8"><div class="ttname"><a href="a00569.html#a431eb2e918eb9ad810c293a76b0d12d8">MiraiCP::Member::sendVoice</a></div><div class="ttdeci">DECL_GETTER(anonymous) DECL_GETTER(permission) INLINE_GETTER(groupid) public MessageSource sendVoice(std::string path)</div><div class="ttdoc">是否是匿名群成员, 如果是匿名群成员一些功能会受限</div><div class="ttdef"><b>Definition:</b> <a href="a00125_source.html#l00077">Member.h:77</a></div></div>
-<div class="ttc" id="aa00569_html_a69e77e737f0547520c2c206fce997eac"><div class="ttname"><a href="a00569.html#a69e77e737f0547520c2c206fce997eac">MiraiCP::Member::Member</a></div><div class="ttdeci">Member(nlohmann::json in_json)</div><div class="ttdoc">构建群成员对象，一般为内部调用</div><div class="ttdef"><b>Definition:</b> <a href="a01012_source.html#l00056">include/Member.cpp:56</a></div></div>
-<div class="ttc" id="aa00569_html_a7298e2edbbe9c1866c730ad1fef8fb23"><div class="ttname"><a href="a00569.html#a7298e2edbbe9c1866c730ad1fef8fb23">MiraiCP::Member::mute</a></div><div class="ttdeci">void mute(std::chrono::seconds time) const</div><div class="ttdef"><b>Definition:</b> <a href="a00125_source.html#l00091">Member.h:91</a></div></div>
-<div class="ttc" id="aa00569_html_ab26f7832af43cee20fcdc76d0f876219"><div class="ttname"><a href="a00569.html#ab26f7832af43cee20fcdc76d0f876219">MiraiCP::Member::mute</a></div><div class="ttdeci">void mute(long long sec) const</div><div class="ttdef"><b>Definition:</b> <a href="a01012_source.html#l00073">include/Member.cpp:73</a></div></div>
-<div class="ttc" id="aa00569_html_ac815c8a919d5f2b8143c8ee552acdf72"><div class="ttname"><a href="a00569.html#ac815c8a919d5f2b8143c8ee552acdf72">MiraiCP::Member::unMute</a></div><div class="ttdeci">void unMute() const</div><div class="ttdef"><b>Definition:</b> <a href="a00125_source.html#l00097">Member.h:97</a></div></div>
-<div class="ttc" id="aa00569_html_ace4950bd9191fdf90ecba764c870f90e"><div class="ttname"><a href="a00569.html#ace4950bd9191fdf90ecba764c870f90e">MiraiCP::Member::at</a></div><div class="ttdeci">At at()</div><div class="ttdoc">At一个群成员</div><div class="ttdef"><b>Definition:</b> <a href="a00125_source.html#l00107">Member.h:107</a></div></div>
-<div class="ttc" id="aa00569_html_afa172c24046945b1208344d3be9d5cfe"><div class="ttname"><a href="a00569.html#afa172c24046945b1208344d3be9d5cfe">MiraiCP::Member::changeNameCard</a></div><div class="ttdeci">void changeNameCard(std::string_view newName)</div><div class="ttdef"><b>Definition:</b> <a href="a01012_source.html#l00093">include/Member.cpp:93</a></div></div>
-<div class="ttc" id="aa00569_html_aff2d2c3a907f051ca89d506b02caa5d0"><div class="ttname"><a href="a00569.html#aff2d2c3a907f051ca89d506b02caa5d0">MiraiCP::Member::sendNudge</a></div><div class="ttdeci">void sendNudge() override</div><div class="ttdoc">发送戳一戳</div><div class="ttdef"><b>Definition:</b> <a href="a01012_source.html#l00100">include/Member.cpp:100</a></div></div>
-<div class="ttc" id="aa00581_html"><div class="ttname"><a href="a00581.html">MiraiCP::MessageSource</a></div><div class="ttdef"><b>Definition:</b> <a href="a00137_source.html#l00031">MessageSource.h:31</a></div></div>
-<div class="ttc" id="aa00609_html"><div class="ttname"><a href="a00609.html">MiraiCP::At</a></div><div class="ttdoc">@</div><div class="ttdef"><b>Definition:</b> <a href="a00161_source.html#l00180">SingleMessage.h:180</a></div></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &quot;<a class="code" href="a00071.html">Bot.h</a>&quot;</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &quot;<a class="code" href="a00080.html">CPPPlugin.h</a>&quot;</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &quot;<a class="code" href="a00074.html">Command.h</a>&quot;</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &quot;<a class="code" href="a00077.html">Contact.h</a>&quot;</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#include &quot;<a class="code" href="a00083.html">Event.h</a>&quot;</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#include &quot;<a class="code" href="a00086.html">Exception.h</a>&quot;</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &quot;<a class="code" href="a00089.html">ForwardedMessage.h</a>&quot;</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &quot;<a class="code" href="a00092.html">Friend.h</a>&quot;</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &quot;<a class="code" href="a00095.html">Group.h</a>&quot;</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &quot;<a class="code" href="a00098.html">IMiraiData.h</a>&quot;</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#include &quot;<a class="code" href="a00101.html">KtOperation.h</a>&quot;</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#include &quot;<a class="code" href="a00107.html">Logger.h</a>&quot;</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#include &quot;<a class="code" href="a00110.html">LowLevelAPI.h</a>&quot;</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">#include &quot;<a class="code" href="a00113.html">Member.h</a>&quot;</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#include &quot;<a class="code" href="a00116.html">MessageChain.h</a>&quot;</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="preprocessor">#include &quot;<a class="code" href="a00119.html">MessageSource.h</a>&quot;</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="preprocessor">#include &quot;<a class="code" href="a00128.html">MiraiCPNewThread.h</a>&quot;</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="preprocessor">#include &quot;<a class="code" href="a00122.html">MiraiCode.h</a>&quot;</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="preprocessor">#include &quot;<a class="code" href="a00131.html">Schedule.h</a>&quot;</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="preprocessor">#include &quot;<a class="code" href="a00134.html">SingleMessage.h</a>&quot;</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="preprocessor">#include &quot;<a class="code" href="a00137.html">ThreadTask.h</a>&quot;</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="preprocessor">#include &quot;<a class="code" href="a00140.html">Tools.h</a>&quot;</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="preprocessor">#include &quot;<a class="code" href="a00104.html">loaderApi.h</a>&quot;</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="preprocessor">#include &quot;<a class="code" href="a00143.html">utils.h</a>&quot;</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="preprocessor">#include &quot;<a class="code" href="a00011.html">MiraiCPMacros.h</a>&quot;</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="preprocessor">#include &quot;<a class="code" href="a00014.html">MiraiCPStringInternal.h</a>&quot;</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="preprocessor">#include &quot;<a class="code" href="a00017.html">PlatformThreading.h</a>&quot;</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="preprocessor">#include &quot;<a class="code" href="a00020.html">PluginConfig.h</a>&quot;</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="preprocessor">#include &quot;<a class="code" href="a00002.html">commonTools.h</a>&quot;</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="preprocessor">#include &quot;<a class="code" href="a00005.html">commonTypes.h</a>&quot;</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="preprocessor">#include &quot;<a class="code" href="a00008.html">loaderApiInternal.h</a>&quot;</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="preprocessor">#include &quot;<a class="code" href="a00023.html">redirectCout.h</a>&quot;</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="preprocessor">#endif </span><span class="comment">//MIRAICP_HPP_H</span></div>
+<div class="ttc" id="aa00002_html"><div class="ttname"><a href="a00002.html">commonTools.h</a></div></div>
+<div class="ttc" id="aa00005_html"><div class="ttname"><a href="a00005.html">commonTypes.h</a></div></div>
+<div class="ttc" id="aa00008_html"><div class="ttname"><a href="a00008.html">loaderApiInternal.h</a></div></div>
+<div class="ttc" id="aa00011_html"><div class="ttname"><a href="a00011.html">MiraiCPMacros.h</a></div></div>
+<div class="ttc" id="aa00014_html"><div class="ttname"><a href="a00014.html">MiraiCPStringInternal.h</a></div></div>
+<div class="ttc" id="aa00017_html"><div class="ttname"><a href="a00017.html">PlatformThreading.h</a></div></div>
+<div class="ttc" id="aa00020_html"><div class="ttname"><a href="a00020.html">PluginConfig.h</a></div></div>
+<div class="ttc" id="aa00023_html"><div class="ttname"><a href="a00023.html">redirectCout.h</a></div></div>
+<div class="ttc" id="aa00071_html"><div class="ttname"><a href="a00071.html">Bot.h</a></div></div>
+<div class="ttc" id="aa00074_html"><div class="ttname"><a href="a00074.html">Command.h</a></div></div>
+<div class="ttc" id="aa00077_html"><div class="ttname"><a href="a00077.html">Contact.h</a></div></div>
+<div class="ttc" id="aa00080_html"><div class="ttname"><a href="a00080.html">CPPPlugin.h</a></div></div>
+<div class="ttc" id="aa00083_html"><div class="ttname"><a href="a00083.html">Event.h</a></div></div>
+<div class="ttc" id="aa00086_html"><div class="ttname"><a href="a00086.html">Exception.h</a></div></div>
+<div class="ttc" id="aa00089_html"><div class="ttname"><a href="a00089.html">ForwardedMessage.h</a></div></div>
+<div class="ttc" id="aa00092_html"><div class="ttname"><a href="a00092.html">Friend.h</a></div></div>
+<div class="ttc" id="aa00095_html"><div class="ttname"><a href="a00095.html">Group.h</a></div></div>
+<div class="ttc" id="aa00098_html"><div class="ttname"><a href="a00098.html">IMiraiData.h</a></div></div>
+<div class="ttc" id="aa00101_html"><div class="ttname"><a href="a00101.html">KtOperation.h</a></div></div>
+<div class="ttc" id="aa00104_html"><div class="ttname"><a href="a00104.html">loaderApi.h</a></div></div>
+<div class="ttc" id="aa00107_html"><div class="ttname"><a href="a00107.html">Logger.h</a></div></div>
+<div class="ttc" id="aa00110_html"><div class="ttname"><a href="a00110.html">LowLevelAPI.h</a></div></div>
+<div class="ttc" id="aa00113_html"><div class="ttname"><a href="a00113.html">Member.h</a></div></div>
+<div class="ttc" id="aa00116_html"><div class="ttname"><a href="a00116.html">MessageChain.h</a></div></div>
+<div class="ttc" id="aa00119_html"><div class="ttname"><a href="a00119.html">MessageSource.h</a></div></div>
+<div class="ttc" id="aa00122_html"><div class="ttname"><a href="a00122.html">MiraiCode.h</a></div></div>
+<div class="ttc" id="aa00128_html"><div class="ttname"><a href="a00128.html">MiraiCPNewThread.h</a></div></div>
+<div class="ttc" id="aa00131_html"><div class="ttname"><a href="a00131.html">Schedule.h</a></div></div>
+<div class="ttc" id="aa00134_html"><div class="ttname"><a href="a00134.html">SingleMessage.h</a></div></div>
+<div class="ttc" id="aa00137_html"><div class="ttname"><a href="a00137.html">ThreadTask.h</a></div></div>
+<div class="ttc" id="aa00140_html"><div class="ttname"><a href="a00140.html">Tools.h</a></div></div>
+<div class="ttc" id="aa00143_html"><div class="ttname"><a href="a00143.html">utils.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b0856f6b0d80ccb263b2f415c91f9e17.html">include</a></li><li class="navelem"><a class="el" href="a00125.html">Member.h</a></li>
-    <li class="footer">生成于 2022年 十一月 23日 星期三 10:27:50 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_1ede18532ce6284c46efe733029b594d.html">sdk</a></li><li class="navelem"><a class="el" href="a00125.html">MiraiCP.hpp</a></li>
+    <li class="footer">生成于 2023年 一月 21日 星期六 14:32:48 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
     </body>

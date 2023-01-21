@@ -1,9 +1,14 @@
 var a00653 =
 [
-    [ "Face", "a00653.html#aa0b031aa2e11403be44150ebce3dbb93", null ],
-    [ "operator==", "a00653.html#a013671a618db0081ea79cbecec88190f", null ],
-    [ "toJson", "a00653.html#a866de1e28199fa542e760d0caeea434e", null ],
-    [ "toMiraiCode", "a00653.html#a6f40de2d5ca391a1fb5a67fefe55d3e8", null ],
-    [ "type", "a00653.html#a73da05ce5bcbf5d40106b2db705fecb5", null ],
-    [ "id", "a00653.html#a213699a327644eb13d2dc0a5f935cdd8", null ]
+    [ "deleteThis", "a00653.html#a04aaabd735ed542b313a8df2a3fd9ecb", null ],
+    [ "deserializeFromJson", "a00653.html#a720239cba555515909088bc5404c483f", null ],
+    [ "botId", "a00653.html#aed972cb699c7efe6533ef81fcf8e7ad7", null ],
+    [ "confirmNum", "a00653.html#af210882e3d89a4843c05c92ca7c83dd1", null ],
+    [ "content", "a00653.html#afbc4d030c34bf815a8b8466cc0661f61", null ],
+    [ "fid", "a00653.html#a24d4711f1da5a6f5e952b77e198b0f3f", null ],
+    [ "groupId", "a00653.html#aec97399fd5c720f3591588a71bc05fd3", null ],
+    [ "imageId", "a00653.html#a70e1e2aa6153b05f08cf2c499c45b3e8", null ],
+    [ "params", "a00653.html#a0be35844059d66dc274fcf84de90e368", null ],
+    [ "publicationTime", "a00653.html#a60b71b2b35023e7774485f696c0c84f7", null ],
+    [ "senderId", "a00653.html#a6b6c6aaefc69cfd50b47f03c2cc8fb04", null ]
 ];

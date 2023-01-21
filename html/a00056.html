@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiraiCP: CPPPlugin.cpp 文件参考</title>
+<title>MiraiCP: loaderTools.h 文件参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -35,7 +35,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MiraiCP
-   &#160;<span id="projectnumber">v2.13.0-alpha-3</span>
+   &#160;<span id="projectnumber">v2.13.1</span>
    </div>
    <div id="projectbrief">MiraiCP api document</div>
   </td>
@@ -94,42 +94,53 @@ $(document).ready(function(){initNavTree('a00056.html',''); initResizable(); });
 
 <div class="header">
   <div class="summary">
-<a href="#namespaces">命名空间</a>  </div>
-  <div class="headertitle"><div class="title">CPPPlugin.cpp 文件参考</div></div>
+<a href="#namespaces">命名空间</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle"><div class="title">loaderTools.h 文件参考</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="a00059_source.html">CPPPlugin.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="a00011_source.html">MiraiCPMacros.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00047_source.html">LoaderMacro.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00062_source.html">PluginData.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00002_source.html">commonTools.h</a>&quot;</code><br />
+<code>#include &lt;fstream&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
+<code>#include &lt;thread&gt;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> CPPPlugin.cpp 的引用(Include)关系图:</div>
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> loaderTools.h 的引用(Include)关系图:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="a00057.png" border="0" usemap="#a_c_p_p_plugin_8cpp" alt=""/></div>
-<map name="a_c_p_p_plugin_8cpp" id="a_c_p_p_plugin_8cpp">
-<area shape="rect" title=" " alt="" coords="353,5,463,32"/>
-<area shape="rect" href="a00059.html" title=" " alt="" coords="360,80,456,107"/>
-<area shape="rect" href="a00113.html" title=" " alt="" coords="177,155,249,181"/>
-<area shape="rect" href="a00206.html" title=" " alt="" coords="355,304,461,331"/>
-<area shape="rect" title=" " alt="" coords="445,155,499,181"/>
-<area shape="rect" href="a00143.html" title=" " alt="" coords="35,304,125,331"/>
-<area shape="rect" href="a00185.html" title=" " alt="" coords="251,229,370,256"/>
-<area shape="rect" title=" " alt="" coords="5,229,83,256"/>
-<area shape="rect" title=" " alt="" coords="107,229,176,256"/>
-<area shape="rect" title=" " alt="" coords="83,453,138,480"/>
-<area shape="rect" href="a00191.html" title=" " alt="" coords="240,453,363,480"/>
-<area shape="rect" href="a00188.html" title=" " alt="" coords="150,304,279,331"/>
-<area shape="rect" title=" " alt="" coords="219,528,285,555"/>
-<area shape="rect" href="a00197.html" title=" " alt="" coords="125,379,280,405"/>
-<area shape="rect" title=" " alt="" coords="373,379,443,405"/>
-</map>
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00057.svg" width="883" height="486"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div><div class="textblock"><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> 此图展示该文件直接或间接的被哪些文件引用了:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00058.svg" width="816" height="112"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 <p><a href="a00056_source.html">浏览源代码.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
 命名空间</h2></td></tr>
-<tr class="memitem:a00218"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00218.html">MiraiCP</a></td></tr>
+<tr class="memitem:a00301"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00301.html">LibLoader</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:abfdb74b9db3801a388ab185bbc550550"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00296.html#ab701e3ac61a85b337ec5c1abaad6742d">nlohmann::json</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00301.html#abfdb74b9db3801a388ab185bbc550550">LibLoader::readJsonFile</a> (const std::string &amp;path)</td></tr>
+<tr class="separator:abfdb74b9db3801a388ab185bbc550550"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada09d6abd8b7107524651ef62235c73a"><td class="memTemplParams" colspan="2">template&lt;typename Val1 , typename Val2 &gt; </td></tr>
+<tr class="memitem:ada09d6abd8b7107524651ef62235c73a"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00301.html#ada09d6abd8b7107524651ef62235c73a">LibLoader::CASStrong</a> (Val1 &amp;a, Val2 b)</td></tr>
+<tr class="separator:ada09d6abd8b7107524651ef62235c73a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2437e37ffa99895ce42d4dd19efbbcd"><td class="memItemLeft" align="right" valign="top">std::pair&lt; std::vector&lt; std::string &gt;, std::vector&lt; PluginAuthority &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00301.html#ac2437e37ffa99895ce42d4dd19efbbcd">LibLoader::collect_plugins</a> (const std::string &amp;cfgPath, <a class="el" href="a00296.html#ab701e3ac61a85b337ec5c1abaad6742d">nlohmann::json</a> j)</td></tr>
+<tr class="separator:ac2437e37ffa99895ce42d4dd19efbbcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5f8d0ecd9dd392b491070aace643ae3"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00301.html#aa5f8d0ecd9dd392b491070aace643ae3">LibLoader::jstring2str</a> (jstring jStr)</td></tr>
+<tr class="separator:aa5f8d0ecd9dd392b491070aace643ae3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a6fcd695791253a9b3a053d313b2b93"><td class="memItemLeft" align="right" valign="top">jstring&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00301.html#a6a6fcd695791253a9b3a053d313b2b93">LibLoader::str2jstring</a> (const char *cstr)</td></tr>
+<tr class="separator:a6a6fcd695791253a9b3a053d313b2b93"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -137,8 +148,8 @@ $(document).ready(function(){initNavTree('a00056.html',''); initResizable(); });
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b0856f6b0d80ccb263b2f415c91f9e17.html">include</a></li><li class="navelem"><a class="el" href="a00056.html">CPPPlugin.cpp</a></li>
-    <li class="footer">生成于 2022年 十一月 23日 星期三 10:27:50 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_bda05eb71e068b870dbf680d28584ff8.html">libloader</a></li><li class="navelem"><a class="el" href="a00056.html">loaderTools.h</a></li>
+    <li class="footer">生成于 2023年 一月 21日 星期六 14:32:48 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
     </body>

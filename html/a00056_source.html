@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiraiCP: CPPPlugin.cpp 源文件</title>
+<title>MiraiCP: loaderTools.h 源文件</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -35,7 +35,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MiraiCP
-   &#160;<span id="projectnumber">v2.13.0-alpha-3</span>
+   &#160;<span id="projectnumber">v2.13.1</span>
    </div>
    <div id="projectbrief">MiraiCP api document</div>
   </td>
@@ -93,10 +93,10 @@ $(document).ready(function(){initNavTree('a00056_source.html',''); initResizable
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">CPPPlugin.cpp</div></div>
+  <div class="headertitle"><div class="title">loaderTools.h</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="a00056.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// Copyright (c) 2020 - 2022. Eritque arcus and contributors.</span></div>
+<a href="a00056.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// Copyright (c) 2022 - 2022. Antares, Eritque arcus and contributors.</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">//</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">// This program is free software: you can redistribute it and/or modify</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">// it under the terms of the GNU Affero General Public License as</span></div>
@@ -112,30 +112,74 @@ $(document).ready(function(){initNavTree('a00056_source.html',''); initResizable
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">// along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</span></div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">//</span></div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &quot;<a class="code" href="a00059.html">CPPPlugin.h</a>&quot;</span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#ifndef MIRAICP_PRO_LOADERTOOLS_H</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#define MIRAICP_PRO_LOADERTOOLS_H</span></div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">namespace </span><a class="code hl_namespace" href="a00218.html">MiraiCP</a> {</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="comment">// 静态区代码一般不会使用logger，虽是ub，但应该不会造成影响；</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="comment">// 静态区强行调用的话，因为loggerInterface尚未传入，若logger尚未初始化，访问Logger::logger将是ub</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="comment">// 可以考虑把logger做成纯静态实现？以及最好做成 Logger * const</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    Logger *<a class="code hl_variable" href="a00313.html#ac74f70ce15a0495ac7006ad725a51279">CPPPlugin::pluginLogger</a> = &amp;<a class="code hl_variable" href="a00549.html#a268fd602157c3fa49616a8872c82bfb1">Logger::logger</a>;</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    std::unique_ptr&lt;CPPPlugin&gt; <a class="code hl_variable" href="a00313.html#a2695d2cca487ad336a8b6f96e156022b">CPPPlugin::plugin</a> = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>} <span class="comment">// namespace MiraiCP</span></div>
-<div class="ttc" id="aa00059_html"><div class="ttname"><a href="a00059.html">CPPPlugin.h</a></div></div>
-<div class="ttc" id="aa00218_html"><div class="ttname"><a href="a00218.html">MiraiCP</a></div><div class="ttdef"><b>Definition:</b> <a href="a00185_source.html#l00041">commonTypes.h:41</a></div></div>
-<div class="ttc" id="aa00313_html_a2695d2cca487ad336a8b6f96e156022b"><div class="ttname"><a href="a00313.html#a2695d2cca487ad336a8b6f96e156022b">MiraiCP::CPPPlugin::plugin</a></div><div class="ttdeci">static std::unique_ptr&lt; CPPPlugin &gt; plugin</div><div class="ttdef"><b>Definition:</b> <a href="a00059_source.html#l00043">CPPPlugin.h:43</a></div></div>
-<div class="ttc" id="aa00313_html_ac74f70ce15a0495ac7006ad725a51279"><div class="ttname"><a href="a00313.html#ac74f70ce15a0495ac7006ad725a51279">MiraiCP::CPPPlugin::pluginLogger</a></div><div class="ttdeci">static Logger * pluginLogger</div><div class="ttdoc">插件级logger</div><div class="ttdef"><b>Definition:</b> <a href="a00059_source.html#l00041">CPPPlugin.h:41</a></div></div>
-<div class="ttc" id="aa00549_html_a268fd602157c3fa49616a8872c82bfb1"><div class="ttname"><a href="a00549.html#a268fd602157c3fa49616a8872c82bfb1">MiraiCP::Logger::logger</a></div><div class="ttdeci">static Logger logger</div><div class="ttdef"><b>Definition:</b> <a href="a00113_source.html#l00148">Logger.h:148</a></div></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &quot;<a class="code" href="a00011.html">MiraiCPMacros.h</a>&quot;</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">// -----------------------</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &quot;<a class="code" href="a00047.html">LoaderMacro.h</a>&quot;</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &quot;<a class="code" href="a00062.html">PluginData.h</a>&quot;</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#include &quot;<a class="code" href="a00002.html">commonTools.h</a>&quot;</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#include &lt;fstream&gt;</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;thread&gt;</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keyword">namespace </span><a class="code hl_namespace" href="a00301.html">LibLoader</a> {</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="a00301.html#abfdb74b9db3801a388ab185bbc550550">   31</a></span>    <span class="keyword">inline</span> <a class="code hl_typedef" href="a00296.html#ab701e3ac61a85b337ec5c1abaad6742d">nlohmann::json</a> <a class="code hl_function" href="a00301.html#abfdb74b9db3801a388ab185bbc550550">readJsonFile</a>(<span class="keyword">const</span> std::string &amp;path) {</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <a class="code hl_typedef" href="a00296.html#ab701e3ac61a85b337ec5c1abaad6742d">nlohmann::json</a> j;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        {</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>            std::ifstream i;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>            i.open(path.c_str(), std::ios::in);</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>            <a class="code hl_define" href="a00011.html#aa05206ce52ebadc805b64d69749a63d3">MIRAICP_DEFER</a>(i.close(););</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>            <span class="keywordflow">try</span> {</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>                i &gt;&gt; j;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>            } <span class="keywordflow">catch</span> (<span class="keyword">const</span> nlohmann::detail::exception &amp;e) {</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>                <a class="code hl_variable" href="a00301.html#a0e16fc1159d498289bcda90fcd7a734c">logger</a>.<a class="code hl_function" href="a00377.html#ae735f16b20f681d29d4e5d28ad248dbe">error</a>(<span class="stringliteral">&quot;配置文件读入异常，请检查您的配置文件编码方式是否正确，以及是否在路径中使用了中文&quot;</span>);</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>                <a class="code hl_variable" href="a00301.html#a0e16fc1159d498289bcda90fcd7a734c">logger</a>.<a class="code hl_function" href="a00377.html#ae735f16b20f681d29d4e5d28ad248dbe">error</a>(e.what());</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>                std::terminate();</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>            }</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        }</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <span class="keywordflow">return</span> j;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    }</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> Val1, <span class="keyword">typename</span> Val2&gt;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="a00301.html#ada09d6abd8b7107524651ef62235c73a">   49</a></span>    <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="a00301.html#ada09d6abd8b7107524651ef62235c73a">CASStrong</a>(Val1 &amp;a, Val2 b) {</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <span class="keywordflow">if</span> (a &lt; (Val1) b) a = (Val1) b;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    }</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    std::pair&lt;std::vector&lt;std::string&gt;, std::vector&lt;PluginAuthority&gt;&gt; <a class="code hl_function" href="a00301.html#ac2437e37ffa99895ce42d4dd19efbbcd">collect_plugins</a>(<span class="keyword">const</span> std::string &amp;cfgPath, <a class="code hl_typedef" href="a00296.html#ab701e3ac61a85b337ec5c1abaad6742d">nlohmann::json</a> j);</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="preprocessor">#ifndef LOADER_NATIVE</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    std::string <a class="code hl_function" href="a00301.html#aa5f8d0ecd9dd392b491070aace643ae3">jstring2str</a>(jstring jStr);</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    jstring <a class="code hl_function" href="a00301.html#a6a6fcd695791253a9b3a053d313b2b93">str2jstring</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *cstr);</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>} <span class="comment">// namespace LibLoader</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="preprocessor">#endif </span><span class="comment">//MIRAICP_PRO_LOADERTOOLS_H</span></div>
+<div class="ttc" id="aa00002_html"><div class="ttname"><a href="a00002.html">commonTools.h</a></div></div>
+<div class="ttc" id="aa00011_html"><div class="ttname"><a href="a00011.html">MiraiCPMacros.h</a></div></div>
+<div class="ttc" id="aa00011_html_aa05206ce52ebadc805b64d69749a63d3"><div class="ttname"><a href="a00011.html#aa05206ce52ebadc805b64d69749a63d3">MIRAICP_DEFER</a></div><div class="ttdeci">#define MIRAICP_DEFER(code)</div><div class="ttdef"><b>Definition:</b> <a href="a00011_source.html#l00146">MiraiCPMacros.h:146</a></div></div>
+<div class="ttc" id="aa00047_html"><div class="ttname"><a href="a00047.html">LoaderMacro.h</a></div></div>
+<div class="ttc" id="aa00062_html"><div class="ttname"><a href="a00062.html">PluginData.h</a></div></div>
+<div class="ttc" id="aa00296_html_ab701e3ac61a85b337ec5c1abaad6742d"><div class="ttname"><a href="a00296.html#ab701e3ac61a85b337ec5c1abaad6742d">json</a></div><div class="ttdeci">nlohmann::json json</div><div class="ttdef"><b>Definition:</b> <a href="a00296_source.html#l00031">utils.cpp:31</a></div></div>
+<div class="ttc" id="aa00301_html"><div class="ttname"><a href="a00301.html">LibLoader</a></div><div class="ttdef"><b>Definition:</b> <a href="a00005_source.html#l00028">commonTypes.h:28</a></div></div>
+<div class="ttc" id="aa00301_html_a0e16fc1159d498289bcda90fcd7a734c"><div class="ttname"><a href="a00301.html#a0e16fc1159d498289bcda90fcd7a734c">LibLoader::logger</a></div><div class="ttdeci">MIRAICP_EXPORT LoaderLogger logger</div><div class="ttdef"><b>Definition:</b> <a href="a00212_source.html#l00035">LoaderLogger.cpp:35</a></div></div>
+<div class="ttc" id="aa00301_html_a6a6fcd695791253a9b3a053d313b2b93"><div class="ttname"><a href="a00301.html#a6a6fcd695791253a9b3a053d313b2b93">LibLoader::str2jstring</a></div><div class="ttdeci">jstring str2jstring(const char *cstr)</div><div class="ttdef"><b>Definition:</b> <a href="a00218_source.html#l00080">loaderTools.cpp:80</a></div></div>
+<div class="ttc" id="aa00301_html_aa5f8d0ecd9dd392b491070aace643ae3"><div class="ttname"><a href="a00301.html#aa5f8d0ecd9dd392b491070aace643ae3">LibLoader::jstring2str</a></div><div class="ttdeci">std::string jstring2str(jstring jStr)</div><div class="ttdef"><b>Definition:</b> <a href="a00218_source.html#l00063">loaderTools.cpp:63</a></div></div>
+<div class="ttc" id="aa00301_html_abfdb74b9db3801a388ab185bbc550550"><div class="ttname"><a href="a00301.html#abfdb74b9db3801a388ab185bbc550550">LibLoader::readJsonFile</a></div><div class="ttdeci">nlohmann::json readJsonFile(const std::string &amp;path)</div><div class="ttdef"><b>Definition:</b> <a href="a00056_source.html#l00031">loaderTools.h:31</a></div></div>
+<div class="ttc" id="aa00301_html_ac2437e37ffa99895ce42d4dd19efbbcd"><div class="ttname"><a href="a00301.html#ac2437e37ffa99895ce42d4dd19efbbcd">LibLoader::collect_plugins</a></div><div class="ttdeci">std::pair&lt; std::vector&lt; std::string &gt;, std::vector&lt; PluginAuthority &gt; &gt; collect_plugins(const std::string &amp;cfgPath, nlohmann::json j)</div><div class="ttdef"><b>Definition:</b> <a href="a00218_source.html#l00029">loaderTools.cpp:29</a></div></div>
+<div class="ttc" id="aa00301_html_ada09d6abd8b7107524651ef62235c73a"><div class="ttname"><a href="a00301.html#ada09d6abd8b7107524651ef62235c73a">LibLoader::CASStrong</a></div><div class="ttdeci">void CASStrong(Val1 &amp;a, Val2 b)</div><div class="ttdef"><b>Definition:</b> <a href="a00056_source.html#l00049">loaderTools.h:49</a></div></div>
+<div class="ttc" id="aa00377_html_ae735f16b20f681d29d4e5d28ad248dbe"><div class="ttname"><a href="a00377.html#ae735f16b20f681d29d4e5d28ad248dbe">LibLoader::LoaderLogger::error</a></div><div class="ttdeci">void error(const string &amp;) const</div><div class="ttdef"><b>Definition:</b> <a href="a00212_source.html#l00051">LoaderLogger.cpp:51</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b0856f6b0d80ccb263b2f415c91f9e17.html">include</a></li><li class="navelem"><a class="el" href="a00056.html">CPPPlugin.cpp</a></li>
-    <li class="footer">生成于 2022年 十一月 23日 星期三 10:27:50 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_bda05eb71e068b870dbf680d28584ff8.html">libloader</a></li><li class="navelem"><a class="el" href="a00056.html">loaderTools.h</a></li>
+    <li class="footer">生成于 2023年 一月 21日 星期六 14:32:48 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
     </body>

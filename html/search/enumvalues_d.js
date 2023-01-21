@@ -1,8 +1,6 @@
 var searchData=
 [
-  ['recall_0',['Recall',['../a00222.html#a80a8ec1c1ed6fd9db32d9a878405d412adf0c989f1aec4e71c3bf15c539da30f2',1,'MiraiCP::KtOperation']]],
-  ['recallevent_1',['RecallEvent',['../a00221.html#abe9e9d8212ea8f23717b72db64393caba0fb229b7779bb3a4989702dcbf3c2c47',1,'MiraiCP::eventTypes']]],
-  ['refreshinfo_2',['RefreshInfo',['../a00222.html#a80a8ec1c1ed6fd9db32d9a878405d412a1c1f12c6ba67788e4fa35854ba398262',1,'MiraiCP::KtOperation']]],
-  ['rehab_3',['rehab',['../a00345.html#a1d73fdd5e84653d078b859b37dd1bcc8a0f0421157cba536506b325cefe9fac90',1,'MiraiCP::MemberJoinEvent']]],
-  ['remotefileinfo_4',['RemoteFileInfo',['../a00222.html#a80a8ec1c1ed6fd9db32d9a878405d412a8f9b804c8b15efd89b27e29cbfa01e85',1,'MiraiCP::KtOperation']]]
+  ['plugin_5fauthority_5fadmin_0',['PLUGIN_AUTHORITY_ADMIN',['../a00301.html#a25dcf37316806dd07a4e960c5eb537a4a94365761d42a1db02c02bce01be06220',1,'LibLoader']]],
+  ['plugin_5fauthority_5fnormal_1',['PLUGIN_AUTHORITY_NORMAL',['../a00301.html#a25dcf37316806dd07a4e960c5eb537a4a37a69db536daf1ceabf89dc14346092d',1,'LibLoader']]],
+  ['publish_2',['Publish',['../a00309.html#a5f17c2867d211e285ca55f455683a273ad9b9ebec3fd80c4efc4ba286ffd11757',1,'MiraiCP::KtOperation']]]
 ];

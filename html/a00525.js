@@ -1,14 +1,8 @@
 var a00525 =
 [
-    [ "deleteThis", "a00525.html#a04aaabd735ed542b313a8df2a3fd9ecb", null ],
-    [ "deserializeFromJson", "a00525.html#a720239cba555515909088bc5404c483f", null ],
-    [ "botid", "a00525.html#a507cd3e23d5d5204b0deaa6b1c6cad3c", null ],
-    [ "confirmNum", "a00525.html#af210882e3d89a4843c05c92ca7c83dd1", null ],
-    [ "content", "a00525.html#afbc4d030c34bf815a8b8466cc0661f61", null ],
-    [ "fid", "a00525.html#a24d4711f1da5a6f5e952b77e198b0f3f", null ],
-    [ "groupid", "a00525.html#a73fcfc8f32a547eaa9704afa706c5a38", null ],
-    [ "imageid", "a00525.html#a562cac2ea3788ef5268396101b08e7de", null ],
-    [ "params", "a00525.html#a0be35844059d66dc274fcf84de90e368", null ],
-    [ "publicationTime", "a00525.html#a60b71b2b35023e7774485f696c0c84f7", null ],
-    [ "senderid", "a00525.html#a020798c5d023b56bdf62fd08ad4dce7f", null ]
+    [ "MiraiCPExceptionEvent", "a00525.html#a67f475ec3ebcf1f185e5d9ef13fcd14c", null ],
+    [ "get_event_type", "a00525.html#a444bd94208f30dfc9cad36c7e4acf87e", null ],
+    [ "getEventType", "a00525.html#a3a6155162aa6de29e9761276bbae2624", null ],
+    [ "getException", "a00525.html#a1b2f3d9a99441fda4801a7e0119b7cb7", null ],
+    [ "exceptionPtr", "a00525.html#abbe1679705abc11d256a39eb12ac6837", null ]
 ];

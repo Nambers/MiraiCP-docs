@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['send_0',['Send',['../a00222.html#a80a8ec1c1ed6fd9db32d9a878405d412a34075584a0b1bcb26b7fe6da90c17dc6',1,'MiraiCP::KtOperation']]],
-  ['sendfile_1',['SendFile',['../a00222.html#a80a8ec1c1ed6fd9db32d9a878405d412a0634045bdef9eaba89da2ae1ba8b1e9f',1,'MiraiCP::KtOperation']]],
-  ['sendnudge_2',['SendNudge',['../a00222.html#a80a8ec1c1ed6fd9db32d9a878405d412a6edac563a1399474e7b8205864b04c6c',1,'MiraiCP::KtOperation']]],
-  ['sendwithquote_3',['SendWithQuote',['../a00222.html#a80a8ec1c1ed6fd9db32d9a878405d412a77c34f076eac875e461525c1dd9402c1',1,'MiraiCP::KtOperation']]]
+  ['querybotlist_0',['QueryBotList',['../a00309.html#a80a8ec1c1ed6fd9db32d9a878405d412a6540d584c2cf10dafa87f93ce13befed',1,'MiraiCP::KtOperation']]],
+  ['queryimginfo_1',['QueryImgInfo',['../a00309.html#a80a8ec1c1ed6fd9db32d9a878405d412a3ff130679ed5e51cdff18703faec6b10',1,'MiraiCP::KtOperation']]],
+  ['querym_2',['QueryM',['../a00309.html#a80a8ec1c1ed6fd9db32d9a878405d412af3caa4ff5ef913398ab5d559713b2608',1,'MiraiCP::KtOperation']]],
+  ['queryowner_3',['QueryOwner',['../a00309.html#a80a8ec1c1ed6fd9db32d9a878405d412a4738713b4a5266d60e968576dbb75646',1,'MiraiCP::KtOperation']]]
 ];

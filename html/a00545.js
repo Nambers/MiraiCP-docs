@@ -1,5 +1,5 @@
 var a00545 =
 [
-    [ "action", "a00545.html#aea306ee2e14936202c9a814a15e0d0bc", null ],
-    [ "enable", "a00545.html#a0fda6ed76658ebaa758e801a72b3d946", null ]
+    [ "MiraiCPExceptionCRTP", "a00545.html#a221340d3ff17b5dddda9aff9a161756e", null ],
+    [ "getExceptionType", "a00545.html#a959de8110940940b1b354def276e9923", null ]
 ];

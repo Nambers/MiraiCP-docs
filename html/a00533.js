@@ -1,16 +1,17 @@
 var a00533 =
 [
-    [ "MiraiDataLocker", "a00537.html", "a00537" ],
-    [ "IMiraiData", "a00533.html#a2079413e6c26dc563bf4e496ae25ca08", null ],
-    [ "~IMiraiData", "a00533.html#ab1262457e073f9c776c941962a5b6699", null ],
-    [ "deserialize", "a00533.html#aadb307b6bd6a1f901a6504c5afa37e79", null ],
-    [ "forceRefreshNextTime", "a00533.html#abdbf2a10d21a520b782c1654beb3214a", null ],
-    [ "getMutex", "a00533.html#ad6440ea1909386acbfd77fe1e17d30f8", null ],
-    [ "internalToJson", "a00533.html#ae9f9f272fbb0b68b07dd4750745fae1d", null ],
-    [ "internalToString", "a00533.html#a862c4fbbceae111c0c37df2bf76c7859", null ],
-    [ "refreshInfo", "a00533.html#a628b8885f118d1f20b2f4afd1add0e8b", null ],
-    [ "requestRefresh", "a00533.html#a0af5afb339c80a734ac9752d4f179069", null ],
-    [ "toJson", "a00533.html#a17445e67d1cf31c184cf144f874e82f9", null ],
-    [ "toString", "a00533.html#a0795b1c8b45a0c122c8027f359b8f40e", null ],
-    [ "Locker", "a00533.html#a1a587f53dc97566ee040cd12f9901314", null ]
+    [ "eventNode", "a00537.html", "a00537" ],
+    [ "event_vector", "a00533.html#a6c4a73db045f973232347164dc42a21e", null ],
+    [ "eventNodeTable", "a00533.html#ab49f881b646783d970f6f87ddde0bcce", null ],
+    [ "priority_level", "a00533.html#a4cc658c6011e27187dd6660d6c33b7c9", null ],
+    [ "Event", "a00533.html#a9f36e22e23e02faaeba7f89736332c9c", null ],
+    [ "broadcast", "a00533.html#adbdeabc1c1a6797391ba47201320047c", null ],
+    [ "clear", "a00533.html#aeb2b9b9d676a9e6f392e4ce72dbe7643", null ],
+    [ "id", "a00533.html#a45303f38b1dcec3f8f1cda7df7eb4426", null ],
+    [ "incomingEvent", "a00533.html#aca8d122b5ac259f28f372f02cdd38930", null ],
+    [ "noRegistered", "a00533.html#ad55bfc3d37cf45b0ca146d1355e1f486", null ],
+    [ "registerBlockingEvent", "a00533.html#a38a7a5c9795712e2f5839ffc1e46c5d0", null ],
+    [ "registerEvent", "a00533.html#ae00f75f32055f085290929d3c2294bba", null ],
+    [ "_all_events_", "a00533.html#a8976a4000c06dde8ff810aa5ed78a5dd", null ],
+    [ "processor", "a00533.html#ab78af8afd9a5121e7ed0a1d7237f2b20", null ]
 ];

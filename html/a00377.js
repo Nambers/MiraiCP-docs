@@ -1,13 +1,15 @@
 var a00377 =
 [
-    [ "EventType", "a00377.html#ac1df44d7400ad221500364c7b3de6737", [
-      [ "Active", "a00377.html#ac1df44d7400ad221500364c7b3de6737a4d3d769b812b6faa6b76e1a8abaece2d", null ],
-      [ "Kick", "a00377.html#ac1df44d7400ad221500364c7b3de6737a3e07960fcc45408894cf1402257bd9fd", null ],
-      [ "Disband", "a00377.html#ac1df44d7400ad221500364c7b3de6737aeee6f05922080480c6043305c9d6b329", null ]
-    ] ],
-    [ "BotLeaveEvent", "a00377.html#a86dc9bf45f406d50557cbc96ddeb36fb", null ],
-    [ "get_event_type", "a00377.html#a6181c5b90aece0c558943c71d9a037ed", null ],
-    [ "groupid", "a00377.html#a75d1aed07afc1cc0c9a6985c406e68ee", null ],
-    [ "operatorId", "a00377.html#a1c0a914dc4f47d3f5ea1873fb863a0cf", null ],
-    [ "type", "a00377.html#ae417bdaa1e08bf29b51b97fd1f8f4d80", null ]
+    [ "string", "a00377.html#acfe4e8f9dd9fdd3774c50f4843ea4c57", null ],
+    [ "wstring", "a00377.html#a263f5033219fd9fde7e76a4a14e30a3a", null ],
+    [ "call_logger", "a00377.html#af4d7d5164450e25f7401d1cc15f15b8d", null ],
+    [ "call_logger", "a00377.html#a4c48551e7c6b1fe442d394c4333c4f5c", null ],
+    [ "error", "a00377.html#ae735f16b20f681d29d4e5d28ad248dbe", null ],
+    [ "error", "a00377.html#ab16e1bc0504135788f5ce20864deb044", null ],
+    [ "info", "a00377.html#a0d34d5ca7783c370ec08dbbb44876c1b", null ],
+    [ "info", "a00377.html#ad876a34412f03e35fbae30758836e6ff", null ],
+    [ "init", "a00377.html#a666e05995de50742a39702dacf3dcbd7", null ],
+    [ "warning", "a00377.html#af50d0545fe7d683e54fcd03453a423e3", null ],
+    [ "warning", "a00377.html#a17f3029197c45dc84c38a764c9e3e1b9", null ],
+    [ "logMethod", "a00377.html#a298efd2ba8a74fb88313ca0c08e29235", null ]
 ];

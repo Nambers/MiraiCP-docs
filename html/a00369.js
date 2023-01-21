@@ -1,5 +1,5 @@
 var a00369 =
 [
-    [ "BotOnlineEvent", "a00369.html#af599e4d871751e367033bb1e30a62b4d", null ],
-    [ "get_event_type", "a00369.html#abff84efdb87bb73184f38794f564ce85", null ]
+    [ "PluginNotLoadedException", "a00369.html#abb1e2984d2eeb1b0630841183204c345", null ],
+    [ "exceptionType", "a00369.html#a8f9b2e4fe0f2464746909d5751fa95ae", null ]
 ];

@@ -1,13 +1,23 @@
 var a00337 =
 [
-    [ "GroupInviteEvent", "a00337.html#a889d744632f139636fef2ce3d3538936", null ],
-    [ "accept", "a00337.html#a3847df3907111c8443c1e1b71ee35d1d", null ],
-    [ "get_event_type", "a00337.html#aae84c8414b3d16c0b3faf6bae4ebcf94", null ],
-    [ "operation0", "a00337.html#a542b23744671466b1b1ebc591a777caa", null ],
-    [ "reject", "a00337.html#a749d773136fff280e951e66e21959a6c", null ],
-    [ "groupid", "a00337.html#ad0d2dad878885d82c78e5ef79efa9945", null ],
-    [ "groupName", "a00337.html#a578c8a027cb9f1574fba3de4b3646fc0", null ],
-    [ "inviterid", "a00337.html#a9e48a48c1429b8739da6e91cb8a04819", null ],
-    [ "inviterNick", "a00337.html#abf7cb41022c0cf81725c2925507f1d58", null ],
-    [ "source", "a00337.html#affaff17057d8b347a51ba2516f529596", null ]
+    [ "string", "a00337.html#a23179ec928a1d6435fabb02326c6e247", null ],
+    [ "MiraiCPString", "a00337.html#a10535c2483c0959b0997c2514d4932e4", null ],
+    [ "~MiraiCPString", "a00337.html#a249117e24f8c29889bb0c1a278c3d3ae", null ],
+    [ "MiraiCPString", "a00337.html#aa1fda8f92269bd871c94c56e793373f1", null ],
+    [ "MiraiCPString", "a00337.html#aa22e9e3bf45ad23003f5f44c964bd546", null ],
+    [ "MiraiCPString", "a00337.html#a5e97ad52cb215cb213026ce45e355dfe", null ],
+    [ "MiraiCPString", "a00337.html#a2f46607eea7c6f093e385bb9e70a3ae6", null ],
+    [ "construction", "a00337.html#a7f26a980ae47d177825250f973336e39", null ],
+    [ "copyToCharPtr", "a00337.html#ab263deade385e7b5de856d061c6027e9", null ],
+    [ "isEmpty", "a00337.html#aa3633b0912b856ddce567143f001c682", null ],
+    [ "operator std::string", "a00337.html#aba1de80f20a55d6cb8124550a10e8123", null ],
+    [ "operator=", "a00337.html#a7107d4a5b065d0c20529ee9a8a3e05a6", null ],
+    [ "operator=", "a00337.html#a4e4f57d00b444ce690bc004d2d054523", null ],
+    [ "operator==", "a00337.html#a76a02c783ddea33e9ba3b90d4ec7ece4", null ],
+    [ "swap", "a00337.html#a5b277cdf16466e26268574cb17662d20", null ],
+    [ "toString", "a00337.html#a40af897f51c62faf7ef4468017d42d3f", null ],
+    [ "_size", "a00337.html#ab6bb3947d9db2fd407b8c20f0a768183", null ],
+    [ "free_this", "a00337.html#a411445a053abae2778bd0347523a670d", null ],
+    [ "std_free_ptr", "a00337.html#aeb14e5f57bc3dae205e6eed695b61113", null ],
+    [ "str", "a00337.html#ae296eb86d0acfd5b1a5b1264f5a01a33", null ]
 ];

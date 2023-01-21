@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiraiCP: 弃用列表</title>
+<title>MiraiCP: loaderMain.cpp 文件参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -35,7 +35,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MiraiCP
-   &#160;<span id="projectnumber">v2.13.0-alpha-3</span>
+   &#160;<span id="projectnumber">v2.13.1</span>
    </div>
    <div id="projectbrief">MiraiCP api document</div>
   </td>
@@ -92,30 +92,73 @@ $(document).ready(function(){initNavTree('a00215.html',''); initResizable(); });
 </iframe>
 </div>
 
-<div><div class="header">
-  <div class="headertitle"><div class="title">弃用列表 </div></div>
+<div class="header">
+  <div class="summary">
+<a href="#namespaces">命名空间</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle"><div class="title">loaderMain.cpp 文件参考</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><dl class="reflist">
-<dt>成员 <a class="el" href="a00313.html#ac74f70ce15a0495ac7006ad725a51279">MiraiCP::CPPPlugin::pluginLogger</a>  </dt>
-<dd><a class="anchor" id="_deprecated000001"></a>use <a class="el" href="a00549.html#a268fd602157c3fa49616a8872c82bfb1">Logger::logger</a> instead  </dd>
-<dt>成员 <a class="el" href="a00577.html#a7a852f4322e652fe2634591a81797c11">MiraiCP::MessageChain::ShouldNotUse</a>  ("use Contact.quoteAndSend") <a class="el" href="a00581.html">MessageSource</a> quoteAndSendMessage(T s</dt>
-<dd><a class="anchor" id="_deprecated000002"></a>use Contact.quoteAndSend or <code>this-&gt;quoteAndSend1(s, groupid, env)</code>, since v2.8.1  </dd>
-<dt>成员 <a class="el" href="a00581.html#a17c32c44e0af14a5f23f15ca56e527ae">MiraiCP::MessageSource::MessageSource</a>  (std::string ids, std::string internalids, std::string source)</dt>
-<dd><p class="startdd"><a class="anchor" id="_deprecated000004"></a>use <a class="el" href="a00301.html#ad15abe9685c16a0ca083a9af7846b363" title="回复并发送">Contact.quoteAndSendMessage</a>, since v2.8.1 </p>
-<p class="enddd"><a class="anchor" id="_deprecated000005"></a>use <a class="el" href="a00301.html#ad15abe9685c16a0ca083a9af7846b363" title="回复并发送">Contact.quoteAndSendMessage</a>, since v2.8.1  </p>
-</dd>
-<dt>成员 <a class="el" href="a00581.html#af746248b4f82c9832ace5b8b98e5295f">MiraiCP::MessageSource::ShouldNotUse</a>  ("Use Contact.quoteAndSendMessage") <a class="el" href="a00581.html">MessageSource</a> quoteAndSendMiraiCode(<a class="el" href="a00585.html" title="MiraiCode父类, 指可以被转换成miraicode的类型">MiraiCodeable</a> *msg</dt>
-<dd><a class="anchor" id="_deprecated000003"></a>用Contact.quoteAndSendMessage, since v2.8.1 </dd>
-</dl>
-</div></div><!-- contents -->
-</div><!-- PageDoc -->
+<div class="textblock"><code>#include &quot;<a class="el" href="a00050_source.html">loaderMain.h</a>&quot;</code><br />
+<code>#include &quot;BS_thread_pool.hpp&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00041_source.html">LoaderExceptions.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00044_source.html">LoaderLogger.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00053_source.html">LoaderTaskQueue.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00017_source.html">PlatformThreading.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00059_source.html">Plugin.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00065_source.html">PluginListManager.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00068_source.html">Scheduler.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00023_source.html">redirectCout.h</a>&quot;</code><br />
+</div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> loaderMain.cpp 的引用(Include)关系图:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00216.svg" width="1460" height="560"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+<p><a href="a00215_source.html">浏览源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
+命名空间</h2></td></tr>
+<tr class="memitem:a00301"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00301.html">LibLoader</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:a46f4ab12479d61956e7dc81cfb19fef5"><td class="memItemLeft" align="right" valign="top">std::condition_variable &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00301.html#a46f4ab12479d61956e7dc81cfb19fef5">LibLoader::loaderWakeCV</a> ()</td></tr>
+<tr class="separator:a46f4ab12479d61956e7dc81cfb19fef5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6cd5117c0adf23ed373edca65148a4fd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00301.html#a6cd5117c0adf23ed373edca65148a4fd">LibLoader::loader_enableAllPlugins</a> ()</td></tr>
+<tr class="separator:a6cd5117c0adf23ed373edca65148a4fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3da09d6c8c2db437e3169b96ddb2ae9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00301.html#ad3da09d6c8c2db437e3169b96ddb2ae9">LibLoader::loader_disableAllPlugins</a> ()</td></tr>
+<tr class="separator:ad3da09d6c8c2db437e3169b96ddb2ae9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8eada9f54700edf5a2aa262e5d006691"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00301.html#a8eada9f54700edf5a2aa262e5d006691">LibLoader::loader_loadNewPlugin</a> (const std::string &amp;path, bool activateNow)</td></tr>
+<tr class="separator:a8eada9f54700edf5a2aa262e5d006691"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52292cf621eb6c36b43047ee054c411d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00301.html#a52292cf621eb6c36b43047ee054c411d">LibLoader::loader_unloadPluginById</a> (const std::string &amp;id)</td></tr>
+<tr class="separator:a52292cf621eb6c36b43047ee054c411d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f1b6298effea4f44e85e20b0a915c1d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00301.html#a3f1b6298effea4f44e85e20b0a915c1d">LibLoader::loader_enablePluginById</a> (const std::string &amp;id)</td></tr>
+<tr class="separator:a3f1b6298effea4f44e85e20b0a915c1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04edf8e3eda892a478591ac18c05d9b5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00301.html#a04edf8e3eda892a478591ac18c05d9b5">LibLoader::loader_disablePluginById</a> (const std::string &amp;id)</td></tr>
+<tr class="separator:a04edf8e3eda892a478591ac18c05d9b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2bf46cd649bb6979dd268bbc428e14c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00301.html#ae2bf46cd649bb6979dd268bbc428e14c">LibLoader::loader_reloadPluginById</a> (const std::string &amp;id)</td></tr>
+<tr class="separator:ae2bf46cd649bb6979dd268bbc428e14c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc4b73a1b14010cd0c6e713d6579ef8b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00301.html#abc4b73a1b14010cd0c6e713d6579ef8b">LibLoader::loader_pluginEndByException</a> (const std::string &amp;id)</td></tr>
+<tr class="separator:abc4b73a1b14010cd0c6e713d6579ef8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae437cb8e58f9ddab116aa54e71d3891a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00301.html#ae437cb8e58f9ddab116aa54e71d3891a">LibLoader::loader_resetThreadByIndex</a> (const std::string &amp;index)</td></tr>
+<tr class="separator:ae437cb8e58f9ddab116aa54e71d3891a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77243f9ea0159dbbb040b5eaf14113e2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00301.html#a77243f9ea0159dbbb040b5eaf14113e2">LibLoader::tick</a> () noexcept</td></tr>
+<tr class="separator:a77243f9ea0159dbbb040b5eaf14113e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a404a95877baaa83650de382c8896d80f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00301.html#a404a95877baaa83650de382c8896d80f">LibLoader::shouldTick</a> () noexcept</td></tr>
+<tr class="separator:a404a95877baaa83650de382c8896d80f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">生成于 2022年 十一月 23日 星期三 10:27:50 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_23c80554d3059e776f1fa3b42eea10c0.html">libloader</a></li><li class="navelem"><a class="el" href="a00215.html">loaderMain.cpp</a></li>
+    <li class="footer">生成于 2023年 一月 21日 星期六 14:32:48 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
     </body>

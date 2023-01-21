@@ -1,14 +1,12 @@
 var searchData=
 [
-  ['baseforwardedmessage_0',['BaseForwardedMessage',['../a00493.html#a881301ba473c86b660950937eeae7b9b',1,'MiraiCP::BaseForwardedMessage::BaseForwardedMessage(std::vector&lt; ForwardedNode &gt; inNodes)'],['../a00493.html#ae17c75201e5cb22c2547e45dbfbc2a33',1,'MiraiCP::BaseForwardedMessage::BaseForwardedMessage(const BaseForwardedMessage &amp;)=default'],['../a00493.html#a471c465f8b615d6021fab72a2e4e6919',1,'MiraiCP::BaseForwardedMessage::BaseForwardedMessage(BaseForwardedMessage &amp;&amp;)=default']]],
-  ['basicraise_1',['basicRaise',['../a00405.html#aec8e8e400265242bd3a9998af6b55880',1,'MiraiCP::MiraiCPExceptionBase']]],
-  ['bot_2',['Bot',['../a00277.html#a779666a5cea6df0dca4247a3943ede91',1,'MiraiCP::Bot']]],
-  ['botevent_3',['BotEvent',['../a00321.html#a5da368a0e44891433b340288bc872df3',1,'MiraiCP::BotEvent']]],
-  ['botexception_4',['BotException',['../a00429.html#ac250396fe99586a5cf4edd42f708ba5f',1,'MiraiCP::BotException::BotException(string _filename, int _lineNum)'],['../a00429.html#a153b578a5e2dba1a34b660c3cfff1f36',1,'MiraiCP::BotException::BotException(const string &amp;d, string _filename, int _lineNum)']]],
-  ['botid_5',['botid',['../a00301.html#ac257ebdd1591ea5acf6e045abf28ecba',1,'MiraiCP::Contact']]],
-  ['botisbeingmutedexception_6',['BotIsBeingMutedException',['../a00433.html#a548111b99d412290281c43e90a1e8e16',1,'MiraiCP::BotIsBeingMutedException']]],
-  ['botjoingroupevent_7',['BotJoinGroupEvent',['../a00357.html#a108be45d060f5b38dc86c8229cc8ca4e',1,'MiraiCP::BotJoinGroupEvent']]],
-  ['botleaveevent_8',['BotLeaveEvent',['../a00377.html#a86dc9bf45f406d50557cbc96ddeb36fb',1,'MiraiCP::BotLeaveEvent']]],
-  ['botonlineevent_9',['BotOnlineEvent',['../a00369.html#af599e4d871751e367033bb1e30a62b4d',1,'MiraiCP::BotOnlineEvent']]],
-  ['broadcast_10',['broadcast',['../a00397.html#adbdeabc1c1a6797391ba47201320047c',1,'MiraiCP::Event']]]
+  ['accept_0',['accept',['../a00469.html#a3847df3907111c8443c1e1b71ee35d1d',1,'MiraiCP::GroupInviteEvent::accept()'],['../a00473.html#a460bb7fc7e69cf313e3902ae0101b459',1,'MiraiCP::NewFriendRequestEvent::accept()'],['../a00517.html#ace031723d310c72ed25b83485f66a034',1,'MiraiCP::MemberJoinRequestEvent::accept()']]],
+  ['add_1',['add',['../a00629.html#a013aff1ca23cac57112d0558cebd7bea',1,'MiraiCP::ForwardedMessage::add(ForwardedNode &amp;&amp;a)'],['../a00629.html#a2f458ec34348c78a198f483d23604810',1,'MiraiCP::ForwardedMessage::add(const ForwardedNode &amp;a)'],['../a00705.html#a4d9d6d0ab0f43a504627f26594d9f784',1,'MiraiCP::MessageChain::add(const T &amp;a)'],['../a00705.html#a8dac283dde6034584be34a4ba13b1fd1',1,'MiraiCP::MessageChain::add(const MessageSource &amp;val)']]],
+  ['addnewplugin_2',['addNewPlugin',['../a00397.html#a9f575adc3e4404ac758db99eb49ce9bb',1,'LibLoader::PluginListManager']]],
+  ['addtask_3',['addTask',['../a00313.html#ad89a78a5c9164f1e56e895c48ee1ec22',1,'MiraiCP::ThreadTask']]],
+  ['apiexception_4',['APIException',['../a00561.html#a5ab35b388404f70eeccfe3474bdb9c90',1,'MiraiCP::APIException']]],
+  ['at_5',['at',['../a00697.html#ace4950bd9191fdf90ecba764c870f90e',1,'MiraiCP::Member']]],
+  ['at_6',['At',['../a00737.html#ab5b225ea67cf995d13b384ec622c86e7',1,'MiraiCP::At::At(const SingleMessage &amp;sg)'],['../a00737.html#a3e12195fc4d9ae026ec8a438a368342a',1,'MiraiCP::At::At(QQID a)']]],
+  ['atall_7',['AtAll',['../a00741.html#aa19455c0291e5f1ebe7f6ed85b6cdea6',1,'MiraiCP::AtAll']]],
+  ['avatarurl_8',['avatarUrl',['../a00401.html#a6b0ebecc9de3fdf10852b341c88561c0',1,'MiraiCP::Bot::avatarUrl()'],['../a00429.html#ac3f8a47de4224ae6fa769171cf657d40',1,'MiraiCP::ContactDataHelper::avatarUrl()']]]
 ];

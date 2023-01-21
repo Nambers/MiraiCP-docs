@@ -1,11 +1,15 @@
 var a00621 =
 [
-    [ "FlashImage", "a00621.html#a47c9c97ea2a57ff02b2bc01f83a7ee44", null ],
-    [ "FlashImage", "a00621.html#ae6562b2f43aede32b4746f50b9fcab5c", null ],
-    [ "deserialize", "a00621.html#a6f20e47833479a9669d78727527fe31f", null ],
-    [ "operator==", "a00621.html#aa01313f396a7623547ba0c2a409ef74c", null ],
-    [ "toImage", "a00621.html#ae2547ca115caa61991a59c5507028cb4", null ],
-    [ "toJson", "a00621.html#a55dd67b46186624fd4882406e16ff2c2", null ],
-    [ "toMiraiCode", "a00621.html#ac2edbd27eb5d904b56a599a176cf416f", null ],
-    [ "type", "a00621.html#ad31100fa57d8f8cf79a2267cfe10ae97", null ]
+    [ "string", "a00621.html#a4b8537609144c742e4a4f26af6143fd8", null ],
+    [ "ForwardedMessageDisplayStrategy", "a00621.html#a8ed5a36a61b38da9ee2dd632310085af", null ],
+    [ "ForwardedMessageDisplayStrategy", "a00621.html#add7199a14b55773df4ef523afb0cff46", null ],
+    [ "defaultStrategy", "a00621.html#ae41f2b998365484dba1ff3f32563dfbb", null ],
+    [ "fromJson", "a00621.html#ac7a83085f9b152d720a0725b5e770ff2", null ],
+    [ "operator==", "a00621.html#a98402ca0f5eada71701f5747f4ff5601", null ],
+    [ "toJson", "a00621.html#a644621957e3c4c7eabe806003318bfe7", null ],
+    [ "brief", "a00621.html#a332c563f6760ce0f82f736416740bf75", null ],
+    [ "preview", "a00621.html#a7bc79f77b1ffff231a263faf4633949b", null ],
+    [ "source", "a00621.html#aaacb83b879ff1ab702fdf56b2d0fe9d9", null ],
+    [ "summary", "a00621.html#aef4ccc8e214cc12ac1ca842c065762b8", null ],
+    [ "title", "a00621.html#a8ebae08a0a078281d1f4400e84040573", null ]
 ];

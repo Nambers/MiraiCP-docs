@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['servicemessage_0',['ServiceMessage',['../a00629.html',1,'MiraiCP']]],
-  ['singlemessage_1',['SingleMessage',['../a00601.html',1,'MiraiCP']]]
+  ['recallexception_0',['RecallException',['../a00589.html',1,'MiraiCP']]],
+  ['remoteassetexception_1',['RemoteAssetException',['../a00593.html',1,'MiraiCP']]],
+  ['remotefile_2',['RemoteFile',['../a00769.html',1,'MiraiCP']]]
 ];

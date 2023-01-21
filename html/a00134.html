@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiraiCP: MessageSource.cpp 文件参考</title>
+<title>MiraiCP: SingleMessage.h 文件参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -35,7 +35,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MiraiCP
-   &#160;<span id="projectnumber">v2.13.0-alpha-3</span>
+   &#160;<span id="projectnumber">v2.13.1</span>
    </div>
    <div id="projectbrief">MiraiCP api document</div>
   </td>
@@ -94,62 +94,156 @@ $(document).ready(function(){initNavTree('a00134.html',''); initResizable(); });
 
 <div class="header">
   <div class="summary">
-<a href="#namespaces">命名空间</a>  </div>
-  <div class="headertitle"><div class="title">MessageSource.cpp 文件参考</div></div>
+<a href="#nested-classes">类</a> &#124;
+<a href="#namespaces">命名空间</a> &#124;
+<a href="#define-members">宏定义</a> &#124;
+<a href="#func-members">函数</a> &#124;
+<a href="#var-members">变量</a>  </div>
+  <div class="headertitle"><div class="title">SingleMessage.h 文件参考</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="a00137_source.html">MessageSource.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00071_source.html">Exception.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00101_source.html">KtOperation.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00113_source.html">Logger.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00182_source.html">commonTools.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="a00011_source.html">MiraiCPMacros.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00119_source.html">MessageSource.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00122_source.html">MiraiCode.h</a>&quot;</code><br />
+<code>#include &lt;array&gt;</code><br />
+<code>#include &lt;json_fwd.hpp&gt;</code><br />
+<code>#include &lt;optional&gt;</code><br />
+<code>#include &lt;sstream&gt;</code><br />
+<code>#include &lt;unordered_map&gt;</code><br />
+<code>#include &lt;utility&gt;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> MessageSource.cpp 的引用(Include)关系图:</div>
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> SingleMessage.h 的引用(Include)关系图:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="a00135.png" border="0" usemap="#a_message_source_8cpp" alt=""/></div>
-<map name="a_message_source_8cpp" id="a_message_source_8cpp">
-<area shape="rect" title=" " alt="" coords="369,5,511,32"/>
-<area shape="rect" href="a00137.html" title=" " alt="" coords="101,229,227,256"/>
-<area shape="rect" href="a00071.html" title=" " alt="" coords="395,80,485,107"/>
-<area shape="rect" href="a00113.html" title=" " alt="" coords="313,229,385,256"/>
-<area shape="rect" href="a00101.html" title=" " alt="" coords="575,80,678,107"/>
-<area shape="rect" href="a00182.html" title=" " alt="" coords="703,229,817,256"/>
-<area shape="rect" href="a00191.html" title=" " alt="" coords="333,528,456,555"/>
-<area shape="rect" href="a00185.html" title=" " alt="" coords="266,304,385,331"/>
-<area shape="rect" title=" " alt="" coords="62,528,117,555"/>
-<area shape="rect" title=" " alt="" coords="309,603,374,629"/>
-<area shape="rect" href="a00206.html" title=" " alt="" coords="465,379,570,405"/>
-<area shape="rect" href="a00188.html" title=" " alt="" coords="259,379,389,405"/>
-<area shape="rect" href="a00197.html" title=" " alt="" coords="172,453,327,480"/>
-<area shape="rect" title=" " alt="" coords="482,453,553,480"/>
-<area shape="rect" href="a00059.html" title=" " alt="" coords="392,155,488,181"/>
-<area shape="rect" title=" " alt="" coords="289,155,367,181"/>
-<area shape="rect" title=" " alt="" coords="512,155,571,181"/>
-<area shape="rect" title=" " alt="" coords="413,229,467,256"/>
-<area shape="rect" href="a00143.html" title=" " alt="" coords="93,379,184,405"/>
-<area shape="rect" title=" " alt="" coords="645,304,723,331"/>
-<area shape="rect" title=" " alt="" coords="409,304,479,331"/>
-<area shape="rect" title=" " alt="" coords="646,155,743,181"/>
-</map>
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00135.svg" width="924" height="486"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div><div class="textblock"><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> 此图展示该文件直接或间接的被哪些文件引用了:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00136.svg" width="1426" height="560"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 <p><a href="a00134_source.html">浏览源代码.</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00725.html">MiraiCP::URLSharer</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">用serviceMessage的分享信息  <a href="a00725.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00729.html">MiraiCP::SingleMessage</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">MessageChain的组成部分  <a href="a00729.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00733.html">MiraiCP::PlainText</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">纯文本信息  <a href="a00733.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00737.html">MiraiCP::At</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">@  <a href="a00737.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00741.html">MiraiCP::AtAll</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">@全体  <a href="a00741.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00745.html">MiraiCP::Image</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">图像类声明  <a href="a00745.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00749.html">MiraiCP::FlashImage</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">闪照, 和Image属性类似  <a href="a00749.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00753.html">MiraiCP::LightApp</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">小程序卡片  <a href="a00753.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00757.html">MiraiCP::ServiceMessage</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00761.html">MiraiCP::QuoteReply</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">引用信息  <a href="a00761.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00765.html">MiraiCP::OnlineAudio</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">接收到的音频文件, 发送用<code>Contact.sendAudio</code>  <a href="a00765.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00769.html">MiraiCP::RemoteFile</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">远程(群)文件类型  <a href="a00769.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00773.html">MiraiCP::RemoteFile::Dinfo</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">下载信息  <a href="a00773.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00777.html">MiraiCP::RemoteFile::Finfo</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">文件信息  <a href="a00777.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00781.html">MiraiCP::Face</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">自带表情  <a href="a00781.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00785.html">MiraiCP::MusicShare</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">一些可以被mirai识别的音乐卡片, 如果不能被mirai识别, 那应该被表现成lightApp类型(可能收费/vip歌曲用lightApp, 免费用MusicShare)  <a href="a00785.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00789.html">MiraiCP::MarketFace</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00793.html">MiraiCP::UnSupportMessage</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">目前不支持的消息类型, 不支持发送  <a href="a00793.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
 命名空间</h2></td></tr>
-<tr class="memitem:a00218"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00218.html">MiraiCP</a></td></tr>
+<tr class="memitem:a00302"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00302.html">MiraiCP</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00312"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00312.html">MiraiCP::SingleMessageType</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+宏定义</h2></td></tr>
+<tr class="memitem:a7641aaf09c6c5c892cccfd8c7815ad98"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00134.html#a7641aaf09c6c5c892cccfd8c7815ad98">SINGLEMESSAGE_REFACTOR_ASSERTION</a>(x,  y)&#160;&#160;&#160;static_assert((x) == (y), &quot;static assertion failed when refactoring code&quot;)</td></tr>
+<tr class="separator:a7641aaf09c6c5c892cccfd8c7815ad98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:a10e4c1f627d2e561eb538a9482df4e42"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00312.html#a10e4c1f627d2e561eb538a9482df4e42">MiraiCP::SingleMessageType::MIRAICP_ITERABLE_ENUM</a> (-6, MessageSource_t, MarketFace_t, OnlineForwardedMessage_t, OnlineAudio_t, QuoteReply_t, UnsupportedMessage_t, PlainText_t, At_t, AtAll_t, Image_t, LightApp_t, ServiceMessage_t, RemoteFile_t, Face_t, FlashImage_t, MusicShare_t) const expr const char *miraiCodeNameInternal[]</td></tr>
+<tr class="separator:a10e4c1f627d2e561eb538a9482df4e42"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+变量</h2></td></tr>
+<tr class="memitem:a4e9038dcc8db18e7b70e877663fd5dc2"><td class="memItemLeft" align="right" valign="top">constexpr const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00312.html#a4e9038dcc8db18e7b70e877663fd5dc2">MiraiCP::SingleMessageType::messageTypeInternal</a> []</td></tr>
+<tr class="separator:a4e9038dcc8db18e7b70e877663fd5dc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">宏定义说明</h2>
+<a id="a7641aaf09c6c5c892cccfd8c7815ad98" name="a7641aaf09c6c5c892cccfd8c7815ad98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7641aaf09c6c5c892cccfd8c7815ad98">&#9670;&nbsp;</a></span>SINGLEMESSAGE_REFACTOR_ASSERTION</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SINGLEMESSAGE_REFACTOR_ASSERTION</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">x, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">y&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;static_assert((x) == (y), &quot;static assertion failed when refactoring code&quot;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="a00134_source.html">SingleMessage.h</a> 第 <a class="el" href="a00134_source.html#l00033">33</a> 行定义.</p>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b0856f6b0d80ccb263b2f415c91f9e17.html">include</a></li><li class="navelem"><a class="el" href="a00134.html">MessageSource.cpp</a></li>
-    <li class="footer">生成于 2022年 十一月 23日 星期三 10:27:50 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_1ede18532ce6284c46efe733029b594d.html">sdk</a></li><li class="navelem"><a class="el" href="a00134.html">SingleMessage.h</a></li>
+    <li class="footer">生成于 2023年 一月 21日 星期六 14:32:48 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
     </body>

@@ -1,19 +1,11 @@
 var a00188 =
 [
-    [ "LibLoader::LoaderApi::interface_funcs", "a00237.html", "a00237" ],
-    [ "LOADER_API_COUNT", "a00188.html#acbac5e7c5f4941a592808414fe5caada", null ],
-    [ "task_func", "a00188.html#a495bf58ac891b805834e2cc7fa49f2f9", null ],
-    [ "task_func_with_id", "a00188.html#a78fdbf75bfb384856ebf9ffb28b21b1f", null ],
-    [ "disableAllPlugins", "a00188.html#a9fed350b41c9fb052ca061e3866a66a4", null ],
-    [ "disablePluginById", "a00188.html#a08a6725cb4a33402962f2b67130e8bac", null ],
-    [ "enableAllPlugins", "a00188.html#a2a1eb02235baa6f86d8e8176b4364a72", null ],
-    [ "enablePluginById", "a00188.html#a65331125b91df8d475fd7b74bf1bb8e9", null ],
-    [ "loadNewPlugin", "a00188.html#aff28b2ad21b60cabc3c735a4b9562df9", null ],
-    [ "loggerInterface", "a00188.html#a4def9f25b87d48d142d6752184aadc92", null ],
-    [ "pluginOperation", "a00188.html#a89b345ec37278655b8f02d07dbb3c882", null ],
-    [ "pushTask", "a00188.html#a4dc4ecd3d86eb509647b3130a5239ecf", null ],
-    [ "pushTaskWithId", "a00188.html#ae86871d4f062f45edee7501e0596cd3d", null ],
-    [ "reloadPluginById", "a00188.html#ad038612c1e2a43498411f0b77240e20b", null ],
-    [ "showAllPluginId", "a00188.html#a1dc2ed7eb6845af70bc796bb347b74ef", null ],
-    [ "unloadPluginById", "a00188.html#ace6aa7d8b5baf1f2be8908a5e103c92a", null ]
+    [ "errTarget", "a00188.html#a1defcc132542aa9411395eb08b0fe844", null ],
+    [ "outTarget", "a00188.html#a5ea76c388296e6066ae4e30a99837f41", null ],
+    [ "print", "a00188.html#a4d2a8186429cb8b469e21c03dc4c8e33", null ],
+    [ "SetCerrRecorder", "a00188.html#a7a43144762a698c10973885b2b4f2964", null ],
+    [ "SetCoutRecorder", "a00188.html#a46ebe1f3f5d7f68b71a86572066a0f66", null ],
+    [ "errRedirector", "a00188.html#a222c24969464cb912fc16dafc9b72bf2", null ],
+    [ "outRedirector", "a00188.html#a7424110a4e217977934256f0bb6699de", null ],
+    [ "RedirectedOstreamPointers", "a00188.html#acb5e2f19b4391ee51798dfa8ea732085", null ]
 ];

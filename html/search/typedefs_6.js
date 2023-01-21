@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['message_0',['Message',['../a00577.html#a20c956b141205bb3b3fc17b936e08fb8',1,'MiraiCP::MessageChain']]]
+  ['loaderexception_0',['LoaderException',['../a00301.html#aed8445a0eae5bb7716661acb1fc42e66',1,'LibLoader']]],
+  ['loadertask_1',['loadertask',['../a00301.html#a7d3f947f188b83a2b84f3c7e009d4e1a',1,'LibLoader']]]
 ];

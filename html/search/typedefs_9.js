@@ -1,7 +1,10 @@
 var searchData=
 [
-  ['storeriteratortype_0',['storerIteratorType',['../a00227.html#aef1f03dc407748c08395bd81bcb66fba',1,'MiraiCP::ThreadTask::internal']]],
-  ['storertype_1',['storerType',['../a00227.html#a2cc1dc71776e7644c62cfc034e414654',1,'MiraiCP::ThreadTask::internal']]],
-  ['string_2',['string',['../a00241.html#a23179ec928a1d6435fabb02326c6e247',1,'MiraiCP::MiraiCPString::string()'],['../a00281.html#a87541e84339783a5bfaece0be37988c3',1,'MiraiCP::IRawCommand::string()'],['../a00405.html#ae7cf7e3913c2067517d3f40ff1c9a14d',1,'MiraiCP::MiraiCPExceptionBase::string()'],['../a00485.html#a4b8537609144c742e4a4f26af6143fd8',1,'MiraiCP::ForwardedMessageDisplayStrategy::string()'],['../a00541.html#a22429d5974d2c062b424e0c0297cb897',1,'MiraiCP::Logger_interface::string()']]],
-  ['super_3',['Super',['../a00297.html#aee7f1cab5fd143538cecf17c4aaf764c',1,'MiraiCP::GroupRelatedData::Super()'],['../a00565.html#aaea4d406d7045381eee7914a5595f76d',1,'MiraiCP::MemberData::Super()'],['../a00573.html#a7be466c4505304684ad67562567f6b1e',1,'MiraiCP::internal::Message::Super()']]]
+  ['plugin_5fentrance_5ffunc_5fptr_0',['plugin_entrance_func_ptr',['../a00301.html#ada1a1182832115cfa634601bb4e80355',1,'LibLoader']]],
+  ['plugin_5fevent_5ffunc_5fptr_1',['plugin_event_func_ptr',['../a00301.html#add2feb317221acb4f979e61d5e96d37f',1,'LibLoader']]],
+  ['plugin_5ffunc_5fptr_2',['plugin_func_ptr',['../a00301.html#afc631e11894f5d4eedc3e3ea550795fd',1,'LibLoader']]],
+  ['plugin_5fhandle_3',['plugin_handle',['../a00301.html#a927f212ce2db84cca1f02ec95aa62322',1,'LibLoader']]],
+  ['plugin_5finfo_5ffunc_5fptr_4',['plugin_info_func_ptr',['../a00301.html#a776f4f6bb745b814e23461c7742b9682',1,'LibLoader']]],
+  ['pluginlist_5',['PluginList',['../a00397.html#a186a072b352660b978a37d02324d6fb1',1,'LibLoader::PluginListManager']]],
+  ['priority_5flevel_6',['priority_level',['../a00533.html#a4cc658c6011e27187dd6660d6c33b7c9',1,'MiraiCP::Event']]]
 ];

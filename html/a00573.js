@@ -1,12 +1,5 @@
 var a00573 =
 [
-    [ "Super", "a00573.html#a7be466c4505304684ad67562567f6b1e", null ],
-    [ "Message", "a00573.html#abed4cbf67da5c252166320e22d8c7d3b", null ],
-    [ "Message", "a00573.html#aabf838c7912d08e71a9a4f25d777cc4b", null ],
-    [ "Message", "a00573.html#a5b980cebbc168b4fc96e96996bd06c8c", null ],
-    [ "getVal", "a00573.html#aa26b32f1ea57c32a071cc7bd052ca565", null ],
-    [ "operator!=", "a00573.html#a7bf0df1c342858b560bd037b575d6d58", null ],
-    [ "operator==", "a00573.html#ac09fb6e7ab5e00c405e7bd969ffd39c4", null ],
-    [ "toMiraiCode", "a00573.html#a0cef774c0356349acaca5f78271f3849", null ],
-    [ "type", "a00573.html#ac130224ec94852a7b12d1e65df7988a1", null ]
+    [ "MuteException", "a00573.html#aabc181c072a55209b6a88f4a0f43fa9a", null ],
+    [ "exceptionType", "a00573.html#afae350ada0208f24022d4de92442b515", null ]
 ];

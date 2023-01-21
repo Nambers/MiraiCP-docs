@@ -1,13 +1,10 @@
 var a00485 =
 [
-    [ "string", "a00485.html#a4b8537609144c742e4a4f26af6143fd8", null ],
-    [ "ForwardedMessageDisplayStrategy", "a00485.html#a8ed5a36a61b38da9ee2dd632310085af", null ],
-    [ "ForwardedMessageDisplayStrategy", "a00485.html#add7199a14b55773df4ef523afb0cff46", null ],
-    [ "defaultStrategy", "a00485.html#a9b7ce691ab8e30900bf0d1085b667bd7", null ],
-    [ "toJson", "a00485.html#a823fcd51c803a7c587e3374063917ba5", null ],
-    [ "brief", "a00485.html#a332c563f6760ce0f82f736416740bf75", null ],
-    [ "preview", "a00485.html#a7bc79f77b1ffff231a263faf4633949b", null ],
-    [ "source", "a00485.html#aaacb83b879ff1ab702fdf56b2d0fe9d9", null ],
-    [ "summary", "a00485.html#aef4ccc8e214cc12ac1ca842c065762b8", null ],
-    [ "title", "a00485.html#a8ebae08a0a078281d1f4400e84040573", null ]
+    [ "FriendRecallEvent", "a00485.html#a4935324294a7723c3401c58fb1d09a97", null ],
+    [ "get_event_type", "a00485.html#a83537ccdbd2e454525697559827df57e", null ],
+    [ "author", "a00485.html#adb145915b7e4edcc461a7c7db2823b05", null ],
+    [ "ids", "a00485.html#a426a11bf2f5d57e80082546588abc464", null ],
+    [ "internalIds", "a00485.html#a46217bf3eabccabc4b4358d8c69e71f6", null ],
+    [ "operater", "a00485.html#a4502b63cdd39bb1574a3bfc3d18828d4", null ],
+    [ "time", "a00485.html#ab22df1619e6ad420c6166d0f3877dc74", null ]
 ];

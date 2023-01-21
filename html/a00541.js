@@ -1,19 +1,15 @@
 var a00541 =
 [
-    [ "Handler", "a00545.html", "a00545" ],
-    [ "Action", "a00541.html#ac8323ef8b0f1c81161e08c4fded239a3", null ],
-    [ "string", "a00541.html#a22429d5974d2c062b424e0c0297cb897", null ],
-    [ "constructString", "a00541.html#a98af60f864a0446e23a7a27a3419d9b8", null ],
-    [ "constructString", "a00541.html#a6fc013dec8ee317a216c45f93a2d9982", null ],
-    [ "constructString", "a00541.html#a4f54713cf68074f61904f8b448c6343b", null ],
-    [ "constructString", "a00541.html#a10c521c602773c530f954f89c5a902e5", null ],
-    [ "create_loggerhandler", "a00541.html#a441ed3ac3e378e79b62361e083bf3685", null ],
-    [ "error", "a00541.html#af14d39efa300da183070784bc86d3f23", null ],
-    [ "handler_trigger", "a00541.html#a38fe440d115714de3600d804eed00d99", null ],
-    [ "info", "a00541.html#ade15a5c23198ffcb4454a28356e78759", null ],
-    [ "log_interface", "a00541.html#a86ea9d57475a3004be2a32b2c4c76371", null ],
-    [ "registerHandle", "a00541.html#aa3e0ad0c5771cee4583b577981105114", null ],
-    [ "setHandleState", "a00541.html#a3ed1680508618b446c94ed004c211ea9", null ],
-    [ "warning", "a00541.html#a279a66d53b8b825f4a9ebc8fe30f20d6", null ],
-    [ "loggerhandler", "a00541.html#aa2cef9d88413bc71130c172b32a7bc25", null ]
+    [ "string", "a00541.html#ae7cf7e3913c2067517d3f40ff1c9a14d", null ],
+    [ "MiraiCPExceptionBase", "a00541.html#a055eb6e4a0899678793b0e4106fbf493", null ],
+    [ "~MiraiCPExceptionBase", "a00541.html#ac7fe834dc2b81b3c0d44dde55b796ac6", null ],
+    [ "basicRaise", "a00541.html#aec8e8e400265242bd3a9998af6b55880", null ],
+    [ "exceptionType", "a00541.html#a62ccfc566b59f882d0623f8e24757809", null ],
+    [ "getError", "a00541.html#a68c0d665c09da7144da6a63fd26f2dd0", null ],
+    [ "getExceptionType", "a00541.html#a55544c06d6fea1a7696421383e155f13", null ],
+    [ "raise", "a00541.html#a27e4eaeb594e067089585f1975b7eb74", null ],
+    [ "what", "a00541.html#aaac831e38c70fa529b8894b825dba04c", null ],
+    [ "filename", "a00541.html#a5d5876720c98c5c3ef2fcd2a20a0cb72", null ],
+    [ "lineNum", "a00541.html#a8724c76817d0af9f3f8fef9a6ca7f60a", null ],
+    [ "re", "a00541.html#a2eb4b42c95d1ecbc6333129ecf8c5592", null ]
 ];

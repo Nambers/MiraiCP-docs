@@ -1,5 +1,14 @@
 var a00465 =
 [
-    [ "TimeOutException", "a00465.html#afa9ae4c40114187959202926f3414b3b", null ],
-    [ "exceptionType", "a00465.html#a33b7cd14d774ca08c06e537ec6379841", null ]
+    [ "PrivateMessageEvent", "a00465.html#ae09650a1aa7d3f7535a4792bc919e032", null ],
+    [ "chat", "a00465.html#a9a8d672f2936a6760e046c3a03790e07", null ],
+    [ "chat", "a00465.html#a3b70ad84f06df0b224c6dbd58d255a59", null ],
+    [ "from", "a00465.html#a92d1a4aad3a0b4306986cea460b84fb7", null ],
+    [ "from", "a00465.html#a9b4c13376dcef6dddab4cca9b57ffc48", null ],
+    [ "get_event_type", "a00465.html#ac2cb5df8d7346169a074cb463bc85441", null ],
+    [ "getMessageChain", "a00465.html#a547bf324dfbfbb2dbef03c3fef05168b", null ],
+    [ "getMessageChain", "a00465.html#a046a99377587f6d8278d7d6cfb55208b", null ],
+    [ "nextMessage", "a00465.html#a2fadddd37811d8dcbf7183d98eba3034", null ],
+    [ "message", "a00465.html#a8a85d06adc5634099288001409e51de0", null ],
+    [ "sender", "a00465.html#aa2ba8dfb74a6324a1a6ef5774d6ee793", null ]
 ];

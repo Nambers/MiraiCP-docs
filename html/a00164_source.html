@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiraiCP: ThreadTask.cpp 源文件</title>
+<title>MiraiCP: lightApp.cpp 源文件</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -35,7 +35,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MiraiCP
-   &#160;<span id="projectnumber">v2.13.0-alpha-3</span>
+   &#160;<span id="projectnumber">v2.13.1</span>
    </div>
    <div id="projectbrief">MiraiCP api document</div>
   </td>
@@ -93,113 +93,113 @@ $(document).ready(function(){initNavTree('a00164_source.html',''); initResizable
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">ThreadTask.cpp</div></div>
+  <div class="headertitle"><div class="title">lightApp.cpp</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="a00164.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">//</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">// Created by antares on 11/8/22.</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">//</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="a00167.html">ThreadTask.h</a>&quot;</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;<a class="code" href="a00113.html">Logger.h</a>&quot;</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="a00188.html">loaderApiInternal.h</a>&quot;</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;atomic&gt;</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;deque&gt;</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;shared_mutex&gt;</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="a00226.html">   13</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="a00227.html">MiraiCP::ThreadTask::internal</a> {</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="comment">// todo(Antares): add verbose log</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="a00227.html#a203c69b79e476ef8c6e13bfb9bba4ff7">   15</a></span>    <span class="keyword">using</span> <a class="code hl_typedef" href="a00227.html#a203c69b79e476ef8c6e13bfb9bba4ff7">functionType</a> = std::function&lt;void()&gt;;</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="a00227.html#ae4923f6c201a288de0e0224e8a8d35a1">   16</a></span>    <span class="keyword">using</span> <a class="code hl_typedef" href="a00227.html#ae4923f6c201a288de0e0224e8a8d35a1">functionPointerType</a> = std::shared_ptr&lt;functionType&gt;;</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="a00227.html#a2cc1dc71776e7644c62cfc034e414654">   17</a></span>    <span class="keyword">using</span> <a class="code hl_typedef" href="a00227.html#a2cc1dc71776e7644c62cfc034e414654">storerType</a> = std::unordered_map&lt;size_t, functionPointerType&gt;;</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="a00227.html#aef1f03dc407748c08395bd81bcb66fba">   18</a></span>    <span class="keyword">using</span> <a class="code hl_typedef" href="a00227.html#aef1f03dc407748c08395bd81bcb66fba">storerIteratorType</a> = storerType::iterator;</div>
+<a href="a00164.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// Copyright (c) 2020 - 2022. Eritque arcus and contributors.</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">//</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">// This program is free software: you can redistribute it and/or modify</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">// it under the terms of the GNU Affero General Public License as</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">// published by the Free Software Foundation, either version 3 of the</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">// License, or any later version(in your opinion).</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment">//</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment">// This program is distributed in the hope that it will be useful,</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment">// but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment">// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment">// GNU Affero General Public License for more details.</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment">//</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">// You should have received a copy of the GNU Affero General Public License</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">// along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">//</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;<a class="code" href="a00128.html">MiraiCP.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">using namespace </span><a class="code hl_namespace" href="a00305.html">MiraiCP</a>;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">using namespace </span>std;</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="a00227.html#a3830d60f883d192d8d6dc65ae537c5c1">   20</a></span>    <span class="keyword">inline</span> <span class="keyword">auto</span> &amp;<a class="code hl_function" href="a00227.html#a3830d60f883d192d8d6dc65ae537c5c1">get_function_storer</a>() {</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        <span class="keyword">static</span> <a class="code hl_typedef" href="a00227.html#a2cc1dc71776e7644c62cfc034e414654">storerType</a> function_storer;</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        <span class="keywordflow">return</span> function_storer;</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    }</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="a00227.html#ab64116c47ac8841acfd734f7069eaa10">   25</a></span>    <span class="keyword">inline</span> <span class="keyword">auto</span> &amp;<a class="code hl_function" href="a00227.html#ab64116c47ac8841acfd734f7069eaa10">get_mutex</a>() {</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        <span class="keyword">static</span> std::shared_mutex mtx;</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        <span class="keywordflow">return</span> mtx;</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    }</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="a00227.html#a10f626326a5bace0c7b7c9e11db994f0">   30</a></span>    <span class="keywordtype">size_t</span> <a class="code hl_function" href="a00227.html#a10f626326a5bace0c7b7c9e11db994f0">get_auto_incr_id</a>() {</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        <span class="keyword">static</span> std::atomic&lt;size_t&gt; <span class="keywordtype">id</span> = 0;</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <span class="keywordflow">return</span> <span class="keywordtype">id</span>++;</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    }</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="a00227.html#ac0e1bc3b94e5ebafbad6fde1a0eb55fc">   35</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="a00227.html#ac0e1bc3b94e5ebafbad6fde1a0eb55fc">push_task</a>(<span class="keywordtype">size_t</span> <span class="keywordtype">id</span>, <a class="code hl_typedef" href="a00227.html#ae4923f6c201a288de0e0224e8a8d35a1">functionPointerType</a> <a class="code hl_function" href="a00035.html#a9a37a193bc61a8127790f891efc1af05">func</a>) {</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        <span class="keywordtype">bool</span> insert;</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        {</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>            std::unique_lock lk(<a class="code hl_function" href="a00227.html#ab64116c47ac8841acfd734f7069eaa10">get_mutex</a>());</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>            insert = <a class="code hl_function" href="a00227.html#a3830d60f883d192d8d6dc65ae537c5c1">get_function_storer</a>().insert({id, std::move(<a class="code hl_function" href="a00035.html#a9a37a193bc61a8127790f891efc1af05">func</a>)}).second;</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        }</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <span class="keywordflow">if</span> (!insert) {</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>            <a class="code hl_variable" href="a00549.html#a268fd602157c3fa49616a8872c82bfb1">Logger::logger</a>.<a class="code hl_function" href="a00541.html#af14d39efa300da183070784bc86d3f23">error</a>(<span class="stringliteral">&quot;Fatal: task id &quot;</span> + std::to_string(<span class="keywordtype">id</span>) + <span class="stringliteral">&quot; is already taken by another task!&quot;</span>);</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        }</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <a class="code hl_function" href="a00219.html#ae86871d4f062f45edee7501e0596cd3d">LibLoader::LoaderApi::pushTaskWithId</a>(<a class="code hl_function" href="a00227.html#a954499687c36452be430af25a7e94750">task_interface</a>, <span class="keywordtype">id</span>);</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    }</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="a00227.html#ab890e46143438cf7d678f6e4f2dcb9d0">   50</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="a00227.html#ab890e46143438cf7d678f6e4f2dcb9d0">remove_task</a>(<span class="keywordtype">size_t</span> <span class="keywordtype">id</span>) {</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        <span class="keywordtype">size_t</span> erased;</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        {</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>            std::unique_lock lk(<a class="code hl_function" href="a00227.html#ab64116c47ac8841acfd734f7069eaa10">get_mutex</a>());</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>            erased = <a class="code hl_function" href="a00227.html#a3830d60f883d192d8d6dc65ae537c5c1">get_function_storer</a>().erase(<span class="keywordtype">id</span>);</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        }</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        <span class="keywordflow">if</span> (0 == erased) {</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>            <a class="code hl_variable" href="a00549.html#a268fd602157c3fa49616a8872c82bfb1">Logger::logger</a>.<a class="code hl_function" href="a00541.html#af14d39efa300da183070784bc86d3f23">error</a>(<span class="stringliteral">&quot;Invalid task id &quot;</span> + std::to_string(<span class="keywordtype">id</span>) + <span class="stringliteral">&quot; is requested to erase&quot;</span>);</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        }</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    }</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="a00227.html#a954499687c36452be430af25a7e94750">   63</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="a00227.html#a954499687c36452be430af25a7e94750">task_interface</a>(<span class="keywordtype">size_t</span> <span class="keywordtype">id</span>) {</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        <span class="keyword">static_assert</span>(std::is_same_v&lt;<a class="code hl_typedef" href="a00219.html#a78fdbf75bfb384856ebf9ffb28b21b1f">LibLoader::LoaderApi::task_func_with_id</a>, <span class="keyword">decltype</span>(&amp;<a class="code hl_function" href="a00227.html#a954499687c36452be430af25a7e94750">task_interface</a>)&gt;);</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        <a class="code hl_typedef" href="a00227.html#aef1f03dc407748c08395bd81bcb66fba">storerIteratorType</a> iter;</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        <a class="code hl_typedef" href="a00227.html#ae4923f6c201a288de0e0224e8a8d35a1">functionPointerType</a> fPtr;</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        {</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>            std::shared_lock lck(<a class="code hl_function" href="a00227.html#ab64116c47ac8841acfd734f7069eaa10">get_mutex</a>());</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>            iter = <a class="code hl_function" href="a00227.html#a3830d60f883d192d8d6dc65ae537c5c1">get_function_storer</a>().find(<span class="keywordtype">id</span>);</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>            <span class="keywordflow">if</span> (iter == <a class="code hl_function" href="a00227.html#a3830d60f883d192d8d6dc65ae537c5c1">get_function_storer</a>().end()) {</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>                <a class="code hl_variable" href="a00549.html#a268fd602157c3fa49616a8872c82bfb1">Logger::logger</a>.<a class="code hl_function" href="a00541.html#af14d39efa300da183070784bc86d3f23">error</a>(<span class="stringliteral">&quot;Invalid task id &quot;</span> + std::to_string(<span class="keywordtype">id</span>) + <span class="stringliteral">&quot; is requested to run&quot;</span>);</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>                <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>            }</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>            fPtr = iter-&gt;second;</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        }</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        <span class="comment">// running task!</span></div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        (*fPtr)();</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    }</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>} <span class="comment">// namespace MiraiCP::ThreadTask::internal</span></div>
-<div class="ttc" id="aa00035_html_a9a37a193bc61a8127790f891efc1af05"><div class="ttname"><a href="a00035.html#a9a37a193bc61a8127790f891efc1af05">func</a></div><div class="ttdeci">void func(int i, bool b)</div><div class="ttdef"><b>Definition:</b> <a href="a00035_source.html#l00030">thread.cpp:30</a></div></div>
-<div class="ttc" id="aa00113_html"><div class="ttname"><a href="a00113.html">Logger.h</a></div></div>
-<div class="ttc" id="aa00167_html"><div class="ttname"><a href="a00167.html">ThreadTask.h</a></div></div>
-<div class="ttc" id="aa00188_html"><div class="ttname"><a href="a00188.html">loaderApiInternal.h</a></div></div>
-<div class="ttc" id="aa00219_html_a78fdbf75bfb384856ebf9ffb28b21b1f"><div class="ttname"><a href="a00219.html#a78fdbf75bfb384856ebf9ffb28b21b1f">LibLoader::LoaderApi::task_func_with_id</a></div><div class="ttdeci">void(* task_func_with_id)(size_t)</div><div class="ttdef"><b>Definition:</b> <a href="a00188_source.html#l00037">loaderApiInternal.h:37</a></div></div>
-<div class="ttc" id="aa00219_html_ae86871d4f062f45edee7501e0596cd3d"><div class="ttname"><a href="a00219.html#ae86871d4f062f45edee7501e0596cd3d">LibLoader::LoaderApi::pushTaskWithId</a></div><div class="ttdeci">LOADER_API_COUNT void pushTaskWithId(task_func_with_id, size_t)</div><div class="ttdef"><b>Definition:</b> <a href="a00104_source.html#l00075">loaderApi.cpp:75</a></div></div>
-<div class="ttc" id="aa00227_html"><div class="ttname"><a href="a00227.html">MiraiCP::ThreadTask::internal</a></div><div class="ttdef"><b>Definition:</b> <a href="a00164_source.html#l00013">ThreadTask.cpp:13</a></div></div>
-<div class="ttc" id="aa00227_html_a10f626326a5bace0c7b7c9e11db994f0"><div class="ttname"><a href="a00227.html#a10f626326a5bace0c7b7c9e11db994f0">MiraiCP::ThreadTask::internal::get_auto_incr_id</a></div><div class="ttdeci">size_t get_auto_incr_id()</div><div class="ttdef"><b>Definition:</b> <a href="a00164_source.html#l00030">ThreadTask.cpp:30</a></div></div>
-<div class="ttc" id="aa00227_html_a203c69b79e476ef8c6e13bfb9bba4ff7"><div class="ttname"><a href="a00227.html#a203c69b79e476ef8c6e13bfb9bba4ff7">MiraiCP::ThreadTask::internal::functionType</a></div><div class="ttdeci">std::function&lt; void()&gt; functionType</div><div class="ttdef"><b>Definition:</b> <a href="a00164_source.html#l00015">ThreadTask.cpp:15</a></div></div>
-<div class="ttc" id="aa00227_html_a2cc1dc71776e7644c62cfc034e414654"><div class="ttname"><a href="a00227.html#a2cc1dc71776e7644c62cfc034e414654">MiraiCP::ThreadTask::internal::storerType</a></div><div class="ttdeci">std::unordered_map&lt; size_t, functionPointerType &gt; storerType</div><div class="ttdef"><b>Definition:</b> <a href="a00164_source.html#l00017">ThreadTask.cpp:17</a></div></div>
-<div class="ttc" id="aa00227_html_a3830d60f883d192d8d6dc65ae537c5c1"><div class="ttname"><a href="a00227.html#a3830d60f883d192d8d6dc65ae537c5c1">MiraiCP::ThreadTask::internal::get_function_storer</a></div><div class="ttdeci">auto &amp; get_function_storer()</div><div class="ttdef"><b>Definition:</b> <a href="a00164_source.html#l00020">ThreadTask.cpp:20</a></div></div>
-<div class="ttc" id="aa00227_html_a954499687c36452be430af25a7e94750"><div class="ttname"><a href="a00227.html#a954499687c36452be430af25a7e94750">MiraiCP::ThreadTask::internal::task_interface</a></div><div class="ttdeci">void task_interface(size_t id)</div><div class="ttdef"><b>Definition:</b> <a href="a00164_source.html#l00063">ThreadTask.cpp:63</a></div></div>
-<div class="ttc" id="aa00227_html_ab64116c47ac8841acfd734f7069eaa10"><div class="ttname"><a href="a00227.html#ab64116c47ac8841acfd734f7069eaa10">MiraiCP::ThreadTask::internal::get_mutex</a></div><div class="ttdeci">auto &amp; get_mutex()</div><div class="ttdef"><b>Definition:</b> <a href="a00164_source.html#l00025">ThreadTask.cpp:25</a></div></div>
-<div class="ttc" id="aa00227_html_ab890e46143438cf7d678f6e4f2dcb9d0"><div class="ttname"><a href="a00227.html#ab890e46143438cf7d678f6e4f2dcb9d0">MiraiCP::ThreadTask::internal::remove_task</a></div><div class="ttdeci">void remove_task(size_t id)</div><div class="ttdef"><b>Definition:</b> <a href="a00164_source.html#l00050">ThreadTask.cpp:50</a></div></div>
-<div class="ttc" id="aa00227_html_ac0e1bc3b94e5ebafbad6fde1a0eb55fc"><div class="ttname"><a href="a00227.html#ac0e1bc3b94e5ebafbad6fde1a0eb55fc">MiraiCP::ThreadTask::internal::push_task</a></div><div class="ttdeci">void push_task(size_t id, functionPointerType func)</div><div class="ttdef"><b>Definition:</b> <a href="a00164_source.html#l00035">ThreadTask.cpp:35</a></div></div>
-<div class="ttc" id="aa00227_html_ae4923f6c201a288de0e0224e8a8d35a1"><div class="ttname"><a href="a00227.html#ae4923f6c201a288de0e0224e8a8d35a1">MiraiCP::ThreadTask::internal::functionPointerType</a></div><div class="ttdeci">std::shared_ptr&lt; functionType &gt; functionPointerType</div><div class="ttdef"><b>Definition:</b> <a href="a00164_source.html#l00016">ThreadTask.cpp:16</a></div></div>
-<div class="ttc" id="aa00227_html_aef1f03dc407748c08395bd81bcb66fba"><div class="ttname"><a href="a00227.html#aef1f03dc407748c08395bd81bcb66fba">MiraiCP::ThreadTask::internal::storerIteratorType</a></div><div class="ttdeci">storerType::iterator storerIteratorType</div><div class="ttdef"><b>Definition:</b> <a href="a00164_source.html#l00018">ThreadTask.cpp:18</a></div></div>
-<div class="ttc" id="aa00541_html_af14d39efa300da183070784bc86d3f23"><div class="ttname"><a href="a00541.html#af14d39efa300da183070784bc86d3f23">MiraiCP::Logger_interface::error</a></div><div class="ttdeci">void error(T &amp;&amp;...val)</div><div class="ttdoc">发送错误(error级日志)</div><div class="ttdef"><b>Definition:</b> <a href="a00113_source.html#l00116">Logger.h:116</a></div></div>
-<div class="ttc" id="aa00549_html_a268fd602157c3fa49616a8872c82bfb1"><div class="ttname"><a href="a00549.html#a268fd602157c3fa49616a8872c82bfb1">MiraiCP::Logger::logger</a></div><div class="ttdeci">static Logger logger</div><div class="ttdef"><b>Definition:</b> <a href="a00113_source.html#l00148">Logger.h:148</a></div></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">const</span> <a class="code hl_struct" href="a00345.html">PluginConfig</a> CPPPlugin::config{</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        <span class="stringliteral">&quot;id&quot;</span>,   <span class="comment">// 插件id</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        <span class="stringliteral">&quot;test&quot;</span>, <span class="comment">// 插件名称</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        <span class="stringliteral">&quot;v1.0&quot;</span>, <span class="comment">// 插件版本</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        <span class="stringliteral">&quot;a&quot;</span>,    <span class="comment">// 插件作者</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>                <span class="comment">// 可选：插件描述</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>                <span class="comment">// 可选：日期</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>};</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keyword">class </span>Main : <span class="keyword">public</span> <a class="code hl_class" href="a00453.html">CPPPlugin</a> {</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    Main() : <a class="code hl_class" href="a00453.html">CPPPlugin</a>() {}</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="a00453.html#ad3d1188d089ab0fc945475f988c64fa7">onEnable</a>()<span class="keyword"> override </span>{</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        Event::registerEvent&lt;GroupMessageEvent&gt;([](<a class="code hl_class" href="a00477.html">GroupMessageEvent</a> e) {</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>            <span class="comment">// 从文本构造</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>            <span class="comment">//风格1，适合文字展示，不能交互,无大图</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>            <span class="comment">//图标地址，应该是要qq的服务器里有的图片，也就是说先上传(发送)图片然后取下载链接</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>            <span class="keywordtype">string</span> icon = <span class="stringliteral">&quot;http://gchat.qpic.cn/gchatpic_new/1924306130/1044565129-2580521429-8ECE44863FC01DBD17FB8A177B355356/0&quot;</span>;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>            <span class="comment">//小标题</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>            <span class="keywordtype">string</span> titles = <span class="stringliteral">&quot;{\&quot;title\&quot;:\&quot;hi\&quot;, \&quot;value\&quot;:\&quot;test3\&quot;}&quot;</span>;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>            <span class="comment">//下面的按钮，但是不能按</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>            <span class="keywordtype">string</span> buttons = <span class="stringliteral">&quot;{\&quot;name\&quot;:\&quot;Test4\&quot;,\&quot;action\&quot;:\&quot;plugin\&quot;,\&quot;actionData\&quot;:\&quot;https://baidu.com\&quot;}&quot;</span>;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            <span class="keywordtype">string</span> x = <span class="stringliteral">&quot;{\&quot;app\&quot;:\&quot;com.tencent.miniapp\&quot;,\&quot;desc\&quot;:\&quot;\&quot;,\&quot;view\&quot;:\&quot;notification\&quot;,\&quot;ver\&quot;:\&quot;0.0.0.1\&quot;,\&quot;prompt\&quot;:\&quot;[应用]\&quot;,\&quot;appID\&quot;:\&quot;\&quot;,\&quot;sourceName\&quot;:\&quot;\&quot;,\&quot;actionData\&quot;:\&quot;\&quot;,\&quot;actionData_A\&quot;:\&quot;\&quot;,\&quot;sourceUrl\&quot;:\&quot;\&quot;,\&quot;meta\&quot;:{\&quot;notification\&quot;:{\&quot;appInfo\&quot;:&quot;</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>                       <span class="stringliteral">&quot;{\&quot;appName\&quot;:\&quot;Test1\&quot;,\&quot;appType\&quot;:4,\&quot;appid\&quot;:1109659848,&quot;</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>                       <span class="stringliteral">&quot;\&quot;iconUrl\&quot;:\&quot;&quot;</span> +</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>                       icon + <span class="stringliteral">&quot;\&quot;},&quot;</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>                              <span class="stringliteral">&quot;\&quot;data\&quot;:[&quot;</span> +</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>                       titles + <span class="stringliteral">&quot;],&quot;</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>                                <span class="stringliteral">&quot;\&quot;title\&quot;:\&quot;Test2\&quot;,\&quot;button\&quot;:&quot;</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>                                <span class="stringliteral">&quot;[&quot;</span> +</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>                       buttons + <span class="stringliteral">&quot;],&quot;</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>                                 <span class="stringliteral">&quot;\&quot;emphasis_keyword\&quot;:\&quot;\&quot;}},\&quot;text\&quot;:\&quot;\&quot;,\&quot;sourceAd\&quot;:\&quot;\&quot;}&quot;</span>;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>            e.<a class="code hl_variable" href="a00477.html#abac98c5b1373ad6c8483f9978952c553">group</a>.<a class="code hl_function" href="a00441.html#a3ab9548509786adb5929a668e88fd096">sendMessage</a>(<a class="code hl_class" href="a00769.html">LightApp</a>(x));</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>            <span class="comment">//风格2，不能交互，有预览图</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>            <span class="comment">//icon图标,应该是要qq的服务器里有的图片，也就是说先上传(发送)图片然后取下载链接</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>            <span class="keywordtype">string</span> icon1 = <span class="stringliteral">&quot;http://gchat.qpic.cn/gchatpic_new/1924306130/1044565129-2580521429-8ECE44863FC01DBD17FB8A177B355356/0&quot;</span>;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>            <span class="comment">//预览图(大图),应该是要qq的服务器里有的图片，也就是说先上传(发送)图片然后取下载链接</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>            <span class="keywordtype">string</span> preview1 = icon1;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>            <span class="keywordtype">string</span> a = <span class="stringliteral">&quot;{\&quot;config\&quot;:&quot;</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>                       <span class="stringliteral">&quot;{\&quot;height\&quot;:0,\&quot;forward\&quot;:1,\&quot;ctime\&quot;:0,\&quot;width\&quot;:0,\&quot;type\&quot;:\&quot;normal\&quot;,\&quot;token\&quot;:\&quot;\&quot;,\&quot;autoSize\&quot;:0},&quot;</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>                       <span class="stringliteral">&quot;\&quot;prompt\&quot;:\&quot;[QQ小程序]\&quot;,\&quot;app\&quot;:\&quot;com.tencent.miniapp_01\&quot;,\&quot;ver\&quot;:\&quot;1.0.0.103\&quot;,\&quot;view\&quot;:\&quot;view_8C8E89B49BE609866298ADDFF2DBABA4\&quot;,&quot;</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>                       <span class="stringliteral">&quot;\&quot;meta\&quot;:{\&quot;detail_1\&quot;:{\&quot;appid\&quot;:\&quot;1110081493\&quot;,\&quot;preview\&quot;:\&quot;&quot;</span> +</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>                       preview1 + <span class="stringliteral">&quot;\&quot;,\&quot;shareTemplateData\&quot;:{},&quot;</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>                                  <span class="stringliteral">&quot;\&quot;gamePointsUrl\&quot;:\&quot;\&quot;,\&quot;gamePoints\&quot;:\&quot;\&quot;,\&quot;url\&quot;:\&quot;m.q.qq.com\&quot;,\&quot;scene\&quot;:0,\&quot;desc\&quot;:\&quot;Test5\&quot;,\&quot;title\&quot;:\&quot;Test6\&quot;,&quot;</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>                                  <span class="stringliteral">&quot;\&quot;host\&quot;:{\&quot;uin\&quot;:1000000,\&quot;nick\&quot;:\&quot;应用消息\&quot;},&quot;</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>                                  <span class="stringliteral">&quot;\&quot;shareTemplateId\&quot;:\&quot;8C8E89B49BE609866298ADDFF2DBABA4\&quot;,\&quot;icon\&quot;:\&quot;&quot;</span> +</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>                       icon1 + <span class="stringliteral">&quot;\&quot;,\&quot;showLittleTail\&quot;:\&quot;\&quot;}},\&quot;desc\&quot;:\&quot;\&quot;}&quot;</span>;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>            e.<a class="code hl_variable" href="a00477.html#abac98c5b1373ad6c8483f9978952c553">group</a>.<a class="code hl_function" href="a00441.html#a3ab9548509786adb5929a668e88fd096">sendMessage</a>(<a class="code hl_class" href="a00769.html">LightApp</a>(a));</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>            <span class="comment">//风格3，可以跳转到网址，有预览图</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>            <span class="comment">//跳转链接</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>            <span class="keywordtype">string</span> url = <span class="stringliteral">&quot;https://www.baidu.com&quot;</span>;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>            <span class="comment">//icon图标,应该是要qq的服务器里有的图片，也就是说先上传(发送)图片然后取下载链接</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>            <span class="keywordtype">string</span> icon2 = <span class="stringliteral">&quot;http://gchat.qpic.cn/gchatpic_new/1924306130/1044565129-2580521429-8ECE44863FC01DBD17FB8A177B355356/0&quot;</span>;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>            <span class="comment">//预览图(大图),应该是要qq的服务器里有的图片，也就是说先上传(发送)图片然后取下载链接</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>            <span class="keywordtype">string</span> preview = icon2;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>            <span class="keywordtype">string</span> b = <span class="stringliteral">&quot;{\&quot;config\&quot;:{\&quot;height\&quot;:0,\&quot;forward\&quot;:1,\&quot;ctime\&quot;:0,\&quot;width\&quot;:0,\&quot;type\&quot;:\&quot;normal\&quot;,\&quot;token\&quot;:\&quot;\&quot;,\&quot;autoSize\&quot;:0},&quot;</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>                       <span class="stringliteral">&quot;\&quot;prompt\&quot;:\&quot;[QQ小程序]\&quot;,\&quot;app\&quot;:\&quot;com.tencent.miniapp_01\&quot;,\&quot;ver\&quot;:\&quot;0.0.0.1\&quot;,\&quot;view\&quot;:\&quot;view_8C8E89B49BE609866298ADDFF2DBABA4\&quot;,&quot;</span></div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>                       <span class="stringliteral">&quot;\&quot;meta\&quot;:{\&quot;detail_1\&quot;:{\&quot;appid\&quot;:\&quot;1109937557\&quot;,\&quot;preview\&quot;:\&quot;&quot;</span> +</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>                       preview + <span class="stringliteral">&quot;\&quot;,\&quot;shareTemplateData\&quot;:{},\&quot;gamePointsUrl\&quot;:\&quot;\&quot;,\&quot;gamePoints\&quot;:\&quot;\&quot;,\&quot;url\&quot;:\&quot;m.q.qq.com\&quot;,\&quot;scene\&quot;:0,\&quot;desc\&quot;:\&quot;Test1\&quot;,\&quot;title\&quot;:\&quot;Test3\&quot;,\&quot;host\&quot;:{\&quot;uin\&quot;:0,\&quot;nick\&quot;:\&quot;\&quot;},\&quot;shareTemplateId\&quot;:\&quot;8C8E89B49BE609866298ADDFF2DBABA4\&quot;,\&quot;icon\&quot;:\&quot;&quot;</span> + icon + <span class="stringliteral">&quot;\&quot;,\&quot;qqdocurl\&quot;:\&quot;&quot;</span> + url + <span class="stringliteral">&quot;\&quot;,\&quot;showLittleTail\&quot;:\&quot;\&quot;}},\&quot;desc\&quot;:\&quot;\&quot;}&quot;</span>;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>            e.<a class="code hl_variable" href="a00477.html#abac98c5b1373ad6c8483f9978952c553">group</a>.<a class="code hl_function" href="a00441.html#a3ab9548509786adb5929a668e88fd096">sendMessage</a>(<a class="code hl_class" href="a00769.html">LightApp</a>(b));</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        });</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    }</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>};</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span><span class="keywordtype">void</span> <a class="code hl_function" href="a00305.html#a12d27be6730af4fc321ac1eb231db281">MiraiCP::enrollPlugin</a>() {</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    MiraiCP::enrollPlugin0(<span class="keyword">new</span> Main());</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>}</div>
+<div class="ttc" id="aa00128_html"><div class="ttname"><a href="a00128.html">MiraiCP.hpp</a></div></div>
+<div class="ttc" id="aa00305_html"><div class="ttname"><a href="a00305.html">MiraiCP</a></div><div class="ttdef"><b>Definition:</b> <a href="a00005_source.html#l00041">commonTypes.h:41</a></div></div>
+<div class="ttc" id="aa00305_html_a12d27be6730af4fc321ac1eb231db281"><div class="ttname"><a href="a00305.html#a12d27be6730af4fc321ac1eb231db281">MiraiCP::enrollPlugin</a></div><div class="ttdeci">void enrollPlugin()</div><div class="ttdoc">注册插件函数, 需要被插件实现, 类似onStart();</div><div class="ttdef"><b>Definition:</b> <a href="a00146_source.html#l00037">utils.h:37</a></div></div>
+<div class="ttc" id="aa00345_html"><div class="ttname"><a href="a00345.html">MiraiCP::PluginConfig</a></div><div class="ttdef"><b>Definition:</b> <a href="a00020_source.html#l00029">PluginConfig.h:29</a></div></div>
+<div class="ttc" id="aa00441_html_a3ab9548509786adb5929a668e88fd096"><div class="ttname"><a href="a00441.html#a3ab9548509786adb5929a668e88fd096">MiraiCP::Contact::sendMessage</a></div><div class="ttdeci">MessageSource sendMessage(T &amp;&amp;...msg)</div><div class="ttdoc">发送信息</div><div class="ttdef"><b>Definition:</b> <a href="a00080_source.html#l00214">Contact.h:214</a></div></div>
+<div class="ttc" id="aa00453_html"><div class="ttname"><a href="a00453.html">MiraiCP::CPPPlugin</a></div><div class="ttdoc">插件父类</div><div class="ttdef"><b>Definition:</b> <a href="a00083_source.html#l00027">CPPPlugin.h:27</a></div></div>
+<div class="ttc" id="aa00453_html_ad3d1188d089ab0fc945475f988c64fa7"><div class="ttname"><a href="a00453.html#ad3d1188d089ab0fc945475f988c64fa7">MiraiCP::CPPPlugin::onEnable</a></div><div class="ttdeci">virtual void onEnable()</div><div class="ttdoc">插件启用时调用一次</div><div class="ttdef"><b>Definition:</b> <a href="a00083_source.html#l00047">CPPPlugin.h:47</a></div></div>
+<div class="ttc" id="aa00477_html"><div class="ttname"><a href="a00477.html">MiraiCP::GroupMessageEvent</a></div><div class="ttdoc">群消息事件声明</div><div class="ttdef"><b>Definition:</b> <a href="a00086_source.html#l00139">Event.h:139</a></div></div>
+<div class="ttc" id="aa00477_html_abac98c5b1373ad6c8483f9978952c553"><div class="ttname"><a href="a00477.html#abac98c5b1373ad6c8483f9978952c553">MiraiCP::GroupMessageEvent::group</a></div><div class="ttdeci">Group group</div><div class="ttdoc">来源群</div><div class="ttdef"><b>Definition:</b> <a href="a00086_source.html#l00147">Event.h:147</a></div></div>
+<div class="ttc" id="aa00769_html"><div class="ttname"><a href="a00769.html">MiraiCP::LightApp</a></div><div class="ttdoc">小程序卡片</div><div class="ttdef"><b>Definition:</b> <a href="a00137_source.html#l00372">SingleMessage.h:372</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b0856f6b0d80ccb263b2f415c91f9e17.html">include</a></li><li class="navelem"><a class="el" href="a00164.html">ThreadTask.cpp</a></li>
-    <li class="footer">生成于 2022年 十一月 23日 星期三 10:27:50 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="navelem"><a class="el" href="dir_d28a4824dc47e487b107a5db32ef43c4.html">examples</a></li><li class="navelem"><a class="el" href="a00164.html">lightApp.cpp</a></li>
+    <li class="footer">生成于 2023年 一月 21日 星期六 14:24:29 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
     </body>

@@ -1,5 +1,11 @@
 var a00437 =
 [
-    [ "MuteException", "a00437.html#aabc181c072a55209b6a88f4a0f43fa9a", null ],
-    [ "exceptionType", "a00437.html#afae350ada0208f24022d4de92442b515", null ]
+    [ "CPPPlugin", "a00437.html#aeeaafebf5e61e1da8a2c5e3e07dac64b", null ],
+    [ "~CPPPlugin", "a00437.html#af7c569aa874ccbac301c805755dcda0c", null ],
+    [ "onDisable", "a00437.html#a3ecc2c479d1ca6785e7cdcb0738c1597", null ],
+    [ "onEnable", "a00437.html#ad3d1188d089ab0fc945475f988c64fa7", null ],
+    [ "ShouldNotUse", "a00437.html#a30d82964da1ce75eb9f269c676dafc33", null ],
+    [ "config", "a00437.html#a20b8d27c47456805d38d4c366da96ac0", null ],
+    [ "plugin", "a00437.html#a2695d2cca487ad336a8b6f96e156022b", null ],
+    [ "pluginLogger", "a00437.html#ac74f70ce15a0495ac7006ad725a51279", null ]
 ];

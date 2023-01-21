@@ -1,13 +1,14 @@
 var a00497 =
 [
-    [ "ForwardedMessage", "a00497.html#af762297e66b2e0dc83744455eec4addd", null ],
-    [ "ForwardedMessage", "a00497.html#a924fa5f9d72af460397f6dcd823a5a49", null ],
-    [ "ForwardedMessage", "a00497.html#a9c7f3e4d4c6ea6050a388f4fec0bdb6f", null ],
-    [ "ForwardedMessage", "a00497.html#a387bd528d4dd635c534859d219d2b235", null ],
-    [ "~ForwardedMessage", "a00497.html#a53c55bcfd4ade77852b2b7335df0bd08", null ],
-    [ "deserializationFromMessageSourceJson", "a00497.html#a66648f9851b560d2690e8bff0591be49", null ],
-    [ "nodesToJson", "a00497.html#a640db561e48842d35f3c8f574c490cd1", null ],
-    [ "sendTo", "a00497.html#ad292bc828145dc9551541dd7852b1ffc", null ],
-    [ "display", "a00497.html#aace4b7f3e015aa6ccb84534231b2a645", null ],
-    [ "sendmsg", "a00497.html#aa99a2f4399b53a576e6db44d08e11af8", null ]
+    [ "GroupTempMessageEvent", "a00497.html#abfddc2db81d57ac0cc5735da826b409d", null ],
+    [ "chat", "a00497.html#a55718d1fe9883ea24c47c8ebb503d807", null ],
+    [ "chat", "a00497.html#ac9bee0cbf3838fa62837e62110e67067", null ],
+    [ "from", "a00497.html#a40e9c959f267452a60b2d5e6549dd5bb", null ],
+    [ "from", "a00497.html#adf2a7d962bf5daba13db488d48f0da5d", null ],
+    [ "get_event_type", "a00497.html#aab7402e84e7d27152ee337a20d70233a", null ],
+    [ "getMessageChain", "a00497.html#af08cf89e9ec68ea7a71f491bac7af023", null ],
+    [ "getMessageChain", "a00497.html#af4a3409f72b9feba0671804763390592", null ],
+    [ "group", "a00497.html#a29c18056652c7d36248f70f359f01e74", null ],
+    [ "message", "a00497.html#a2405f8a309e3b2de0d7cba313d795cee", null ],
+    [ "sender", "a00497.html#ac0252e17c1cb9a0d4f2ebf37720951db", null ]
 ];

@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiraiCP: utils.cpp 源文件</title>
+<title>MiraiCP: nextMessage.cpp 源文件</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -35,7 +35,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MiraiCP
-   &#160;<span id="projectnumber">v2.13.0-alpha-3</span>
+   &#160;<span id="projectnumber">v2.13.1</span>
    </div>
    <div id="projectbrief">MiraiCP api document</div>
   </td>
@@ -93,7 +93,7 @@ $(document).ready(function(){initNavTree('a00176_source.html',''); initResizable
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">utils.cpp</div></div>
+  <div class="headertitle"><div class="title">nextMessage.cpp</div></div>
 </div><!--header-->
 <div class="contents">
 <a href="a00176.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// Copyright (c) 2020 - 2022. Eritque arcus and contributors.</span></div>
@@ -111,171 +111,55 @@ $(document).ready(function(){initNavTree('a00176_source.html',''); initResizable
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">// You should have received a copy of the GNU Affero General Public License</span></div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">// along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</span></div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">//</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &quot;<a class="code" href="a00191.html">MiraiCPMacros.h</a>&quot;</span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">// -----------------------</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &quot;<a class="code" href="a00179.html">utils.h</a>&quot;</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &quot;<a class="code" href="a00065.html">Event.h</a>&quot;</span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &quot;<a class="code" href="a00071.html">Exception.h</a>&quot;</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &quot;<a class="code" href="a00101.html">KtOperation.h</a>&quot;</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &quot;<a class="code" href="a00113.html">Logger.h</a>&quot;</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#include &quot;<a class="code" href="a00182.html">commonTools.h</a>&quot;</span></div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#include &quot;<a class="code" href="a00188.html">loaderApiInternal.h</a>&quot;</span></div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;<a class="code" href="a00128.html">MiraiCP.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">using namespace </span><a class="code hl_namespace" href="a00305.html">MiraiCP</a>;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">const</span> <a class="code hl_struct" href="a00345.html">PluginConfig</a> CPPPlugin::config{</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        <span class="stringliteral">&quot;id&quot;</span>,   <span class="comment">// 插件id</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        <span class="stringliteral">&quot;test&quot;</span>, <span class="comment">// 插件名称</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        <span class="stringliteral">&quot;v1.0&quot;</span>, <span class="comment">// 插件版本</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        <span class="stringliteral">&quot;a&quot;</span>,    <span class="comment">// 插件作者</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>                <span class="comment">// 可选：插件描述</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>                <span class="comment">// 可选：日期</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>};</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="comment">// 开始对接libloader接口代码</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="a00176.html#ab701e3ac61a85b337ec5c1abaad6742d">   31</a></span><span class="keyword">using</span> <a class="code hl_typedef" href="a00176.html#ab701e3ac61a85b337ec5c1abaad6742d">json</a> = <a class="code hl_typedef" href="a00176.html#ab701e3ac61a85b337ec5c1abaad6742d">nlohmann::json</a>;</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="keyword">namespace </span><a class="code hl_namespace" href="a00219.html">LibLoader::LoaderApi</a> {</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keyword">const</span> interface_funcs *<a class="code hl_function" href="a00219.html#adbbf9fc9fc8afe6108ac756d7da23ddb">get_loader_apis</a>();</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <a class="code hl_define" href="a00191.html#aa40df2b825bdde9207f3e87b140235c3">MIRAICP_EXPORT</a> <span class="keywordtype">void</span> <a class="code hl_function" href="a00219.html#afafdec05224ec27cf2a6473f4b6bbc17">set_loader_apis</a>(<span class="keyword">const</span> <a class="code hl_struct" href="a00237.html">LibLoader::LoaderApi::interface_funcs</a> *apis);</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <a class="code hl_define" href="a00191.html#aa40df2b825bdde9207f3e87b140235c3">MIRAICP_EXPORT</a> <span class="keywordtype">void</span> <a class="code hl_function" href="a00219.html#ad7be0fa205a71a85052d08ef0797b7c6">reset_loader_apis</a>();</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>} <span class="comment">// namespace LibLoader::LoaderApi</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="keyword">class </span>Main : <span class="keyword">public</span> <a class="code hl_class" href="a00453.html">CPPPlugin</a> {</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    Main() : <a class="code hl_class" href="a00453.html">CPPPlugin</a>() {}</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="a00453.html#ad3d1188d089ab0fc945475f988c64fa7">onEnable</a>()<span class="keyword"> override </span>{</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        Event::registerEvent&lt;GroupMessageEvent&gt;([](<a class="code hl_class" href="a00477.html">GroupMessageEvent</a> e) {</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>            <span class="keyword">auto</span> tmp = e.<a class="code hl_function" href="a00477.html#addb043788194a8bffd2eeddff17080ef">nextMessage</a>();</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>            e.<a class="code hl_variable" href="a00477.html#abac98c5b1373ad6c8483f9978952c553">group</a>.<a class="code hl_function" href="a00441.html#a3ab9548509786adb5929a668e88fd096">sendMessage</a>(tmp);</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        });</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        Event::registerEvent&lt;PrivateMessageEvent&gt;([](<a class="code hl_class" href="a00481.html">PrivateMessageEvent</a> e) -&gt; {</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>            <span class="keyword">auto</span> tmp = e.<a class="code hl_function" href="a00481.html#a2fadddd37811d8dcbf7183d98eba3034">nextMessage</a>();</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        });</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    }</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>};</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> {</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="a00176.html#a0585646fd17d1cc5d88b09d4ee9b73d4">   44</a></span><a class="code hl_define" href="a00191.html#aa40df2b825bdde9207f3e87b140235c3">MIRAICP_EXPORT</a> <span class="keywordtype">void</span> <a class="code hl_function" href="a00176.html#a0585646fd17d1cc5d88b09d4ee9b73d4">FUNC_ENTRANCE</a>(<span class="keyword">const</span> <a class="code hl_struct" href="a00237.html">LibLoader::LoaderApi::interface_funcs</a> &amp;funcs) {</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keyword">static_assert</span>(std::is_same_v&lt;<span class="keyword">decltype</span>(&amp;<a class="code hl_function" href="a00176.html#a0585646fd17d1cc5d88b09d4ee9b73d4">FUNC_ENTRANCE</a>), <a class="code hl_typedef" href="a00217.html#a737c0a0b70ea90a5fda61002ec9f1ec5">LibLoader::plugin_entrance_func_ptr</a>&gt;);</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keyword">using namespace </span><a class="code hl_namespace" href="a00218.html">MiraiCP</a>;</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    Event::clear();</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <a class="code hl_function" href="a00219.html#afafdec05224ec27cf2a6473f4b6bbc17">LibLoader::LoaderApi::set_loader_apis</a>(&amp;funcs);</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <a class="code hl_define" href="a00191.html#ae90784e7cdd9af82802f90079c4e64e8">assert</a>(<a class="code hl_function" href="a00219.html#adbbf9fc9fc8afe6108ac756d7da23ddb">LibLoader::LoaderApi::get_loader_apis</a>() != <span class="keyword">nullptr</span>);</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    Logger::logger.info(<span class="stringliteral">&quot;开始启动插件: &quot;</span> + <a class="code hl_variable" href="a00313.html#a20b8d27c47456805d38d4c366da96ac0">MiraiCP::CPPPlugin::config</a>.getId());</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="keywordflow">try</span> {</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        <a class="code hl_function" href="a00218.html#a12d27be6730af4fc321ac1eb231db281">enrollPlugin</a>();</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        <span class="comment">// plugin == nullptr 无插件实例加载</span></div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        <span class="keywordflow">if</span> (CPPPlugin::plugin != <span class="keyword">nullptr</span>) {</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>            CPPPlugin::plugin-&gt;onEnable();</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        }</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    } <span class="keywordflow">catch</span> (<span class="keyword">const</span> <a class="code hl_interface" href="a00405.html">MiraiCPExceptionBase</a> &amp;e) {</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        std::cerr.flush();</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        e.<a class="code hl_function" href="a00405.html#a27e4eaeb594e067089585f1975b7eb74">raise</a>();</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        Logger::logger.error(<span class="stringliteral">&quot;插件(id=&quot;</span> + CPPPlugin::config.getId() + <span class="stringliteral">&quot;, name=&quot;</span> + CPPPlugin::config.name + <span class="stringliteral">&quot;)启动失败&quot;</span>);</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        <span class="comment">// throw IllegalStateException(e.what(), e.filename, e.lineNum);</span></div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    } <span class="keywordflow">catch</span> (<span class="keyword">const</span> std::exception &amp;e) {</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        std::cerr.flush();</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        Logger::logger.error(e.<a class="code hl_function" href="a00405.html#aaac831e38c70fa529b8894b825dba04c">what</a>());</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        Logger::logger.error(<span class="stringliteral">&quot;插件(id=&quot;</span> + CPPPlugin::config.getId() + <span class="stringliteral">&quot;, name=&quot;</span> + CPPPlugin::config.name + <span class="stringliteral">&quot;)启动失败&quot;</span>);</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        <span class="comment">// throw IllegalStateException(e.what(), MIRAICP_EXCEPTION_WHERE);</span></div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    } <span class="keywordflow">catch</span> (...) {</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        std::cerr.flush();</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        Logger::logger.error(<span class="stringliteral">&quot;插件(id=&quot;</span> + CPPPlugin::config.getId() + <span class="stringliteral">&quot;, name=&quot;</span> + CPPPlugin::config.name + <span class="stringliteral">&quot;)启动失败&quot;</span>);</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        <span class="comment">// throw IllegalStateException(&quot;&quot;, MIRAICP_EXCEPTION_WHERE);</span></div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    }</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>}</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="a00176.html#a86f1ff0184932e6c32b8b543c5527559">   78</a></span><a class="code hl_define" href="a00191.html#aa40df2b825bdde9207f3e87b140235c3">MIRAICP_EXPORT</a> <span class="keywordtype">void</span> <a class="code hl_function" href="a00176.html#a86f1ff0184932e6c32b8b543c5527559">FUNC_EXIT</a>() {</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <span class="keyword">static_assert</span>(std::is_same_v&lt;<span class="keyword">decltype</span>(&amp;<a class="code hl_function" href="a00176.html#a86f1ff0184932e6c32b8b543c5527559">FUNC_EXIT</a>), <a class="code hl_typedef" href="a00217.html#aae50308f3b68967bcf9279e9e4bfe578">LibLoader::plugin_func_ptr</a>&gt;);</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <span class="keyword">using namespace </span><a class="code hl_namespace" href="a00218.html">MiraiCP</a>;</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    Logger::logger.info(<span class="stringliteral">&quot;开始禁用插件：&quot;</span> + <a class="code hl_variable" href="a00313.html#a20b8d27c47456805d38d4c366da96ac0">MiraiCP::CPPPlugin::config</a>.getId());</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    Event::clear();</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    <span class="keywordflow">if</span> (CPPPlugin::plugin != <span class="keyword">nullptr</span>) CPPPlugin::plugin-&gt;onDisable();</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    CPPPlugin::plugin.reset();</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <span class="comment">// 无法保证用户插件析构函数是否调用api，在plugin.reset()之前不可reset loader api</span></div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    <a class="code hl_function" href="a00219.html#ad7be0fa205a71a85052d08ef0797b7c6">LibLoader::LoaderApi::reset_loader_apis</a>();</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>}</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno"><a class="line" href="a00176.html#a9e8bbe776f60cdd3a4cb2f58b7db3a44">   97</a></span><a class="code hl_define" href="a00191.html#aa40df2b825bdde9207f3e87b140235c3">MIRAICP_EXPORT</a> <span class="keywordtype">void</span> <a class="code hl_function" href="a00176.html#a9e8bbe776f60cdd3a4cb2f58b7db3a44">FUNC_EVENT</a>(<span class="keyword">const</span> <a class="code hl_class" href="a00241.html">MiraiCP::MiraiCPString</a> &amp;c) {</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    <span class="keyword">static_assert</span>(std::is_same_v&lt;<span class="keyword">decltype</span>(&amp;<a class="code hl_function" href="a00176.html#a9e8bbe776f60cdd3a4cb2f58b7db3a44">FUNC_EVENT</a>), <a class="code hl_typedef" href="a00217.html#ad75d14c4f8a5192c9e2a8ef36f9919ee">LibLoader::plugin_event_func_ptr</a>&gt;);</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    <span class="keyword">using namespace </span><a class="code hl_namespace" href="a00218.html">MiraiCP</a>;</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    std::string content = c;</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    <a class="code hl_typedef" href="a00218.html#ac0a8a1bade77a57eeb1d94cfacfb75ce">json</a> j;</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    <span class="keywordflow">try</span> {</div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        j = json::parse(content);</div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    } <span class="keywordflow">catch</span> (json::parse_error &amp;e) {</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>        Logger::logger.error(<span class="stringliteral">&quot;消息解析分流：格式化json错误&quot;</span>);</div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        Logger::logger.error(<span class="stringliteral">&quot;For debug: &quot;</span> + content);</div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>        Logger::logger.error(e.what());</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    }</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    <span class="keywordtype">int</span> type = j[<span class="stringliteral">&quot;type&quot;</span>].get&lt;<span class="keywordtype">int</span>&gt;();</div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span> </div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    <span class="keywordflow">if</span> (type != <a class="code hl_enumvalue" href="a00221.html#abe9e9d8212ea8f23717b72db64393caba5c5efe6fe256e4eb53a217cac3a84233">eventTypes::Command</a> &amp;&amp; Event::noRegistered(type)) <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    <span class="keywordflow">try</span> {</div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>        Event::incomingEvent(std::move(j), type);</div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    } <span class="keywordflow">catch</span> (json::type_error &amp;e) {</div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>        Logger::logger.error(<span class="stringliteral">&quot;json格式化异常,位置C-Handle&quot;</span>);</div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>        Logger::logger.error(e.what());</div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>        Logger::logger.error(<span class="stringliteral">&quot;info:&quot;</span>, content);</div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    } <span class="keywordflow">catch</span> (<a class="code hl_interface" href="a00405.html">MiraiCPExceptionBase</a> &amp;e) {</div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>        Event::broadcast&lt;MiraiCPExceptionEvent&gt;(<a class="code hl_enumvalue" href="a00221.html#abe9e9d8212ea8f23717b72db64393cabae45271795e11748f69a8762e52630d6e">MiraiCPExceptionEvent</a>(&amp;e));</div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>        e.raise();</div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    } <span class="keywordflow">catch</span> (<span class="keyword">const</span> std::exception &amp;e) {</div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>        Logger::logger.error(e.what());</div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>        Logger::logger.error(<span class="stringliteral">&quot;info:&quot;</span>, content);</div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    }</div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    <span class="comment">// 如果产生了无法处理的异常，直接退出插件</span></div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    <span class="comment">// loader端将处理这个异常并将绑定的线程结束掉</span></div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    <span class="comment">// 如果存在其他线程，可能导致段错误</span></div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>}</div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span> </div>
-<div class="line"><a id="l00135" name="l00135"></a><span class="lineno"><a class="line" href="a00176.html#ae002060e3c187e7426d85d81f5caccb8">  135</a></span><a class="code hl_define" href="a00191.html#aa40df2b825bdde9207f3e87b140235c3">MIRAICP_EXPORT</a> <span class="keyword">const</span> <a class="code hl_struct" href="a00245.html">MiraiCP::PluginConfig</a> *<a class="code hl_function" href="a00176.html#ae002060e3c187e7426d85d81f5caccb8">PLUGIN_INFO</a>() {</div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    <span class="keyword">static_assert</span>(std::is_same_v&lt;<span class="keyword">decltype</span>(&amp;<a class="code hl_function" href="a00176.html#ae002060e3c187e7426d85d81f5caccb8">PLUGIN_INFO</a>), <a class="code hl_typedef" href="a00217.html#a776f4f6bb745b814e23461c7742b9682">LibLoader::plugin_info_func_ptr</a>&gt;);</div>
-<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span> </div>
-<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>    <span class="comment">//    if (MiraiCP::CPPPlugin::config.getId().empty())</span></div>
-<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>    <span class="comment">//        throw std::exception();</span></div>
-<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span> </div>
-<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>    <span class="keywordflow">return</span> &amp;<a class="code hl_variable" href="a00313.html#a20b8d27c47456805d38d4c366da96ac0">MiraiCP::CPPPlugin::config</a>; <span class="comment">// never nullptr</span></div>
-<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>}</div>
-<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>}</div>
-<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span><span class="comment">//结束对接JNI接口代码</span></div>
-<div class="ttc" id="aa00065_html"><div class="ttname"><a href="a00065.html">Event.h</a></div></div>
-<div class="ttc" id="aa00071_html"><div class="ttname"><a href="a00071.html">Exception.h</a></div></div>
-<div class="ttc" id="aa00101_html"><div class="ttname"><a href="a00101.html">KtOperation.h</a></div></div>
-<div class="ttc" id="aa00113_html"><div class="ttname"><a href="a00113.html">Logger.h</a></div></div>
-<div class="ttc" id="aa00176_html_a0585646fd17d1cc5d88b09d4ee9b73d4"><div class="ttname"><a href="a00176.html#a0585646fd17d1cc5d88b09d4ee9b73d4">FUNC_ENTRANCE</a></div><div class="ttdeci">MIRAICP_EXPORT void FUNC_ENTRANCE(const LibLoader::LoaderApi::interface_funcs &amp;funcs)</div><div class="ttdoc">插件开启入口</div><div class="ttdef"><b>Definition:</b> <a href="a00176_source.html#l00044">utils.cpp:44</a></div></div>
-<div class="ttc" id="aa00176_html_a86f1ff0184932e6c32b8b543c5527559"><div class="ttname"><a href="a00176.html#a86f1ff0184932e6c32b8b543c5527559">FUNC_EXIT</a></div><div class="ttdeci">MIRAICP_EXPORT void FUNC_EXIT()</div><div class="ttdoc">插件结束(也可能是暂时的disable)</div><div class="ttdef"><b>Definition:</b> <a href="a00176_source.html#l00078">utils.cpp:78</a></div></div>
-<div class="ttc" id="aa00176_html_a9e8bbe776f60cdd3a4cb2f58b7db3a44"><div class="ttname"><a href="a00176.html#a9e8bbe776f60cdd3a4cb2f58b7db3a44">FUNC_EVENT</a></div><div class="ttdeci">MIRAICP_EXPORT void FUNC_EVENT(const MiraiCP::MiraiCPString &amp;c)</div><div class="ttdef"><b>Definition:</b> <a href="a00176_source.html#l00097">utils.cpp:97</a></div></div>
-<div class="ttc" id="aa00176_html_ab701e3ac61a85b337ec5c1abaad6742d"><div class="ttname"><a href="a00176.html#ab701e3ac61a85b337ec5c1abaad6742d">json</a></div><div class="ttdeci">nlohmann::json json</div><div class="ttdef"><b>Definition:</b> <a href="a00176_source.html#l00031">utils.cpp:31</a></div></div>
-<div class="ttc" id="aa00176_html_ae002060e3c187e7426d85d81f5caccb8"><div class="ttname"><a href="a00176.html#ae002060e3c187e7426d85d81f5caccb8">PLUGIN_INFO</a></div><div class="ttdeci">MIRAICP_EXPORT const MiraiCP::PluginConfig * PLUGIN_INFO()</div><div class="ttdef"><b>Definition:</b> <a href="a00176_source.html#l00135">utils.cpp:135</a></div></div>
-<div class="ttc" id="aa00179_html"><div class="ttname"><a href="a00179.html">utils.h</a></div></div>
-<div class="ttc" id="aa00182_html"><div class="ttname"><a href="a00182.html">commonTools.h</a></div></div>
-<div class="ttc" id="aa00188_html"><div class="ttname"><a href="a00188.html">loaderApiInternal.h</a></div></div>
-<div class="ttc" id="aa00191_html"><div class="ttname"><a href="a00191.html">MiraiCPMacros.h</a></div></div>
-<div class="ttc" id="aa00191_html_aa40df2b825bdde9207f3e87b140235c3"><div class="ttname"><a href="a00191.html#aa40df2b825bdde9207f3e87b140235c3">MIRAICP_EXPORT</a></div><div class="ttdeci">#define MIRAICP_EXPORT</div><div class="ttdef"><b>Definition:</b> <a href="a00191_source.html#l00168">MiraiCPMacros.h:168</a></div></div>
-<div class="ttc" id="aa00191_html_ae90784e7cdd9af82802f90079c4e64e8"><div class="ttname"><a href="a00191.html#ae90784e7cdd9af82802f90079c4e64e8">assert</a></div><div class="ttdeci">#define assert(ignore)</div><div class="ttdef"><b>Definition:</b> <a href="a00191_source.html#l00115">MiraiCPMacros.h:115</a></div></div>
-<div class="ttc" id="aa00217_html_a737c0a0b70ea90a5fda61002ec9f1ec5"><div class="ttname"><a href="a00217.html#a737c0a0b70ea90a5fda61002ec9f1ec5">LibLoader::plugin_entrance_func_ptr</a></div><div class="ttdeci">void(* plugin_entrance_func_ptr)(const LoaderApi::interface_funcs &amp;)</div><div class="ttdef"><b>Definition:</b> <a href="a00185_source.html#l00031">commonTypes.h:31</a></div></div>
-<div class="ttc" id="aa00217_html_a776f4f6bb745b814e23461c7742b9682"><div class="ttname"><a href="a00217.html#a776f4f6bb745b814e23461c7742b9682">LibLoader::plugin_info_func_ptr</a></div><div class="ttdeci">const MiraiCP::PluginConfig *(* plugin_info_func_ptr)()</div><div class="ttdef"><b>Definition:</b> <a href="a00185_source.html#l00037">commonTypes.h:37</a></div></div>
-<div class="ttc" id="aa00217_html_aae50308f3b68967bcf9279e9e4bfe578"><div class="ttname"><a href="a00217.html#aae50308f3b68967bcf9279e9e4bfe578">LibLoader::plugin_func_ptr</a></div><div class="ttdeci">void(* plugin_func_ptr)()</div><div class="ttdef"><b>Definition:</b> <a href="a00185_source.html#l00035">commonTypes.h:35</a></div></div>
-<div class="ttc" id="aa00217_html_ad75d14c4f8a5192c9e2a8ef36f9919ee"><div class="ttname"><a href="a00217.html#ad75d14c4f8a5192c9e2a8ef36f9919ee">LibLoader::plugin_event_func_ptr</a></div><div class="ttdeci">void(* plugin_event_func_ptr)(const MiraiCP::MiraiCPString &amp;)</div><div class="ttdef"><b>Definition:</b> <a href="a00185_source.html#l00033">commonTypes.h:33</a></div></div>
-<div class="ttc" id="aa00218_html"><div class="ttname"><a href="a00218.html">MiraiCP</a></div><div class="ttdef"><b>Definition:</b> <a href="a00185_source.html#l00041">commonTypes.h:41</a></div></div>
-<div class="ttc" id="aa00218_html_a12d27be6730af4fc321ac1eb231db281"><div class="ttname"><a href="a00218.html#a12d27be6730af4fc321ac1eb231db281">MiraiCP::enrollPlugin</a></div><div class="ttdeci">void enrollPlugin()</div><div class="ttdoc">注册插件函数, 需要被插件实现, 类似onStart();</div><div class="ttdef"><b>Definition:</b> <a href="a00179_source.html#l00037">utils.h:37</a></div></div>
-<div class="ttc" id="aa00218_html_ac0a8a1bade77a57eeb1d94cfacfb75ce"><div class="ttname"><a href="a00218.html#ac0a8a1bade77a57eeb1d94cfacfb75ce">MiraiCP::json</a></div><div class="ttdeci">nlohmann::json json</div><div class="ttdef"><b>Definition:</b> <a href="a00203_source.html#l00022">PluginConfig.cpp:22</a></div></div>
-<div class="ttc" id="aa00219_html"><div class="ttname"><a href="a00219.html">LibLoader::LoaderApi</a></div><div class="ttdef"><b>Definition:</b> <a href="a00188_source.html#l00035">loaderApiInternal.h:35</a></div></div>
-<div class="ttc" id="aa00219_html_ad7be0fa205a71a85052d08ef0797b7c6"><div class="ttname"><a href="a00219.html#ad7be0fa205a71a85052d08ef0797b7c6">LibLoader::LoaderApi::reset_loader_apis</a></div><div class="ttdeci">MIRAICP_EXPORT void reset_loader_apis()</div><div class="ttdef"><b>Definition:</b> <a href="a00104_source.html#l00032">loaderApi.cpp:32</a></div></div>
-<div class="ttc" id="aa00219_html_adbbf9fc9fc8afe6108ac756d7da23ddb"><div class="ttname"><a href="a00219.html#adbbf9fc9fc8afe6108ac756d7da23ddb">LibLoader::LoaderApi::get_loader_apis</a></div><div class="ttdeci">const interface_funcs * get_loader_apis()</div><div class="ttdoc">这个函数是给本cpp以外的文件使用的，大概率用不到</div><div class="ttdef"><b>Definition:</b> <a href="a00104_source.html#l00037">loaderApi.cpp:37</a></div></div>
-<div class="ttc" id="aa00219_html_afafdec05224ec27cf2a6473f4b6bbc17"><div class="ttname"><a href="a00219.html#afafdec05224ec27cf2a6473f4b6bbc17">LibLoader::LoaderApi::set_loader_apis</a></div><div class="ttdeci">MIRAICP_EXPORT void set_loader_apis(const LibLoader::LoaderApi::interface_funcs *apis)</div><div class="ttdef"><b>Definition:</b> <a href="a00104_source.html#l00028">loaderApi.cpp:28</a></div></div>
-<div class="ttc" id="aa00221_html_abe9e9d8212ea8f23717b72db64393caba5c5efe6fe256e4eb53a217cac3a84233"><div class="ttname"><a href="a00221.html#abe9e9d8212ea8f23717b72db64393caba5c5efe6fe256e4eb53a217cac3a84233">MiraiCP::eventTypes::Command</a></div><div class="ttdeci">@ Command</div><div class="ttdef"><b>Definition:</b> <a href="a00065_source.html#l00049">Event.h:49</a></div></div>
-<div class="ttc" id="aa00221_html_abe9e9d8212ea8f23717b72db64393cabae45271795e11748f69a8762e52630d6e"><div class="ttname"><a href="a00221.html#abe9e9d8212ea8f23717b72db64393cabae45271795e11748f69a8762e52630d6e">MiraiCP::eventTypes::MiraiCPExceptionEvent</a></div><div class="ttdeci">@ MiraiCPExceptionEvent</div><div class="ttdef"><b>Definition:</b> <a href="a00065_source.html#l00048">Event.h:48</a></div></div>
-<div class="ttc" id="aa00237_html"><div class="ttname"><a href="a00237.html">LibLoader::LoaderApi::interface_funcs</a></div><div class="ttdef"><b>Definition:</b> <a href="a00188_source.html#l00081">loaderApiInternal.h:81</a></div></div>
-<div class="ttc" id="aa00241_html"><div class="ttname"><a href="a00241.html">MiraiCP::MiraiCPString</a></div><div class="ttdoc">MiraiCP内部传递string数据用</div><div class="ttdef"><b>Definition:</b> <a href="a00197_source.html#l00033">MiraiCPStringInternal.h:33</a></div></div>
-<div class="ttc" id="aa00245_html"><div class="ttname"><a href="a00245.html">MiraiCP::PluginConfig</a></div><div class="ttdef"><b>Definition:</b> <a href="a00206_source.html#l00029">PluginConfig.h:29</a></div></div>
-<div class="ttc" id="aa00313_html_a20b8d27c47456805d38d4c366da96ac0"><div class="ttname"><a href="a00313.html#a20b8d27c47456805d38d4c366da96ac0">MiraiCP::CPPPlugin::config</a></div><div class="ttdeci">MIRAICP_EXPORT static const PluginConfig config</div><div class="ttdoc">插件信息，一个插件中该内容不应变化</div><div class="ttdef"><b>Definition:</b> <a href="a00059_source.html#l00038">CPPPlugin.h:38</a></div></div>
-<div class="ttc" id="aa00405_html"><div class="ttname"><a href="a00405.html">MiraiCP::MiraiCPExceptionBase</a></div><div class="ttdoc">总异常抽象类，用于一般捕获，不要直接抛出该类，不知道抛出什么的时候请抛出 MiraiCPException</div><div class="ttdef"><b>Definition:</b> <a href="a00071_source.html#l00031">Exception.h:31</a></div></div>
-<div class="ttc" id="aa00405_html_a27e4eaeb594e067089585f1975b7eb74"><div class="ttname"><a href="a00405.html#a27e4eaeb594e067089585f1975b7eb74">MiraiCP::MiraiCPExceptionBase::raise</a></div><div class="ttdeci">void raise() const</div><div class="ttdoc">实际抛出方法</div><div class="ttdef"><b>Definition:</b> <a href="a00068_source.html#l00025">Exception.cpp:25</a></div></div>
-<div class="ttc" id="aa00405_html_aaac831e38c70fa529b8894b825dba04c"><div class="ttname"><a href="a00405.html#aaac831e38c70fa529b8894b825dba04c">MiraiCP::MiraiCPExceptionBase::what</a></div><div class="ttdeci">const char * what() const noexcept override</div><div class="ttdoc">异常信息</div><div class="ttdef"><b>Definition:</b> <a href="a00071_source.html#l00055">Exception.h:55</a></div></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="keywordtype">void</span> <a class="code hl_function" href="a00305.html#a12d27be6730af4fc321ac1eb231db281">MiraiCP::enrollPlugin</a>() {</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <a class="code hl_function" href="a00305.html#a12d27be6730af4fc321ac1eb231db281">MiraiCP::enrollPlugin</a>(<span class="keyword">new</span> Main());</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>}</div>
+<div class="ttc" id="aa00128_html"><div class="ttname"><a href="a00128.html">MiraiCP.hpp</a></div></div>
+<div class="ttc" id="aa00305_html"><div class="ttname"><a href="a00305.html">MiraiCP</a></div><div class="ttdef"><b>Definition:</b> <a href="a00005_source.html#l00041">commonTypes.h:41</a></div></div>
+<div class="ttc" id="aa00305_html_a12d27be6730af4fc321ac1eb231db281"><div class="ttname"><a href="a00305.html#a12d27be6730af4fc321ac1eb231db281">MiraiCP::enrollPlugin</a></div><div class="ttdeci">void enrollPlugin()</div><div class="ttdoc">注册插件函数, 需要被插件实现, 类似onStart();</div><div class="ttdef"><b>Definition:</b> <a href="a00146_source.html#l00037">utils.h:37</a></div></div>
+<div class="ttc" id="aa00345_html"><div class="ttname"><a href="a00345.html">MiraiCP::PluginConfig</a></div><div class="ttdef"><b>Definition:</b> <a href="a00020_source.html#l00029">PluginConfig.h:29</a></div></div>
+<div class="ttc" id="aa00441_html_a3ab9548509786adb5929a668e88fd096"><div class="ttname"><a href="a00441.html#a3ab9548509786adb5929a668e88fd096">MiraiCP::Contact::sendMessage</a></div><div class="ttdeci">MessageSource sendMessage(T &amp;&amp;...msg)</div><div class="ttdoc">发送信息</div><div class="ttdef"><b>Definition:</b> <a href="a00080_source.html#l00214">Contact.h:214</a></div></div>
+<div class="ttc" id="aa00453_html"><div class="ttname"><a href="a00453.html">MiraiCP::CPPPlugin</a></div><div class="ttdoc">插件父类</div><div class="ttdef"><b>Definition:</b> <a href="a00083_source.html#l00027">CPPPlugin.h:27</a></div></div>
+<div class="ttc" id="aa00453_html_ad3d1188d089ab0fc945475f988c64fa7"><div class="ttname"><a href="a00453.html#ad3d1188d089ab0fc945475f988c64fa7">MiraiCP::CPPPlugin::onEnable</a></div><div class="ttdeci">virtual void onEnable()</div><div class="ttdoc">插件启用时调用一次</div><div class="ttdef"><b>Definition:</b> <a href="a00083_source.html#l00047">CPPPlugin.h:47</a></div></div>
+<div class="ttc" id="aa00477_html"><div class="ttname"><a href="a00477.html">MiraiCP::GroupMessageEvent</a></div><div class="ttdoc">群消息事件声明</div><div class="ttdef"><b>Definition:</b> <a href="a00086_source.html#l00139">Event.h:139</a></div></div>
+<div class="ttc" id="aa00477_html_abac98c5b1373ad6c8483f9978952c553"><div class="ttname"><a href="a00477.html#abac98c5b1373ad6c8483f9978952c553">MiraiCP::GroupMessageEvent::group</a></div><div class="ttdeci">Group group</div><div class="ttdoc">来源群</div><div class="ttdef"><b>Definition:</b> <a href="a00086_source.html#l00147">Event.h:147</a></div></div>
+<div class="ttc" id="aa00477_html_addb043788194a8bffd2eeddff17080ef"><div class="ttname"><a href="a00477.html#addb043788194a8bffd2eeddff17080ef">MiraiCP::GroupMessageEvent::nextMessage</a></div><div class="ttdeci">MessageChain nextMessage(long time=-1, bool halt=true) const</div><div class="ttdoc">取群聊下一个消息(群聊与本事件一样)</div><div class="ttdef"><b>Definition:</b> <a href="a00248_source.html#l00038">Event.cpp:38</a></div></div>
+<div class="ttc" id="aa00481_html"><div class="ttname"><a href="a00481.html">MiraiCP::PrivateMessageEvent</a></div><div class="ttdef"><b>Definition:</b> <a href="a00086_source.html#l00201">Event.h:201</a></div></div>
+<div class="ttc" id="aa00481_html_a2fadddd37811d8dcbf7183d98eba3034"><div class="ttname"><a href="a00481.html#a2fadddd37811d8dcbf7183d98eba3034">MiraiCP::PrivateMessageEvent::nextMessage</a></div><div class="ttdeci">MessageChain nextMessage(long time=-1, bool halt=true) const</div><div class="ttdoc">取下一个消息(发送人和接收人和本事件一样)</div><div class="ttdef"><b>Definition:</b> <a href="a00248_source.html#l00071">Event.cpp:71</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b0856f6b0d80ccb263b2f415c91f9e17.html">include</a></li><li class="navelem"><a class="el" href="a00176.html">utils.cpp</a></li>
-    <li class="footer">生成于 2022年 十一月 23日 星期三 10:27:50 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="navelem"><a class="el" href="dir_d28a4824dc47e487b107a5db32ef43c4.html">examples</a></li><li class="navelem"><a class="el" href="a00176.html">nextMessage.cpp</a></li>
+    <li class="footer">生成于 2023年 一月 21日 星期六 14:24:29 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
     </body>

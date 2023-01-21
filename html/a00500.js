@@ -1,9 +1,11 @@
 var a00500 =
 [
-    [ "Friend", "a00500.html#a95275c6705e24eb4a7e5060158f36167", null ],
-    [ "Friend", "a00500.html#a6a761113b704cd93a836df23ca742bd2", null ],
-    [ "Friend", "a00500.html#a9b43bb817cb19d335cfd9b6e317894a0", null ],
-    [ "deleteFriend", "a00500.html#ad21c4f5d158162f49bb008e6c37f7df9", null ],
-    [ "sendNudge", "a00500.html#a0321140e76255aadcd1a23c92b0d5031", null ],
-    [ "Contact", "a00500.html#a76d4b1c8c6040df20040808941b7e764", null ]
+    [ "MemberLeaveEvent", "a00500.html#a8f6ff9cbf45de4c407c467dbe37703e0", null ],
+    [ "MemberLeaveEvent", "a00500.html#a8f6ff9cbf45de4c407c467dbe37703e0", null ],
+    [ "get_event_type", "a00500.html#a1af0fe4ad2efd5f078d1203e37080ba8", null ],
+    [ "get_event_type", "a00500.html#a1af0fe4ad2efd5f078d1203e37080ba8", null ],
+    [ "group", "a00500.html#ab693afc3bdbfddc1ae88caf9ee052d54", null ],
+    [ "member", "a00500.html#ac9bc51af54f0412f68948c648ccea5b4", null ],
+    [ "operater", "a00500.html#af4077c7c72999eb5cf96e4f2f43aa61c", null ],
+    [ "type", "a00500.html#ad28ac4243630eab3bf7d65a737cac9ca", null ]
 ];

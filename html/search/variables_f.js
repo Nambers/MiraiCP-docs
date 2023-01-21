@@ -1,15 +1,7 @@
 var searchData=
 [
-  ['params_0',['params',['../a00525.html#a0be35844059d66dc274fcf84de90e368',1,'MiraiCP::Group::OnlineAnnouncement::params()'],['../a00529.html#ab1ff075cae77526d00c8f96b135c2873',1,'MiraiCP::Group::OfflineAnnouncement::params()']]],
-  ['path_1',['path',['../a00641.html#ad5c2c64b98d4ac3ee79f40640090b649',1,'MiraiCP::RemoteFile']]],
-  ['picurl_2',['picUrl',['../a00657.html#a0615bbf6886985e1438ab1493cdc012a',1,'MiraiCP::MusicShare']]],
-  ['pinned_3',['pinned',['../a00521.html#a1045432e9f2c822b1150bc278e99de05',1,'MiraiCP::Group::AnnouncementParams']]],
-  ['plugin_4',['plugin',['../a00313.html#a2695d2cca487ad336a8b6f96e156022b',1,'MiraiCP::CPPPlugin']]],
-  ['pluginlogger_5',['pluginLogger',['../a00313.html#ac74f70ce15a0495ac7006ad725a51279',1,'MiraiCP::CPPPlugin']]],
-  ['prefix_6',['prefix',['../a00601.html#a207f61ebfd79e0ae18833f2edf954595',1,'MiraiCP::SingleMessage']]],
-  ['prefixoption_7',['preFixOption',['../a00285.html#af40c74e212dd165a72e7b2e8769e0dcb',1,'MiraiCP::IRawCommand::Config']]],
-  ['preview_8',['preview',['../a00485.html#a7bc79f77b1ffff231a263faf4633949b',1,'MiraiCP::ForwardedMessageDisplayStrategy']]],
-  ['primaryname_9',['primaryName',['../a00285.html#a21a4c0a9fe2032ce10efbd76c5388dce',1,'MiraiCP::IRawCommand::Config']]],
-  ['processor_10',['processor',['../a00397.html#ab78af8afd9a5121e7ed0a1d7237f2b20',1,'MiraiCP::Event']]],
-  ['publicationtime_11',['publicationTime',['../a00525.html#a60b71b2b35023e7774485f696c0c84f7',1,'MiraiCP::Group::OnlineAnnouncement']]]
+  ['object_0',['object',['../a00441.html#a9d1c4b300f7c6602c21aff985e9f1757',1,'MiraiCP::BaseEventData']]],
+  ['operater_1',['operater',['../a00481.html#a3eceb70ac1c7076efca107137be9911b',1,'MiraiCP::MemberLeaveEvent::operater()'],['../a00485.html#a4502b63cdd39bb1574a3bfc3d18828d4',1,'MiraiCP::FriendRecallEvent::operater()'],['../a00489.html#a36111b48542b165bd42014c05b565e63',1,'MiraiCP::MemberRecallEvent::operater()'],['../a00513.html#aa8e91ea7bff0f0211728c25ee5402ccc',1,'MiraiCP::BotLeaveEvent::operater()']]],
+  ['outredirector_2',['outRedirector',['../a00188.html#a7424110a4e217977934256f0bb6699de',1,'redirectCout.cpp']]],
+  ['overrideorigin_3',['overrideOrigin',['../a00409.html#acb9a0a0c0b1933c9aa28bb361f284489',1,'MiraiCP::IRawCommand::Config']]]
 ];

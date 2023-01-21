@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['contacttype_0',['ContactType',['../a00218.html#a0d1866090dd6e204aff05337260f3a57',1,'MiraiCP']]]
+  ['announcementoperationcode_0',['AnnouncementOperationCode',['../a00309.html#a5f17c2867d211e285ca55f455683a273',1,'MiraiCP::KtOperation']]]
 ];

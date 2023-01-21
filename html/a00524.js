@@ -1,6 +1,7 @@
 var a00524 =
 [
-    [ "publishTo", "a00524.html#ac5e2613306079cce18866fa1f2809357", null ],
-    [ "content", "a00524.html#ad41adfb9b859845999f24978087af62b", null ],
-    [ "params", "a00524.html#ab1ff075cae77526d00c8f96b135c2873", null ]
+    [ "BotOnlineEvent", "a00524.html#af599e4d871751e367033bb1e30a62b4d", null ],
+    [ "BotOnlineEvent", "a00524.html#af599e4d871751e367033bb1e30a62b4d", null ],
+    [ "get_event_type", "a00524.html#abff84efdb87bb73184f38794f564ce85", null ],
+    [ "get_event_type", "a00524.html#abff84efdb87bb73184f38794f564ce85", null ]
 ];

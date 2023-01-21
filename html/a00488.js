@@ -1,15 +1,20 @@
 var a00488 =
 [
-    [ "BaseForwardedMessage", "a00488.html#a881301ba473c86b660950937eeae7b9b", null ],
-    [ "BaseForwardedMessage", "a00488.html#ae17c75201e5cb22c2547e45dbfbc2a33", null ],
-    [ "BaseForwardedMessage", "a00488.html#a471c465f8b615d6021fab72a2e4e6919", null ],
-    [ "~BaseForwardedMessage", "a00488.html#a9b507d9958e5f9615514c8b9a922b143", null ],
-    [ "add", "a00488.html#a66fe7c812d5c22d11d7ae4c480b3a9ae", null ],
-    [ "add", "a00488.html#af4fb03b1f9266a6691d66c0d62e33fa5", null ],
-    [ "operator+=", "a00488.html#afb8f99c42c171250abfe3387fec2c490", null ],
-    [ "operator+=", "a00488.html#a0ed99b5e15e93f4a4901107bf8188b14", null ],
-    [ "operator==", "a00488.html#a7dff007b7b60438abafa3ef089411531", null ],
-    [ "operator[]", "a00488.html#a16aa6e3ebb8de7613c8c30130e61cc2b", null ],
-    [ "operator[]", "a00488.html#a254fa8bba86f2cefb69e1c944e65793b", null ],
-    [ "nodes", "a00488.html#aff916106159979a68f107172f2376967", null ]
+    [ "GroupInviteEvent", "a00488.html#aa7c23690e2b1371cddf1a729610bfdc8", null ],
+    [ "GroupInviteEvent", "a00488.html#aa7c23690e2b1371cddf1a729610bfdc8", null ],
+    [ "accept", "a00488.html#a3847df3907111c8443c1e1b71ee35d1d", null ],
+    [ "accept", "a00488.html#a3847df3907111c8443c1e1b71ee35d1d", null ],
+    [ "get_event_type", "a00488.html#aae84c8414b3d16c0b3faf6bae4ebcf94", null ],
+    [ "get_event_type", "a00488.html#aae84c8414b3d16c0b3faf6bae4ebcf94", null ],
+    [ "operation0", "a00488.html#a542b23744671466b1b1ebc591a777caa", null ],
+    [ "operation0", "a00488.html#a3e9bddd67ecf64f9341f1d600e1ce991", null ],
+    [ "reject", "a00488.html#a749d773136fff280e951e66e21959a6c", null ],
+    [ "reject", "a00488.html#a749d773136fff280e951e66e21959a6c", null ],
+    [ "group", "a00488.html#aa206585209f1577c2986cc277d7fcce9", null ],
+    [ "groupName", "a00488.html#a578c8a027cb9f1574fba3de4b3646fc0", null ],
+    [ "inviter", "a00488.html#a808375e58728ef32e49375a1f23573f8", null ],
+    [ "inviterNick", "a00488.html#abf7cb41022c0cf81725c2925507f1d58", null ],
+    [ "requestEventId", "a00488.html#a785f78b051fc5ccfbf789d3cfab2a37c", null ],
+    [ "requestEventId", "a00488.html#a963433bdd74e8e8cea1e9aa4e786bf7d", null ],
+    [ "source", "a00488.html#affaff17057d8b347a51ba2516f529596", null ]
 ];

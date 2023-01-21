@@ -1,9 +1,22 @@
 var a00516 =
 [
-    [ "serializeToJson", "a00516.html#ac87021b1e71d8d3334c4d197813924bc", null ],
-    [ "pinned", "a00516.html#a1045432e9f2c822b1150bc278e99de05", null ],
-    [ "requireConfirm", "a00516.html#a2641ceb16f0da11938027e7bf67c5c8a", null ],
-    [ "send2new", "a00516.html#af941b1ec8148c2675bcad7a6a10a53f5", null ],
-    [ "showEditCard", "a00516.html#a92569e1952f8f1668db0df430928da8e", null ],
-    [ "showPopup", "a00516.html#ab80e896e8ac632e75f5d5e98dff79a97", null ]
+    [ "GroupTempMessageEvent", "a00516.html#abfddc2db81d57ac0cc5735da826b409d", null ],
+    [ "GroupTempMessageEvent", "a00516.html#abfddc2db81d57ac0cc5735da826b409d", null ],
+    [ "chat", "a00516.html#a55718d1fe9883ea24c47c8ebb503d807", null ],
+    [ "chat", "a00516.html#a55718d1fe9883ea24c47c8ebb503d807", null ],
+    [ "chat", "a00516.html#ac9bee0cbf3838fa62837e62110e67067", null ],
+    [ "chat", "a00516.html#ac9bee0cbf3838fa62837e62110e67067", null ],
+    [ "from", "a00516.html#a40e9c959f267452a60b2d5e6549dd5bb", null ],
+    [ "from", "a00516.html#a40e9c959f267452a60b2d5e6549dd5bb", null ],
+    [ "from", "a00516.html#adf2a7d962bf5daba13db488d48f0da5d", null ],
+    [ "from", "a00516.html#adf2a7d962bf5daba13db488d48f0da5d", null ],
+    [ "get_event_type", "a00516.html#aab7402e84e7d27152ee337a20d70233a", null ],
+    [ "get_event_type", "a00516.html#aab7402e84e7d27152ee337a20d70233a", null ],
+    [ "getMessageChain", "a00516.html#af08cf89e9ec68ea7a71f491bac7af023", null ],
+    [ "getMessageChain", "a00516.html#af08cf89e9ec68ea7a71f491bac7af023", null ],
+    [ "getMessageChain", "a00516.html#af4a3409f72b9feba0671804763390592", null ],
+    [ "getMessageChain", "a00516.html#af4a3409f72b9feba0671804763390592", null ],
+    [ "group", "a00516.html#a29c18056652c7d36248f70f359f01e74", null ],
+    [ "message", "a00516.html#a2405f8a309e3b2de0d7cba313d795cee", null ],
+    [ "sender", "a00516.html#ac0252e17c1cb9a0d4f2ebf37720951db", null ]
 ];

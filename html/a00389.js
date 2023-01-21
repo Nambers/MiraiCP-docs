@@ -1,8 +1,8 @@
 var a00389 =
 [
-    [ "MiraiCPExceptionEvent", "a00389.html#a67f475ec3ebcf1f185e5d9ef13fcd14c", null ],
-    [ "get_event_type", "a00389.html#a444bd94208f30dfc9cad36c7e4acf87e", null ],
-    [ "getEventType", "a00389.html#a3a6155162aa6de29e9761276bbae2624", null ],
-    [ "getException", "a00389.html#a1b2f3d9a99441fda4801a7e0119b7cb7", null ],
-    [ "exceptionPtr", "a00389.html#abbe1679705abc11d256a39eb12ac6837", null ]
+    [ "_resetAddrData", "a00389.html#a81c7f6972e7ed7429f2ce9ba82c9ba31", null ],
+    [ "entrance", "a00389.html#a3b5be4f8fc59ec90cd708e3ac43b869d", null ],
+    [ "eventFunc", "a00389.html#ac9d44c135831a2876f1607de5c08ad10", null ],
+    [ "exit", "a00389.html#a024639c8f518ae08921d6e26c5ff8711", null ],
+    [ "infoFunc", "a00389.html#aa5a860b7e360452285200e8a62b8acd4", null ]
 ];

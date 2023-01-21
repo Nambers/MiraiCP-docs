@@ -1,12 +1,9 @@
 var a00381 =
 [
-    [ "MemberJoinRequestEvent", "a00381.html#aa159f2c6e4aaa9ee0396485fbe1ff9f6", null ],
-    [ "accept", "a00381.html#ace031723d310c72ed25b83485f66a034", null ],
-    [ "get_event_type", "a00381.html#a91bdec8138ea1cc5416cb0eb8427b45f", null ],
-    [ "operate", "a00381.html#a734601e2d26833d8056591d8ac2457b2", null ],
-    [ "reject", "a00381.html#a855d60c9e71eda3fd438e45728a8799d", null ],
-    [ "group", "a00381.html#a10b7aaaaf0e8f31c2f9cc0ffd40232b2", null ],
-    [ "inviter", "a00381.html#a1a2aa46fd5e85786f2e3858e12ceaeea", null ],
-    [ "requesterId", "a00381.html#a7e58fe5f7635d01343da6a1ea7a725e9", null ],
-    [ "source", "a00381.html#aa1b90d95a75a1e6b79aa54a777eb8bf7", null ]
+    [ "is_loader_exited", "a00381.html#a41be9b5aab1d2394f236e1f42a0a2482", null ],
+    [ "loaderExit", "a00381.html#ae6cd717526cfbf2a3aba7bd361ebbf4c", null ],
+    [ "loaderMain", "a00381.html#a79cbc18aabed7afe2c7ea30f989ffc8c", null ],
+    [ "mainloop", "a00381.html#a0fbfe44fb362bf323c41e3ae73717edd", null ],
+    [ "shutdownLoader", "a00381.html#a6d477440277d3907b96261db3a222d96", null ],
+    [ "loader_exit", "a00381.html#a348439e27d1a976dd143da7a8b8b0de9", null ]
 ];
