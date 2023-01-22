@@ -1,8 +1,9 @@
 var a00744 =
 [
-    [ "brief", "a00744.html#a922825f2fe708a70c66ff6585d688bb6", null ],
-    [ "cover", "a00744.html#a38c4579d9ccb887f3cab0573a39b96fa", null ],
-    [ "summary", "a00744.html#a5927b32bbb8fc21efe5d183fb12ddd1a", null ],
-    [ "title", "a00744.html#a929d703d700b67f4a1c1d17111271922", null ],
-    [ "url", "a00744.html#aba141291ce2939583450057c338b1fc5", null ]
+    [ "LightApp", "a00744.html#a7cfcefeb788e3046fb321fab0a7b813a", null ],
+    [ "LightApp", "a00744.html#a1803b5deeb42af5f4770751aa4160a25", null ],
+    [ "operator==", "a00744.html#ae69ac9a6359eb6848ce09f7671395969", null ],
+    [ "toJson", "a00744.html#a95599fbda45f4240f9241f6dfa6fe05d", null ],
+    [ "toMiraiCode", "a00744.html#ad1637240306cd3dd587044054381d991", null ],
+    [ "type", "a00744.html#abba0c279393369d31f7ebc88ee6756fd", null ]
 ];

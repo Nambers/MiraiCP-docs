@@ -112,12 +112,12 @@ $(document).ready(function(){initNavTree('a00218_source.html',''); initResizable
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">// along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</span></div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">//</span></div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &quot;<a class="code" href="a00011.html">MiraiCPMacros.h</a>&quot;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &quot;<a class="code" href="a00047.html">MiraiCPMacros.h</a>&quot;</span></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">// -----------------------</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &quot;<a class="code" href="a00032.html">JNIEnvs.h</a>&quot;</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &quot;<a class="code" href="a00044.html">LoaderLogger.h</a>&quot;</span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &quot;<a class="code" href="a00002.html">commonTools.h</a>&quot;</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &quot;<a class="code" href="a00056.html">loaderTools.h</a>&quot;</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &quot;<a class="code" href="a00068.html">JNIEnvs.h</a>&quot;</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &quot;<a class="code" href="a00080.html">LoaderLogger.h</a>&quot;</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &quot;<a class="code" href="a00038.html">commonTools.h</a>&quot;</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &quot;<a class="code" href="a00092.html">loaderTools.h</a>&quot;</span></div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &quot;utf8.h&quot;</span></div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#include &lt;iomanip&gt;</span> <span class="comment">// for std::setw</span></div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#include &lt;sstream&gt;</span> <span class="comment">// for ostringstream</span></div>
@@ -164,7 +164,7 @@ $(document).ready(function(){initNavTree('a00218_source.html',''); initResizable
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        }</div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        <span class="keyword">const</span> jchar *jCharPointer = <a class="code hl_function" href="a00305.html#a076c5f4ff8083c7cfc6523498d0ba30f">JNIEnvs::getEnv</a>()-&gt;GetStringChars(jStr, <span class="keyword">nullptr</span>);</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        <a class="code hl_define" href="a00011.html#aa05206ce52ebadc805b64d69749a63d3">MIRAICP_DEFER</a>(<a class="code hl_function" href="a00305.html#a076c5f4ff8083c7cfc6523498d0ba30f">JNIEnvs::getEnv</a>()-&gt;ReleaseStringChars(jStr, jCharPointer););</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        <a class="code hl_define" href="a00047.html#aa05206ce52ebadc805b64d69749a63d3">MIRAICP_DEFER</a>(<a class="code hl_function" href="a00305.html#a076c5f4ff8083c7cfc6523498d0ba30f">JNIEnvs::getEnv</a>()-&gt;ReleaseStringChars(jStr, jCharPointer););</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        std::u16string s = <span class="keyword">reinterpret_cast&lt;</span><span class="keyword">const </span>char16_t *<span class="keyword">&gt;</span>(jCharPointer);</div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        <span class="keywordflow">if</span> (s.length() == 0) {</div>
@@ -191,18 +191,18 @@ $(document).ready(function(){initNavTree('a00218_source.html',''); initResizable
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    }</div>
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>} <span class="comment">// namespace LibLoader</span></div>
-<div class="ttc" id="aa00002_html"><div class="ttname"><a href="a00002.html">commonTools.h</a></div></div>
-<div class="ttc" id="aa00011_html"><div class="ttname"><a href="a00011.html">MiraiCPMacros.h</a></div></div>
-<div class="ttc" id="aa00011_html_aa05206ce52ebadc805b64d69749a63d3"><div class="ttname"><a href="a00011.html#aa05206ce52ebadc805b64d69749a63d3">MIRAICP_DEFER</a></div><div class="ttdeci">#define MIRAICP_DEFER(code)</div><div class="ttdef"><b>Definition:</b> <a href="a00011_source.html#l00146">MiraiCPMacros.h:146</a></div></div>
-<div class="ttc" id="aa00032_html"><div class="ttname"><a href="a00032.html">JNIEnvs.h</a></div></div>
-<div class="ttc" id="aa00044_html"><div class="ttname"><a href="a00044.html">LoaderLogger.h</a></div></div>
-<div class="ttc" id="aa00056_html"><div class="ttname"><a href="a00056.html">loaderTools.h</a></div></div>
+<div class="ttc" id="aa00038_html"><div class="ttname"><a href="a00038.html">commonTools.h</a></div></div>
+<div class="ttc" id="aa00047_html"><div class="ttname"><a href="a00047.html">MiraiCPMacros.h</a></div></div>
+<div class="ttc" id="aa00047_html_aa05206ce52ebadc805b64d69749a63d3"><div class="ttname"><a href="a00047.html#aa05206ce52ebadc805b64d69749a63d3">MIRAICP_DEFER</a></div><div class="ttdeci">#define MIRAICP_DEFER(code)</div><div class="ttdef"><b>Definition:</b> <a href="a00047_source.html#l00146">MiraiCPMacros.h:146</a></div></div>
+<div class="ttc" id="aa00068_html"><div class="ttname"><a href="a00068.html">JNIEnvs.h</a></div></div>
+<div class="ttc" id="aa00080_html"><div class="ttname"><a href="a00080.html">LoaderLogger.h</a></div></div>
+<div class="ttc" id="aa00092_html"><div class="ttname"><a href="a00092.html">loaderTools.h</a></div></div>
 <div class="ttc" id="aa00296_html_ab701e3ac61a85b337ec5c1abaad6742d"><div class="ttname"><a href="a00296.html#ab701e3ac61a85b337ec5c1abaad6742d">json</a></div><div class="ttdeci">nlohmann::json json</div><div class="ttdef"><b>Definition:</b> <a href="a00296_source.html#l00031">utils.cpp:31</a></div></div>
-<div class="ttc" id="aa00301_html"><div class="ttname"><a href="a00301.html">LibLoader</a></div><div class="ttdef"><b>Definition:</b> <a href="a00005_source.html#l00028">commonTypes.h:28</a></div></div>
+<div class="ttc" id="aa00301_html"><div class="ttname"><a href="a00301.html">LibLoader</a></div><div class="ttdef"><b>Definition:</b> <a href="a00041_source.html#l00028">commonTypes.h:28</a></div></div>
 <div class="ttc" id="aa00301_html_a0e16fc1159d498289bcda90fcd7a734c"><div class="ttname"><a href="a00301.html#a0e16fc1159d498289bcda90fcd7a734c">LibLoader::logger</a></div><div class="ttdeci">MIRAICP_EXPORT LoaderLogger logger</div><div class="ttdef"><b>Definition:</b> <a href="a00212_source.html#l00035">LoaderLogger.cpp:35</a></div></div>
-<div class="ttc" id="aa00301_html_a25dcf37316806dd07a4e960c5eb537a4"><div class="ttname"><a href="a00301.html#a25dcf37316806dd07a4e960c5eb537a4">LibLoader::PluginAuthority</a></div><div class="ttdeci">PluginAuthority</div><div class="ttdef"><b>Definition:</b> <a href="a00062_source.html#l00026">PluginData.h:26</a></div></div>
-<div class="ttc" id="aa00301_html_a25dcf37316806dd07a4e960c5eb537a4a37a69db536daf1ceabf89dc14346092d"><div class="ttname"><a href="a00301.html#a25dcf37316806dd07a4e960c5eb537a4a37a69db536daf1ceabf89dc14346092d">LibLoader::PLUGIN_AUTHORITY_NORMAL</a></div><div class="ttdeci">@ PLUGIN_AUTHORITY_NORMAL</div><div class="ttdef"><b>Definition:</b> <a href="a00062_source.html#l00027">PluginData.h:27</a></div></div>
-<div class="ttc" id="aa00301_html_a25dcf37316806dd07a4e960c5eb537a4a94365761d42a1db02c02bce01be06220"><div class="ttname"><a href="a00301.html#a25dcf37316806dd07a4e960c5eb537a4a94365761d42a1db02c02bce01be06220">LibLoader::PLUGIN_AUTHORITY_ADMIN</a></div><div class="ttdeci">@ PLUGIN_AUTHORITY_ADMIN</div><div class="ttdef"><b>Definition:</b> <a href="a00062_source.html#l00028">PluginData.h:28</a></div></div>
+<div class="ttc" id="aa00301_html_a25dcf37316806dd07a4e960c5eb537a4"><div class="ttname"><a href="a00301.html#a25dcf37316806dd07a4e960c5eb537a4">LibLoader::PluginAuthority</a></div><div class="ttdeci">PluginAuthority</div><div class="ttdef"><b>Definition:</b> <a href="a00098_source.html#l00026">PluginData.h:26</a></div></div>
+<div class="ttc" id="aa00301_html_a25dcf37316806dd07a4e960c5eb537a4a37a69db536daf1ceabf89dc14346092d"><div class="ttname"><a href="a00301.html#a25dcf37316806dd07a4e960c5eb537a4a37a69db536daf1ceabf89dc14346092d">LibLoader::PLUGIN_AUTHORITY_NORMAL</a></div><div class="ttdeci">@ PLUGIN_AUTHORITY_NORMAL</div><div class="ttdef"><b>Definition:</b> <a href="a00098_source.html#l00027">PluginData.h:27</a></div></div>
+<div class="ttc" id="aa00301_html_a25dcf37316806dd07a4e960c5eb537a4a94365761d42a1db02c02bce01be06220"><div class="ttname"><a href="a00301.html#a25dcf37316806dd07a4e960c5eb537a4a94365761d42a1db02c02bce01be06220">LibLoader::PLUGIN_AUTHORITY_ADMIN</a></div><div class="ttdeci">@ PLUGIN_AUTHORITY_ADMIN</div><div class="ttdef"><b>Definition:</b> <a href="a00098_source.html#l00028">PluginData.h:28</a></div></div>
 <div class="ttc" id="aa00301_html_a6a6fcd695791253a9b3a053d313b2b93"><div class="ttname"><a href="a00301.html#a6a6fcd695791253a9b3a053d313b2b93">LibLoader::str2jstring</a></div><div class="ttdeci">jstring str2jstring(const char *cstr)</div><div class="ttdef"><b>Definition:</b> <a href="a00218_source.html#l00080">loaderTools.cpp:80</a></div></div>
 <div class="ttc" id="aa00301_html_aa5f8d0ecd9dd392b491070aace643ae3"><div class="ttname"><a href="a00301.html#aa5f8d0ecd9dd392b491070aace643ae3">LibLoader::jstring2str</a></div><div class="ttdeci">std::string jstring2str(jstring jStr)</div><div class="ttdef"><b>Definition:</b> <a href="a00218_source.html#l00063">loaderTools.cpp:63</a></div></div>
 <div class="ttc" id="aa00301_html_ac2437e37ffa99895ce42d4dd19efbbcd"><div class="ttname"><a href="a00301.html#ac2437e37ffa99895ce42d4dd19efbbcd">LibLoader::collect_plugins</a></div><div class="ttdeci">std::pair&lt; std::vector&lt; std::string &gt;, std::vector&lt; PluginAuthority &gt; &gt; collect_plugins(const std::string &amp;cfgPath, nlohmann::json j)</div><div class="ttdef"><b>Definition:</b> <a href="a00218_source.html#l00029">loaderTools.cpp:29</a></div></div>
@@ -216,7 +216,7 @@ $(document).ready(function(){initNavTree('a00218_source.html',''); initResizable
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_23c80554d3059e776f1fa3b42eea10c0.html">libloader</a></li><li class="navelem"><a class="el" href="a00218.html">loaderTools.cpp</a></li>
-    <li class="footer">生成于 2023年 一月 21日 星期六 14:32:48 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="footer">生成于 2023年 一月 22日 星期日 13:18:23 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
     </body>

@@ -1,12 +1,11 @@
 var a00568 =
 [
-    [ "Super", "a00568.html#a7be466c4505304684ad67562567f6b1e", null ],
-    [ "Message", "a00568.html#abed4cbf67da5c252166320e22d8c7d3b", null ],
-    [ "Message", "a00568.html#aabf838c7912d08e71a9a4f25d777cc4b", null ],
-    [ "Message", "a00568.html#a5b980cebbc168b4fc96e96996bd06c8c", null ],
-    [ "getVal", "a00568.html#aa26b32f1ea57c32a071cc7bd052ca565", null ],
-    [ "operator!=", "a00568.html#a7bf0df1c342858b560bd037b575d6d58", null ],
-    [ "operator==", "a00568.html#ac09fb6e7ab5e00c405e7bd969ffd39c4", null ],
-    [ "toMiraiCode", "a00568.html#a0cef774c0356349acaca5f78271f3849", null ],
-    [ "type", "a00568.html#ac130224ec94852a7b12d1e65df7988a1", null ]
+    [ "MemberExceptionType", "a00568.html#a5d79da819adcd25a5b51a498762067a2", [
+      [ "OtherType", "a00568.html#a5d79da819adcd25a5b51a498762067a2a10d7175ae7e717fa50187eff06445f9b", null ],
+      [ "NoSuchGroup", "a00568.html#a5d79da819adcd25a5b51a498762067a2af45ac2de0a67bb83ddabbe90de94b759", null ],
+      [ "NoSuchMember", "a00568.html#a5d79da819adcd25a5b51a498762067a2aec2ea117521b98eb6ceed80c5b155716", null ]
+    ] ],
+    [ "MemberException", "a00568.html#a5a77bb2dee827ef89cb7fab2e62b160c", null ],
+    [ "exceptionType", "a00568.html#a7d8014930572cc2e598c2709e240d429", null ],
+    [ "type", "a00568.html#aeedca55477d89e61d8449fd22aeeff04", null ]
 ];

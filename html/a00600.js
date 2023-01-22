@@ -1,7 +1,5 @@
 var a00600 =
 [
-    [ "FriendException", "a00600.html#a73e9dd98256665fe2230a68df2cf2110", null ],
-    [ "FriendException", "a00600.html#a73e9dd98256665fe2230a68df2cf2110", null ],
-    [ "exceptionType", "a00600.html#aa08c204826f37f656ed48413f331fe06", null ],
-    [ "exceptionType", "a00600.html#aa08c204826f37f656ed48413f331fe06", null ]
+    [ "PluginNotAuthorizedException", "a00600.html#ac88316ddaf010113ecf97f605faf3d6d", null ],
+    [ "exceptionType", "a00600.html#a457d9e14fc294fd058e09e1a1d022144", null ]
 ];

@@ -105,13 +105,14 @@ $(document).ready(function(){initNavTree('a00653.html',''); initResizable(); });
 <p>在线群公告  
  <a href="a00653.html#details">更多...</a></p>
 
-<p><code>#include &lt;<a class="el" href="a00095_source.html">Group.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="a00131_source.html">Group.h</a>&gt;</code></p>
 <div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> MiraiCP::Group::OnlineAnnouncement 的协作图:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="a00651.svg" width="646" height="530"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00651.svg" width="646" height="530"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
@@ -158,7 +159,7 @@ Public 属性</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><p >在线群公告 </p>
 
-<p class="definition">在文件 <a class="el" href="a00095_source.html">Group.h</a> 第 <a class="el" href="a00095_source.html#l00088">88</a> 行定义.</p>
+<p class="definition">在文件 <a class="el" href="a00131_source.html">Group.h</a> 第 <a class="el" href="a00131_source.html#l00088">88</a> 行定义.</p>
 </div><h2 class="groupheader">成员函数说明</h2>
 <a id="a04aaabd735ed542b313a8df2a3fd9ecb" name="a04aaabd735ed542b313a8df2a3fd9ecb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a04aaabd735ed542b313a8df2a3fd9ecb">&#9670;&nbsp;</a></span>deleteThis()</h2>
@@ -181,7 +182,7 @@ Public 属性</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">在文件 <a class="el" href="a01244_source.html">src/sdk/group.cpp</a> 第 <a class="el" href="a01244_source.html#l00084">84</a> 行定义.</p>
+<p class="definition">在文件 <a class="el" href="a01250_source.html">src/sdk/Group.cpp</a> 第 <a class="el" href="a01250_source.html#l00084">84</a> 行定义.</p>
 <div class="fragment"><div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>                                             {</div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        <a class="code hl_typedef" href="a00296.html#ab701e3ac61a85b337ec5c1abaad6742d">json</a> j{{<span class="stringliteral">&quot;botId&quot;</span>,   <a class="code hl_variable" href="a00653.html#aed972cb699c7efe6533ef81fcf8e7ad7">botId</a>},</div>
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>               {<span class="stringliteral">&quot;groupId&quot;</span>, <a class="code hl_variable" href="a00653.html#aec97399fd5c720f3591588a71bc05fd3">groupId</a>},</div>
@@ -189,18 +190,18 @@ Public 属性</h2></td></tr>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>               {<span class="stringliteral">&quot;type&quot;</span>,    <a class="code hl_enumvalue" href="a00309.html#a5f17c2867d211e285ca55f455683a273afeea9acbfbf6232304ac87d60e5c5ba8">KtOperation::AnnouncementOperationCode::Delete</a>}};</div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        std::string re = <a class="code hl_function" href="a00309.html#a309e8d7f316e8b5e947ea3bcddeb84a8">KtOperation::ktOperation</a>(<a class="code hl_enumvalue" href="a00309.html#a80a8ec1c1ed6fd9db32d9a878405d412a635cbeb51b20c7eb46c01fb98503a2cf">KtOperation::Announcement</a>, j);</div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        <span class="keywordflow">if</span> (re == <span class="stringliteral">&quot;E1&quot;</span>)</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>            <span class="keywordflow">throw</span> IllegalArgumentException(<span class="stringliteral">&quot;无法根据fid找到群公告(群公告不存在)&quot;</span>, <a class="code hl_define" href="a00011.html#a64a15c1bd1292eb8eb8b5874281372c6">MIRAICP_EXCEPTION_WHERE</a>);</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>            <span class="keywordflow">throw</span> IllegalArgumentException(<span class="stringliteral">&quot;无法根据fid找到群公告(群公告不存在)&quot;</span>, <a class="code hl_define" href="a00047.html#a64a15c1bd1292eb8eb8b5874281372c6">MIRAICP_EXCEPTION_WHERE</a>);</div>
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        <span class="keywordflow">if</span> (re == <span class="stringliteral">&quot;E3&quot;</span>)</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>            <span class="keywordflow">throw</span> IllegalStateException(<span class="stringliteral">&quot;群公告状态异常&quot;</span>, <a class="code hl_define" href="a00011.html#a64a15c1bd1292eb8eb8b5874281372c6">MIRAICP_EXCEPTION_WHERE</a>);</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>            <span class="keywordflow">throw</span> IllegalStateException(<span class="stringliteral">&quot;群公告状态异常&quot;</span>, <a class="code hl_define" href="a00047.html#a64a15c1bd1292eb8eb8b5874281372c6">MIRAICP_EXCEPTION_WHERE</a>);</div>
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    }</div>
-<div class="ttc" id="aa00011_html_a64a15c1bd1292eb8eb8b5874281372c6"><div class="ttname"><a href="a00011.html#a64a15c1bd1292eb8eb8b5874281372c6">MIRAICP_EXCEPTION_WHERE</a></div><div class="ttdeci">#define MIRAICP_EXCEPTION_WHERE</div><div class="ttdef"><b>Definition:</b> <a href="a00011_source.html#l00120">MiraiCPMacros.h:120</a></div></div>
+<div class="ttc" id="aa00047_html_a64a15c1bd1292eb8eb8b5874281372c6"><div class="ttname"><a href="a00047.html#a64a15c1bd1292eb8eb8b5874281372c6">MIRAICP_EXCEPTION_WHERE</a></div><div class="ttdeci">#define MIRAICP_EXCEPTION_WHERE</div><div class="ttdef"><b>Definition:</b> <a href="a00047_source.html#l00120">MiraiCPMacros.h:120</a></div></div>
 <div class="ttc" id="aa00296_html_ab701e3ac61a85b337ec5c1abaad6742d"><div class="ttname"><a href="a00296.html#ab701e3ac61a85b337ec5c1abaad6742d">json</a></div><div class="ttdeci">nlohmann::json json</div><div class="ttdef"><b>Definition:</b> <a href="a00296_source.html#l00031">utils.cpp:31</a></div></div>
 <div class="ttc" id="aa00309_html_a309e8d7f316e8b5e947ea3bcddeb84a8"><div class="ttname"><a href="a00309.html#a309e8d7f316e8b5e947ea3bcddeb84a8">MiraiCP::KtOperation::ktOperation</a></div><div class="ttdeci">std::string ktOperation(operation_set type, const nlohmann::json &amp;data, bool catchErr=true, const std::string &amp;errorInfo=&quot;&quot;)</div><div class="ttdoc">调用 Mirai 操作</div><div class="ttdef"><b>Definition:</b> <a href="a00263_source.html#l00025">KtOperation.cpp:25</a></div></div>
-<div class="ttc" id="aa00309_html_a5f17c2867d211e285ca55f455683a273afeea9acbfbf6232304ac87d60e5c5ba8"><div class="ttname"><a href="a00309.html#a5f17c2867d211e285ca55f455683a273afeea9acbfbf6232304ac87d60e5c5ba8">MiraiCP::KtOperation::Delete</a></div><div class="ttdeci">@ Delete</div><div class="ttdoc">发布公告</div><div class="ttdef"><b>Definition:</b> <a href="a00101_source.html#l00092">KtOperation.h:92</a></div></div>
-<div class="ttc" id="aa00309_html_a80a8ec1c1ed6fd9db32d9a878405d412a635cbeb51b20c7eb46c01fb98503a2cf"><div class="ttname"><a href="a00309.html#a80a8ec1c1ed6fd9db32d9a878405d412a635cbeb51b20c7eb46c01fb98503a2cf">MiraiCP::KtOperation::Announcement</a></div><div class="ttdeci">@ Announcement</div><div class="ttdoc">群公告操作</div><div class="ttdef"><b>Definition:</b> <a href="a00101_source.html#l00066">KtOperation.h:66</a></div></div>
-<div class="ttc" id="aa00653_html_a24d4711f1da5a6f5e952b77e198b0f3f"><div class="ttname"><a href="a00653.html#a24d4711f1da5a6f5e952b77e198b0f3f">MiraiCP::Group::OnlineAnnouncement::fid</a></div><div class="ttdeci">std::string fid</div><div class="ttdoc">唯一识别属性</div><div class="ttdef"><b>Definition:</b> <a href="a00095_source.html#l00100">Group.h:100</a></div></div>
-<div class="ttc" id="aa00653_html_aec97399fd5c720f3591588a71bc05fd3"><div class="ttname"><a href="a00653.html#aec97399fd5c720f3591588a71bc05fd3">MiraiCP::Group::OnlineAnnouncement::groupId</a></div><div class="ttdeci">QQID groupId</div><div class="ttdoc">所在群id</div><div class="ttdef"><b>Definition:</b> <a href="a00095_source.html#l00094">Group.h:94</a></div></div>
-<div class="ttc" id="aa00653_html_aed972cb699c7efe6533ef81fcf8e7ad7"><div class="ttname"><a href="a00653.html#aed972cb699c7efe6533ef81fcf8e7ad7">MiraiCP::Group::OnlineAnnouncement::botId</a></div><div class="ttdeci">QQID botId</div><div class="ttdoc">所属bot</div><div class="ttdef"><b>Definition:</b> <a href="a00095_source.html#l00092">Group.h:92</a></div></div>
+<div class="ttc" id="aa00309_html_a5f17c2867d211e285ca55f455683a273afeea9acbfbf6232304ac87d60e5c5ba8"><div class="ttname"><a href="a00309.html#a5f17c2867d211e285ca55f455683a273afeea9acbfbf6232304ac87d60e5c5ba8">MiraiCP::KtOperation::Delete</a></div><div class="ttdeci">@ Delete</div><div class="ttdoc">发布公告</div><div class="ttdef"><b>Definition:</b> <a href="a00137_source.html#l00092">KtOperation.h:92</a></div></div>
+<div class="ttc" id="aa00309_html_a80a8ec1c1ed6fd9db32d9a878405d412a635cbeb51b20c7eb46c01fb98503a2cf"><div class="ttname"><a href="a00309.html#a80a8ec1c1ed6fd9db32d9a878405d412a635cbeb51b20c7eb46c01fb98503a2cf">MiraiCP::KtOperation::Announcement</a></div><div class="ttdeci">@ Announcement</div><div class="ttdoc">群公告操作</div><div class="ttdef"><b>Definition:</b> <a href="a00137_source.html#l00066">KtOperation.h:66</a></div></div>
+<div class="ttc" id="aa00653_html_a24d4711f1da5a6f5e952b77e198b0f3f"><div class="ttname"><a href="a00653.html#a24d4711f1da5a6f5e952b77e198b0f3f">MiraiCP::Group::OnlineAnnouncement::fid</a></div><div class="ttdeci">std::string fid</div><div class="ttdoc">唯一识别属性</div><div class="ttdef"><b>Definition:</b> <a href="a00131_source.html#l00100">Group.h:100</a></div></div>
+<div class="ttc" id="aa00653_html_aec97399fd5c720f3591588a71bc05fd3"><div class="ttname"><a href="a00653.html#aec97399fd5c720f3591588a71bc05fd3">MiraiCP::Group::OnlineAnnouncement::groupId</a></div><div class="ttdeci">QQID groupId</div><div class="ttdoc">所在群id</div><div class="ttdef"><b>Definition:</b> <a href="a00131_source.html#l00094">Group.h:94</a></div></div>
+<div class="ttc" id="aa00653_html_aed972cb699c7efe6533ef81fcf8e7ad7"><div class="ttname"><a href="a00653.html#aed972cb699c7efe6533ef81fcf8e7ad7">MiraiCP::Group::OnlineAnnouncement::botId</a></div><div class="ttdeci">QQID botId</div><div class="ttdoc">所属bot</div><div class="ttdef"><b>Definition:</b> <a href="a00131_source.html#l00092">Group.h:92</a></div></div>
 </div><!-- fragment --><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-1-trigger" src="closed.png" alt="+"/> 函数调用图:</div>
 <div id="dynsection-1-summary" class="dynsummary" style="display:block;">
@@ -237,7 +238,7 @@ Public 属性</h2></td></tr>
 
 <p>反序列化 </p>
 
-<p class="definition">在文件 <a class="el" href="a01244_source.html">src/sdk/group.cpp</a> 第 <a class="el" href="a01244_source.html#l00116">116</a> 行定义.</p>
+<p class="definition">在文件 <a class="el" href="a01250_source.html">src/sdk/Group.cpp</a> 第 <a class="el" href="a01250_source.html#l00116">116</a> 行定义.</p>
 <div class="fragment"><div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>                                                                                      {</div>
 <div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>        <span class="keywordflow">return</span> Group::OnlineAnnouncement{</div>
 <div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>                j[<span class="stringliteral">&quot;content&quot;</span>],</div>
@@ -279,7 +280,7 @@ Public 属性</h2></td></tr>
 
 <p>所属bot </p>
 
-<p class="definition">在文件 <a class="el" href="a00095_source.html">Group.h</a> 第 <a class="el" href="a00095_source.html#l00092">92</a> 行定义.</p>
+<p class="definition">在文件 <a class="el" href="a00131_source.html">Group.h</a> 第 <a class="el" href="a00131_source.html#l00092">92</a> 行定义.</p>
 
 </div>
 </div>
@@ -297,7 +298,7 @@ Public 属性</h2></td></tr>
 
 <p>如果需要确认，即为确认的人数 </p>
 
-<p class="definition">在文件 <a class="el" href="a00095_source.html">Group.h</a> 第 <a class="el" href="a00095_source.html#l00104">104</a> 行定义.</p>
+<p class="definition">在文件 <a class="el" href="a00131_source.html">Group.h</a> 第 <a class="el" href="a00131_source.html#l00104">104</a> 行定义.</p>
 
 </div>
 </div>
@@ -315,7 +316,7 @@ Public 属性</h2></td></tr>
 
 <p>内容 </p>
 
-<p class="definition">在文件 <a class="el" href="a00095_source.html">Group.h</a> 第 <a class="el" href="a00095_source.html#l00090">90</a> 行定义.</p>
+<p class="definition">在文件 <a class="el" href="a00131_source.html">Group.h</a> 第 <a class="el" href="a00131_source.html#l00090">90</a> 行定义.</p>
 
 </div>
 </div>
@@ -333,7 +334,7 @@ Public 属性</h2></td></tr>
 
 <p>唯一识别属性 </p>
 
-<p class="definition">在文件 <a class="el" href="a00095_source.html">Group.h</a> 第 <a class="el" href="a00095_source.html#l00100">100</a> 行定义.</p>
+<p class="definition">在文件 <a class="el" href="a00131_source.html">Group.h</a> 第 <a class="el" href="a00131_source.html#l00100">100</a> 行定义.</p>
 
 </div>
 </div>
@@ -351,7 +352,7 @@ Public 属性</h2></td></tr>
 
 <p>所在群id </p>
 
-<p class="definition">在文件 <a class="el" href="a00095_source.html">Group.h</a> 第 <a class="el" href="a00095_source.html#l00094">94</a> 行定义.</p>
+<p class="definition">在文件 <a class="el" href="a00131_source.html">Group.h</a> 第 <a class="el" href="a00131_source.html#l00094">94</a> 行定义.</p>
 
 </div>
 </div>
@@ -369,7 +370,7 @@ Public 属性</h2></td></tr>
 
 <p>图片id, 如果不存在即为空 </p>
 
-<p class="definition">在文件 <a class="el" href="a00095_source.html">Group.h</a> 第 <a class="el" href="a00095_source.html#l00102">102</a> 行定义.</p>
+<p class="definition">在文件 <a class="el" href="a00131_source.html">Group.h</a> 第 <a class="el" href="a00131_source.html#l00102">102</a> 行定义.</p>
 
 </div>
 </div>
@@ -387,7 +388,7 @@ Public 属性</h2></td></tr>
 
 <p>公告属性 </p>
 
-<p class="definition">在文件 <a class="el" href="a00095_source.html">Group.h</a> 第 <a class="el" href="a00095_source.html#l00106">106</a> 行定义.</p>
+<p class="definition">在文件 <a class="el" href="a00131_source.html">Group.h</a> 第 <a class="el" href="a00131_source.html#l00106">106</a> 行定义.</p>
 
 </div>
 </div>
@@ -405,7 +406,7 @@ Public 属性</h2></td></tr>
 
 <p>发送时间戳 </p>
 
-<p class="definition">在文件 <a class="el" href="a00095_source.html">Group.h</a> 第 <a class="el" href="a00095_source.html#l00098">98</a> 行定义.</p>
+<p class="definition">在文件 <a class="el" href="a00131_source.html">Group.h</a> 第 <a class="el" href="a00131_source.html#l00098">98</a> 行定义.</p>
 
 </div>
 </div>
@@ -423,13 +424,13 @@ Public 属性</h2></td></tr>
 
 <p>发送者id </p>
 
-<p class="definition">在文件 <a class="el" href="a00095_source.html">Group.h</a> 第 <a class="el" href="a00095_source.html#l00096">96</a> 行定义.</p>
+<p class="definition">在文件 <a class="el" href="a00131_source.html">Group.h</a> 第 <a class="el" href="a00131_source.html#l00096">96</a> 行定义.</p>
 
 </div>
 </div>
 <hr/>该结构体的文档由以下文件生成:<ul>
-<li><a class="el" href="a00095_source.html">Group.h</a></li>
-<li><a class="el" href="a01244_source.html">src/sdk/group.cpp</a></li>
+<li><a class="el" href="a00131_source.html">Group.h</a></li>
+<li><a class="el" href="a01250_source.html">src/sdk/Group.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -438,7 +439,7 @@ Public 属性</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="a00302.html">MiraiCP</a></li><li class="navelem"><a class="el" href="a00645.html">Group</a></li><li class="navelem"><a class="el" href="a00653.html">OnlineAnnouncement</a></li>
-    <li class="footer">生成于 2023年 一月 21日 星期六 14:32:49 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="footer">生成于 2023年 一月 22日 星期日 13:18:25 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
     </body>

@@ -1,13 +1,6 @@
 var a00780 =
 [
-    [ "QuoteReply", "a00780.html#a48b93dbd55eb6dabeb0ae0d8d3191dfb", null ],
-    [ "QuoteReply", "a00780.html#a92e6c154936b9341964f10830844348e", null ],
-    [ "QuoteReply", "a00780.html#a31f70f2b88254fa241ee58c8e335a0a8", null ],
-    [ "QuoteReply", "a00780.html#a92e6c154936b9341964f10830844348e", null ],
-    [ "operator==", "a00780.html#ad505141e383ead14add0a18f63d27283", null ],
-    [ "operator==", "a00780.html#ad505141e383ead14add0a18f63d27283", null ],
-    [ "toJson", "a00780.html#a145d6719140d4d5f36253ae637522c3d", null ],
-    [ "toJson", "a00780.html#a145d6719140d4d5f36253ae637522c3d", null ],
-    [ "type", "a00780.html#a5c3073e9d8f5b2ce5f7f6d2980313855", null ],
-    [ "type", "a00780.html#a5c3073e9d8f5b2ce5f7f6d2980313855", null ]
+    [ "MarketFace", "a00780.html#a4caebb2c1479ca9039f6102f25e5547f", null ],
+    [ "operator==", "a00780.html#a06db9ba5cb8e759845fc44cabf5c4a8e", null ],
+    [ "type", "a00780.html#a4b1a9e71197d9810f31b09b6e5ee5b0a", null ]
 ];

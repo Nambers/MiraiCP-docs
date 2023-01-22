@@ -1,11 +1,8 @@
 var a00500 =
 [
-    [ "MemberLeaveEvent", "a00500.html#a8f6ff9cbf45de4c407c467dbe37703e0", null ],
-    [ "MemberLeaveEvent", "a00500.html#a8f6ff9cbf45de4c407c467dbe37703e0", null ],
-    [ "get_event_type", "a00500.html#a1af0fe4ad2efd5f078d1203e37080ba8", null ],
-    [ "get_event_type", "a00500.html#a1af0fe4ad2efd5f078d1203e37080ba8", null ],
-    [ "group", "a00500.html#ab693afc3bdbfddc1ae88caf9ee052d54", null ],
-    [ "member", "a00500.html#ac9bc51af54f0412f68948c648ccea5b4", null ],
-    [ "operater", "a00500.html#af4077c7c72999eb5cf96e4f2f43aa61c", null ],
-    [ "type", "a00500.html#ad28ac4243630eab3bf7d65a737cac9ca", null ]
+    [ "NudgeEvent", "a00500.html#abac2712b508c1d09155fb8112abc7a15", null ],
+    [ "get_event_type", "a00500.html#a74e2d3893cc0879c00c226fe03283b81", null ],
+    [ "from", "a00500.html#a25165f804cb60432ca3c556d46700278", null ],
+    [ "subject", "a00500.html#ab0297663148696544a00e4f9efed6dab", null ],
+    [ "target", "a00500.html#afcb1a236f88bb0dcb30b3131c0e11ee8", null ]
 ];

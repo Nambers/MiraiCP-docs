@@ -1,10 +1,7 @@
 var a00512 =
 [
-    [ "BotJoinGroupEvent", "a00512.html#a8f7dc98e36bb978d811374c320a477d3", null ],
-    [ "BotJoinGroupEvent", "a00512.html#a8f7dc98e36bb978d811374c320a477d3", null ],
-    [ "get_event_type", "a00512.html#a878210850980c87c542d850fe2f17521", null ],
-    [ "get_event_type", "a00512.html#a878210850980c87c542d850fe2f17521", null ],
-    [ "group", "a00512.html#ad3643d9978133be026420f1d71594ec7", null ],
-    [ "inviter", "a00512.html#a23678fc7ad0df051549f0abc8933b1ee", null ],
-    [ "type", "a00512.html#afecd637a84090e12fa5721074711c05d", null ]
+    [ "MessagePreSendEvent", "a00512.html#af813b6325a6fa97c0f4b3a4e99d222ff", null ],
+    [ "get_event_type", "a00512.html#a3db8d323a115f3b68b06da7dc1733293", null ],
+    [ "message", "a00512.html#a2fe0731f2ede62683919e2af5deecb2c", null ],
+    [ "target", "a00512.html#aa15c8687b9e358b91851d3228c0a4d70", null ]
 ];

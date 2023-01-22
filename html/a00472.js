@@ -1,11 +1,9 @@
 var a00472 =
 [
-    [ "BotEvent", "a00472.html#a5da368a0e44891433b340288bc872df3", null ],
-    [ "~BotEvent", "a00472.html#a29d6794160e0ea7cdd1598ad48185d6c", null ],
-    [ "BotEvent", "a00472.html#a5da368a0e44891433b340288bc872df3", null ],
-    [ "~BotEvent", "a00472.html#a29d6794160e0ea7cdd1598ad48185d6c", null ],
-    [ "getEventType", "a00472.html#a9e02a5aa59b72a0667260d8d487a66f8", null ],
-    [ "getEventType", "a00472.html#a9e02a5aa59b72a0667260d8d487a66f8", null ],
-    [ "bot", "a00472.html#a0b14bddb4baebbd348969dac6c9a8edc", null ],
-    [ "botlogger", "a00472.html#a864b09f1e3cf406c2e96ca7b4c10e18e", null ]
+    [ "MemberLeaveEvent", "a00472.html#a8f6ff9cbf45de4c407c467dbe37703e0", null ],
+    [ "get_event_type", "a00472.html#a1af0fe4ad2efd5f078d1203e37080ba8", null ],
+    [ "group", "a00472.html#ab693afc3bdbfddc1ae88caf9ee052d54", null ],
+    [ "member", "a00472.html#ac9bc51af54f0412f68948c648ccea5b4", null ],
+    [ "operater", "a00472.html#a3eceb70ac1c7076efca107137be9911b", null ],
+    [ "type", "a00472.html#ad28ac4243630eab3bf7d65a737cac9ca", null ]
 ];

@@ -1,13 +1,9 @@
 var a00448 =
 [
-    [ "DataType", "a00448.html#a43b7d1c1b54bb89e33ad610bbd46953f", null ],
-    [ "DataType", "a00448.html#a43b7d1c1b54bb89e33ad610bbd46953f", null ],
-    [ "json", "a00448.html#a5b3c9b7d906d4cb7ee220e5e7e12c57f", null ],
-    [ "json", "a00448.html#a5b3c9b7d906d4cb7ee220e5e7e12c57f", null ],
-    [ "avatarUrl", "a00448.html#ac3f8a47de4224ae6fa769171cf657d40", null ],
-    [ "avatarUrl", "a00448.html#ac3f8a47de4224ae6fa769171cf657d40", null ],
-    [ "GetDataInternal", "a00448.html#ace946a4a220bd1573f1e42c9628a3a08", null ],
-    [ "GetDataInternal", "a00448.html#ace946a4a220bd1573f1e42c9628a3a08", null ],
-    [ "nickOrNameCard", "a00448.html#a8b43a586164fafff5f807494d997ad5d", null ],
-    [ "nickOrNameCard", "a00448.html#a8b43a586164fafff5f807494d997ad5d", null ]
+    [ "chat", "a00448.html#afc868fb91c60975d5862d0691c80ec54", null ],
+    [ "chat", "a00448.html#a240d9d0df62738e43f8de576c6b26acf", null ],
+    [ "from", "a00448.html#ace8d5250eaff54abb3631cccf37b4b49", null ],
+    [ "from", "a00448.html#a77875102a2c9021981c942d16e15435a", null ],
+    [ "getMessageChain", "a00448.html#a40be4514c0111359a8388cb0c079ec76", null ],
+    [ "getMessageChain", "a00448.html#ab05db28ad76f89f09b38ad345f557803", null ]
 ];

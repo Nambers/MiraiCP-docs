@@ -103,7 +103,7 @@ $(document).ready(function(){initNavTree('a00401.html',''); initResizable(); });
 <p>当前bot账号信息  
  <a href="a00401.html#details">更多...</a></p>
 
-<p><code>#include &lt;<a class="el" href="a00071_source.html">Bot.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="a00107_source.html">Bot.h</a>&gt;</code></p>
 <div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> 类 MiraiCP::Bot 继承关系图:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
@@ -238,7 +238,7 @@ Public 成员函数</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><p >当前bot账号信息 </p>
 
-<p class="definition">在文件 <a class="el" href="a00071_source.html">Bot.h</a> 第 <a class="el" href="a00071_source.html#l00032">32</a> 行定义.</p>
+<p class="definition">在文件 <a class="el" href="a00107_source.html">Bot.h</a> 第 <a class="el" href="a00107_source.html#l00032">32</a> 行定义.</p>
 </div><h2 class="groupheader">构造及析构函数说明</h2>
 <a id="a779666a5cea6df0dca4247a3943ede91" name="a779666a5cea6df0dca4247a3943ede91"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a779666a5cea6df0dca4247a3943ede91">&#9670;&nbsp;</a></span>Bot()</h2>
@@ -302,8 +302,8 @@ Public 成员函数</h2></td></tr>
 <div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>        std::shared_lock&lt;std::shared_mutex&gt; _lck(<a class="code hl_variable" href="a00425.html#ab2feeb8c171c784ce5b57bf525157dd3">InternalData</a>-&gt;getMutex());</div>
 <div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="a00425.html#ab2feeb8c171c784ce5b57bf525157dd3">InternalData</a>-&gt;_avatarUrl;</div>
 <div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    }</div>
-<div class="ttc" id="aa00425_html_a6b03b38226c3f85050dac7135f06cec6"><div class="ttname"><a href="a00425.html#a6b03b38226c3f85050dac7135f06cec6">MiraiCP::Contact::refreshInfo</a></div><div class="ttdeci">void refreshInfo()</div><div class="ttdoc">尝试一次数据刷新</div><div class="ttdef"><b>Definition:</b> <a href="a00077_source.html#l00124">Contact.h:124</a></div></div>
-<div class="ttc" id="aa00425_html_ab2feeb8c171c784ce5b57bf525157dd3"><div class="ttname"><a href="a00425.html#ab2feeb8c171c784ce5b57bf525157dd3">MiraiCP::Contact::InternalData</a></div><div class="ttdeci">std::shared_ptr&lt; IContactData &gt; InternalData</div><div class="ttdoc">内部数据</div><div class="ttdef"><b>Definition:</b> <a href="a00077_source.html#l00091">Contact.h:91</a></div></div>
+<div class="ttc" id="aa00425_html_a6b03b38226c3f85050dac7135f06cec6"><div class="ttname"><a href="a00425.html#a6b03b38226c3f85050dac7135f06cec6">MiraiCP::Contact::refreshInfo</a></div><div class="ttdeci">void refreshInfo()</div><div class="ttdoc">尝试一次数据刷新</div><div class="ttdef"><b>Definition:</b> <a href="a00113_source.html#l00124">Contact.h:124</a></div></div>
+<div class="ttc" id="aa00425_html_ab2feeb8c171c784ce5b57bf525157dd3"><div class="ttname"><a href="a00425.html#ab2feeb8c171c784ce5b57bf525157dd3">MiraiCP::Contact::InternalData</a></div><div class="ttdeci">std::shared_ptr&lt; IContactData &gt; InternalData</div><div class="ttdoc">内部数据</div><div class="ttdef"><b>Definition:</b> <a href="a00113_source.html#l00091">Contact.h:91</a></div></div>
 </div><!-- fragment --><div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-2-trigger" src="closed.png" alt="+"/> 函数调用图:</div>
 <div id="dynsection-2-summary" class="dynsummary" style="display:block;">
@@ -335,7 +335,7 @@ Public 成员函数</h2></td></tr>
 <div class="fragment"><div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>                                            {</div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="a00315.html#a913031600a073d2166b905a535e599f2">Tools::VectorToString</a>(<a class="code hl_function" href="a00401.html#ae3c41bbf773ad22ee9a0b29f4ed769ea">getFriendList</a>());</div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    }</div>
-<div class="ttc" id="aa00315_html_a913031600a073d2166b905a535e599f2"><div class="ttname"><a href="a00315.html#a913031600a073d2166b905a535e599f2">MiraiCP::Tools::VectorToString</a></div><div class="ttdeci">std::string VectorToString(const std::vector&lt; T &gt; &amp;a, const std::string &amp;separator=&quot;,&quot;)</div><div class="ttdoc">任意类型的vector格式化输出</div><div class="ttdef"><b>Definition:</b> <a href="a00140_source.html#l00046">Tools.h:46</a></div></div>
+<div class="ttc" id="aa00315_html_a913031600a073d2166b905a535e599f2"><div class="ttname"><a href="a00315.html#a913031600a073d2166b905a535e599f2">MiraiCP::Tools::VectorToString</a></div><div class="ttdeci">std::string VectorToString(const std::vector&lt; T &gt; &amp;a, const std::string &amp;separator=&quot;,&quot;)</div><div class="ttdoc">任意类型的vector格式化输出</div><div class="ttdef"><b>Definition:</b> <a href="a00176_source.html#l00046">Tools.h:46</a></div></div>
 <div class="ttc" id="aa00401_html_ae3c41bbf773ad22ee9a0b29f4ed769ea"><div class="ttname"><a href="a00401.html#ae3c41bbf773ad22ee9a0b29f4ed769ea">MiraiCP::Bot::getFriendList</a></div><div class="ttdeci">std::vector&lt; QQID &gt; getFriendList() const</div><div class="ttdoc">取好友列表</div><div class="ttdef"><b>Definition:</b> <a href="a00233_source.html#l00075">Bot.cpp:75</a></div></div>
 </div><!-- fragment --><div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-3-trigger" src="closed.png" alt="+"/> 函数调用图:</div>
@@ -403,10 +403,10 @@ Public 成员函数</h2></td></tr>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    }</div>
 <div class="ttc" id="aa00296_html_ab701e3ac61a85b337ec5c1abaad6742d"><div class="ttname"><a href="a00296.html#ab701e3ac61a85b337ec5c1abaad6742d">json</a></div><div class="ttdeci">nlohmann::json json</div><div class="ttdef"><b>Definition:</b> <a href="a00296_source.html#l00031">utils.cpp:31</a></div></div>
 <div class="ttc" id="aa00309_html_a309e8d7f316e8b5e947ea3bcddeb84a8"><div class="ttname"><a href="a00309.html#a309e8d7f316e8b5e947ea3bcddeb84a8">MiraiCP::KtOperation::ktOperation</a></div><div class="ttdeci">std::string ktOperation(operation_set type, const nlohmann::json &amp;data, bool catchErr=true, const std::string &amp;errorInfo=&quot;&quot;)</div><div class="ttdoc">调用 Mirai 操作</div><div class="ttdef"><b>Definition:</b> <a href="a00263_source.html#l00025">KtOperation.cpp:25</a></div></div>
-<div class="ttc" id="aa00309_html_a61a85abb353bc8cd9f7715938014d86ea204b701e1618d7703f1093aa1756613d"><div class="ttname"><a href="a00309.html#a61a85abb353bc8cd9f7715938014d86ea204b701e1618d7703f1093aa1756613d">MiraiCP::KtOperation::FriendList</a></div><div class="ttdeci">@ FriendList</div><div class="ttdoc">查询好友列表</div><div class="ttdef"><b>Definition:</b> <a href="a00101_source.html#l00084">KtOperation.h:84</a></div></div>
-<div class="ttc" id="aa00309_html_a80a8ec1c1ed6fd9db32d9a878405d412a6540d584c2cf10dafa87f93ce13befed"><div class="ttname"><a href="a00309.html#a80a8ec1c1ed6fd9db32d9a878405d412a6540d584c2cf10dafa87f93ce13befed">MiraiCP::KtOperation::QueryBotList</a></div><div class="ttdeci">@ QueryBotList</div><div class="ttdoc">取bot相关列表</div><div class="ttdef"><b>Definition:</b> <a href="a00101_source.html#l00038">KtOperation.h:38</a></div></div>
+<div class="ttc" id="aa00309_html_a61a85abb353bc8cd9f7715938014d86ea204b701e1618d7703f1093aa1756613d"><div class="ttname"><a href="a00309.html#a61a85abb353bc8cd9f7715938014d86ea204b701e1618d7703f1093aa1756613d">MiraiCP::KtOperation::FriendList</a></div><div class="ttdeci">@ FriendList</div><div class="ttdoc">查询好友列表</div><div class="ttdef"><b>Definition:</b> <a href="a00137_source.html#l00084">KtOperation.h:84</a></div></div>
+<div class="ttc" id="aa00309_html_a80a8ec1c1ed6fd9db32d9a878405d412a6540d584c2cf10dafa87f93ce13befed"><div class="ttname"><a href="a00309.html#a80a8ec1c1ed6fd9db32d9a878405d412a6540d584c2cf10dafa87f93ce13befed">MiraiCP::KtOperation::QueryBotList</a></div><div class="ttdeci">@ QueryBotList</div><div class="ttdoc">取bot相关列表</div><div class="ttdef"><b>Definition:</b> <a href="a00137_source.html#l00038">KtOperation.h:38</a></div></div>
 <div class="ttc" id="aa00315_html_ab67b5a25139033a0e048a23f84b88b4d"><div class="ttname"><a href="a00315.html#ab67b5a25139033a0e048a23f84b88b4d">MiraiCP::Tools::StringToVector</a></div><div class="ttdeci">MIRAICP_EXPORT std::vector&lt; QQID &gt; StringToVector(std::string temp)</div><div class="ttdoc">从string格式化到vector</div><div class="ttdef"><b>Definition:</b> <a href="a00293_source.html#l00044">Tools.cpp:44</a></div></div>
-<div class="ttc" id="aa00425_html_a89fb588a12ff2d4de10722788945ea55"><div class="ttname"><a href="a00425.html#a89fb588a12ff2d4de10722788945ea55">MiraiCP::Contact::toJson</a></div><div class="ttdeci">nlohmann::json toJson() const</div><div class="ttdoc">序列化到json对象</div><div class="ttdef"><b>Definition:</b> <a href="a00077_source.html#l00250">Contact.h:250</a></div></div>
+<div class="ttc" id="aa00425_html_a89fb588a12ff2d4de10722788945ea55"><div class="ttname"><a href="a00425.html#a89fb588a12ff2d4de10722788945ea55">MiraiCP::Contact::toJson</a></div><div class="ttdeci">nlohmann::json toJson() const</div><div class="ttdoc">序列化到json对象</div><div class="ttdef"><b>Definition:</b> <a href="a00113_source.html#l00250">Contact.h:250</a></div></div>
 </div><!-- fragment --><div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-4-trigger" src="closed.png" alt="+"/> 函数调用图:</div>
 <div id="dynsection-4-summary" class="dynsummary" style="display:block;">
@@ -478,7 +478,7 @@ Public 成员函数</h2></td></tr>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        std::string temp = <a class="code hl_function" href="a00309.html#a309e8d7f316e8b5e947ea3bcddeb84a8">KtOperation::ktOperation</a>(<a class="code hl_enumvalue" href="a00309.html#a80a8ec1c1ed6fd9db32d9a878405d412a6540d584c2cf10dafa87f93ce13befed">KtOperation::QueryBotList</a>, j);</div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="a00315.html#ab67b5a25139033a0e048a23f84b88b4d">Tools::StringToVector</a>(std::move(temp));</div>
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    }</div>
-<div class="ttc" id="aa00309_html_a61a85abb353bc8cd9f7715938014d86ea7a587378b9a8bd2d44dbe89b0b016e27"><div class="ttname"><a href="a00309.html#a61a85abb353bc8cd9f7715938014d86ea7a587378b9a8bd2d44dbe89b0b016e27">MiraiCP::KtOperation::GroupList</a></div><div class="ttdeci">@ GroupList</div><div class="ttdoc">查询群列表</div><div class="ttdef"><b>Definition:</b> <a href="a00101_source.html#l00086">KtOperation.h:86</a></div></div>
+<div class="ttc" id="aa00309_html_a61a85abb353bc8cd9f7715938014d86ea7a587378b9a8bd2d44dbe89b0b016e27"><div class="ttname"><a href="a00309.html#a61a85abb353bc8cd9f7715938014d86ea7a587378b9a8bd2d44dbe89b0b016e27">MiraiCP::KtOperation::GroupList</a></div><div class="ttdeci">@ GroupList</div><div class="ttdoc">查询群列表</div><div class="ttdef"><b>Definition:</b> <a href="a00137_source.html#l00086">KtOperation.h:86</a></div></div>
 </div><!-- fragment --><div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-6-trigger" src="closed.png" alt="+"/> 函数调用图:</div>
 <div id="dynsection-6-summary" class="dynsummary" style="display:block;">
@@ -585,11 +585,11 @@ Public 成员函数</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="a00071_source.html">Bot.h</a> 第 <a class="el" href="a00071_source.html#l00073">73</a> 行定义.</p>
+<p class="definition">在文件 <a class="el" href="a00107_source.html">Bot.h</a> 第 <a class="el" href="a00107_source.html#l00073">73</a> 行定义.</p>
 <div class="fragment"><div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>                                            {</div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>            <span class="keywordflow">return</span> <a class="code hl_function" href="a00425.html#a1f208ae0f09c367c90c2e079e63048db">id</a>() == b.id();</div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        }</div>
-<div class="ttc" id="aa00425_html_a1f208ae0f09c367c90c2e079e63048db"><div class="ttname"><a href="a00425.html#a1f208ae0f09c367c90c2e079e63048db">MiraiCP::Contact::id</a></div><div class="ttdeci">QQID id() const</div><div class="ttdoc">id 在全部情况存在</div><div class="ttdef"><b>Definition:</b> <a href="a00077_source.html#l00165">Contact.h:165</a></div></div>
+<div class="ttc" id="aa00425_html_a1f208ae0f09c367c90c2e079e63048db"><div class="ttname"><a href="a00425.html#a1f208ae0f09c367c90c2e079e63048db">MiraiCP::Contact::id</a></div><div class="ttdeci">QQID id() const</div><div class="ttdoc">id 在全部情况存在</div><div class="ttdef"><b>Definition:</b> <a href="a00113_source.html#l00165">Contact.h:165</a></div></div>
 </div><!-- fragment --><div id="dynsection-10" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-10-trigger" src="closed.png" alt="+"/> 函数调用图:</div>
 <div id="dynsection-10-summary" class="dynsummary" style="display:block;">
@@ -601,7 +601,7 @@ Public 成员函数</h2></td></tr>
 </div>
 </div>
 <hr/>该类的文档由以下文件生成:<ul>
-<li><a class="el" href="a00071_source.html">Bot.h</a></li>
+<li><a class="el" href="a00107_source.html">Bot.h</a></li>
 <li><a class="el" href="a00233_source.html">Bot.cpp</a></li>
 </ul>
 </div><!-- contents -->
@@ -611,7 +611,7 @@ Public 成员函数</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="a00302.html">MiraiCP</a></li><li class="navelem"><a class="el" href="a00401.html">Bot</a></li>
-    <li class="footer">生成于 2023年 一月 21日 星期六 14:32:49 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="footer">生成于 2023年 一月 22日 星期日 13:18:25 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
     </body>

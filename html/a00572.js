@@ -1,7 +1,5 @@
 var a00572 =
 [
-    [ "UploadException", "a00572.html#a1b5ca7e57cd117a0e45baae54a10019f", null ],
-    [ "UploadException", "a00572.html#a1b5ca7e57cd117a0e45baae54a10019f", null ],
-    [ "exceptionType", "a00572.html#a75aa16afc81716cc340be44ee4950e18", null ],
-    [ "exceptionType", "a00572.html#a75aa16afc81716cc340be44ee4950e18", null ]
+    [ "FriendException", "a00572.html#a73e9dd98256665fe2230a68df2cf2110", null ],
+    [ "exceptionType", "a00572.html#aa08c204826f37f656ed48413f331fe06", null ]
 ];

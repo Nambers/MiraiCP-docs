@@ -1,6 +1,8 @@
 var a00071 =
 [
-    [ "empty", "a00071.html#a78d8064032b232026e0b8029723c0e1b", null ],
-    [ "popSchedule", "a00071.html#a60264799b74fbe2b0466d1de609cf95b", null ],
-    [ "timer", "a00071.html#a746efd674de5c56de789a0c03be7948e", null ]
+    [ "Event", "a00071.html#a73d4a4e502a17765df566b528d6a9484", null ],
+    [ "PluginDisable", "a00071.html#a3b230352980d44ad05ac47ceae3f007c", null ],
+    [ "registerMethods", "a00071.html#a0c4a7b01410b519eeff58a050bc194cb", null ],
+    [ "Verify", "a00071.html#a3d68440994d4ab2136706628a2e6f77f", null ],
+    [ "method_table", "a00071.html#a54c4b6ec7b4876213ab9e9f888da04ec", null ]
 ];

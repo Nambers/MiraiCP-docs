@@ -1,10 +1,6 @@
 var a00668 =
 [
-    [ "serializeToJson", "a00668.html#ac87021b1e71d8d3334c4d197813924bc", null ],
-    [ "serializeToJson", "a00668.html#a234fe9836b32afb03fc4a327216e0913", null ],
-    [ "pinned", "a00668.html#a1045432e9f2c822b1150bc278e99de05", null ],
-    [ "requireConfirm", "a00668.html#a2641ceb16f0da11938027e7bf67c5c8a", null ],
-    [ "send2new", "a00668.html#af941b1ec8148c2675bcad7a6a10a53f5", null ],
-    [ "showEditCard", "a00668.html#a92569e1952f8f1668db0df430928da8e", null ],
-    [ "showPopup", "a00668.html#ab80e896e8ac632e75f5d5e98dff79a97", null ]
+    [ "Logger", "a00668.html#a0707bf07c1d709abf854a3592fb2f1f0", null ],
+    [ "log_interface", "a00668.html#ae75bdd405eddd5650979feb9e9ee2a9b", null ],
+    [ "logger", "a00668.html#a268fd602157c3fa49616a8872c82bfb1", null ]
 ];

@@ -102,13 +102,14 @@ $(document).ready(function(){initNavTree('a00709.html',''); initResizable(); });
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="a00119_source.html">MessageSource.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="a00155_source.html">MessageSource.h</a>&gt;</code></p>
 <div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> MiraiCP::MessageSource 的协作图:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="a00707.svg" width="296" height="536"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00707.svg" width="296" height="536"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
@@ -151,8 +152,62 @@ Public 属性</h2></td></tr>
 <tr class="separator:a4ca84946837ff70d8ae389274f19f423"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
-<div class="textblock"><p >消息源声明 </p><div id="dynsection-1014" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;"><img src="closed.png" alt="+" id="dynsection-1014-trigger" class="inline"/> 回复信息例子:</div><div id="dynsection-1014-content" class="dynsummary" style="display: none;"><div class="fragment"></div><!-- fragment --> </div> 
-<p class="definition">在文件 <a class="el" href="a00119_source.html">MessageSource.h</a> 第 <a class="el" href="a00119_source.html#l00031">31</a> 行定义.</p>
+<div class="textblock"><p >消息源声明 </p><div id="dynsection-1014" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;"><img src="closed.png" alt="+" id="dynsection-1014-trigger" class="inline"/> 回复信息例子:</div><div id="dynsection-1014-content" class="dynsummary" style="display: none;"><div class="fragment"><div class="line"><span class="comment">// Copyright (c) 2020 - 2022. Eritque arcus and contributors.</span></div>
+<div class="line"><span class="comment">//</span></div>
+<div class="line"><span class="comment">// This program is free software: you can redistribute it and/or modify</span></div>
+<div class="line"><span class="comment">// it under the terms of the GNU Affero General Public License as</span></div>
+<div class="line"><span class="comment">// published by the Free Software Foundation, either version 3 of the</span></div>
+<div class="line"><span class="comment">// License, or any later version(in your opinion).</span></div>
+<div class="line"><span class="comment">//</span></div>
+<div class="line"><span class="comment">// This program is distributed in the hope that it will be useful,</span></div>
+<div class="line"><span class="comment">// but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div>
+<div class="line"><span class="comment">// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span></div>
+<div class="line"><span class="comment">// GNU Affero General Public License for more details.</span></div>
+<div class="line"><span class="comment">//</span></div>
+<div class="line"><span class="comment">// You should have received a copy of the GNU Affero General Public License</span></div>
+<div class="line"><span class="comment">// along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</span></div>
+<div class="line"><span class="comment">//</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00161.html">MiraiCP.hpp</a>&gt;</span></div>
+<div class="line"><span class="keyword">using namespace </span><a class="code hl_namespace" href="a00302.html">MiraiCP</a>;</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">const</span> PluginConfig <a class="code hl_variable" href="a00437.html#a20b8d27c47456805d38d4c366da96ac0">CPPPlugin::config</a>{</div>
+<div class="line">        <span class="stringliteral">&quot;id&quot;</span>,   <span class="comment">// 插件id</span></div>
+<div class="line">        <span class="stringliteral">&quot;test&quot;</span>, <span class="comment">// 插件名称</span></div>
+<div class="line">        <span class="stringliteral">&quot;v1.0&quot;</span>, <span class="comment">// 插件版本</span></div>
+<div class="line">        <span class="stringliteral">&quot;a&quot;</span>,    <span class="comment">// 插件作者</span></div>
+<div class="line">                <span class="comment">// 可选：插件描述</span></div>
+<div class="line">                <span class="comment">// 可选：日期</span></div>
+<div class="line">};</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">class </span>Main : <span class="keyword">public</span> CPPPlugin {</div>
+<div class="line"><span class="keyword">public</span>:</div>
+<div class="line">    Main() : CPPPlugin() {}</div>
+<div class="line">    <span class="keywordtype">void</span> onEnable()<span class="keyword"> override </span>{</div>
+<div class="line">        Event::registerEvent&lt;GroupMessageEvent&gt;([](<a class="code hl_enumvalue" href="a00307.html#abe9e9d8212ea8f23717b72db64393cabaca8073196614a985e9fcc7d2f964473c">GroupMessageEvent</a> e) {</div>
+<div class="line">            <span class="comment">// 发送MessageChain</span></div>
+<div class="line">            e.group.sendMessage(e.message);</div>
+<div class="line">            <span class="comment">// 发送SingleMessage</span></div>
+<div class="line">            e.group.sendMessage(PlainText(<span class="stringliteral">&quot;a&quot;</span>));</div>
+<div class="line">            e.group.sendMessage(e.sender.at(), PlainText(<span class="stringliteral">&quot;&quot;</span>), Face(5));</div>
+<div class="line">            <span class="comment">// 回复信息</span></div>
+<div class="line">            e.group.quoteAndSendMessage(PlainText(<span class="stringliteral">&quot;a&quot;</span>), e.message.source.value());</div>
+<div class="line">            <span class="comment">// 撤回信息</span></div>
+<div class="line">            e.message.source.value().recall();</div>
+<div class="line">            e.group.sendMessage(<span class="stringliteral">&quot;hi&quot;</span>).recall();</div>
+<div class="line">        });</div>
+<div class="line">    }</div>
+<div class="line">};</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> <a class="code hl_function" href="a00302.html#a12d27be6730af4fc321ac1eb231db281">MiraiCP::enrollPlugin</a>() {</div>
+<div class="line">    <a class="code hl_function" href="a00302.html#a12d27be6730af4fc321ac1eb231db281">MiraiCP::enrollPlugin</a>(<span class="keyword">new</span> Main());</div>
+<div class="line">}</div>
+<div class="ttc" id="aa00161_html"><div class="ttname"><a href="a00161.html">MiraiCP.hpp</a></div></div>
+<div class="ttc" id="aa00302_html"><div class="ttname"><a href="a00302.html">MiraiCP</a></div><div class="ttdef"><b>Definition:</b> <a href="a00041_source.html#l00041">commonTypes.h:41</a></div></div>
+<div class="ttc" id="aa00302_html_a12d27be6730af4fc321ac1eb231db281"><div class="ttname"><a href="a00302.html#a12d27be6730af4fc321ac1eb231db281">MiraiCP::enrollPlugin</a></div><div class="ttdeci">void enrollPlugin()</div><div class="ttdoc">注册插件函数, 需要被插件实现, 类似onStart();</div><div class="ttdef"><b>Definition:</b> <a href="a00179_source.html#l00037">utils.h:37</a></div></div>
+<div class="ttc" id="aa00307_html_abe9e9d8212ea8f23717b72db64393cabaca8073196614a985e9fcc7d2f964473c"><div class="ttname"><a href="a00307.html#abe9e9d8212ea8f23717b72db64393cabaca8073196614a985e9fcc7d2f964473c">MiraiCP::eventTypes::GroupMessageEvent</a></div><div class="ttdeci">@ GroupMessageEvent</div><div class="ttdef"><b>Definition:</b> <a href="a00119_source.html#l00038">Event.h:38</a></div></div>
+<div class="ttc" id="aa00437_html_a20b8d27c47456805d38d4c366da96ac0"><div class="ttname"><a href="a00437.html#a20b8d27c47456805d38d4c366da96ac0">MiraiCP::CPPPlugin::config</a></div><div class="ttdeci">MIRAICP_EXPORT static const PluginConfig config</div><div class="ttdoc">插件信息，一个插件中该内容不应变化</div><div class="ttdef"><b>Definition:</b> <a href="a00116_source.html#l00038">CPPPlugin.h:38</a></div></div>
+</div><!-- fragment --> </div> 
+<p class="definition">在文件 <a class="el" href="a00155_source.html">MessageSource.h</a> 第 <a class="el" href="a00155_source.html#l00031">31</a> 行定义.</p>
 </div><h2 class="groupheader">构造及析构函数说明</h2>
 <a id="a49210b1a4c711d50ab0acc17d0dae88d" name="a49210b1a4c711d50ab0acc17d0dae88d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a49210b1a4c711d50ab0acc17d0dae88d">&#9670;&nbsp;</a></span>MessageSource() <span class="overload">[1/2]</span></h2>
@@ -227,9 +282,9 @@ Public 属性</h2></td></tr>
 <div class="fragment"><div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        : <a class="code hl_variable" href="a00709.html#a4b5fd176a16871dbb39e5be15b2b6c15">ids</a>(std::move(<a class="code hl_variable" href="a00709.html#a4b5fd176a16871dbb39e5be15b2b6c15">ids</a>)),</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>          <a class="code hl_variable" href="a00709.html#a358ba0250715b1c4692554995750675e">internalids</a>(std::move(<a class="code hl_variable" href="a00709.html#a358ba0250715b1c4692554995750675e">internalids</a>)),</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>          <a class="code hl_variable" href="a00709.html#afc51041bfb7cc7cb0915b5131ee05805">source</a>(std::move(<a class="code hl_variable" href="a00709.html#afc51041bfb7cc7cb0915b5131ee05805">source</a>)) {}</div>
-<div class="ttc" id="aa00709_html_a358ba0250715b1c4692554995750675e"><div class="ttname"><a href="a00709.html#a358ba0250715b1c4692554995750675e">MiraiCP::MessageSource::internalids</a></div><div class="ttdeci">std::string internalids</div><div class="ttdoc">消息的internalids</div><div class="ttdef"><b>Definition:</b> <a href="a00119_source.html#l00036">MessageSource.h:36</a></div></div>
-<div class="ttc" id="aa00709_html_a4b5fd176a16871dbb39e5be15b2b6c15"><div class="ttname"><a href="a00709.html#a4b5fd176a16871dbb39e5be15b2b6c15">MiraiCP::MessageSource::ids</a></div><div class="ttdeci">std::string ids</div><div class="ttdoc">消息的ids</div><div class="ttdef"><b>Definition:</b> <a href="a00119_source.html#l00034">MessageSource.h:34</a></div></div>
-<div class="ttc" id="aa00709_html_afc51041bfb7cc7cb0915b5131ee05805"><div class="ttname"><a href="a00709.html#afc51041bfb7cc7cb0915b5131ee05805">MiraiCP::MessageSource::source</a></div><div class="ttdeci">std::string source</div><div class="ttdoc">消息源序列化</div><div class="ttdef"><b>Definition:</b> <a href="a00119_source.html#l00038">MessageSource.h:38</a></div></div>
+<div class="ttc" id="aa00709_html_a358ba0250715b1c4692554995750675e"><div class="ttname"><a href="a00709.html#a358ba0250715b1c4692554995750675e">MiraiCP::MessageSource::internalids</a></div><div class="ttdeci">std::string internalids</div><div class="ttdoc">消息的internalids</div><div class="ttdef"><b>Definition:</b> <a href="a00155_source.html#l00036">MessageSource.h:36</a></div></div>
+<div class="ttc" id="aa00709_html_a4b5fd176a16871dbb39e5be15b2b6c15"><div class="ttname"><a href="a00709.html#a4b5fd176a16871dbb39e5be15b2b6c15">MiraiCP::MessageSource::ids</a></div><div class="ttdeci">std::string ids</div><div class="ttdoc">消息的ids</div><div class="ttdef"><b>Definition:</b> <a href="a00155_source.html#l00034">MessageSource.h:34</a></div></div>
+<div class="ttc" id="aa00709_html_afc51041bfb7cc7cb0915b5131ee05805"><div class="ttname"><a href="a00709.html#afc51041bfb7cc7cb0915b5131ee05805">MiraiCP::MessageSource::source</a></div><div class="ttdeci">std::string source</div><div class="ttdoc">消息源序列化</div><div class="ttdef"><b>Definition:</b> <a href="a00155_source.html#l00038">MessageSource.h:38</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -271,13 +326,13 @@ Public 属性</h2></td></tr>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>            <a class="code hl_variable" href="a00677.html#a268fd602157c3fa49616a8872c82bfb1">Logger::logger</a>.<a class="code hl_function" href="a00669.html#af14d39efa300da183070784bc86d3f23">error</a>(<span class="stringliteral">&quot;消息源序列化出错，格式不符合(MessageSource::deserializeFromString)&quot;</span>);</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>            <a class="code hl_variable" href="a00677.html#a268fd602157c3fa49616a8872c82bfb1">Logger::logger</a>.<a class="code hl_function" href="a00669.html#af14d39efa300da183070784bc86d3f23">error</a>(<a class="code hl_variable" href="a00709.html#afc51041bfb7cc7cb0915b5131ee05805">source</a>);</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>            <a class="code hl_variable" href="a00677.html#a268fd602157c3fa49616a8872c82bfb1">Logger::logger</a>.<a class="code hl_function" href="a00669.html#af14d39efa300da183070784bc86d3f23">error</a>(e.what());</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            <span class="keywordflow">throw</span> IllegalArgumentException(std::string(<span class="stringliteral">&quot;消息源序列化出错，格式不符合(MessageSource::deserializeFromString), &quot;</span>) + e.what(), <a class="code hl_define" href="a00011.html#a64a15c1bd1292eb8eb8b5874281372c6">MIRAICP_EXCEPTION_WHERE</a>);</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            <span class="keywordflow">throw</span> IllegalArgumentException(std::string(<span class="stringliteral">&quot;消息源序列化出错，格式不符合(MessageSource::deserializeFromString), &quot;</span>) + e.what(), <a class="code hl_define" href="a00047.html#a64a15c1bd1292eb8eb8b5874281372c6">MIRAICP_EXCEPTION_WHERE</a>);</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        }</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    }</div>
-<div class="ttc" id="aa00011_html_a64a15c1bd1292eb8eb8b5874281372c6"><div class="ttname"><a href="a00011.html#a64a15c1bd1292eb8eb8b5874281372c6">MIRAICP_EXCEPTION_WHERE</a></div><div class="ttdeci">#define MIRAICP_EXCEPTION_WHERE</div><div class="ttdef"><b>Definition:</b> <a href="a00011_source.html#l00120">MiraiCPMacros.h:120</a></div></div>
+<div class="ttc" id="aa00047_html_a64a15c1bd1292eb8eb8b5874281372c6"><div class="ttname"><a href="a00047.html#a64a15c1bd1292eb8eb8b5874281372c6">MIRAICP_EXCEPTION_WHERE</a></div><div class="ttdeci">#define MIRAICP_EXCEPTION_WHERE</div><div class="ttdef"><b>Definition:</b> <a href="a00047_source.html#l00120">MiraiCPMacros.h:120</a></div></div>
 <div class="ttc" id="aa00296_html_ab701e3ac61a85b337ec5c1abaad6742d"><div class="ttname"><a href="a00296.html#ab701e3ac61a85b337ec5c1abaad6742d">json</a></div><div class="ttdeci">nlohmann::json json</div><div class="ttdef"><b>Definition:</b> <a href="a00296_source.html#l00031">utils.cpp:31</a></div></div>
-<div class="ttc" id="aa00669_html_af14d39efa300da183070784bc86d3f23"><div class="ttname"><a href="a00669.html#af14d39efa300da183070784bc86d3f23">MiraiCP::Logger_interface::error</a></div><div class="ttdeci">void error(T &amp;&amp;...val)</div><div class="ttdoc">发送错误(error级日志)</div><div class="ttdef"><b>Definition:</b> <a href="a00107_source.html#l00116">Logger.h:116</a></div></div>
-<div class="ttc" id="aa00677_html_a268fd602157c3fa49616a8872c82bfb1"><div class="ttname"><a href="a00677.html#a268fd602157c3fa49616a8872c82bfb1">MiraiCP::Logger::logger</a></div><div class="ttdeci">static Logger logger</div><div class="ttdef"><b>Definition:</b> <a href="a00107_source.html#l00148">Logger.h:148</a></div></div>
+<div class="ttc" id="aa00669_html_af14d39efa300da183070784bc86d3f23"><div class="ttname"><a href="a00669.html#af14d39efa300da183070784bc86d3f23">MiraiCP::Logger_interface::error</a></div><div class="ttdeci">void error(T &amp;&amp;...val)</div><div class="ttdoc">发送错误(error级日志)</div><div class="ttdef"><b>Definition:</b> <a href="a00143_source.html#l00116">Logger.h:116</a></div></div>
+<div class="ttc" id="aa00677_html_a268fd602157c3fa49616a8872c82bfb1"><div class="ttname"><a href="a00677.html#a268fd602157c3fa49616a8872c82bfb1">MiraiCP::Logger::logger</a></div><div class="ttdeci">static Logger logger</div><div class="ttdef"><b>Definition:</b> <a href="a00143_source.html#l00148">Logger.h:148</a></div></div>
 </div><!-- fragment --><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-1-trigger" src="closed.png" alt="+"/> 函数调用图:</div>
 <div id="dynsection-1-summary" class="dynsummary" style="display:block;">
@@ -319,7 +374,7 @@ Public 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="a00119_source.html">MessageSource.h</a> 第 <a class="el" href="a00119_source.html#l00079">79</a> 行定义.</p>
+<p class="definition">在文件 <a class="el" href="a00155_source.html">MessageSource.h</a> 第 <a class="el" href="a00155_source.html#l00079">79</a> 行定义.</p>
 <div class="fragment"><div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>                                                       {</div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>            <span class="keywordflow">return</span> this-&gt;<a class="code hl_variable" href="a00709.html#a4b5fd176a16871dbb39e5be15b2b6c15">ids</a> == ms.ids &amp;&amp; this-&gt;<a class="code hl_variable" href="a00709.html#a358ba0250715b1c4692554995750675e">internalids</a> == ms.internalids;</div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        }</div>
@@ -346,10 +401,10 @@ Public 属性</h2></td></tr>
 <p class="definition">在文件 <a class="el" href="a00278_source.html">MessageSource.cpp</a> 第 <a class="el" href="a00278_source.html#l00026">26</a> 行定义.</p>
 <div class="fragment"><div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>                                     {</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        std::string re = <a class="code hl_function" href="a00309.html#a1e1e498928eeaa1d7107033ff5fa881a">KtOperation::ktOperationStr</a>(<a class="code hl_enumvalue" href="a00309.html#a80a8ec1c1ed6fd9db32d9a878405d412adf0c989f1aec4e71c3bf15c539da30f2">KtOperation::Recall</a>, <a class="code hl_function" href="a00709.html#aca51487498128b420019182e1331a282">serializeToString</a>());</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        <span class="keywordflow">if</span> (re == <span class="stringliteral">&quot;E2&quot;</span>) <span class="keywordflow">throw</span> RecallException(<a class="code hl_define" href="a00011.html#a64a15c1bd1292eb8eb8b5874281372c6">MIRAICP_EXCEPTION_WHERE</a>);</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        <span class="keywordflow">if</span> (re == <span class="stringliteral">&quot;E2&quot;</span>) <span class="keywordflow">throw</span> RecallException(<a class="code hl_define" href="a00047.html#a64a15c1bd1292eb8eb8b5874281372c6">MIRAICP_EXCEPTION_WHERE</a>);</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    }</div>
 <div class="ttc" id="aa00309_html_a1e1e498928eeaa1d7107033ff5fa881a"><div class="ttname"><a href="a00309.html#a1e1e498928eeaa1d7107033ff5fa881a">MiraiCP::KtOperation::ktOperationStr</a></div><div class="ttdeci">std::string ktOperationStr(operation_set type, const std::string &amp;data, bool catchErr=true, const std::string &amp;errorInfo=&quot;&quot;)</div><div class="ttdoc">调用 Mirai 操作</div><div class="ttdef"><b>Definition:</b> <a href="a00263_source.html#l00028">KtOperation.cpp:28</a></div></div>
-<div class="ttc" id="aa00309_html_a80a8ec1c1ed6fd9db32d9a878405d412adf0c989f1aec4e71c3bf15c539da30f2"><div class="ttname"><a href="a00309.html#a80a8ec1c1ed6fd9db32d9a878405d412adf0c989f1aec4e71c3bf15c539da30f2">MiraiCP::KtOperation::Recall</a></div><div class="ttdeci">@ Recall</div><div class="ttdoc">撤回信息</div><div class="ttdef"><b>Definition:</b> <a href="a00101_source.html#l00030">KtOperation.h:30</a></div></div>
+<div class="ttc" id="aa00309_html_a80a8ec1c1ed6fd9db32d9a878405d412adf0c989f1aec4e71c3bf15c539da30f2"><div class="ttname"><a href="a00309.html#a80a8ec1c1ed6fd9db32d9a878405d412adf0c989f1aec4e71c3bf15c539da30f2">MiraiCP::KtOperation::Recall</a></div><div class="ttdeci">@ Recall</div><div class="ttdoc">撤回信息</div><div class="ttdef"><b>Definition:</b> <a href="a00137_source.html#l00030">KtOperation.h:30</a></div></div>
 <div class="ttc" id="aa00709_html_aca51487498128b420019182e1331a282"><div class="ttname"><a href="a00709.html#aca51487498128b420019182e1331a282">MiraiCP::MessageSource::serializeToString</a></div><div class="ttdeci">std::string serializeToString() const</div><div class="ttdef"><b>Definition:</b> <a href="a00278_source.html#l00038">MessageSource.cpp:38</a></div></div>
 </div><!-- fragment --><div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-3-trigger" src="closed.png" alt="+"/> 函数调用图:</div>
@@ -422,7 +477,7 @@ Public 属性</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="a00119_source.html">MessageSource.h</a> 第 <a class="el" href="a00119_source.html#l00045">45</a> 行定义.</p>
+<p class="definition">在文件 <a class="el" href="a00155_source.html">MessageSource.h</a> 第 <a class="el" href="a00155_source.html#l00045">45</a> 行定义.</p>
 
 </div>
 </div>
@@ -438,7 +493,7 @@ Public 属性</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="a00119_source.html">MessageSource.h</a> 第 <a class="el" href="a00119_source.html#l00044">44</a> 行定义.</p>
+<p class="definition">在文件 <a class="el" href="a00155_source.html">MessageSource.h</a> 第 <a class="el" href="a00155_source.html#l00044">44</a> 行定义.</p>
 
 </div>
 </div>
@@ -456,7 +511,7 @@ Public 属性</h2></td></tr>
 
 <p>消息的ids </p>
 
-<p class="definition">在文件 <a class="el" href="a00119_source.html">MessageSource.h</a> 第 <a class="el" href="a00119_source.html#l00034">34</a> 行定义.</p>
+<p class="definition">在文件 <a class="el" href="a00155_source.html">MessageSource.h</a> 第 <a class="el" href="a00155_source.html#l00034">34</a> 行定义.</p>
 
 </div>
 </div>
@@ -474,7 +529,7 @@ Public 属性</h2></td></tr>
 
 <p>消息的internalids </p>
 
-<p class="definition">在文件 <a class="el" href="a00119_source.html">MessageSource.h</a> 第 <a class="el" href="a00119_source.html#l00036">36</a> 行定义.</p>
+<p class="definition">在文件 <a class="el" href="a00155_source.html">MessageSource.h</a> 第 <a class="el" href="a00155_source.html#l00036">36</a> 行定义.</p>
 
 </div>
 </div>
@@ -492,12 +547,12 @@ Public 属性</h2></td></tr>
 
 <p>消息源序列化 </p>
 
-<p class="definition">在文件 <a class="el" href="a00119_source.html">MessageSource.h</a> 第 <a class="el" href="a00119_source.html#l00038">38</a> 行定义.</p>
+<p class="definition">在文件 <a class="el" href="a00155_source.html">MessageSource.h</a> 第 <a class="el" href="a00155_source.html#l00038">38</a> 行定义.</p>
 
 </div>
 </div>
 <hr/>该类的文档由以下文件生成:<ul>
-<li><a class="el" href="a00119_source.html">MessageSource.h</a></li>
+<li><a class="el" href="a00155_source.html">MessageSource.h</a></li>
 <li><a class="el" href="a00278_source.html">MessageSource.cpp</a></li>
 </ul>
 </div><!-- contents -->
@@ -507,7 +562,7 @@ Public 属性</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="a00302.html">MiraiCP</a></li><li class="navelem"><a class="el" href="a00709.html">MessageSource</a></li>
-    <li class="footer">生成于 2023年 一月 21日 星期六 14:32:50 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="footer">生成于 2023年 一月 22日 星期日 13:18:25 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
     </body>

@@ -1,7 +1,8 @@
 var a00628 =
 [
-    [ "PluginNotAuthorizedException", "a00628.html#ac88316ddaf010113ecf97f605faf3d6d", null ],
-    [ "PluginNotAuthorizedException", "a00628.html#ac88316ddaf010113ecf97f605faf3d6d", null ],
-    [ "exceptionType", "a00628.html#a457d9e14fc294fd058e09e1a1d022144", null ],
-    [ "exceptionType", "a00628.html#a457d9e14fc294fd058e09e1a1d022144", null ]
+    [ "GroupSetting", "a00632.html", "a00632" ],
+    [ "GroupData", "a00628.html#afe85f107ef0e196801af97e7246414d4", null ],
+    [ "deserialize", "a00628.html#a8a0e56e1504a3da673550f0b6ea5990f", null ],
+    [ "refreshInfo", "a00628.html#a0722821fb76ee11411d65c4c79c08538", null ],
+    [ "_setting", "a00628.html#a939dc83c0a53345b8c5f9a71209299a7", null ]
 ];

@@ -1,10 +1,14 @@
 var a00460 =
 [
-    [ "BuiltInContact", "a00464.html", "a00464" ],
-    [ "BaseEventData", "a00460.html#add7fec6ff79d938ab121f57d10ffa1a7", null ],
-    [ "BaseEventData", "a00460.html#add7fec6ff79d938ab121f57d10ffa1a7", null ],
-    [ "botId", "a00460.html#a0ef2979d2f7e44318fcc251026a7b109", null ],
-    [ "eventData", "a00460.html#abd44451921253c4eb235eff3fa3fb857", null ],
-    [ "object", "a00460.html#a3fa889a2a6033853f08b1905af2c4cc4", null ],
-    [ "subject", "a00460.html#ad502dc6064107b43d70bcf05aaf47526", null ]
+    [ "GroupInviteEvent", "a00460.html#aa7c23690e2b1371cddf1a729610bfdc8", null ],
+    [ "accept", "a00460.html#a3847df3907111c8443c1e1b71ee35d1d", null ],
+    [ "get_event_type", "a00460.html#aae84c8414b3d16c0b3faf6bae4ebcf94", null ],
+    [ "operation0", "a00460.html#a542b23744671466b1b1ebc591a777caa", null ],
+    [ "reject", "a00460.html#a749d773136fff280e951e66e21959a6c", null ],
+    [ "group", "a00460.html#aa206585209f1577c2986cc277d7fcce9", null ],
+    [ "groupName", "a00460.html#a578c8a027cb9f1574fba3de4b3646fc0", null ],
+    [ "inviter", "a00460.html#a808375e58728ef32e49375a1f23573f8", null ],
+    [ "inviterNick", "a00460.html#abf7cb41022c0cf81725c2925507f1d58", null ],
+    [ "requestEventId", "a00460.html#a785f78b051fc5ccfbf789d3cfab2a37c", null ],
+    [ "source", "a00460.html#affaff17057d8b347a51ba2516f529596", null ]
 ];

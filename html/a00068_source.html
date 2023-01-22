@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiraiCP: Scheduler.h 源文件</title>
+<title>MiraiCP: JNIEnvs.h 源文件</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -93,42 +93,61 @@ $(document).ready(function(){initNavTree('a00068_source.html',''); initResizable
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">Scheduler.h</div></div>
+  <div class="headertitle"><div class="title">JNIEnvs.h</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="a00068.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">//</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">// Created by antares on 11/11/22.</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">//</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#ifndef MIRAICP_PRO_SCHEDULER_H</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#define MIRAICP_PRO_SCHEDULER_H</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;chrono&gt;</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="a00306.html">   12</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="a00306.html">LibLoader::Scheduler</a> {</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="a00306.html#a60264799b74fbe2b0466d1de609cf95b">popSchedule</a>() <span class="keyword">noexcept</span>;</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="a00306.html#a746efd674de5c56de789a0c03be7948e">timer</a>(std::string <span class="keywordtype">id</span>, std::string content, <span class="keywordtype">size_t</span> timeInSec);</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="a00306.html#a78d8064032b232026e0b8029723c0e1b">empty</a>() <span class="keyword">noexcept</span>;</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>} <span class="comment">// namespace LibLoader::Scheduler</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<a href="a00068.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// Copyright (c) 2022 - 2022. Antares, Eritque arcus and contributors.</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">//</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">// This program is free software: you can redistribute it and/or modify</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">// it under the terms of the GNU Affero General Public License as</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">// published by the Free Software Foundation, either version 3 of the</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">// License, or any later version(in your opinion).</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment">//</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment">// This program is distributed in the hope that it will be useful,</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment">// but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment">// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment">// GNU Affero General Public License for more details.</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment">//</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">// You should have received a copy of the GNU Affero General Public License</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">// along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">//</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#ifndef MIRAICP_PRO_JNIENVS_H</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#define MIRAICP_PRO_JNIENVS_H</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#ifndef LOADER_NATIVE</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &quot;<a class="code" href="a00065.html">JNIEnvManager.h</a>&quot;</span></div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#endif </span><span class="comment">//MIRAICP_PRO_SCHEDULER_H</span></div>
-<div class="ttc" id="aa00306_html"><div class="ttname"><a href="a00306.html">LibLoader::Scheduler</a></div><div class="ttdef"><b>Definition:</b> <a href="a00068_source.html#l00012">Scheduler.h:12</a></div></div>
-<div class="ttc" id="aa00306_html_a60264799b74fbe2b0466d1de609cf95b"><div class="ttname"><a href="a00306.html#a60264799b74fbe2b0466d1de609cf95b">LibLoader::Scheduler::popSchedule</a></div><div class="ttdeci">void popSchedule() noexcept</div><div class="ttdoc">libLoader线程tick调用，弹出所有计时器</div><div class="ttdef"><b>Definition:</b> <a href="a00230_source.html#l00067">Scheduler.cpp:67</a></div></div>
-<div class="ttc" id="aa00306_html_a746efd674de5c56de789a0c03be7948e"><div class="ttname"><a href="a00306.html#a746efd674de5c56de789a0c03be7948e">LibLoader::Scheduler::timer</a></div><div class="ttdeci">void timer(std::string id, std::string content, size_t timeInSec)</div><div class="ttdoc">新增一个计时器，对接libLoader API</div><div class="ttdef"><b>Definition:</b> <a href="a00230_source.html#l00053">Scheduler.cpp:53</a></div></div>
-<div class="ttc" id="aa00306_html_a78d8064032b232026e0b8029723c0e1b"><div class="ttname"><a href="a00306.html#a78d8064032b232026e0b8029723c0e1b">LibLoader::Scheduler::empty</a></div><div class="ttdeci">bool empty() noexcept</div><div class="ttdoc">获取schduler是否空</div><div class="ttdef"><b>Definition:</b> <a href="a00230_source.html#l00076">Scheduler.cpp:76</a></div></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="a00305.html">   24</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="a00305.html">LibLoader::JNIEnvs</a> {</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keyword">extern</span> jclass <span class="keyword">volatile</span> <a class="code hl_variable" href="a00305.html#a622c063c68b8d23ee251c36dd8c518e9">Class_cpplib</a>;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keyword">extern</span> jmethodID <span class="keyword">volatile</span> <a class="code hl_variable" href="a00305.html#a36a424ce478704cdd3eb5c14302351df">koper</a>;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="comment">// functions</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    JNIEnv *<a class="code hl_function" href="a00305.html#a076c5f4ff8083c7cfc6523498d0ba30f">getEnv</a>();</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="a00305.html#a82bb86ad9d77529b3a6e03364ab365f2">loadConfigClass</a>();</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="a00305.html#aa6bef678ac2c4db79c219654bba52aaf">initializeMiraiCPLoader</a>();</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>} <span class="comment">// namespace LibLoader::JNIEnvs</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="preprocessor">#endif </span><span class="comment">//LOADER_NATIVE</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="preprocessor">#endif </span><span class="comment">//MIRAICP_PRO_JNIENVS_H</span></div>
+<div class="ttc" id="aa00065_html"><div class="ttname"><a href="a00065.html">JNIEnvManager.h</a></div></div>
+<div class="ttc" id="aa00305_html"><div class="ttname"><a href="a00305.html">LibLoader::JNIEnvs</a></div><div class="ttdef"><b>Definition:</b> <a href="a00068_source.html#l00024">JNIEnvs.h:24</a></div></div>
+<div class="ttc" id="aa00305_html_a076c5f4ff8083c7cfc6523498d0ba30f"><div class="ttname"><a href="a00305.html#a076c5f4ff8083c7cfc6523498d0ba30f">LibLoader::JNIEnvs::getEnv</a></div><div class="ttdeci">JNIEnv * getEnv()</div><div class="ttdef"><b>Definition:</b> <a href="a00197_source.html#l00039">JNIEnvs.cpp:39</a></div></div>
+<div class="ttc" id="aa00305_html_a36a424ce478704cdd3eb5c14302351df"><div class="ttname"><a href="a00305.html#a36a424ce478704cdd3eb5c14302351df">LibLoader::JNIEnvs::koper</a></div><div class="ttdeci">jmethodID volatile koper</div><div class="ttdef"><b>Definition:</b> <a href="a00197_source.html#l00026">JNIEnvs.cpp:26</a></div></div>
+<div class="ttc" id="aa00305_html_a622c063c68b8d23ee251c36dd8c518e9"><div class="ttname"><a href="a00305.html#a622c063c68b8d23ee251c36dd8c518e9">LibLoader::JNIEnvs::Class_cpplib</a></div><div class="ttdeci">jclass volatile Class_cpplib</div><div class="ttdef"><b>Definition:</b> <a href="a00197_source.html#l00025">JNIEnvs.cpp:25</a></div></div>
+<div class="ttc" id="aa00305_html_a82bb86ad9d77529b3a6e03364ab365f2"><div class="ttname"><a href="a00305.html#a82bb86ad9d77529b3a6e03364ab365f2">LibLoader::JNIEnvs::loadConfigClass</a></div><div class="ttdeci">void loadConfigClass()</div><div class="ttdef"><b>Definition:</b> <a href="a00197_source.html#l00028">JNIEnvs.cpp:28</a></div></div>
+<div class="ttc" id="aa00305_html_aa6bef678ac2c4db79c219654bba52aaf"><div class="ttname"><a href="a00305.html#aa6bef678ac2c4db79c219654bba52aaf">LibLoader::JNIEnvs::initializeMiraiCPLoader</a></div><div class="ttdeci">void initializeMiraiCPLoader()</div><div class="ttdef"><b>Definition:</b> <a href="a00197_source.html#l00034">JNIEnvs.cpp:34</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_bda05eb71e068b870dbf680d28584ff8.html">libloader</a></li><li class="navelem"><a class="el" href="a00068.html">Scheduler.h</a></li>
-    <li class="footer">生成于 2023年 一月 21日 星期六 14:32:48 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_bda05eb71e068b870dbf680d28584ff8.html">libloader</a></li><li class="navelem"><a class="el" href="a00068.html">JNIEnvs.h</a></li>
+    <li class="footer">生成于 2023年 一月 22日 星期日 13:18:23 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
     </body>

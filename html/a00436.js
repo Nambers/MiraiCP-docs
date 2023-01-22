@@ -1,16 +1,17 @@
 var a00436 =
 [
-    [ "deserialize", "a00436.html#ab9cf06d58e4562680e5dcabec8556758", null ],
-    [ "deserialize", "a00436.html#ab9cf06d58e4562680e5dcabec8556758", null ],
-    [ "internalToJson", "a00436.html#af673a2e404372cc90719f38b9cced144", null ],
-    [ "internalToJson", "a00436.html#af673a2e404372cc90719f38b9cced144", null ],
-    [ "refreshInfo", "a00436.html#a1632df966247f52553c17e25e5d47280", null ],
-    [ "refreshInfo", "a00436.html#a1632df966247f52553c17e25e5d47280", null ],
-    [ "updateJson", "a00436.html#ab8bb03098fb7c84497eb7f10610855e5", null ],
-    [ "updateJson", "a00436.html#ab8bb03098fb7c84497eb7f10610855e5", null ],
-    [ "_avatarUrl", "a00436.html#a79b6e3d759b6f3e77198dc15c8a29057", null ],
-    [ "_botId", "a00436.html#ad56f484aaaa2ec82ce2d32e3d8b51755", null ],
-    [ "_id", "a00436.html#ab6222713565fc32fb53f1ff1300caa07", null ],
-    [ "_nickOrNameCard", "a00436.html#a9e2084ee904597c3dcd486a833173d6d", null ],
-    [ "_type", "a00436.html#a5d9cc201cdb3660afcd69128ec7f5784", null ]
+    [ "ContactType", "a00436.html#aa38779bbd1171da9518bb83264082068", [
+      [ "TypeFriend", "a00436.html#aa38779bbd1171da9518bb83264082068af62e36a099b924bed288d7ccd38ab024", null ],
+      [ "TypeGroup", "a00436.html#aa38779bbd1171da9518bb83264082068ad2ba0a69a1a41bd53332f02d149cfa80", null ],
+      [ "TypeMember", "a00436.html#aa38779bbd1171da9518bb83264082068a81fab02eb3c47d18cc9d371671e3f045", null ],
+      [ "TypeBot", "a00436.html#aa38779bbd1171da9518bb83264082068ab85ffd5dd440bc06611225b581948e55", null ],
+      [ "TypeStranger", "a00436.html#aa38779bbd1171da9518bb83264082068ab616dd158256ecadbaf1010842ee1aa7", null ],
+      [ "TypeAnonymousMember", "a00436.html#aa38779bbd1171da9518bb83264082068a2078e4769d279fa053d62f95e8a801d4", null ]
+    ] ],
+    [ "BuiltInContact", "a00436.html#a839c5a7e59d5efb34a53407844073b93", null ],
+    [ "toContactPointer", "a00436.html#a93657060055478e2132cf310015efbf8", null ],
+    [ "botId", "a00436.html#a0541df919137723469aba374ec295d3d", null ],
+    [ "groupId", "a00436.html#a7fe2fd4cc1730f7cf954daaef6c28d07", null ],
+    [ "id", "a00436.html#aac8590c3fac3b2b02d3538bbd0919f82", null ],
+    [ "type", "a00436.html#a0e15bf22071b50b12dc828d867ede022", null ]
 ];

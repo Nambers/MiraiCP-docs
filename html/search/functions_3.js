@@ -11,7 +11,7 @@ var searchData=
   ['checkapi_8',['checkApi',['../a00303.html#a013eeafb41e39a774e3b353a5f61fdb7',1,'LibLoader::LoaderApi']]],
   ['checkloaded_9',['checkLoaded',['../a00385.html#aed16647ce226a7e8ca04c61690ebe756',1,'LibLoader::Plugin']]],
   ['checkplugininfovalid_10',['checkPluginInfoValid',['../a00301.html#aa09e6340966a9de13ad8ce1e88175fa6',1,'LibLoader']]],
-  ['checkpthreadlen_11',['checkPthreadLen',['../a00017.html#a950b21be09363bd9b3cda80780d6f53f',1,'PlatformThreading.h']]],
+  ['checkpthreadlen_11',['checkPthreadLen',['../a00053.html#a950b21be09363bd9b3cda80780d6f53f',1,'PlatformThreading.h']]],
   ['checksafecall_12',['checkSafeCall',['../a00302.html#a0a223033909ab4ca1f424c337fda2b85',1,'MiraiCP']]],
   ['checkvalid_13',['checkValid',['../a00385.html#ae42c2fb572d9814de8f0a10ca2c0d2f3',1,'LibLoader::Plugin']]],
   ['clear_14',['clear',['../a00533.html#aeb2b9b9d676a9e6f392e4ce72dbe7643',1,'MiraiCP::Event']]],

@@ -1,26 +1,10 @@
 var a00480 =
 [
-    [ "GroupMessageEvent", "a00480.html#a382a42e39f6370420f61a77bde517365", null ],
-    [ "GroupMessageEvent", "a00480.html#a382a42e39f6370420f61a77bde517365", null ],
-    [ "chat", "a00480.html#a4cdd74f8d9a12c115899afc53088cde5", null ],
-    [ "chat", "a00480.html#a4cdd74f8d9a12c115899afc53088cde5", null ],
-    [ "chat", "a00480.html#a8d3c0c5bbda48132c31dca900f9d4931", null ],
-    [ "chat", "a00480.html#a8d3c0c5bbda48132c31dca900f9d4931", null ],
-    [ "from", "a00480.html#ae81a0e1dec6235d786b79244ef3ae40b", null ],
-    [ "from", "a00480.html#ae81a0e1dec6235d786b79244ef3ae40b", null ],
-    [ "from", "a00480.html#a76b1e6102746a08259bef6d638a8c993", null ],
-    [ "from", "a00480.html#a76b1e6102746a08259bef6d638a8c993", null ],
-    [ "get_event_type", "a00480.html#ad54cdae9c5b4b8119d307931278b0dab", null ],
-    [ "get_event_type", "a00480.html#ad54cdae9c5b4b8119d307931278b0dab", null ],
-    [ "getMessageChain", "a00480.html#a505491fdd1287b85705d706d4c54e8da", null ],
-    [ "getMessageChain", "a00480.html#a505491fdd1287b85705d706d4c54e8da", null ],
-    [ "getMessageChain", "a00480.html#a3dd489fc2c775cb0997402525d461877", null ],
-    [ "getMessageChain", "a00480.html#a3dd489fc2c775cb0997402525d461877", null ],
-    [ "nextMessage", "a00480.html#addb043788194a8bffd2eeddff17080ef", null ],
-    [ "nextMessage", "a00480.html#addb043788194a8bffd2eeddff17080ef", null ],
-    [ "senderNextMessage", "a00480.html#a67d98fb7d7214cb2bc916da47e3e5ce3", null ],
-    [ "senderNextMessage", "a00480.html#a67d98fb7d7214cb2bc916da47e3e5ce3", null ],
-    [ "group", "a00480.html#abac98c5b1373ad6c8483f9978952c553", null ],
-    [ "message", "a00480.html#a722dc1ca031c471c953c710367067ae7", null ],
-    [ "sender", "a00480.html#acd0e90e4fb7862986215aae7e47cb2d6", null ]
+    [ "MemberRecallEvent", "a00480.html#ae2531a88731e49d91180cc0c890fa24d", null ],
+    [ "get_event_type", "a00480.html#aa6f3ad8649a79e18d462e9ec112ecd81", null ],
+    [ "author", "a00480.html#a42b790ec3a63e1e3681153d4450ff61c", null ],
+    [ "ids", "a00480.html#aa89c57b7458608b67fecce4cb3aec205", null ],
+    [ "internalIds", "a00480.html#a7ae3f1f378e6191e0825aaeb4e0a32d7", null ],
+    [ "operater", "a00480.html#a36111b48542b165bd42014c05b565e63", null ],
+    [ "time", "a00480.html#a10924542380ed62cbf690d8754cc7a10", null ]
 ];

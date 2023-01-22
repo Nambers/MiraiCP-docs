@@ -1,7 +1,8 @@
 var a00608 =
 [
-    [ "RecallException", "a00608.html#a7efed6d5b4e2e7c655b53496fbff9710", null ],
-    [ "RecallException", "a00608.html#a7efed6d5b4e2e7c655b53496fbff9710", null ],
-    [ "exceptionType", "a00608.html#abb3b6f5b42098376e6a195eb6f420410", null ],
-    [ "exceptionType", "a00608.html#abb3b6f5b42098376e6a195eb6f420410", null ]
+    [ "MiraiCPThreadException", "a00608.html#a4b4c5caac34747b3ecb483f4deed965f", null ],
+    [ "exceptionType", "a00608.html#aad0c4ccc8e691b6d4a078b1ea85c3207", null ],
+    [ "getThreadIdStr", "a00608.html#ae296a1ee1626dd34c9028ae8a33179a5", null ],
+    [ "getThreadIdStr", "a00608.html#a6beb35a9023dec7d8f0fc7de6c2c6257", null ],
+    [ "threadId", "a00608.html#aabed0e9baac6e2c9164c5b606b04bc97", null ]
 ];

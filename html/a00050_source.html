@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiraiCP: loaderMain.h 源文件</title>
+<title>MiraiCP: MiraiCPStringInternal.h 源文件</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -93,10 +93,10 @@ $(document).ready(function(){initNavTree('a00050_source.html',''); initResizable
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">loaderMain.h</div></div>
+  <div class="headertitle"><div class="title">MiraiCPStringInternal.h</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="a00050.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// Copyright (c) 2022 - 2022. Antares, Eritque arcus and contributors.</span></div>
+<a href="a00050.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// Copyright (c) 2022. Eritque arcus and contributors.</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">//</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">// This program is free software: you can redistribute it and/or modify</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">// it under the terms of the GNU Affero General Public License as</span></div>
@@ -112,44 +112,96 @@ $(document).ready(function(){initNavTree('a00050_source.html',''); initResizable
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">// along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</span></div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">//</span></div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#ifndef MIRAICP_PRO_LOADERMAIN_H</span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#define MIRAICP_PRO_LOADERMAIN_H</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#ifndef MIRAICP_PRO_MIRAICPSTRINGINTERNAL_H</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#define MIRAICP_PRO_MIRAICPSTRINGINTERNAL_H</span></div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keyword">namespace </span><a class="code hl_namespace" href="a00301.html">LibLoader</a> {</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="a00381.html">   22</a></span>    <span class="keyword">class </span><a class="code hl_class" href="a00381.html">LoaderMain</a> {</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="a00381.html#a348439e27d1a976dd143da7a8b8b0de9">   23</a></span>        <span class="keyword">volatile</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_variable" href="a00381.html#a348439e27d1a976dd143da7a8b8b0de9">loader_exit</a>;</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="a00381.html#a0fbfe44fb362bf323c41e3ae73717edd">mainloop</a>() noexcept;</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        static <span class="keywordtype">void</span> <a class="code hl_function" href="a00381.html#a6d477440277d3907b96261db3a222d96">shutdownLoader</a>();</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    public:</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="a00381.html#a41be9b5aab1d2394f236e1f42a0a2482">   31</a></span>        static <span class="keywordtype">bool</span> <a class="code hl_function" href="a00381.html#a41be9b5aab1d2394f236e1f42a0a2482">is_loader_exited</a>() { <span class="keywordflow">return</span> <a class="code hl_variable" href="a00381.html#a348439e27d1a976dd143da7a8b8b0de9">loader_exit</a>; }</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="a00381.html#ae6cd717526cfbf2a3aba7bd361ebbf4c">   33</a></span>        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="a00381.html#ae6cd717526cfbf2a3aba7bd361ebbf4c">loaderExit</a>() { <a class="code hl_variable" href="a00381.html#a348439e27d1a976dd143da7a8b8b0de9">loader_exit</a> = <span class="keyword">true</span>; }</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="a00381.html#a79cbc18aabed7afe2c7ea30f989ffc8c">loaderMain</a>();</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    };</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>} <span class="comment">// namespace LibLoader</span></div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="preprocessor">#endif </span><span class="comment">//MIRAICP_PRO_LOADERMAIN_H</span></div>
-<div class="ttc" id="aa00301_html"><div class="ttname"><a href="a00301.html">LibLoader</a></div><div class="ttdef"><b>Definition:</b> <a href="a00005_source.html#l00028">commonTypes.h:28</a></div></div>
-<div class="ttc" id="aa00381_html"><div class="ttname"><a href="a00381.html">LibLoader::LoaderMain</a></div><div class="ttdef"><b>Definition:</b> <a href="a00050_source.html#l00022">loaderMain.h:22</a></div></div>
-<div class="ttc" id="aa00381_html_a0fbfe44fb362bf323c41e3ae73717edd"><div class="ttname"><a href="a00381.html#a0fbfe44fb362bf323c41e3ae73717edd">LibLoader::LoaderMain::mainloop</a></div><div class="ttdeci">static void mainloop() noexcept</div><div class="ttdef"><b>Definition:</b> <a href="a00215_source.html#l00103">loaderMain.cpp:103</a></div></div>
-<div class="ttc" id="aa00381_html_a348439e27d1a976dd143da7a8b8b0de9"><div class="ttname"><a href="a00381.html#a348439e27d1a976dd143da7a8b8b0de9">LibLoader::LoaderMain::loader_exit</a></div><div class="ttdeci">static volatile bool loader_exit</div><div class="ttdef"><b>Definition:</b> <a href="a00050_source.html#l00023">loaderMain.h:23</a></div></div>
-<div class="ttc" id="aa00381_html_a41be9b5aab1d2394f236e1f42a0a2482"><div class="ttname"><a href="a00381.html#a41be9b5aab1d2394f236e1f42a0a2482">LibLoader::LoaderMain::is_loader_exited</a></div><div class="ttdeci">static bool is_loader_exited()</div><div class="ttdef"><b>Definition:</b> <a href="a00050_source.html#l00031">loaderMain.h:31</a></div></div>
-<div class="ttc" id="aa00381_html_a6d477440277d3907b96261db3a222d96"><div class="ttname"><a href="a00381.html#a6d477440277d3907b96261db3a222d96">LibLoader::LoaderMain::shutdownLoader</a></div><div class="ttdeci">static void shutdownLoader()</div><div class="ttdef"><b>Definition:</b> <a href="a00215_source.html#l00159">loaderMain.cpp:159</a></div></div>
-<div class="ttc" id="aa00381_html_a79cbc18aabed7afe2c7ea30f989ffc8c"><div class="ttname"><a href="a00381.html#a79cbc18aabed7afe2c7ea30f989ffc8c">LibLoader::LoaderMain::loaderMain</a></div><div class="ttdeci">static void loaderMain()</div><div class="ttdoc">LoaderMain实现开始</div><div class="ttdef"><b>Definition:</b> <a href="a00215_source.html#l00039">loaderMain.cpp:39</a></div></div>
-<div class="ttc" id="aa00381_html_ae6cd717526cfbf2a3aba7bd361ebbf4c"><div class="ttname"><a href="a00381.html#ae6cd717526cfbf2a3aba7bd361ebbf4c">LibLoader::LoaderMain::loaderExit</a></div><div class="ttdeci">static void loaderExit()</div><div class="ttdef"><b>Definition:</b> <a href="a00050_source.html#l00033">loaderMain.h:33</a></div></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &quot;<a class="code" href="a00047.html">MiraiCPMacros.h</a>&quot;</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">// -----------------------</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &lt;cassert&gt;</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="keyword">namespace </span><a class="code hl_namespace" href="a00302.html">MiraiCP</a> {</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="comment">// this class is used to ensure data consistency between dynamic libs</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="comment">// note: DO NOT use this directly;</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="comment">// always convert to const char* or std::string before using.</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="a00337.html">   33</a></span><span class="comment"></span>    <span class="keyword">class </span><a class="code hl_define" href="a00047.html#aa40df2b825bdde9207f3e87b140235c3">MIRAICP_EXPORT</a> <a class="code hl_class" href="a00337.html">MiraiCPString</a> final {</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="a00337.html#a23179ec928a1d6435fabb02326c6e247">   34</a></span>        <span class="keyword">using</span> <span class="keywordtype">string</span> = std::string;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="a00337.html#aeb14e5f57bc3dae205e6eed695b61113">   37</a></span>        <span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keyword">decltype</span>(&amp;::std::free) std_free_ptr = &amp;::std::free;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <span class="comment">// to keep integration and safe for empty construction/deconstruction, always initialize here</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="a00337.html#ae296eb86d0acfd5b1a5b1264f5a01a33">   41</a></span>        <span class="keywordtype">char</span> *str = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="a00337.html#ab6bb3947d9db2fd407b8c20f0a768183">   42</a></span>        <span class="keywordtype">size_t</span> _size = 0;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="a00337.html#a411445a053abae2778bd0347523a670d">   43</a></span>        <span class="keyword">decltype</span>(&amp;::std::free) free_this = std_free_ptr; <span class="comment">// specify which free() to use; ensure deconstruction is paired to construction</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="a00337.html#aa3633b0912b856ddce567143f001c682">   46</a></span>        [[nodiscard]] <span class="keywordtype">bool</span> <a class="code hl_function" href="a00337.html#aa3633b0912b856ddce567143f001c682">isEmpty</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>            <span class="keywordflow">return</span> _size == 0;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        }</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="a00337.html#a10535c2483c0959b0997c2514d4932e4">   50</a></span>        <a class="code hl_function" href="a00337.html#a10535c2483c0959b0997c2514d4932e4">MiraiCPString</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        <span class="comment">// call if _size is set to non-zero</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        <span class="comment">// allocate memory for str</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        <span class="keywordtype">void</span> construction();</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        <a class="code hl_class" href="a00337.html">~MiraiCPString</a>();</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        <a class="code hl_class" href="a00337.html">MiraiCPString</a>(<span class="keyword">const</span> <a class="code hl_class" href="a00337.html">MiraiCPString</a> &amp;other);</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        <a class="code hl_class" href="a00337.html">MiraiCPString</a>(<a class="code hl_class" href="a00337.html">MiraiCPString</a> &amp;&amp;temp) <span class="keyword">noexcept</span>;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        <a class="code hl_class" href="a00337.html">MiraiCPString</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *char_str); <span class="comment">// NOLINT(google-explicit-constructor)</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        <a class="code hl_class" href="a00337.html">MiraiCPString</a>(<span class="keyword">const</span> std::string &amp;string_str); <span class="comment">// NOLINT(google-explicit-constructor)</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="a00337.html#a40af897f51c62faf7ef4468017d42d3f">   66</a></span>        [[nodiscard]] std::string <a class="code hl_function" href="a00337.html#a40af897f51c62faf7ef4468017d42d3f">toString</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>            <span class="keywordflow">if</span> (str == <span class="keyword">nullptr</span> || _size == 0) <span class="keywordflow">return</span> {};</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>            <span class="keywordflow">return</span> {str};</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        }</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="a00337.html#aba1de80f20a55d6cb8124550a10e8123">   71</a></span>        <span class="keyword">operator</span> std::string()<span class="keyword"> const </span>{ <span class="comment">// NOLINT(google-explicit-constructor)</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>            <span class="keywordflow">return</span> toString();</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        }</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        <span class="comment">// for safe destruction, DO NOT provide move conversion to char*</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        <span class="comment">// the return value of this method can always be deleted by delete[] and is never nullptr</span></div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        [[nodiscard]] <span class="keyword">const</span> <span class="keywordtype">char</span> *copyToCharPtr() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        <span class="keywordtype">bool</span> operator==(<span class="keyword">const</span> <a class="code hl_class" href="a00337.html">MiraiCPString</a> &amp;another) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        <a class="code hl_class" href="a00337.html">MiraiCPString</a> &amp;operator=(<span class="keyword">const</span> <a class="code hl_class" href="a00337.html">MiraiCPString</a> &amp;another);</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        <a class="code hl_class" href="a00337.html">MiraiCPString</a> &amp;operator=(<a class="code hl_class" href="a00337.html">MiraiCPString</a> &amp;&amp;another) <span class="keyword">noexcept</span>;</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        <span class="keywordtype">void</span> swap(<a class="code hl_class" href="a00337.html">MiraiCPString</a> &amp;other) <span class="keyword">noexcept</span>;</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    };</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    <span class="keyword">static_assert</span>(<span class="keyword">sizeof</span>(<span class="keywordtype">char</span> *) == 8, <span class="stringliteral">&quot;Please make sure the size of pointers is 8 bytes&quot;</span>);</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <span class="keyword">static_assert</span>(<span class="keyword">sizeof</span>(MiraiCPString) == 3 * 8, <span class="stringliteral">&quot;Please make sure the size of size_t is 8 bytes&quot;</span>);</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>} <span class="comment">// namespace MiraiCP</span></div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span><span class="preprocessor">#endif </span><span class="comment">//MIRAICP_PRO_MIRAICPSTRINGINTERNAL_H</span></div>
+<div class="ttc" id="aa00047_html"><div class="ttname"><a href="a00047.html">MiraiCPMacros.h</a></div></div>
+<div class="ttc" id="aa00047_html_aa40df2b825bdde9207f3e87b140235c3"><div class="ttname"><a href="a00047.html#aa40df2b825bdde9207f3e87b140235c3">MIRAICP_EXPORT</a></div><div class="ttdeci">#define MIRAICP_EXPORT</div><div class="ttdef"><b>Definition:</b> <a href="a00047_source.html#l00180">MiraiCPMacros.h:180</a></div></div>
+<div class="ttc" id="aa00302_html"><div class="ttname"><a href="a00302.html">MiraiCP</a></div><div class="ttdef"><b>Definition:</b> <a href="a00041_source.html#l00041">commonTypes.h:41</a></div></div>
+<div class="ttc" id="aa00337_html"><div class="ttname"><a href="a00337.html">MiraiCP::MiraiCPString</a></div><div class="ttdoc">MiraiCP内部传递string数据用</div><div class="ttdef"><b>Definition:</b> <a href="a00050_source.html#l00033">MiraiCPStringInternal.h:33</a></div></div>
+<div class="ttc" id="aa00337_html_a10535c2483c0959b0997c2514d4932e4"><div class="ttname"><a href="a00337.html#a10535c2483c0959b0997c2514d4932e4">MiraiCP::MiraiCPString::MiraiCPString</a></div><div class="ttdeci">MiraiCPString()=default</div></div>
+<div class="ttc" id="aa00337_html_a40af897f51c62faf7ef4468017d42d3f"><div class="ttname"><a href="a00337.html#a40af897f51c62faf7ef4468017d42d3f">MiraiCP::MiraiCPString::toString</a></div><div class="ttdeci">std::string toString() const</div><div class="ttdef"><b>Definition:</b> <a href="a00050_source.html#l00066">MiraiCPStringInternal.h:66</a></div></div>
+<div class="ttc" id="aa00337_html_aa3633b0912b856ddce567143f001c682"><div class="ttname"><a href="a00337.html#aa3633b0912b856ddce567143f001c682">MiraiCP::MiraiCPString::isEmpty</a></div><div class="ttdeci">bool isEmpty() const</div><div class="ttdef"><b>Definition:</b> <a href="a00050_source.html#l00046">MiraiCPStringInternal.h:46</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_bda05eb71e068b870dbf680d28584ff8.html">libloader</a></li><li class="navelem"><a class="el" href="a00050.html">loaderMain.h</a></li>
-    <li class="footer">生成于 2023年 一月 21日 星期六 14:32:48 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_0966d06610f72609fd9aa4979c2b5a92.html">common</a></li><li class="navelem"><a class="el" href="a00050.html">MiraiCPStringInternal.h</a></li>
+    <li class="footer">生成于 2023年 一月 22日 星期日 13:18:23 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
     </body>

@@ -103,7 +103,7 @@ $(document).ready(function(){initNavTree('a00353.html',''); initResizable(); });
 <p>总异常CRTP抽象类，不要直接抛出该类，不知道抛出什么的时候请抛出 LoaderException。 该类是用于继承的基类，需要新的异常类型时，继承该类并以子类作为模板参数。 子类需要实现的方法：  
  <a href="a00353.html#details">更多...</a></p>
 
-<p><code>#include &lt;<a class="el" href="a00041_source.html">LoaderExceptions.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="a00077_source.html">LoaderExceptions.h</a>&gt;</code></p>
 <div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> 类 LibLoader::LoaderExceptionCRTP&lt; T &gt; 继承关系图:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
@@ -116,7 +116,8 @@ $(document).ready(function(){initNavTree('a00353.html',''); initResizable(); });
 <div id="dynsection-1-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="a00351.svg" width="330" height="634"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00351.svg" width="330" height="634"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
@@ -172,7 +173,7 @@ interface LibLoader::LoaderExceptionCRTP&lt; T &gt;</div><p >总异常CRTP抽象
 </ol>
 <dl class="section note"><dt>注解</dt><dd>请勿给该类增加新的属性。如果要增加属性应在 <a class="el" href="a00349.html">LoaderBaseException</a> 中增加 </dd></dl>
 
-<p class="definition">在文件 <a class="el" href="a00041_source.html">LoaderExceptions.h</a> 第 <a class="el" href="a00041_source.html#l00078">78</a> 行定义.</p>
+<p class="definition">在文件 <a class="el" href="a00077_source.html">LoaderExceptions.h</a> 第 <a class="el" href="a00077_source.html#l00078">78</a> 行定义.</p>
 </div><h2 class="groupheader">构造及析构函数说明</h2>
 <a id="a569816ed3d22d644f7935ec745d03bd8" name="a569816ed3d22d644f7935ec745d03bd8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a569816ed3d22d644f7935ec745d03bd8">&#9670;&nbsp;</a></span>LoaderExceptionCRTP()</h2>
@@ -218,7 +219,7 @@ template&lt;class T &gt; </div>
 
 <p>委托构造函数 </p>
 
-<p class="definition">在文件 <a class="el" href="a00041_source.html">LoaderExceptions.h</a> 第 <a class="el" href="a00041_source.html#l00081">81</a> 行定义.</p>
+<p class="definition">在文件 <a class="el" href="a00077_source.html">LoaderExceptions.h</a> 第 <a class="el" href="a00077_source.html#l00081">81</a> 行定义.</p>
 <div class="fragment"><div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>            : <a class="code hl_function" href="a00349.html#a60617c64dab00d3d3c64d012ba6dda9f">LoaderBaseException</a>(std::move(_re), std::move(_filename), _lineNum) {}</div>
 <div class="ttc" id="aa00349_html_a60617c64dab00d3d3c64d012ba6dda9f"><div class="ttname"><a href="a00349.html#a60617c64dab00d3d3c64d012ba6dda9f">LibLoader::LoaderBaseException::LoaderBaseException</a></div><div class="ttdeci">LoaderBaseException(string info, string _filename, int _lineNum)</div><div class="ttdoc">受保护构造函数，供子类调用</div><div class="ttdef"><b>Definition:</b> <a href="a00209_source.html#l00022">LoaderExceptions.cpp:22</a></div></div>
 </div><!-- fragment -->
@@ -254,13 +255,13 @@ template&lt;class T &gt; </div>
 
 <p>实现了 <a class="el" href="a00349.html#a0c228099ad2d23da15b72123bb255f67">LibLoader::LoaderBaseException</a>.</p>
 
-<p class="definition">在文件 <a class="el" href="a00041_source.html">LoaderExceptions.h</a> 第 <a class="el" href="a00041_source.html#l00086">86</a> 行定义.</p>
+<p class="definition">在文件 <a class="el" href="a00077_source.html">LoaderExceptions.h</a> 第 <a class="el" href="a00077_source.html#l00086">86</a> 行定义.</p>
 <div class="fragment"><div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>{ <span class="keywordflow">return</span> T::exceptionType(); }</div>
 </div><!-- fragment -->
 </div>
 </div>
 <hr/>该接口的文档由以下文件生成:<ul>
-<li><a class="el" href="a00041_source.html">LoaderExceptions.h</a></li>
+<li><a class="el" href="a00077_source.html">LoaderExceptions.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -269,7 +270,7 @@ template&lt;class T &gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="a00301.html">LibLoader</a></li><li class="navelem"><a class="el" href="a00353.html">LoaderExceptionCRTP</a></li>
-    <li class="footer">生成于 2023年 一月 21日 星期六 14:32:48 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="footer">生成于 2023年 一月 22日 星期日 13:18:25 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
     </body>

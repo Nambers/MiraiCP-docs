@@ -1,16 +1,12 @@
 var a00756 =
 [
-    [ "At", "a00756.html#ab5b225ea67cf995d13b384ec622c86e7", null ],
-    [ "At", "a00756.html#a3e12195fc4d9ae026ec8a438a368342a", null ],
-    [ "At", "a00756.html#ab5b225ea67cf995d13b384ec622c86e7", null ],
-    [ "At", "a00756.html#a3e12195fc4d9ae026ec8a438a368342a", null ],
-    [ "operator==", "a00756.html#a58dbd3db49d9d2fed357b791ff3ba816", null ],
-    [ "operator==", "a00756.html#a58dbd3db49d9d2fed357b791ff3ba816", null ],
-    [ "toJson", "a00756.html#a60af12c9073c8734f98ee682a61ce184", null ],
-    [ "toJson", "a00756.html#a60af12c9073c8734f98ee682a61ce184", null ],
-    [ "toMiraiCode", "a00756.html#abaa95fab044eebb3e355da0040c0bfa7", null ],
-    [ "toMiraiCode", "a00756.html#abaa95fab044eebb3e355da0040c0bfa7", null ],
-    [ "type", "a00756.html#a125a356ddd55ec22117d8fafb1f32dc9", null ],
-    [ "type", "a00756.html#a125a356ddd55ec22117d8fafb1f32dc9", null ],
-    [ "target", "a00756.html#a4c451a3d12d38f6a83d425cab2d2aa25", null ]
+    [ "operator==", "a00756.html#adf77a906cd6705425a28ab4483c634b5", null ],
+    [ "ShouldNotUse", "a00756.html#a66690e9c31bc7daf8a1c7c15261f83b3", null ],
+    [ "type", "a00756.html#ab55cc2add22064ea6437677abc6d2555", null ],
+    [ "codec", "a00756.html#afe96592ba24d9c3f1887c7668d788c97", null ],
+    [ "filename", "a00756.html#a9cf8841f7297be7d0b8404aeaf1727a1", null ],
+    [ "length", "a00756.html#a963774ddebf115bebd86386cb84a5117", null ],
+    [ "md5", "a00756.html#a403a5a5837bbf02f5e0c5a4327f51ff3", null ],
+    [ "size", "a00756.html#a06c764f6c1f6f65def69fcfe378ebef1", null ],
+    [ "url", "a00756.html#aedf31534944297bea3c997cc49329443", null ]
 ];

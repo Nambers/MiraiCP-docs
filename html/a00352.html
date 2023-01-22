@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiraiCP: BS::multi_future&lt; T &gt; 模板类 参考</title>
+<title>MiraiCP: LibLoader::PluginAlreadyLoadedException类 参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -95,118 +95,136 @@ $(document).ready(function(){initNavTree('a00352.html',''); initResizable(); });
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public 成员函数</a> &#124;
-<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
 <a href="a00349.html">所有成员列表</a>  </div>
-  <div class="headertitle"><div class="title">BS::multi_future&lt; T &gt; 模板类 参考</div></div>
+  <div class="headertitle"><div class="title">LibLoader::PluginAlreadyLoadedException类 参考</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>A helper class to facilitate waiting for and/or getting the results of multiple futures at once.  
- <a href="a00352.html#details">更多...</a></p>
-
-<p><code>#include &lt;<a class="el" href="a00026_source.html">BS_thread_pool.hpp</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="a00077_source.html">LoaderExceptions.h</a>&gt;</code></p>
 <div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> BS::multi_future&lt; T &gt; 的协作图:</div>
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> 类 LibLoader::PluginAlreadyLoadedException 继承关系图:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="a00350.svg" width="178" height="390"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00351.svg" width="407" height="1063"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> LibLoader::PluginAlreadyLoadedException 的协作图:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00350.svg" width="438" height="1062"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public 成员函数</h2></td></tr>
-<tr class="memitem:a320812d6a9287fa2aedf3deab6edee1a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00352.html#a320812d6a9287fa2aedf3deab6edee1a">multi_future</a> (const size_t num_futures_=0)</td></tr>
-<tr class="memdesc:a320812d6a9287fa2aedf3deab6edee1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a <a class="el" href="a00352.html" title="A helper class to facilitate waiting for and/or getting the results of multiple futures at once.">multi_future</a> object with the given number of futures.  <a href="a00352.html#a320812d6a9287fa2aedf3deab6edee1a">更多...</a><br /></td></tr>
-<tr class="separator:a320812d6a9287fa2aedf3deab6edee1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad2b19061c7db1d50a35858e17dcd2268"><td class="memItemLeft" align="right" valign="top">std::conditional_t&lt; std::is_void_v&lt; T &gt;, void, std::vector&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00352.html#ad2b19061c7db1d50a35858e17dcd2268">get</a> ()</td></tr>
-<tr class="memdesc:ad2b19061c7db1d50a35858e17dcd2268"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the results from all the futures stored in this <a class="el" href="a00352.html" title="A helper class to facilitate waiting for and/or getting the results of multiple futures at once.">multi_future</a> object, rethrowing any stored exceptions.  <a href="a00352.html#ad2b19061c7db1d50a35858e17dcd2268">更多...</a><br /></td></tr>
-<tr class="separator:ad2b19061c7db1d50a35858e17dcd2268"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a304215df62ff42c3f32eb707b99db47e"><td class="memItemLeft" align="right" valign="top">std::future&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00352.html#a304215df62ff42c3f32eb707b99db47e">operator[]</a> (const size_t i)</td></tr>
-<tr class="memdesc:a304215df62ff42c3f32eb707b99db47e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a reference to one of the futures stored in this <a class="el" href="a00352.html" title="A helper class to facilitate waiting for and/or getting the results of multiple futures at once.">multi_future</a> object.  <a href="a00352.html#a304215df62ff42c3f32eb707b99db47e">更多...</a><br /></td></tr>
-<tr class="separator:a304215df62ff42c3f32eb707b99db47e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6af9fb74e856f779a1722d2018afebee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00352.html#a6af9fb74e856f779a1722d2018afebee">push_back</a> (std::future&lt; T &gt; future)</td></tr>
-<tr class="memdesc:a6af9fb74e856f779a1722d2018afebee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Append a future to this <a class="el" href="a00352.html" title="A helper class to facilitate waiting for and/or getting the results of multiple futures at once.">multi_future</a> object.  <a href="a00352.html#a6af9fb74e856f779a1722d2018afebee">更多...</a><br /></td></tr>
-<tr class="separator:a6af9fb74e856f779a1722d2018afebee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abf3325699649c91f9dd88f5a252e742e"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00352.html#abf3325699649c91f9dd88f5a252e742e">size</a> () const</td></tr>
-<tr class="memdesc:abf3325699649c91f9dd88f5a252e742e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the number of futures stored in this <a class="el" href="a00352.html" title="A helper class to facilitate waiting for and/or getting the results of multiple futures at once.">multi_future</a> object.  <a href="a00352.html#abf3325699649c91f9dd88f5a252e742e">更多...</a><br /></td></tr>
-<tr class="separator:abf3325699649c91f9dd88f5a252e742e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a05073ed8d37b939c9440ac8789b69ba7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00352.html#a05073ed8d37b939c9440ac8789b69ba7">wait</a> () const</td></tr>
-<tr class="memdesc:a05073ed8d37b939c9440ac8789b69ba7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wait for all the futures stored in this <a class="el" href="a00352.html" title="A helper class to facilitate waiting for and/or getting the results of multiple futures at once.">multi_future</a> object.  <a href="a00352.html#a05073ed8d37b939c9440ac8789b69ba7">更多...</a><br /></td></tr>
-<tr class="separator:a05073ed8d37b939c9440ac8789b69ba7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f2470e6df0f8933b758b097baf14684"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00352.html#a2f2470e6df0f8933b758b097baf14684">PluginAlreadyLoadedException</a> (const <a class="el" href="a00340.html#a426a5f32b7a2a56205d68c118579c216">string</a> &amp;id, <a class="el" href="a00340.html#a426a5f32b7a2a56205d68c118579c216">string</a> _filename, int _lineNum)</td></tr>
+<tr class="separator:a2f2470e6df0f8933b758b097baf14684"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e17d4591ca87686d5f3bd663cd856e7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00352.html#a6e17d4591ca87686d5f3bd663cd856e7">raise</a> () const noexcept override</td></tr>
+<tr class="separator:a6e17d4591ca87686d5f3bd663cd856e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_a00344"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_a00344')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="a00344.html">LibLoader::LoaderExceptionCRTP&lt; PluginAlreadyLoadedException &gt;</a></td></tr>
+<tr class="memitem:a569816ed3d22d644f7935ec745d03bd8 inherit pub_methods_a00344"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00344.html#a569816ed3d22d644f7935ec745d03bd8">LoaderExceptionCRTP</a> (std::string _re, <a class="el" href="a00340.html#a426a5f32b7a2a56205d68c118579c216">string</a> _filename, int _lineNum)</td></tr>
+<tr class="memdesc:a569816ed3d22d644f7935ec745d03bd8 inherit pub_methods_a00344"><td class="mdescLeft">&#160;</td><td class="mdescRight">委托构造函数  <a href="a00344.html#a569816ed3d22d644f7935ec745d03bd8">更多...</a><br /></td></tr>
+<tr class="separator:a569816ed3d22d644f7935ec745d03bd8 inherit pub_methods_a00344"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2922c4bc8a26626dad74f11ec9bf6df0 inherit pub_methods_a00344"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00340.html#a426a5f32b7a2a56205d68c118579c216">string</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00344.html#a2922c4bc8a26626dad74f11ec9bf6df0">getExceptionType</a> () const override</td></tr>
+<tr class="memdesc:a2922c4bc8a26626dad74f11ec9bf6df0 inherit pub_methods_a00344"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取异常类型，通用接口  <a href="a00344.html#a2922c4bc8a26626dad74f11ec9bf6df0">更多...</a><br /></td></tr>
+<tr class="separator:a2922c4bc8a26626dad74f11ec9bf6df0 inherit pub_methods_a00344"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_a00340"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_a00340')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="a00340.html">LibLoader::LoaderBaseException</a></td></tr>
+<tr class="memitem:a5cae5e7ccb01c5851b2a06e95e81b907 inherit pub_methods_a00340"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00340.html#a5cae5e7ccb01c5851b2a06e95e81b907">~LoaderBaseException</a> () override=default</td></tr>
+<tr class="separator:a5cae5e7ccb01c5851b2a06e95e81b907 inherit pub_methods_a00340"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0928090784126f3081fb2b7e73c39b22 inherit pub_methods_a00340"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00340.html#a0928090784126f3081fb2b7e73c39b22">what</a> () const noexcept override</td></tr>
+<tr class="memdesc:a0928090784126f3081fb2b7e73c39b22 inherit pub_methods_a00340"><td class="mdescLeft">&#160;</td><td class="mdescRight">异常信息（std::exception接口）  <a href="a00340.html#a0928090784126f3081fb2b7e73c39b22">更多...</a><br /></td></tr>
+<tr class="separator:a0928090784126f3081fb2b7e73c39b22 inherit pub_methods_a00340"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
-Private 属性</h2></td></tr>
-<tr class="memitem:a27e462ff68dfe16e6bf23d87a174cfe0"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::future&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00352.html#a27e462ff68dfe16e6bf23d87a174cfe0">futures</a></td></tr>
-<tr class="memdesc:a27e462ff68dfe16e6bf23d87a174cfe0"><td class="mdescLeft">&#160;</td><td class="mdescRight">A vector to store the futures.  <a href="a00352.html#a27e462ff68dfe16e6bf23d87a174cfe0">更多...</a><br /></td></tr>
-<tr class="separator:a27e462ff68dfe16e6bf23d87a174cfe0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:ae99698dba6ffbe0c342d030af56e4cf0"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="a00340.html#a426a5f32b7a2a56205d68c118579c216">string</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00352.html#ae99698dba6ffbe0c342d030af56e4cf0">exceptionType</a> ()</td></tr>
+<tr class="separator:ae99698dba6ffbe0c342d030af56e4cf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_static_methods_a00340"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_a00340')"><img src="closed.png" alt="-"/>&#160;静态 Public 成员函数 继承自 <a class="el" href="a00340.html">LibLoader::LoaderBaseException</a></td></tr>
+<tr class="memitem:a256993d5a0b22f6057ddd19a50bdc872 inherit pub_static_methods_a00340"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="a00340.html#a426a5f32b7a2a56205d68c118579c216">string</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00340.html#a256993d5a0b22f6057ddd19a50bdc872">exceptionType</a> ()</td></tr>
+<tr class="memdesc:a256993d5a0b22f6057ddd19a50bdc872 inherit pub_static_methods_a00340"><td class="mdescLeft">&#160;</td><td class="mdescRight">返回异常的类型，该静态方法无法正确实现多态，请使用 getExceptionType  <a href="a00340.html#a256993d5a0b22f6057ddd19a50bdc872">更多...</a><br /></td></tr>
+<tr class="separator:a256993d5a0b22f6057ddd19a50bdc872 inherit pub_static_methods_a00340"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+额外继承的成员函数</h2></td></tr>
+<tr class="inherit_header pub_attribs_a00340"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_a00340')"><img src="closed.png" alt="-"/>&#160;Public 属性 继承自 <a class="el" href="a00340.html">LibLoader::LoaderBaseException</a></td></tr>
+<tr class="memitem:acfb18c7eb10c0dc2205c98e73ad0e647 inherit pub_attribs_a00340"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00340.html#a426a5f32b7a2a56205d68c118579c216">string</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00340.html#acfb18c7eb10c0dc2205c98e73ad0e647">filename</a></td></tr>
+<tr class="memdesc:acfb18c7eb10c0dc2205c98e73ad0e647 inherit pub_attribs_a00340"><td class="mdescLeft">&#160;</td><td class="mdescRight">发生异常的文件名  <a href="a00340.html#acfb18c7eb10c0dc2205c98e73ad0e647">更多...</a><br /></td></tr>
+<tr class="separator:acfb18c7eb10c0dc2205c98e73ad0e647 inherit pub_attribs_a00340"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a260f9ce0d0fc07df498b22eec899eb68 inherit pub_attribs_a00340"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00340.html#a260f9ce0d0fc07df498b22eec899eb68">lineNum</a> = 0</td></tr>
+<tr class="memdesc:a260f9ce0d0fc07df498b22eec899eb68 inherit pub_attribs_a00340"><td class="mdescLeft">&#160;</td><td class="mdescRight">发生异常的行号  <a href="a00340.html#a260f9ce0d0fc07df498b22eec899eb68">更多...</a><br /></td></tr>
+<tr class="separator:a260f9ce0d0fc07df498b22eec899eb68 inherit pub_attribs_a00340"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_types_a00340"><td colspan="2" onclick="javascript:toggleInherit('pro_types_a00340')"><img src="closed.png" alt="-"/>&#160;Protected 类型 继承自 <a class="el" href="a00340.html">LibLoader::LoaderBaseException</a></td></tr>
+<tr class="memitem:a426a5f32b7a2a56205d68c118579c216 inherit pro_types_a00340"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00340.html#a426a5f32b7a2a56205d68c118579c216">string</a> = std::string</td></tr>
+<tr class="separator:a426a5f32b7a2a56205d68c118579c216 inherit pro_types_a00340"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_methods_a00340"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_a00340')"><img src="closed.png" alt="-"/>&#160;Protected 成员函数 继承自 <a class="el" href="a00340.html">LibLoader::LoaderBaseException</a></td></tr>
+<tr class="memitem:a60617c64dab00d3d3c64d012ba6dda9f inherit pro_methods_a00340"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00340.html#a60617c64dab00d3d3c64d012ba6dda9f">LoaderBaseException</a> (<a class="el" href="a00340.html#a426a5f32b7a2a56205d68c118579c216">string</a> info, <a class="el" href="a00340.html#a426a5f32b7a2a56205d68c118579c216">string</a> _filename, int _lineNum)</td></tr>
+<tr class="memdesc:a60617c64dab00d3d3c64d012ba6dda9f inherit pro_methods_a00340"><td class="mdescLeft">&#160;</td><td class="mdescRight">受保护构造函数，供子类调用  <a href="a00340.html#a60617c64dab00d3d3c64d012ba6dda9f">更多...</a><br /></td></tr>
+<tr class="separator:a60617c64dab00d3d3c64d012ba6dda9f inherit pro_methods_a00340"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aefe83b46523df9d571e0f25b9283f793 inherit pro_methods_a00340"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00340.html#aefe83b46523df9d571e0f25b9283f793">warningRaise</a> () const noexcept</td></tr>
+<tr class="separator:aefe83b46523df9d571e0f25b9283f793 inherit pro_methods_a00340"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_a00340"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_a00340')"><img src="closed.png" alt="-"/>&#160;Protected 属性 继承自 <a class="el" href="a00340.html">LibLoader::LoaderBaseException</a></td></tr>
+<tr class="memitem:a4e41edc9cdc52ef5ed27b5f65938a928 inherit pro_attribs_a00340"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00340.html#a426a5f32b7a2a56205d68c118579c216">string</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00340.html#a4e41edc9cdc52ef5ed27b5f65938a928">errorMessage</a></td></tr>
+<tr class="memdesc:a4e41edc9cdc52ef5ed27b5f65938a928 inherit pro_attribs_a00340"><td class="mdescLeft">&#160;</td><td class="mdescRight">异常内容  <a href="a00340.html#a4e41edc9cdc52ef5ed27b5f65938a928">更多...</a><br /></td></tr>
+<tr class="separator:a4e41edc9cdc52ef5ed27b5f65938a928 inherit pro_attribs_a00340"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
-<div class="textblock"><div class="compoundTemplParams">template&lt;typename T&gt;<br />
-class BS::multi_future&lt; T &gt;</div><p >A helper class to facilitate waiting for and/or getting the results of multiple futures at once. </p>
-<dl class="tparams"><dt>模板参数</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">T</td><td>The return type of the futures. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition">在文件 <a class="el" href="a00026_source.html">BS_thread_pool.hpp</a> 第 <a class="el" href="a00026_source.html#l00049">49</a> 行定义.</p>
+<div class="textblock">
+<p class="definition">在文件 <a class="el" href="a00077_source.html">LoaderExceptions.h</a> 第 <a class="el" href="a00077_source.html#l00099">99</a> 行定义.</p>
 </div><h2 class="groupheader">构造及析构函数说明</h2>
-<a id="a320812d6a9287fa2aedf3deab6edee1a" name="a320812d6a9287fa2aedf3deab6edee1a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a320812d6a9287fa2aedf3deab6edee1a">&#9670;&nbsp;</a></span>multi_future()</h2>
+<a id="a2f2470e6df0f8933b758b097baf14684" name="a2f2470e6df0f8933b758b097baf14684"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f2470e6df0f8933b758b097baf14684">&#9670;&nbsp;</a></span>PluginAlreadyLoadedException()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a00352.html">BS::multi_future</a>&lt; T &gt;::<a class="el" href="a00352.html">multi_future</a> </td>
+          <td class="memname">LibLoader::PluginAlreadyLoadedException::PluginAlreadyLoadedException </td>
           <td>(</td>
-          <td class="paramtype">const size_t&#160;</td>
-          <td class="paramname"><em>num_futures_</em> = <code>0</code></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="a00340.html#a426a5f32b7a2a56205d68c118579c216">string</a> &amp;&#160;</td>
+          <td class="paramname"><em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype"><a class="el" href="a00340.html#a426a5f32b7a2a56205d68c118579c216">LoaderBaseException::string</a>&#160;</td>
+          <td class="paramname"><em>_filename</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>_lineNum</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>Construct a <a class="el" href="a00352.html" title="A helper class to facilitate waiting for and/or getting the results of multiple futures at once.">multi_future</a> object with the given number of futures. </p>
-<dl class="params"><dt>参数</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">num_futures_</td><td>The desired number of futures to store. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition">在文件 <a class="el" href="a00026_source.html">BS_thread_pool.hpp</a> 第 <a class="el" href="a00026_source.html#l00056">56</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>: <a class="code hl_variable" href="a00352.html#a27e462ff68dfe16e6bf23d87a174cfe0">futures</a>(num_futures_) {}</div>
-<div class="ttc" id="aa00352_html_a27e462ff68dfe16e6bf23d87a174cfe0"><div class="ttname"><a href="a00352.html#a27e462ff68dfe16e6bf23d87a174cfe0">BS::multi_future::futures</a></div><div class="ttdeci">std::vector&lt; std::future&lt; T &gt; &gt; futures</div><div class="ttdoc">A vector to store the futures.</div><div class="ttdef"><b>Definition:</b> <a href="a00026_source.html#l00116">BS_thread_pool.hpp:116</a></div></div>
+<p class="definition">在文件 <a class="el" href="a00209_source.html">LoaderExceptions.cpp</a> 第 <a class="el" href="a00209_source.html#l00038">38</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        : <a class="code hl_function" href="a00344.html#a569816ed3d22d644f7935ec745d03bd8">LoaderExceptionCRTP</a>(<span class="stringliteral">&quot;尝试加载已经被加载的插件：&quot;</span> + <span class="keywordtype">id</span>, std::move(_filename), _lineNum) {}</div>
+<div class="ttc" id="aa00344_html_a569816ed3d22d644f7935ec745d03bd8"><div class="ttname"><a href="a00344.html#a569816ed3d22d644f7935ec745d03bd8">LibLoader::LoaderExceptionCRTP&lt; PluginAlreadyLoadedException &gt;::LoaderExceptionCRTP</a></div><div class="ttdeci">LoaderExceptionCRTP(std::string _re, string _filename, int _lineNum)</div><div class="ttdoc">委托构造函数</div><div class="ttdef"><b>Definition:</b> <a href="a00077_source.html#l00081">LoaderExceptions.h:81</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">成员函数说明</h2>
-<a id="ad2b19061c7db1d50a35858e17dcd2268" name="ad2b19061c7db1d50a35858e17dcd2268"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad2b19061c7db1d50a35858e17dcd2268">&#9670;&nbsp;</a></span>get()</h2>
+<a id="ae99698dba6ffbe0c342d030af56e4cf0" name="ae99698dba6ffbe0c342d030af56e4cf0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae99698dba6ffbe0c342d030af56e4cf0">&#9670;&nbsp;</a></span>exceptionType()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::conditional_t&lt; std::is_void_v&lt; T &gt;, void, std::vector&lt; T &gt; &gt; <a class="el" href="a00352.html">BS::multi_future</a>&lt; T &gt;::get </td>
+          <td class="memname">static <a class="el" href="a00340.html#a426a5f32b7a2a56205d68c118579c216">string</a> LibLoader::PluginAlreadyLoadedException::exceptionType </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -214,127 +232,27 @@ template&lt;typename T &gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Get the results from all the futures stored in this <a class="el" href="a00352.html" title="A helper class to facilitate waiting for and/or getting the results of multiple futures at once.">multi_future</a> object, rethrowing any stored exceptions. </p>
-<dl class="section return"><dt>返回</dt><dd>If the futures return void, this function returns void as well. Otherwise, it returns a vector containing the results. </dd></dl>
-
-<p class="definition">在文件 <a class="el" href="a00026_source.html">BS_thread_pool.hpp</a> 第 <a class="el" href="a00026_source.html#l00063">63</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>                                                                                  {</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>            <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (std::is_void_v&lt;T&gt;) {</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>                <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; <a class="code hl_variable" href="a00352.html#a27e462ff68dfe16e6bf23d87a174cfe0">futures</a>.size(); ++i)</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>                    <a class="code hl_variable" href="a00352.html#a27e462ff68dfe16e6bf23d87a174cfe0">futures</a>[i].<a class="code hl_function" href="a00352.html#ad2b19061c7db1d50a35858e17dcd2268">get</a>();</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>                <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>                std::vector&lt;T&gt; results(<a class="code hl_variable" href="a00352.html#a27e462ff68dfe16e6bf23d87a174cfe0">futures</a>.size());</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>                <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; <a class="code hl_variable" href="a00352.html#a27e462ff68dfe16e6bf23d87a174cfe0">futures</a>.size(); ++i)</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>                    results[i] = <a class="code hl_variable" href="a00352.html#a27e462ff68dfe16e6bf23d87a174cfe0">futures</a>[i].<a class="code hl_function" href="a00352.html#ad2b19061c7db1d50a35858e17dcd2268">get</a>();</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>                <span class="keywordflow">return</span> results;</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>            }</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        }</div>
-<div class="ttc" id="aa00352_html_ad2b19061c7db1d50a35858e17dcd2268"><div class="ttname"><a href="a00352.html#ad2b19061c7db1d50a35858e17dcd2268">BS::multi_future::get</a></div><div class="ttdeci">std::conditional_t&lt; std::is_void_v&lt; T &gt;, void, std::vector&lt; T &gt; &gt; get()</div><div class="ttdoc">Get the results from all the futures stored in this multi_future object, rethrowing any stored except...</div><div class="ttdef"><b>Definition:</b> <a href="a00026_source.html#l00063">BS_thread_pool.hpp:63</a></div></div>
+<p class="definition">在文件 <a class="el" href="a00077_source.html">LoaderExceptions.h</a> 第 <a class="el" href="a00077_source.html#l00103">103</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>{ <span class="keywordflow">return</span> <span class="stringliteral">&quot;PluginAlreadyLoadedException&quot;</span>; }</div>
 </div><!-- fragment -->
 </div>
 </div>
-<a id="a304215df62ff42c3f32eb707b99db47e" name="a304215df62ff42c3f32eb707b99db47e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a304215df62ff42c3f32eb707b99db47e">&#9670;&nbsp;</a></span>operator[]()</h2>
+<a id="a6e17d4591ca87686d5f3bd663cd856e7" name="a6e17d4591ca87686d5f3bd663cd856e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e17d4591ca87686d5f3bd663cd856e7">&#9670;&nbsp;</a></span>raise()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::future&lt; T &gt; &amp; <a class="el" href="a00352.html">BS::multi_future</a>&lt; T &gt;::operator[] </td>
-          <td>(</td>
-          <td class="paramtype">const size_t&#160;</td>
-          <td class="paramname"><em>i</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Get a reference to one of the futures stored in this <a class="el" href="a00352.html" title="A helper class to facilitate waiting for and/or getting the results of multiple futures at once.">multi_future</a> object. </p>
-<dl class="params"><dt>参数</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">i</td><td>The index of the desired future. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>返回</dt><dd>The future. </dd></dl>
-
-<p class="definition">在文件 <a class="el" href="a00026_source.html">BS_thread_pool.hpp</a> 第 <a class="el" href="a00026_source.html#l00082">82</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>                                                               {</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="a00352.html#a27e462ff68dfe16e6bf23d87a174cfe0">futures</a>[i];</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        }</div>
-</div><!-- fragment -->
-</div>
-</div>
-<a id="a6af9fb74e856f779a1722d2018afebee" name="a6af9fb74e856f779a1722d2018afebee"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6af9fb74e856f779a1722d2018afebee">&#9670;&nbsp;</a></span>push_back()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="a00352.html">BS::multi_future</a>&lt; T &gt;::push_back </td>
-          <td>(</td>
-          <td class="paramtype">std::future&lt; T &gt;&#160;</td>
-          <td class="paramname"><em>future</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Append a future to this <a class="el" href="a00352.html" title="A helper class to facilitate waiting for and/or getting the results of multiple futures at once.">multi_future</a> object. </p>
-<dl class="params"><dt>参数</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">future</td><td>The future to append. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition">在文件 <a class="el" href="a00026_source.html">BS_thread_pool.hpp</a> 第 <a class="el" href="a00026_source.html#l00091">91</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>                                            {</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>            <a class="code hl_variable" href="a00352.html#a27e462ff68dfe16e6bf23d87a174cfe0">futures</a>.push_back(std::move(future));</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        }</div>
-</div><!-- fragment -->
-</div>
-</div>
-<a id="abf3325699649c91f9dd88f5a252e742e" name="abf3325699649c91f9dd88f5a252e742e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abf3325699649c91f9dd88f5a252e742e">&#9670;&nbsp;</a></span>size()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">size_t <a class="el" href="a00352.html">BS::multi_future</a>&lt; T &gt;::size </td>
+          <td class="memname">void LibLoader::PluginAlreadyLoadedException::raise </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -342,88 +260,32 @@ template&lt;typename T &gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Get the number of futures stored in this <a class="el" href="a00352.html" title="A helper class to facilitate waiting for and/or getting the results of multiple futures at once.">multi_future</a> object. </p>
-<dl class="section return"><dt>返回</dt><dd>The number of futures. </dd></dl>
+<p>重载 <a class="el" href="a00340.html#aa78df717d01813327f31b3cc2b8b0efb">LibLoader::LoaderBaseException</a> .</p>
 
-<p class="definition">在文件 <a class="el" href="a00026_source.html">BS_thread_pool.hpp</a> 第 <a class="el" href="a00026_source.html#l00100">100</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>                                          {</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="a00352.html#a27e462ff68dfe16e6bf23d87a174cfe0">futures</a>.size();</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        }</div>
-</div><!-- fragment -->
+<p class="definition">在文件 <a class="el" href="a00209_source.html">LoaderExceptions.cpp</a> 第 <a class="el" href="a00209_source.html#l00041">41</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>                                                            {</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <a class="code hl_function" href="a00340.html#aefe83b46523df9d571e0f25b9283f793">warningRaise</a>();</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    }</div>
+<div class="ttc" id="aa00340_html_aefe83b46523df9d571e0f25b9283f793"><div class="ttname"><a href="a00340.html#aefe83b46523df9d571e0f25b9283f793">LibLoader::LoaderBaseException::warningRaise</a></div><div class="ttdeci">void warningRaise() const noexcept</div><div class="ttdef"><b>Definition:</b> <a href="a00209_source.html#l00031">LoaderExceptions.cpp:31</a></div></div>
+</div><!-- fragment --><div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-2-trigger" src="closed.png" alt="+"/> 函数调用图:</div>
+<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-2-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00352_a6e17d4591ca87686d5f3bd663cd856e7_cgraph.svg" width="1766" height="96"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
-<a id="a05073ed8d37b939c9440ac8789b69ba7" name="a05073ed8d37b939c9440ac8789b69ba7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a05073ed8d37b939c9440ac8789b69ba7">&#9670;&nbsp;</a></span>wait()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="a00352.html">BS::multi_future</a>&lt; T &gt;::wait </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Wait for all the futures stored in this <a class="el" href="a00352.html" title="A helper class to facilitate waiting for and/or getting the results of multiple futures at once.">multi_future</a> object. </p>
-
-<p class="definition">在文件 <a class="el" href="a00026_source.html">BS_thread_pool.hpp</a> 第 <a class="el" href="a00026_source.html#l00107">107</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>                          {</div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; <a class="code hl_variable" href="a00352.html#a27e462ff68dfe16e6bf23d87a174cfe0">futures</a>.size(); ++i)</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>                <a class="code hl_variable" href="a00352.html#a27e462ff68dfe16e6bf23d87a174cfe0">futures</a>[i].<a class="code hl_function" href="a00352.html#a05073ed8d37b939c9440ac8789b69ba7">wait</a>();</div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>        }</div>
-<div class="ttc" id="aa00352_html_a05073ed8d37b939c9440ac8789b69ba7"><div class="ttname"><a href="a00352.html#a05073ed8d37b939c9440ac8789b69ba7">BS::multi_future::wait</a></div><div class="ttdeci">void wait() const</div><div class="ttdoc">Wait for all the futures stored in this multi_future object.</div><div class="ttdef"><b>Definition:</b> <a href="a00026_source.html#l00107">BS_thread_pool.hpp:107</a></div></div>
-</div><!-- fragment -->
-</div>
-</div>
-<h2 class="groupheader">类成员变量说明</h2>
-<a id="a27e462ff68dfe16e6bf23d87a174cfe0" name="a27e462ff68dfe16e6bf23d87a174cfe0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a27e462ff68dfe16e6bf23d87a174cfe0">&#9670;&nbsp;</a></span>futures</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::vector&lt;std::future&lt;T&gt; &gt; <a class="el" href="a00352.html">BS::multi_future</a>&lt; T &gt;::futures</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>A vector to store the futures. </p>
-
-<p class="definition">在文件 <a class="el" href="a00026_source.html">BS_thread_pool.hpp</a> 第 <a class="el" href="a00026_source.html#l00116">116</a> 行定义.</p>
 
 </div>
 </div>
 <hr/>该类的文档由以下文件生成:<ul>
-<li><a class="el" href="a00026_source.html">BS_thread_pool.hpp</a></li>
+<li><a class="el" href="a00077_source.html">LoaderExceptions.h</a></li>
+<li><a class="el" href="a00209_source.html">LoaderExceptions.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -431,8 +293,8 @@ template&lt;typename T &gt; </div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="a00311.html">BS</a></li><li class="navelem"><a class="el" href="a00352.html">multi_future</a></li>
-    <li class="footer">生成于 2023年 一月 21日 星期六 14:15:22 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="navelem"><a class="el" href="a00301.html">LibLoader</a></li><li class="navelem"><a class="el" href="a00352.html">PluginAlreadyLoadedException</a></li>
+    <li class="footer">生成于 2023年 一月 22日 星期日 13:16:59 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
     </body>

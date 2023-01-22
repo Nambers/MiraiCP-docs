@@ -1,27 +1,5 @@
 var a00680 =
 [
-    [ "MiraiDataLocker", "a00684.html", "a00684" ],
-    [ "IMiraiData", "a00680.html#a2079413e6c26dc563bf4e496ae25ca08", null ],
-    [ "~IMiraiData", "a00680.html#ab1262457e073f9c776c941962a5b6699", null ],
-    [ "IMiraiData", "a00680.html#a2079413e6c26dc563bf4e496ae25ca08", null ],
-    [ "~IMiraiData", "a00680.html#ab1262457e073f9c776c941962a5b6699", null ],
-    [ "deserialize", "a00680.html#aadb307b6bd6a1f901a6504c5afa37e79", null ],
-    [ "deserialize", "a00680.html#aadb307b6bd6a1f901a6504c5afa37e79", null ],
-    [ "forceRefreshNextTime", "a00680.html#abdbf2a10d21a520b782c1654beb3214a", null ],
-    [ "forceRefreshNextTime", "a00680.html#abdbf2a10d21a520b782c1654beb3214a", null ],
-    [ "getMutex", "a00680.html#ad6440ea1909386acbfd77fe1e17d30f8", null ],
-    [ "getMutex", "a00680.html#ad6440ea1909386acbfd77fe1e17d30f8", null ],
-    [ "internalToJson", "a00680.html#ae9f9f272fbb0b68b07dd4750745fae1d", null ],
-    [ "internalToJson", "a00680.html#ae9f9f272fbb0b68b07dd4750745fae1d", null ],
-    [ "internalToString", "a00680.html#a862c4fbbceae111c0c37df2bf76c7859", null ],
-    [ "internalToString", "a00680.html#a862c4fbbceae111c0c37df2bf76c7859", null ],
-    [ "refreshInfo", "a00680.html#a628b8885f118d1f20b2f4afd1add0e8b", null ],
-    [ "refreshInfo", "a00680.html#a628b8885f118d1f20b2f4afd1add0e8b", null ],
-    [ "requestRefresh", "a00680.html#a0af5afb339c80a734ac9752d4f179069", null ],
-    [ "requestRefresh", "a00680.html#a0af5afb339c80a734ac9752d4f179069", null ],
-    [ "toJson", "a00680.html#a17445e67d1cf31c184cf144f874e82f9", null ],
-    [ "toJson", "a00680.html#a17445e67d1cf31c184cf144f874e82f9", null ],
-    [ "toString", "a00680.html#a0795b1c8b45a0c122c8027f359b8f40e", null ],
-    [ "toString", "a00680.html#a0795b1c8b45a0c122c8027f359b8f40e", null ],
-    [ "Locker", "a00680.html#a1a587f53dc97566ee040cd12f9901314", null ]
+    [ "avatarUrl", "a00680.html#a037b8d06c116200bdb37de924401ef46", null ],
+    [ "nickOrNameCard", "a00680.html#adde89d46741f72078eda3db91c56a142", null ]
 ];

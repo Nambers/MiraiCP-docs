@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiraiCP: loaderApi.h 源文件</title>
+<title>MiraiCP: Scheduler.h 源文件</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -93,69 +93,42 @@ $(document).ready(function(){initNavTree('a00104_source.html',''); initResizable
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">loaderApi.h</div></div>
+  <div class="headertitle"><div class="title">Scheduler.h</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="a00104.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// Copyright (c) 2022 - 2022. Antares, Eritque arcus and contributors.</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">//</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">// This program is free software: you can redistribute it and/or modify</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">// it under the terms of the GNU Affero General Public License as</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">// published by the Free Software Foundation, either version 3 of the</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">// License, or any later version(in your opinion).</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment">//</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment">// This program is distributed in the hope that it will be useful,</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment">// but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment">// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment">// GNU Affero General Public License for more details.</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment">//</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">// You should have received a copy of the GNU Affero General Public License</span></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">// along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">//</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#ifndef MIRAICP_PRO_LOADERAPI_H</span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#define MIRAICP_PRO_LOADERAPI_H</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<a href="a00104.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">//</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">// Created by antares on 11/11/22.</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">//</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#ifndef MIRAICP_PRO_SCHEDULER_H</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#define MIRAICP_PRO_SCHEDULER_H</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;chrono&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="a00306.html">   12</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="a00306.html">LibLoader::Scheduler</a> {</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="a00306.html#a60264799b74fbe2b0466d1de609cf95b">popSchedule</a>() <span class="keyword">noexcept</span>;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="a00306.html#a746efd674de5c56de789a0c03be7948e">timer</a>(std::string <span class="keywordtype">id</span>, std::string content, <span class="keywordtype">size_t</span> timeInSec);</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="a00306.html#a78d8064032b232026e0b8029723c0e1b">empty</a>() <span class="keyword">noexcept</span>;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>} <span class="comment">// namespace LibLoader::Scheduler</span></div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment">// for plugin usage</span></div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="a00310.html">   25</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="a00310.html">MiraiCP::LoaderApi</a> {</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    std::vector&lt;std::string&gt; <a class="code hl_function" href="a00310.html#a733d3f3f90c6925034b10116fb6510e6">showAllPluginId</a>();</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="a00310.html#acab9ccd86eed6b2d17836f5f2899b2a7">enablePluginById</a>(<span class="keyword">const</span> std::string &amp;<span class="keywordtype">id</span>);</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="a00310.html#a5c00ba2c6c7b08c0ff508ed5e0cd518d">disablePluginById</a>(<span class="keyword">const</span> std::string &amp;);</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="a00310.html#a56e5dba3d6eb86e12b5ae7037c7d3f9d">enableAllPlugins</a>();</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="a00310.html#aa19d655cf9e65dd8d3bba348fa438c2d">disableAllPlugins</a>();</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="a00310.html#a5f62240a571dd6678c453ae47f79bed8">loadNewPlugin</a>(<span class="keyword">const</span> std::string &amp;path, <span class="keywordtype">bool</span> enableNow);</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="a00310.html#ae24eb5a6ee67766c25d797ed382d4f08">unloadPluginById</a>(<span class="keyword">const</span> std::string &amp;<span class="keywordtype">id</span>);</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="a00310.html#aa358aae502cc1dd8e86b25616f6956bf">reloadPluginById</a>(<span class="keyword">const</span> std::string &amp;<span class="keywordtype">id</span>);</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>} <span class="comment">// namespace MiraiCP::LoaderApi</span></div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="preprocessor">#endif </span><span class="comment">//MIRAICP_PRO_LOADERAPI_H</span></div>
-<div class="ttc" id="aa00310_html"><div class="ttname"><a href="a00310.html">MiraiCP::LoaderApi</a></div><div class="ttdef"><b>Definition:</b> <a href="a00104_source.html#l00025">loaderApi.h:25</a></div></div>
-<div class="ttc" id="aa00310_html_a56e5dba3d6eb86e12b5ae7037c7d3f9d"><div class="ttname"><a href="a00310.html#a56e5dba3d6eb86e12b5ae7037c7d3f9d">MiraiCP::LoaderApi::enableAllPlugins</a></div><div class="ttdeci">void enableAllPlugins()</div><div class="ttdoc">启用全部已加载的插件，仅限有管理权限的插件使用，否则没有任何效果</div><div class="ttdef"><b>Definition:</b> <a href="a01268_source.html#l00139">sdk/loaderApi.cpp:139</a></div></div>
-<div class="ttc" id="aa00310_html_a5c00ba2c6c7b08c0ff508ed5e0cd518d"><div class="ttname"><a href="a00310.html#a5c00ba2c6c7b08c0ff508ed5e0cd518d">MiraiCP::LoaderApi::disablePluginById</a></div><div class="ttdeci">void disablePluginById(const std::string &amp;)</div><div class="ttdoc">禁用一个已经启用的插件，仅限有管理权限的插件使用，否则没有任何效果</div><div class="ttdef"><b>Definition:</b> <a href="a01268_source.html#l00135">sdk/loaderApi.cpp:135</a></div></div>
-<div class="ttc" id="aa00310_html_a5f62240a571dd6678c453ae47f79bed8"><div class="ttname"><a href="a00310.html#a5f62240a571dd6678c453ae47f79bed8">MiraiCP::LoaderApi::loadNewPlugin</a></div><div class="ttdeci">void loadNewPlugin(const std::string &amp;path, bool enableNow)</div><div class="ttdoc">加载新的插件，仅限有管理权限的插件使用，否则没有任何效果</div><div class="ttdef"><b>Definition:</b> <a href="a01268_source.html#l00147">sdk/loaderApi.cpp:147</a></div></div>
-<div class="ttc" id="aa00310_html_a733d3f3f90c6925034b10116fb6510e6"><div class="ttname"><a href="a00310.html#a733d3f3f90c6925034b10116fb6510e6">MiraiCP::LoaderApi::showAllPluginId</a></div><div class="ttdeci">std::vector&lt; std::string &gt; showAllPluginId()</div><div class="ttdoc">返回所有plugin的id</div><div class="ttdef"><b>Definition:</b> <a href="a01268_source.html#l00126">sdk/loaderApi.cpp:126</a></div></div>
-<div class="ttc" id="aa00310_html_aa19d655cf9e65dd8d3bba348fa438c2d"><div class="ttname"><a href="a00310.html#aa19d655cf9e65dd8d3bba348fa438c2d">MiraiCP::LoaderApi::disableAllPlugins</a></div><div class="ttdeci">void disableAllPlugins()</div><div class="ttdoc">禁用全部已启用的插件，仅限有管理权限的插件使用，否则没有任何效果</div><div class="ttdef"><b>Definition:</b> <a href="a01268_source.html#l00143">sdk/loaderApi.cpp:143</a></div></div>
-<div class="ttc" id="aa00310_html_aa358aae502cc1dd8e86b25616f6956bf"><div class="ttname"><a href="a00310.html#aa358aae502cc1dd8e86b25616f6956bf">MiraiCP::LoaderApi::reloadPluginById</a></div><div class="ttdeci">void reloadPluginById(const std::string &amp;id)</div><div class="ttdoc">重载一个插件，仅限有管理权限的插件使用，否则没有任何效果</div><div class="ttdef"><b>Definition:</b> <a href="a01268_source.html#l00155">sdk/loaderApi.cpp:155</a></div></div>
-<div class="ttc" id="aa00310_html_acab9ccd86eed6b2d17836f5f2899b2a7"><div class="ttname"><a href="a00310.html#acab9ccd86eed6b2d17836f5f2899b2a7">MiraiCP::LoaderApi::enablePluginById</a></div><div class="ttdeci">void enablePluginById(const std::string &amp;id)</div><div class="ttdoc">启用一个已经加载的插件，仅限有管理权限的插件使用，否则没有任何效果</div><div class="ttdef"><b>Definition:</b> <a href="a01268_source.html#l00131">sdk/loaderApi.cpp:131</a></div></div>
-<div class="ttc" id="aa00310_html_ae24eb5a6ee67766c25d797ed382d4f08"><div class="ttname"><a href="a00310.html#ae24eb5a6ee67766c25d797ed382d4f08">MiraiCP::LoaderApi::unloadPluginById</a></div><div class="ttdeci">void unloadPluginById(const std::string &amp;id)</div><div class="ttdoc">卸载一个插件，仅限有管理权限的插件使用，否则没有任何效果</div><div class="ttdef"><b>Definition:</b> <a href="a01268_source.html#l00151">sdk/loaderApi.cpp:151</a></div></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#endif </span><span class="comment">//MIRAICP_PRO_SCHEDULER_H</span></div>
+<div class="ttc" id="aa00306_html"><div class="ttname"><a href="a00306.html">LibLoader::Scheduler</a></div><div class="ttdef"><b>Definition:</b> <a href="a00104_source.html#l00012">Scheduler.h:12</a></div></div>
+<div class="ttc" id="aa00306_html_a60264799b74fbe2b0466d1de609cf95b"><div class="ttname"><a href="a00306.html#a60264799b74fbe2b0466d1de609cf95b">LibLoader::Scheduler::popSchedule</a></div><div class="ttdeci">void popSchedule() noexcept</div><div class="ttdoc">libLoader线程tick调用，弹出所有计时器</div><div class="ttdef"><b>Definition:</b> <a href="a00230_source.html#l00067">Scheduler.cpp:67</a></div></div>
+<div class="ttc" id="aa00306_html_a746efd674de5c56de789a0c03be7948e"><div class="ttname"><a href="a00306.html#a746efd674de5c56de789a0c03be7948e">LibLoader::Scheduler::timer</a></div><div class="ttdeci">void timer(std::string id, std::string content, size_t timeInSec)</div><div class="ttdoc">新增一个计时器，对接libLoader API</div><div class="ttdef"><b>Definition:</b> <a href="a00230_source.html#l00053">Scheduler.cpp:53</a></div></div>
+<div class="ttc" id="aa00306_html_a78d8064032b232026e0b8029723c0e1b"><div class="ttname"><a href="a00306.html#a78d8064032b232026e0b8029723c0e1b">LibLoader::Scheduler::empty</a></div><div class="ttdeci">bool empty() noexcept</div><div class="ttdoc">获取schduler是否空</div><div class="ttdef"><b>Definition:</b> <a href="a00230_source.html#l00076">Scheduler.cpp:76</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_1ede18532ce6284c46efe733029b594d.html">sdk</a></li><li class="navelem"><a class="el" href="a00104.html">loaderApi.h</a></li>
-    <li class="footer">生成于 2023年 一月 21日 星期六 14:32:48 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_bda05eb71e068b870dbf680d28584ff8.html">libloader</a></li><li class="navelem"><a class="el" href="a00104.html">Scheduler.h</a></li>
+    <li class="footer">生成于 2023年 一月 22日 星期日 13:18:23 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
     </body>

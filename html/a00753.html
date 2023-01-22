@@ -104,7 +104,7 @@ $(document).ready(function(){initNavTree('a00753.html',''); initResizable(); });
 <p>小程序卡片  
  <a href="a00753.html#details">更多...</a></p>
 
-<p><code>#include &lt;<a class="el" href="a00134_source.html">SingleMessage.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="a00170_source.html">SingleMessage.h</a>&gt;</code></p>
 <div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> 类 MiraiCP::LightApp 继承关系图:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
@@ -117,7 +117,8 @@ $(document).ready(function(){initNavTree('a00753.html',''); initResizable(); });
 <div id="dynsection-1-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="a00751.svg" width="515" height="839"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00751.svg" width="515" height="839"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
@@ -185,9 +186,101 @@ Public 成员函数</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><p >小程序卡片 </p>
-<dl class="section attention"><dt>注意</dt><dd>自带的模板不稳定，可能发出现没有效果 <div id="dynsection-1015" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;"><img src="closed.png" alt="+" id="dynsection-1015-trigger" class="inline"/> 从文本构建LightApp例子:</div><div id="dynsection-1015-content" class="dynsummary" style="display: none;"><div class="fragment"></div><!-- fragment --> </div> </dd></dl>
+<dl class="section attention"><dt>注意</dt><dd>自带的模板不稳定，可能发出现没有效果 <div id="dynsection-1015" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;"><img src="closed.png" alt="+" id="dynsection-1015-trigger" class="inline"/> 从文本构建LightApp例子:</div><div id="dynsection-1015-content" class="dynsummary" style="display: none;"><div class="fragment"><div class="line"><span class="comment">// Copyright (c) 2020 - 2022. Eritque arcus and contributors.</span></div>
+<div class="line"><span class="comment">//</span></div>
+<div class="line"><span class="comment">// This program is free software: you can redistribute it and/or modify</span></div>
+<div class="line"><span class="comment">// it under the terms of the GNU Affero General Public License as</span></div>
+<div class="line"><span class="comment">// published by the Free Software Foundation, either version 3 of the</span></div>
+<div class="line"><span class="comment">// License, or any later version(in your opinion).</span></div>
+<div class="line"><span class="comment">//</span></div>
+<div class="line"><span class="comment">// This program is distributed in the hope that it will be useful,</span></div>
+<div class="line"><span class="comment">// but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div>
+<div class="line"><span class="comment">// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span></div>
+<div class="line"><span class="comment">// GNU Affero General Public License for more details.</span></div>
+<div class="line"><span class="comment">//</span></div>
+<div class="line"><span class="comment">// You should have received a copy of the GNU Affero General Public License</span></div>
+<div class="line"><span class="comment">// along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</span></div>
+<div class="line"><span class="comment">//</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00161.html">MiraiCP.hpp</a>&gt;</span></div>
+<div class="line"><span class="keyword">using namespace </span><a class="code hl_namespace" href="a00302.html">MiraiCP</a>;</div>
+<div class="line"><span class="keyword">using namespace </span>std;</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">const</span> PluginConfig <a class="code hl_variable" href="a00437.html#a20b8d27c47456805d38d4c366da96ac0">CPPPlugin::config</a>{</div>
+<div class="line">        <span class="stringliteral">&quot;id&quot;</span>,   <span class="comment">// 插件id</span></div>
+<div class="line">        <span class="stringliteral">&quot;test&quot;</span>, <span class="comment">// 插件名称</span></div>
+<div class="line">        <span class="stringliteral">&quot;v1.0&quot;</span>, <span class="comment">// 插件版本</span></div>
+<div class="line">        <span class="stringliteral">&quot;a&quot;</span>,    <span class="comment">// 插件作者</span></div>
+<div class="line">                <span class="comment">// 可选：插件描述</span></div>
+<div class="line">                <span class="comment">// 可选：日期</span></div>
+<div class="line">};</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">class </span>Main : <span class="keyword">public</span> CPPPlugin {</div>
+<div class="line"><span class="keyword">public</span>:</div>
+<div class="line">    Main() : CPPPlugin() {}</div>
+<div class="line">    <span class="keywordtype">void</span> onEnable()<span class="keyword"> override </span>{</div>
+<div class="line">        Event::registerEvent&lt;GroupMessageEvent&gt;([](<a class="code hl_enumvalue" href="a00307.html#abe9e9d8212ea8f23717b72db64393cabaca8073196614a985e9fcc7d2f964473c">GroupMessageEvent</a> e) {</div>
+<div class="line">            <span class="comment">// 从文本构造</span></div>
+<div class="line">            <span class="comment">//风格1，适合文字展示，不能交互,无大图</span></div>
+<div class="line">            <span class="comment">//图标地址，应该是要qq的服务器里有的图片，也就是说先上传(发送)图片然后取下载链接</span></div>
+<div class="line">            <span class="keywordtype">string</span> icon = <span class="stringliteral">&quot;http://gchat.qpic.cn/gchatpic_new/1924306130/1044565129-2580521429-8ECE44863FC01DBD17FB8A177B355356/0&quot;</span>;</div>
+<div class="line">            <span class="comment">//小标题</span></div>
+<div class="line">            <span class="keywordtype">string</span> titles = <span class="stringliteral">&quot;{\&quot;title\&quot;:\&quot;hi\&quot;, \&quot;value\&quot;:\&quot;test3\&quot;}&quot;</span>;</div>
+<div class="line">            <span class="comment">//下面的按钮，但是不能按</span></div>
+<div class="line">            <span class="keywordtype">string</span> buttons = <span class="stringliteral">&quot;{\&quot;name\&quot;:\&quot;Test4\&quot;,\&quot;action\&quot;:\&quot;plugin\&quot;,\&quot;actionData\&quot;:\&quot;https://baidu.com\&quot;}&quot;</span>;</div>
+<div class="line">            <span class="keywordtype">string</span> x = <span class="stringliteral">&quot;{\&quot;app\&quot;:\&quot;com.tencent.miniapp\&quot;,\&quot;desc\&quot;:\&quot;\&quot;,\&quot;view\&quot;:\&quot;notification\&quot;,\&quot;ver\&quot;:\&quot;0.0.0.1\&quot;,\&quot;prompt\&quot;:\&quot;[应用]\&quot;,\&quot;appID\&quot;:\&quot;\&quot;,\&quot;sourceName\&quot;:\&quot;\&quot;,\&quot;actionData\&quot;:\&quot;\&quot;,\&quot;actionData_A\&quot;:\&quot;\&quot;,\&quot;sourceUrl\&quot;:\&quot;\&quot;,\&quot;meta\&quot;:{\&quot;notification\&quot;:{\&quot;appInfo\&quot;:&quot;</span></div>
+<div class="line">                       <span class="stringliteral">&quot;{\&quot;appName\&quot;:\&quot;Test1\&quot;,\&quot;appType\&quot;:4,\&quot;appid\&quot;:1109659848,&quot;</span></div>
+<div class="line">                       <span class="stringliteral">&quot;\&quot;iconUrl\&quot;:\&quot;&quot;</span> +</div>
+<div class="line">                       icon + <span class="stringliteral">&quot;\&quot;},&quot;</span></div>
+<div class="line">                              <span class="stringliteral">&quot;\&quot;data\&quot;:[&quot;</span> +</div>
+<div class="line">                       titles + <span class="stringliteral">&quot;],&quot;</span></div>
+<div class="line">                                <span class="stringliteral">&quot;\&quot;title\&quot;:\&quot;Test2\&quot;,\&quot;button\&quot;:&quot;</span></div>
+<div class="line">                                <span class="stringliteral">&quot;[&quot;</span> +</div>
+<div class="line">                       buttons + <span class="stringliteral">&quot;],&quot;</span></div>
+<div class="line">                                 <span class="stringliteral">&quot;\&quot;emphasis_keyword\&quot;:\&quot;\&quot;}},\&quot;text\&quot;:\&quot;\&quot;,\&quot;sourceAd\&quot;:\&quot;\&quot;}&quot;</span>;</div>
+<div class="line">            e.group.sendMessage(<a class="code hl_function" href="a00753.html#a7cfcefeb788e3046fb321fab0a7b813a">LightApp</a>(x));</div>
+<div class="line">            <span class="comment">//风格2，不能交互，有预览图</span></div>
+<div class="line">            <span class="comment">//icon图标,应该是要qq的服务器里有的图片，也就是说先上传(发送)图片然后取下载链接</span></div>
+<div class="line">            <span class="keywordtype">string</span> icon1 = <span class="stringliteral">&quot;http://gchat.qpic.cn/gchatpic_new/1924306130/1044565129-2580521429-8ECE44863FC01DBD17FB8A177B355356/0&quot;</span>;</div>
+<div class="line">            <span class="comment">//预览图(大图),应该是要qq的服务器里有的图片，也就是说先上传(发送)图片然后取下载链接</span></div>
+<div class="line">            <span class="keywordtype">string</span> preview1 = icon1;</div>
+<div class="line">            <span class="keywordtype">string</span> a = <span class="stringliteral">&quot;{\&quot;config\&quot;:&quot;</span></div>
+<div class="line">                       <span class="stringliteral">&quot;{\&quot;height\&quot;:0,\&quot;forward\&quot;:1,\&quot;ctime\&quot;:0,\&quot;width\&quot;:0,\&quot;type\&quot;:\&quot;normal\&quot;,\&quot;token\&quot;:\&quot;\&quot;,\&quot;autoSize\&quot;:0},&quot;</span></div>
+<div class="line">                       <span class="stringliteral">&quot;\&quot;prompt\&quot;:\&quot;[QQ小程序]\&quot;,\&quot;app\&quot;:\&quot;com.tencent.miniapp_01\&quot;,\&quot;ver\&quot;:\&quot;1.0.0.103\&quot;,\&quot;view\&quot;:\&quot;view_8C8E89B49BE609866298ADDFF2DBABA4\&quot;,&quot;</span></div>
+<div class="line">                       <span class="stringliteral">&quot;\&quot;meta\&quot;:{\&quot;detail_1\&quot;:{\&quot;appid\&quot;:\&quot;1110081493\&quot;,\&quot;preview\&quot;:\&quot;&quot;</span> +</div>
+<div class="line">                       preview1 + <span class="stringliteral">&quot;\&quot;,\&quot;shareTemplateData\&quot;:{},&quot;</span></div>
+<div class="line">                                  <span class="stringliteral">&quot;\&quot;gamePointsUrl\&quot;:\&quot;\&quot;,\&quot;gamePoints\&quot;:\&quot;\&quot;,\&quot;url\&quot;:\&quot;m.q.qq.com\&quot;,\&quot;scene\&quot;:0,\&quot;desc\&quot;:\&quot;Test5\&quot;,\&quot;title\&quot;:\&quot;Test6\&quot;,&quot;</span></div>
+<div class="line">                                  <span class="stringliteral">&quot;\&quot;host\&quot;:{\&quot;uin\&quot;:1000000,\&quot;nick\&quot;:\&quot;应用消息\&quot;},&quot;</span></div>
+<div class="line">                                  <span class="stringliteral">&quot;\&quot;shareTemplateId\&quot;:\&quot;8C8E89B49BE609866298ADDFF2DBABA4\&quot;,\&quot;icon\&quot;:\&quot;&quot;</span> +</div>
+<div class="line">                       icon1 + <span class="stringliteral">&quot;\&quot;,\&quot;showLittleTail\&quot;:\&quot;\&quot;}},\&quot;desc\&quot;:\&quot;\&quot;}&quot;</span>;</div>
+<div class="line">            e.group.sendMessage(<a class="code hl_function" href="a00753.html#a7cfcefeb788e3046fb321fab0a7b813a">LightApp</a>(a));</div>
+<div class="line">            <span class="comment">//风格3，可以跳转到网址，有预览图</span></div>
+<div class="line">            <span class="comment">//跳转链接</span></div>
+<div class="line">            <span class="keywordtype">string</span> url = <span class="stringliteral">&quot;https://www.baidu.com&quot;</span>;</div>
+<div class="line">            <span class="comment">//icon图标,应该是要qq的服务器里有的图片，也就是说先上传(发送)图片然后取下载链接</span></div>
+<div class="line">            <span class="keywordtype">string</span> icon2 = <span class="stringliteral">&quot;http://gchat.qpic.cn/gchatpic_new/1924306130/1044565129-2580521429-8ECE44863FC01DBD17FB8A177B355356/0&quot;</span>;</div>
+<div class="line">            <span class="comment">//预览图(大图),应该是要qq的服务器里有的图片，也就是说先上传(发送)图片然后取下载链接</span></div>
+<div class="line">            <span class="keywordtype">string</span> preview = icon2;</div>
+<div class="line">            <span class="keywordtype">string</span> b = <span class="stringliteral">&quot;{\&quot;config\&quot;:{\&quot;height\&quot;:0,\&quot;forward\&quot;:1,\&quot;ctime\&quot;:0,\&quot;width\&quot;:0,\&quot;type\&quot;:\&quot;normal\&quot;,\&quot;token\&quot;:\&quot;\&quot;,\&quot;autoSize\&quot;:0},&quot;</span></div>
+<div class="line">                       <span class="stringliteral">&quot;\&quot;prompt\&quot;:\&quot;[QQ小程序]\&quot;,\&quot;app\&quot;:\&quot;com.tencent.miniapp_01\&quot;,\&quot;ver\&quot;:\&quot;0.0.0.1\&quot;,\&quot;view\&quot;:\&quot;view_8C8E89B49BE609866298ADDFF2DBABA4\&quot;,&quot;</span></div>
+<div class="line">                       <span class="stringliteral">&quot;\&quot;meta\&quot;:{\&quot;detail_1\&quot;:{\&quot;appid\&quot;:\&quot;1109937557\&quot;,\&quot;preview\&quot;:\&quot;&quot;</span> +</div>
+<div class="line">                       preview + <span class="stringliteral">&quot;\&quot;,\&quot;shareTemplateData\&quot;:{},\&quot;gamePointsUrl\&quot;:\&quot;\&quot;,\&quot;gamePoints\&quot;:\&quot;\&quot;,\&quot;url\&quot;:\&quot;m.q.qq.com\&quot;,\&quot;scene\&quot;:0,\&quot;desc\&quot;:\&quot;Test1\&quot;,\&quot;title\&quot;:\&quot;Test3\&quot;,\&quot;host\&quot;:{\&quot;uin\&quot;:0,\&quot;nick\&quot;:\&quot;\&quot;},\&quot;shareTemplateId\&quot;:\&quot;8C8E89B49BE609866298ADDFF2DBABA4\&quot;,\&quot;icon\&quot;:\&quot;&quot;</span> + icon + <span class="stringliteral">&quot;\&quot;,\&quot;qqdocurl\&quot;:\&quot;&quot;</span> + url + <span class="stringliteral">&quot;\&quot;,\&quot;showLittleTail\&quot;:\&quot;\&quot;}},\&quot;desc\&quot;:\&quot;\&quot;}&quot;</span>;</div>
+<div class="line">            e.group.sendMessage(<a class="code hl_function" href="a00753.html#a7cfcefeb788e3046fb321fab0a7b813a">LightApp</a>(b));</div>
+<div class="line">        });</div>
+<div class="line">    }</div>
+<div class="line">};</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> <a class="code hl_function" href="a00302.html#a12d27be6730af4fc321ac1eb231db281">MiraiCP::enrollPlugin</a>() {</div>
+<div class="line">    MiraiCP::enrollPlugin0(<span class="keyword">new</span> Main());</div>
+<div class="line">}</div>
+<div class="ttc" id="aa00161_html"><div class="ttname"><a href="a00161.html">MiraiCP.hpp</a></div></div>
+<div class="ttc" id="aa00302_html"><div class="ttname"><a href="a00302.html">MiraiCP</a></div><div class="ttdef"><b>Definition:</b> <a href="a00041_source.html#l00041">commonTypes.h:41</a></div></div>
+<div class="ttc" id="aa00302_html_a12d27be6730af4fc321ac1eb231db281"><div class="ttname"><a href="a00302.html#a12d27be6730af4fc321ac1eb231db281">MiraiCP::enrollPlugin</a></div><div class="ttdeci">void enrollPlugin()</div><div class="ttdoc">注册插件函数, 需要被插件实现, 类似onStart();</div><div class="ttdef"><b>Definition:</b> <a href="a00179_source.html#l00037">utils.h:37</a></div></div>
+<div class="ttc" id="aa00307_html_abe9e9d8212ea8f23717b72db64393cabaca8073196614a985e9fcc7d2f964473c"><div class="ttname"><a href="a00307.html#abe9e9d8212ea8f23717b72db64393cabaca8073196614a985e9fcc7d2f964473c">MiraiCP::eventTypes::GroupMessageEvent</a></div><div class="ttdeci">@ GroupMessageEvent</div><div class="ttdef"><b>Definition:</b> <a href="a00119_source.html#l00038">Event.h:38</a></div></div>
+<div class="ttc" id="aa00437_html_a20b8d27c47456805d38d4c366da96ac0"><div class="ttname"><a href="a00437.html#a20b8d27c47456805d38d4c366da96ac0">MiraiCP::CPPPlugin::config</a></div><div class="ttdeci">MIRAICP_EXPORT static const PluginConfig config</div><div class="ttdoc">插件信息，一个插件中该内容不应变化</div><div class="ttdef"><b>Definition:</b> <a href="a00116_source.html#l00038">CPPPlugin.h:38</a></div></div>
+<div class="ttc" id="aa00753_html_a7cfcefeb788e3046fb321fab0a7b813a"><div class="ttname"><a href="a00753.html#a7cfcefeb788e3046fb321fab0a7b813a">MiraiCP::LightApp::LightApp</a></div><div class="ttdeci">LightApp(std::string content)</div><div class="ttdoc">使用纯文本构造，推荐使用其他结构体方法构造</div><div class="ttdef"><b>Definition:</b> <a href="a00170_source.html#l00380">SingleMessage.h:380</a></div></div>
+</div><!-- fragment --> </div> </dd></dl>
 
-<p class="definition">在文件 <a class="el" href="a00134_source.html">SingleMessage.h</a> 第 <a class="el" href="a00134_source.html#l00372">372</a> 行定义.</p>
+<p class="definition">在文件 <a class="el" href="a00170_source.html">SingleMessage.h</a> 第 <a class="el" href="a00170_source.html#l00372">372</a> 行定义.</p>
 </div><h2 class="groupheader">构造及析构函数说明</h2>
 <a id="a7cfcefeb788e3046fb321fab0a7b813a" name="a7cfcefeb788e3046fb321fab0a7b813a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7cfcefeb788e3046fb321fab0a7b813a">&#9670;&nbsp;</a></span>LightApp() <span class="overload">[1/2]</span></h2>
@@ -221,11 +314,11 @@ Public 成员函数</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">在文件 <a class="el" href="a00134_source.html">SingleMessage.h</a> 第 <a class="el" href="a00134_source.html#l00380">380</a> 行定义.</p>
+<p class="definition">在文件 <a class="el" href="a00170_source.html">SingleMessage.h</a> 第 <a class="el" href="a00170_source.html#l00380">380</a> 行定义.</p>
 <div class="fragment"><div class="line"><a id="l00380" name="l00380"></a><span class="lineno">  380</span>: <a class="code hl_function" href="a00729.html#afd9fc5e5ce28680eaf331144903f025b">SingleMessage</a>(<a class="code hl_function" href="a00753.html#abba0c279393369d31f7ebc88ee6756fd">LightApp::type</a>(), std::move(<a class="code hl_variable" href="a00729.html#a7ebcc9775985874bb7a09bd1d8274a24">content</a>)) {}</div>
-<div class="ttc" id="aa00729_html_a7ebcc9775985874bb7a09bd1d8274a24"><div class="ttname"><a href="a00729.html#a7ebcc9775985874bb7a09bd1d8274a24">MiraiCP::SingleMessage::content</a></div><div class="ttdeci">std::string content</div><div class="ttdef"><b>Definition:</b> <a href="a00134_source.html#l00117">SingleMessage.h:117</a></div></div>
+<div class="ttc" id="aa00729_html_a7ebcc9775985874bb7a09bd1d8274a24"><div class="ttname"><a href="a00729.html#a7ebcc9775985874bb7a09bd1d8274a24">MiraiCP::SingleMessage::content</a></div><div class="ttdeci">std::string content</div><div class="ttdef"><b>Definition:</b> <a href="a00170_source.html#l00117">SingleMessage.h:117</a></div></div>
 <div class="ttc" id="aa00729_html_afd9fc5e5ce28680eaf331144903f025b"><div class="ttname"><a href="a00729.html#afd9fc5e5ce28680eaf331144903f025b">MiraiCP::SingleMessage::SingleMessage</a></div><div class="ttdeci">SingleMessage()=default</div><div class="ttdoc">仅限于让子类允许默认构造，以保证子类可以通过动态判断类型构造</div></div>
-<div class="ttc" id="aa00753_html_abba0c279393369d31f7ebc88ee6756fd"><div class="ttname"><a href="a00753.html#abba0c279393369d31f7ebc88ee6756fd">MiraiCP::LightApp::type</a></div><div class="ttdeci">static int type()</div><div class="ttdef"><b>Definition:</b> <a href="a00134_source.html#l00374">SingleMessage.h:374</a></div></div>
+<div class="ttc" id="aa00753_html_abba0c279393369d31f7ebc88ee6756fd"><div class="ttname"><a href="a00753.html#abba0c279393369d31f7ebc88ee6756fd">MiraiCP::LightApp::type</a></div><div class="ttdeci">static int type()</div><div class="ttdef"><b>Definition:</b> <a href="a00170_source.html#l00374">SingleMessage.h:374</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -258,10 +351,10 @@ Public 成员函数</h2></td></tr>
 <div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>        <span class="comment">// todo(Antares): this was originally 3; why?</span></div>
 <div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>        <span class="keywordflow">if</span> (sg.internalType != <a class="code hl_function" href="a00753.html#abba0c279393369d31f7ebc88ee6756fd">type</a>())</div>
 <div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>            <span class="keywordflow">throw</span> IllegalArgumentException(</div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>                    <span class="stringliteral">&quot;Cannot convert(&quot;</span> + <a class="code hl_function" href="a00729.html#aeb04373bc8b0d8e8710597c35c89f21d">getTypeString</a>(sg.internalType) + <span class="stringliteral">&quot;) to LighApp&quot;</span>, <a class="code hl_define" href="a00011.html#a64a15c1bd1292eb8eb8b5874281372c6">MIRAICP_EXCEPTION_WHERE</a>);</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>                    <span class="stringliteral">&quot;Cannot convert(&quot;</span> + <a class="code hl_function" href="a00729.html#aeb04373bc8b0d8e8710597c35c89f21d">getTypeString</a>(sg.internalType) + <span class="stringliteral">&quot;) to LighApp&quot;</span>, <a class="code hl_define" href="a00047.html#a64a15c1bd1292eb8eb8b5874281372c6">MIRAICP_EXCEPTION_WHERE</a>);</div>
 <div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    }</div>
-<div class="ttc" id="aa00011_html_a64a15c1bd1292eb8eb8b5874281372c6"><div class="ttname"><a href="a00011.html#a64a15c1bd1292eb8eb8b5874281372c6">MIRAICP_EXCEPTION_WHERE</a></div><div class="ttdeci">#define MIRAICP_EXCEPTION_WHERE</div><div class="ttdef"><b>Definition:</b> <a href="a00011_source.html#l00120">MiraiCPMacros.h:120</a></div></div>
-<div class="ttc" id="aa00729_html_aeb04373bc8b0d8e8710597c35c89f21d"><div class="ttname"><a href="a00729.html#aeb04373bc8b0d8e8710597c35c89f21d">MiraiCP::SingleMessage::getTypeString</a></div><div class="ttdeci">static std::string getTypeString(int type)</div><div class="ttdef"><b>Definition:</b> <a href="a00134_source.html#l00132">SingleMessage.h:132</a></div></div>
+<div class="ttc" id="aa00047_html_a64a15c1bd1292eb8eb8b5874281372c6"><div class="ttname"><a href="a00047.html#a64a15c1bd1292eb8eb8b5874281372c6">MIRAICP_EXCEPTION_WHERE</a></div><div class="ttdeci">#define MIRAICP_EXCEPTION_WHERE</div><div class="ttdef"><b>Definition:</b> <a href="a00047_source.html#l00120">MiraiCPMacros.h:120</a></div></div>
+<div class="ttc" id="aa00729_html_aeb04373bc8b0d8e8710597c35c89f21d"><div class="ttname"><a href="a00729.html#aeb04373bc8b0d8e8710597c35c89f21d">MiraiCP::SingleMessage::getTypeString</a></div><div class="ttdeci">static std::string getTypeString(int type)</div><div class="ttdef"><b>Definition:</b> <a href="a00170_source.html#l00132">SingleMessage.h:132</a></div></div>
 </div><!-- fragment --><div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-2-trigger" src="closed.png" alt="+"/> 函数调用图:</div>
 <div id="dynsection-2-summary" class="dynsummary" style="display:block;">
@@ -297,7 +390,7 @@ Public 成员函数</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="a00134_source.html">SingleMessage.h</a> 第 <a class="el" href="a00134_source.html#l00387">387</a> 行定义.</p>
+<p class="definition">在文件 <a class="el" href="a00170_source.html">SingleMessage.h</a> 第 <a class="el" href="a00170_source.html#l00387">387</a> 行定义.</p>
 <div class="fragment"><div class="line"><a id="l00387" name="l00387"></a><span class="lineno">  387</span>                                                  {</div>
 <div class="line"><a id="l00388" name="l00388"></a><span class="lineno">  388</span>            <span class="keywordflow">return</span> this-&gt;<a class="code hl_variable" href="a00729.html#a7ebcc9775985874bb7a09bd1d8274a24">content</a> == la.content;</div>
 <div class="line"><a id="l00389" name="l00389"></a><span class="lineno">  389</span>        }</div>
@@ -334,8 +427,8 @@ Public 成员函数</h2></td></tr>
 <div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>        <span class="keywordflow">return</span> {{<span class="stringliteral">&quot;type&quot;</span>,    <a class="code hl_variable" href="a00729.html#ac8e48dc2e735821c5e4ad78d21233346">SingleMessage::messageType</a>[this-&gt;<a class="code hl_variable" href="a00729.html#a324dc329305747b20a6b42dd22480c46">internalType</a>]},</div>
 <div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>                {<span class="stringliteral">&quot;content&quot;</span>, <a class="code hl_variable" href="a00729.html#a7ebcc9775985874bb7a09bd1d8274a24">content</a>}};</div>
 <div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    }</div>
-<div class="ttc" id="aa00729_html_a324dc329305747b20a6b42dd22480c46"><div class="ttname"><a href="a00729.html#a324dc329305747b20a6b42dd22480c46">MiraiCP::SingleMessage::internalType</a></div><div class="ttdeci">int internalType</div><div class="ttdef"><b>Definition:</b> <a href="a00134_source.html#l00121">SingleMessage.h:121</a></div></div>
-<div class="ttc" id="aa00729_html_ac8e48dc2e735821c5e4ad78d21233346"><div class="ttname"><a href="a00729.html#ac8e48dc2e735821c5e4ad78d21233346">MiraiCP::SingleMessage::messageType</a></div><div class="ttdeci">static const char *const  *const messageType</div><div class="ttdef"><b>Definition:</b> <a href="a00134_source.html#l00129">SingleMessage.h:129</a></div></div>
+<div class="ttc" id="aa00729_html_a324dc329305747b20a6b42dd22480c46"><div class="ttname"><a href="a00729.html#a324dc329305747b20a6b42dd22480c46">MiraiCP::SingleMessage::internalType</a></div><div class="ttdeci">int internalType</div><div class="ttdef"><b>Definition:</b> <a href="a00170_source.html#l00121">SingleMessage.h:121</a></div></div>
+<div class="ttc" id="aa00729_html_ac8e48dc2e735821c5e4ad78d21233346"><div class="ttname"><a href="a00729.html#ac8e48dc2e735821c5e4ad78d21233346">MiraiCP::SingleMessage::messageType</a></div><div class="ttdeci">static const char *const  *const messageType</div><div class="ttdef"><b>Definition:</b> <a href="a00170_source.html#l00129">SingleMessage.h:129</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -404,12 +497,12 @@ Public 成员函数</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="a00134_source.html">SingleMessage.h</a> 第 <a class="el" href="a00134_source.html#l00374">374</a> 行定义.</p>
+<p class="definition">在文件 <a class="el" href="a00170_source.html">SingleMessage.h</a> 第 <a class="el" href="a00170_source.html#l00374">374</a> 行定义.</p>
 <div class="fragment"><div class="line"><a id="l00374" name="l00374"></a><span class="lineno">  374</span>                          {</div>
-<div class="line"><a id="l00375" name="l00375"></a><span class="lineno">  375</span>            <a class="code hl_define" href="a00134.html#a7641aaf09c6c5c892cccfd8c7815ad98">SINGLEMESSAGE_REFACTOR_ASSERTION</a>(4, Types::LightApp_t);</div>
+<div class="line"><a id="l00375" name="l00375"></a><span class="lineno">  375</span>            <a class="code hl_define" href="a00170.html#a7641aaf09c6c5c892cccfd8c7815ad98">SINGLEMESSAGE_REFACTOR_ASSERTION</a>(4, Types::LightApp_t);</div>
 <div class="line"><a id="l00376" name="l00376"></a><span class="lineno">  376</span>            <span class="keywordflow">return</span> Types::LightApp_t;</div>
 <div class="line"><a id="l00377" name="l00377"></a><span class="lineno">  377</span>        }</div>
-<div class="ttc" id="aa00134_html_a7641aaf09c6c5c892cccfd8c7815ad98"><div class="ttname"><a href="a00134.html#a7641aaf09c6c5c892cccfd8c7815ad98">SINGLEMESSAGE_REFACTOR_ASSERTION</a></div><div class="ttdeci">#define SINGLEMESSAGE_REFACTOR_ASSERTION(x, y)</div><div class="ttdef"><b>Definition:</b> <a href="a00134_source.html#l00033">SingleMessage.h:33</a></div></div>
+<div class="ttc" id="aa00170_html_a7641aaf09c6c5c892cccfd8c7815ad98"><div class="ttname"><a href="a00170.html#a7641aaf09c6c5c892cccfd8c7815ad98">SINGLEMESSAGE_REFACTOR_ASSERTION</a></div><div class="ttdeci">#define SINGLEMESSAGE_REFACTOR_ASSERTION(x, y)</div><div class="ttdef"><b>Definition:</b> <a href="a00170_source.html#l00033">SingleMessage.h:33</a></div></div>
 </div><!-- fragment --><div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-4-trigger" src="closed.png" alt="+"/> 这是这个函数的调用关系图:</div>
 <div id="dynsection-4-summary" class="dynsummary" style="display:block;">
@@ -421,7 +514,7 @@ Public 成员函数</h2></td></tr>
 </div>
 </div>
 <hr/>该类的文档由以下文件生成:<ul>
-<li><a class="el" href="a00134_source.html">SingleMessage.h</a></li>
+<li><a class="el" href="a00170_source.html">SingleMessage.h</a></li>
 <li><a class="el" href="a00287_source.html">SingleMessage.cpp</a></li>
 </ul>
 </div><!-- contents -->
@@ -431,7 +524,7 @@ Public 成员函数</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="a00302.html">MiraiCP</a></li><li class="navelem"><a class="el" href="a00753.html">LightApp</a></li>
-    <li class="footer">生成于 2023年 一月 21日 星期六 14:32:49 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="footer">生成于 2023年 一月 22日 星期日 13:18:25 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
     </body>

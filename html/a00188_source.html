@@ -112,18 +112,18 @@ $(document).ready(function(){initNavTree('a00188_source.html',''); initResizable
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">// along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</span></div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">//</span></div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &quot;<a class="code" href="a00011.html">MiraiCPMacros.h</a>&quot;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &quot;<a class="code" href="a00047.html">MiraiCPMacros.h</a>&quot;</span></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">// -----------------------</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &quot;<a class="code" href="a00023.html">redirectCout.h</a>&quot;</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &quot;<a class="code" href="a00059.html">redirectCout.h</a>&quot;</span></div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &lt;memory&gt;</span></div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &lt;sstream&gt;</span></div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#ifdef MIRAICP_LIB_LOADER</span></div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#include &quot;<a class="code" href="a00044.html">LoaderLogger.h</a>&quot;</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#include &quot;<a class="code" href="a00080.html">LoaderLogger.h</a>&quot;</span></div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#else</span></div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &quot;<a class="code" href="a00107.html">Logger.h</a>&quot;</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &quot;<a class="code" href="a00143.html">Logger.h</a>&quot;</span></div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
@@ -263,19 +263,19 @@ $(document).ready(function(){initNavTree('a00188_source.html',''); initResizable
 <div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>}</div>
 <div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span> </div>
 <div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span><span class="keyword">namespace </span><a class="code hl_namespace" href="a00304.html">MiraiCP::Redirector</a> {</div>
-<div class="line"><a id="l00175" name="l00175"></a><span class="lineno"><a class="line" href="a00304.html#a46ebe1f3f5d7f68b71a86572066a0f66">  175</a></span>    <a class="code hl_define" href="a00011.html#aa40df2b825bdde9207f3e87b140235c3">MIRAICP_EXPORT</a> <span class="keywordtype">void</span> <a class="code hl_function" href="a00304.html#a46ebe1f3f5d7f68b71a86572066a0f66">SetCoutRecorder</a>(<span class="keywordtype">void</span> (*recorder)(std::string)) {</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno"><a class="line" href="a00304.html#a46ebe1f3f5d7f68b71a86572066a0f66">  175</a></span>    <a class="code hl_define" href="a00047.html#aa40df2b825bdde9207f3e87b140235c3">MIRAICP_EXPORT</a> <span class="keywordtype">void</span> <a class="code hl_function" href="a00304.html#a46ebe1f3f5d7f68b71a86572066a0f66">SetCoutRecorder</a>(<span class="keywordtype">void</span> (*recorder)(std::string)) {</div>
 <div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>        <a class="code hl_function" href="a00188.html#a5ea76c388296e6066ae4e30a99837f41">outTarget</a>.setRecorder(recorder);</div>
 <div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>    }</div>
 <div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span> </div>
-<div class="line"><a id="l00181" name="l00181"></a><span class="lineno"><a class="line" href="a00304.html#a7a43144762a698c10973885b2b4f2964">  181</a></span>    <a class="code hl_define" href="a00011.html#aa40df2b825bdde9207f3e87b140235c3">MIRAICP_EXPORT</a> <span class="keywordtype">void</span> <a class="code hl_function" href="a00304.html#a7a43144762a698c10973885b2b4f2964">SetCerrRecorder</a>(<span class="keywordtype">void</span> (*recorder)(std::string)) {</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno"><a class="line" href="a00304.html#a7a43144762a698c10973885b2b4f2964">  181</a></span>    <a class="code hl_define" href="a00047.html#aa40df2b825bdde9207f3e87b140235c3">MIRAICP_EXPORT</a> <span class="keywordtype">void</span> <a class="code hl_function" href="a00304.html#a7a43144762a698c10973885b2b4f2964">SetCerrRecorder</a>(<span class="keywordtype">void</span> (*recorder)(std::string)) {</div>
 <div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>        <a class="code hl_function" href="a00188.html#a1defcc132542aa9411395eb08b0fe844">errTarget</a>.setRecorder(recorder);</div>
 <div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>    }</div>
 <div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>} <span class="comment">// namespace MiraiCP::Redirector</span></div>
-<div class="ttc" id="aa00011_html"><div class="ttname"><a href="a00011.html">MiraiCPMacros.h</a></div></div>
-<div class="ttc" id="aa00011_html_aa40df2b825bdde9207f3e87b140235c3"><div class="ttname"><a href="a00011.html#aa40df2b825bdde9207f3e87b140235c3">MIRAICP_EXPORT</a></div><div class="ttdeci">#define MIRAICP_EXPORT</div><div class="ttdef"><b>Definition:</b> <a href="a00011_source.html#l00180">MiraiCPMacros.h:180</a></div></div>
-<div class="ttc" id="aa00023_html"><div class="ttname"><a href="a00023.html">redirectCout.h</a></div></div>
-<div class="ttc" id="aa00044_html"><div class="ttname"><a href="a00044.html">LoaderLogger.h</a></div></div>
-<div class="ttc" id="aa00107_html"><div class="ttname"><a href="a00107.html">Logger.h</a></div></div>
+<div class="ttc" id="aa00047_html"><div class="ttname"><a href="a00047.html">MiraiCPMacros.h</a></div></div>
+<div class="ttc" id="aa00047_html_aa40df2b825bdde9207f3e87b140235c3"><div class="ttname"><a href="a00047.html#aa40df2b825bdde9207f3e87b140235c3">MIRAICP_EXPORT</a></div><div class="ttdeci">#define MIRAICP_EXPORT</div><div class="ttdef"><b>Definition:</b> <a href="a00047_source.html#l00180">MiraiCPMacros.h:180</a></div></div>
+<div class="ttc" id="aa00059_html"><div class="ttname"><a href="a00059.html">redirectCout.h</a></div></div>
+<div class="ttc" id="aa00080_html"><div class="ttname"><a href="a00080.html">LoaderLogger.h</a></div></div>
+<div class="ttc" id="aa00143_html"><div class="ttname"><a href="a00143.html">Logger.h</a></div></div>
 <div class="ttc" id="aa00188_html_a1defcc132542aa9411395eb08b0fe844"><div class="ttname"><a href="a00188.html#a1defcc132542aa9411395eb08b0fe844">errTarget</a></div><div class="ttdeci">OString errTarget(false)</div></div>
 <div class="ttc" id="aa00188_html_a222c24969464cb912fc16dafc9b72bf2"><div class="ttname"><a href="a00188.html#a222c24969464cb912fc16dafc9b72bf2">errRedirector</a></div><div class="ttdeci">std::unique_ptr&lt; OStreamRedirector &gt; errRedirector</div><div class="ttdef"><b>Definition:</b> <a href="a00188_source.html#l00125">redirectCout.cpp:125</a></div></div>
 <div class="ttc" id="aa00188_html_a4d2a8186429cb8b469e21c03dc4c8e33"><div class="ttname"><a href="a00188.html#a4d2a8186429cb8b469e21c03dc4c8e33">print</a></div><div class="ttdeci">void print(const std::string &amp;str)</div><div class="ttdef"><b>Definition:</b> <a href="a00188_source.html#l00154">redirectCout.cpp:154</a></div></div>
@@ -283,14 +283,14 @@ $(document).ready(function(){initNavTree('a00188_source.html',''); initResizable
 <div class="ttc" id="aa00188_html_a7424110a4e217977934256f0bb6699de"><div class="ttname"><a href="a00188.html#a7424110a4e217977934256f0bb6699de">outRedirector</a></div><div class="ttdeci">std::unique_ptr&lt; OStreamRedirector &gt; outRedirector</div><div class="ttdef"><b>Definition:</b> <a href="a00188_source.html#l00124">redirectCout.cpp:124</a></div></div>
 <div class="ttc" id="aa00188_html_acb5e2f19b4391ee51798dfa8ea732085"><div class="ttname"><a href="a00188.html#acb5e2f19b4391ee51798dfa8ea732085">RedirectedOstreamPointers</a></div><div class="ttdeci">struct RedirectedOstreamPair RedirectedOstreamPointers</div></div>
 <div class="ttc" id="aa00301_html_a0e16fc1159d498289bcda90fcd7a734c"><div class="ttname"><a href="a00301.html#a0e16fc1159d498289bcda90fcd7a734c">LibLoader::logger</a></div><div class="ttdeci">MIRAICP_EXPORT LoaderLogger logger</div><div class="ttdef"><b>Definition:</b> <a href="a00212_source.html#l00035">LoaderLogger.cpp:35</a></div></div>
-<div class="ttc" id="aa00304_html"><div class="ttname"><a href="a00304.html">MiraiCP::Redirector</a></div><div class="ttdef"><b>Definition:</b> <a href="a00023_source.html#l00024">redirectCout.h:24</a></div></div>
+<div class="ttc" id="aa00304_html"><div class="ttname"><a href="a00304.html">MiraiCP::Redirector</a></div><div class="ttdef"><b>Definition:</b> <a href="a00059_source.html#l00024">redirectCout.h:24</a></div></div>
 <div class="ttc" id="aa00304_html_a2c77251c039e439f1dd5018eab3dc0b8"><div class="ttname"><a href="a00304.html#a2c77251c039e439f1dd5018eab3dc0b8">MiraiCP::Redirector::start</a></div><div class="ttdeci">MIRAICP_EXPORT void start()</div><div class="ttdoc">start redirecting cout and cerr</div><div class="ttdef"><b>Definition:</b> <a href="a00188_source.html#l00167">redirectCout.cpp:167</a></div></div>
 <div class="ttc" id="aa00304_html_a2f7aa94ac874600ec7b20a833dd467cc"><div class="ttname"><a href="a00304.html#a2f7aa94ac874600ec7b20a833dd467cc">MiraiCP::Redirector::reset</a></div><div class="ttdeci">MIRAICP_EXPORT void reset()</div><div class="ttdoc">reset all redirecting</div><div class="ttdef"><b>Definition:</b> <a href="a00188_source.html#l00149">redirectCout.cpp:149</a></div></div>
 <div class="ttc" id="aa00304_html_a46ebe1f3f5d7f68b71a86572066a0f66"><div class="ttname"><a href="a00304.html#a46ebe1f3f5d7f68b71a86572066a0f66">MiraiCP::Redirector::SetCoutRecorder</a></div><div class="ttdeci">MIRAICP_EXPORT void SetCoutRecorder(void(*recorder)(std::string))</div><div class="ttdef"><b>Definition:</b> <a href="a00188_source.html#l00175">redirectCout.cpp:175</a></div></div>
 <div class="ttc" id="aa00304_html_a6f9a0b99180a04b476efd970445182d1"><div class="ttname"><a href="a00304.html#a6f9a0b99180a04b476efd970445182d1">MiraiCP::Redirector::setRedirectedObjs</a></div><div class="ttdeci">MIRAICP_EXPORT void setRedirectedObjs(std::ostream *, std::ostream *)</div><div class="ttdef"><b>Definition:</b> <a href="a00188_source.html#l00163">redirectCout.cpp:163</a></div></div>
 <div class="ttc" id="aa00304_html_a7a43144762a698c10973885b2b4f2964"><div class="ttname"><a href="a00304.html#a7a43144762a698c10973885b2b4f2964">MiraiCP::Redirector::SetCerrRecorder</a></div><div class="ttdeci">MIRAICP_EXPORT void SetCerrRecorder(void(*recorder)(std::string))</div><div class="ttdef"><b>Definition:</b> <a href="a00188_source.html#l00181">redirectCout.cpp:181</a></div></div>
-<div class="ttc" id="aa00669_html_ade15a5c23198ffcb4454a28356e78759"><div class="ttname"><a href="a00669.html#ade15a5c23198ffcb4454a28356e78759">MiraiCP::Logger_interface::info</a></div><div class="ttdeci">void info(T &amp;&amp;...val)</div><div class="ttdoc">发送普通(info级日志)</div><div class="ttdef"><b>Definition:</b> <a href="a00107_source.html#l00104">Logger.h:104</a></div></div>
-<div class="ttc" id="aa00677_html_a268fd602157c3fa49616a8872c82bfb1"><div class="ttname"><a href="a00677.html#a268fd602157c3fa49616a8872c82bfb1">MiraiCP::Logger::logger</a></div><div class="ttdeci">static Logger logger</div><div class="ttdef"><b>Definition:</b> <a href="a00107_source.html#l00148">Logger.h:148</a></div></div>
+<div class="ttc" id="aa00669_html_ade15a5c23198ffcb4454a28356e78759"><div class="ttname"><a href="a00669.html#ade15a5c23198ffcb4454a28356e78759">MiraiCP::Logger_interface::info</a></div><div class="ttdeci">void info(T &amp;&amp;...val)</div><div class="ttdoc">发送普通(info级日志)</div><div class="ttdef"><b>Definition:</b> <a href="a00143_source.html#l00104">Logger.h:104</a></div></div>
+<div class="ttc" id="aa00677_html_a268fd602157c3fa49616a8872c82bfb1"><div class="ttname"><a href="a00677.html#a268fd602157c3fa49616a8872c82bfb1">MiraiCP::Logger::logger</a></div><div class="ttdeci">static Logger logger</div><div class="ttdef"><b>Definition:</b> <a href="a00143_source.html#l00148">Logger.h:148</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
@@ -298,7 +298,7 @@ $(document).ready(function(){initNavTree('a00188_source.html',''); initResizable
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_fdedb0aba14d44ce9d99bc100e026e6a.html">common</a></li><li class="navelem"><a class="el" href="a00188.html">redirectCout.cpp</a></li>
-    <li class="footer">生成于 2023年 一月 21日 星期六 14:32:48 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="footer">生成于 2023年 一月 22日 星期日 13:18:23 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
     </body>

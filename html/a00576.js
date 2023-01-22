@@ -1,7 +1,5 @@
 var a00576 =
 [
-    [ "IllegalStateException", "a00576.html#ac9b5a8d083dbad7de5a9fb0690f4da43", null ],
-    [ "IllegalStateException", "a00576.html#ac9b5a8d083dbad7de5a9fb0690f4da43", null ],
-    [ "exceptionType", "a00576.html#ac82814555a14e6acfce3398f230997fa", null ],
-    [ "exceptionType", "a00576.html#ac82814555a14e6acfce3398f230997fa", null ]
+    [ "GroupException", "a00576.html#a86d9f8647899ea7ec1c9bc29a0fab4e2", null ],
+    [ "exceptionType", "a00576.html#ad5423a44299fc74eca0a1be0e66529fd", null ]
 ];

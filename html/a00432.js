@@ -1,11 +1,9 @@
 var a00432 =
 [
-    [ "CommandManager", "a00432.html#acf247b0f4f71627dc920d3297be6314f", null ],
-    [ "CommandManager", "a00432.html#acf247b0f4f71627dc920d3297be6314f", null ],
-    [ "operator[]", "a00432.html#a2cadbf9c0ff28ff16c544c0fc03b874d", null ],
-    [ "operator[]", "a00432.html#a2cadbf9c0ff28ff16c544c0fc03b874d", null ],
-    [ "registerCommand", "a00432.html#accb883db18602dc65b5fdd264dd73bfd", null ],
-    [ "registerCommand", "a00432.html#accb883db18602dc65b5fdd264dd73bfd", null ],
-    [ "commandList", "a00432.html#a55a48fe17025a397569b07c9c19f3afe", null ],
-    [ "commandManager", "a00432.html#aba2be108285b43cb670792a404f6607b", null ]
+    [ "BuiltInContact", "a00436.html", "a00436" ],
+    [ "BaseEventData", "a00432.html#add7fec6ff79d938ab121f57d10ffa1a7", null ],
+    [ "botId", "a00432.html#a0ef2979d2f7e44318fcc251026a7b109", null ],
+    [ "eventData", "a00432.html#abd44451921253c4eb235eff3fa3fb857", null ],
+    [ "object", "a00432.html#a9d1c4b300f7c6602c21aff985e9f1757", null ],
+    [ "subject", "a00432.html#a7afa1ecf74f25007146b46f4381c736d", null ]
 ];

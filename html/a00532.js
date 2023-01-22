@@ -1,26 +1,15 @@
 var a00532 =
 [
-    [ "EventType", "a00532.html#ac1df44d7400ad221500364c7b3de6737", [
-      [ "Active", "a00532.html#ac1df44d7400ad221500364c7b3de6737a4d3d769b812b6faa6b76e1a8abaece2d", null ],
-      [ "Kick", "a00532.html#ac1df44d7400ad221500364c7b3de6737a3e07960fcc45408894cf1402257bd9fd", null ],
-      [ "Disband", "a00532.html#ac1df44d7400ad221500364c7b3de6737aeee6f05922080480c6043305c9d6b329", null ],
-      [ "Active", "a00532.html#ac1df44d7400ad221500364c7b3de6737a4d3d769b812b6faa6b76e1a8abaece2d", null ],
-      [ "Kick", "a00532.html#ac1df44d7400ad221500364c7b3de6737a3e07960fcc45408894cf1402257bd9fd", null ],
-      [ "Disband", "a00532.html#ac1df44d7400ad221500364c7b3de6737aeee6f05922080480c6043305c9d6b329", null ]
-    ] ],
-    [ "EventType", "a00532.html#ac1df44d7400ad221500364c7b3de6737", [
-      [ "Active", "a00532.html#ac1df44d7400ad221500364c7b3de6737a4d3d769b812b6faa6b76e1a8abaece2d", null ],
-      [ "Kick", "a00532.html#ac1df44d7400ad221500364c7b3de6737a3e07960fcc45408894cf1402257bd9fd", null ],
-      [ "Disband", "a00532.html#ac1df44d7400ad221500364c7b3de6737aeee6f05922080480c6043305c9d6b329", null ],
-      [ "Active", "a00532.html#ac1df44d7400ad221500364c7b3de6737a4d3d769b812b6faa6b76e1a8abaece2d", null ],
-      [ "Kick", "a00532.html#ac1df44d7400ad221500364c7b3de6737a3e07960fcc45408894cf1402257bd9fd", null ],
-      [ "Disband", "a00532.html#ac1df44d7400ad221500364c7b3de6737aeee6f05922080480c6043305c9d6b329", null ]
-    ] ],
-    [ "BotLeaveEvent", "a00532.html#adf7d87e720725c6db5fb39f0f666b9a4", null ],
-    [ "BotLeaveEvent", "a00532.html#adf7d87e720725c6db5fb39f0f666b9a4", null ],
-    [ "get_event_type", "a00532.html#a6181c5b90aece0c558943c71d9a037ed", null ],
-    [ "get_event_type", "a00532.html#a6181c5b90aece0c558943c71d9a037ed", null ],
-    [ "group", "a00532.html#a8d792f877c523fc85423263a3ff60242", null ],
-    [ "operater", "a00532.html#aa8e91ea7bff0f0211728c25ee5402ccc", null ],
-    [ "type", "a00532.html#ae417bdaa1e08bf29b51b97fd1f8f4d80", null ]
+    [ "string", "a00532.html#ae7cf7e3913c2067517d3f40ff1c9a14d", null ],
+    [ "MiraiCPExceptionBase", "a00532.html#a055eb6e4a0899678793b0e4106fbf493", null ],
+    [ "~MiraiCPExceptionBase", "a00532.html#ac7fe834dc2b81b3c0d44dde55b796ac6", null ],
+    [ "basicRaise", "a00532.html#aec8e8e400265242bd3a9998af6b55880", null ],
+    [ "exceptionType", "a00532.html#a62ccfc566b59f882d0623f8e24757809", null ],
+    [ "getError", "a00532.html#a68c0d665c09da7144da6a63fd26f2dd0", null ],
+    [ "getExceptionType", "a00532.html#a55544c06d6fea1a7696421383e155f13", null ],
+    [ "raise", "a00532.html#a27e4eaeb594e067089585f1975b7eb74", null ],
+    [ "what", "a00532.html#aaac831e38c70fa529b8894b825dba04c", null ],
+    [ "filename", "a00532.html#a5d5876720c98c5c3ef2fcd2a20a0cb72", null ],
+    [ "lineNum", "a00532.html#a8724c76817d0af9f3f8fef9a6ca7f60a", null ],
+    [ "re", "a00532.html#a2eb4b42c95d1ecbc6333129ecf8c5592", null ]
 ];

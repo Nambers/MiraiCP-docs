@@ -1,30 +1,5 @@
 var a00348 =
 [
-    [ "getAuthor", "a00348.html#abfdf0bbad2700204a5deced1ff272ff2", null ],
-    [ "getAuthor", "a00348.html#abfdf0bbad2700204a5deced1ff272ff2", null ],
-    [ "getDescription", "a00348.html#a7164279987822e9aab5a2dd15e017de3", null ],
-    [ "getDescription", "a00348.html#a7164279987822e9aab5a2dd15e017de3", null ],
-    [ "getId", "a00348.html#a812cdc9b9e9c46af8980f1aea9a4233c", null ],
-    [ "getId", "a00348.html#a812cdc9b9e9c46af8980f1aea9a4233c", null ],
-    [ "getMVersion", "a00348.html#a89f1f77ffc39dfa0481e7c1ddc318b23", null ],
-    [ "getMVersion", "a00348.html#a89f1f77ffc39dfa0481e7c1ddc318b23", null ],
-    [ "getName", "a00348.html#a75b62773306f64d5de37fc60f700b534", null ],
-    [ "getName", "a00348.html#a75b62773306f64d5de37fc60f700b534", null ],
-    [ "getTime", "a00348.html#aa9519385a55e29fa632d31d97b734ac4", null ],
-    [ "getTime", "a00348.html#aa9519385a55e29fa632d31d97b734ac4", null ],
-    [ "getVersion", "a00348.html#a8f0131520e982b41e3c62364b9eaf2fa", null ],
-    [ "getVersion", "a00348.html#a8f0131520e982b41e3c62364b9eaf2fa", null ],
-    [ "isValid", "a00348.html#a37c32e82eb4c921a9f66db00cc7a0010", null ],
-    [ "isValid", "a00348.html#a37c32e82eb4c921a9f66db00cc7a0010", null ],
-    [ "serialize", "a00348.html#a074fac12f573e3ec8ea2bb2bced66f08", null ],
-    [ "serialize", "a00348.html#a77c901bbcfdeecfb52a914268aa10780", null ],
-    [ "serialize2string", "a00348.html#af92596a34de37970ec76538dc2817e98", null ],
-    [ "serialize2string", "a00348.html#af92596a34de37970ec76538dc2817e98", null ],
-    [ "author", "a00348.html#aa7af379ac24846e6d3e30bc6762fb4be", null ],
-    [ "description", "a00348.html#aeec44e9e80839cca3ca27dd0167aa920", null ],
-    [ "id", "a00348.html#a67bcd25646fce2208ac8572404ac14e0", null ],
-    [ "mversion", "a00348.html#a9f1e661cc114ab567a55b0a8e9dfd919", null ],
-    [ "name", "a00348.html#ab797026513632bcfdaf7e46b1be05ed3", null ],
-    [ "time", "a00348.html#a235346d7bdf4e73ef0af36214dab89f7", null ],
-    [ "version", "a00348.html#ad95a28c5019fa811b89712e4af48c024", null ]
+    [ "PluginLoadException", "a00348.html#abcadf418c532d132fba49357902e2e7e", null ],
+    [ "exceptionType", "a00348.html#ac82d122c331d273b9d62327055f197f1", null ]
 ];

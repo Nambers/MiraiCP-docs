@@ -1,12 +1,14 @@
 var a00508 =
 [
-    [ "MemberRecallEvent", "a00508.html#ae2531a88731e49d91180cc0c890fa24d", null ],
-    [ "MemberRecallEvent", "a00508.html#ae2531a88731e49d91180cc0c890fa24d", null ],
-    [ "get_event_type", "a00508.html#aa6f3ad8649a79e18d462e9ec112ecd81", null ],
-    [ "get_event_type", "a00508.html#aa6f3ad8649a79e18d462e9ec112ecd81", null ],
-    [ "author", "a00508.html#a42b790ec3a63e1e3681153d4450ff61c", null ],
-    [ "ids", "a00508.html#aa89c57b7458608b67fecce4cb3aec205", null ],
-    [ "internalIds", "a00508.html#a7ae3f1f378e6191e0825aaeb4e0a32d7", null ],
-    [ "operater", "a00508.html#a36111b48542b165bd42014c05b565e63", null ],
-    [ "time", "a00508.html#a10924542380ed62cbf690d8754cc7a10", null ]
+    [ "MemberJoinRequestEvent", "a00508.html#a205de53afc65122d17f336d9f1cacf01", null ],
+    [ "accept", "a00508.html#ace031723d310c72ed25b83485f66a034", null ],
+    [ "get_event_type", "a00508.html#a91bdec8138ea1cc5416cb0eb8427b45f", null ],
+    [ "operate", "a00508.html#a734601e2d26833d8056591d8ac2457b2", null ],
+    [ "reject", "a00508.html#a855d60c9e71eda3fd438e45728a8799d", null ],
+    [ "from", "a00508.html#a313f0577b5ece4ff0955322f59b93528", null ],
+    [ "fromNick", "a00508.html#ab1b5b0fb40c552ef63c6628712abff7a", null ],
+    [ "group", "a00508.html#a10b7aaaaf0e8f31c2f9cc0ffd40232b2", null ],
+    [ "inviter", "a00508.html#a1a2aa46fd5e85786f2e3858e12ceaeea", null ],
+    [ "message", "a00508.html#af8b8a41e8a844640d4544a5f96b35ed3", null ],
+    [ "source", "a00508.html#aa1b90d95a75a1e6b79aa54a777eb8bf7", null ]
 ];

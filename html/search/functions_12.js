@@ -10,7 +10,7 @@ var searchData=
   ['registercommand_7',['registerCommand',['../a00413.html#accb883db18602dc65b5fdd264dd73bfd',1,'MiraiCP::CommandManager']]],
   ['registerevent_8',['registerEvent',['../a00533.html#ae00f75f32055f085290929d3c2294bba',1,'MiraiCP::Event']]],
   ['registerhandle_9',['registerHandle',['../a00669.html#aa3e0ad0c5771cee4583b577981105114',1,'MiraiCP::Logger_interface']]],
-  ['registermethods_10',['registerMethods',['../a00035.html#a0c4a7b01410b519eeff58a050bc194cb',1,'registerMethods(JNIEnv *env, const char *className, const JNINativeMethod *gMethods, int numMethods):&#160;ktInterface.cpp'],['../a00200.html#a0c4a7b01410b519eeff58a050bc194cb',1,'registerMethods(JNIEnv *env, const char *className, const JNINativeMethod *gMethods, int numMethods):&#160;ktInterface.cpp']]],
+  ['registermethods_10',['registerMethods',['../a00071.html#a0c4a7b01410b519eeff58a050bc194cb',1,'registerMethods(JNIEnv *env, const char *className, const JNINativeMethod *gMethods, int numMethods):&#160;ktInterface.cpp'],['../a00200.html#a0c4a7b01410b519eeff58a050bc194cb',1,'registerMethods(JNIEnv *env, const char *className, const JNINativeMethod *gMethods, int numMethods):&#160;ktInterface.cpp']]],
   ['reject_11',['reject',['../a00473.html#a887c0777813d171d8fd4241e5d6c7357',1,'MiraiCP::NewFriendRequestEvent::reject()'],['../a00517.html#a855d60c9e71eda3fd438e45728a8799d',1,'MiraiCP::MemberJoinRequestEvent::reject()'],['../a00469.html#a749d773136fff280e951e66e21959a6c',1,'MiraiCP::GroupInviteEvent::reject()']]],
   ['reloadallplugin_12',['reloadAllPlugin',['../a00397.html#a5bf805b4eb2e1f55fb77f79c52e0f75d',1,'LibLoader::PluginListManager']]],
   ['reloadbyid_13',['reloadById',['../a00397.html#aeabb1d1eb9380ac1fef5843904522dad',1,'LibLoader::PluginListManager']]],

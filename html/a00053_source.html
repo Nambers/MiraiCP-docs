@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiraiCP: LoaderTaskQueue.h 源文件</title>
+<title>MiraiCP: PlatformThreading.h 源文件</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -93,10 +93,10 @@ $(document).ready(function(){initNavTree('a00053_source.html',''); initResizable
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">LoaderTaskQueue.h</div></div>
+  <div class="headertitle"><div class="title">PlatformThreading.h</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="a00053.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// Copyright (c) 2022 - 2022. Antares, Eritque arcus and contributors.</span></div>
+<a href="a00053.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// Copyright (c) 2022. Eritque arcus and contributors.</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">//</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">// This program is free software: you can redistribute it and/or modify</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">// it under the terms of the GNU Affero General Public License as</span></div>
@@ -112,79 +112,95 @@ $(document).ready(function(){initNavTree('a00053_source.html',''); initResizable
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">// along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</span></div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">//</span></div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#ifndef MIRAICP_PRO_LOADERTASKQUEUE_H</span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#define MIRAICP_PRO_LOADERTASKQUEUE_H</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#ifndef MIRAICP_PRO_PLATFORMTHREADING_H</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#define MIRAICP_PRO_PLATFORMTHREADING_H</span></div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &lt;condition_variable&gt;</span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &lt;mutex&gt;</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &lt;queue&gt;</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="keyword">namespace </span><a class="code hl_namespace" href="a00301.html">LibLoader</a> {</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    std::condition_variable &amp;<a class="code hl_function" href="a00301.html#a46f4ab12479d61956e7dc81cfb19fef5">loaderWakeCV</a>();</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &quot;<a class="code" href="a00047.html">MiraiCPMacros.h</a>&quot;</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">// -----------------------</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#if MIRAICP_MSVC</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#include &lt;Windows.h&gt;</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &lt;processthreadsapi.h&gt;</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;string&gt;</span></div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="a00301.html#a30aa31bdebda65b5dc09459f065cf482">   29</a></span>    <span class="keyword">enum struct</span> <a class="code hl_enumeration" href="a00301.html#a30aa31bdebda65b5dc09459f065cf482">LOADER_TASKS</a> {</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        <a class="code hl_enumvalue" href="a00301.html#a30aa31bdebda65b5dc09459f065cf482a445daa5b99398472138b7322b561fb27">ADD_THREAD</a>,</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        <a class="code hl_enumvalue" href="a00301.html#a30aa31bdebda65b5dc09459f065cf482a9f868a91fcfde74e1293e5c89498b376">END_THREAD</a>,</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <a class="code hl_enumvalue" href="a00301.html#a30aa31bdebda65b5dc09459f065cf482af7642b9b513ebc4d2d35907325564f6a">ENABLE_ALL</a>,</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        <a class="code hl_enumvalue" href="a00301.html#a30aa31bdebda65b5dc09459f065cf482aa4f23572e2e2fcd98c6396ea9d77312e">DISABLE_ALL</a>,</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        <a class="code hl_enumvalue" href="a00301.html#a30aa31bdebda65b5dc09459f065cf482a97392091ce14839af90239bab1cc6b08">LOAD_NEW_ACTIVATENOW</a>,</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        <a class="code hl_enumvalue" href="a00301.html#a30aa31bdebda65b5dc09459f065cf482a2ec891fb94aefae87f6effc99b18e8d0">LOAD_NEW_DONTACTIVATE</a>,</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        <a class="code hl_enumvalue" href="a00301.html#a30aa31bdebda65b5dc09459f065cf482a4fd5807b5d875b53ba16d14054cdfaad">UNLOAD</a>,</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        <a class="code hl_enumvalue" href="a00301.html#a30aa31bdebda65b5dc09459f065cf482a07d14e40a82f0a38be9b2d0e4f5f8278">RELOAD</a>,</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <a class="code hl_enumvalue" href="a00301.html#a30aa31bdebda65b5dc09459f065cf482a7092e85ca968b7860da2894c65d3132e">EXCEPTION_PLUGINEND</a>,</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        <a class="code hl_enumvalue" href="a00301.html#a30aa31bdebda65b5dc09459f065cf482a582cbc208af43808f67f4c736fc431fb">RESET_THREAD</a>,</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <a class="code hl_enumvalue" href="a00301.html#a30aa31bdebda65b5dc09459f065cf482a51f7dec58bc9cd93ab07ef616f71baaa">TASK_TYPES_COUNT</a> [[maybe_unused]],</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    };</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="a00301.html#a7d3f947f188b83a2b84f3c7e009d4e1a">   43</a></span>    <span class="keyword">typedef</span> std::pair&lt;LOADER_TASKS, std::string&gt; <a class="code hl_typedef" href="a00301.html#a7d3f947f188b83a2b84f3c7e009d4e1a">loadertask</a>;</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keyword">extern</span> std::queue&lt;loadertask&gt; <a class="code hl_variable" href="a00301.html#a0c277357f066f384f6b2a05a472a47c6">loader_thread_task_queue</a>;</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keyword">extern</span> std::recursive_mutex <a class="code hl_variable" href="a00301.html#af93aa0663e3f029f87f90ab64f7f8c19">task_mtx</a>;</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="a00301.html#afbf560680f6b525ee0240f614a0177b6">   48</a></span>    <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="a00301.html#afbf560680f6b525ee0240f614a0177b6">sendPluginException</a>(std::string plugin_id) {</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        std::lock_guard lk(<a class="code hl_variable" href="a00301.html#af93aa0663e3f029f87f90ab64f7f8c19">task_mtx</a>);</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <a class="code hl_variable" href="a00301.html#a0c277357f066f384f6b2a05a472a47c6">loader_thread_task_queue</a>.emplace(<a class="code hl_enumvalue" href="a00301.html#a30aa31bdebda65b5dc09459f065cf482a7092e85ca968b7860da2894c65d3132e">LOADER_TASKS::EXCEPTION_PLUGINEND</a>, std::move(plugin_id));</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        <a class="code hl_function" href="a00301.html#a46f4ab12479d61956e7dc81cfb19fef5">loaderWakeCV</a>().notify_one();</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    }</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="a00301.html#a7ee448e1b260709b6a8d73fa41ec5c15">   54</a></span>    <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="a00301.html#a7ee448e1b260709b6a8d73fa41ec5c15">sendThreadReset</a>(<span class="keywordtype">size_t</span> index) {</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        std::lock_guard lk(<a class="code hl_variable" href="a00301.html#af93aa0663e3f029f87f90ab64f7f8c19">task_mtx</a>);</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        <a class="code hl_variable" href="a00301.html#a0c277357f066f384f6b2a05a472a47c6">loader_thread_task_queue</a>.emplace(<a class="code hl_enumvalue" href="a00301.html#a30aa31bdebda65b5dc09459f065cf482a582cbc208af43808f67f4c736fc431fb">LOADER_TASKS::RESET_THREAD</a>, std::to_string(index));</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        <a class="code hl_function" href="a00301.html#a46f4ab12479d61956e7dc81cfb19fef5">loaderWakeCV</a>().notify_one();</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    }</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>} <span class="comment">// namespace LibLoader</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="a00053.html#a950b21be09363bd9b3cda80780d6f53f">checkPthreadLen</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *ptr) {</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keywordtype">size_t</span> <a class="code hl_enumvalue" href="a00307.html#abe9e9d8212ea8f23717b72db64393caba19263cbf330b3b5fac1b6dbd09ccc34b">count</a> = 0;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keywordflow">while</span> ((*ptr) &amp;&amp; <a class="code hl_enumvalue" href="a00307.html#abe9e9d8212ea8f23717b72db64393caba19263cbf330b3b5fac1b6dbd09ccc34b">count</a> &lt;= 80) {</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        ptr++;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        ++<a class="code hl_enumvalue" href="a00307.html#abe9e9d8212ea8f23717b72db64393caba19263cbf330b3b5fac1b6dbd09ccc34b">count</a>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    }</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="a00307.html#abe9e9d8212ea8f23717b72db64393caba19263cbf330b3b5fac1b6dbd09ccc34b">count</a> &lt;= 80;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>}</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="keyword">inline</span> <span class="keywordtype">void</span> *<a class="code hl_function" href="a00053.html#a355ba908e1bbef8ea09eeed979a16520">platform_thread_self</a>() {</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keywordflow">return</span> GetCurrentThread();</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>}</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="a00053.html#a9f67720001db7976ed33085c42d81fb0">platform_set_thread_name</a>(<span class="keywordtype">void</span> *<a class="code hl_function" href="a00053.html#a355ba908e1bbef8ea09eeed979a16520">platform_thread_self</a>, <span class="keyword">const</span> <span class="keywordtype">char</span> *name) {</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keywordtype">size_t</span> len = strlen(name);</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    std::wstring wst(len + 1, <span class="charliteral">&#39;#&#39;</span>);</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keywordtype">size_t</span> num_convert;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    mbstowcs_s(&amp;num_convert, &amp;wst[0], len + 1, name, len + 1);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    SetThreadDescription(<a class="code hl_function" href="a00053.html#a355ba908e1bbef8ea09eeed979a16520">platform_thread_self</a>, &amp;wst[0]);</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>}</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="a00053.html#a67462281d09a44cf573abdb30dc1e212">platform_get_thread_name</a>(<span class="keywordtype">void</span> *<a class="code hl_function" href="a00053.html#a355ba908e1bbef8ea09eeed979a16520">platform_thread_self</a>, <span class="keywordtype">char</span> *buf, <span class="keywordtype">size_t</span> bufsize) {</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keywordtype">wchar_t</span> *wbuf;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    GetThreadDescription(<a class="code hl_function" href="a00053.html#a355ba908e1bbef8ea09eeed979a16520">platform_thread_self</a>, &amp;wbuf);</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="keywordtype">size_t</span> num_convert;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    wcstombs_s(&amp;num_convert, buf, bufsize, wbuf, bufsize);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    LocalFree(wbuf);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>}</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="preprocessor">#else</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="preprocessor">#include &lt;thread&gt;</span></div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="preprocessor">#endif </span><span class="comment">//MIRAICP_PRO_LOADERTASKQUEUE_H</span></div>
-<div class="ttc" id="aa00301_html"><div class="ttname"><a href="a00301.html">LibLoader</a></div><div class="ttdef"><b>Definition:</b> <a href="a00005_source.html#l00028">commonTypes.h:28</a></div></div>
-<div class="ttc" id="aa00301_html_a0c277357f066f384f6b2a05a472a47c6"><div class="ttname"><a href="a00301.html#a0c277357f066f384f6b2a05a472a47c6">LibLoader::loader_thread_task_queue</a></div><div class="ttdeci">std::queue&lt; loadertask &gt; loader_thread_task_queue</div><div class="ttdef"><b>Definition:</b> <a href="a01265_source.html#l00032">libloader/loaderApi.cpp:32</a></div></div>
-<div class="ttc" id="aa00301_html_a30aa31bdebda65b5dc09459f065cf482"><div class="ttname"><a href="a00301.html#a30aa31bdebda65b5dc09459f065cf482">LibLoader::LOADER_TASKS</a></div><div class="ttdeci">LOADER_TASKS</div><div class="ttdef"><b>Definition:</b> <a href="a00053_source.html#l00029">LoaderTaskQueue.h:29</a></div></div>
-<div class="ttc" id="aa00301_html_a30aa31bdebda65b5dc09459f065cf482a07d14e40a82f0a38be9b2d0e4f5f8278"><div class="ttname"><a href="a00301.html#a30aa31bdebda65b5dc09459f065cf482a07d14e40a82f0a38be9b2d0e4f5f8278">LibLoader::LOADER_TASKS::RELOAD</a></div><div class="ttdeci">@ RELOAD</div></div>
-<div class="ttc" id="aa00301_html_a30aa31bdebda65b5dc09459f065cf482a2ec891fb94aefae87f6effc99b18e8d0"><div class="ttname"><a href="a00301.html#a30aa31bdebda65b5dc09459f065cf482a2ec891fb94aefae87f6effc99b18e8d0">LibLoader::LOADER_TASKS::LOAD_NEW_DONTACTIVATE</a></div><div class="ttdeci">@ LOAD_NEW_DONTACTIVATE</div></div>
-<div class="ttc" id="aa00301_html_a30aa31bdebda65b5dc09459f065cf482a445daa5b99398472138b7322b561fb27"><div class="ttname"><a href="a00301.html#a30aa31bdebda65b5dc09459f065cf482a445daa5b99398472138b7322b561fb27">LibLoader::LOADER_TASKS::ADD_THREAD</a></div><div class="ttdeci">@ ADD_THREAD</div></div>
-<div class="ttc" id="aa00301_html_a30aa31bdebda65b5dc09459f065cf482a4fd5807b5d875b53ba16d14054cdfaad"><div class="ttname"><a href="a00301.html#a30aa31bdebda65b5dc09459f065cf482a4fd5807b5d875b53ba16d14054cdfaad">LibLoader::LOADER_TASKS::UNLOAD</a></div><div class="ttdeci">@ UNLOAD</div></div>
-<div class="ttc" id="aa00301_html_a30aa31bdebda65b5dc09459f065cf482a51f7dec58bc9cd93ab07ef616f71baaa"><div class="ttname"><a href="a00301.html#a30aa31bdebda65b5dc09459f065cf482a51f7dec58bc9cd93ab07ef616f71baaa">LibLoader::LOADER_TASKS::TASK_TYPES_COUNT</a></div><div class="ttdeci">@ TASK_TYPES_COUNT</div></div>
-<div class="ttc" id="aa00301_html_a30aa31bdebda65b5dc09459f065cf482a582cbc208af43808f67f4c736fc431fb"><div class="ttname"><a href="a00301.html#a30aa31bdebda65b5dc09459f065cf482a582cbc208af43808f67f4c736fc431fb">LibLoader::LOADER_TASKS::RESET_THREAD</a></div><div class="ttdeci">@ RESET_THREAD</div></div>
-<div class="ttc" id="aa00301_html_a30aa31bdebda65b5dc09459f065cf482a7092e85ca968b7860da2894c65d3132e"><div class="ttname"><a href="a00301.html#a30aa31bdebda65b5dc09459f065cf482a7092e85ca968b7860da2894c65d3132e">LibLoader::LOADER_TASKS::EXCEPTION_PLUGINEND</a></div><div class="ttdeci">@ EXCEPTION_PLUGINEND</div></div>
-<div class="ttc" id="aa00301_html_a30aa31bdebda65b5dc09459f065cf482a97392091ce14839af90239bab1cc6b08"><div class="ttname"><a href="a00301.html#a30aa31bdebda65b5dc09459f065cf482a97392091ce14839af90239bab1cc6b08">LibLoader::LOADER_TASKS::LOAD_NEW_ACTIVATENOW</a></div><div class="ttdeci">@ LOAD_NEW_ACTIVATENOW</div></div>
-<div class="ttc" id="aa00301_html_a30aa31bdebda65b5dc09459f065cf482a9f868a91fcfde74e1293e5c89498b376"><div class="ttname"><a href="a00301.html#a30aa31bdebda65b5dc09459f065cf482a9f868a91fcfde74e1293e5c89498b376">LibLoader::LOADER_TASKS::END_THREAD</a></div><div class="ttdeci">@ END_THREAD</div></div>
-<div class="ttc" id="aa00301_html_a30aa31bdebda65b5dc09459f065cf482aa4f23572e2e2fcd98c6396ea9d77312e"><div class="ttname"><a href="a00301.html#a30aa31bdebda65b5dc09459f065cf482aa4f23572e2e2fcd98c6396ea9d77312e">LibLoader::LOADER_TASKS::DISABLE_ALL</a></div><div class="ttdeci">@ DISABLE_ALL</div></div>
-<div class="ttc" id="aa00301_html_a30aa31bdebda65b5dc09459f065cf482af7642b9b513ebc4d2d35907325564f6a"><div class="ttname"><a href="a00301.html#a30aa31bdebda65b5dc09459f065cf482af7642b9b513ebc4d2d35907325564f6a">LibLoader::LOADER_TASKS::ENABLE_ALL</a></div><div class="ttdeci">@ ENABLE_ALL</div></div>
-<div class="ttc" id="aa00301_html_a46f4ab12479d61956e7dc81cfb19fef5"><div class="ttname"><a href="a00301.html#a46f4ab12479d61956e7dc81cfb19fef5">LibLoader::loaderWakeCV</a></div><div class="ttdeci">std::condition_variable &amp; loaderWakeCV()</div><div class="ttdef"><b>Definition:</b> <a href="a00215_source.html#l00032">loaderMain.cpp:32</a></div></div>
-<div class="ttc" id="aa00301_html_a7d3f947f188b83a2b84f3c7e009d4e1a"><div class="ttname"><a href="a00301.html#a7d3f947f188b83a2b84f3c7e009d4e1a">LibLoader::loadertask</a></div><div class="ttdeci">std::pair&lt; LOADER_TASKS, std::string &gt; loadertask</div><div class="ttdef"><b>Definition:</b> <a href="a00053_source.html#l00043">LoaderTaskQueue.h:43</a></div></div>
-<div class="ttc" id="aa00301_html_a7ee448e1b260709b6a8d73fa41ec5c15"><div class="ttname"><a href="a00301.html#a7ee448e1b260709b6a8d73fa41ec5c15">LibLoader::sendThreadReset</a></div><div class="ttdeci">void sendThreadReset(size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="a00053_source.html#l00054">LoaderTaskQueue.h:54</a></div></div>
-<div class="ttc" id="aa00301_html_af93aa0663e3f029f87f90ab64f7f8c19"><div class="ttname"><a href="a00301.html#af93aa0663e3f029f87f90ab64f7f8c19">LibLoader::task_mtx</a></div><div class="ttdeci">std::recursive_mutex task_mtx</div><div class="ttdef"><b>Definition:</b> <a href="a01265_source.html#l00033">libloader/loaderApi.cpp:33</a></div></div>
-<div class="ttc" id="aa00301_html_afbf560680f6b525ee0240f614a0177b6"><div class="ttname"><a href="a00301.html#afbf560680f6b525ee0240f614a0177b6">LibLoader::sendPluginException</a></div><div class="ttdeci">void sendPluginException(std::string plugin_id)</div><div class="ttdef"><b>Definition:</b> <a href="a00053_source.html#l00048">LoaderTaskQueue.h:48</a></div></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="a00053.html#a355ba908e1bbef8ea09eeed979a16520">   61</a></span><span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code hl_function" href="a00053.html#a355ba908e1bbef8ea09eeed979a16520">platform_thread_self</a>() {</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="keywordflow">return</span> pthread_self();</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>}</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="a00053.html#a950b21be09363bd9b3cda80780d6f53f">   65</a></span><span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="a00053.html#a950b21be09363bd9b3cda80780d6f53f">checkPthreadLen</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *ptr) {</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="keywordtype">size_t</span> <a class="code hl_enumvalue" href="a00307.html#abe9e9d8212ea8f23717b72db64393caba19263cbf330b3b5fac1b6dbd09ccc34b">count</a> = 0;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <span class="keywordflow">while</span> ((*ptr) &amp;&amp; <a class="code hl_enumvalue" href="a00307.html#abe9e9d8212ea8f23717b72db64393caba19263cbf330b3b5fac1b6dbd09ccc34b">count</a> &lt;= 15) {</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        ptr++;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        ++<a class="code hl_enumvalue" href="a00307.html#abe9e9d8212ea8f23717b72db64393caba19263cbf330b3b5fac1b6dbd09ccc34b">count</a>;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    }</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="a00307.html#abe9e9d8212ea8f23717b72db64393caba19263cbf330b3b5fac1b6dbd09ccc34b">count</a> &lt;= 15;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>}</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="a00053.html#a9f67720001db7976ed33085c42d81fb0">   74</a></span><span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="a00053.html#a9f67720001db7976ed33085c42d81fb0">platform_set_thread_name</a>(<span class="keyword">decltype</span>(<a class="code hl_function" href="a00053.html#a355ba908e1bbef8ea09eeed979a16520">platform_thread_self</a>()) <span class="keywordtype">id</span>, <span class="keyword">const</span> <span class="keywordtype">char</span> *name) {</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="a00053.html#a950b21be09363bd9b3cda80780d6f53f">checkPthreadLen</a>(name)) {</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        pthread_setname_np(<span class="keywordtype">id</span>, name);</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        std::string tNewName;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        tNewName.reserve(15);</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        tNewName.append(std::string_view(name, 15));</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        pthread_setname_np(<span class="keywordtype">id</span>, tNewName.c_str());</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    }</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>}</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="a00053.html#a67462281d09a44cf573abdb30dc1e212">   85</a></span><span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="a00053.html#a67462281d09a44cf573abdb30dc1e212">platform_get_thread_name</a>(<span class="keyword">decltype</span>(<a class="code hl_function" href="a00053.html#a355ba908e1bbef8ea09eeed979a16520">platform_thread_self</a>()) <span class="keywordtype">id</span>, <span class="keywordtype">char</span> *buf, <span class="keywordtype">size_t</span> bufsize) {</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    pthread_getname_np(<span class="keywordtype">id</span>, buf, bufsize);</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>}</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span><span class="preprocessor">#endif </span><span class="comment">//MIRAICP_PRO_PLATFORMTHREADING_H</span></div>
+<div class="ttc" id="aa00047_html"><div class="ttname"><a href="a00047.html">MiraiCPMacros.h</a></div></div>
+<div class="ttc" id="aa00053_html_a355ba908e1bbef8ea09eeed979a16520"><div class="ttname"><a href="a00053.html#a355ba908e1bbef8ea09eeed979a16520">platform_thread_self</a></div><div class="ttdeci">auto platform_thread_self()</div><div class="ttdef"><b>Definition:</b> <a href="a00053_source.html#l00061">PlatformThreading.h:61</a></div></div>
+<div class="ttc" id="aa00053_html_a67462281d09a44cf573abdb30dc1e212"><div class="ttname"><a href="a00053.html#a67462281d09a44cf573abdb30dc1e212">platform_get_thread_name</a></div><div class="ttdeci">void platform_get_thread_name(decltype(platform_thread_self()) id, char *buf, size_t bufsize)</div><div class="ttdef"><b>Definition:</b> <a href="a00053_source.html#l00085">PlatformThreading.h:85</a></div></div>
+<div class="ttc" id="aa00053_html_a950b21be09363bd9b3cda80780d6f53f"><div class="ttname"><a href="a00053.html#a950b21be09363bd9b3cda80780d6f53f">checkPthreadLen</a></div><div class="ttdeci">bool checkPthreadLen(const char *ptr)</div><div class="ttdef"><b>Definition:</b> <a href="a00053_source.html#l00065">PlatformThreading.h:65</a></div></div>
+<div class="ttc" id="aa00053_html_a9f67720001db7976ed33085c42d81fb0"><div class="ttname"><a href="a00053.html#a9f67720001db7976ed33085c42d81fb0">platform_set_thread_name</a></div><div class="ttdeci">void platform_set_thread_name(decltype(platform_thread_self()) id, const char *name)</div><div class="ttdef"><b>Definition:</b> <a href="a00053_source.html#l00074">PlatformThreading.h:74</a></div></div>
+<div class="ttc" id="aa00307_html_abe9e9d8212ea8f23717b72db64393caba19263cbf330b3b5fac1b6dbd09ccc34b"><div class="ttname"><a href="a00307.html#abe9e9d8212ea8f23717b72db64393caba19263cbf330b3b5fac1b6dbd09ccc34b">MiraiCP::eventTypes::count</a></div><div class="ttdeci">@ count</div><div class="ttdef"><b>Definition:</b> <a href="a00119_source.html#l00051">Event.h:51</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_bda05eb71e068b870dbf680d28584ff8.html">libloader</a></li><li class="navelem"><a class="el" href="a00053.html">LoaderTaskQueue.h</a></li>
-    <li class="footer">生成于 2023年 一月 21日 星期六 14:32:48 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_0966d06610f72609fd9aa4979c2b5a92.html">common</a></li><li class="navelem"><a class="el" href="a00053.html">PlatformThreading.h</a></li>
+    <li class="footer">生成于 2023年 一月 22日 星期日 13:18:23 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
     </body>

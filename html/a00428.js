@@ -1,9 +1,11 @@
 var a00428 =
 [
-    [ "description", "a00428.html#ae924c02b04ee3fec68c0838ee34bd45d", null ],
-    [ "overrideOrigin", "a00428.html#acb9a0a0c0b1933c9aa28bb361f284489", null ],
-    [ "preFixOption", "a00428.html#af40c74e212dd165a72e7b2e8769e0dcb", null ],
-    [ "primaryName", "a00428.html#a21a4c0a9fe2032ce10efbd76c5388dce", null ],
-    [ "secondNames", "a00428.html#a3cba2ce1807169a523e7d807c93ec6a8", null ],
-    [ "usage", "a00428.html#a3f604db6531d4956520cf813d57aa544", null ]
+    [ "CPPPlugin", "a00428.html#aeeaafebf5e61e1da8a2c5e3e07dac64b", null ],
+    [ "~CPPPlugin", "a00428.html#af7c569aa874ccbac301c805755dcda0c", null ],
+    [ "onDisable", "a00428.html#a3ecc2c479d1ca6785e7cdcb0738c1597", null ],
+    [ "onEnable", "a00428.html#ad3d1188d089ab0fc945475f988c64fa7", null ],
+    [ "ShouldNotUse", "a00428.html#a30d82964da1ce75eb9f269c676dafc33", null ],
+    [ "config", "a00428.html#af12cf0a5880f4fcc76655c1d33e32a42", null ],
+    [ "plugin", "a00428.html#a2695d2cca487ad336a8b6f96e156022b", null ],
+    [ "pluginLogger", "a00428.html#ac74f70ce15a0495ac7006ad725a51279", null ]
 ];

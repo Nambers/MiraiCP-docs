@@ -1,14 +1,15 @@
 var a00368 =
 [
-    [ "string", "a00368.html#a426a5f32b7a2a56205d68c118579c216", null ],
-    [ "LoaderBaseException", "a00368.html#a60617c64dab00d3d3c64d012ba6dda9f", null ],
-    [ "~LoaderBaseException", "a00368.html#a5cae5e7ccb01c5851b2a06e95e81b907", null ],
-    [ "exceptionType", "a00368.html#a256993d5a0b22f6057ddd19a50bdc872", null ],
-    [ "getExceptionType", "a00368.html#a0c228099ad2d23da15b72123bb255f67", null ],
-    [ "raise", "a00368.html#aa78df717d01813327f31b3cc2b8b0efb", null ],
-    [ "warningRaise", "a00368.html#aefe83b46523df9d571e0f25b9283f793", null ],
-    [ "what", "a00368.html#a0928090784126f3081fb2b7e73c39b22", null ],
-    [ "errorMessage", "a00368.html#a4e41edc9cdc52ef5ed27b5f65938a928", null ],
-    [ "filename", "a00368.html#acfb18c7eb10c0dc2205c98e73ad0e647", null ],
-    [ "lineNum", "a00368.html#a260f9ce0d0fc07df498b22eec899eb68", null ]
+    [ "string", "a00368.html#acfe4e8f9dd9fdd3774c50f4843ea4c57", null ],
+    [ "wstring", "a00368.html#a263f5033219fd9fde7e76a4a14e30a3a", null ],
+    [ "call_logger", "a00368.html#af4d7d5164450e25f7401d1cc15f15b8d", null ],
+    [ "call_logger", "a00368.html#a4c48551e7c6b1fe442d394c4333c4f5c", null ],
+    [ "error", "a00368.html#ae735f16b20f681d29d4e5d28ad248dbe", null ],
+    [ "error", "a00368.html#ab16e1bc0504135788f5ce20864deb044", null ],
+    [ "info", "a00368.html#a0d34d5ca7783c370ec08dbbb44876c1b", null ],
+    [ "info", "a00368.html#ad876a34412f03e35fbae30758836e6ff", null ],
+    [ "init", "a00368.html#a666e05995de50742a39702dacf3dcbd7", null ],
+    [ "warning", "a00368.html#af50d0545fe7d683e54fcd03453a423e3", null ],
+    [ "warning", "a00368.html#a17f3029197c45dc84c38a764c9e3e1b9", null ],
+    [ "logMethod", "a00368.html#a298efd2ba8a74fb88313ca0c08e29235", null ]
 ];

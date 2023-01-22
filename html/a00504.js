@@ -1,12 +1,13 @@
 var a00504 =
 [
-    [ "FriendRecallEvent", "a00504.html#a4935324294a7723c3401c58fb1d09a97", null ],
-    [ "FriendRecallEvent", "a00504.html#a4935324294a7723c3401c58fb1d09a97", null ],
-    [ "get_event_type", "a00504.html#a83537ccdbd2e454525697559827df57e", null ],
-    [ "get_event_type", "a00504.html#a83537ccdbd2e454525697559827df57e", null ],
-    [ "author", "a00504.html#adb145915b7e4edcc461a7c7db2823b05", null ],
-    [ "ids", "a00504.html#a426a11bf2f5d57e80082546588abc464", null ],
-    [ "internalIds", "a00504.html#a46217bf3eabccabc4b4358d8c69e71f6", null ],
-    [ "operater", "a00504.html#a4502b63cdd39bb1574a3bfc3d18828d4", null ],
-    [ "time", "a00504.html#ab22df1619e6ad420c6166d0f3877dc74", null ]
+    [ "EventType", "a00504.html#ac1df44d7400ad221500364c7b3de6737", [
+      [ "Active", "a00504.html#ac1df44d7400ad221500364c7b3de6737a4d3d769b812b6faa6b76e1a8abaece2d", null ],
+      [ "Kick", "a00504.html#ac1df44d7400ad221500364c7b3de6737a3e07960fcc45408894cf1402257bd9fd", null ],
+      [ "Disband", "a00504.html#ac1df44d7400ad221500364c7b3de6737aeee6f05922080480c6043305c9d6b329", null ]
+    ] ],
+    [ "BotLeaveEvent", "a00504.html#adf7d87e720725c6db5fb39f0f666b9a4", null ],
+    [ "get_event_type", "a00504.html#a6181c5b90aece0c558943c71d9a037ed", null ],
+    [ "group", "a00504.html#a8d792f877c523fc85423263a3ff60242", null ],
+    [ "operater", "a00504.html#aa8e91ea7bff0f0211728c25ee5402ccc", null ],
+    [ "type", "a00504.html#ae417bdaa1e08bf29b51b97fd1f8f4d80", null ]
 ];

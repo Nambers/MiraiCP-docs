@@ -1,10 +1,11 @@
 var a00528 =
 [
-    [ "NudgeEvent", "a00528.html#abac2712b508c1d09155fb8112abc7a15", null ],
-    [ "NudgeEvent", "a00528.html#abac2712b508c1d09155fb8112abc7a15", null ],
-    [ "get_event_type", "a00528.html#a74e2d3893cc0879c00c226fe03283b81", null ],
-    [ "get_event_type", "a00528.html#a74e2d3893cc0879c00c226fe03283b81", null ],
-    [ "from", "a00528.html#ab7b2ec3a0f37f8dbf2d7fbd39f1ef09f", null ],
-    [ "subject", "a00528.html#a0a50ce25f20d2d14749f94d102b2033d", null ],
-    [ "target", "a00528.html#a2ea2bd970b922d442a8cff3f70249113", null ]
+    [ "eventNode", "a00528.html#a7c0d9e7b800ebff2dbfe29d508e5904f", null ],
+    [ "eventNode", "a00528.html#a21f99c741cb8b0fe0f031e908732147b", null ],
+    [ "eventNode", "a00528.html#a3d10d8495761b35348a9729036280b91", null ],
+    [ "eventNode", "a00528.html#a19665f22ce5e4fe9fdbc50970dab72c5", null ],
+    [ "getHandle", "a00528.html#a9840c901a9c3e81f06f84b13252b181d", null ],
+    [ "run", "a00528.html#aedef6da8603e38047a3de9006052568b", null ],
+    [ "_handle", "a00528.html#ab8b560004af0fe0e513879955328cffd", null ],
+    [ "func", "a00528.html#a64131ff795261b80c6b37223812a3ee8", null ]
 ];

@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiraiCP: Contact.h 文件参考</title>
+<title>MiraiCP: LoaderExceptions.h 文件参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -96,68 +96,57 @@ $(document).ready(function(){initNavTree('a00077.html',''); initResizable(); });
   <div class="summary">
 <a href="#nested-classes">类</a> &#124;
 <a href="#namespaces">命名空间</a> &#124;
-<a href="#enum-members">枚举</a>  </div>
-  <div class="headertitle"><div class="title">Contact.h 文件参考</div></div>
+<a href="#typedef-members">类型定义</a>  </div>
+  <div class="headertitle"><div class="title">LoaderExceptions.h 文件参考</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="a00098_source.html">IMiraiData.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00101_source.html">KtOperation.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00110_source.html">LowLevelAPI.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00116_source.html">MessageChain.h</a>&quot;</code><br />
-<code>#include &lt;json_fwd.hpp&gt;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="a00080_source.html">LoaderLogger.h</a>&quot;</code><br />
+<code>#include &lt;exception&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Contact.h 的引用(Include)关系图:</div>
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> LoaderExceptions.h 的引用(Include)关系图:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="a00078.svg" width="1591" height="710"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00078.svg" width="392" height="262"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div><div class="textblock"><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-1-trigger" src="closed.png" alt="+"/> 此图展示该文件直接或间接的被哪些文件引用了:</div>
 <div id="dynsection-1-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="a00079.svg" width="1535" height="411"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00079.svg" width="583" height="112"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 <p><a href="a00077_source.html">浏览源代码.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 类</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00417.html">MiraiCP::IContactData</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00425.html" title="group, friend, member的父类">Contact</a> 内部储存数据抽象类  <a href="a00417.html#details">更多...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00349.html">LibLoader::LoaderBaseException</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00421.html">MiraiCP::GroupRelatedData</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">interface &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00353.html">LibLoader::LoaderExceptionCRTP&lt; T &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">总异常CRTP抽象类，不要直接抛出该类，不知道抛出什么的时候请抛出 LoaderException。 该类是用于继承的基类，需要新的异常类型时，继承该类并以子类作为模板参数。 子类需要实现的方法：  <a href="a00353.html#details">更多...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00425.html">MiraiCP::Contact</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">group, friend, member的父类  <a href="a00425.html#details">更多...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00357.html">LibLoader::PluginLoadException</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00429.html">MiraiCP::ContactDataHelper&lt; ClassType, InternalDataType &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Contact类型的数据接口模板类  <a href="a00429.html#details">更多...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00361.html">LibLoader::PluginAlreadyLoadedException</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00433.html">MiraiCP::INudgeSupport</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00365.html">LibLoader::PluginAlreadyEnabledException</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00369.html">LibLoader::PluginNotLoadedException</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00373.html">LibLoader::PluginIdDuplicateException</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
 命名空间</h2></td></tr>
-<tr class="memitem:a00302"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00302.html">MiraiCP</a></td></tr>
+<tr class="memitem:a00301"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00301.html">LibLoader</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
-枚举</h2></td></tr>
-<tr class="memitem:a0d1866090dd6e204aff05337260f3a57"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00302.html#a0d1866090dd6e204aff05337260f3a57">MiraiCP::ContactType</a> { <br />
-&#160;&#160;<a class="el" href="a00302.html#a0d1866090dd6e204aff05337260f3a57aeb5e49b11f2d1ca3eb284cae0513f35e">MiraiCP::MIRAI_CONTACT</a> = 0
-, <a class="el" href="a00302.html#a0d1866090dd6e204aff05337260f3a57a00d007921a890e2b7d340dd1f4c0d4cd">MiraiCP::MIRAI_FRIEND</a> = 1
-, <a class="el" href="a00302.html#a0d1866090dd6e204aff05337260f3a57a93f95481bb236ec2172ca1b026f86d22">MiraiCP::MIRAI_GROUP</a> = 2
-, <a class="el" href="a00302.html#a0d1866090dd6e204aff05337260f3a57a6e5aadebf597a6ed3505ca7268a9f902">MiraiCP::MIRAI_MEMBER</a> = 3
-, <br />
-&#160;&#160;<a class="el" href="a00302.html#a0d1866090dd6e204aff05337260f3a57a3d188c74f53cf16c36db2b752a503c4f">MiraiCP::MIRAI_BOT</a> = 4
-, <a class="el" href="a00302.html#a0d1866090dd6e204aff05337260f3a57a1817a8a73e3d0a8896c90a346e40c819">MiraiCP::MIRAI_OTHERTYPE</a> = 5
-<br />
- }</td></tr>
-<tr class="memdesc:a0d1866090dd6e204aff05337260f3a57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Contact 类型  <a href="a00302.html#a0d1866090dd6e204aff05337260f3a57">更多...</a><br /></td></tr>
-<tr class="separator:a0d1866090dd6e204aff05337260f3a57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+类型定义</h2></td></tr>
+<tr class="memitem:aed8445a0eae5bb7716661acb1fc42e66"><td class="memItemLeft" align="right" valign="top">typedef LoaderExceptionCRTP&lt; LoaderBaseException &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00301.html#aed8445a0eae5bb7716661acb1fc42e66">LibLoader::LoaderException</a></td></tr>
+<tr class="separator:aed8445a0eae5bb7716661acb1fc42e66"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -165,8 +154,8 @@ $(document).ready(function(){initNavTree('a00077.html',''); initResizable(); });
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_1ede18532ce6284c46efe733029b594d.html">sdk</a></li><li class="navelem"><a class="el" href="a00077.html">Contact.h</a></li>
-    <li class="footer">生成于 2023年 一月 21日 星期六 14:32:48 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_bda05eb71e068b870dbf680d28584ff8.html">libloader</a></li><li class="navelem"><a class="el" href="a00077.html">LoaderExceptions.h</a></li>
+    <li class="footer">生成于 2023年 一月 22日 星期日 13:18:24 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
     </body>

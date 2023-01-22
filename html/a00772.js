@@ -1,15 +1,9 @@
 var a00772 =
 [
-    [ "LightApp", "a00772.html#a7cfcefeb788e3046fb321fab0a7b813a", null ],
-    [ "LightApp", "a00772.html#a1803b5deeb42af5f4770751aa4160a25", null ],
-    [ "LightApp", "a00772.html#a7cfcefeb788e3046fb321fab0a7b813a", null ],
-    [ "LightApp", "a00772.html#a1803b5deeb42af5f4770751aa4160a25", null ],
-    [ "operator==", "a00772.html#ae69ac9a6359eb6848ce09f7671395969", null ],
-    [ "operator==", "a00772.html#ae69ac9a6359eb6848ce09f7671395969", null ],
-    [ "toJson", "a00772.html#a95599fbda45f4240f9241f6dfa6fe05d", null ],
-    [ "toJson", "a00772.html#a95599fbda45f4240f9241f6dfa6fe05d", null ],
-    [ "toMiraiCode", "a00772.html#ad1637240306cd3dd587044054381d991", null ],
-    [ "toMiraiCode", "a00772.html#ad1637240306cd3dd587044054381d991", null ],
-    [ "type", "a00772.html#abba0c279393369d31f7ebc88ee6756fd", null ],
-    [ "type", "a00772.html#abba0c279393369d31f7ebc88ee6756fd", null ]
+    [ "Face", "a00772.html#aa0b031aa2e11403be44150ebce3dbb93", null ],
+    [ "operator==", "a00772.html#a013671a618db0081ea79cbecec88190f", null ],
+    [ "toJson", "a00772.html#a866de1e28199fa542e760d0caeea434e", null ],
+    [ "toMiraiCode", "a00772.html#a6f40de2d5ca391a1fb5a67fefe55d3e8", null ],
+    [ "type", "a00772.html#a73da05ce5bcbf5d40106b2db705fecb5", null ],
+    [ "id", "a00772.html#a213699a327644eb13d2dc0a5f935cdd8", null ]
 ];

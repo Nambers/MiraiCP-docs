@@ -4,7 +4,7 @@ var searchData=
   ['newenv_1',['newEnv',['../a00194.html#a3d31403b7971274d47d308245206bd24',1,'JNIEnvManager.cpp']]],
   ['newfriendrequestevent_2',['NewFriendRequestEvent',['../a00473.html',1,'MiraiCP::NewFriendRequestEvent'],['../a00473.html#a9d4028d4cc5c401c0065ae73a39647d0',1,'MiraiCP::NewFriendRequestEvent::NewFriendRequestEvent()'],['../a00307.html#abe9e9d8212ea8f23717b72db64393caba8a554c168e28786de2f8f8991085ebd4',1,'MiraiCP::eventTypes::NewFriendRequestEvent()']]],
   ['nextmessage_3',['nextMessage',['../a00461.html#addb043788194a8bffd2eeddff17080ef',1,'MiraiCP::GroupMessageEvent::nextMessage()'],['../a00465.html#a2fadddd37811d8dcbf7183d98eba3034',1,'MiraiCP::PrivateMessageEvent::nextMessage()']]],
-  ['nextmessage_2ecpp_4',['nextMessage.cpp',['../a00173.html',1,'']]],
+  ['nextmessage_2ecpp_4',['nextMessage.cpp',['../a00029.html',1,'']]],
   ['nextmsg_5',['NextMsg',['../a00309.html#a80a8ec1c1ed6fd9db32d9a878405d412a5dc50037a994852e41e27f3a3d192e54',1,'MiraiCP::KtOperation']]],
   ['nfroperation_6',['Nfroperation',['../a00309.html#a80a8ec1c1ed6fd9db32d9a878405d412a59eafab3051beae58fcde2228a7980f7',1,'MiraiCP::KtOperation']]],
   ['nick_7',['nick',['../a00473.html#aac9936ee444a019ef2c988a4ed369b55',1,'MiraiCP::NewFriendRequestEvent::nick()'],['../a00401.html#a14f2c875a64bf63c487be2f45454f517',1,'MiraiCP::Bot::nick()']]],
