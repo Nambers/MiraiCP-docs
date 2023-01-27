@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiraiCP: Logger.cpp 源文件</title>
+<title>MiraiCP: KtOperation.cpp 源文件</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -35,7 +35,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MiraiCP
-   &#160;<span id="projectnumber">v2.13.1</span>
+   &#160;<span id="projectnumber">v2.13.2</span>
    </div>
    <div id="projectbrief">MiraiCP api document</div>
   </td>
@@ -93,7 +93,7 @@ $(document).ready(function(){initNavTree('a00266_source.html',''); initResizable
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">Logger.cpp</div></div>
+  <div class="headertitle"><div class="title">KtOperation.cpp</div></div>
 </div><!--header-->
 <div class="contents">
 <a href="a00266.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// Copyright (c) 2020 - 2022. Eritque arcus and contributors.</span></div>
@@ -112,44 +112,44 @@ $(document).ready(function(){initNavTree('a00266_source.html',''); initResizable
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">// along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</span></div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">//</span></div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &quot;<a class="code" href="a00143.html">Logger.h</a>&quot;</span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &quot;<a class="code" href="a00116.html">CPPPlugin.h</a>&quot;</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &quot;<a class="code" href="a00158.html">MiraiCode.h</a>&quot;</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &quot;<a class="code" href="a00044.html">loaderApiInternal.h</a>&quot;</span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &quot;<a class="code" href="a00047.html">MiraiCPMacros.h</a>&quot;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">// -----------------------</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &quot;<a class="code" href="a00122.html">Exception.h</a>&quot;</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &quot;<a class="code" href="a00137.html">KtOperation.h</a>&quot;</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &quot;<a class="code" href="a00044.html">loaderApiInternal.h</a>&quot;</span></div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keyword">namespace </span><a class="code hl_namespace" href="a00302.html">MiraiCP</a> {</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    Logger <a class="code hl_variable" href="a00668.html#a268fd602157c3fa49616a8872c82bfb1">Logger::logger</a>;</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="a00668.html#ae75bdd405eddd5650979feb9e9ee2a9b">   26</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="a00668.html#ae75bdd405eddd5650979feb9e9ee2a9b">Logger::log_interface</a>(<span class="keyword">const</span> std::string &amp;content, <span class="keywordtype">int</span> level) {</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        <a class="code hl_function" href="a00660.html#a38fe440d115714de3600d804eed00d99">handler_trigger</a>(content, level);</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        <a class="code hl_function" href="a00303.html#a4def9f25b87d48d142d6752184aadc92">LibLoader::LoaderApi::loggerInterface</a>(content, (<span class="stringliteral">&quot;plugin/&quot;</span> + <a class="code hl_variable" href="a00428.html#af12cf0a5880f4fcc76655c1d33e32a42">MiraiCP::CPPPlugin::config</a>.getName()), -1, level);</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    }</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="a00672.html#a4c6ec76d433a890ff1c95cae4cfff59c">   31</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="a00672.html#a4c6ec76d433a890ff1c95cae4cfff59c">IdLogger::log_interface</a>(<span class="keyword">const</span> std::string &amp;content, <span class="keywordtype">int</span> level) {</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <a class="code hl_function" href="a00660.html#a38fe440d115714de3600d804eed00d99">handler_trigger</a>(content, level);</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        <a class="code hl_function" href="a00303.html#a4def9f25b87d48d142d6752184aadc92">LibLoader::LoaderApi::loggerInterface</a>(content, <span class="stringliteral">&quot;&quot;</span>, <span class="keyword">static_cast&lt;</span><span class="keywordtype">long</span> <span class="keywordtype">long</span><span class="keyword">&gt;</span>(<span class="keywordtype">id</span>), level);</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    }</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>} <span class="comment">// namespace MiraiCP</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keyword">namespace </span><a class="code hl_namespace" href="a00313.html">MiraiCP::KtOperation</a> {</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="a00313.html#a309e8d7f316e8b5e947ea3bcddeb84a8">   25</a></span>    std::string <a class="code hl_function" href="a00313.html#a309e8d7f316e8b5e947ea3bcddeb84a8">ktOperation</a>(<a class="code hl_enumeration" href="a00313.html#a80a8ec1c1ed6fd9db32d9a878405d412">operation_set</a> type, <span class="keyword">const</span> <a class="code hl_typedef" href="a00299.html#ab701e3ac61a85b337ec5c1abaad6742d">nlohmann::json</a>&amp; data, <span class="keywordtype">bool</span> catchErr, <span class="keyword">const</span> std::string &amp;errorInfo) {</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="a00313.html#a1e1e498928eeaa1d7107033ff5fa881a">ktOperationStr</a>(type, data.dump(), catchErr, errorInfo);</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    }</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="a00313.html#a1e1e498928eeaa1d7107033ff5fa881a">   28</a></span>    std::string <a class="code hl_function" href="a00313.html#a1e1e498928eeaa1d7107033ff5fa881a">ktOperationStr</a>(<a class="code hl_enumeration" href="a00313.html#a80a8ec1c1ed6fd9db32d9a878405d412">operation_set</a> type, <span class="keyword">const</span> std::string&amp; data, <span class="keywordtype">bool</span> catchErr, <span class="keyword">const</span> std::string &amp;errorInfo) {</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        <a class="code hl_typedef" href="a00299.html#ab701e3ac61a85b337ec5c1abaad6742d">nlohmann::json</a> j{{<span class="stringliteral">&quot;type&quot;</span>, type}, {<span class="stringliteral">&quot;data&quot;</span>, data}};</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        std::string re = <a class="code hl_function" href="a00306.html#a89b345ec37278655b8f02d07dbb3c882">LibLoader::LoaderApi::pluginOperation</a>(j.dump());</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        <span class="keywordflow">if</span> (catchErr) {</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>            MIRAICP_ERROR_HANDLE(re, errorInfo);</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        }</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        <span class="keywordflow">return</span> re;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    }</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>} <span class="comment">// namespace MiraiCP::KtOperation</span></div>
 <div class="ttc" id="aa00044_html"><div class="ttname"><a href="a00044.html">loaderApiInternal.h</a></div></div>
-<div class="ttc" id="aa00116_html"><div class="ttname"><a href="a00116.html">CPPPlugin.h</a></div></div>
-<div class="ttc" id="aa00143_html"><div class="ttname"><a href="a00143.html">Logger.h</a></div></div>
-<div class="ttc" id="aa00158_html"><div class="ttname"><a href="a00158.html">MiraiCode.h</a></div></div>
-<div class="ttc" id="aa00302_html"><div class="ttname"><a href="a00302.html">MiraiCP</a></div><div class="ttdef"><b>Definition:</b> <a href="a00041_source.html#l00041">commonTypes.h:41</a></div></div>
-<div class="ttc" id="aa00303_html_a4def9f25b87d48d142d6752184aadc92"><div class="ttname"><a href="a00303.html#a4def9f25b87d48d142d6752184aadc92">LibLoader::LoaderApi::loggerInterface</a></div><div class="ttdeci">LOADER_API_COUNT void loggerInterface(const MiraiCPString &amp;content, const MiraiCPString &amp;name, long long id, int level)</div><div class="ttdef"><b>Definition:</b> <a href="a01210_source.html#l00062">libloader/loaderApi.cpp:62</a></div></div>
-<div class="ttc" id="aa00428_html_af12cf0a5880f4fcc76655c1d33e32a42"><div class="ttname"><a href="a00428.html#af12cf0a5880f4fcc76655c1d33e32a42">MiraiCP::CPPPlugin::config</a></div><div class="ttdeci">MIRAICP_EXPORT static const PluginConfig config</div><div class="ttdoc">插件信息，一个插件中该内容不应变化</div><div class="ttdef"><b>Definition:</b> <a href="a00116_source.html#l00038">CPPPlugin.h:38</a></div></div>
-<div class="ttc" id="aa00660_html_a38fe440d115714de3600d804eed00d99"><div class="ttname"><a href="a00660.html#a38fe440d115714de3600d804eed00d99">MiraiCP::Logger_interface::handler_trigger</a></div><div class="ttdeci">void handler_trigger(string log, int level)</div><div class="ttdef"><b>Definition:</b> <a href="a00143_source.html#l00096">Logger.h:96</a></div></div>
-<div class="ttc" id="aa00668_html_a268fd602157c3fa49616a8872c82bfb1"><div class="ttname"><a href="a00668.html#a268fd602157c3fa49616a8872c82bfb1">MiraiCP::Logger::logger</a></div><div class="ttdeci">static Logger logger</div><div class="ttdef"><b>Definition:</b> <a href="a00143_source.html#l00148">Logger.h:148</a></div></div>
-<div class="ttc" id="aa00668_html_ae75bdd405eddd5650979feb9e9ee2a9b"><div class="ttname"><a href="a00668.html#ae75bdd405eddd5650979feb9e9ee2a9b">MiraiCP::Logger::log_interface</a></div><div class="ttdeci">void log_interface(const std::string &amp;content, int level) override</div><div class="ttdoc">日志底层实现封装</div><div class="ttdef"><b>Definition:</b> <a href="a00266_source.html#l00026">Logger.cpp:26</a></div></div>
-<div class="ttc" id="aa00672_html_a4c6ec76d433a890ff1c95cae4cfff59c"><div class="ttname"><a href="a00672.html#a4c6ec76d433a890ff1c95cae4cfff59c">MiraiCP::IdLogger::log_interface</a></div><div class="ttdeci">void log_interface(const std::string &amp;content, int level) override</div><div class="ttdoc">日志底层实现封装</div><div class="ttdef"><b>Definition:</b> <a href="a00266_source.html#l00031">Logger.cpp:31</a></div></div>
+<div class="ttc" id="aa00047_html"><div class="ttname"><a href="a00047.html">MiraiCPMacros.h</a></div></div>
+<div class="ttc" id="aa00122_html"><div class="ttname"><a href="a00122.html">Exception.h</a></div></div>
+<div class="ttc" id="aa00137_html"><div class="ttname"><a href="a00137.html">KtOperation.h</a></div></div>
+<div class="ttc" id="aa00299_html_ab701e3ac61a85b337ec5c1abaad6742d"><div class="ttname"><a href="a00299.html#ab701e3ac61a85b337ec5c1abaad6742d">json</a></div><div class="ttdeci">nlohmann::json json</div><div class="ttdef"><b>Definition:</b> <a href="a00299_source.html#l00031">utils.cpp:31</a></div></div>
+<div class="ttc" id="aa00306_html_a89b345ec37278655b8f02d07dbb3c882"><div class="ttname"><a href="a00306.html#a89b345ec37278655b8f02d07dbb3c882">LibLoader::LoaderApi::pluginOperation</a></div><div class="ttdeci">LOADER_API_COUNT MiraiCPString pluginOperation(const MiraiCPString &amp;)</div><div class="ttdoc">interfaces for plugins</div><div class="ttdef"><b>Definition:</b> <a href="a01233_source.html#l00048">libloader/loaderApi.cpp:48</a></div></div>
+<div class="ttc" id="aa00313_html"><div class="ttname"><a href="a00313.html">MiraiCP::KtOperation</a></div><div class="ttdoc">配置类声明, MiraiCP内部使用, 不需要更改或其他操作</div><div class="ttdef"><b>Definition:</b> <a href="a00137_source.html#l00026">KtOperation.h:26</a></div></div>
+<div class="ttc" id="aa00313_html_a1e1e498928eeaa1d7107033ff5fa881a"><div class="ttname"><a href="a00313.html#a1e1e498928eeaa1d7107033ff5fa881a">MiraiCP::KtOperation::ktOperationStr</a></div><div class="ttdeci">std::string ktOperationStr(operation_set type, const std::string &amp;data, bool catchErr=true, const std::string &amp;errorInfo=&quot;&quot;)</div><div class="ttdoc">调用 Mirai 操作</div><div class="ttdef"><b>Definition:</b> <a href="a00266_source.html#l00028">KtOperation.cpp:28</a></div></div>
+<div class="ttc" id="aa00313_html_a309e8d7f316e8b5e947ea3bcddeb84a8"><div class="ttname"><a href="a00313.html#a309e8d7f316e8b5e947ea3bcddeb84a8">MiraiCP::KtOperation::ktOperation</a></div><div class="ttdeci">std::string ktOperation(operation_set type, const nlohmann::json &amp;data, bool catchErr=true, const std::string &amp;errorInfo=&quot;&quot;)</div><div class="ttdoc">调用 Mirai 操作</div><div class="ttdef"><b>Definition:</b> <a href="a00266_source.html#l00025">KtOperation.cpp:25</a></div></div>
+<div class="ttc" id="aa00313_html_a80a8ec1c1ed6fd9db32d9a878405d412"><div class="ttname"><a href="a00313.html#a80a8ec1c1ed6fd9db32d9a878405d412">MiraiCP::KtOperation::operation_set</a></div><div class="ttdeci">operation_set</div><div class="ttdoc">操作id</div><div class="ttdef"><b>Definition:</b> <a href="a00137_source.html#l00028">KtOperation.h:28</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_fef842b25f8adae1261920890dd101a4.html">sdk</a></li><li class="navelem"><a class="el" href="a00266.html">Logger.cpp</a></li>
-    <li class="footer">生成于 2023年 一月 22日 星期日 13:16:58 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_fef842b25f8adae1261920890dd101a4.html">sdk</a></li><li class="navelem"><a class="el" href="a00266.html">KtOperation.cpp</a></li>
+    <li class="footer">生成于 2023年 一月 27日 星期五 00:14:10 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
     </body>

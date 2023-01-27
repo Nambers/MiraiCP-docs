@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiraiCP: Member.cpp 文件参考</title>
+<title>MiraiCP: LowLevelAPI.cpp 文件参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -35,7 +35,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MiraiCP
-   &#160;<span id="projectnumber">v2.13.1</span>
+   &#160;<span id="projectnumber">v2.13.2</span>
    </div>
    <div id="projectbrief">MiraiCP api document</div>
   </td>
@@ -95,22 +95,21 @@ $(document).ready(function(){initNavTree('a00272.html',''); initResizable(); });
 <div class="header">
   <div class="summary">
 <a href="#namespaces">命名空间</a> &#124;
-<a href="#define-members">宏定义</a> &#124;
 <a href="#func-members">函数</a>  </div>
-  <div class="headertitle"><div class="title">Member.cpp 文件参考</div></div>
+  <div class="headertitle"><div class="title">LowLevelAPI.cpp 文件参考</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="a00149_source.html">Member.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="a00146_source.html">LowLevelAPI.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="a00122_source.html">Exception.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="a00137_source.html">KtOperation.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00146_source.html">LowLevelAPI.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="a00176_source.html">Tools.h</a>&quot;</code><br />
+<code>#include &lt;utility&gt;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Member.cpp 的引用(Include)关系图:</div>
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> LowLevelAPI.cpp 的引用(Include)关系图:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="a00273.svg" width="1750" height="859"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00273.svg" width="791" height="635"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </div>
@@ -118,46 +117,30 @@ $(document).ready(function(){initNavTree('a00272.html',''); initResizable(); });
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
 命名空间</h2></td></tr>
-<tr class="memitem:a00302"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00302.html">MiraiCP</a></td></tr>
+<tr class="memitem:a00304"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00304.html">LibLoader</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
-宏定义</h2></td></tr>
-<tr class="memitem:a456c32e8a3956d0ef6567fd95554864d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00272.html#a456c32e8a3956d0ef6567fd95554864d">LOC_CLASS_NAMESPACE</a>&#160;&#160;&#160;Member</td></tr>
-<tr class="separator:a456c32e8a3956d0ef6567fd95554864d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00306"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00306.html">LibLoader::LoaderApi</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00305"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00305.html">MiraiCP</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 函数</h2></td></tr>
-<tr class="memitem:ac77b73af11b8813089e058b283e16820"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00302.html#ac77b73af11b8813089e058b283e16820">MiraiCP::GetMemberFromPool</a> (QQID id, QQID groupId, QQID botid) noexcept</td></tr>
-<tr class="separator:ac77b73af11b8813089e058b283e16820"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a180a5d9183f41d4d8f5024534222db2c"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00302.html#a180a5d9183f41d4d8f5024534222db2c">MiraiCP::GetMemberFromPool</a> (const <a class="el" href="a00296.html#ab701e3ac61a85b337ec5c1abaad6742d">json</a> &amp;in_json)</td></tr>
-<tr class="separator:a180a5d9183f41d4d8f5024534222db2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adbbf9fc9fc8afe6108ac756d7da23ddb"><td class="memItemLeft" align="right" valign="top">const interface_funcs *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00306.html#adbbf9fc9fc8afe6108ac756d7da23ddb">LibLoader::LoaderApi::get_loader_apis</a> ()</td></tr>
+<tr class="memdesc:adbbf9fc9fc8afe6108ac756d7da23ddb"><td class="mdescLeft">&#160;</td><td class="mdescRight">这个函数是给本cpp以外的文件使用的，大概率用不到  <a href="a00306.html#adbbf9fc9fc8afe6108ac756d7da23ddb">更多...</a><br /></td></tr>
+<tr class="separator:adbbf9fc9fc8afe6108ac756d7da23ddb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a223033909ab4ca1f424c337fda2b85"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00305.html#a0a223033909ab4ca1f424c337fda2b85">MiraiCP::checkSafeCall</a> ()</td></tr>
+<tr class="memdesc:a0a223033909ab4ca1f424c337fda2b85"><td class="mdescLeft">&#160;</td><td class="mdescRight">判断目前是否可以安全地call <a class="el" href="a00314.html">LoaderApi</a>  <a href="a00305.html#a0a223033909ab4ca1f424c337fda2b85">更多...</a><br /></td></tr>
+<tr class="separator:a0a223033909ab4ca1f424c337fda2b85"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">宏定义说明</h2>
-<a id="a456c32e8a3956d0ef6567fd95554864d" name="a456c32e8a3956d0ef6567fd95554864d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a456c32e8a3956d0ef6567fd95554864d">&#9670;&nbsp;</a></span>LOC_CLASS_NAMESPACE</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define LOC_CLASS_NAMESPACE&#160;&#160;&#160;Member</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">在文件 <a class="el" href="a00272_source.html">Member.cpp</a> 第 <a class="el" href="a00272_source.html#l00025">25</a> 行定义.</p>
-
-</div>
-</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_fef842b25f8adae1261920890dd101a4.html">sdk</a></li><li class="navelem"><a class="el" href="a00272.html">Member.cpp</a></li>
-    <li class="footer">生成于 2023年 一月 22日 星期日 13:16:59 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_fef842b25f8adae1261920890dd101a4.html">sdk</a></li><li class="navelem"><a class="el" href="a00272.html">LowLevelAPI.cpp</a></li>
+    <li class="footer">生成于 2023年 一月 27日 星期五 00:14:11 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
     </body>

@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiraiCP: JNIEnvManager类 参考</title>
+<title>MiraiCP: MiraiCP::PluginConfig结构体 参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -35,7 +35,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MiraiCP
-   &#160;<span id="projectnumber">v2.13.1</span>
+   &#160;<span id="projectnumber">v2.13.2</span>
    </div>
    <div id="projectbrief">MiraiCP api document</div>
   </td>
@@ -94,52 +94,75 @@ $(document).ready(function(){initNavTree('a00345.html',''); initResizable(); });
 
 <div class="header">
   <div class="summary">
-<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
-<a href="#pri-methods">Private 成员函数</a> &#124;
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-attribs">Public 属性</a> &#124;
 <a href="a00342.html">所有成员列表</a>  </div>
-  <div class="headertitle"><div class="title">JNIEnvManager类 参考</div></div>
+  <div class="headertitle"><div class="title">MiraiCP::PluginConfig结构体 参考</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="a00065_source.html">JNIEnvManager.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="a00053_source.html">PluginConfig.h</a>&gt;</code></p>
 <div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> JNIEnvManager 的协作图:</div>
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> MiraiCP::PluginConfig 的协作图:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="a00343.svg" width="191" height="191"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00343.svg" width="202" height="551"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
-静态 Public 成员函数</h2></td></tr>
-<tr class="memitem:ae0e482c6a813848a8f5d34957d1b6307"><td class="memItemLeft" align="right" valign="top">static JavaVM *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00345.html#ae0e482c6a813848a8f5d34957d1b6307">getGvm</a> ()</td></tr>
-<tr class="memdesc:ae0e482c6a813848a8f5d34957d1b6307"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取全局JavaVM对象.  <a href="a00345.html#ae0e482c6a813848a8f5d34957d1b6307">更多...</a><br /></td></tr>
-<tr class="separator:ae0e482c6a813848a8f5d34957d1b6307"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4053a39604df12d52f938cd7d60850fd"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00345.html#a4053a39604df12d52f938cd7d60850fd">setGvm</a> (JavaVM *_gvm)</td></tr>
-<tr class="memdesc:a4053a39604df12d52f938cd7d60850fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置全局JavaVM对象.  <a href="a00345.html#a4053a39604df12d52f938cd7d60850fd">更多...</a><br /></td></tr>
-<tr class="separator:a4053a39604df12d52f938cd7d60850fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab22cd8979e49e6bdad9c67fbf335853b"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00345.html#ab22cd8979e49e6bdad9c67fbf335853b">setEnv</a> (JNIEnv *e)</td></tr>
-<tr class="memdesc:ab22cd8979e49e6bdad9c67fbf335853b"><td class="mdescLeft">&#160;</td><td class="mdescRight">尝试给当前线程设置env.  <a href="a00345.html#ab22cd8979e49e6bdad9c67fbf335853b">更多...</a><br /></td></tr>
-<tr class="separator:ab22cd8979e49e6bdad9c67fbf335853b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac5486f22055db723d78404b8b822034f"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00345.html#ac5486f22055db723d78404b8b822034f">detach</a> ()</td></tr>
-<tr class="memdesc:ac5486f22055db723d78404b8b822034f"><td class="mdescLeft">&#160;</td><td class="mdescRight">结束当前线程的env，也就是释放当前线程缓存的env.  <a href="a00345.html#ac5486f22055db723d78404b8b822034f">更多...</a><br /></td></tr>
-<tr class="separator:ac5486f22055db723d78404b8b822034f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aea7d58ff9f04d6d4849c25a2506603a5"><td class="memItemLeft" align="right" valign="top">static JNIEnv *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00345.html#aea7d58ff9f04d6d4849c25a2506603a5">getEnv</a> ()</td></tr>
-<tr class="memdesc:aea7d58ff9f04d6d4849c25a2506603a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">取env,如果不存在重新获取  <a href="a00345.html#aea7d58ff9f04d6d4849c25a2506603a5">更多...</a><br /></td></tr>
-<tr class="separator:aea7d58ff9f04d6d4849c25a2506603a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a812cdc9b9e9c46af8980f1aea9a4233c"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00345.html#a812cdc9b9e9c46af8980f1aea9a4233c">getId</a> () const</td></tr>
+<tr class="separator:a812cdc9b9e9c46af8980f1aea9a4233c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75b62773306f64d5de37fc60f700b534"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00345.html#a75b62773306f64d5de37fc60f700b534">getName</a> () const</td></tr>
+<tr class="separator:a75b62773306f64d5de37fc60f700b534"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f0131520e982b41e3c62364b9eaf2fa"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00345.html#a8f0131520e982b41e3c62364b9eaf2fa">getVersion</a> () const</td></tr>
+<tr class="separator:a8f0131520e982b41e3c62364b9eaf2fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abfdf0bbad2700204a5deced1ff272ff2"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00345.html#abfdf0bbad2700204a5deced1ff272ff2">getAuthor</a> () const</td></tr>
+<tr class="separator:abfdf0bbad2700204a5deced1ff272ff2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7164279987822e9aab5a2dd15e017de3"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00345.html#a7164279987822e9aab5a2dd15e017de3">getDescription</a> () const</td></tr>
+<tr class="separator:a7164279987822e9aab5a2dd15e017de3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9519385a55e29fa632d31d97b734ac4"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00345.html#aa9519385a55e29fa632d31d97b734ac4">getTime</a> () const</td></tr>
+<tr class="separator:aa9519385a55e29fa632d31d97b734ac4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89f1f77ffc39dfa0481e7c1ddc318b23"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00345.html#a89f1f77ffc39dfa0481e7c1ddc318b23">getMVersion</a> () const</td></tr>
+<tr class="separator:a89f1f77ffc39dfa0481e7c1ddc318b23"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37c32e82eb4c921a9f66db00cc7a0010"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00345.html#a37c32e82eb4c921a9f66db00cc7a0010">isValid</a> () const</td></tr>
+<tr class="separator:a37c32e82eb4c921a9f66db00cc7a0010"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a074fac12f573e3ec8ea2bb2bced66f08"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00299.html#ab701e3ac61a85b337ec5c1abaad6742d">nlohmann::json</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00345.html#a074fac12f573e3ec8ea2bb2bced66f08">serialize</a> ()</td></tr>
+<tr class="separator:a074fac12f573e3ec8ea2bb2bced66f08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af92596a34de37970ec76538dc2817e98"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00345.html#af92596a34de37970ec76538dc2817e98">serialize2string</a> ()</td></tr>
+<tr class="separator:af92596a34de37970ec76538dc2817e98"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
-Private 成员函数</h2></td></tr>
-<tr class="memitem:a11ff3fa2dd110bf0a8fcacfc6bfd4bac"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00345.html#a11ff3fa2dd110bf0a8fcacfc6bfd4bac">JNIEnvManager</a> ()=default</td></tr>
-<tr class="separator:a11ff3fa2dd110bf0a8fcacfc6bfd4bac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public 属性</h2></td></tr>
+<tr class="memitem:a2c5e718b4b8ceb1cb2b5b8bbb876146a"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00345.html#a2c5e718b4b8ceb1cb2b5b8bbb876146a">id</a> = nullptr</td></tr>
+<tr class="memdesc:a2c5e718b4b8ceb1cb2b5b8bbb876146a"><td class="mdescLeft">&#160;</td><td class="mdescRight">插件id, 要与别人不一样否则报错无法加载(建议用类包格式，如: io.github.nambers)  <a href="a00345.html#a2c5e718b4b8ceb1cb2b5b8bbb876146a">更多...</a><br /></td></tr>
+<tr class="separator:a2c5e718b4b8ceb1cb2b5b8bbb876146a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b542fc65ab1b1d6720bfcc1a9ce1602"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00345.html#a2b542fc65ab1b1d6720bfcc1a9ce1602">name</a> = nullptr</td></tr>
+<tr class="memdesc:a2b542fc65ab1b1d6720bfcc1a9ce1602"><td class="mdescLeft">&#160;</td><td class="mdescRight">插件名称  <a href="a00345.html#a2b542fc65ab1b1d6720bfcc1a9ce1602">更多...</a><br /></td></tr>
+<tr class="separator:a2b542fc65ab1b1d6720bfcc1a9ce1602"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5754922ee11dbea499f6454b86357d16"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00345.html#a5754922ee11dbea499f6454b86357d16">version</a> = nullptr</td></tr>
+<tr class="memdesc:a5754922ee11dbea499f6454b86357d16"><td class="mdescLeft">&#160;</td><td class="mdescRight">插件版本  <a href="a00345.html#a5754922ee11dbea499f6454b86357d16">更多...</a><br /></td></tr>
+<tr class="separator:a5754922ee11dbea499f6454b86357d16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e9f61e66186687264c2020b1d6c3afe"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00345.html#a6e9f61e66186687264c2020b1d6c3afe">author</a> = nullptr</td></tr>
+<tr class="memdesc:a6e9f61e66186687264c2020b1d6c3afe"><td class="mdescLeft">&#160;</td><td class="mdescRight">插件作者(及联系方式)  <a href="a00345.html#a6e9f61e66186687264c2020b1d6c3afe">更多...</a><br /></td></tr>
+<tr class="separator:a6e9f61e66186687264c2020b1d6c3afe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6912f54ff186c8903ce5b55000bcbc6f"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00345.html#a6912f54ff186c8903ce5b55000bcbc6f">description</a> = &quot;&quot;</td></tr>
+<tr class="memdesc:a6912f54ff186c8903ce5b55000bcbc6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">[optional]插件描述  <a href="a00345.html#a6912f54ff186c8903ce5b55000bcbc6f">更多...</a><br /></td></tr>
+<tr class="separator:a6912f54ff186c8903ce5b55000bcbc6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72f4752e10dc44b50911e80e37c924c2"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00345.html#a72f4752e10dc44b50911e80e37c924c2">time</a> = __DATE__</td></tr>
+<tr class="memdesc:a72f4752e10dc44b50911e80e37c924c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">[optional]构建时间, 默认为__DATE__宏  <a href="a00345.html#a72f4752e10dc44b50911e80e37c924c2">更多...</a><br /></td></tr>
+<tr class="separator:a72f4752e10dc44b50911e80e37c924c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c74ed2b89e386c82452f1b510d99c57"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00345.html#a3c74ed2b89e386c82452f1b510d99c57">mversion</a> = <a class="el" href="a00305.html#a5e92a4c931c8d67dcc35b7b9d5de0f4e">m_MiraiCPVersion</a></td></tr>
+<tr class="separator:a3c74ed2b89e386c82452f1b510d99c57"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock">
-<p class="definition">在文件 <a class="el" href="a00065_source.html">JNIEnvManager.h</a> 第 <a class="el" href="a00065_source.html#l00034">34</a> 行定义.</p>
-</div><h2 class="groupheader">构造及析构函数说明</h2>
-<a id="a11ff3fa2dd110bf0a8fcacfc6bfd4bac" name="a11ff3fa2dd110bf0a8fcacfc6bfd4bac"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a11ff3fa2dd110bf0a8fcacfc6bfd4bac">&#9670;&nbsp;</a></span>JNIEnvManager()</h2>
+<p class="definition">在文件 <a class="el" href="a00053_source.html">PluginConfig.h</a> 第 <a class="el" href="a00053_source.html#l00029">29</a> 行定义.</p>
+</div><h2 class="groupheader">成员函数说明</h2>
+<a id="abfdf0bbad2700204a5deced1ff272ff2" name="abfdf0bbad2700204a5deced1ff272ff2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abfdf0bbad2700204a5deced1ff272ff2">&#9670;&nbsp;</a></span>getAuthor()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -148,24 +171,29 @@ Private 成员函数</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">JNIEnvManager::JNIEnvManager </td>
+          <td class="memname">std::string MiraiCP::PluginConfig::getAuthor </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">default</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">在文件 <a class="el" href="a00053_source.html">PluginConfig.h</a> 第 <a class="el" href="a00053_source.html#l00053">53</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>                                    {</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>            <span class="keywordflow">return</span> {<a class="code hl_variable" href="a00345.html#a6e9f61e66186687264c2020b1d6c3afe">author</a>};</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        }</div>
+<div class="ttc" id="aa00345_html_a6e9f61e66186687264c2020b1d6c3afe"><div class="ttname"><a href="a00345.html#a6e9f61e66186687264c2020b1d6c3afe">MiraiCP::PluginConfig::author</a></div><div class="ttdeci">const char * author</div><div class="ttdoc">插件作者(及联系方式)</div><div class="ttdef"><b>Definition:</b> <a href="a00053_source.html#l00037">PluginConfig.h:37</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
-<h2 class="groupheader">成员函数说明</h2>
-<a id="ac5486f22055db723d78404b8b822034f" name="ac5486f22055db723d78404b8b822034f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac5486f22055db723d78404b8b822034f">&#9670;&nbsp;</a></span>detach()</h2>
+<a id="a7164279987822e9aab5a2dd15e017de3" name="a7164279987822e9aab5a2dd15e017de3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7164279987822e9aab5a2dd15e017de3">&#9670;&nbsp;</a></span>getDescription()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -174,212 +202,407 @@ Private 成员函数</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void JNIEnvManager::detach </td>
+          <td class="memname">std::string MiraiCP::PluginConfig::getDescription </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="a00053_source.html">PluginConfig.h</a> 第 <a class="el" href="a00053_source.html#l00056">56</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>                                         {</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>            <span class="keywordflow">return</span> {<a class="code hl_variable" href="a00345.html#a6912f54ff186c8903ce5b55000bcbc6f">description</a>};</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        }</div>
+<div class="ttc" id="aa00345_html_a6912f54ff186c8903ce5b55000bcbc6f"><div class="ttname"><a href="a00345.html#a6912f54ff186c8903ce5b55000bcbc6f">MiraiCP::PluginConfig::description</a></div><div class="ttdeci">const char * description</div><div class="ttdoc">[optional]插件描述</div><div class="ttdef"><b>Definition:</b> <a href="a00053_source.html#l00039">PluginConfig.h:39</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a812cdc9b9e9c46af8980f1aea9a4233c" name="a812cdc9b9e9c46af8980f1aea9a4233c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a812cdc9b9e9c46af8980f1aea9a4233c">&#9670;&nbsp;</a></span>getId()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string MiraiCP::PluginConfig::getId </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="a00053_source.html">PluginConfig.h</a> 第 <a class="el" href="a00053_source.html#l00044">44</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>                                {</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>            <span class="keywordflow">return</span> {<span class="keywordtype">id</span>};</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a89f1f77ffc39dfa0481e7c1ddc318b23" name="a89f1f77ffc39dfa0481e7c1ddc318b23"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89f1f77ffc39dfa0481e7c1ddc318b23">&#9670;&nbsp;</a></span>getMVersion()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string MiraiCP::PluginConfig::getMVersion </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="a00053_source.html">PluginConfig.h</a> 第 <a class="el" href="a00053_source.html#l00062">62</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>                                      {</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>            <span class="keywordflow">return</span> {<a class="code hl_variable" href="a00345.html#a3c74ed2b89e386c82452f1b510d99c57">mversion</a>};</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        }</div>
+<div class="ttc" id="aa00345_html_a3c74ed2b89e386c82452f1b510d99c57"><div class="ttname"><a href="a00345.html#a3c74ed2b89e386c82452f1b510d99c57">MiraiCP::PluginConfig::mversion</a></div><div class="ttdeci">const char * mversion</div><div class="ttdef"><b>Definition:</b> <a href="a00053_source.html#l00042">PluginConfig.h:42</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a75b62773306f64d5de37fc60f700b534" name="a75b62773306f64d5de37fc60f700b534"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a75b62773306f64d5de37fc60f700b534">&#9670;&nbsp;</a></span>getName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string MiraiCP::PluginConfig::getName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="a00053_source.html">PluginConfig.h</a> 第 <a class="el" href="a00053_source.html#l00047">47</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>                                  {</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>            <span class="keywordflow">return</span> {<a class="code hl_variable" href="a00345.html#a2b542fc65ab1b1d6720bfcc1a9ce1602">name</a>};</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        }</div>
+<div class="ttc" id="aa00345_html_a2b542fc65ab1b1d6720bfcc1a9ce1602"><div class="ttname"><a href="a00345.html#a2b542fc65ab1b1d6720bfcc1a9ce1602">MiraiCP::PluginConfig::name</a></div><div class="ttdeci">const char * name</div><div class="ttdoc">插件名称</div><div class="ttdef"><b>Definition:</b> <a href="a00053_source.html#l00033">PluginConfig.h:33</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aa9519385a55e29fa632d31d97b734ac4" name="aa9519385a55e29fa632d31d97b734ac4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9519385a55e29fa632d31d97b734ac4">&#9670;&nbsp;</a></span>getTime()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string MiraiCP::PluginConfig::getTime </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="a00053_source.html">PluginConfig.h</a> 第 <a class="el" href="a00053_source.html#l00059">59</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>                                  {</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>            <span class="keywordflow">return</span> {<a class="code hl_variable" href="a00345.html#a72f4752e10dc44b50911e80e37c924c2">time</a>};</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        }</div>
+<div class="ttc" id="aa00345_html_a72f4752e10dc44b50911e80e37c924c2"><div class="ttname"><a href="a00345.html#a72f4752e10dc44b50911e80e37c924c2">MiraiCP::PluginConfig::time</a></div><div class="ttdeci">const char * time</div><div class="ttdoc">[optional]构建时间, 默认为__DATE__宏</div><div class="ttdef"><b>Definition:</b> <a href="a00053_source.html#l00041">PluginConfig.h:41</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a8f0131520e982b41e3c62364b9eaf2fa" name="a8f0131520e982b41e3c62364b9eaf2fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f0131520e982b41e3c62364b9eaf2fa">&#9670;&nbsp;</a></span>getVersion()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string MiraiCP::PluginConfig::getVersion </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="a00053_source.html">PluginConfig.h</a> 第 <a class="el" href="a00053_source.html#l00050">50</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>                                     {</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>            <span class="keywordflow">return</span> {<a class="code hl_variable" href="a00345.html#a5754922ee11dbea499f6454b86357d16">version</a>};</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        }</div>
+<div class="ttc" id="aa00345_html_a5754922ee11dbea499f6454b86357d16"><div class="ttname"><a href="a00345.html#a5754922ee11dbea499f6454b86357d16">MiraiCP::PluginConfig::version</a></div><div class="ttdeci">const char * version</div><div class="ttdoc">插件版本</div><div class="ttdef"><b>Definition:</b> <a href="a00053_source.html#l00035">PluginConfig.h:35</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a37c32e82eb4c921a9f66db00cc7a0010" name="a37c32e82eb4c921a9f66db00cc7a0010"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a37c32e82eb4c921a9f66db00cc7a0010">&#9670;&nbsp;</a></span>isValid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MiraiCP::PluginConfig::isValid </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="a00053_source.html">PluginConfig.h</a> 第 <a class="el" href="a00053_source.html#l00066">66</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>                                           {</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>            <span class="keywordflow">return</span> <span class="keywordtype">id</span> &amp;&amp; <a class="code hl_variable" href="a00345.html#a2b542fc65ab1b1d6720bfcc1a9ce1602">name</a> &amp;&amp; <a class="code hl_variable" href="a00345.html#a5754922ee11dbea499f6454b86357d16">version</a> &amp;&amp; <a class="code hl_variable" href="a00345.html#a6e9f61e66186687264c2020b1d6c3afe">author</a>;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a074fac12f573e3ec8ea2bb2bced66f08" name="a074fac12f573e3ec8ea2bb2bced66f08"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a074fac12f573e3ec8ea2bb2bced66f08">&#9670;&nbsp;</a></span>serialize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00305.html#ac0a8a1bade77a57eeb1d94cfacfb75ce">json</a> MiraiCP::PluginConfig::serialize </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>结束当前线程的env，也就是释放当前线程缓存的env. </p>
-<dl class="section note"><dt>注解</dt><dd>不过继续调用getEnv()将再次获取，所以本方法调用后线程也可以通过getEnv重新获取一个env，本方法的作用就是在结束后释放空间 </dd></dl>
-
-<p class="definition">在文件 <a class="el" href="a00194_source.html">JNIEnvManager.cpp</a> 第 <a class="el" href="a00194_source.html#l00070">70</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>                           {</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <span class="keywordflow">if</span> (<span class="keyword">nullptr</span> != <a class="code hl_variable" href="a00194.html#acbcef4e656024aea9521cf621073e771">thread_info</a>.env_ptr) {</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        <a class="code hl_function" href="a00345.html#ae0e482c6a813848a8f5d34957d1b6307">getGvm</a>()-&gt;DetachCurrentThread();</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        <a class="code hl_variable" href="a00194.html#acbcef4e656024aea9521cf621073e771">thread_info</a>.env_ptr = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    }</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>}</div>
-<div class="ttc" id="aa00194_html_acbcef4e656024aea9521cf621073e771"><div class="ttname"><a href="a00194.html#acbcef4e656024aea9521cf621073e771">thread_info</a></div><div class="ttdeci">thread_local JNIEnvManager::ThreadInfo thread_info</div><div class="ttdef"><b>Definition:</b> <a href="a00194_source.html#l00048">JNIEnvManager.cpp:48</a></div></div>
-<div class="ttc" id="aa00345_html_ae0e482c6a813848a8f5d34957d1b6307"><div class="ttname"><a href="a00345.html#ae0e482c6a813848a8f5d34957d1b6307">JNIEnvManager::getGvm</a></div><div class="ttdeci">static JavaVM * getGvm()</div><div class="ttdoc">获取全局JavaVM对象.</div><div class="ttdef"><b>Definition:</b> <a href="a00194_source.html#l00078">JNIEnvManager.cpp:78</a></div></div>
+<p class="definition">在文件 <a class="el" href="a00185_source.html">PluginConfig.cpp</a> 第 <a class="el" href="a00185_source.html#l00023">23</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>                                 {</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        <a class="code hl_typedef" href="a00299.html#ab701e3ac61a85b337ec5c1abaad6742d">json</a> j;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        j[<span class="stringliteral">&quot;name&quot;</span>] = <a class="code hl_variable" href="a00345.html#a2b542fc65ab1b1d6720bfcc1a9ce1602">name</a>;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        j[<span class="stringliteral">&quot;version&quot;</span>] = <a class="code hl_variable" href="a00345.html#a5754922ee11dbea499f6454b86357d16">version</a>;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        j[<span class="stringliteral">&quot;author&quot;</span>] = <a class="code hl_variable" href="a00345.html#a6e9f61e66186687264c2020b1d6c3afe">author</a>;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        j[<span class="stringliteral">&quot;description&quot;</span>] = <a class="code hl_variable" href="a00345.html#a6912f54ff186c8903ce5b55000bcbc6f">description</a>;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        j[<span class="stringliteral">&quot;time&quot;</span>] = <a class="code hl_variable" href="a00345.html#a72f4752e10dc44b50911e80e37c924c2">time</a>;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        j[<span class="stringliteral">&quot;id&quot;</span>] = <a class="code hl_variable" href="a00345.html#a2c5e718b4b8ceb1cb2b5b8bbb876146a">id</a>;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        <span class="keywordflow">return</span> j;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    }</div>
+<div class="ttc" id="aa00299_html_ab701e3ac61a85b337ec5c1abaad6742d"><div class="ttname"><a href="a00299.html#ab701e3ac61a85b337ec5c1abaad6742d">json</a></div><div class="ttdeci">nlohmann::json json</div><div class="ttdef"><b>Definition:</b> <a href="a00299_source.html#l00031">utils.cpp:31</a></div></div>
+<div class="ttc" id="aa00345_html_a2c5e718b4b8ceb1cb2b5b8bbb876146a"><div class="ttname"><a href="a00345.html#a2c5e718b4b8ceb1cb2b5b8bbb876146a">MiraiCP::PluginConfig::id</a></div><div class="ttdeci">const char * id</div><div class="ttdoc">插件id, 要与别人不一样否则报错无法加载(建议用类包格式，如: io.github.nambers)</div><div class="ttdef"><b>Definition:</b> <a href="a00053_source.html#l00031">PluginConfig.h:31</a></div></div>
 </div><!-- fragment --><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> 函数调用图:</div>
+  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> 这是这个函数的调用关系图:</div>
 <div id="dynsection-1-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="a00345_ac5486f22055db723d78404b8b822034f_cgraph.svg" width="380" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00345_a074fac12f573e3ec8ea2bb2bced66f08_icgraph.svg" width="355" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
 </div>
-<a id="aea7d58ff9f04d6d4849c25a2506603a5" name="aea7d58ff9f04d6d4849c25a2506603a5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aea7d58ff9f04d6d4849c25a2506603a5">&#9670;&nbsp;</a></span>getEnv()</h2>
+<a id="af92596a34de37970ec76538dc2817e98" name="af92596a34de37970ec76538dc2817e98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af92596a34de37970ec76538dc2817e98">&#9670;&nbsp;</a></span>serialize2string()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">JNIEnv * JNIEnvManager::getEnv </td>
+          <td class="memname">std::string MiraiCP::PluginConfig::serialize2string </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>取env,如果不存在重新获取 </p>
-
-<p class="definition">在文件 <a class="el" href="a00194_source.html">JNIEnvManager.cpp</a> 第 <a class="el" href="a00194_source.html#l00065">65</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>                              {</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="keywordflow">if</span> (<span class="keyword">nullptr</span> == <a class="code hl_variable" href="a00194.html#acbcef4e656024aea9521cf621073e771">thread_info</a>.env_ptr) <a class="code hl_variable" href="a00194.html#acbcef4e656024aea9521cf621073e771">thread_info</a>.env_ptr = <a class="code hl_function" href="a00194.html#a3d31403b7971274d47d308245206bd24">newEnv</a>();</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="a00194.html#acbcef4e656024aea9521cf621073e771">thread_info</a>.env_ptr;</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>}</div>
-<div class="ttc" id="aa00194_html_a3d31403b7971274d47d308245206bd24"><div class="ttname"><a href="a00194.html#a3d31403b7971274d47d308245206bd24">newEnv</a></div><div class="ttdeci">JNIEnv * newEnv()</div><div class="ttdoc">为当前线程创建一个env.</div><div class="ttdef"><b>Definition:</b> <a href="a00194_source.html#l00051">JNIEnvManager.cpp:51</a></div></div>
+<p class="definition">在文件 <a class="el" href="a00185_source.html">PluginConfig.cpp</a> 第 <a class="el" href="a00185_source.html#l00034">34</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>                                             {</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="a00345.html#a074fac12f573e3ec8ea2bb2bced66f08">serialize</a>().dump();</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    }</div>
+<div class="ttc" id="aa00345_html_a074fac12f573e3ec8ea2bb2bced66f08"><div class="ttname"><a href="a00345.html#a074fac12f573e3ec8ea2bb2bced66f08">MiraiCP::PluginConfig::serialize</a></div><div class="ttdeci">nlohmann::json serialize()</div><div class="ttdef"><b>Definition:</b> <a href="a00185_source.html#l00023">PluginConfig.cpp:23</a></div></div>
 </div><!-- fragment --><div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-2-trigger" src="closed.png" alt="+"/> 函数调用图:</div>
 <div id="dynsection-2-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-2-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="a00345_aea7d58ff9f04d6d4849c25a2506603a5_cgraph.svg" width="495" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
-<div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-3-trigger" src="closed.png" alt="+"/> 这是这个函数的调用关系图:</div>
-<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-3-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="a00345_aea7d58ff9f04d6d4849c25a2506603a5_icgraph.svg" width="1979" height="2159"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00345_af92596a34de37970ec76538dc2817e98_cgraph.svg" width="355" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
 </div>
-<a id="ae0e482c6a813848a8f5d34957d1b6307" name="ae0e482c6a813848a8f5d34957d1b6307"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae0e482c6a813848a8f5d34957d1b6307">&#9670;&nbsp;</a></span>getGvm()</h2>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="a6e9f61e66186687264c2020b1d6c3afe" name="a6e9f61e66186687264c2020b1d6c3afe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e9f61e66186687264c2020b1d6c3afe">&#9670;&nbsp;</a></span>author</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">JavaVM * JNIEnvManager::getGvm </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td class="memname">const char* MiraiCP::PluginConfig::author = nullptr</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>获取全局JavaVM对象. </p>
+<p>插件作者(及联系方式) </p>
 
-<p class="definition">在文件 <a class="el" href="a00194_source.html">JNIEnvManager.cpp</a> 第 <a class="el" href="a00194_source.html#l00078">78</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>                              {</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <span class="keywordflow">return</span> ThreadInfo::gvm;</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>}</div>
-</div><!-- fragment --><div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-4-trigger" src="closed.png" alt="+"/> 这是这个函数的调用关系图:</div>
-<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-4-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="a00345_ae0e482c6a813848a8f5d34957d1b6307_icgraph.svg" width="2114" height="2116"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<p class="definition">在文件 <a class="el" href="a00053_source.html">PluginConfig.h</a> 第 <a class="el" href="a00053_source.html#l00037">37</a> 行定义.</p>
 
 </div>
 </div>
-<a id="ab22cd8979e49e6bdad9c67fbf335853b" name="ab22cd8979e49e6bdad9c67fbf335853b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab22cd8979e49e6bdad9c67fbf335853b">&#9670;&nbsp;</a></span>setEnv()</h2>
+<a id="a6912f54ff186c8903ce5b55000bcbc6f" name="a6912f54ff186c8903ce5b55000bcbc6f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6912f54ff186c8903ce5b55000bcbc6f">&#9670;&nbsp;</a></span>description</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool JNIEnvManager::setEnv </td>
-          <td>(</td>
-          <td class="paramtype">JNIEnv *&#160;</td>
-          <td class="paramname"><em>e</em></td><td>)</td>
-          <td></td>
+          <td class="memname">const char* MiraiCP::PluginConfig::description = &quot;&quot;</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>尝试给当前线程设置env. </p>
-<dl class="section return"><dt>返回</dt><dd>true:设置成功，false:该线程已经设置过了. </dd></dl>
+<p>[optional]插件描述 </p>
 
-<p class="definition">在文件 <a class="el" href="a00194_source.html">JNIEnvManager.cpp</a> 第 <a class="el" href="a00194_source.html#l00061">61</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>                                    {</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="keywordflow">return</span> (<span class="keyword">nullptr</span> == <a class="code hl_variable" href="a00194.html#acbcef4e656024aea9521cf621073e771">thread_info</a>.env_ptr) &amp;&amp; ((<a class="code hl_variable" href="a00194.html#acbcef4e656024aea9521cf621073e771">thread_info</a>.env_ptr = e) || <span class="keyword">true</span>);</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>}</div>
-</div><!-- fragment --><div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-5-trigger" src="closed.png" alt="+"/> 这是这个函数的调用关系图:</div>
-<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-5-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="a00345_ab22cd8979e49e6bdad9c67fbf335853b_icgraph.svg" width="310" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<p class="definition">在文件 <a class="el" href="a00053_source.html">PluginConfig.h</a> 第 <a class="el" href="a00053_source.html#l00039">39</a> 行定义.</p>
 
 </div>
 </div>
-<a id="a4053a39604df12d52f938cd7d60850fd" name="a4053a39604df12d52f938cd7d60850fd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4053a39604df12d52f938cd7d60850fd">&#9670;&nbsp;</a></span>setGvm()</h2>
+<a id="a2c5e718b4b8ceb1cb2b5b8bbb876146a" name="a2c5e718b4b8ceb1cb2b5b8bbb876146a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c5e718b4b8ceb1cb2b5b8bbb876146a">&#9670;&nbsp;</a></span>id</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void JNIEnvManager::setGvm </td>
-          <td>(</td>
-          <td class="paramtype">JavaVM *&#160;</td>
-          <td class="paramname"><em>_gvm</em></td><td>)</td>
-          <td></td>
+          <td class="memname">const char* MiraiCP::PluginConfig::id = nullptr</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>设置全局JavaVM对象. </p>
+<p>插件id, 要与别人不一样否则报错无法加载(建议用类包格式，如: io.github.nambers) </p>
 
-<p class="definition">在文件 <a class="el" href="a00194_source.html">JNIEnvManager.cpp</a> 第 <a class="el" href="a00194_source.html#l00082">82</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>                                       {</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    ThreadInfo::gvm = _gvm;</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>}</div>
-</div><!-- fragment --><div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-6-trigger" src="closed.png" alt="+"/> 这是这个函数的调用关系图:</div>
-<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-6-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="a00345_a4053a39604df12d52f938cd7d60850fd_icgraph.svg" width="314" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<p class="definition">在文件 <a class="el" href="a00053_source.html">PluginConfig.h</a> 第 <a class="el" href="a00053_source.html#l00031">31</a> 行定义.</p>
 
 </div>
 </div>
-<hr/>该类的文档由以下文件生成:<ul>
-<li><a class="el" href="a00065_source.html">JNIEnvManager.h</a></li>
-<li><a class="el" href="a00194_source.html">JNIEnvManager.cpp</a></li>
+<a id="a3c74ed2b89e386c82452f1b510d99c57" name="a3c74ed2b89e386c82452f1b510d99c57"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c74ed2b89e386c82452f1b510d99c57">&#9670;&nbsp;</a></span>mversion</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* MiraiCP::PluginConfig::mversion = <a class="el" href="a00305.html#a5e92a4c931c8d67dcc35b7b9d5de0f4e">m_MiraiCPVersion</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="a00053_source.html">PluginConfig.h</a> 第 <a class="el" href="a00053_source.html#l00042">42</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a2b542fc65ab1b1d6720bfcc1a9ce1602" name="a2b542fc65ab1b1d6720bfcc1a9ce1602"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b542fc65ab1b1d6720bfcc1a9ce1602">&#9670;&nbsp;</a></span>name</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* MiraiCP::PluginConfig::name = nullptr</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>插件名称 </p>
+
+<p class="definition">在文件 <a class="el" href="a00053_source.html">PluginConfig.h</a> 第 <a class="el" href="a00053_source.html#l00033">33</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a72f4752e10dc44b50911e80e37c924c2" name="a72f4752e10dc44b50911e80e37c924c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72f4752e10dc44b50911e80e37c924c2">&#9670;&nbsp;</a></span>time</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* MiraiCP::PluginConfig::time = __DATE__</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>[optional]构建时间, 默认为__DATE__宏 </p>
+
+<p class="definition">在文件 <a class="el" href="a00053_source.html">PluginConfig.h</a> 第 <a class="el" href="a00053_source.html#l00041">41</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a5754922ee11dbea499f6454b86357d16" name="a5754922ee11dbea499f6454b86357d16"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5754922ee11dbea499f6454b86357d16">&#9670;&nbsp;</a></span>version</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* MiraiCP::PluginConfig::version = nullptr</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>插件版本 </p>
+
+<p class="definition">在文件 <a class="el" href="a00053_source.html">PluginConfig.h</a> 第 <a class="el" href="a00053_source.html#l00035">35</a> 行定义.</p>
+
+</div>
+</div>
+<hr/>该结构体的文档由以下文件生成:<ul>
+<li><a class="el" href="a00053_source.html">PluginConfig.h</a></li>
+<li><a class="el" href="a00185_source.html">PluginConfig.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -387,8 +610,8 @@ Private 成员函数</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="a00345.html">JNIEnvManager</a></li>
-    <li class="footer">生成于 2023年 一月 22日 星期日 13:18:25 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="navelem"><a class="el" href="a00305.html">MiraiCP</a></li><li class="navelem"><a class="el" href="a00345.html">PluginConfig</a></li>
+    <li class="footer">生成于 2023年 一月 27日 星期五 00:14:12 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
     </body>

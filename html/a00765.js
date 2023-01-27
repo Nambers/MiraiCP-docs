@@ -1,12 +1,8 @@
 var a00765 =
 [
-    [ "operator==", "a00765.html#adf77a906cd6705425a28ab4483c634b5", null ],
-    [ "ShouldNotUse", "a00765.html#a66690e9c31bc7daf8a1c7c15261f83b3", null ],
-    [ "type", "a00765.html#ab55cc2add22064ea6437677abc6d2555", null ],
-    [ "codec", "a00765.html#afe96592ba24d9c3f1887c7668d788c97", null ],
-    [ "filename", "a00765.html#a9cf8841f7297be7d0b8404aeaf1727a1", null ],
-    [ "length", "a00765.html#a963774ddebf115bebd86386cb84a5117", null ],
-    [ "md5", "a00765.html#a403a5a5837bbf02f5e0c5a4327f51ff3", null ],
-    [ "size", "a00765.html#a06c764f6c1f6f65def69fcfe378ebef1", null ],
-    [ "url", "a00765.html#aedf31534944297bea3c997cc49329443", null ]
+    [ "QuoteReply", "a00765.html#a48b93dbd55eb6dabeb0ae0d8d3191dfb", null ],
+    [ "QuoteReply", "a00765.html#a92e6c154936b9341964f10830844348e", null ],
+    [ "operator==", "a00765.html#ad505141e383ead14add0a18f63d27283", null ],
+    [ "toJson", "a00765.html#a145d6719140d4d5f36253ae637522c3d", null ],
+    [ "type", "a00765.html#a5c3073e9d8f5b2ce5f7f6d2980313855", null ]
 ];

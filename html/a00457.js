@@ -1,9 +1,8 @@
 var a00457 =
 [
-    [ "chat", "a00457.html#afc868fb91c60975d5862d0691c80ec54", null ],
-    [ "chat", "a00457.html#a240d9d0df62738e43f8de576c6b26acf", null ],
-    [ "from", "a00457.html#ace8d5250eaff54abb3631cccf37b4b49", null ],
-    [ "from", "a00457.html#a77875102a2c9021981c942d16e15435a", null ],
-    [ "getMessageChain", "a00457.html#a40be4514c0111359a8388cb0c079ec76", null ],
-    [ "getMessageChain", "a00457.html#ab05db28ad76f89f09b38ad345f557803", null ]
+    [ "BotEvent", "a00457.html#a5da368a0e44891433b340288bc872df3", null ],
+    [ "~BotEvent", "a00457.html#a29d6794160e0ea7cdd1598ad48185d6c", null ],
+    [ "getEventType", "a00457.html#a9e02a5aa59b72a0667260d8d487a66f8", null ],
+    [ "bot", "a00457.html#a0b14bddb4baebbd348969dac6c9a8edc", null ],
+    [ "botlogger", "a00457.html#a864b09f1e3cf406c2e96ca7b4c10e18e", null ]
 ];

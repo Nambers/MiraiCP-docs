@@ -1,11 +1,20 @@
 var a00749 =
 [
-    [ "FlashImage", "a00749.html#a6a97f2f10a1484d49882eeb51ddeb9e9", null ],
-    [ "FlashImage", "a00749.html#ae6562b2f43aede32b4746f50b9fcab5c", null ],
-    [ "deserialize", "a00749.html#a6f20e47833479a9669d78727527fe31f", null ],
-    [ "operator==", "a00749.html#aa01313f396a7623547ba0c2a409ef74c", null ],
-    [ "toImage", "a00749.html#ae2547ca115caa61991a59c5507028cb4", null ],
-    [ "toJson", "a00749.html#a55dd67b46186624fd4882406e16ff2c2", null ],
-    [ "toMiraiCode", "a00749.html#ac2edbd27eb5d904b56a599a176cf416f", null ],
-    [ "type", "a00749.html#ad31100fa57d8f8cf79a2267cfe10ae97", null ]
+    [ "Image", "a00749.html#a19cba970d4c5057508530d22577ce4a1", null ],
+    [ "Image", "a00749.html#a18b1a56b9d2b935f36f2b85eb5892b63", null ],
+    [ "deserialize", "a00749.html#a0e3fa5f500c071d484dd56d5562e0d9c", null ],
+    [ "isUploaded", "a00749.html#a831b882bbbc4666b6c4acf47815eafb0", null ],
+    [ "operator==", "a00749.html#a4ae5258f9f0f0462ba2fa7b15fbde7e9", null ],
+    [ "refreshInfo", "a00749.html#a009add34e1e1b451542d06382da4ea0a", null ],
+    [ "toJson", "a00749.html#a34553da30d7a3753b72247654bc36e89", null ],
+    [ "toMiraiCode", "a00749.html#a10cd01f40a86dcd051722cc50baa2003", null ],
+    [ "type", "a00749.html#a8920fb2036cd75d06b0343b32886f610", null ],
+    [ "height", "a00749.html#a6d91d1442a67a40efea60fd8b21f0344", null ],
+    [ "id", "a00749.html#ac6a67525ab64646c9068bc98bd58e796", null ],
+    [ "imageType", "a00749.html#a31717cee2ac4cc152f977c07c12331cf", null ],
+    [ "isEmoji", "a00749.html#acaad6d84c4e109d22da996b9ae9db723", null ],
+    [ "md5", "a00749.html#a0ac48e10b27d52864e36f65a154f4503", null ],
+    [ "size", "a00749.html#a90e338ad396d824807759601a7fa3b88", null ],
+    [ "url", "a00749.html#ae64873f7812cdc802bf61a7c77c5e21d", null ],
+    [ "width", "a00749.html#a32663d1a7c0f773d5e0edc245a503f5e", null ]
 ];

@@ -1,5 +1,7 @@
 var a00689 =
 [
-    [ "avatarUrl", "a00689.html#a037b8d06c116200bdb37de924401ef46", null ],
-    [ "nickOrNameCard", "a00689.html#adde89d46741f72078eda3db91c56a142", null ]
+    [ "info", "a00693.html", "a00693" ],
+    [ "getInfoSource", "a00689.html#ad104b6f94628a14cf351ae7da993c770", null ],
+    [ "info0", "a00689.html#a39064f9c2b148b3a3061f818bf237215", null ],
+    [ "uploadImg0", "a00689.html#ad74021eeded7e621fddaae159f2b8387", null ]
 ];

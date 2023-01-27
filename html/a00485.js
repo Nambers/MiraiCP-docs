@@ -1,10 +1,9 @@
 var a00485 =
 [
-    [ "FriendRecallEvent", "a00485.html#a4935324294a7723c3401c58fb1d09a97", null ],
-    [ "get_event_type", "a00485.html#a83537ccdbd2e454525697559827df57e", null ],
-    [ "author", "a00485.html#adb145915b7e4edcc461a7c7db2823b05", null ],
-    [ "ids", "a00485.html#a426a11bf2f5d57e80082546588abc464", null ],
-    [ "internalIds", "a00485.html#a46217bf3eabccabc4b4358d8c69e71f6", null ],
-    [ "operater", "a00485.html#a4502b63cdd39bb1574a3bfc3d18828d4", null ],
-    [ "time", "a00485.html#ab22df1619e6ad420c6166d0f3877dc74", null ]
+    [ "MemberLeaveEvent", "a00485.html#a8f6ff9cbf45de4c407c467dbe37703e0", null ],
+    [ "get_event_type", "a00485.html#a1af0fe4ad2efd5f078d1203e37080ba8", null ],
+    [ "group", "a00485.html#ab693afc3bdbfddc1ae88caf9ee052d54", null ],
+    [ "member", "a00485.html#ac9bc51af54f0412f68948c648ccea5b4", null ],
+    [ "operater", "a00485.html#a3eceb70ac1c7076efca107137be9911b", null ],
+    [ "type", "a00485.html#ad28ac4243630eab3bf7d65a737cac9ca", null ]
 ];

@@ -1,5 +1,5 @@
 var a00373 =
 [
-    [ "PluginIdDuplicateException", "a00373.html#a3e32543f3b4e5f62d228628c1c01c7b3", null ],
-    [ "exceptionType", "a00373.html#a49dd6c05df7bceb20d302111d70759ef", null ]
+    [ "PluginNotLoadedException", "a00373.html#abb1e2984d2eeb1b0630841183204c345", null ],
+    [ "exceptionType", "a00373.html#a8f9b2e4fe0f2464746909d5751fa95ae", null ]
 ];

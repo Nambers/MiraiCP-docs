@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiraiCP: message.cpp</title>
+<title>MiraiCP: group.cpp</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -35,7 +35,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MiraiCP
-   &#160;<span id="projectnumber">v2.13.1</span>
+   &#160;<span id="projectnumber">v2.13.2</span>
    </div>
    <div id="projectbrief">MiraiCP api document</div>
   </td>
@@ -93,10 +93,10 @@ $(document).ready(function(){initNavTree('a00852.html',''); initResizable(); });
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">message.cpp</div></div>
+  <div class="headertitle"><div class="title">group.cpp</div></div>
 </div><!--header-->
 <div class="contents">
-<p >消息操作</p>
+<p >群操作</p>
 <div class="fragment"><div class="line"><span class="comment">// Copyright (c) 2020 - 2022. Eritque arcus and contributors.</span></div>
 <div class="line"><span class="comment">//</span></div>
 <div class="line"><span class="comment">// This program is free software: you can redistribute it and/or modify</span></div>
@@ -113,7 +113,7 @@ $(document).ready(function(){initNavTree('a00852.html',''); initResizable(); });
 <div class="line"><span class="comment">// along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</span></div>
 <div class="line"><span class="comment">//</span></div>
 <div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00161.html">MiraiCP.hpp</a>&gt;</span></div>
-<div class="line"><span class="keyword">using namespace </span><a class="code hl_namespace" href="a00302.html">MiraiCP</a>;</div>
+<div class="line"><span class="keyword">using namespace </span><a class="code hl_namespace" href="a00305.html">MiraiCP</a>;</div>
 <div class="line"> </div>
 <div class="line"><span class="keyword">const</span> PluginConfig CPPPlugin::config{</div>
 <div class="line">        <span class="stringliteral">&quot;id&quot;</span>,   <span class="comment">// 插件id</span></div>
@@ -126,38 +126,37 @@ $(document).ready(function(){initNavTree('a00852.html',''); initResizable(); });
 <div class="line"> </div>
 <div class="line"><span class="keyword">class </span>Main : <span class="keyword">public</span> CPPPlugin {</div>
 <div class="line"><span class="keyword">public</span>:</div>
-<div class="line">    Main() : <a class="code hl_function" href="a00437.html#aeeaafebf5e61e1da8a2c5e3e07dac64b">CPPPlugin</a>() {}</div>
+<div class="line">    Main() : <a class="code hl_function" href="a00441.html#aeeaafebf5e61e1da8a2c5e3e07dac64b">CPPPlugin</a>() {}</div>
 <div class="line">    <span class="keywordtype">void</span> onEnable()<span class="keyword"> override </span>{</div>
-<div class="line">        Event::registerEvent&lt;GroupMessageEvent&gt;([](<a id="a0" name="a0"></a><a class="code hl_enumvalue" href="a00307.html#abe9e9d8212ea8f23717b72db64393cabaca8073196614a985e9fcc7d2f964473c">GroupMessageEvent</a> e) {</div>
-<div class="line">            <span class="comment">// 发送MessageChain</span></div>
-<div class="line">            e.group.sendMessage(e.message);</div>
-<div class="line">            <span class="comment">// 发送SingleMessage</span></div>
-<div class="line">            e.group.sendMessage(PlainText(<span class="stringliteral">&quot;a&quot;</span>));</div>
-<div class="line">            e.group.sendMessage(e.sender.at(), PlainText(<span class="stringliteral">&quot;&quot;</span>), Face(5));</div>
-<div class="line">            <span class="comment">// 回复信息</span></div>
-<div class="line">            e.group.quoteAndSendMessage(PlainText(<span class="stringliteral">&quot;a&quot;</span>), e.message.source.value());</div>
-<div class="line">            <span class="comment">// 撤回信息</span></div>
-<div class="line">            e.message.source.value().recall();</div>
-<div class="line">            e.group.sendMessage(<span class="stringliteral">&quot;hi&quot;</span>).recall();</div>
+<div class="line">        Event::registerEvent&lt;GroupMessageEvent&gt;([](<a id="a0" name="a0"></a><a class="code hl_enumvalue" href="a00311.html#abe9e9d8212ea8f23717b72db64393cabaca8073196614a985e9fcc7d2f964473c">GroupMessageEvent</a> e) {</div>
+<div class="line">            <span class="comment">// 用 id 构建群对象</span></div>
+<div class="line">            Group a(e.group.id(), e.bot.id);</div>
+<div class="line">            <span class="comment">// 发送D:\\ValveUnhandledExceptionFilter.txt本地文件到qq群的 /test.txt 路径</span></div>
+<div class="line">            RemoteFile tmp = e.group.sendFile(<span class="stringliteral">&quot;/test.txt&quot;</span>, <span class="stringliteral">&quot;D:\\ValveUnhandledExceptionFilter.txt&quot;</span>);</div>
+<div class="line">            e.group.sendMessage(e.group.getFile(<span class="stringliteral">&quot;/&quot;</span>, tmp.id).name);</div>
+<div class="line">            e.group.sendMessage(e.group.getFile(<span class="stringliteral">&quot;/test.txt&quot;</span>).name);</div>
+<div class="line">            e.group.sendMessage(e.group.getFileListString(<span class="stringliteral">&quot;/&quot;</span>));</div>
+<div class="line">            <span class="comment">// 取群文件列表</span></div>
+<div class="line">            e.group.getFileListString(<span class="stringliteral">&quot;/&quot;</span>);</div>
 <div class="line">        });</div>
 <div class="line">    }</div>
 <div class="line">};</div>
 <div class="line"> </div>
-<div class="line"><span class="keywordtype">void</span> <a id="a1" name="a1"></a><a class="code hl_function" href="a00302.html#a12d27be6730af4fc321ac1eb231db281">MiraiCP::enrollPlugin</a>() {</div>
-<div class="line">    <a class="code hl_function" href="a00302.html#a12d27be6730af4fc321ac1eb231db281">MiraiCP::enrollPlugin</a>(<span class="keyword">new</span> Main());</div>
+<div class="line"><span class="keywordtype">void</span> <a id="a1" name="a1"></a><a class="code hl_function" href="a00305.html#a12d27be6730af4fc321ac1eb231db281">MiraiCP::enrollPlugin</a>() {</div>
+<div class="line">    <a class="code hl_function" href="a00305.html#a12d27be6730af4fc321ac1eb231db281">MiraiCP::enrollPlugin</a>(<span class="keyword">new</span> Main());</div>
 <div class="line">}</div>
 <div class="ttc" id="aa00161_html"><div class="ttname"><a href="a00161.html">MiraiCP.hpp</a></div></div>
-<div class="ttc" id="aa00302_html"><div class="ttname"><a href="a00302.html">MiraiCP</a></div><div class="ttdef"><b>Definition:</b> <a href="a00041_source.html#l00041">commonTypes.h:41</a></div></div>
-<div class="ttc" id="aa00302_html_a12d27be6730af4fc321ac1eb231db281"><div class="ttname"><a href="a00302.html#a12d27be6730af4fc321ac1eb231db281">MiraiCP::enrollPlugin</a></div><div class="ttdeci">void enrollPlugin()</div><div class="ttdoc">注册插件函数, 需要被插件实现, 类似onStart();</div><div class="ttdef"><b>Definition:</b> <a href="a00179_source.html#l00037">utils.h:37</a></div></div>
-<div class="ttc" id="aa00307_html_abe9e9d8212ea8f23717b72db64393cabaca8073196614a985e9fcc7d2f964473c"><div class="ttname"><a href="a00307.html#abe9e9d8212ea8f23717b72db64393cabaca8073196614a985e9fcc7d2f964473c">MiraiCP::eventTypes::GroupMessageEvent</a></div><div class="ttdeci">@ GroupMessageEvent</div><div class="ttdef"><b>Definition:</b> <a href="a00119_source.html#l00038">Event.h:38</a></div></div>
-<div class="ttc" id="aa00437_html_aeeaafebf5e61e1da8a2c5e3e07dac64b"><div class="ttname"><a href="a00437.html#aeeaafebf5e61e1da8a2c5e3e07dac64b">MiraiCP::CPPPlugin::CPPPlugin</a></div><div class="ttdeci">CPPPlugin()=default</div></div>
+<div class="ttc" id="aa00305_html"><div class="ttname"><a href="a00305.html">MiraiCP</a></div><div class="ttdef"><b>Definition:</b> <a href="a00041_source.html#l00041">commonTypes.h:41</a></div></div>
+<div class="ttc" id="aa00305_html_a12d27be6730af4fc321ac1eb231db281"><div class="ttname"><a href="a00305.html#a12d27be6730af4fc321ac1eb231db281">MiraiCP::enrollPlugin</a></div><div class="ttdeci">void enrollPlugin()</div><div class="ttdoc">注册插件函数, 需要被插件实现, 类似onStart();</div><div class="ttdef"><b>Definition:</b> <a href="a00179_source.html#l00037">utils.h:37</a></div></div>
+<div class="ttc" id="aa00311_html_abe9e9d8212ea8f23717b72db64393cabaca8073196614a985e9fcc7d2f964473c"><div class="ttname"><a href="a00311.html#abe9e9d8212ea8f23717b72db64393cabaca8073196614a985e9fcc7d2f964473c">MiraiCP::eventTypes::GroupMessageEvent</a></div><div class="ttdeci">@ GroupMessageEvent</div><div class="ttdef"><b>Definition:</b> <a href="a00119_source.html#l00038">Event.h:38</a></div></div>
+<div class="ttc" id="aa00441_html_aeeaafebf5e61e1da8a2c5e3e07dac64b"><div class="ttname"><a href="a00441.html#aeeaafebf5e61e1da8a2c5e3e07dac64b">MiraiCP::CPPPlugin::CPPPlugin</a></div><div class="ttdeci">CPPPlugin()=default</div></div>
 </div><!-- fragment --> </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">生成于 2023年 一月 22日 星期日 13:18:23 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="footer">生成于 2023年 一月 27日 星期五 00:14:10 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
     </body>

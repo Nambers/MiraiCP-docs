@@ -1,6 +1,13 @@
 var a00789 =
 [
-    [ "MarketFace", "a00789.html#a4caebb2c1479ca9039f6102f25e5547f", null ],
-    [ "operator==", "a00789.html#a06db9ba5cb8e759845fc44cabf5c4a8e", null ],
-    [ "type", "a00789.html#a4b1a9e71197d9810f31b09b6e5ee5b0a", null ]
+    [ "MusicShare", "a00789.html#adebd57e07a89d64fa3e42e067d3b6d77", null ],
+    [ "toMiraiCode", "a00789.html#a1bffdbd7cd143a903f22fb376b79c855", null ],
+    [ "type", "a00789.html#a0d066ebbca63439a3eea2e564e31403a", null ],
+    [ "appName", "a00789.html#a87a20d867c8dadbe4a8f55ef2b6d0d4d", null ],
+    [ "brief", "a00789.html#ab3e91b8220d2e80dbb84ff17b83ce3f8", null ],
+    [ "jumpUrl", "a00789.html#aa4239e8aadb82d6c79bc8986f55e68b6", null ],
+    [ "musicUrl", "a00789.html#a98dc3816bcdd57e551a55ff88b2ea4fa", null ],
+    [ "picUrl", "a00789.html#a0615bbf6886985e1438ab1493cdc012a", null ],
+    [ "summary", "a00789.html#a2da932b20adbdc6f9fa58bda8c0623ac", null ],
+    [ "title", "a00789.html#aa4f1eb91480d538d2aead5904f1cc4b9", null ]
 ];

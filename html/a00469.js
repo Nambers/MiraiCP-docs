@@ -1,14 +1,14 @@
 var a00469 =
 [
-    [ "GroupInviteEvent", "a00469.html#aa7c23690e2b1371cddf1a729610bfdc8", null ],
-    [ "accept", "a00469.html#a3847df3907111c8443c1e1b71ee35d1d", null ],
-    [ "get_event_type", "a00469.html#aae84c8414b3d16c0b3faf6bae4ebcf94", null ],
-    [ "operation0", "a00469.html#a542b23744671466b1b1ebc591a777caa", null ],
-    [ "reject", "a00469.html#a749d773136fff280e951e66e21959a6c", null ],
-    [ "group", "a00469.html#aa206585209f1577c2986cc277d7fcce9", null ],
-    [ "groupName", "a00469.html#a578c8a027cb9f1574fba3de4b3646fc0", null ],
-    [ "inviter", "a00469.html#a808375e58728ef32e49375a1f23573f8", null ],
-    [ "inviterNick", "a00469.html#abf7cb41022c0cf81725c2925507f1d58", null ],
-    [ "requestEventId", "a00469.html#a785f78b051fc5ccfbf789d3cfab2a37c", null ],
-    [ "source", "a00469.html#affaff17057d8b347a51ba2516f529596", null ]
+    [ "PrivateMessageEvent", "a00469.html#ae09650a1aa7d3f7535a4792bc919e032", null ],
+    [ "chat", "a00469.html#a9a8d672f2936a6760e046c3a03790e07", null ],
+    [ "chat", "a00469.html#a3b70ad84f06df0b224c6dbd58d255a59", null ],
+    [ "from", "a00469.html#a92d1a4aad3a0b4306986cea460b84fb7", null ],
+    [ "from", "a00469.html#a9b4c13376dcef6dddab4cca9b57ffc48", null ],
+    [ "get_event_type", "a00469.html#ac2cb5df8d7346169a074cb463bc85441", null ],
+    [ "getMessageChain", "a00469.html#a547bf324dfbfbb2dbef03c3fef05168b", null ],
+    [ "getMessageChain", "a00469.html#a046a99377587f6d8278d7d6cfb55208b", null ],
+    [ "nextMessage", "a00469.html#a2fadddd37811d8dcbf7183d98eba3034", null ],
+    [ "message", "a00469.html#a8a85d06adc5634099288001409e51de0", null ],
+    [ "sender", "a00469.html#aa2ba8dfb74a6324a1a6ef5774d6ee793", null ]
 ];

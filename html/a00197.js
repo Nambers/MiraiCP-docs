@@ -1,6 +1,6 @@
 var a00197 =
 [
-    [ "getEnv", "a00197.html#a076c5f4ff8083c7cfc6523498d0ba30f", null ],
-    [ "initializeMiraiCPLoader", "a00197.html#aa6bef678ac2c4db79c219654bba52aaf", null ],
-    [ "loadConfigClass", "a00197.html#a82bb86ad9d77529b3a6e03364ab365f2", null ]
+    [ "force_reset_env", "a00197.html#a4fe7994937d5b8906830f48192a6990f", null ],
+    [ "newEnv", "a00197.html#a3d31403b7971274d47d308245206bd24", null ],
+    [ "thread_info", "a00197.html#acbcef4e656024aea9521cf621073e771", null ]
 ];

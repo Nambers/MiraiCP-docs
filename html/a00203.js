@@ -1,9 +1,14 @@
 var a00203 =
 [
-    [ "CLOSE_LIBRARY", "a00203.html#a071a5a9d769c6e787e4101850fff1a54", null ],
-    [ "GET_SYMBOL", "a00203.html#a59a1df0cff1ee36d72e98032ab2594ff", null ],
-    [ "OPEN_LIBRARY", "a00203.html#a8d9660e662b6e570295b95769dc5bf32", null ],
-    [ "libClose", "a00203.html#a830b51c74068e1461e1baf677dd10ac2", null ],
-    [ "libOpen", "a00203.html#a7765f4c313a98cf08466f0a6ed291aac", null ],
-    [ "libSymbolLookup", "a00203.html#a96701ab7dcebb86755310b5c9c434842", null ]
+    [ "Event", "a00203.html#abf8d925983f833c03ad2f8ee25ce67ed", null ],
+    [ "EventImpl", "a00203.html#acd78138ea404c800b6ad65861dbd9d7b", null ],
+    [ "JNI_OnLoad", "a00203.html#ae1ae31f9c02b84e11f3df0b996fb7f27", null ],
+    [ "loaderWakeCV", "a00203.html#a46f4ab12479d61956e7dc81cfb19fef5", null ],
+    [ "PluginDisable", "a00203.html#a054b75b2be22897678d22ce9a72d91df", null ],
+    [ "PluginDisableImpl", "a00203.html#a2e0217581c8df7fd1fc867cc3a8317d3", null ],
+    [ "registerAllPlugin", "a00203.html#a3e5aed817aba5aa6d9426a6ea4981748", null ],
+    [ "registerMethods", "a00203.html#a0c4a7b01410b519eeff58a050bc194cb", null ],
+    [ "Verify", "a00203.html#a3712cdeefe60fa2a92efa90cd6200b02", null ],
+    [ "VerifyImpl", "a00203.html#aafbc26593c69471626589f38c751ef09", null ],
+    [ "loaderThread", "a00203.html#ac51bcb495b656a3fe24c0a6f6c4a01e7", null ]
 ];

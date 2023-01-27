@@ -1,11 +1,12 @@
 var a00296 =
 [
-    [ "json", "a00296.html#ab701e3ac61a85b337ec5c1abaad6742d", null ],
-    [ "FUNC_ENTRANCE", "a00296.html#ada5aac13445cc76c802c817d248d8da8", null ],
-    [ "FUNC_EVENT", "a00296.html#aedc47480af8fc105d922c2484018b2f3", null ],
-    [ "FUNC_EXIT", "a00296.html#ae240c3745dfa2fe5cd18fc56d89a7d56", null ],
-    [ "get_loader_apis", "a00296.html#adbbf9fc9fc8afe6108ac756d7da23ddb", null ],
-    [ "PLUGIN_INFO", "a00296.html#ae002060e3c187e7426d85d81f5caccb8", null ],
-    [ "reset_loader_apis", "a00296.html#afec97d6c5d05f3dda23d2c5bc0bfed4e", null ],
-    [ "set_loader_apis", "a00296.html#a0d5cb79a52a790d19e814e36ecee22e0", null ]
+    [ "escapeFromMiraiCode", "a00296.html#ae7bf212fddf60af59042677c3a7753a5", null ],
+    [ "escapeToMiraiCode", "a00296.html#a01f4fe41f8bef55b95953750f5cfb0c2", null ],
+    [ "icompareChar", "a00296.html#a795aadb1af1cd4b85e9b48b5bb5b246d", null ],
+    [ "iequal", "a00296.html#a0b52c701b3d96bf42b4d67c21f1dab2d", null ],
+    [ "replace", "a00296.html#a939c6b8139fec1968a2d8b45bf3e46d0", null ],
+    [ "split", "a00296.html#a3737839941b231fed645a2213fd2e896", null ],
+    [ "split", "a00296.html#aa9d4bfd5269173c2f6aed44f79bf976e", null ],
+    [ "starts_with", "a00296.html#ac1c9173c6218044be45605d07874e99b", null ],
+    [ "StringToVector", "a00296.html#ab67b5a25139033a0e048a23f84b88b4d", null ]
 ];

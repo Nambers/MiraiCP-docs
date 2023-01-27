@@ -1,6 +1,5 @@
 var a00805 =
 [
-    [ "MarketFace", "a00805.html#a4caebb2c1479ca9039f6102f25e5547f", null ],
-    [ "operator==", "a00805.html#a06db9ba5cb8e759845fc44cabf5c4a8e", null ],
-    [ "type", "a00805.html#a4b1a9e71197d9810f31b09b6e5ee5b0a", null ]
+    [ "idpair", "a00805.html#aa78ad4c83041058a14a3d355cc84e61e", null ],
+    [ "operator()", "a00805.html#a267cadbbab0dd18a7461cdc790776015", null ]
 ];

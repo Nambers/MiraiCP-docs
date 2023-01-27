@@ -1,6 +1,6 @@
 var a00056 =
 [
-    [ "MiraiCP::PluginConfig", "a00341.html", "a00341" ],
-    [ "m_MiraiCPVersion", "a00056.html#a5e92a4c931c8d67dcc35b7b9d5de0f4e", null ],
-    [ "MiraiCPVersion", "a00056.html#ae471c96f73a019b792a82629b6bdfdf5", null ]
+    [ "reset", "a00056.html#a2f7aa94ac874600ec7b20a833dd467cc", null ],
+    [ "setRedirectedObjs", "a00056.html#a6f9a0b99180a04b476efd970445182d1", null ],
+    [ "start", "a00056.html#a2c77251c039e439f1dd5018eab3dc0b8", null ]
 ];

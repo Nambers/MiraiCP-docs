@@ -1,12 +1,19 @@
 var a00733 =
 [
-    [ "PlainText", "a00733.html#af0ffa277c961cde9e5fc0ecc23ff224c", null ],
-    [ "PlainText", "a00733.html#ab68df61c1fb45cdbb5fd04b4d29dd220", null ],
-    [ "PlainText", "a00733.html#a1d7f0c7b72a55d799127a76420a1bec3", null ],
-    [ "PlainText", "a00733.html#a42816451964e21640768a4c0b34ce09f", null ],
-    [ "PlainText", "a00733.html#a0df9da1e22bad53e1f491adf5fa98032", null ],
-    [ "operator==", "a00733.html#a6c8a471bcf5cd3bcc65f6d75097ce286", null ],
-    [ "toJson", "a00733.html#a0fb7ad4530e4602d09c388d44fc4bc00", null ],
-    [ "toMiraiCode", "a00733.html#a2cbc08df42d84ad5c50e2dae680c0eb4", null ],
-    [ "type", "a00733.html#a440b92da26612820bd700e2ce9a5e999", null ]
+    [ "Types", "a00733.html#a2b54a40292d297baaf370931efdc8085", null ],
+    [ "SingleMessage", "a00733.html#afd9fc5e5ce28680eaf331144903f025b", null ],
+    [ "SingleMessage", "a00733.html#aed26a8868000100e8bd51e3e76557909", null ],
+    [ "~SingleMessage", "a00733.html#a7adb6b788b9c549ae5802224a25ae4a5", null ],
+    [ "getKey", "a00733.html#a7412c91a4b45c7f1d77cf904af64b6d7", null ],
+    [ "getMiraiCodeKey", "a00733.html#ac77c5fffe428cdaedb84ee2d6383ecea", null ],
+    [ "getTypeString", "a00733.html#aeb04373bc8b0d8e8710597c35c89f21d", null ],
+    [ "operator==", "a00733.html#a9d501cb4ed4cf97c4eb43246c35224b0", null ],
+    [ "operator==", "a00733.html#aa2836bc9c5110cbada54ecbb65341b8f", null ],
+    [ "toJson", "a00733.html#a70c16e9bd925a9031989537f9efd96af", null ],
+    [ "toMiraiCode", "a00733.html#ade93b603f22f584ada2a003c9e523b89", null ],
+    [ "content", "a00733.html#a7ebcc9775985874bb7a09bd1d8274a24", null ],
+    [ "internalType", "a00733.html#a324dc329305747b20a6b42dd22480c46", null ],
+    [ "messageType", "a00733.html#ac8e48dc2e735821c5e4ad78d21233346", null ],
+    [ "miraiCodeName", "a00733.html#a473ac201093671e8832cebc7226ee61d", null ],
+    [ "prefix", "a00733.html#a207f61ebfd79e0ae18833f2edf954595", null ]
 ];

@@ -13,11 +13,13 @@ var searchData=
   ['miraicp_5fios_10',['MIRAICP_IOS',['../a00047.html#a1d68cb8f2e943376575be26ad3e92415',1,'MiraiCPMacros.h']]],
   ['miraicp_5fiterable_5fenum_11',['MIRAICP_ITERABLE_ENUM',['../a00047.html#a319e05adbf3646676ebdf2dbdbe2a016',1,'MiraiCPMacros.h']]],
   ['miraicp_5fiterable_5fenum_5foperator_5fplusplus_12',['MIRAICP_ITERABLE_ENUM_OPERATOR_PLUSPLUS',['../a00047.html#a2f94bc6361f734dcaf4b045e253f12b4',1,'MiraiCPMacros.h']]],
-  ['miraicp_5flinux_13',['MIRAICP_LINUX',['../a00047.html#ae88c5ce1eaa60e875b164d420af4f12b',1,'MiraiCPMacros.h']]],
-  ['miraicp_5fmacos_14',['MIRAICP_MACOS',['../a00047.html#aaf85a340e7f4e271bcdda974ad69e1e0',1,'MiraiCPMacros.h']]],
-  ['miraicp_5fmsvc_15',['MIRAICP_MSVC',['../a00047.html#ae5f800c38ea99aae261a3073da2d3bd9',1,'MiraiCPMacros.h']]],
-  ['miraicp_5ftermux_16',['MIRAICP_TERMUX',['../a00047.html#a349a0fde5cfa105826641a603ea7cafd',1,'MiraiCPMacros.h']]],
-  ['miraicp_5fthrow_17',['MIRAICP_THROW',['../a00047.html#a0cb8d31be366ba6e083f879387b56bb9',1,'MiraiCPMacros.h']]],
-  ['miraicp_5funix_18',['MIRAICP_UNIX',['../a00047.html#ab5b6dac9e32602961daefead6015bb89',1,'MiraiCPMacros.h']]],
-  ['miraicp_5fwindows_19',['MIRAICP_WINDOWS',['../a00047.html#ae77e84ac8ed5405a64218ccf55f50323',1,'MiraiCPMacros.h']]]
+  ['miraicp_5fjnipptr_13',['MIRAICP_JNIPPTR',['../a00083.html#ac13ebc2b7d3f45e80eb756215e824ba6',1,'LoaderMacro.h']]],
+  ['miraicp_5fjver_14',['MIRAICP_JVER',['../a00083.html#af300645522bf4453ad6f597e92b7c9cc',1,'LoaderMacro.h']]],
+  ['miraicp_5flinux_15',['MIRAICP_LINUX',['../a00047.html#ae88c5ce1eaa60e875b164d420af4f12b',1,'MiraiCPMacros.h']]],
+  ['miraicp_5fmacos_16',['MIRAICP_MACOS',['../a00047.html#aaf85a340e7f4e271bcdda974ad69e1e0',1,'MiraiCPMacros.h']]],
+  ['miraicp_5fmsvc_17',['MIRAICP_MSVC',['../a00047.html#ae5f800c38ea99aae261a3073da2d3bd9',1,'MiraiCPMacros.h']]],
+  ['miraicp_5ftermux_18',['MIRAICP_TERMUX',['../a00047.html#a349a0fde5cfa105826641a603ea7cafd',1,'MiraiCPMacros.h']]],
+  ['miraicp_5fthrow_19',['MIRAICP_THROW',['../a00047.html#a0cb8d31be366ba6e083f879387b56bb9',1,'MiraiCPMacros.h']]],
+  ['miraicp_5funix_20',['MIRAICP_UNIX',['../a00047.html#ab5b6dac9e32602961daefead6015bb89',1,'MiraiCPMacros.h']]],
+  ['miraicp_5fwindows_21',['MIRAICP_WINDOWS',['../a00047.html#ae77e84ac8ed5405a64218ccf55f50323',1,'MiraiCPMacros.h']]]
 ];

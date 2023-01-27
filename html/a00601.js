@@ -1,5 +1,5 @@
 var a00601 =
 [
-    [ "TimeOutException", "a00601.html#afa9ae4c40114187959202926f3414b3b", null ],
-    [ "exceptionType", "a00601.html#a33b7cd14d774ca08c06e537ec6379841", null ]
+    [ "IllegalArgumentException", "a00601.html#a02715ae45b56dbcd02f81b07ce9d8232", null ],
+    [ "exceptionType", "a00601.html#a22651abf53cab34d8c117551bacd78f1", null ]
 ];

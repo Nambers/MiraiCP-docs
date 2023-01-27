@@ -1,13 +1,8 @@
 var a00513 =
 [
-    [ "EventType", "a00513.html#ac1df44d7400ad221500364c7b3de6737", [
-      [ "Active", "a00513.html#ac1df44d7400ad221500364c7b3de6737a4d3d769b812b6faa6b76e1a8abaece2d", null ],
-      [ "Kick", "a00513.html#ac1df44d7400ad221500364c7b3de6737a3e07960fcc45408894cf1402257bd9fd", null ],
-      [ "Disband", "a00513.html#ac1df44d7400ad221500364c7b3de6737aeee6f05922080480c6043305c9d6b329", null ]
-    ] ],
-    [ "BotLeaveEvent", "a00513.html#adf7d87e720725c6db5fb39f0f666b9a4", null ],
-    [ "get_event_type", "a00513.html#a6181c5b90aece0c558943c71d9a037ed", null ],
-    [ "group", "a00513.html#a8d792f877c523fc85423263a3ff60242", null ],
-    [ "operater", "a00513.html#aa8e91ea7bff0f0211728c25ee5402ccc", null ],
-    [ "type", "a00513.html#ae417bdaa1e08bf29b51b97fd1f8f4d80", null ]
+    [ "NudgeEvent", "a00513.html#abac2712b508c1d09155fb8112abc7a15", null ],
+    [ "get_event_type", "a00513.html#a74e2d3893cc0879c00c226fe03283b81", null ],
+    [ "from", "a00513.html#a25165f804cb60432ca3c556d46700278", null ],
+    [ "subject", "a00513.html#ab0297663148696544a00e4f9efed6dab", null ],
+    [ "target", "a00513.html#afcb1a236f88bb0dcb30b3131c0e11ee8", null ]
 ];

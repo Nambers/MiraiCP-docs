@@ -30,7 +30,8 @@ var a00137 =
       [ "MemberJoinRequest", "a00137.html#a80a8ec1c1ed6fd9db32d9a878405d412a20a788490e262b1b5745ebfcebedd9f9", null ],
       [ "ImageUploaded", "a00137.html#a80a8ec1c1ed6fd9db32d9a878405d412a32d12f7dd6c0bd466c899d35ec3d03ef", null ],
       [ "CommandReg", "a00137.html#a80a8ec1c1ed6fd9db32d9a878405d412a36091c0aa5ea549b9f7d462db3ad2259", null ],
-      [ "ChangeNameCard", "a00137.html#a80a8ec1c1ed6fd9db32d9a878405d412a946c3750205c2698925b6f328020add3", null ]
+      [ "ChangeNameCard", "a00137.html#a80a8ec1c1ed6fd9db32d9a878405d412a946c3750205c2698925b6f328020add3", null ],
+      [ "ChangeSpecialTitle", "a00137.html#a80a8ec1c1ed6fd9db32d9a878405d412a82d133a4f6699247e24444cac80704ae", null ]
     ] ],
     [ "QueryBotListCode", "a00137.html#a61a85abb353bc8cd9f7715938014d86e", [
       [ "FriendList", "a00137.html#a61a85abb353bc8cd9f7715938014d86ea204b701e1618d7703f1093aa1756613d", null ],

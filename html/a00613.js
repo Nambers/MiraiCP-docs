@@ -1,5 +1,5 @@
 var a00613 =
 [
-    [ "PluginNotEnabledException", "a00613.html#abac3d25ed4d52ec224f927a1882120e2", null ],
-    [ "exceptionType", "a00613.html#aa6b0e6afbe65bd68c470c952e6419a01", null ]
+    [ "PluginNotAuthorizedException", "a00613.html#ac88316ddaf010113ecf97f605faf3d6d", null ],
+    [ "exceptionType", "a00613.html#a457d9e14fc294fd058e09e1a1d022144", null ]
 ];

@@ -1,5 +1,6 @@
 var a00573 =
 [
-    [ "MuteException", "a00573.html#aabc181c072a55209b6a88f4a0f43fa9a", null ],
-    [ "exceptionType", "a00573.html#afae350ada0208f24022d4de92442b515", null ]
+    [ "BotIsBeingMutedException", "a00573.html#a548111b99d412290281c43e90a1e8e16", null ],
+    [ "exceptionType", "a00573.html#a86c42cdc24c6bf1f85c143cdc5ef6941", null ],
+    [ "timeRemain", "a00573.html#aacccf1ba2a31c6a8901d87d166c85f3e", null ]
 ];

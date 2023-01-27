@@ -1,5 +1,5 @@
 var a00357 =
 [
-    [ "PluginLoadException", "a00357.html#abcadf418c532d132fba49357902e2e7e", null ],
-    [ "exceptionType", "a00357.html#ac82d122c331d273b9d62327055f197f1", null ]
+    [ "LoaderExceptionCRTP", "a00357.html#a569816ed3d22d644f7935ec745d03bd8", null ],
+    [ "getExceptionType", "a00357.html#a2922c4bc8a26626dad74f11ec9bf6df0", null ]
 ];

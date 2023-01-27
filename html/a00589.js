@@ -1,5 +1,5 @@
 var a00589 =
 [
-    [ "RecallException", "a00589.html#a7efed6d5b4e2e7c655b53496fbff9710", null ],
-    [ "exceptionType", "a00589.html#abb3b6f5b42098376e6a195eb6f420410", null ]
+    [ "GroupException", "a00589.html#a86d9f8647899ea7ec1c9bc29a0fab4e2", null ],
+    [ "exceptionType", "a00589.html#ad5423a44299fc74eca0a1be0e66529fd", null ]
 ];

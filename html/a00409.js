@@ -1,9 +1,9 @@
 var a00409 =
 [
-    [ "description", "a00409.html#ae924c02b04ee3fec68c0838ee34bd45d", null ],
-    [ "overrideOrigin", "a00409.html#acb9a0a0c0b1933c9aa28bb361f284489", null ],
-    [ "preFixOption", "a00409.html#af40c74e212dd165a72e7b2e8769e0dcb", null ],
-    [ "primaryName", "a00409.html#a21a4c0a9fe2032ce10efbd76c5388dce", null ],
-    [ "secondNames", "a00409.html#a5211c63986e404f8edc7b36cbd0c3618", null ],
-    [ "usage", "a00409.html#a3f604db6531d4956520cf813d57aa544", null ]
+    [ "Config", "a00413.html", "a00413" ],
+    [ "string", "a00409.html#a87541e84339783a5bfaece0be37988c3", null ],
+    [ "IRawCommand", "a00409.html#ad519bdd519964a086a9ae9df21144fb8", null ],
+    [ "~IRawCommand", "a00409.html#a63339f9bad4e8dfe025b1f59272d6d81", null ],
+    [ "config", "a00409.html#a562a5a0ef7a17c47efdc613b6bb7aa4f", null ],
+    [ "onCommand", "a00409.html#a7acc9f2c8c4640659e9447e3b79d41be", null ]
 ];

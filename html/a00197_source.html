@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiraiCP: JNIEnvs.cpp 源文件</title>
+<title>MiraiCP: JNIEnvManager.cpp 源文件</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -35,7 +35,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MiraiCP
-   &#160;<span id="projectnumber">v2.13.1</span>
+   &#160;<span id="projectnumber">v2.13.2</span>
    </div>
    <div id="projectbrief">MiraiCP api document</div>
   </td>
@@ -93,10 +93,10 @@ $(document).ready(function(){initNavTree('a00197_source.html',''); initResizable
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">JNIEnvs.cpp</div></div>
+  <div class="headertitle"><div class="title">JNIEnvManager.cpp</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="a00197.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// Copyright (c) 2022 - 2022. Antares, Eritque arcus and contributors.</span></div>
+<a href="a00197.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// Copyright (c) 2020 - 2022. Eritque arcus and contributors.</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">//</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">// This program is free software: you can redistribute it and/or modify</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">// it under the terms of the GNU Affero General Public License as</span></div>
@@ -114,51 +114,101 @@ $(document).ready(function(){initNavTree('a00197_source.html',''); initResizable
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#ifndef LOADER_NATIVE</span></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &quot;<a class="code" href="a00068.html">JNIEnvs.h</a>&quot;</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &quot;<a class="code" href="a00080.html">LoaderLogger.h</a>&quot;</span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &quot;<a class="code" href="a00083.html">LoaderMacro.h</a>&quot;</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">// -----------------------</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &quot;<a class="code" href="a00065.html">JNIEnvManager.h</a>&quot;</span></div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keyword">namespace </span><a class="code hl_namespace" href="a00305.html">LibLoader::JNIEnvs</a> {</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="comment">// globals</span></div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="a00305.html#a622c063c68b8d23ee251c36dd8c518e9">   25</a></span>    <span class="keyword">volatile</span> jclass <a class="code hl_variable" href="a00305.html#a622c063c68b8d23ee251c36dd8c518e9">Class_cpplib</a> = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="a00305.html#a36a424ce478704cdd3eb5c14302351df">   26</a></span>    <span class="keyword">volatile</span> jmethodID <a class="code hl_variable" href="a00305.html#a36a424ce478704cdd3eb5c14302351df">koper</a> = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="comment">// functions</span></div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="a00305.html#a82bb86ad9d77529b3a6e03364ab365f2">   28</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="a00305.html#a82bb86ad9d77529b3a6e03364ab365f2">loadConfigClass</a>() {</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        <span class="keyword">auto</span> env = <a class="code hl_function" href="a00305.html#a076c5f4ff8083c7cfc6523498d0ba30f">getEnv</a>();</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        <a class="code hl_variable" href="a00305.html#a622c063c68b8d23ee251c36dd8c518e9">Class_cpplib</a> = <span class="keyword">reinterpret_cast&lt;</span>jclass<span class="keyword">&gt;</span>(env-&gt;NewGlobalRef(env-&gt;FindClass(<span class="stringliteral">&quot;tech/eritquearcus/miraicp/shared/CPPLibMultiplatform&quot;</span>)));</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        <a class="code hl_variable" href="a00305.html#a36a424ce478704cdd3eb5c14302351df">koper</a> = env-&gt;GetStaticMethodID(<a class="code hl_variable" href="a00305.html#a622c063c68b8d23ee251c36dd8c518e9">Class_cpplib</a>, <span class="stringliteral">&quot;KOperation&quot;</span>, <span class="stringliteral">&quot;(Ljava/lang/String;)Ljava/lang/String;&quot;</span>);</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    }</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="a00305.html#aa6bef678ac2c4db79c219654bba52aaf">   34</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="a00305.html#aa6bef678ac2c4db79c219654bba52aaf">initializeMiraiCPLoader</a>() {</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        <a class="code hl_function" href="a00305.html#a82bb86ad9d77529b3a6e03364ab365f2">loadConfigClass</a>();</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        <a class="code hl_variable" href="a00301.html#a0e16fc1159d498289bcda90fcd7a734c">logger</a>.<a class="code hl_function" href="a00377.html#a666e05995de50742a39702dacf3dcbd7">init</a>();</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    }</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="a00305.html#a076c5f4ff8083c7cfc6523498d0ba30f">   39</a></span>    JNIEnv *<a class="code hl_function" href="a00305.html#a076c5f4ff8083c7cfc6523498d0ba30f">getEnv</a>() {</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="a00345.html#aea7d58ff9f04d6d4849c25a2506603a5">JNIEnvManager::getEnv</a>();</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    }</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>} <span class="comment">// namespace LibLoader::JNIEnvs</span></div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="preprocessor">#endif </span><span class="comment">//LOADER_NATIVE</span></div>
-<div class="ttc" id="aa00068_html"><div class="ttname"><a href="a00068.html">JNIEnvs.h</a></div></div>
-<div class="ttc" id="aa00080_html"><div class="ttname"><a href="a00080.html">LoaderLogger.h</a></div></div>
-<div class="ttc" id="aa00301_html_a0e16fc1159d498289bcda90fcd7a734c"><div class="ttname"><a href="a00301.html#a0e16fc1159d498289bcda90fcd7a734c">LibLoader::logger</a></div><div class="ttdeci">MIRAICP_EXPORT LoaderLogger logger</div><div class="ttdef"><b>Definition:</b> <a href="a00212_source.html#l00035">LoaderLogger.cpp:35</a></div></div>
-<div class="ttc" id="aa00305_html"><div class="ttname"><a href="a00305.html">LibLoader::JNIEnvs</a></div><div class="ttdef"><b>Definition:</b> <a href="a00068_source.html#l00024">JNIEnvs.h:24</a></div></div>
-<div class="ttc" id="aa00305_html_a076c5f4ff8083c7cfc6523498d0ba30f"><div class="ttname"><a href="a00305.html#a076c5f4ff8083c7cfc6523498d0ba30f">LibLoader::JNIEnvs::getEnv</a></div><div class="ttdeci">JNIEnv * getEnv()</div><div class="ttdef"><b>Definition:</b> <a href="a00197_source.html#l00039">JNIEnvs.cpp:39</a></div></div>
-<div class="ttc" id="aa00305_html_a36a424ce478704cdd3eb5c14302351df"><div class="ttname"><a href="a00305.html#a36a424ce478704cdd3eb5c14302351df">LibLoader::JNIEnvs::koper</a></div><div class="ttdeci">jmethodID volatile koper</div><div class="ttdef"><b>Definition:</b> <a href="a00197_source.html#l00026">JNIEnvs.cpp:26</a></div></div>
-<div class="ttc" id="aa00305_html_a622c063c68b8d23ee251c36dd8c518e9"><div class="ttname"><a href="a00305.html#a622c063c68b8d23ee251c36dd8c518e9">LibLoader::JNIEnvs::Class_cpplib</a></div><div class="ttdeci">jclass volatile Class_cpplib</div><div class="ttdef"><b>Definition:</b> <a href="a00197_source.html#l00025">JNIEnvs.cpp:25</a></div></div>
-<div class="ttc" id="aa00305_html_a82bb86ad9d77529b3a6e03364ab365f2"><div class="ttname"><a href="a00305.html#a82bb86ad9d77529b3a6e03364ab365f2">LibLoader::JNIEnvs::loadConfigClass</a></div><div class="ttdeci">void loadConfigClass()</div><div class="ttdef"><b>Definition:</b> <a href="a00197_source.html#l00028">JNIEnvs.cpp:28</a></div></div>
-<div class="ttc" id="aa00305_html_aa6bef678ac2c4db79c219654bba52aaf"><div class="ttname"><a href="a00305.html#aa6bef678ac2c4db79c219654bba52aaf">LibLoader::JNIEnvs::initializeMiraiCPLoader</a></div><div class="ttdeci">void initializeMiraiCPLoader()</div><div class="ttdef"><b>Definition:</b> <a href="a00197_source.html#l00034">JNIEnvs.cpp:34</a></div></div>
-<div class="ttc" id="aa00345_html_aea7d58ff9f04d6d4849c25a2506603a5"><div class="ttname"><a href="a00345.html#aea7d58ff9f04d6d4849c25a2506603a5">JNIEnvManager::getEnv</a></div><div class="ttdeci">static JNIEnv * getEnv()</div><div class="ttdoc">取env,如果不存在重新获取</div><div class="ttdef"><b>Definition:</b> <a href="a00194_source.html#l00065">JNIEnvManager.cpp:65</a></div></div>
-<div class="ttc" id="aa00377_html_a666e05995de50742a39702dacf3dcbd7"><div class="ttname"><a href="a00377.html#a666e05995de50742a39702dacf3dcbd7">LibLoader::LoaderLogger::init</a></div><div class="ttdeci">void init()</div><div class="ttdef"><b>Definition:</b> <a href="a00212_source.html#l00037">LoaderLogger.cpp:37</a></div></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keyword">class </span>JNIEnvManager::ThreadInfo {</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code hl_class" href="a00349.html">JNIEnvManager</a>;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    JNIEnv *env_ptr = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    JNIEnv *<a class="code hl_function" href="a00349.html#aea7d58ff9f04d6d4849c25a2506603a5">getEnv</a>() {</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        <span class="keywordflow">return</span> env_ptr;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    }</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="a00349.html#ab22cd8979e49e6bdad9c67fbf335853b">setEnv</a>(JNIEnv *env) {</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        env_ptr = env;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    };</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    ~ThreadInfo() {</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        <span class="keywordflow">if</span> (env_ptr) gvm-&gt;DetachCurrentThread();</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    }</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keyword">static</span> JavaVM *gvm; </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>};</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>JavaVM *JNIEnvManager::ThreadInfo::gvm = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="a00197.html#acbcef4e656024aea9521cf621073e771">   48</a></span><span class="keyword">thread_local</span> JNIEnvManager::ThreadInfo <a class="code hl_variable" href="a00197.html#acbcef4e656024aea9521cf621073e771">thread_info</a>;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="a00197.html#a3d31403b7971274d47d308245206bd24">   51</a></span><span class="keyword">inline</span> JNIEnv *<a class="code hl_function" href="a00197.html#a3d31403b7971274d47d308245206bd24">newEnv</a>() {</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    JNIEnv *env = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    JavaVMAttachArgs args{<span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(<a class="code hl_define" href="a00083.html#af300645522bf4453ad6f597e92b7c9cc">MIRAICP_JVER</a>),</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>                          <span class="keyword">nullptr</span>,</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>                          <span class="keyword">nullptr</span>};</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <a class="code hl_function" href="a00349.html#ae0e482c6a813848a8f5d34957d1b6307">JNIEnvManager::getGvm</a>()-&gt;AttachCurrentThread(<a class="code hl_define" href="a00083.html#ac13ebc2b7d3f45e80eb756215e824ba6">MIRAICP_JNIPPTR</a> &amp;env, &amp;args);</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="keywordflow">return</span> env;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>}</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="a00349.html#ab22cd8979e49e6bdad9c67fbf335853b">   60</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="a00349.html#ab22cd8979e49e6bdad9c67fbf335853b">JNIEnvManager::setEnv</a>(JNIEnv *e) {</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="keywordflow">return</span> (<span class="keyword">nullptr</span> == <a class="code hl_variable" href="a00197.html#acbcef4e656024aea9521cf621073e771">thread_info</a>.env_ptr) &amp;&amp; ((<a class="code hl_variable" href="a00197.html#acbcef4e656024aea9521cf621073e771">thread_info</a>.env_ptr = e) || <span class="keyword">true</span>);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>}</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="a00349.html#aea7d58ff9f04d6d4849c25a2506603a5">   64</a></span>JNIEnv *<a class="code hl_function" href="a00349.html#aea7d58ff9f04d6d4849c25a2506603a5">JNIEnvManager::getEnv</a>() {</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="keywordflow">if</span> (<span class="keyword">nullptr</span> == <a class="code hl_variable" href="a00197.html#acbcef4e656024aea9521cf621073e771">thread_info</a>.env_ptr) <a class="code hl_variable" href="a00197.html#acbcef4e656024aea9521cf621073e771">thread_info</a>.env_ptr = <a class="code hl_function" href="a00197.html#a3d31403b7971274d47d308245206bd24">newEnv</a>();</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="a00197.html#acbcef4e656024aea9521cf621073e771">thread_info</a>.env_ptr;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>}</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="a00349.html#ac5486f22055db723d78404b8b822034f">   69</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="a00349.html#ac5486f22055db723d78404b8b822034f">JNIEnvManager::detach</a>() {</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="keywordflow">if</span> (<span class="keyword">nullptr</span> != <a class="code hl_variable" href="a00197.html#acbcef4e656024aea9521cf621073e771">thread_info</a>.env_ptr) {</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        <a class="code hl_function" href="a00349.html#ae0e482c6a813848a8f5d34957d1b6307">getGvm</a>()-&gt;DetachCurrentThread();</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        <a class="code hl_variable" href="a00197.html#acbcef4e656024aea9521cf621073e771">thread_info</a>.env_ptr = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    }</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>}</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="a00349.html#ae0e482c6a813848a8f5d34957d1b6307">   77</a></span>JavaVM *<a class="code hl_function" href="a00349.html#ae0e482c6a813848a8f5d34957d1b6307">JNIEnvManager::getGvm</a>() {</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <span class="keywordflow">return</span> ThreadInfo::gvm;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>}</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="a00349.html#a4053a39604df12d52f938cd7d60850fd">   81</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="a00349.html#a4053a39604df12d52f938cd7d60850fd">JNIEnvManager::setGvm</a>(JavaVM *_gvm) {</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    ThreadInfo::gvm = _gvm;</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>}</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="a00320.html">   85</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="a00320.html">EnvMocker</a> {</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno"><a class="line" href="a00320.html#a4fe7994937d5b8906830f48192a6990f">   88</a></span>    <a class="code hl_define" href="a00047.html#aa40df2b825bdde9207f3e87b140235c3">MIRAICP_EXPORT</a> <span class="keywordtype">void</span> <a class="code hl_function" href="a00320.html#a4fe7994937d5b8906830f48192a6990f">force_reset_env</a>() {</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        <a class="code hl_variable" href="a00197.html#acbcef4e656024aea9521cf621073e771">thread_info</a> = JNIEnvManager::ThreadInfo();</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    }</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>} <span class="comment">// namespace EnvMocker</span></div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span><span class="preprocessor">#endif </span><span class="comment">//LOADER_NATIVE</span></div>
+<div class="ttc" id="aa00047_html_aa40df2b825bdde9207f3e87b140235c3"><div class="ttname"><a href="a00047.html#aa40df2b825bdde9207f3e87b140235c3">MIRAICP_EXPORT</a></div><div class="ttdeci">#define MIRAICP_EXPORT</div><div class="ttdef"><b>Definition:</b> <a href="a00047_source.html#l00180">MiraiCPMacros.h:180</a></div></div>
+<div class="ttc" id="aa00065_html"><div class="ttname"><a href="a00065.html">JNIEnvManager.h</a></div></div>
+<div class="ttc" id="aa00083_html"><div class="ttname"><a href="a00083.html">LoaderMacro.h</a></div></div>
+<div class="ttc" id="aa00083_html_ac13ebc2b7d3f45e80eb756215e824ba6"><div class="ttname"><a href="a00083.html#ac13ebc2b7d3f45e80eb756215e824ba6">MIRAICP_JNIPPTR</a></div><div class="ttdeci">#define MIRAICP_JNIPPTR</div><div class="ttdef"><b>Definition:</b> <a href="a00083_source.html#l00039">LoaderMacro.h:39</a></div></div>
+<div class="ttc" id="aa00083_html_af300645522bf4453ad6f597e92b7c9cc"><div class="ttname"><a href="a00083.html#af300645522bf4453ad6f597e92b7c9cc">MIRAICP_JVER</a></div><div class="ttdeci">#define MIRAICP_JVER</div><div class="ttdef"><b>Definition:</b> <a href="a00083_source.html#l00040">LoaderMacro.h:40</a></div></div>
+<div class="ttc" id="aa00197_html_a3d31403b7971274d47d308245206bd24"><div class="ttname"><a href="a00197.html#a3d31403b7971274d47d308245206bd24">newEnv</a></div><div class="ttdeci">JNIEnv * newEnv()</div><div class="ttdoc">为当前线程创建一个env.</div><div class="ttdef"><b>Definition:</b> <a href="a00197_source.html#l00051">JNIEnvManager.cpp:51</a></div></div>
+<div class="ttc" id="aa00197_html_acbcef4e656024aea9521cf621073e771"><div class="ttname"><a href="a00197.html#acbcef4e656024aea9521cf621073e771">thread_info</a></div><div class="ttdeci">thread_local JNIEnvManager::ThreadInfo thread_info</div><div class="ttdef"><b>Definition:</b> <a href="a00197_source.html#l00048">JNIEnvManager.cpp:48</a></div></div>
+<div class="ttc" id="aa00320_html"><div class="ttname"><a href="a00320.html">EnvMocker</a></div><div class="ttdef"><b>Definition:</b> <a href="a00197_source.html#l00085">JNIEnvManager.cpp:85</a></div></div>
+<div class="ttc" id="aa00320_html_a4fe7994937d5b8906830f48192a6990f"><div class="ttname"><a href="a00320.html#a4fe7994937d5b8906830f48192a6990f">EnvMocker::force_reset_env</a></div><div class="ttdeci">MIRAICP_EXPORT void force_reset_env()</div><div class="ttdef"><b>Definition:</b> <a href="a00197_source.html#l00088">JNIEnvManager.cpp:88</a></div></div>
+<div class="ttc" id="aa00349_html"><div class="ttname"><a href="a00349.html">JNIEnvManager</a></div><div class="ttdef"><b>Definition:</b> <a href="a00065_source.html#l00034">JNIEnvManager.h:34</a></div></div>
+<div class="ttc" id="aa00349_html_a4053a39604df12d52f938cd7d60850fd"><div class="ttname"><a href="a00349.html#a4053a39604df12d52f938cd7d60850fd">JNIEnvManager::setGvm</a></div><div class="ttdeci">static void setGvm(JavaVM *_gvm)</div><div class="ttdoc">设置全局JavaVM对象.</div><div class="ttdef"><b>Definition:</b> <a href="a00197_source.html#l00081">JNIEnvManager.cpp:81</a></div></div>
+<div class="ttc" id="aa00349_html_ab22cd8979e49e6bdad9c67fbf335853b"><div class="ttname"><a href="a00349.html#ab22cd8979e49e6bdad9c67fbf335853b">JNIEnvManager::setEnv</a></div><div class="ttdeci">static bool setEnv(JNIEnv *e)</div><div class="ttdoc">尝试给当前线程设置env.</div><div class="ttdef"><b>Definition:</b> <a href="a00197_source.html#l00060">JNIEnvManager.cpp:60</a></div></div>
+<div class="ttc" id="aa00349_html_ac5486f22055db723d78404b8b822034f"><div class="ttname"><a href="a00349.html#ac5486f22055db723d78404b8b822034f">JNIEnvManager::detach</a></div><div class="ttdeci">static void detach()</div><div class="ttdoc">结束当前线程的env，也就是释放当前线程缓存的env.</div><div class="ttdef"><b>Definition:</b> <a href="a00197_source.html#l00069">JNIEnvManager.cpp:69</a></div></div>
+<div class="ttc" id="aa00349_html_ae0e482c6a813848a8f5d34957d1b6307"><div class="ttname"><a href="a00349.html#ae0e482c6a813848a8f5d34957d1b6307">JNIEnvManager::getGvm</a></div><div class="ttdeci">static JavaVM * getGvm()</div><div class="ttdoc">获取全局JavaVM对象.</div><div class="ttdef"><b>Definition:</b> <a href="a00197_source.html#l00077">JNIEnvManager.cpp:77</a></div></div>
+<div class="ttc" id="aa00349_html_aea7d58ff9f04d6d4849c25a2506603a5"><div class="ttname"><a href="a00349.html#aea7d58ff9f04d6d4849c25a2506603a5">JNIEnvManager::getEnv</a></div><div class="ttdeci">static JNIEnv * getEnv()</div><div class="ttdoc">取env,如果不存在重新获取</div><div class="ttdef"><b>Definition:</b> <a href="a00197_source.html#l00064">JNIEnvManager.cpp:64</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_23c80554d3059e776f1fa3b42eea10c0.html">libloader</a></li><li class="navelem"><a class="el" href="a00197.html">JNIEnvs.cpp</a></li>
-    <li class="footer">生成于 2023年 一月 22日 星期日 13:18:23 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_23c80554d3059e776f1fa3b42eea10c0.html">libloader</a></li><li class="navelem"><a class="el" href="a00197.html">JNIEnvManager.cpp</a></li>
+    <li class="footer">生成于 2023年 一月 27日 星期五 00:14:10 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
     </body>

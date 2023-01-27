@@ -1,8 +1,5 @@
 var a00617 =
 [
-    [ "MiraiCPThreadException", "a00617.html#a4b4c5caac34747b3ecb483f4deed965f", null ],
-    [ "exceptionType", "a00617.html#aad0c4ccc8e691b6d4a078b1ea85c3207", null ],
-    [ "getThreadIdStr", "a00617.html#ae296a1ee1626dd34c9028ae8a33179a5", null ],
-    [ "getThreadIdStr", "a00617.html#a6beb35a9023dec7d8f0fc7de6c2c6257", null ],
-    [ "threadId", "a00617.html#aabed0e9baac6e2c9164c5b606b04bc97", null ]
+    [ "PluginNotEnabledException", "a00617.html#abac3d25ed4d52ec224f927a1882120e2", null ],
+    [ "exceptionType", "a00617.html#aa6b0e6afbe65bd68c470c952e6419a01", null ]
 ];

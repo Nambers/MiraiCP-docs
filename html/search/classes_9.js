@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['jnienvmanager_0',['JNIEnvManager',['../a00345.html',1,'']]]
+  ['jnienvmanager_0',['JNIEnvManager',['../a00349.html',1,'']]]
 ];

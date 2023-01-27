@@ -1,5 +1,5 @@
 var a00609 =
 [
-    [ "PluginNotAuthorizedException", "a00609.html#ac88316ddaf010113ecf97f605faf3d6d", null ],
-    [ "exceptionType", "a00609.html#a457d9e14fc294fd058e09e1a1d022144", null ]
+    [ "EventCancelledException", "a00609.html#adcf3347e6e34ba912fafd4bdd48a44af", null ],
+    [ "exceptionType", "a00609.html#ade28f5ad66bc98f50ba3a537d4402c07", null ]
 ];

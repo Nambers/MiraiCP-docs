@@ -1,5 +1,6 @@
 var a00801 =
 [
-    [ "idpair", "a00801.html#aa78ad4c83041058a14a3d355cc84e61e", null ],
-    [ "operator()", "a00801.html#a267cadbbab0dd18a7461cdc790776015", null ]
+    [ "operator==", "a00801.html#a02842b77c8eadf88e697a941eea4dbd0", null ],
+    [ "id1", "a00801.html#ad4e6abbfad6c129c9bb65ac030daef27", null ],
+    [ "id2", "a00801.html#a72ed897c677869530b1ebbcb4bd0782c", null ]
 ];

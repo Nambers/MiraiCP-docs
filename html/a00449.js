@@ -1,7 +1,17 @@
 var a00449 =
 [
-    [ "MiraiCPEvent", "a00449.html#ac85886499f0138dbdd661dea59c7596d", null ],
-    [ "~MiraiCPEvent", "a00449.html#a42d37c121315a51870afcc0b9306675a", null ],
-    [ "get_event_type", "a00449.html#a2df44719d2520c5197b90a9b17ffb34d", null ],
-    [ "getEventType", "a00449.html#a8b6261853c107755fd808ba2879c06d8", null ]
+    [ "ContactType", "a00449.html#aa38779bbd1171da9518bb83264082068", [
+      [ "TypeFriend", "a00449.html#aa38779bbd1171da9518bb83264082068af62e36a099b924bed288d7ccd38ab024", null ],
+      [ "TypeGroup", "a00449.html#aa38779bbd1171da9518bb83264082068ad2ba0a69a1a41bd53332f02d149cfa80", null ],
+      [ "TypeMember", "a00449.html#aa38779bbd1171da9518bb83264082068a81fab02eb3c47d18cc9d371671e3f045", null ],
+      [ "TypeBot", "a00449.html#aa38779bbd1171da9518bb83264082068ab85ffd5dd440bc06611225b581948e55", null ],
+      [ "TypeStranger", "a00449.html#aa38779bbd1171da9518bb83264082068ab616dd158256ecadbaf1010842ee1aa7", null ],
+      [ "TypeAnonymousMember", "a00449.html#aa38779bbd1171da9518bb83264082068a2078e4769d279fa053d62f95e8a801d4", null ]
+    ] ],
+    [ "BuiltInContact", "a00449.html#a839c5a7e59d5efb34a53407844073b93", null ],
+    [ "toContactPointer", "a00449.html#a93657060055478e2132cf310015efbf8", null ],
+    [ "botId", "a00449.html#a0541df919137723469aba374ec295d3d", null ],
+    [ "groupId", "a00449.html#a7fe2fd4cc1730f7cf954daaef6c28d07", null ],
+    [ "id", "a00449.html#aac8590c3fac3b2b02d3538bbd0919f82", null ],
+    [ "type", "a00449.html#a0e15bf22071b50b12dc828d867ede022", null ]
 ];

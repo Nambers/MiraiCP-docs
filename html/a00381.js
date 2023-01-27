@@ -1,9 +1,15 @@
 var a00381 =
 [
-    [ "is_loader_exited", "a00381.html#a41be9b5aab1d2394f236e1f42a0a2482", null ],
-    [ "loaderExit", "a00381.html#ae6cd717526cfbf2a3aba7bd361ebbf4c", null ],
-    [ "loaderMain", "a00381.html#a79cbc18aabed7afe2c7ea30f989ffc8c", null ],
-    [ "mainloop", "a00381.html#a0fbfe44fb362bf323c41e3ae73717edd", null ],
-    [ "shutdownLoader", "a00381.html#a6d477440277d3907b96261db3a222d96", null ],
-    [ "loader_exit", "a00381.html#a348439e27d1a976dd143da7a8b8b0de9", null ]
+    [ "string", "a00381.html#acfe4e8f9dd9fdd3774c50f4843ea4c57", null ],
+    [ "wstring", "a00381.html#a263f5033219fd9fde7e76a4a14e30a3a", null ],
+    [ "call_logger", "a00381.html#af4d7d5164450e25f7401d1cc15f15b8d", null ],
+    [ "call_logger", "a00381.html#a4c48551e7c6b1fe442d394c4333c4f5c", null ],
+    [ "error", "a00381.html#ae735f16b20f681d29d4e5d28ad248dbe", null ],
+    [ "error", "a00381.html#ab16e1bc0504135788f5ce20864deb044", null ],
+    [ "info", "a00381.html#a0d34d5ca7783c370ec08dbbb44876c1b", null ],
+    [ "info", "a00381.html#ad876a34412f03e35fbae30758836e6ff", null ],
+    [ "init", "a00381.html#a666e05995de50742a39702dacf3dcbd7", null ],
+    [ "warning", "a00381.html#af50d0545fe7d683e54fcd03453a423e3", null ],
+    [ "warning", "a00381.html#a17f3029197c45dc84c38a764c9e3e1b9", null ],
+    [ "logMethod", "a00381.html#a298efd2ba8a74fb88313ca0c08e29235", null ]
 ];

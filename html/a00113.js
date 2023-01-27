@@ -1,10 +1,10 @@
 var a00113 =
 [
-    [ "MiraiCP::IContactData", "a00417.html", "a00417" ],
-    [ "MiraiCP::GroupRelatedData", "a00421.html", "a00421" ],
-    [ "MiraiCP::Contact", "a00425.html", "a00425" ],
-    [ "MiraiCP::ContactDataHelper< ClassType, InternalDataType >", "a00429.html", "a00429" ],
-    [ "MiraiCP::INudgeSupport", "a00433.html", "a00433" ],
+    [ "MiraiCP::IContactData", "a00421.html", "a00421" ],
+    [ "MiraiCP::GroupRelatedData", "a00425.html", "a00425" ],
+    [ "MiraiCP::Contact", "a00429.html", "a00429" ],
+    [ "MiraiCP::ContactDataHelper< ClassType, InternalDataType >", "a00433.html", "a00433" ],
+    [ "MiraiCP::INudgeSupport", "a00437.html", "a00437" ],
     [ "ContactType", "a00113.html#a0d1866090dd6e204aff05337260f3a57", [
       [ "MIRAI_CONTACT", "a00113.html#a0d1866090dd6e204aff05337260f3a57aeb5e49b11f2d1ca3eb284cae0513f35e", null ],
       [ "MIRAI_FRIEND", "a00113.html#a0d1866090dd6e204aff05337260f3a57a00d007921a890e2b7d340dd1f4c0d4cd", null ],

@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiraiCP: Plugin.cpp 文件参考</title>
+<title>MiraiCP: PlatformException.cpp 文件参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -35,7 +35,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MiraiCP
-   &#160;<span id="projectnumber">v2.13.1</span>
+   &#160;<span id="projectnumber">v2.13.2</span>
    </div>
    <div id="projectbrief">MiraiCP api document</div>
   </td>
@@ -94,62 +94,60 @@ $(document).ready(function(){initNavTree('a00224.html',''); initResizable(); });
 
 <div class="header">
   <div class="summary">
-<a href="#namespaces">命名空间</a> &#124;
-<a href="#func-members">函数</a> &#124;
 <a href="#var-members">变量</a>  </div>
-  <div class="headertitle"><div class="title">Plugin.cpp 文件参考</div></div>
+  <div class="headertitle"><div class="title">PlatformException.cpp 文件参考</div></div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="a00047_source.html">MiraiCPMacros.h</a>&quot;</code><br />
 <code>#include &quot;BS_thread_pool.hpp&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00077_source.html">LoaderExceptions.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00080_source.html">LoaderLogger.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00095_source.html">Plugin.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00056_source.html">PluginConfig.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00089_source.html">LoaderTaskQueue.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="a00101_source.html">PluginListManager.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00059_source.html">ThreadIdentify.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="a00038_source.html">commonTools.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00074_source.html">libOpen.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00092_source.html">loaderTools.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00080_source.html">LoaderLogger.h</a>&quot;</code><br />
+<code>#include &lt;csignal&gt;</code><br />
+<code>#include &lt;thread&gt;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Plugin.cpp 的引用(Include)关系图:</div>
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> PlatformException.cpp 的引用(Include)关系图:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="a00225.svg" width="1486" height="560"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00225.svg" width="1046" height="486"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 </div>
 </div>
 <p><a href="a00224_source.html">浏览源代码.</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
-命名空间</h2></td></tr>
-<tr class="memitem:a00301"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00301.html">LibLoader</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
-函数</h2></td></tr>
-<tr class="memitem:aa09e6340966a9de13ad8ce1e88175fa6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00301.html#aa09e6340966a9de13ad8ce1e88175fa6">LibLoader::checkPluginInfoValid</a> (plugin_info_func_ptr info_ptr)</td></tr>
-<tr class="separator:aa09e6340966a9de13ad8ce1e88175fa6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a404fe153b293b8220f6737f1ab530246"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00301.html#a404fe153b293b8220f6737f1ab530246">LibLoader::formatInternal</a> (const <a class="el" href="a00341.html">MiraiCP::PluginConfig</a> &amp;plugin_config, std::vector&lt; std::string &gt; &amp;out, size_t(&amp;charNum)[4])</td></tr>
-<tr class="separator:a404fe153b293b8220f6737f1ab530246"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3e5aed817aba5aa6d9426a6ea4981748"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00301.html#a3e5aed817aba5aa6d9426a6ea4981748">LibLoader::registerAllPlugin</a> (const std::string &amp;) noexcept</td></tr>
-<tr class="separator:a3e5aed817aba5aa6d9426a6ea4981748"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 变量</h2></td></tr>
-<tr class="memitem:a5ae98c95e03580d7935bbffe373cbca5"><td class="memItemLeft" align="right" valign="top">constexpr static LoaderApi::interface_funcs&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00301.html#a5ae98c95e03580d7935bbffe373cbca5">LibLoader::adminInterfaces</a> = LoaderApi::collect_interface_functions(true)</td></tr>
-<tr class="memdesc:a5ae98c95e03580d7935bbffe373cbca5"><td class="mdescLeft">&#160;</td><td class="mdescRight">这部分是一些工具函数、对象  <a href="a00301.html#a5ae98c95e03580d7935bbffe373cbca5">更多...</a><br /></td></tr>
-<tr class="separator:a5ae98c95e03580d7935bbffe373cbca5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9cd3117e29d10bfd8955ecf028e00bbf"><td class="memItemLeft" align="right" valign="top">constexpr static LoaderApi::interface_funcs&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00301.html#a9cd3117e29d10bfd8955ecf028e00bbf">LibLoader::normalInterfaces</a> = LoaderApi::collect_interface_functions(false)</td></tr>
-<tr class="separator:a9cd3117e29d10bfd8955ecf028e00bbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a610f6add140f1df3ef983b0d2cf9a745"><td class="memItemLeft" align="right" valign="top">thread_local bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00224.html#a610f6add140f1df3ef983b0d2cf9a745">alreadyInHandler</a> = false</td></tr>
+<tr class="separator:a610f6add140f1df3ef983b0d2cf9a745"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">变量说明</h2>
+<a id="a610f6add140f1df3ef983b0d2cf9a745" name="a610f6add140f1df3ef983b0d2cf9a745"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a610f6add140f1df3ef983b0d2cf9a745">&#9670;&nbsp;</a></span>alreadyInHandler</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">thread_local bool alreadyInHandler = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="a00224_source.html">PlatformException.cpp</a> 第 <a class="el" href="a00224_source.html#l00103">103</a> 行定义.</p>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_23c80554d3059e776f1fa3b42eea10c0.html">libloader</a></li><li class="navelem"><a class="el" href="a00224.html">Plugin.cpp</a></li>
-    <li class="footer">生成于 2023年 一月 22日 星期日 13:18:25 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_23c80554d3059e776f1fa3b42eea10c0.html">libloader</a></li><li class="navelem"><a class="el" href="a00224.html">PlatformException.cpp</a></li>
+    <li class="footer">生成于 2023年 一月 27日 星期五 00:14:11 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
     </body>

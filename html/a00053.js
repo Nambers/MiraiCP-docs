@@ -1,7 +1,6 @@
 var a00053 =
 [
-    [ "checkPthreadLen", "a00053.html#a950b21be09363bd9b3cda80780d6f53f", null ],
-    [ "platform_get_thread_name", "a00053.html#a67462281d09a44cf573abdb30dc1e212", null ],
-    [ "platform_set_thread_name", "a00053.html#a9f67720001db7976ed33085c42d81fb0", null ],
-    [ "platform_thread_self", "a00053.html#a355ba908e1bbef8ea09eeed979a16520", null ]
+    [ "MiraiCP::PluginConfig", "a00345.html", "a00345" ],
+    [ "m_MiraiCPVersion", "a00053.html#a5e92a4c931c8d67dcc35b7b9d5de0f4e", null ],
+    [ "MiraiCPVersion", "a00053.html#ae471c96f73a019b792a82629b6bdfdf5", null ]
 ];

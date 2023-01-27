@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiraiCP: PlatformException.cpp 源文件</title>
+<title>MiraiCP: loaderTools.cpp 源文件</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -35,7 +35,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MiraiCP
-   &#160;<span id="projectnumber">v2.13.1</span>
+   &#160;<span id="projectnumber">v2.13.2</span>
    </div>
    <div id="projectbrief">MiraiCP api document</div>
   </td>
@@ -93,10 +93,10 @@ $(document).ready(function(){initNavTree('a00221_source.html',''); initResizable
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">PlatformException.cpp</div></div>
+  <div class="headertitle"><div class="title">loaderTools.cpp</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="a00221.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// Copyright (c) 2022. Eritque arcus and contributors.</span></div>
+<a href="a00221.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// Copyright (c) 2022 - 2022. Antares, Eritque arcus and contributors.</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">//</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">// This program is free software: you can redistribute it and/or modify</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">// it under the terms of the GNU Affero General Public License as</span></div>
@@ -114,192 +114,109 @@ $(document).ready(function(){initNavTree('a00221_source.html',''); initResizable
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &quot;<a class="code" href="a00047.html">MiraiCPMacros.h</a>&quot;</span></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">// -----------------------</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &quot;BS_thread_pool.hpp&quot;</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &quot;<a class="code" href="a00089.html">LoaderTaskQueue.h</a>&quot;</span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &quot;<a class="code" href="a00053.html">PlatformThreading.h</a>&quot;</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &quot;<a class="code" href="a00101.html">PluginListManager.h</a>&quot;</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &quot;<a class="code" href="a00038.html">commonTools.h</a>&quot;</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#if MIRAICP_WINDOWS</span></div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &quot;<a class="code" href="a00080.html">LoaderLogger.h</a>&quot;</span></div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;windows.h&gt;</span></div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keyword">thread_local</span> <span class="keywordtype">bool</span> <a class="code hl_variable" href="a00221.html#a610f6add140f1df3ef983b0d2cf9a745">alreadyInHandler</a>;</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="comment">// 禁止从其他地方构造</span></div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="keyword">class </span>EventHandlerPitch {</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="keyword">static</span> <span class="keywordtype">long</span> __stdcall eventHandler(PEXCEPTION_POINTERS pExceptionPointers) {</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="a00221.html#a610f6add140f1df3ef983b0d2cf9a745">alreadyInHandler</a>) {</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>            <span class="keywordflow">return</span> EXCEPTION_CONTINUE_EXECUTION;</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        }</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <span class="keyword">auto</span> pluginName = <a class="code hl_function" href="a00397.html#a3665ebb268ead29f2fd30e28c6e09002">LibLoader::PluginListManager::getThreadRunningPluginId</a>();</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <span class="keywordflow">if</span> (pluginName.empty()) {</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>            <span class="comment">// test the thread is from jvm</span></div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            <span class="keywordtype">char</span> threadName[80];</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>            <a class="code hl_function" href="a00053.html#a67462281d09a44cf573abdb30dc1e212">platform_get_thread_name</a>(<a class="code hl_function" href="a00053.html#a355ba908e1bbef8ea09eeed979a16520">platform_thread_self</a>(), threadName, 80);</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>            <span class="keywordflow">if</span> (strcmp(threadName, <span class="stringliteral">&quot;libLoader&quot;</span>) == 0) {</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>                <a class="code hl_variable" href="a00301.html#a0e16fc1159d498289bcda90fcd7a734c">LibLoader::logger</a>.<a class="code hl_function" href="a00377.html#ae735f16b20f681d29d4e5d28ad248dbe">error</a>(<span class="stringliteral">&quot;libLoader线程遇到致命错误，请向MiraiCP仓库提交您的报错信息以及堆栈信息&quot;</span>);</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>                exit(1);</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (strcmp(threadName, <span class="stringliteral">&quot;LoaderWorker&quot;</span>) == 0) {</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>                <span class="comment">// 非插件导致的工作线程致命错误</span></div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>                <a class="code hl_variable" href="a00301.html#a0e16fc1159d498289bcda90fcd7a734c">LibLoader::logger</a>.<a class="code hl_function" href="a00377.html#ae735f16b20f681d29d4e5d28ad248dbe">error</a>(<span class="stringliteral">&quot;libLoader工作线程遇到致命错误，请向MiraiCP仓库提交您的报错信息以及堆栈信息&quot;</span>);</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>                exit(1);</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>            }</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>            std::string maybeId = threadName;</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>            <span class="comment">// 插件列表中查询是否有这个线程名的插件，如果没有则放弃处理，有则卸载</span></div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>            <span class="keywordflow">if</span> (<a class="code hl_function" href="a00397.html#a9f7e8ee497876f7543037939abbe397b">LibLoader::PluginListManager::pluginNameLookup</a>(maybeId)) {</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>                pluginName = std::move(maybeId);</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>                <span class="keywordflow">return</span> EXCEPTION_CONTINUE_EXECUTION;</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>            }</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        }</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &quot;<a class="code" href="a00068.html">JNIEnvs.h</a>&quot;</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &quot;<a class="code" href="a00080.html">LoaderLogger.h</a>&quot;</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &quot;<a class="code" href="a00038.html">commonTools.h</a>&quot;</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &quot;<a class="code" href="a00092.html">loaderTools.h</a>&quot;</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &quot;utf8.h&quot;</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#include &lt;iomanip&gt;</span> <span class="comment">// for std::setw</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#include &lt;sstream&gt;</span> <span class="comment">// for ostringstream</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="keyword">namespace </span><a class="code hl_namespace" href="a00304.html">LibLoader</a> {</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="a00304.html#ac2437e37ffa99895ce42d4dd19efbbcd">   29</a></span>    std::pair&lt;std::vector&lt;std::string&gt;, std::vector&lt;PluginAuthority&gt;&gt; <a class="code hl_function" href="a00304.html#ac2437e37ffa99895ce42d4dd19efbbcd">collect_plugins</a>(<span class="keyword">const</span> std::string &amp;cfgPath, <a class="code hl_typedef" href="a00299.html#ab701e3ac61a85b337ec5c1abaad6742d">nlohmann::json</a> j) {</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        std::vector&lt;std::string&gt; paths;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        std::vector&lt;PluginAuthority&gt; authorities;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <span class="keywordflow">try</span> {</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>            <span class="keyword">auto</span> &amp;_pairs = (j.contains(<span class="stringliteral">&quot;pluginConfig&quot;</span>) ? j[<span class="stringliteral">&quot;pluginConfig&quot;</span>] : j[<span class="stringliteral">&quot;cppPaths&quot;</span>]);</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>            <span class="keywordflow">if</span> (!_pairs.is_array()) {</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>                <a class="code hl_variable" href="a00304.html#a0e16fc1159d498289bcda90fcd7a734c">logger</a>.<a class="code hl_function" href="a00381.html#ae735f16b20f681d29d4e5d28ad248dbe">error</a>(<span class="stringliteral">&quot;pluginConfig is not an array&quot;</span>);</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>                <span class="keywordflow">throw</span> std::exception();</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>            }</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>            <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;&amp;v: _pairs) {</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>                <span class="comment">// path</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>                {</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>                    paths.emplace_back(v[<span class="stringliteral">&quot;path&quot;</span>].get&lt;std::string&gt;());</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>                }</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>                <span class="comment">// authority</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>                {</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>                    <a class="code hl_enumeration" href="a00304.html#a25dcf37316806dd07a4e960c5eb537a4">PluginAuthority</a> authority = <a class="code hl_enumvalue" href="a00304.html#a25dcf37316806dd07a4e960c5eb537a4a37a69db536daf1ceabf89dc14346092d">PLUGIN_AUTHORITY_NORMAL</a>;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>                    <span class="keywordflow">if</span> (v.contains(<span class="stringliteral">&quot;authority&quot;</span>)) {</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>                        <span class="comment">// change this if you want to support multiple authorities</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>                        authority = v[<span class="stringliteral">&quot;authority&quot;</span>].get&lt;<span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span>&gt;() ? <a class="code hl_enumvalue" href="a00304.html#a25dcf37316806dd07a4e960c5eb537a4a94365761d42a1db02c02bce01be06220">PLUGIN_AUTHORITY_ADMIN</a> : <a class="code hl_enumvalue" href="a00304.html#a25dcf37316806dd07a4e960c5eb537a4a37a69db536daf1ceabf89dc14346092d">PLUGIN_AUTHORITY_NORMAL</a>;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>                    }</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>                    authorities.emplace_back(authority);</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>                }</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>            }</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        } <span class="keywordflow">catch</span> (...) {</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>            <a class="code hl_variable" href="a00304.html#a0e16fc1159d498289bcda90fcd7a734c">logger</a>.<a class="code hl_function" href="a00381.html#ae735f16b20f681d29d4e5d28ad248dbe">error</a>(<span class="stringliteral">&quot;failed to load json: &quot;</span> + cfgPath);</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>            <span class="keywordflow">return</span> {};</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        }</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        <span class="keywordflow">return</span> {std::move(paths), std::move(authorities)};</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    }</div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        <span class="comment">// 插件导致的崩溃，卸载该插件</span></div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        <a class="code hl_variable" href="a00221.html#a610f6add140f1df3ef983b0d2cf9a745">alreadyInHandler</a> = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        <a class="code hl_define" href="a00047.html#aa05206ce52ebadc805b64d69749a63d3">MIRAICP_DEFER</a>(<a class="code hl_variable" href="a00221.html#a610f6add140f1df3ef983b0d2cf9a745">alreadyInHandler</a> = <span class="keyword">false</span>;);</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        <span class="keywordtype">char</span> hexTemp[20];</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        sprintf_s(hexTemp, 20, <span class="stringliteral">&quot;%lX&quot;</span>, pExceptionPointers-&gt;ExceptionRecord-&gt;ExceptionCode);</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        <a class="code hl_variable" href="a00301.html#a0e16fc1159d498289bcda90fcd7a734c">LibLoader::logger</a>.<a class="code hl_function" href="a00377.html#ae735f16b20f681d29d4e5d28ad248dbe">error</a>(<span class="stringliteral">&quot;插件 &quot;</span> + pluginName + <span class="stringliteral">&quot; 遇到致命错误！工作线程异常终止，ExceptionCode: 0x&quot;</span> + hexTemp);</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        <a class="code hl_variable" href="a00301.html#a0e16fc1159d498289bcda90fcd7a734c">LibLoader::logger</a>.<a class="code hl_function" href="a00377.html#ae735f16b20f681d29d4e5d28ad248dbe">error</a>(<span class="stringliteral">&quot;请检查您的插件代码，崩溃发生后的任何行为均未定义，MiraiCP将尽可能尝试继续运行&quot;</span>);</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        <a class="code hl_function" href="a00301.html#afbf560680f6b525ee0240f614a0177b6">LibLoader::sendPluginException</a>(std::move(pluginName));</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        <span class="keywordtype">size_t</span> threadIndex = BS::thread_pool::getCurrentThreadIndexView();</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        <span class="keywordflow">if</span> (threadIndex != (std::numeric_limits&lt;size_t&gt;::max)()) {</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>            <span class="comment">// 是线程池线程</span></div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>            <a class="code hl_function" href="a00301.html#a7ee448e1b260709b6a8d73fa41ec5c15">LibLoader::sendThreadReset</a>(threadIndex);</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        }</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        <span class="comment">//</span></div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        TerminateThread(GetCurrentThread(), 1);</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        <span class="keywordflow">return</span> EXCEPTION_CONTINUE_EXECUTION;</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    }</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    EventHandlerPitch() {</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        preHandler = SetUnhandledExceptionFilter(EventHandlerPitch::eventHandler);</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    }</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    ~EventHandlerPitch() {</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        SetUnhandledExceptionFilter(preHandler);</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    }</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <span class="keyword">static</span> EventHandlerPitch pitch;</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    LPTOP_LEVEL_EXCEPTION_FILTER preHandler;</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>};</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>[[maybe_unused]] EventHandlerPitch EventHandlerPitch::pitch = EventHandlerPitch();</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span><span class="preprocessor">#else</span></div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span><span class="preprocessor">#include &quot;<a class="code" href="a00080.html">LoaderLogger.h</a>&quot;</span></div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span><span class="preprocessor">#include &lt;csignal&gt;</span></div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span><span class="preprocessor">#include &lt;thread&gt;</span></div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno"><a class="line" href="a00221.html#a610f6add140f1df3ef983b0d2cf9a745">  105</a></span><span class="keyword">thread_local</span> <span class="keywordtype">bool</span> <a class="code hl_variable" href="a00221.html#a610f6add140f1df3ef983b0d2cf9a745">alreadyInHandler</a> = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span><span class="comment">// 禁止从其他地方构造</span></div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span><span class="keyword">class </span>[[maybe_unused]] SignalHandle {</div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    SignalHandle() <span class="keyword">noexcept</span> {</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        <span class="keyword">auto</span> &amp;act = getAct();</div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>        act.sa_flags = SA_SIGINFO;</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>        sigemptyset(&amp;act.sa_mask);</div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>        act.sa_sigaction = &amp;SignalHandle::sigsegv_handler;</div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>        sigaction(SIGSEGV, &amp;act, &amp;getOact());</div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    }</div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span> </div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    ~SignalHandle() {</div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>        sigaction(SIGSEGV, &amp;getOact(), &amp;getAct());</div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    }</div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span> </div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    <span class="keyword">static</span> <span class="keyword">struct </span>sigaction &amp;getAct() {</div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>        <span class="keyword">static</span> <span class="keyword">struct </span>sigaction act;</div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>        <span class="keywordflow">return</span> act;</div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    }</div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span> </div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    <span class="keyword">static</span> <span class="keyword">struct </span>sigaction &amp;getOact() {</div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>        <span class="keyword">static</span> <span class="keyword">struct </span>sigaction oact;</div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>        <span class="keywordflow">return</span> oact;</div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    }</div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span> </div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>    <span class="keyword">static</span> <span class="keywordtype">void</span> sigsegv_handler(<span class="keywordtype">int</span> a, siginfo_t *si, <span class="keywordtype">void</span> *unused) {</div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="a00221.html#a610f6add140f1df3ef983b0d2cf9a745">alreadyInHandler</a>) {</div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>        }</div>
-<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>        <span class="keyword">auto</span> pluginName = <a class="code hl_function" href="a00397.html#a3665ebb268ead29f2fd30e28c6e09002">LibLoader::PluginListManager::getThreadRunningPluginId</a>();</div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>        <span class="keywordflow">if</span> (pluginName.empty()) {</div>
-<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>            <span class="comment">// test the thread is from jvm</span></div>
-<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>            <span class="keywordtype">char</span> threadName[80];</div>
-<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>            <a class="code hl_function" href="a00053.html#a67462281d09a44cf573abdb30dc1e212">platform_get_thread_name</a>(<a class="code hl_function" href="a00053.html#a355ba908e1bbef8ea09eeed979a16520">platform_thread_self</a>(), threadName, 80);</div>
-<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>            <span class="keywordflow">if</span> (strcmp(threadName, <span class="stringliteral">&quot;libLoader&quot;</span>) == 0) {</div>
-<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>                <a class="code hl_variable" href="a00301.html#a0e16fc1159d498289bcda90fcd7a734c">LibLoader::logger</a>.<a class="code hl_function" href="a00377.html#ae735f16b20f681d29d4e5d28ad248dbe">error</a>(<span class="stringliteral">&quot;libLoader线程遇到致命错误，请向MiraiCP仓库提交您的报错信息以及堆栈信息&quot;</span>);</div>
-<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>                exit(1);</div>
-<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (strcmp(threadName, <span class="stringliteral">&quot;LoaderWorker&quot;</span>) == 0) {</div>
-<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>                <span class="comment">// 非插件导致的工作线程致命错误</span></div>
-<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>                <a class="code hl_variable" href="a00301.html#a0e16fc1159d498289bcda90fcd7a734c">LibLoader::logger</a>.<a class="code hl_function" href="a00377.html#ae735f16b20f681d29d4e5d28ad248dbe">error</a>(<span class="stringliteral">&quot;libLoader工作线程遇到致命错误，请向MiraiCP仓库提交您的报错信息以及堆栈信息&quot;</span>);</div>
-<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>                exit(1);</div>
-<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>            }</div>
-<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span> </div>
-<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>            std::string maybeId = threadName;</div>
-<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>            <span class="comment">// 插件列表中查询是否有这个线程名的插件，如果没有则放弃处理，有则卸载</span></div>
-<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>            <span class="keywordflow">if</span> (<a class="code hl_function" href="a00397.html#a9f7e8ee497876f7543037939abbe397b">LibLoader::PluginListManager::pluginNameLookup</a>(maybeId)) {</div>
-<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>                pluginName = std::move(maybeId);</div>
-<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>                getOact().sa_sigaction(a, si, unused);</div>
-<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>                <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>            }</div>
-<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>        }</div>
-<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>        <span class="comment">// 插件导致的崩溃，卸载该插件</span></div>
-<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>        <a class="code hl_variable" href="a00221.html#a610f6add140f1df3ef983b0d2cf9a745">alreadyInHandler</a> = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>        <a class="code hl_define" href="a00047.html#aa05206ce52ebadc805b64d69749a63d3">MIRAICP_DEFER</a>(<a class="code hl_variable" href="a00221.html#a610f6add140f1df3ef983b0d2cf9a745">alreadyInHandler</a> = <span class="keyword">false</span>;);</div>
-<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>        <a class="code hl_variable" href="a00301.html#a0e16fc1159d498289bcda90fcd7a734c">LibLoader::logger</a>.<a class="code hl_function" href="a00377.html#ae735f16b20f681d29d4e5d28ad248dbe">error</a>(<span class="stringliteral">&quot;插件&quot;</span> + pluginName + <span class="stringliteral">&quot;遇到致命错误! 插件运行终止，信号： SIG&quot;</span> + sigabbrev_np(si-&gt;si_signo));</div>
-<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>        <a class="code hl_variable" href="a00301.html#a0e16fc1159d498289bcda90fcd7a734c">LibLoader::logger</a>.<a class="code hl_function" href="a00377.html#ae735f16b20f681d29d4e5d28ad248dbe">error</a>(<span class="stringliteral">&quot;请检查您的插件代码，崩溃发生后的任何行为均未定义，MiraiCP将尽可能尝试继续运行&quot;</span>);</div>
-<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>        <a class="code hl_function" href="a00301.html#afbf560680f6b525ee0240f614a0177b6">LibLoader::sendPluginException</a>(std::move(pluginName));</div>
-<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span> </div>
-<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>        <span class="keywordtype">size_t</span> threadIndex = BS::thread_pool::getCurrentThreadIndexView();</div>
-<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>        <span class="keywordflow">if</span> (threadIndex != (std::numeric_limits&lt;size_t&gt;::max)()) {</div>
-<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>            <span class="comment">// 是线程池线程</span></div>
-<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>            <a class="code hl_function" href="a00301.html#a7ee448e1b260709b6a8d73fa41ec5c15">LibLoader::sendThreadReset</a>(threadIndex);</div>
-<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>        }</div>
-<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span> </div>
-<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>        pthread_cancel(pthread_self());</div>
-<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>    }</div>
-<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span> </div>
-<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>    <span class="keyword">static</span> SignalHandle Handler;</div>
-<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>};</div>
-<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span> </div>
-<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>SignalHandle SignalHandle::Handler;</div>
-<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span> </div>
-<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="preprocessor">#ifndef LOADER_NATIVE</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="a00304.html#aa5f8d0ecd9dd392b491070aace643ae3">   63</a></span>    std::string <a class="code hl_function" href="a00304.html#aa5f8d0ecd9dd392b491070aace643ae3">jstring2str</a>(jstring jStr) {</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        <span class="keywordflow">if</span> (!jStr) {</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        }</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        <span class="keyword">const</span> jchar *jCharPointer = <a class="code hl_function" href="a00309.html#a076c5f4ff8083c7cfc6523498d0ba30f">JNIEnvs::getEnv</a>()-&gt;GetStringChars(jStr, <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        <a class="code hl_define" href="a00047.html#aa05206ce52ebadc805b64d69749a63d3">MIRAICP_DEFER</a>(<a class="code hl_function" href="a00309.html#a076c5f4ff8083c7cfc6523498d0ba30f">JNIEnvs::getEnv</a>()-&gt;ReleaseStringChars(jStr, jCharPointer););</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        std::u16string s = <span class="keyword">reinterpret_cast&lt;</span><span class="keyword">const </span>char16_t *<span class="keyword">&gt;</span>(jCharPointer);</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        <span class="keywordflow">if</span> (s.length() == 0) {</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        }</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        std::string x;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        utf8::utf16to8(s.begin(), s.end(), std::back_inserter(x));</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        <span class="keywordflow">return</span> x;</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    }</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="a00304.html#a6a6fcd695791253a9b3a053d313b2b93">   80</a></span>    jstring <a class="code hl_function" href="a00304.html#a6a6fcd695791253a9b3a053d313b2b93">str2jstring</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *cstr) {</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        <span class="keywordflow">if</span> (!cstr) {</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>            <a class="code hl_variable" href="a00304.html#a0e16fc1159d498289bcda90fcd7a734c">logger</a>.<a class="code hl_function" href="a00381.html#af50d0545fe7d683e54fcd03453a423e3">warning</a>(<span class="stringliteral">&quot;警告:str2jstring传入空字符串&quot;</span>);</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        }</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        std::string str(cstr);</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        std::vector&lt;unsigned short&gt; utf16line;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        utf8::utf8to16(str.begin(), str.end(), std::back_inserter(utf16line));</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        std::basic_string&lt;jchar&gt; ans;</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        ans.reserve(utf16line.size());</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span> c : utf16line) {</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>            ans.push_back(c);</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        }</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="a00309.html#a076c5f4ff8083c7cfc6523498d0ba30f">JNIEnvs::getEnv</a>()-&gt;NewString(ans.c_str(), (jsize) ans.size());</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    }</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>} <span class="comment">// namespace LibLoader</span></div>
 <div class="ttc" id="aa00038_html"><div class="ttname"><a href="a00038.html">commonTools.h</a></div></div>
 <div class="ttc" id="aa00047_html"><div class="ttname"><a href="a00047.html">MiraiCPMacros.h</a></div></div>
 <div class="ttc" id="aa00047_html_aa05206ce52ebadc805b64d69749a63d3"><div class="ttname"><a href="a00047.html#aa05206ce52ebadc805b64d69749a63d3">MIRAICP_DEFER</a></div><div class="ttdeci">#define MIRAICP_DEFER(code)</div><div class="ttdef"><b>Definition:</b> <a href="a00047_source.html#l00146">MiraiCPMacros.h:146</a></div></div>
-<div class="ttc" id="aa00053_html"><div class="ttname"><a href="a00053.html">PlatformThreading.h</a></div></div>
-<div class="ttc" id="aa00053_html_a355ba908e1bbef8ea09eeed979a16520"><div class="ttname"><a href="a00053.html#a355ba908e1bbef8ea09eeed979a16520">platform_thread_self</a></div><div class="ttdeci">auto platform_thread_self()</div><div class="ttdef"><b>Definition:</b> <a href="a00053_source.html#l00061">PlatformThreading.h:61</a></div></div>
-<div class="ttc" id="aa00053_html_a67462281d09a44cf573abdb30dc1e212"><div class="ttname"><a href="a00053.html#a67462281d09a44cf573abdb30dc1e212">platform_get_thread_name</a></div><div class="ttdeci">void platform_get_thread_name(decltype(platform_thread_self()) id, char *buf, size_t bufsize)</div><div class="ttdef"><b>Definition:</b> <a href="a00053_source.html#l00085">PlatformThreading.h:85</a></div></div>
+<div class="ttc" id="aa00068_html"><div class="ttname"><a href="a00068.html">JNIEnvs.h</a></div></div>
 <div class="ttc" id="aa00080_html"><div class="ttname"><a href="a00080.html">LoaderLogger.h</a></div></div>
-<div class="ttc" id="aa00089_html"><div class="ttname"><a href="a00089.html">LoaderTaskQueue.h</a></div></div>
-<div class="ttc" id="aa00101_html"><div class="ttname"><a href="a00101.html">PluginListManager.h</a></div></div>
-<div class="ttc" id="aa00221_html_a610f6add140f1df3ef983b0d2cf9a745"><div class="ttname"><a href="a00221.html#a610f6add140f1df3ef983b0d2cf9a745">alreadyInHandler</a></div><div class="ttdeci">thread_local bool alreadyInHandler</div><div class="ttdef"><b>Definition:</b> <a href="a00221_source.html#l00105">PlatformException.cpp:105</a></div></div>
-<div class="ttc" id="aa00301_html_a0e16fc1159d498289bcda90fcd7a734c"><div class="ttname"><a href="a00301.html#a0e16fc1159d498289bcda90fcd7a734c">LibLoader::logger</a></div><div class="ttdeci">MIRAICP_EXPORT LoaderLogger logger</div><div class="ttdef"><b>Definition:</b> <a href="a00212_source.html#l00035">LoaderLogger.cpp:35</a></div></div>
-<div class="ttc" id="aa00301_html_a7ee448e1b260709b6a8d73fa41ec5c15"><div class="ttname"><a href="a00301.html#a7ee448e1b260709b6a8d73fa41ec5c15">LibLoader::sendThreadReset</a></div><div class="ttdeci">void sendThreadReset(size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="a00089_source.html#l00054">LoaderTaskQueue.h:54</a></div></div>
-<div class="ttc" id="aa00301_html_afbf560680f6b525ee0240f614a0177b6"><div class="ttname"><a href="a00301.html#afbf560680f6b525ee0240f614a0177b6">LibLoader::sendPluginException</a></div><div class="ttdeci">void sendPluginException(std::string plugin_id)</div><div class="ttdef"><b>Definition:</b> <a href="a00089_source.html#l00048">LoaderTaskQueue.h:48</a></div></div>
-<div class="ttc" id="aa00377_html_ae735f16b20f681d29d4e5d28ad248dbe"><div class="ttname"><a href="a00377.html#ae735f16b20f681d29d4e5d28ad248dbe">LibLoader::LoaderLogger::error</a></div><div class="ttdeci">void error(const string &amp;) const</div><div class="ttdef"><b>Definition:</b> <a href="a00212_source.html#l00051">LoaderLogger.cpp:51</a></div></div>
-<div class="ttc" id="aa00397_html_a3665ebb268ead29f2fd30e28c6e09002"><div class="ttname"><a href="a00397.html#a3665ebb268ead29f2fd30e28c6e09002">LibLoader::PluginListManager::getThreadRunningPluginId</a></div><div class="ttdeci">static std::string getThreadRunningPluginId()</div><div class="ttdef"><b>Definition:</b> <a href="a00101_source.html#l00088">PluginListManager.h:88</a></div></div>
-<div class="ttc" id="aa00397_html_a9f7e8ee497876f7543037939abbe397b"><div class="ttname"><a href="a00397.html#a9f7e8ee497876f7543037939abbe397b">LibLoader::PluginListManager::pluginNameLookup</a></div><div class="ttdeci">static bool pluginNameLookup(const std::string &amp;_id)</div><div class="ttdef"><b>Definition:</b> <a href="a00227_source.html#l00288">PluginListManager.cpp:288</a></div></div>
+<div class="ttc" id="aa00092_html"><div class="ttname"><a href="a00092.html">loaderTools.h</a></div></div>
+<div class="ttc" id="aa00299_html_ab701e3ac61a85b337ec5c1abaad6742d"><div class="ttname"><a href="a00299.html#ab701e3ac61a85b337ec5c1abaad6742d">json</a></div><div class="ttdeci">nlohmann::json json</div><div class="ttdef"><b>Definition:</b> <a href="a00299_source.html#l00031">utils.cpp:31</a></div></div>
+<div class="ttc" id="aa00304_html"><div class="ttname"><a href="a00304.html">LibLoader</a></div><div class="ttdef"><b>Definition:</b> <a href="a00041_source.html#l00028">commonTypes.h:28</a></div></div>
+<div class="ttc" id="aa00304_html_a0e16fc1159d498289bcda90fcd7a734c"><div class="ttname"><a href="a00304.html#a0e16fc1159d498289bcda90fcd7a734c">LibLoader::logger</a></div><div class="ttdeci">MIRAICP_EXPORT LoaderLogger logger</div><div class="ttdef"><b>Definition:</b> <a href="a00215_source.html#l00035">LoaderLogger.cpp:35</a></div></div>
+<div class="ttc" id="aa00304_html_a25dcf37316806dd07a4e960c5eb537a4"><div class="ttname"><a href="a00304.html#a25dcf37316806dd07a4e960c5eb537a4">LibLoader::PluginAuthority</a></div><div class="ttdeci">PluginAuthority</div><div class="ttdef"><b>Definition:</b> <a href="a00098_source.html#l00026">PluginData.h:26</a></div></div>
+<div class="ttc" id="aa00304_html_a25dcf37316806dd07a4e960c5eb537a4a37a69db536daf1ceabf89dc14346092d"><div class="ttname"><a href="a00304.html#a25dcf37316806dd07a4e960c5eb537a4a37a69db536daf1ceabf89dc14346092d">LibLoader::PLUGIN_AUTHORITY_NORMAL</a></div><div class="ttdeci">@ PLUGIN_AUTHORITY_NORMAL</div><div class="ttdef"><b>Definition:</b> <a href="a00098_source.html#l00027">PluginData.h:27</a></div></div>
+<div class="ttc" id="aa00304_html_a25dcf37316806dd07a4e960c5eb537a4a94365761d42a1db02c02bce01be06220"><div class="ttname"><a href="a00304.html#a25dcf37316806dd07a4e960c5eb537a4a94365761d42a1db02c02bce01be06220">LibLoader::PLUGIN_AUTHORITY_ADMIN</a></div><div class="ttdeci">@ PLUGIN_AUTHORITY_ADMIN</div><div class="ttdef"><b>Definition:</b> <a href="a00098_source.html#l00028">PluginData.h:28</a></div></div>
+<div class="ttc" id="aa00304_html_a6a6fcd695791253a9b3a053d313b2b93"><div class="ttname"><a href="a00304.html#a6a6fcd695791253a9b3a053d313b2b93">LibLoader::str2jstring</a></div><div class="ttdeci">jstring str2jstring(const char *cstr)</div><div class="ttdef"><b>Definition:</b> <a href="a00221_source.html#l00080">loaderTools.cpp:80</a></div></div>
+<div class="ttc" id="aa00304_html_aa5f8d0ecd9dd392b491070aace643ae3"><div class="ttname"><a href="a00304.html#aa5f8d0ecd9dd392b491070aace643ae3">LibLoader::jstring2str</a></div><div class="ttdeci">std::string jstring2str(jstring jStr)</div><div class="ttdef"><b>Definition:</b> <a href="a00221_source.html#l00063">loaderTools.cpp:63</a></div></div>
+<div class="ttc" id="aa00304_html_ac2437e37ffa99895ce42d4dd19efbbcd"><div class="ttname"><a href="a00304.html#ac2437e37ffa99895ce42d4dd19efbbcd">LibLoader::collect_plugins</a></div><div class="ttdeci">std::pair&lt; std::vector&lt; std::string &gt;, std::vector&lt; PluginAuthority &gt; &gt; collect_plugins(const std::string &amp;cfgPath, nlohmann::json j)</div><div class="ttdef"><b>Definition:</b> <a href="a00221_source.html#l00029">loaderTools.cpp:29</a></div></div>
+<div class="ttc" id="aa00309_html_a076c5f4ff8083c7cfc6523498d0ba30f"><div class="ttname"><a href="a00309.html#a076c5f4ff8083c7cfc6523498d0ba30f">LibLoader::JNIEnvs::getEnv</a></div><div class="ttdeci">JNIEnv * getEnv()</div><div class="ttdef"><b>Definition:</b> <a href="a00200_source.html#l00039">JNIEnvs.cpp:39</a></div></div>
+<div class="ttc" id="aa00381_html_ae735f16b20f681d29d4e5d28ad248dbe"><div class="ttname"><a href="a00381.html#ae735f16b20f681d29d4e5d28ad248dbe">LibLoader::LoaderLogger::error</a></div><div class="ttdeci">void error(const string &amp;) const</div><div class="ttdef"><b>Definition:</b> <a href="a00215_source.html#l00051">LoaderLogger.cpp:51</a></div></div>
+<div class="ttc" id="aa00381_html_af50d0545fe7d683e54fcd03453a423e3"><div class="ttname"><a href="a00381.html#af50d0545fe7d683e54fcd03453a423e3">LibLoader::LoaderLogger::warning</a></div><div class="ttdeci">void warning(const string &amp;) const</div><div class="ttdef"><b>Definition:</b> <a href="a00215_source.html#l00047">LoaderLogger.cpp:47</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_23c80554d3059e776f1fa3b42eea10c0.html">libloader</a></li><li class="navelem"><a class="el" href="a00221.html">PlatformException.cpp</a></li>
-    <li class="footer">生成于 2023年 一月 22日 星期日 13:18:23 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_23c80554d3059e776f1fa3b42eea10c0.html">libloader</a></li><li class="navelem"><a class="el" href="a00221.html">loaderTools.cpp</a></li>
+    <li class="footer">生成于 2023年 一月 27日 星期五 00:14:10 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
     </body>

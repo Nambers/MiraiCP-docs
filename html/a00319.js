@@ -1,6 +1,6 @@
 var a00319 =
 [
-    [ "idpair", "a00813.html", "a00813" ],
+    [ "idpair", "a00801.html", "a00801" ],
     [ "escapeFromMiraiCode", "a00319.html#ae7bf212fddf60af59042677c3a7753a5", null ],
     [ "escapeToMiraiCode", "a00319.html#a01f4fe41f8bef55b95953750f5cfb0c2", null ],
     [ "icompareChar", "a00319.html#a795aadb1af1cd4b85e9b48b5bb5b246d", null ],

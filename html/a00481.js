@@ -1,9 +1,15 @@
 var a00481 =
 [
-    [ "MemberLeaveEvent", "a00481.html#a8f6ff9cbf45de4c407c467dbe37703e0", null ],
-    [ "get_event_type", "a00481.html#a1af0fe4ad2efd5f078d1203e37080ba8", null ],
-    [ "group", "a00481.html#ab693afc3bdbfddc1ae88caf9ee052d54", null ],
-    [ "member", "a00481.html#ac9bc51af54f0412f68948c648ccea5b4", null ],
-    [ "operater", "a00481.html#a3eceb70ac1c7076efca107137be9911b", null ],
-    [ "type", "a00481.html#ad28ac4243630eab3bf7d65a737cac9ca", null ]
+    [ "joinType", "a00481.html#a1d73fdd5e84653d078b859b37dd1bcc8", [
+      [ "error", "a00481.html#a1d73fdd5e84653d078b859b37dd1bcc8ac7223d287b6643e82449fdfc84a78b17", null ],
+      [ "invited", "a00481.html#a1d73fdd5e84653d078b859b37dd1bcc8aa328607b0546483fb4503bf453508821", null ],
+      [ "applied", "a00481.html#a1d73fdd5e84653d078b859b37dd1bcc8a24c75b1f74122bc5b2b618daa89b14c9", null ],
+      [ "rehab", "a00481.html#a1d73fdd5e84653d078b859b37dd1bcc8a0f0421157cba536506b325cefe9fac90", null ]
+    ] ],
+    [ "MemberJoinEvent", "a00481.html#a9d849d293475e646a0a443ec5052e55d", null ],
+    [ "get_event_type", "a00481.html#a314da8d93a0056d08d6fb8b87929584d", null ],
+    [ "group", "a00481.html#a1f879c48cc7b54fa387853b5330b0caf", null ],
+    [ "inviter", "a00481.html#ab23dddf1df4fa7d572f964fa3b3b6163", null ],
+    [ "member", "a00481.html#aa1a42b944df9f40fc96629a1c5687f01", null ],
+    [ "type", "a00481.html#aaef692838d233a5ddcf8d54e1b02eb40", null ]
 ];

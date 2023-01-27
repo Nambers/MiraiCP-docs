@@ -1,11 +1,15 @@
 var a00625 =
 [
-    [ "ForwardedNode", "a00625.html#acd0109a76b19e5643fc518e34f971747", null ],
-    [ "ForwardedNode", "a00625.html#a061475e039e06649ee0e36bdba3786ac", null ],
-    [ "isForwarded", "a00625.html#ab7c98ea30d551fc60f09289338b100ea", null ],
-    [ "id", "a00625.html#aaaa85af6ea1bea84767d5352fdc2c907", null ],
-    [ "isForwardedMessage", "a00625.html#a89e1eab9756347a42df11550365035b5", null ],
-    [ "message", "a00625.html#acb5969070d29271a128fc95d5b503fc0", null ],
-    [ "name", "a00625.html#a7c1ccf827b401b609cfc8481909019e7", null ],
-    [ "time", "a00625.html#ac5f4d270eb51284f2f25051aaf1545f7", null ]
+    [ "string", "a00625.html#a4b8537609144c742e4a4f26af6143fd8", null ],
+    [ "ForwardedMessageDisplayStrategy", "a00625.html#a8ed5a36a61b38da9ee2dd632310085af", null ],
+    [ "ForwardedMessageDisplayStrategy", "a00625.html#add7199a14b55773df4ef523afb0cff46", null ],
+    [ "defaultStrategy", "a00625.html#ae41f2b998365484dba1ff3f32563dfbb", null ],
+    [ "fromJson", "a00625.html#ac7a83085f9b152d720a0725b5e770ff2", null ],
+    [ "operator==", "a00625.html#a98402ca0f5eada71701f5747f4ff5601", null ],
+    [ "toJson", "a00625.html#a644621957e3c4c7eabe806003318bfe7", null ],
+    [ "brief", "a00625.html#a332c563f6760ce0f82f736416740bf75", null ],
+    [ "preview", "a00625.html#a7bc79f77b1ffff231a263faf4633949b", null ],
+    [ "source", "a00625.html#aaacb83b879ff1ab702fdf56b2d0fe9d9", null ],
+    [ "summary", "a00625.html#aef4ccc8e214cc12ac1ca842c065762b8", null ],
+    [ "title", "a00625.html#a8ebae08a0a078281d1f4400e84040573", null ]
 ];

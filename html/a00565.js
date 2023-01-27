@@ -1,6 +1,5 @@
 var a00565 =
 [
-    [ "BotException", "a00565.html#ac250396fe99586a5cf4edd42f708ba5f", null ],
-    [ "BotException", "a00565.html#a153b578a5e2dba1a34b660c3cfff1f36", null ],
-    [ "exceptionType", "a00565.html#ac31df28b76fc89b362e1b94c4c866b43", null ]
+    [ "APIException", "a00565.html#a5ab35b388404f70eeccfe3474bdb9c90", null ],
+    [ "exceptionType", "a00565.html#aa95831ad20b7019b10241a25f8f41dd1", null ]
 ];

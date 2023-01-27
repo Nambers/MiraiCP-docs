@@ -1,9 +1,11 @@
 var a00441 =
 [
-    [ "BuiltInContact", "a00445.html", "a00445" ],
-    [ "BaseEventData", "a00441.html#add7fec6ff79d938ab121f57d10ffa1a7", null ],
-    [ "botId", "a00441.html#a0ef2979d2f7e44318fcc251026a7b109", null ],
-    [ "eventData", "a00441.html#abd44451921253c4eb235eff3fa3fb857", null ],
-    [ "object", "a00441.html#a9d1c4b300f7c6602c21aff985e9f1757", null ],
-    [ "subject", "a00441.html#a7afa1ecf74f25007146b46f4381c736d", null ]
+    [ "CPPPlugin", "a00441.html#aeeaafebf5e61e1da8a2c5e3e07dac64b", null ],
+    [ "~CPPPlugin", "a00441.html#af7c569aa874ccbac301c805755dcda0c", null ],
+    [ "onDisable", "a00441.html#a3ecc2c479d1ca6785e7cdcb0738c1597", null ],
+    [ "onEnable", "a00441.html#ad3d1188d089ab0fc945475f988c64fa7", null ],
+    [ "ShouldNotUse", "a00441.html#a30d82964da1ce75eb9f269c676dafc33", null ],
+    [ "config", "a00441.html#a20b8d27c47456805d38d4c366da96ac0", null ],
+    [ "plugin", "a00441.html#a2695d2cca487ad336a8b6f96e156022b", null ],
+    [ "pluginLogger", "a00441.html#ac74f70ce15a0495ac7006ad725a51279", null ]
 ];

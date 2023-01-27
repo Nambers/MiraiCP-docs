@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiraiCP: MiraiCP::ThreadTask::internal 命名空间参考</title>
+<title>MiraiCP: MiraiCP::LoaderApi 命名空间参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -35,7 +35,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MiraiCP
-   &#160;<span id="projectnumber">v2.13.1</span>
+   &#160;<span id="projectnumber">v2.13.2</span>
    </div>
    <div id="projectbrief">MiraiCP api document</div>
   </td>
@@ -94,114 +94,49 @@ $(document).ready(function(){initNavTree('a00314.html',''); initResizable(); });
 
 <div class="header">
   <div class="summary">
-<a href="#typedef-members">类型定义</a> &#124;
 <a href="#func-members">函数</a>  </div>
-  <div class="headertitle"><div class="title">MiraiCP::ThreadTask::internal 命名空间参考</div></div>
+  <div class="headertitle"><div class="title">MiraiCP::LoaderApi 命名空间参考</div></div>
 </div><!--header-->
 <div class="contents">
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
-类型定义</h2></td></tr>
-<tr class="memitem:a203c69b79e476ef8c6e13bfb9bba4ff7"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00314.html#a203c69b79e476ef8c6e13bfb9bba4ff7">functionType</a> = std::function&lt; void()&gt;</td></tr>
-<tr class="separator:a203c69b79e476ef8c6e13bfb9bba4ff7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae4923f6c201a288de0e0224e8a8d35a1"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00314.html#ae4923f6c201a288de0e0224e8a8d35a1">functionPointerType</a> = std::shared_ptr&lt; <a class="el" href="a00314.html#a203c69b79e476ef8c6e13bfb9bba4ff7">functionType</a> &gt;</td></tr>
-<tr class="separator:ae4923f6c201a288de0e0224e8a8d35a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2cc1dc71776e7644c62cfc034e414654"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00314.html#a2cc1dc71776e7644c62cfc034e414654">storerType</a> = std::unordered_map&lt; size_t, <a class="el" href="a00314.html#ae4923f6c201a288de0e0224e8a8d35a1">functionPointerType</a> &gt;</td></tr>
-<tr class="separator:a2cc1dc71776e7644c62cfc034e414654"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aef1f03dc407748c08395bd81bcb66fba"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00314.html#aef1f03dc407748c08395bd81bcb66fba">storerIteratorType</a> = storerType::iterator</td></tr>
-<tr class="separator:aef1f03dc407748c08395bd81bcb66fba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 函数</h2></td></tr>
-<tr class="memitem:a954499687c36452be430af25a7e94750"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00314.html#a954499687c36452be430af25a7e94750">task_interface</a> (size_t id)</td></tr>
-<tr class="separator:a954499687c36452be430af25a7e94750"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a10f626326a5bace0c7b7c9e11db994f0"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00314.html#a10f626326a5bace0c7b7c9e11db994f0">get_auto_incr_id</a> ()</td></tr>
-<tr class="separator:a10f626326a5bace0c7b7c9e11db994f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab890e46143438cf7d678f6e4f2dcb9d0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00314.html#ab890e46143438cf7d678f6e4f2dcb9d0">remove_task</a> (size_t id)</td></tr>
-<tr class="separator:ab890e46143438cf7d678f6e4f2dcb9d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adfbaea0b8eb4cbbd267ff9a113a6e1a3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00314.html#adfbaea0b8eb4cbbd267ff9a113a6e1a3">push_task</a> (size_t id, std::shared_ptr&lt; std::function&lt; void()&gt; &gt; <a class="el" href="a00035.html#a9a37a193bc61a8127790f891efc1af05">func</a>)</td></tr>
-<tr class="separator:adfbaea0b8eb4cbbd267ff9a113a6e1a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3830d60f883d192d8d6dc65ae537c5c1"><td class="memItemLeft" align="right" valign="top">auto &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00314.html#a3830d60f883d192d8d6dc65ae537c5c1">get_function_storer</a> ()</td></tr>
-<tr class="separator:a3830d60f883d192d8d6dc65ae537c5c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab64116c47ac8841acfd734f7069eaa10"><td class="memItemLeft" align="right" valign="top">auto &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00314.html#ab64116c47ac8841acfd734f7069eaa10">get_mutex</a> ()</td></tr>
-<tr class="separator:ab64116c47ac8841acfd734f7069eaa10"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac0e1bc3b94e5ebafbad6fde1a0eb55fc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00314.html#ac0e1bc3b94e5ebafbad6fde1a0eb55fc">push_task</a> (size_t id, <a class="el" href="a00314.html#ae4923f6c201a288de0e0224e8a8d35a1">functionPointerType</a> <a class="el" href="a00035.html#a9a37a193bc61a8127790f891efc1af05">func</a>)</td></tr>
-<tr class="separator:ac0e1bc3b94e5ebafbad6fde1a0eb55fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a733d3f3f90c6925034b10116fb6510e6"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00314.html#a733d3f3f90c6925034b10116fb6510e6">showAllPluginId</a> ()</td></tr>
+<tr class="memdesc:a733d3f3f90c6925034b10116fb6510e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">返回所有plugin的id  <a href="a00314.html#a733d3f3f90c6925034b10116fb6510e6">更多...</a><br /></td></tr>
+<tr class="separator:a733d3f3f90c6925034b10116fb6510e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acab9ccd86eed6b2d17836f5f2899b2a7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00314.html#acab9ccd86eed6b2d17836f5f2899b2a7">enablePluginById</a> (const std::string &amp;id)</td></tr>
+<tr class="memdesc:acab9ccd86eed6b2d17836f5f2899b2a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">启用一个已经加载的插件，仅限有管理权限的插件使用，否则没有任何效果  <a href="a00314.html#acab9ccd86eed6b2d17836f5f2899b2a7">更多...</a><br /></td></tr>
+<tr class="separator:acab9ccd86eed6b2d17836f5f2899b2a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c00ba2c6c7b08c0ff508ed5e0cd518d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00314.html#a5c00ba2c6c7b08c0ff508ed5e0cd518d">disablePluginById</a> (const std::string &amp;)</td></tr>
+<tr class="memdesc:a5c00ba2c6c7b08c0ff508ed5e0cd518d"><td class="mdescLeft">&#160;</td><td class="mdescRight">禁用一个已经启用的插件，仅限有管理权限的插件使用，否则没有任何效果  <a href="a00314.html#a5c00ba2c6c7b08c0ff508ed5e0cd518d">更多...</a><br /></td></tr>
+<tr class="separator:a5c00ba2c6c7b08c0ff508ed5e0cd518d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56e5dba3d6eb86e12b5ae7037c7d3f9d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00314.html#a56e5dba3d6eb86e12b5ae7037c7d3f9d">enableAllPlugins</a> ()</td></tr>
+<tr class="memdesc:a56e5dba3d6eb86e12b5ae7037c7d3f9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">启用全部已加载的插件，仅限有管理权限的插件使用，否则没有任何效果  <a href="a00314.html#a56e5dba3d6eb86e12b5ae7037c7d3f9d">更多...</a><br /></td></tr>
+<tr class="separator:a56e5dba3d6eb86e12b5ae7037c7d3f9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa19d655cf9e65dd8d3bba348fa438c2d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00314.html#aa19d655cf9e65dd8d3bba348fa438c2d">disableAllPlugins</a> ()</td></tr>
+<tr class="memdesc:aa19d655cf9e65dd8d3bba348fa438c2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">禁用全部已启用的插件，仅限有管理权限的插件使用，否则没有任何效果  <a href="a00314.html#aa19d655cf9e65dd8d3bba348fa438c2d">更多...</a><br /></td></tr>
+<tr class="separator:aa19d655cf9e65dd8d3bba348fa438c2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f62240a571dd6678c453ae47f79bed8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00314.html#a5f62240a571dd6678c453ae47f79bed8">loadNewPlugin</a> (const std::string &amp;path, bool enableNow)</td></tr>
+<tr class="memdesc:a5f62240a571dd6678c453ae47f79bed8"><td class="mdescLeft">&#160;</td><td class="mdescRight">加载新的插件，仅限有管理权限的插件使用，否则没有任何效果  <a href="a00314.html#a5f62240a571dd6678c453ae47f79bed8">更多...</a><br /></td></tr>
+<tr class="separator:a5f62240a571dd6678c453ae47f79bed8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae24eb5a6ee67766c25d797ed382d4f08"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00314.html#ae24eb5a6ee67766c25d797ed382d4f08">unloadPluginById</a> (const std::string &amp;id)</td></tr>
+<tr class="memdesc:ae24eb5a6ee67766c25d797ed382d4f08"><td class="mdescLeft">&#160;</td><td class="mdescRight">卸载一个插件，仅限有管理权限的插件使用，否则没有任何效果  <a href="a00314.html#ae24eb5a6ee67766c25d797ed382d4f08">更多...</a><br /></td></tr>
+<tr class="separator:ae24eb5a6ee67766c25d797ed382d4f08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa358aae502cc1dd8e86b25616f6956bf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00314.html#aa358aae502cc1dd8e86b25616f6956bf">reloadPluginById</a> (const std::string &amp;id)</td></tr>
+<tr class="memdesc:aa358aae502cc1dd8e86b25616f6956bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">重载一个插件，仅限有管理权限的插件使用，否则没有任何效果  <a href="a00314.html#aa358aae502cc1dd8e86b25616f6956bf">更多...</a><br /></td></tr>
+<tr class="separator:aa358aae502cc1dd8e86b25616f6956bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaca21c94ae5500bef5b300a6bb9ee937"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00314.html#aaca21c94ae5500bef5b300a6bb9ee937">loggerInterface</a> (const std::string &amp;content, const std::string &amp;name, long long int id, int level)</td></tr>
+<tr class="separator:aaca21c94ae5500bef5b300a6bb9ee937"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">类型定义说明</h2>
-<a id="ae4923f6c201a288de0e0224e8a8d35a1" name="ae4923f6c201a288de0e0224e8a8d35a1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae4923f6c201a288de0e0224e8a8d35a1">&#9670;&nbsp;</a></span>functionPointerType</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="a00314.html#ae4923f6c201a288de0e0224e8a8d35a1">MiraiCP::ThreadTask::internal::functionPointerType</a> = typedef std::shared_ptr&lt;<a class="el" href="a00314.html#a203c69b79e476ef8c6e13bfb9bba4ff7">functionType</a>&gt;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">在文件 <a class="el" href="a00290_source.html">ThreadTask.cpp</a> 第 <a class="el" href="a00290_source.html#l00016">16</a> 行定义.</p>
-
-</div>
-</div>
-<a id="a203c69b79e476ef8c6e13bfb9bba4ff7" name="a203c69b79e476ef8c6e13bfb9bba4ff7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a203c69b79e476ef8c6e13bfb9bba4ff7">&#9670;&nbsp;</a></span>functionType</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="a00314.html#a203c69b79e476ef8c6e13bfb9bba4ff7">MiraiCP::ThreadTask::internal::functionType</a> = typedef std::function&lt;void()&gt;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">在文件 <a class="el" href="a00290_source.html">ThreadTask.cpp</a> 第 <a class="el" href="a00290_source.html#l00015">15</a> 行定义.</p>
-
-</div>
-</div>
-<a id="aef1f03dc407748c08395bd81bcb66fba" name="aef1f03dc407748c08395bd81bcb66fba"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aef1f03dc407748c08395bd81bcb66fba">&#9670;&nbsp;</a></span>storerIteratorType</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="a00314.html#aef1f03dc407748c08395bd81bcb66fba">MiraiCP::ThreadTask::internal::storerIteratorType</a> = typedef storerType::iterator</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">在文件 <a class="el" href="a00290_source.html">ThreadTask.cpp</a> 第 <a class="el" href="a00290_source.html#l00018">18</a> 行定义.</p>
-
-</div>
-</div>
-<a id="a2cc1dc71776e7644c62cfc034e414654" name="a2cc1dc71776e7644c62cfc034e414654"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2cc1dc71776e7644c62cfc034e414654">&#9670;&nbsp;</a></span>storerType</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="a00314.html#a2cc1dc71776e7644c62cfc034e414654">MiraiCP::ThreadTask::internal::storerType</a> = typedef std::unordered_map&lt;size_t, <a class="el" href="a00314.html#ae4923f6c201a288de0e0224e8a8d35a1">functionPointerType</a>&gt;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">在文件 <a class="el" href="a00290_source.html">ThreadTask.cpp</a> 第 <a class="el" href="a00290_source.html#l00017">17</a> 行定义.</p>
-
-</div>
-</div>
 <h2 class="groupheader">函数说明</h2>
-<a id="a10f626326a5bace0c7b7c9e11db994f0" name="a10f626326a5bace0c7b7c9e11db994f0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a10f626326a5bace0c7b7c9e11db994f0">&#9670;&nbsp;</a></span>get_auto_incr_id()</h2>
+<a id="aa19d655cf9e65dd8d3bba348fa438c2d" name="aa19d655cf9e65dd8d3bba348fa438c2d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa19d655cf9e65dd8d3bba348fa438c2d">&#9670;&nbsp;</a></span>disableAllPlugins()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">size_t MiraiCP::ThreadTask::internal::get_auto_incr_id </td>
+          <td class="memname">void MiraiCP::LoaderApi::disableAllPlugins </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -209,175 +144,150 @@ $(document).ready(function(){initNavTree('a00314.html',''); initResizable(); });
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="a00290_source.html">ThreadTask.cpp</a> 第 <a class="el" href="a00290_source.html#l00030">30</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>                              {</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        <span class="keyword">static</span> std::atomic&lt;size_t&gt; <span class="keywordtype">id</span> = 0;</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <span class="keywordflow">return</span> <span class="keywordtype">id</span>++;</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    }</div>
+<p>禁用全部已启用的插件，仅限有管理权限的插件使用，否则没有任何效果 </p>
+
+<p class="definition">在文件 <a class="el" href="a01236_source.html">sdk/loaderApi.cpp</a> 第 <a class="el" href="a01236_source.html#l00143">143</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>                             {</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>        <a class="code hl_function" href="a00306.html#a9fed350b41c9fb052ca061e3866a66a4">LibLoader::LoaderApi::disableAllPlugins</a>();</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>    }</div>
+<div class="ttc" id="aa00306_html_a9fed350b41c9fb052ca061e3866a66a4"><div class="ttname"><a href="a00306.html#a9fed350b41c9fb052ca061e3866a66a4">LibLoader::LoaderApi::disableAllPlugins</a></div><div class="ttdeci">LOADER_API_COUNT void disableAllPlugins()</div><div class="ttdef"><b>Definition:</b> <a href="a01233_source.html#l00100">libloader/loaderApi.cpp:100</a></div></div>
 </div><!-- fragment --><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> 这是这个函数的调用关系图:</div>
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> 函数调用图:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="a00314_a10f626326a5bace0c7b7c9e11db994f0_icgraph.svg" width="344" height="118"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00314_aa19d655cf9e65dd8d3bba348fa438c2d_cgraph.svg" width="559" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
 </div>
-<a id="a3830d60f883d192d8d6dc65ae537c5c1" name="a3830d60f883d192d8d6dc65ae537c5c1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3830d60f883d192d8d6dc65ae537c5c1">&#9670;&nbsp;</a></span>get_function_storer()</h2>
+<a id="a5c00ba2c6c7b08c0ff508ed5e0cd518d" name="a5c00ba2c6c7b08c0ff508ed5e0cd518d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c00ba2c6c7b08c0ff508ed5e0cd518d">&#9670;&nbsp;</a></span>disablePluginById()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">auto &amp; MiraiCP::ThreadTask::internal::get_function_storer </td>
+          <td class="memname">void MiraiCP::LoaderApi::disablePluginById </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="a00290_source.html">ThreadTask.cpp</a> 第 <a class="el" href="a00290_source.html#l00020">20</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>                                       {</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        <span class="keyword">static</span> <a class="code hl_typedef" href="a00314.html#a2cc1dc71776e7644c62cfc034e414654">storerType</a> function_storer;</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        <span class="keywordflow">return</span> function_storer;</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    }</div>
-<div class="ttc" id="aa00314_html_a2cc1dc71776e7644c62cfc034e414654"><div class="ttname"><a href="a00314.html#a2cc1dc71776e7644c62cfc034e414654">MiraiCP::ThreadTask::internal::storerType</a></div><div class="ttdeci">std::unordered_map&lt; size_t, functionPointerType &gt; storerType</div><div class="ttdef"><b>Definition:</b> <a href="a00290_source.html#l00017">ThreadTask.cpp:17</a></div></div>
+<p>禁用一个已经启用的插件，仅限有管理权限的插件使用，否则没有任何效果 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>插件id </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="a01236_source.html">sdk/loaderApi.cpp</a> 第 <a class="el" href="a01236_source.html#l00135">135</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>                                                {</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>        <a class="code hl_function" href="a00306.html#a08a6725cb4a33402962f2b67130e8bac">LibLoader::LoaderApi::disablePluginById</a>(<span class="keywordtype">id</span>);</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    }</div>
+<div class="ttc" id="aa00306_html_a08a6725cb4a33402962f2b67130e8bac"><div class="ttname"><a href="a00306.html#a08a6725cb4a33402962f2b67130e8bac">LibLoader::LoaderApi::disablePluginById</a></div><div class="ttdeci">LOADER_API_COUNT void disablePluginById(const MiraiCPString &amp;)</div><div class="ttdef"><b>Definition:</b> <a href="a01233_source.html#l00088">libloader/loaderApi.cpp:88</a></div></div>
 </div><!-- fragment --><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> 这是这个函数的调用关系图:</div>
+  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> 函数调用图:</div>
 <div id="dynsection-1-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="a00314_a3830d60f883d192d8d6dc65ae537c5c1_icgraph.svg" width="562" height="207"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00314_a5c00ba2c6c7b08c0ff508ed5e0cd518d_cgraph.svg" width="559" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
 </div>
-<a id="ab64116c47ac8841acfd734f7069eaa10" name="ab64116c47ac8841acfd734f7069eaa10"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab64116c47ac8841acfd734f7069eaa10">&#9670;&nbsp;</a></span>get_mutex()</h2>
+<a id="a56e5dba3d6eb86e12b5ae7037c7d3f9d" name="a56e5dba3d6eb86e12b5ae7037c7d3f9d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56e5dba3d6eb86e12b5ae7037c7d3f9d">&#9670;&nbsp;</a></span>enableAllPlugins()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">auto &amp; MiraiCP::ThreadTask::internal::get_mutex </td>
+          <td class="memname">void MiraiCP::LoaderApi::enableAllPlugins </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="a00290_source.html">ThreadTask.cpp</a> 第 <a class="el" href="a00290_source.html#l00025">25</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>                             {</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        <span class="keyword">static</span> std::shared_mutex <a class="code hl_variable" href="a00306.html#a4d9beebf77b42856a2c47963066eb462">mtx</a>;</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="a00306.html#a4d9beebf77b42856a2c47963066eb462">mtx</a>;</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    }</div>
-<div class="ttc" id="aa00306_html_a4d9beebf77b42856a2c47963066eb462"><div class="ttname"><a href="a00306.html#a4d9beebf77b42856a2c47963066eb462">LibLoader::Scheduler::mtx</a></div><div class="ttdeci">static std::mutex mtx</div><div class="ttdef"><b>Definition:</b> <a href="a00230_source.html#l00051">Scheduler.cpp:51</a></div></div>
+<p>启用全部已加载的插件，仅限有管理权限的插件使用，否则没有任何效果 </p>
+
+<p class="definition">在文件 <a class="el" href="a01236_source.html">sdk/loaderApi.cpp</a> 第 <a class="el" href="a01236_source.html#l00139">139</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>                            {</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>        <a class="code hl_function" href="a00306.html#a2a1eb02235baa6f86d8e8176b4364a72">LibLoader::LoaderApi::enableAllPlugins</a>();</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>    }</div>
+<div class="ttc" id="aa00306_html_a2a1eb02235baa6f86d8e8176b4364a72"><div class="ttname"><a href="a00306.html#a2a1eb02235baa6f86d8e8176b4364a72">LibLoader::LoaderApi::enableAllPlugins</a></div><div class="ttdeci">LOADER_API_COUNT void enableAllPlugins()</div><div class="ttdef"><b>Definition:</b> <a href="a01233_source.html#l00094">libloader/loaderApi.cpp:94</a></div></div>
 </div><!-- fragment --><div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-2-trigger" src="closed.png" alt="+"/> 这是这个函数的调用关系图:</div>
+  <img id="dynsection-2-trigger" src="closed.png" alt="+"/> 函数调用图:</div>
 <div id="dynsection-2-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-2-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="a00314_ab64116c47ac8841acfd734f7069eaa10_icgraph.svg" width="554" height="207"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00314_a56e5dba3d6eb86e12b5ae7037c7d3f9d_cgraph.svg" width="559" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
 </div>
-<a id="ac0e1bc3b94e5ebafbad6fde1a0eb55fc" name="ac0e1bc3b94e5ebafbad6fde1a0eb55fc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac0e1bc3b94e5ebafbad6fde1a0eb55fc">&#9670;&nbsp;</a></span>push_task() <span class="overload">[1/2]</span></h2>
+<a id="acab9ccd86eed6b2d17836f5f2899b2a7" name="acab9ccd86eed6b2d17836f5f2899b2a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acab9ccd86eed6b2d17836f5f2899b2a7">&#9670;&nbsp;</a></span>enablePluginById()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void MiraiCP::ThreadTask::internal::push_task </td>
+          <td class="memname">void MiraiCP::LoaderApi::enablePluginById </td>
           <td>(</td>
-          <td class="paramtype">size_t&#160;</td>
-          <td class="paramname"><em>id</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
           <td></td>
-          <td class="paramtype"><a class="el" href="a00314.html#ae4923f6c201a288de0e0224e8a8d35a1">functionPointerType</a>&#160;</td>
-          <td class="paramname"><em>func</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="a00290_source.html">ThreadTask.cpp</a> 第 <a class="el" href="a00290_source.html#l00035">35</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>                                                        {</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        <span class="keywordtype">bool</span> insert;</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        {</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>            std::unique_lock lk(<a class="code hl_function" href="a00314.html#ab64116c47ac8841acfd734f7069eaa10">get_mutex</a>());</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>            insert = <a class="code hl_function" href="a00314.html#a3830d60f883d192d8d6dc65ae537c5c1">get_function_storer</a>().insert({id, std::move(<a class="code hl_function" href="a00035.html#a9a37a193bc61a8127790f891efc1af05">func</a>)}).second;</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        }</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <span class="keywordflow">if</span> (!insert) {</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>            <a class="code hl_variable" href="a00301.html#a0e16fc1159d498289bcda90fcd7a734c">Logger::logger</a>.<a class="code hl_function" href="a00377.html#ae735f16b20f681d29d4e5d28ad248dbe">error</a>(<span class="stringliteral">&quot;Fatal: task id &quot;</span> + std::to_string(<span class="keywordtype">id</span>) + <span class="stringliteral">&quot; is already taken by another task!&quot;</span>);</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        }</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <a class="code hl_function" href="a00303.html#ae86871d4f062f45edee7501e0596cd3d">LibLoader::LoaderApi::pushTaskWithId</a>(<a class="code hl_function" href="a00314.html#a954499687c36452be430af25a7e94750">task_interface</a>, <span class="keywordtype">id</span>);</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    }</div>
-<div class="ttc" id="aa00035_html_a9a37a193bc61a8127790f891efc1af05"><div class="ttname"><a href="a00035.html#a9a37a193bc61a8127790f891efc1af05">func</a></div><div class="ttdeci">void func(int i, bool b)</div><div class="ttdef"><b>Definition:</b> <a href="a00035_source.html#l00030">thread.cpp:30</a></div></div>
-<div class="ttc" id="aa00301_html_a0e16fc1159d498289bcda90fcd7a734c"><div class="ttname"><a href="a00301.html#a0e16fc1159d498289bcda90fcd7a734c">LibLoader::logger</a></div><div class="ttdeci">MIRAICP_EXPORT LoaderLogger logger</div><div class="ttdef"><b>Definition:</b> <a href="a00212_source.html#l00035">LoaderLogger.cpp:35</a></div></div>
-<div class="ttc" id="aa00303_html_ae86871d4f062f45edee7501e0596cd3d"><div class="ttname"><a href="a00303.html#ae86871d4f062f45edee7501e0596cd3d">LibLoader::LoaderApi::pushTaskWithId</a></div><div class="ttdeci">LOADER_API_COUNT void pushTaskWithId(task_func_with_id, size_t)</div><div class="ttdef"><b>Definition:</b> <a href="a01229_source.html#l00074">libloader/loaderApi.cpp:74</a></div></div>
-<div class="ttc" id="aa00314_html_a3830d60f883d192d8d6dc65ae537c5c1"><div class="ttname"><a href="a00314.html#a3830d60f883d192d8d6dc65ae537c5c1">MiraiCP::ThreadTask::internal::get_function_storer</a></div><div class="ttdeci">auto &amp; get_function_storer()</div><div class="ttdef"><b>Definition:</b> <a href="a00290_source.html#l00020">ThreadTask.cpp:20</a></div></div>
-<div class="ttc" id="aa00314_html_a954499687c36452be430af25a7e94750"><div class="ttname"><a href="a00314.html#a954499687c36452be430af25a7e94750">MiraiCP::ThreadTask::internal::task_interface</a></div><div class="ttdeci">void task_interface(size_t id)</div><div class="ttdef"><b>Definition:</b> <a href="a00290_source.html#l00063">ThreadTask.cpp:63</a></div></div>
-<div class="ttc" id="aa00314_html_ab64116c47ac8841acfd734f7069eaa10"><div class="ttname"><a href="a00314.html#ab64116c47ac8841acfd734f7069eaa10">MiraiCP::ThreadTask::internal::get_mutex</a></div><div class="ttdeci">auto &amp; get_mutex()</div><div class="ttdef"><b>Definition:</b> <a href="a00290_source.html#l00025">ThreadTask.cpp:25</a></div></div>
-<div class="ttc" id="aa00377_html_ae735f16b20f681d29d4e5d28ad248dbe"><div class="ttname"><a href="a00377.html#ae735f16b20f681d29d4e5d28ad248dbe">LibLoader::LoaderLogger::error</a></div><div class="ttdeci">void error(const string &amp;) const</div><div class="ttdef"><b>Definition:</b> <a href="a00212_source.html#l00051">LoaderLogger.cpp:51</a></div></div>
+<p>启用一个已经加载的插件，仅限有管理权限的插件使用，否则没有任何效果 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>插件id </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="a01236_source.html">sdk/loaderApi.cpp</a> 第 <a class="el" href="a01236_source.html#l00131">131</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>                                               {</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>        <a class="code hl_function" href="a00306.html#a65331125b91df8d475fd7b74bf1bb8e9">LibLoader::LoaderApi::enablePluginById</a>(<span class="keywordtype">id</span>);</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    }</div>
+<div class="ttc" id="aa00306_html_a65331125b91df8d475fd7b74bf1bb8e9"><div class="ttname"><a href="a00306.html#a65331125b91df8d475fd7b74bf1bb8e9">LibLoader::LoaderApi::enablePluginById</a></div><div class="ttdeci">LOADER_API_COUNT void enablePluginById(const MiraiCPString &amp;)</div><div class="ttdef"><b>Definition:</b> <a href="a01233_source.html#l00082">libloader/loaderApi.cpp:82</a></div></div>
 </div><!-- fragment --><div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-3-trigger" src="closed.png" alt="+"/> 函数调用图:</div>
 <div id="dynsection-3-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-3-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="a00314_ac0e1bc3b94e5ebafbad6fde1a0eb55fc_cgraph.svg" width="800" height="378"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00314_acab9ccd86eed6b2d17836f5f2899b2a7_cgraph.svg" width="559" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
 </div>
-<a id="adfbaea0b8eb4cbbd267ff9a113a6e1a3" name="adfbaea0b8eb4cbbd267ff9a113a6e1a3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adfbaea0b8eb4cbbd267ff9a113a6e1a3">&#9670;&nbsp;</a></span>push_task() <span class="overload">[2/2]</span></h2>
+<a id="a5f62240a571dd6678c453ae47f79bed8" name="a5f62240a571dd6678c453ae47f79bed8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f62240a571dd6678c453ae47f79bed8">&#9670;&nbsp;</a></span>loadNewPlugin()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void MiraiCP::ThreadTask::internal::push_task </td>
+          <td class="memname">void MiraiCP::LoaderApi::loadNewPlugin </td>
           <td>(</td>
-          <td class="paramtype">size_t&#160;</td>
-          <td class="paramname"><em>id</em>, </td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::shared_ptr&lt; std::function&lt; void()&gt; &gt;&#160;</td>
-          <td class="paramname"><em>func</em>&#160;</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>enableNow</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -386,112 +296,193 @@ $(document).ready(function(){initNavTree('a00314.html',''); initResizable(); });
         </tr>
       </table>
 </div><div class="memdoc">
-<div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-4-trigger" src="closed.png" alt="+"/> 这是这个函数的调用关系图:</div>
+
+<p>加载新的插件，仅限有管理权限的插件使用，否则没有任何效果 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>插件路径 </td></tr>
+    <tr><td class="paramname">enableNow</td><td>是否立即启用 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="a01236_source.html">sdk/loaderApi.cpp</a> 第 <a class="el" href="a01236_source.html#l00147">147</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>                                                              {</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>        <a class="code hl_function" href="a00306.html#aff28b2ad21b60cabc3c735a4b9562df9">LibLoader::LoaderApi::loadNewPlugin</a>(path, enableNow);</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>    }</div>
+<div class="ttc" id="aa00306_html_aff28b2ad21b60cabc3c735a4b9562df9"><div class="ttname"><a href="a00306.html#aff28b2ad21b60cabc3c735a4b9562df9">LibLoader::LoaderApi::loadNewPlugin</a></div><div class="ttdeci">LOADER_API_COUNT void loadNewPlugin(const MiraiCPString &amp;, bool)</div><div class="ttdef"><b>Definition:</b> <a href="a01233_source.html#l00106">libloader/loaderApi.cpp:106</a></div></div>
+</div><!-- fragment --><div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-4-trigger" src="closed.png" alt="+"/> 函数调用图:</div>
 <div id="dynsection-4-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-4-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="a00314_adfbaea0b8eb4cbbd267ff9a113a6e1a3_icgraph.svg" width="344" height="118"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00314_a5f62240a571dd6678c453ae47f79bed8_cgraph.svg" width="559" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
 </div>
-<a id="ab890e46143438cf7d678f6e4f2dcb9d0" name="ab890e46143438cf7d678f6e4f2dcb9d0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab890e46143438cf7d678f6e4f2dcb9d0">&#9670;&nbsp;</a></span>remove_task()</h2>
+<a id="aaca21c94ae5500bef5b300a6bb9ee937" name="aaca21c94ae5500bef5b300a6bb9ee937"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaca21c94ae5500bef5b300a6bb9ee937">&#9670;&nbsp;</a></span>loggerInterface()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void MiraiCP::ThreadTask::internal::remove_task </td>
+          <td class="memname">void MiraiCP::LoaderApi::loggerInterface </td>
           <td>(</td>
-          <td class="paramtype">size_t&#160;</td>
-          <td class="paramname"><em>id</em></td><td>)</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>content</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">long long int&#160;</td>
+          <td class="paramname"><em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>level</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="a00290_source.html">ThreadTask.cpp</a> 第 <a class="el" href="a00290_source.html#l00050">50</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>                                {</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        <span class="keywordtype">size_t</span> erased;</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        {</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>            std::unique_lock lk(<a class="code hl_function" href="a00314.html#ab64116c47ac8841acfd734f7069eaa10">get_mutex</a>());</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>            erased = <a class="code hl_function" href="a00314.html#a3830d60f883d192d8d6dc65ae537c5c1">get_function_storer</a>().erase(<span class="keywordtype">id</span>);</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        }</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        <span class="keywordflow">if</span> (0 == erased) {</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>            <a class="code hl_variable" href="a00301.html#a0e16fc1159d498289bcda90fcd7a734c">Logger::logger</a>.<a class="code hl_function" href="a00377.html#ae735f16b20f681d29d4e5d28ad248dbe">error</a>(<span class="stringliteral">&quot;Invalid task id &quot;</span> + std::to_string(<span class="keywordtype">id</span>) + <span class="stringliteral">&quot; is requested to erase&quot;</span>);</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        }</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    }</div>
+<p class="definition">在文件 <a class="el" href="a01236_source.html">sdk/loaderApi.cpp</a> 第 <a class="el" href="a01236_source.html#l00122">122</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>                                                                                                       {</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>        <a class="code hl_function" href="a00306.html#a4def9f25b87d48d142d6752184aadc92">LibLoader::LoaderApi::loggerInterface</a>(content, name, <span class="keywordtype">id</span>, level);</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    }</div>
+<div class="ttc" id="aa00306_html_a4def9f25b87d48d142d6752184aadc92"><div class="ttname"><a href="a00306.html#a4def9f25b87d48d142d6752184aadc92">LibLoader::LoaderApi::loggerInterface</a></div><div class="ttdeci">LOADER_API_COUNT void loggerInterface(const MiraiCPString &amp;content, const MiraiCPString &amp;name, long long id, int level)</div><div class="ttdef"><b>Definition:</b> <a href="a01233_source.html#l00062">libloader/loaderApi.cpp:62</a></div></div>
 </div><!-- fragment --><div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-5-trigger" src="closed.png" alt="+"/> 函数调用图:</div>
 <div id="dynsection-5-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-5-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="a00314_ab890e46143438cf7d678f6e4f2dcb9d0_cgraph.svg" width="602" height="231"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00314_aaca21c94ae5500bef5b300a6bb9ee937_cgraph.svg" width="1484" height="127"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
-</div>
-<div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-6-trigger" src="closed.png" alt="+"/> 这是这个函数的调用关系图:</div>
-<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-6-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="a00314_ab890e46143438cf7d678f6e4f2dcb9d0_icgraph.svg" width="355" height="118"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
 </div>
-<a id="a954499687c36452be430af25a7e94750" name="a954499687c36452be430af25a7e94750"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a954499687c36452be430af25a7e94750">&#9670;&nbsp;</a></span>task_interface()</h2>
+<a id="aa358aae502cc1dd8e86b25616f6956bf" name="aa358aae502cc1dd8e86b25616f6956bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa358aae502cc1dd8e86b25616f6956bf">&#9670;&nbsp;</a></span>reloadPluginById()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void MiraiCP::ThreadTask::internal::task_interface </td>
+          <td class="memname">void MiraiCP::LoaderApi::reloadPluginById </td>
           <td>(</td>
-          <td class="paramtype">size_t&#160;</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>id</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl class="section note"><dt>注解</dt><dd>dev: we can't send a std::function object to libLoader, so one appropriate way is that store the function in a data structure and call it in a wrapper function. </dd></dl>
 
-<p class="definition">在文件 <a class="el" href="a00290_source.html">ThreadTask.cpp</a> 第 <a class="el" href="a00290_source.html#l00063">63</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>                                   {</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        <span class="keyword">static_assert</span>(std::is_same_v&lt;<a class="code hl_typedef" href="a00303.html#a78fdbf75bfb384856ebf9ffb28b21b1f">LibLoader::LoaderApi::task_func_with_id</a>, <span class="keyword">decltype</span>(&amp;<a class="code hl_function" href="a00314.html#a954499687c36452be430af25a7e94750">task_interface</a>)&gt;);</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        <a class="code hl_typedef" href="a00314.html#aef1f03dc407748c08395bd81bcb66fba">storerIteratorType</a> iter;</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        <a class="code hl_typedef" href="a00314.html#ae4923f6c201a288de0e0224e8a8d35a1">functionPointerType</a> fPtr;</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        {</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>            std::shared_lock lck(<a class="code hl_function" href="a00314.html#ab64116c47ac8841acfd734f7069eaa10">get_mutex</a>());</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>            iter = <a class="code hl_function" href="a00314.html#a3830d60f883d192d8d6dc65ae537c5c1">get_function_storer</a>().find(<span class="keywordtype">id</span>);</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>            <span class="keywordflow">if</span> (iter == <a class="code hl_function" href="a00314.html#a3830d60f883d192d8d6dc65ae537c5c1">get_function_storer</a>().end()) {</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>                <a class="code hl_variable" href="a00301.html#a0e16fc1159d498289bcda90fcd7a734c">Logger::logger</a>.<a class="code hl_function" href="a00377.html#ae735f16b20f681d29d4e5d28ad248dbe">error</a>(<span class="stringliteral">&quot;Invalid task id &quot;</span> + std::to_string(<span class="keywordtype">id</span>) + <span class="stringliteral">&quot; is requested to run&quot;</span>);</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>                <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>            }</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>            fPtr = iter-&gt;second;</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        }</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        <span class="comment">// running task!</span></div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        (*fPtr)();</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    }</div>
-<div class="ttc" id="aa00303_html_a78fdbf75bfb384856ebf9ffb28b21b1f"><div class="ttname"><a href="a00303.html#a78fdbf75bfb384856ebf9ffb28b21b1f">LibLoader::LoaderApi::task_func_with_id</a></div><div class="ttdeci">void(* task_func_with_id)(size_t)</div><div class="ttdef"><b>Definition:</b> <a href="a00044_source.html#l00037">loaderApiInternal.h:37</a></div></div>
-<div class="ttc" id="aa00314_html_ae4923f6c201a288de0e0224e8a8d35a1"><div class="ttname"><a href="a00314.html#ae4923f6c201a288de0e0224e8a8d35a1">MiraiCP::ThreadTask::internal::functionPointerType</a></div><div class="ttdeci">std::shared_ptr&lt; functionType &gt; functionPointerType</div><div class="ttdef"><b>Definition:</b> <a href="a00290_source.html#l00016">ThreadTask.cpp:16</a></div></div>
-<div class="ttc" id="aa00314_html_aef1f03dc407748c08395bd81bcb66fba"><div class="ttname"><a href="a00314.html#aef1f03dc407748c08395bd81bcb66fba">MiraiCP::ThreadTask::internal::storerIteratorType</a></div><div class="ttdeci">storerType::iterator storerIteratorType</div><div class="ttdef"><b>Definition:</b> <a href="a00290_source.html#l00018">ThreadTask.cpp:18</a></div></div>
+<p>重载一个插件，仅限有管理权限的插件使用，否则没有任何效果 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>插件id </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="a01236_source.html">sdk/loaderApi.cpp</a> 第 <a class="el" href="a01236_source.html#l00155">155</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>                                               {</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>        <a class="code hl_function" href="a00306.html#ad038612c1e2a43498411f0b77240e20b">LibLoader::LoaderApi::reloadPluginById</a>(<span class="keywordtype">id</span>);</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>    }</div>
+<div class="ttc" id="aa00306_html_ad038612c1e2a43498411f0b77240e20b"><div class="ttname"><a href="a00306.html#ad038612c1e2a43498411f0b77240e20b">LibLoader::LoaderApi::reloadPluginById</a></div><div class="ttdeci">LOADER_API_COUNT void reloadPluginById(const MiraiCPString &amp;)</div><div class="ttdef"><b>Definition:</b> <a href="a01233_source.html#l00121">libloader/loaderApi.cpp:121</a></div></div>
+</div><!-- fragment --><div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-6-trigger" src="closed.png" alt="+"/> 函数调用图:</div>
+<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-6-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00314_aa358aae502cc1dd8e86b25616f6956bf_cgraph.svg" width="559" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a733d3f3f90c6925034b10116fb6510e6" name="a733d3f3f90c6925034b10116fb6510e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a733d3f3f90c6925034b10116fb6510e6">&#9670;&nbsp;</a></span>showAllPluginId()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; std::string &gt; MiraiCP::LoaderApi::showAllPluginId </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>返回所有plugin的id </p>
+
+<p class="definition">在文件 <a class="el" href="a01236_source.html">sdk/loaderApi.cpp</a> 第 <a class="el" href="a01236_source.html#l00126">126</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>                                           {</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>        nlohmann::json::array_t PluginIdList = nlohmann::json::parse(<a class="code hl_function" href="a00306.html#a1dc2ed7eb6845af70bc796bb347b74ef">LibLoader::LoaderApi::showAllPluginId</a>().toString());</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>        <span class="keywordflow">return</span> {PluginIdList.begin(), PluginIdList.end()};</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    }</div>
+<div class="ttc" id="aa00306_html_a1dc2ed7eb6845af70bc796bb347b74ef"><div class="ttname"><a href="a00306.html#a1dc2ed7eb6845af70bc796bb347b74ef">LibLoader::LoaderApi::showAllPluginId</a></div><div class="ttdeci">LOADER_API_COUNT MiraiCPString showAllPluginId()</div><div class="ttdef"><b>Definition:</b> <a href="a01233_source.html#l00066">libloader/loaderApi.cpp:66</a></div></div>
 </div><!-- fragment --><div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-7-trigger" src="closed.png" alt="+"/> 函数调用图:</div>
 <div id="dynsection-7-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-7-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="a00314_a954499687c36452be430af25a7e94750_cgraph.svg" width="610" height="231"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00314_a733d3f3f90c6925034b10116fb6510e6_cgraph.svg" width="579" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
-<div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-8-trigger" src="closed.png" alt="+"/> 这是这个函数的调用关系图:</div>
+
+</div>
+</div>
+<a id="ae24eb5a6ee67766c25d797ed382d4f08" name="ae24eb5a6ee67766c25d797ed382d4f08"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae24eb5a6ee67766c25d797ed382d4f08">&#9670;&nbsp;</a></span>unloadPluginById()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MiraiCP::LoaderApi::unloadPluginById </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>卸载一个插件，仅限有管理权限的插件使用，否则没有任何效果 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>插件id </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="a01236_source.html">sdk/loaderApi.cpp</a> 第 <a class="el" href="a01236_source.html#l00151">151</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>                                               {</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>        <a class="code hl_function" href="a00306.html#ace6aa7d8b5baf1f2be8908a5e103c92a">LibLoader::LoaderApi::unloadPluginById</a>(<span class="keywordtype">id</span>);</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    }</div>
+<div class="ttc" id="aa00306_html_ace6aa7d8b5baf1f2be8908a5e103c92a"><div class="ttname"><a href="a00306.html#ace6aa7d8b5baf1f2be8908a5e103c92a">LibLoader::LoaderApi::unloadPluginById</a></div><div class="ttdeci">LOADER_API_COUNT void unloadPluginById(const MiraiCPString &amp;)</div><div class="ttdef"><b>Definition:</b> <a href="a01233_source.html#l00115">libloader/loaderApi.cpp:115</a></div></div>
+</div><!-- fragment --><div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-8-trigger" src="closed.png" alt="+"/> 函数调用图:</div>
 <div id="dynsection-8-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-8-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="a00314_a954499687c36452be430af25a7e94750_icgraph.svg" width="363" height="76"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00314_ae24eb5a6ee67766c25d797ed382d4f08_cgraph.svg" width="559" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -502,8 +493,8 @@ $(document).ready(function(){initNavTree('a00314.html',''); initResizable(); });
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="a00302.html">MiraiCP</a></li><li class="navelem"><a class="el" href="a00313.html">ThreadTask</a></li><li class="navelem"><a class="el" href="a00314.html">internal</a></li>
-    <li class="footer">生成于 2023年 一月 22日 星期日 13:18:25 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="navelem"><a class="el" href="a00305.html">MiraiCP</a></li><li class="navelem"><a class="el" href="a00314.html">LoaderApi</a></li>
+    <li class="footer">生成于 2023年 一月 27日 星期五 00:14:13 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
     </body>

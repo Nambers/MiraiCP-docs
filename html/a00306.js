@@ -10,6 +10,7 @@ var a00306 =
     [ "enablePluginById", "a00306.html#a65331125b91df8d475fd7b74bf1bb8e9", null ],
     [ "get_loader_apis", "a00306.html#adbbf9fc9fc8afe6108ac756d7da23ddb", null ],
     [ "libClose", "a00306.html#a830b51c74068e1461e1baf677dd10ac2", null ],
+    [ "libError", "a00306.html#a56d03468b20e6187b1af71750a9f815d", null ],
     [ "libOpen", "a00306.html#a7765f4c313a98cf08466f0a6ed291aac", null ],
     [ "libSymbolLookup", "a00306.html#a96701ab7dcebb86755310b5c9c434842", null ],
     [ "loadNewPlugin", "a00306.html#aff28b2ad21b60cabc3c735a4b9562df9", null ],

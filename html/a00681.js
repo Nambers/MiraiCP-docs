@@ -1,6 +1,6 @@
 var a00681 =
 [
-    [ "IdLogger", "a00681.html#a50eb2703023973190ae65a949011166f", null ],
-    [ "log_interface", "a00681.html#a4c6ec76d433a890ff1c95cae4cfff59c", null ],
-    [ "id", "a00681.html#a0780713691dbbe27226d2c4c6c13d226", null ]
+    [ "Logger", "a00681.html#a0707bf07c1d709abf854a3592fb2f1f0", null ],
+    [ "log_interface", "a00681.html#ae75bdd405eddd5650979feb9e9ee2a9b", null ],
+    [ "logger", "a00681.html#a268fd602157c3fa49616a8872c82bfb1", null ]
 ];

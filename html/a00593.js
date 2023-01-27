@@ -1,5 +1,5 @@
 var a00593 =
 [
-    [ "RemoteAssetException", "a00593.html#acbaaf29f0911dc322e27df9731054f02", null ],
-    [ "exceptionType", "a00593.html#a623ffa1b259b723ab191fe5adb52a2be", null ]
+    [ "RecallException", "a00593.html#a7efed6d5b4e2e7c655b53496fbff9710", null ],
+    [ "exceptionType", "a00593.html#abb3b6f5b42098376e6a195eb6f420410", null ]
 ];

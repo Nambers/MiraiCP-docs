@@ -1,15 +1,10 @@
 var a00697 =
 [
-    [ "Member", "a00697.html#a69e77e737f0547520c2c206fce997eac", null ],
-    [ "Member", "a00697.html#a1efa452b6a65f50574eb3f380aa67544", null ],
-    [ "Member", "a00697.html#a3ca40feb7ca17732c87e770daf133891", null ],
-    [ "at", "a00697.html#ace4950bd9191fdf90ecba764c870f90e", null ],
-    [ "changeNameCard", "a00697.html#afa172c24046945b1208344d3be9d5cfe", null ],
-    [ "kick", "a00697.html#a2d1bc8f2dcdc9048ded62a0f5f53041a", null ],
-    [ "mute", "a00697.html#ab26f7832af43cee20fcdc76d0f876219", null ],
-    [ "mute", "a00697.html#a7298e2edbbe9c1866c730ad1fef8fb23", null ],
-    [ "sendNudge", "a00697.html#aff2d2c3a907f051ca89d506b02caa5d0", null ],
-    [ "sendVoice", "a00697.html#ad59b3b582e9cfd95ecf33ff3ab8eb4e6", null ],
-    [ "unMute", "a00697.html#ac815c8a919d5f2b8143c8ee552acdf72", null ],
-    [ "Contact", "a00697.html#a76d4b1c8c6040df20040808941b7e764", null ]
+    [ "Super", "a00697.html#aaea4d406d7045381eee7914a5595f76d", null ],
+    [ "MemberData", "a00697.html#a438176d2b44593c197a36703fe1ea66e", null ],
+    [ "deserialize", "a00697.html#a1681ff4e1859f24abec68681fcf8b40e", null ],
+    [ "refreshInfo", "a00697.html#a904da5608fbac3b2258168b2f62e8c4b", null ],
+    [ "_anonymous", "a00697.html#abb4f4f2a91f1b18ab4d21f14b4d073ed", null ],
+    [ "_permission", "a00697.html#a556b696baad932311d072131f4ce1ab0", null ],
+    [ "_specialTitle", "a00697.html#ac52a1d1703827094c3bd5043710bb3e4", null ]
 ];

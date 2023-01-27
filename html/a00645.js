@@ -1,25 +1,8 @@
 var a00645 =
 [
-    [ "AnnouncementParams", "a00649.html", "a00649" ],
-    [ "OfflineAnnouncement", "a00657.html", "a00657" ],
-    [ "OnlineAnnouncement", "a00653.html", "a00653" ],
-    [ "Group", "a00645.html#ab9796bf8f78ab60d379a41d42fdf29d0", null ],
-    [ "Group", "a00645.html#ac37320efdba19e1071762cbd6443dfbe", null ],
-    [ "Group", "a00645.html#a7fb7df3616eea314fce8b3bb61656e8d", null ],
-    [ "DECL_GETTER", "a00645.html#aaabcfcb9b04545fb6dfdb3ce86e7f622", null ],
-    [ "getAnnouncementsList", "a00645.html#a4e01ea12b1be658a14fbd10b26e81fb8", null ],
-    [ "getFile", "a00645.html#a65f239346553568ddc1d75099dbedb6a", null ],
-    [ "getFileByFile", "a00645.html#a2a2d2d51902d818f7e52a72229446a57", null ],
-    [ "getFileById", "a00645.html#a0f975b9bfbedb9d5d4fee9b95c9dbe65", null ],
-    [ "getFileList", "a00645.html#a970ea88f55047e041eaffc2fd7cb7a91", null ],
-    [ "getFileListString", "a00645.html#a2e01dc1b39b189302df6bc9ab9bb779d", null ],
-    [ "getMember", "a00645.html#ac0732b23857cec08f18fec0978de718c", null ],
-    [ "getMemberList", "a00645.html#aaf3faea866b044099784f19148d9ce01", null ],
-    [ "getOwner", "a00645.html#a49e685a85945a1f7b414e230fa2c27e6", null ],
-    [ "MemberListToString", "a00645.html#a7e4a285e03aac96ef4152d852958329d", null ],
-    [ "operator[]", "a00645.html#a541ba170580c0851bc494b5e038538e4", null ],
-    [ "quit", "a00645.html#a3eddcdf9f6c83da134e878d6815da796", null ],
-    [ "sendFile", "a00645.html#aed703d0ece4a7a9e8a1fe8e5f80eadbc", null ],
-    [ "sendVoice", "a00645.html#aeee3b1999006e12a1ba98fc28448b68b", null ],
-    [ "Contact", "a00645.html#a76d4b1c8c6040df20040808941b7e764", null ]
+    [ "isAllowMemberInvite", "a00645.html#a5ee2eac5a690124b1353ebc988ac10a8", null ],
+    [ "isAnonymousChatEnabled", "a00645.html#aeee24196a164dc3c657dae0e89b54185", null ],
+    [ "isAutoApproveEnabled", "a00645.html#aeb6075c0251e693cce643900a9604129", null ],
+    [ "isMuteAll", "a00645.html#a322ca9203cd26388e96da414634ae8b4", null ],
+    [ "name", "a00645.html#ab20b1e639b93e0379ec3d8ea0ecf6c53", null ]
 ];

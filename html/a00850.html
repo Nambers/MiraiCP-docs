@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiraiCP: logger.cpp</title>
+<title>MiraiCP: command.cpp</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -35,7 +35,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MiraiCP
-   &#160;<span id="projectnumber">v2.13.1</span>
+   &#160;<span id="projectnumber">v2.13.2</span>
    </div>
    <div id="projectbrief">MiraiCP api document</div>
   </td>
@@ -93,10 +93,11 @@ $(document).ready(function(){initNavTree('a00850.html',''); initResizable(); });
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">logger.cpp</div></div>
+  <div class="headertitle"><div class="title">command.cpp</div></div>
 </div><!--header-->
 <div class="contents">
-<p >自定义logger handle以及启用禁用logger</p>
+<p >所有加进doxygen doc的example</p>
+<p >监听指令</p>
 <div class="fragment"><div class="line"><span class="comment">// Copyright (c) 2020 - 2022. Eritque arcus and contributors.</span></div>
 <div class="line"><span class="comment">//</span></div>
 <div class="line"><span class="comment">// This program is free software: you can redistribute it and/or modify</span></div>
@@ -113,7 +114,7 @@ $(document).ready(function(){initNavTree('a00850.html',''); initResizable(); });
 <div class="line"><span class="comment">// along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</span></div>
 <div class="line"><span class="comment">//</span></div>
 <div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00161.html">MiraiCP.hpp</a>&gt;</span></div>
-<div class="line"><span class="keyword">using namespace </span><a class="code hl_namespace" href="a00302.html">MiraiCP</a>;</div>
+<div class="line"><span class="keyword">using namespace </span><a class="code hl_namespace" href="a00305.html">MiraiCP</a>;</div>
 <div class="line"> </div>
 <div class="line"><span class="keyword">const</span> PluginConfig CPPPlugin::config{</div>
 <div class="line">        <span class="stringliteral">&quot;id&quot;</span>,   <span class="comment">// 插件id</span></div>
@@ -124,34 +125,42 @@ $(document).ready(function(){initNavTree('a00850.html',''); initResizable(); });
 <div class="line">                <span class="comment">// 可选：日期</span></div>
 <div class="line">};</div>
 <div class="line"> </div>
+<div class="line"><span class="keyword">class </span>a : <span class="keyword">public</span> IRawCommand {</div>
+<div class="line"><span class="keyword">public</span>:</div>
+<div class="line">    IRawCommand::Config config()<span class="keyword"> override </span>{</div>
+<div class="line">        <span class="keywordflow">return</span> {<span class="stringliteral">&quot;test&quot;</span>, {<span class="stringliteral">&quot;sname1&quot;</span>, <span class="stringliteral">&quot;sname2&quot;</span>}};</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordtype">void</span> <a class="code hl_function" href="a00409.html#a7acc9f2c8c4640659e9447e3b79d41be">onCommand</a>(std::optional&lt;Contact&gt; c, <span class="keyword">const</span> Bot &amp;b, <span class="keyword">const</span> MessageChain &amp;a)<span class="keyword"> override </span>{</div>
+<div class="line">        <a id="a0" name="a0"></a><a class="code hl_variable" href="a00304.html#a0e16fc1159d498289bcda90fcd7a734c">Logger::logger</a>.<a id="a1" name="a1"></a><a class="code hl_function" href="a00381.html#a0d34d5ca7783c370ec08dbbb44876c1b">info</a>(a.toMiraiCode());</div>
+<div class="line">    }</div>
+<div class="line">    a() = <span class="keywordflow">default</span>;</div>
+<div class="line">};</div>
+<div class="line"> </div>
 <div class="line"><span class="keyword">class </span>Main : <span class="keyword">public</span> CPPPlugin {</div>
 <div class="line"><span class="keyword">public</span>:</div>
-<div class="line">    Main() : <a class="code hl_function" href="a00437.html#aeeaafebf5e61e1da8a2c5e3e07dac64b">CPPPlugin</a>() {}</div>
+<div class="line">    Main() : <a class="code hl_function" href="a00441.html#aeeaafebf5e61e1da8a2c5e3e07dac64b">CPPPlugin</a>() {}</div>
 <div class="line">    <span class="keywordtype">void</span> onEnable()<span class="keyword"> override </span>{</div>
-<div class="line">        <a id="a0" name="a0"></a><a class="code hl_variable" href="a00301.html#a0e16fc1159d498289bcda90fcd7a734c">Logger::logger</a>.registerHandle([](std::string content, <span class="keywordtype">int</span> level) {</div>
-<div class="line">            <span class="comment">//do some things</span></div>
-<div class="line">            <span class="comment">// eg. write file</span></div>
-<div class="line">        });</div>
-<div class="line">        <span class="comment">// 设置logger是否启用</span></div>
-<div class="line">        <a class="code hl_variable" href="a00301.html#a0e16fc1159d498289bcda90fcd7a734c">Logger::logger</a>.setHandleState(<span class="keyword">true</span>);</div>
+<div class="line">        CommandManager::commandManager.registerCommand(a());</div>
 <div class="line">    }</div>
 <div class="line">};</div>
 <div class="line"> </div>
-<div class="line"><span class="keywordtype">void</span> <a id="a1" name="a1"></a><a class="code hl_function" href="a00302.html#a12d27be6730af4fc321ac1eb231db281">MiraiCP::enrollPlugin</a>() {</div>
-<div class="line">    <a class="code hl_function" href="a00302.html#a12d27be6730af4fc321ac1eb231db281">MiraiCP::enrollPlugin</a>(<span class="keyword">new</span> Main());</div>
+<div class="line"><span class="keywordtype">void</span> <a id="a2" name="a2"></a><a class="code hl_function" href="a00305.html#a12d27be6730af4fc321ac1eb231db281">MiraiCP::enrollPlugin</a>() {</div>
+<div class="line">    <a class="code hl_function" href="a00305.html#a12d27be6730af4fc321ac1eb231db281">MiraiCP::enrollPlugin</a>(<span class="keyword">new</span> Main());</div>
 <div class="line">}</div>
 <div class="ttc" id="aa00161_html"><div class="ttname"><a href="a00161.html">MiraiCP.hpp</a></div></div>
-<div class="ttc" id="aa00301_html_a0e16fc1159d498289bcda90fcd7a734c"><div class="ttname"><a href="a00301.html#a0e16fc1159d498289bcda90fcd7a734c">LibLoader::logger</a></div><div class="ttdeci">MIRAICP_EXPORT LoaderLogger logger</div><div class="ttdef"><b>Definition:</b> <a href="a00212_source.html#l00035">LoaderLogger.cpp:35</a></div></div>
-<div class="ttc" id="aa00302_html"><div class="ttname"><a href="a00302.html">MiraiCP</a></div><div class="ttdef"><b>Definition:</b> <a href="a00041_source.html#l00041">commonTypes.h:41</a></div></div>
-<div class="ttc" id="aa00302_html_a12d27be6730af4fc321ac1eb231db281"><div class="ttname"><a href="a00302.html#a12d27be6730af4fc321ac1eb231db281">MiraiCP::enrollPlugin</a></div><div class="ttdeci">void enrollPlugin()</div><div class="ttdoc">注册插件函数, 需要被插件实现, 类似onStart();</div><div class="ttdef"><b>Definition:</b> <a href="a00179_source.html#l00037">utils.h:37</a></div></div>
-<div class="ttc" id="aa00437_html_aeeaafebf5e61e1da8a2c5e3e07dac64b"><div class="ttname"><a href="a00437.html#aeeaafebf5e61e1da8a2c5e3e07dac64b">MiraiCP::CPPPlugin::CPPPlugin</a></div><div class="ttdeci">CPPPlugin()=default</div></div>
+<div class="ttc" id="aa00304_html_a0e16fc1159d498289bcda90fcd7a734c"><div class="ttname"><a href="a00304.html#a0e16fc1159d498289bcda90fcd7a734c">LibLoader::logger</a></div><div class="ttdeci">MIRAICP_EXPORT LoaderLogger logger</div><div class="ttdef"><b>Definition:</b> <a href="a00215_source.html#l00035">LoaderLogger.cpp:35</a></div></div>
+<div class="ttc" id="aa00305_html"><div class="ttname"><a href="a00305.html">MiraiCP</a></div><div class="ttdef"><b>Definition:</b> <a href="a00041_source.html#l00041">commonTypes.h:41</a></div></div>
+<div class="ttc" id="aa00305_html_a12d27be6730af4fc321ac1eb231db281"><div class="ttname"><a href="a00305.html#a12d27be6730af4fc321ac1eb231db281">MiraiCP::enrollPlugin</a></div><div class="ttdeci">void enrollPlugin()</div><div class="ttdoc">注册插件函数, 需要被插件实现, 类似onStart();</div><div class="ttdef"><b>Definition:</b> <a href="a00179_source.html#l00037">utils.h:37</a></div></div>
+<div class="ttc" id="aa00381_html_a0d34d5ca7783c370ec08dbbb44876c1b"><div class="ttname"><a href="a00381.html#a0d34d5ca7783c370ec08dbbb44876c1b">LibLoader::LoaderLogger::info</a></div><div class="ttdeci">void info(const string &amp;) const</div><div class="ttdef"><b>Definition:</b> <a href="a00215_source.html#l00043">LoaderLogger.cpp:43</a></div></div>
+<div class="ttc" id="aa00409_html_a7acc9f2c8c4640659e9447e3b79d41be"><div class="ttname"><a href="a00409.html#a7acc9f2c8c4640659e9447e3b79d41be">MiraiCP::IRawCommand::onCommand</a></div><div class="ttdeci">virtual void onCommand(std::shared_ptr&lt; Contact &gt;, const Bot &amp;, const MessageChain &amp;)=0</div></div>
+<div class="ttc" id="aa00441_html_aeeaafebf5e61e1da8a2c5e3e07dac64b"><div class="ttname"><a href="a00441.html#aeeaafebf5e61e1da8a2c5e3e07dac64b">MiraiCP::CPPPlugin::CPPPlugin</a></div><div class="ttdeci">CPPPlugin()=default</div></div>
 </div><!-- fragment --> </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">生成于 2023年 一月 22日 星期日 13:18:23 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="footer">生成于 2023年 一月 27日 星期五 00:14:10 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
     </body>

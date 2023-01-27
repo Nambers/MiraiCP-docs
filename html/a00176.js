@@ -1,7 +1,7 @@
 var a00176 =
 [
-    [ "MiraiCP::Tools::idpair", "a00797.html", "a00797" ],
-    [ "std::hash< MiraiCP::Tools::idpair >", "a00801.html", "a00801" ],
+    [ "MiraiCP::Tools::idpair", "a00801.html", "a00801" ],
+    [ "std::hash< MiraiCP::Tools::idpair >", "a00805.html", "a00805" ],
     [ "escapeFromMiraiCode", "a00176.html#ae7bf212fddf60af59042677c3a7753a5", null ],
     [ "escapeToMiraiCode", "a00176.html#a01f4fe41f8bef55b95953750f5cfb0c2", null ],
     [ "icompareChar", "a00176.html#a795aadb1af1cd4b85e9b48b5bb5b246d", null ],

@@ -1,8 +1,9 @@
 var a00637 =
 [
-    [ "GroupSetting", "a00641.html", "a00641" ],
-    [ "GroupData", "a00637.html#afe85f107ef0e196801af97e7246414d4", null ],
-    [ "deserialize", "a00637.html#a8a0e56e1504a3da673550f0b6ea5990f", null ],
-    [ "refreshInfo", "a00637.html#a0722821fb76ee11411d65c4c79c08538", null ],
-    [ "_setting", "a00637.html#a939dc83c0a53345b8c5f9a71209299a7", null ]
+    [ "Friend", "a00637.html#a95275c6705e24eb4a7e5060158f36167", null ],
+    [ "Friend", "a00637.html#a6a761113b704cd93a836df23ca742bd2", null ],
+    [ "Friend", "a00637.html#a9b43bb817cb19d335cfd9b6e317894a0", null ],
+    [ "deleteFriend", "a00637.html#ad21c4f5d158162f49bb008e6c37f7df9", null ],
+    [ "sendNudge", "a00637.html#a0321140e76255aadcd1a23c92b0d5031", null ],
+    [ "Contact", "a00637.html#a76d4b1c8c6040df20040808941b7e764", null ]
 ];
