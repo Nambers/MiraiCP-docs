@@ -1,13 +1,14 @@
 var a00517 =
 [
-    [ "EventType", "a00517.html#ac1df44d7400ad221500364c7b3de6737", [
-      [ "Active", "a00517.html#ac1df44d7400ad221500364c7b3de6737a4d3d769b812b6faa6b76e1a8abaece2d", null ],
-      [ "Kick", "a00517.html#ac1df44d7400ad221500364c7b3de6737a3e07960fcc45408894cf1402257bd9fd", null ],
-      [ "Disband", "a00517.html#ac1df44d7400ad221500364c7b3de6737aeee6f05922080480c6043305c9d6b329", null ]
-    ] ],
-    [ "BotLeaveEvent", "a00517.html#adf7d87e720725c6db5fb39f0f666b9a4", null ],
-    [ "get_event_type", "a00517.html#a6181c5b90aece0c558943c71d9a037ed", null ],
-    [ "group", "a00517.html#a8d792f877c523fc85423263a3ff60242", null ],
-    [ "operater", "a00517.html#aa8e91ea7bff0f0211728c25ee5402ccc", null ],
-    [ "type", "a00517.html#ae417bdaa1e08bf29b51b97fd1f8f4d80", null ]
+    [ "GroupTempMessageEvent", "a00517.html#abfddc2db81d57ac0cc5735da826b409d", null ],
+    [ "chat", "a00517.html#a55718d1fe9883ea24c47c8ebb503d807", null ],
+    [ "chat", "a00517.html#ac9bee0cbf3838fa62837e62110e67067", null ],
+    [ "from", "a00517.html#a40e9c959f267452a60b2d5e6549dd5bb", null ],
+    [ "from", "a00517.html#adf2a7d962bf5daba13db488d48f0da5d", null ],
+    [ "get_event_type", "a00517.html#aab7402e84e7d27152ee337a20d70233a", null ],
+    [ "getMessageChain", "a00517.html#af08cf89e9ec68ea7a71f491bac7af023", null ],
+    [ "getMessageChain", "a00517.html#af4a3409f72b9feba0671804763390592", null ],
+    [ "group", "a00517.html#a29c18056652c7d36248f70f359f01e74", null ],
+    [ "message", "a00517.html#a2405f8a309e3b2de0d7cba313d795cee", null ],
+    [ "sender", "a00517.html#ac0252e17c1cb9a0d4f2ebf37720951db", null ]
 ];

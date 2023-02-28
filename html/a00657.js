@@ -1,14 +1,18 @@
 var a00657 =
 [
-    [ "deleteThis", "a00657.html#a04aaabd735ed542b313a8df2a3fd9ecb", null ],
-    [ "deserializeFromJson", "a00657.html#a720239cba555515909088bc5404c483f", null ],
-    [ "botId", "a00657.html#aed972cb699c7efe6533ef81fcf8e7ad7", null ],
-    [ "confirmNum", "a00657.html#af210882e3d89a4843c05c92ca7c83dd1", null ],
-    [ "content", "a00657.html#afbc4d030c34bf815a8b8466cc0661f61", null ],
-    [ "fid", "a00657.html#a24d4711f1da5a6f5e952b77e198b0f3f", null ],
-    [ "groupId", "a00657.html#aec97399fd5c720f3591588a71bc05fd3", null ],
-    [ "imageId", "a00657.html#a70e1e2aa6153b05f08cf2c499c45b3e8", null ],
-    [ "params", "a00657.html#a0be35844059d66dc274fcf84de90e368", null ],
-    [ "publicationTime", "a00657.html#a60b71b2b35023e7774485f696c0c84f7", null ],
-    [ "senderId", "a00657.html#a6b6c6aaefc69cfd50b47f03c2cc8fb04", null ]
+    [ "Types", "a00657.html#a2b54a40292d297baaf370931efdc8085", null ],
+    [ "SingleMessage", "a00657.html#afd9fc5e5ce28680eaf331144903f025b", null ],
+    [ "SingleMessage", "a00657.html#aed26a8868000100e8bd51e3e76557909", null ],
+    [ "~SingleMessage", "a00657.html#a045c3297f736a753f84d905268fc17ee", null ],
+    [ "getKey", "a00657.html#a7412c91a4b45c7f1d77cf904af64b6d7", null ],
+    [ "getMiraiCodeKey", "a00657.html#ac77c5fffe428cdaedb84ee2d6383ecea", null ],
+    [ "getTypeString", "a00657.html#aeb04373bc8b0d8e8710597c35c89f21d", null ],
+    [ "operator==", "a00657.html#a9d501cb4ed4cf97c4eb43246c35224b0", null ],
+    [ "toJson", "a00657.html#a70c16e9bd925a9031989537f9efd96af", null ],
+    [ "toMiraiCode", "a00657.html#ade93b603f22f584ada2a003c9e523b89", null ],
+    [ "content", "a00657.html#a7ebcc9775985874bb7a09bd1d8274a24", null ],
+    [ "internalType", "a00657.html#a324dc329305747b20a6b42dd22480c46", null ],
+    [ "messageType", "a00657.html#ac8e48dc2e735821c5e4ad78d21233346", null ],
+    [ "miraiCodeName", "a00657.html#a473ac201093671e8832cebc7226ee61d", null ],
+    [ "prefix", "a00657.html#a207f61ebfd79e0ae18833f2edf954595", null ]
 ];

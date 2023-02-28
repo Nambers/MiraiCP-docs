@@ -1,11 +1,14 @@
 var a00629 =
 [
-    [ "ForwardedNode", "a00629.html#acd0109a76b19e5643fc518e34f971747", null ],
-    [ "ForwardedNode", "a00629.html#a061475e039e06649ee0e36bdba3786ac", null ],
-    [ "isForwarded", "a00629.html#ab7c98ea30d551fc60f09289338b100ea", null ],
-    [ "id", "a00629.html#aaaa85af6ea1bea84767d5352fdc2c907", null ],
-    [ "isForwardedMessage", "a00629.html#a89e1eab9756347a42df11550365035b5", null ],
-    [ "message", "a00629.html#acb5969070d29271a128fc95d5b503fc0", null ],
-    [ "name", "a00629.html#a7c1ccf827b401b609cfc8481909019e7", null ],
-    [ "time", "a00629.html#ac5f4d270eb51284f2f25051aaf1545f7", null ]
+    [ "Super", "a00629.html#a7be466c4505304684ad67562567f6b1e", null ],
+    [ "Message", "a00629.html#a578443155b3d0c2c6cee9bb31b8928b8", null ],
+    [ "Message", "a00629.html#acedff3b634af4bf5cb2dbcc045119376", null ],
+    [ "getRef", "a00629.html#a03adf97040d8d7ab939406f6f8bb42ed", null ],
+    [ "getType", "a00629.html#a03b17687e7f27c5cc54e20b06192146e", null ],
+    [ "getVal", "a00629.html#aa26b32f1ea57c32a071cc7bd052ca565", null ],
+    [ "messageThrow", "a00629.html#a4b9a19bb584b22b1446fe6930db4bb49", null ],
+    [ "operator!=", "a00629.html#a7bf0df1c342858b560bd037b575d6d58", null ],
+    [ "operator==", "a00629.html#ac09fb6e7ab5e00c405e7bd969ffd39c4", null ],
+    [ "toJson", "a00629.html#a5f89ea721c218405d1eb7037b83f8e8d", null ],
+    [ "toMiraiCode", "a00629.html#a0cef774c0356349acaca5f78271f3849", null ]
 ];

@@ -1,15 +1,13 @@
 var a00481 =
 [
-    [ "joinType", "a00481.html#a1d73fdd5e84653d078b859b37dd1bcc8", [
-      [ "error", "a00481.html#a1d73fdd5e84653d078b859b37dd1bcc8ac7223d287b6643e82449fdfc84a78b17", null ],
-      [ "invited", "a00481.html#a1d73fdd5e84653d078b859b37dd1bcc8aa328607b0546483fb4503bf453508821", null ],
-      [ "applied", "a00481.html#a1d73fdd5e84653d078b859b37dd1bcc8a24c75b1f74122bc5b2b618daa89b14c9", null ],
-      [ "rehab", "a00481.html#a1d73fdd5e84653d078b859b37dd1bcc8a0f0421157cba536506b325cefe9fac90", null ]
+    [ "EventType", "a00481.html#ac1df44d7400ad221500364c7b3de6737", [
+      [ "Active", "a00481.html#ac1df44d7400ad221500364c7b3de6737a4d3d769b812b6faa6b76e1a8abaece2d", null ],
+      [ "Kick", "a00481.html#ac1df44d7400ad221500364c7b3de6737a3e07960fcc45408894cf1402257bd9fd", null ],
+      [ "Disband", "a00481.html#ac1df44d7400ad221500364c7b3de6737aeee6f05922080480c6043305c9d6b329", null ]
     ] ],
-    [ "MemberJoinEvent", "a00481.html#a9d849d293475e646a0a443ec5052e55d", null ],
-    [ "get_event_type", "a00481.html#a314da8d93a0056d08d6fb8b87929584d", null ],
-    [ "group", "a00481.html#a1f879c48cc7b54fa387853b5330b0caf", null ],
-    [ "inviter", "a00481.html#ab23dddf1df4fa7d572f964fa3b3b6163", null ],
-    [ "member", "a00481.html#aa1a42b944df9f40fc96629a1c5687f01", null ],
-    [ "type", "a00481.html#aaef692838d233a5ddcf8d54e1b02eb40", null ]
+    [ "BotLeaveEvent", "a00481.html#adf7d87e720725c6db5fb39f0f666b9a4", null ],
+    [ "get_event_type", "a00481.html#a6181c5b90aece0c558943c71d9a037ed", null ],
+    [ "group", "a00481.html#a8d792f877c523fc85423263a3ff60242", null ],
+    [ "operater", "a00481.html#aa8e91ea7bff0f0211728c25ee5402ccc", null ],
+    [ "type", "a00481.html#ae417bdaa1e08bf29b51b97fd1f8f4d80", null ]
 ];

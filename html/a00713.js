@@ -1,15 +1,13 @@
 var a00713 =
 [
-    [ "MessageSource", "a00713.html#a49210b1a4c711d50ab0acc17d0dae88d", null ],
-    [ "MessageSource", "a00713.html#a17c32c44e0af14a5f23f15ca56e527ae", null ],
-    [ "deserializeFromString", "a00713.html#a1f98db6bbdf6b7d178bf92f55fd2e4dc", null ],
-    [ "operator==", "a00713.html#a2d08aa9b079abe268966313e12a3496b", null ],
-    [ "recall", "a00713.html#ac51d78c18a249ff92c6d7056db57f8d7", null ],
-    [ "serializeToString", "a00713.html#aca51487498128b420019182e1331a282", null ],
-    [ "ShouldNotUse", "a00713.html#af746248b4f82c9832ace5b8b98e5295f", null ],
-    [ "env", "a00713.html#a4ca84946837ff70d8ae389274f19f423", null ],
-    [ "groupid", "a00713.html#af4796797483c9706ba534a2eff4c78c5", null ],
-    [ "ids", "a00713.html#a4b5fd176a16871dbb39e5be15b2b6c15", null ],
-    [ "internalids", "a00713.html#a358ba0250715b1c4692554995750675e", null ],
-    [ "source", "a00713.html#afc51041bfb7cc7cb0915b5131ee05805", null ]
+    [ "MusicShare", "a00713.html#adebd57e07a89d64fa3e42e067d3b6d77", null ],
+    [ "toMiraiCode", "a00713.html#a1bffdbd7cd143a903f22fb376b79c855", null ],
+    [ "type", "a00713.html#a0d066ebbca63439a3eea2e564e31403a", null ],
+    [ "appName", "a00713.html#a87a20d867c8dadbe4a8f55ef2b6d0d4d", null ],
+    [ "brief", "a00713.html#ab3e91b8220d2e80dbb84ff17b83ce3f8", null ],
+    [ "jumpUrl", "a00713.html#aa4239e8aadb82d6c79bc8986f55e68b6", null ],
+    [ "musicUrl", "a00713.html#a98dc3816bcdd57e551a55ff88b2ea4fa", null ],
+    [ "picUrl", "a00713.html#a0615bbf6886985e1438ab1493cdc012a", null ],
+    [ "summary", "a00713.html#a2da932b20adbdc6f9fa58bda8c0623ac", null ],
+    [ "title", "a00713.html#aa4f1eb91480d538d2aead5904f1cc4b9", null ]
 ];

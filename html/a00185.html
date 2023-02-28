@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiraiCP: PluginConfig.cpp 文件参考</title>
+<title>MiraiCP: redirectCout.cpp 文件参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -35,7 +35,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MiraiCP
-   &#160;<span id="projectnumber">v2.13.2</span>
+   &#160;<span id="projectnumber">v2.14.0</span>
    </div>
    <div id="projectbrief">MiraiCP api document</div>
   </td>
@@ -95,17 +95,23 @@ $(document).ready(function(){initNavTree('a00185.html',''); initResizable(); });
 <div class="header">
   <div class="summary">
 <a href="#namespaces">命名空间</a> &#124;
-<a href="#typedef-members">类型定义</a>  </div>
-  <div class="headertitle"><div class="title">PluginConfig.cpp 文件参考</div></div>
+<a href="#func-members">函数</a> &#124;
+<a href="#var-members">变量</a>  </div>
+  <div class="headertitle"><div class="title">redirectCout.cpp 文件参考</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="a00053_source.html">PluginConfig.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="a00044_source.html">MiraiCPMacros.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00188_source.html">redirectCout.h</a>&quot;</code><br />
+<code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;memory&gt;</code><br />
+<code>#include &lt;sstream&gt;</code><br />
+<code>#include &quot;<a class="el" href="a00137_source.html">Logger.h</a>&quot;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> PluginConfig.cpp 的引用(Include)关系图:</div>
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> redirectCout.cpp 的引用(Include)关系图:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="a00186.svg" width="344" height="336"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00186.svg" width="599" height="336"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </div>
@@ -113,22 +119,170 @@ $(document).ready(function(){initNavTree('a00185.html',''); initResizable(); });
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
 命名空间</h2></td></tr>
-<tr class="memitem:a00305"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00305.html">MiraiCP</a></td></tr>
+<tr class="memitem:a00394"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00394.html">MiraiCP</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00406"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00406.html">MiraiCP::Redirector</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
-类型定义</h2></td></tr>
-<tr class="memitem:ac0a8a1bade77a57eeb1d94cfacfb75ce"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00305.html#ac0a8a1bade77a57eeb1d94cfacfb75ce">MiraiCP::json</a> = nlohmann::json</td></tr>
-<tr class="separator:ac0a8a1bade77a57eeb1d94cfacfb75ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:a5ea76c388296e6066ae4e30a99837f41"><td class="memItemLeft" align="right" valign="top">OString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00185.html#a5ea76c388296e6066ae4e30a99837f41">outTarget</a> (true)</td></tr>
+<tr class="separator:a5ea76c388296e6066ae4e30a99837f41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1defcc132542aa9411395eb08b0fe844"><td class="memItemLeft" align="right" valign="top">OString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00185.html#a1defcc132542aa9411395eb08b0fe844">errTarget</a> (false)</td></tr>
+<tr class="separator:a1defcc132542aa9411395eb08b0fe844"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d2a8186429cb8b469e21c03dc4c8e33"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00185.html#a4d2a8186429cb8b469e21c03dc4c8e33">print</a> (const std::string &amp;str)</td></tr>
+<tr class="separator:a4d2a8186429cb8b469e21c03dc4c8e33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46ebe1f3f5d7f68b71a86572066a0f66"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00044.html#aa40df2b825bdde9207f3e87b140235c3">MIRAICP_EXPORT</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00406.html#a46ebe1f3f5d7f68b71a86572066a0f66">MiraiCP::Redirector::SetCoutRecorder</a> (void(*recorder)(std::string))</td></tr>
+<tr class="separator:a46ebe1f3f5d7f68b71a86572066a0f66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a43144762a698c10973885b2b4f2964"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00044.html#aa40df2b825bdde9207f3e87b140235c3">MIRAICP_EXPORT</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00406.html#a7a43144762a698c10973885b2b4f2964">MiraiCP::Redirector::SetCerrRecorder</a> (void(*recorder)(std::string))</td></tr>
+<tr class="separator:a7a43144762a698c10973885b2b4f2964"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+变量</h2></td></tr>
+<tr class="memitem:a7424110a4e217977934256f0bb6699de"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; OStreamRedirector &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00185.html#a7424110a4e217977934256f0bb6699de">outRedirector</a></td></tr>
+<tr class="separator:a7424110a4e217977934256f0bb6699de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a222c24969464cb912fc16dafc9b72bf2"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; OStreamRedirector &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00185.html#a222c24969464cb912fc16dafc9b72bf2">errRedirector</a></td></tr>
+<tr class="separator:a222c24969464cb912fc16dafc9b72bf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb5e2f19b4391ee51798dfa8ea732085"><td class="memItemLeft" align="right" valign="top">struct RedirectedOstreamPair&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00185.html#acb5e2f19b4391ee51798dfa8ea732085">RedirectedOstreamPointers</a></td></tr>
+<tr class="separator:acb5e2f19b4391ee51798dfa8ea732085"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">函数说明</h2>
+<a id="a1defcc132542aa9411395eb08b0fe844" name="a1defcc132542aa9411395eb08b0fe844"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1defcc132542aa9411395eb08b0fe844">&#9670;&nbsp;</a></span>errTarget()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">OString errTarget </td>
+          <td>(</td>
+          <td class="paramtype">false&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> 这是这个函数的调用关系图:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00185_a1defcc132542aa9411395eb08b0fe844_icgraph.svg" width="580" height="140"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a5ea76c388296e6066ae4e30a99837f41" name="a5ea76c388296e6066ae4e30a99837f41"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ea76c388296e6066ae4e30a99837f41">&#9670;&nbsp;</a></span>outTarget()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">OString outTarget </td>
+          <td>(</td>
+          <td class="paramtype">true&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-2-trigger" src="closed.png" alt="+"/> 这是这个函数的调用关系图:</div>
+<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-2-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00185_a5ea76c388296e6066ae4e30a99837f41_icgraph.svg" width="583" height="140"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a4d2a8186429cb8b469e21c03dc4c8e33" name="a4d2a8186429cb8b469e21c03dc4c8e33"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d2a8186429cb8b469e21c03dc4c8e33">&#9670;&nbsp;</a></span>print()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void print </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>str</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="a00185_source.html">redirectCout.cpp</a> 第 <a class="el" href="a00185_source.html#l00154">154</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>                                 {</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="a00185.html#a7424110a4e217977934256f0bb6699de">outRedirector</a> == <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>        std::cout &lt;&lt; str &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>        <a class="code hl_variable" href="a00185.html#a7424110a4e217977934256f0bb6699de">outRedirector</a>-&gt;oldStream &lt;&lt; str;</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>        <a class="code hl_variable" href="a00185.html#a7424110a4e217977934256f0bb6699de">outRedirector</a>-&gt;oldStream.flush();</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>    }</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>}</div>
+<div class="ttc" id="aa00185_html_a7424110a4e217977934256f0bb6699de"><div class="ttname"><a href="a00185.html#a7424110a4e217977934256f0bb6699de">outRedirector</a></div><div class="ttdeci">std::unique_ptr&lt; OStreamRedirector &gt; outRedirector</div><div class="ttdef"><b>Definition:</b> <a href="a00185_source.html#l00124">redirectCout.cpp:124</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">变量说明</h2>
+<a id="a222c24969464cb912fc16dafc9b72bf2" name="a222c24969464cb912fc16dafc9b72bf2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a222c24969464cb912fc16dafc9b72bf2">&#9670;&nbsp;</a></span>errRedirector</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unique_ptr&lt;OStreamRedirector&gt; errRedirector</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="a00185_source.html">redirectCout.cpp</a> 第 <a class="el" href="a00185_source.html#l00125">125</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a7424110a4e217977934256f0bb6699de" name="a7424110a4e217977934256f0bb6699de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7424110a4e217977934256f0bb6699de">&#9670;&nbsp;</a></span>outRedirector</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unique_ptr&lt;OStreamRedirector&gt; outRedirector</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="a00185_source.html">redirectCout.cpp</a> 第 <a class="el" href="a00185_source.html#l00124">124</a> 行定义.</p>
+
+</div>
+</div>
+<a id="acb5e2f19b4391ee51798dfa8ea732085" name="acb5e2f19b4391ee51798dfa8ea732085"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb5e2f19b4391ee51798dfa8ea732085">&#9670;&nbsp;</a></span>RedirectedOstreamPointers</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct RedirectedOstreamPair RedirectedOstreamPointers</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_fdedb0aba14d44ce9d99bc100e026e6a.html">common</a></li><li class="navelem"><a class="el" href="a00185.html">PluginConfig.cpp</a></li>
-    <li class="footer">生成于 2023年 一月 27日 星期五 00:14:10 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_fdedb0aba14d44ce9d99bc100e026e6a.html">common</a></li><li class="navelem"><a class="el" href="a00185.html">redirectCout.cpp</a></li>
+    <li class="footer">生成于 2023年 二月 28日 星期二 12:14:06 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
     </body>

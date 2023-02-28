@@ -1,9 +1,10 @@
 var a00757 =
 [
-    [ "LightApp", "a00757.html#a7cfcefeb788e3046fb321fab0a7b813a", null ],
-    [ "LightApp", "a00757.html#a1803b5deeb42af5f4770751aa4160a25", null ],
-    [ "operator==", "a00757.html#ae69ac9a6359eb6848ce09f7671395969", null ],
-    [ "toJson", "a00757.html#a95599fbda45f4240f9241f6dfa6fe05d", null ],
-    [ "toMiraiCode", "a00757.html#ad1637240306cd3dd587044054381d991", null ],
-    [ "type", "a00757.html#abba0c279393369d31f7ebc88ee6756fd", null ]
+    [ "multi_future", "a00757.html#a320812d6a9287fa2aedf3deab6edee1a", null ],
+    [ "get", "a00757.html#ad2b19061c7db1d50a35858e17dcd2268", null ],
+    [ "operator[]", "a00757.html#a304215df62ff42c3f32eb707b99db47e", null ],
+    [ "push_back", "a00757.html#a6af9fb74e856f779a1722d2018afebee", null ],
+    [ "size", "a00757.html#abf3325699649c91f9dd88f5a252e742e", null ],
+    [ "wait", "a00757.html#a05073ed8d37b939c9440ac8789b69ba7", null ],
+    [ "futures", "a00757.html#a27e462ff68dfe16e6bf23d87a174cfe0", null ]
 ];

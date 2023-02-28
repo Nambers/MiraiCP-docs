@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['recallexception_0',['RecallException',['../a00593.html',1,'MiraiCP']]],
-  ['remoteassetexception_1',['RemoteAssetException',['../a00597.html',1,'MiraiCP']]],
-  ['remotefile_2',['RemoteFile',['../a00773.html',1,'MiraiCP']]]
+  ['remoteassetexception_0',['RemoteAssetException',['../a00909.html',1,'MiraiCP']]],
+  ['remotefile_1',['RemoteFile',['../a00697.html',1,'MiraiCP']]]
 ];

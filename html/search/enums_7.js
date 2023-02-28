@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['pluginauthority_0',['PluginAuthority',['../a00304.html#a25dcf37316806dd07a4e960c5eb537a4',1,'LibLoader']]]
+  ['operation_5fset_0',['operation_set',['../a00412.html#a80a8ec1c1ed6fd9db32d9a878405d412',1,'MiraiCP::KtOperation']]]
 ];

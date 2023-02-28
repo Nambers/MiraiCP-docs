@@ -1,14 +1,15 @@
 var a00521 =
 [
-    [ "MemberJoinRequestEvent", "a00521.html#a205de53afc65122d17f336d9f1cacf01", null ],
-    [ "accept", "a00521.html#ace031723d310c72ed25b83485f66a034", null ],
-    [ "get_event_type", "a00521.html#a91bdec8138ea1cc5416cb0eb8427b45f", null ],
-    [ "operate", "a00521.html#a734601e2d26833d8056591d8ac2457b2", null ],
-    [ "reject", "a00521.html#a855d60c9e71eda3fd438e45728a8799d", null ],
-    [ "from", "a00521.html#a313f0577b5ece4ff0955322f59b93528", null ],
-    [ "fromNick", "a00521.html#ab1b5b0fb40c552ef63c6628712abff7a", null ],
-    [ "group", "a00521.html#a10b7aaaaf0e8f31c2f9cc0ffd40232b2", null ],
-    [ "inviter", "a00521.html#a1a2aa46fd5e85786f2e3858e12ceaeea", null ],
-    [ "message", "a00521.html#af8b8a41e8a844640d4544a5f96b35ed3", null ],
-    [ "source", "a00521.html#aa1b90d95a75a1e6b79aa54a777eb8bf7", null ]
+    [ "joinType", "a00521.html#a1d73fdd5e84653d078b859b37dd1bcc8", [
+      [ "error", "a00521.html#a1d73fdd5e84653d078b859b37dd1bcc8ac7223d287b6643e82449fdfc84a78b17", null ],
+      [ "invited", "a00521.html#a1d73fdd5e84653d078b859b37dd1bcc8aa328607b0546483fb4503bf453508821", null ],
+      [ "applied", "a00521.html#a1d73fdd5e84653d078b859b37dd1bcc8a24c75b1f74122bc5b2b618daa89b14c9", null ],
+      [ "rehab", "a00521.html#a1d73fdd5e84653d078b859b37dd1bcc8a0f0421157cba536506b325cefe9fac90", null ]
+    ] ],
+    [ "MemberJoinEvent", "a00521.html#a9d849d293475e646a0a443ec5052e55d", null ],
+    [ "get_event_type", "a00521.html#a314da8d93a0056d08d6fb8b87929584d", null ],
+    [ "group", "a00521.html#a1f879c48cc7b54fa387853b5330b0caf", null ],
+    [ "inviter", "a00521.html#ab23dddf1df4fa7d572f964fa3b3b6163", null ],
+    [ "member", "a00521.html#aa1a42b944df9f40fc96629a1c5687f01", null ],
+    [ "type", "a00521.html#aaef692838d233a5ddcf8d54e1b02eb40", null ]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['loader_5ftasks_0',['LOADER_TASKS',['../a00304.html#a30aa31bdebda65b5dc09459f065cf482',1,'LibLoader']]]
+  ['jointype_0',['joinType',['../a00521.html#a1d73fdd5e84653d078b859b37dd1bcc8',1,'MiraiCP::MemberJoinEvent']]]
 ];

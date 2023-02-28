@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['token_5fpaste_0',['TOKEN_PASTE',['../a00047.html#a57e68cabe5dc57561ba82a435a1a0017',1,'MiraiCPMacros.h']]],
-  ['token_5fpaste_5finner_1',['TOKEN_PASTE_INNER',['../a00047.html#a560afe6425907e31c77cc1ed4803cdac',1,'MiraiCPMacros.h']]]
+  ['plugin_5ferror_0',['PLUGIN_ERROR',['../a00044.html#a65f3816ccdd5cca99d33252c804602a9',1,'MiraiCPMacros.h']]],
+  ['plugin_5finfo_1',['PLUGIN_INFO',['../a00044.html#ac4ea748794ca932109fca8a936954720',1,'MiraiCPMacros.h']]],
+  ['plugin_5fnormal_2',['PLUGIN_NORMAL',['../a00044.html#a5ef35c73710d7e1047bf83809e40d2c8',1,'MiraiCPMacros.h']]]
 ];

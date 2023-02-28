@@ -1,11 +1,11 @@
 var a00233 =
 [
-    [ "timepoint", "a00233.html#a91a93a375d7ae2559c52cd9558e980a6", null ],
-    [ "empty", "a00233.html#a78d8064032b232026e0b8029723c0e1b", null ],
-    [ "loaderWakeCV", "a00233.html#a46f4ab12479d61956e7dc81cfb19fef5", null ],
-    [ "popSchedule", "a00233.html#a60264799b74fbe2b0466d1de609cf95b", null ],
-    [ "sendTimeoutEvent", "a00233.html#ac881189d7d1fb1cc7c41315fef6f46ad", null ],
-    [ "timer", "a00233.html#a746efd674de5c56de789a0c03be7948e", null ],
-    [ "mtx", "a00233.html#a4d9beebf77b42856a2c47963066eb462", null ],
-    [ "timerQueue", "a00233.html#a8a0a35d4e72578439fdedc6ab096c982", null ]
+    [ "LibLoader::LoaderBaseException", "a00777.html", "a00777" ],
+    [ "LibLoader::LoaderExceptionCRTP< T >", "a00781.html", "a00781" ],
+    [ "LibLoader::PluginLoadException", "a00785.html", "a00785" ],
+    [ "LibLoader::PluginAlreadyLoadedException", "a00789.html", "a00789" ],
+    [ "LibLoader::PluginAlreadyEnabledException", "a00793.html", "a00793" ],
+    [ "LibLoader::PluginNotLoadedException", "a00797.html", "a00797" ],
+    [ "LibLoader::PluginIdDuplicateException", "a00801.html", "a00801" ],
+    [ "LoaderException", "a00233.html#aed8445a0eae5bb7716661acb1fc42e66", null ]
 ];

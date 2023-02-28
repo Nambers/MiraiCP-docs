@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiraiCP: loaderMain.cpp 文件参考</title>
+<title>MiraiCP: ktInterface.h 文件参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -35,7 +35,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MiraiCP
-   &#160;<span id="projectnumber">v2.13.2</span>
+   &#160;<span id="projectnumber">v2.14.0</span>
    </div>
    <div id="projectbrief">MiraiCP api document</div>
   </td>
@@ -94,72 +94,205 @@ $(document).ready(function(){initNavTree('a00218.html',''); initResizable(); });
 
 <div class="header">
   <div class="summary">
-<a href="#namespaces">命名空间</a> &#124;
-<a href="#func-members">函数</a>  </div>
-  <div class="headertitle"><div class="title">loaderMain.cpp 文件参考</div></div>
+<a href="#func-members">函数</a> &#124;
+<a href="#var-members">变量</a>  </div>
+  <div class="headertitle"><div class="title">ktInterface.h 文件参考</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="a00086_source.html">loaderMain.h</a>&quot;</code><br />
-<code>#include &quot;BS_thread_pool.hpp&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00077_source.html">LoaderExceptions.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00080_source.html">LoaderLogger.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00089_source.html">LoaderTaskQueue.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00095_source.html">Plugin.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00101_source.html">PluginListManager.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00104_source.html">Scheduler.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00059_source.html">ThreadIdentify.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00056_source.html">redirectCout.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="a00242_source.html">LoaderMacro.h</a>&quot;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> loaderMain.cpp 的引用(Include)关系图:</div>
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> ktInterface.h 的引用(Include)关系图:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="a00219.svg" width="1607" height="560"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00219.svg" width="206" height="262"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+</div><div class="textblock"><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> 此图展示该文件直接或间接的被哪些文件引用了:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00220.svg" width="118" height="112"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </div>
 <p><a href="a00218_source.html">浏览源代码.</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
-命名空间</h2></td></tr>
-<tr class="memitem:a00304"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00304.html">LibLoader</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 函数</h2></td></tr>
-<tr class="memitem:a46f4ab12479d61956e7dc81cfb19fef5"><td class="memItemLeft" align="right" valign="top">std::condition_variable &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00304.html#a46f4ab12479d61956e7dc81cfb19fef5">LibLoader::loaderWakeCV</a> ()</td></tr>
-<tr class="separator:a46f4ab12479d61956e7dc81cfb19fef5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6cd5117c0adf23ed373edca65148a4fd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00304.html#a6cd5117c0adf23ed373edca65148a4fd">LibLoader::loader_enableAllPlugins</a> ()</td></tr>
-<tr class="separator:a6cd5117c0adf23ed373edca65148a4fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad3da09d6c8c2db437e3169b96ddb2ae9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00304.html#ad3da09d6c8c2db437e3169b96ddb2ae9">LibLoader::loader_disableAllPlugins</a> ()</td></tr>
-<tr class="separator:ad3da09d6c8c2db437e3169b96ddb2ae9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8eada9f54700edf5a2aa262e5d006691"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00304.html#a8eada9f54700edf5a2aa262e5d006691">LibLoader::loader_loadNewPlugin</a> (const std::string &amp;path, bool activateNow)</td></tr>
-<tr class="separator:a8eada9f54700edf5a2aa262e5d006691"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a52292cf621eb6c36b43047ee054c411d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00304.html#a52292cf621eb6c36b43047ee054c411d">LibLoader::loader_unloadPluginById</a> (const std::string &amp;id)</td></tr>
-<tr class="separator:a52292cf621eb6c36b43047ee054c411d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3f1b6298effea4f44e85e20b0a915c1d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00304.html#a3f1b6298effea4f44e85e20b0a915c1d">LibLoader::loader_enablePluginById</a> (const std::string &amp;id)</td></tr>
-<tr class="separator:a3f1b6298effea4f44e85e20b0a915c1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a04edf8e3eda892a478591ac18c05d9b5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00304.html#a04edf8e3eda892a478591ac18c05d9b5">LibLoader::loader_disablePluginById</a> (const std::string &amp;id)</td></tr>
-<tr class="separator:a04edf8e3eda892a478591ac18c05d9b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae2bf46cd649bb6979dd268bbc428e14c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00304.html#ae2bf46cd649bb6979dd268bbc428e14c">LibLoader::loader_reloadPluginById</a> (const std::string &amp;id)</td></tr>
-<tr class="separator:ae2bf46cd649bb6979dd268bbc428e14c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abc4b73a1b14010cd0c6e713d6579ef8b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00304.html#abc4b73a1b14010cd0c6e713d6579ef8b">LibLoader::loader_pluginEndByException</a> (const std::string &amp;id)</td></tr>
-<tr class="separator:abc4b73a1b14010cd0c6e713d6579ef8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae437cb8e58f9ddab116aa54e71d3891a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00304.html#ae437cb8e58f9ddab116aa54e71d3891a">LibLoader::loader_resetThreadByIndex</a> (const std::string &amp;index)</td></tr>
-<tr class="separator:ae437cb8e58f9ddab116aa54e71d3891a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a77243f9ea0159dbbb040b5eaf14113e2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00304.html#a77243f9ea0159dbbb040b5eaf14113e2">LibLoader::tick</a> () noexcept</td></tr>
-<tr class="separator:a77243f9ea0159dbbb040b5eaf14113e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a404a95877baaa83650de382c8896d80f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00304.html#a404a95877baaa83650de382c8896d80f">LibLoader::shouldTick</a> () noexcept</td></tr>
-<tr class="separator:a404a95877baaa83650de382c8896d80f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d68440994d4ab2136706628a2e6f77f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00242.html#acad5926f07c36447dfe9c95bc44c6569">LOADER_EXPORT</a> <a class="el" href="a00242.html#aa59fc32caa9a0e627c60a03a7a446c98">JRETURNTYPE</a> <a class="el" href="a00242.html#a70f859fa14d7c0bb2a19e4af118ee014">DECL_EXPORT_NAME</a>()&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00218.html#a3d68440994d4ab2136706628a2e6f77f">Verify</a> (<a class="el" href="a00242.html#a959f3b2a150b26823662a8c5de4af002">J_ARGS_AND_STRING</a>, <a class="el" href="a00242.html#aae63af684167e1a19dc5e3332dbc7238">JSTRING</a>)</td></tr>
+<tr class="separator:a3d68440994d4ab2136706628a2e6f77f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73d4a4e502a17765df566b528d6a9484"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00242.html#acad5926f07c36447dfe9c95bc44c6569">LOADER_EXPORT</a> <a class="el" href="a00242.html#aa59fc32caa9a0e627c60a03a7a446c98">JRETURNTYPE</a> <a class="el" href="a00242.html#a70f859fa14d7c0bb2a19e4af118ee014">DECL_EXPORT_NAME</a>()&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00218.html#a73d4a4e502a17765df566b528d6a9484">Event</a> (<a class="el" href="a00242.html#a959f3b2a150b26823662a8c5de4af002">J_ARGS_AND_STRING</a>)</td></tr>
+<tr class="separator:a73d4a4e502a17765df566b528d6a9484"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b230352980d44ad05ac47ceae3f007c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00242.html#acad5926f07c36447dfe9c95bc44c6569">LOADER_EXPORT</a> <a class="el" href="a00242.html#aa59fc32caa9a0e627c60a03a7a446c98">JRETURNTYPE</a> <a class="el" href="a00242.html#a70f859fa14d7c0bb2a19e4af118ee014">DECL_EXPORT_NAME</a>()&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00218.html#a3b230352980d44ad05ac47ceae3f007c">PluginDisable</a> (<a class="el" href="a00242.html#a919c2f594760ce688ff10318059a02b6">J_ARGS</a>)</td></tr>
+<tr class="separator:a3b230352980d44ad05ac47ceae3f007c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c4a7b01410b519eeff58a050bc194cb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00218.html#a0c4a7b01410b519eeff58a050bc194cb">registerMethods</a> (JNIEnv *env, const char *className, const JNINativeMethod *gMethods, int numMethods)</td></tr>
+<tr class="separator:a0c4a7b01410b519eeff58a050bc194cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+变量</h2></td></tr>
+<tr class="memitem:a54c4b6ec7b4876213ab9e9f888da04ec"><td class="memItemLeft" align="right" valign="top">const JNINativeMethod&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00218.html#a54c4b6ec7b4876213ab9e9f888da04ec">method_table</a> []</td></tr>
+<tr class="separator:a54c4b6ec7b4876213ab9e9f888da04ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">函数说明</h2>
+<a id="a73d4a4e502a17765df566b528d6a9484" name="a73d4a4e502a17765df566b528d6a9484"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73d4a4e502a17765df566b528d6a9484">&#9670;&nbsp;</a></span>Event()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00242.html#acad5926f07c36447dfe9c95bc44c6569">LOADER_EXPORT</a> <a class="el" href="a00242.html#aa59fc32caa9a0e627c60a03a7a446c98">JRETURNTYPE</a> <a class="el" href="a00242.html#a70f859fa14d7c0bb2a19e4af118ee014">DECL_EXPORT_NAME</a>() Event </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00242.html#a959f3b2a150b26823662a8c5de4af002">J_ARGS_AND_STRING</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3b230352980d44ad05ac47ceae3f007c" name="a3b230352980d44ad05ac47ceae3f007c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b230352980d44ad05ac47ceae3f007c">&#9670;&nbsp;</a></span>PluginDisable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00242.html#acad5926f07c36447dfe9c95bc44c6569">LOADER_EXPORT</a> <a class="el" href="a00242.html#aa59fc32caa9a0e627c60a03a7a446c98">JRETURNTYPE</a> <a class="el" href="a00242.html#a70f859fa14d7c0bb2a19e4af118ee014">DECL_EXPORT_NAME</a>() PluginDisable </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00242.html#a919c2f594760ce688ff10318059a02b6">J_ARGS</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0c4a7b01410b519eeff58a050bc194cb" name="a0c4a7b01410b519eeff58a050bc194cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c4a7b01410b519eeff58a050bc194cb">&#9670;&nbsp;</a></span>registerMethods()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int registerMethods </td>
+          <td>(</td>
+          <td class="paramtype">JNIEnv *&#160;</td>
+          <td class="paramname"><em>env</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>className</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const JNINativeMethod *&#160;</td>
+          <td class="paramname"><em>gMethods</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>numMethods</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="a00215_source.html">ktInterface.cpp</a> 第 <a class="el" href="a00215_source.html#l00144">144</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>                                                                                                         {</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>    jclass clazz = env-&gt;FindClass(className);</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>    <span class="keywordflow">if</span> (clazz == <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>        <span class="keywordflow">return</span> JNI_FALSE;</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>    }</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>    <span class="comment">//注册native方法</span></div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>    <span class="keywordflow">if</span> (env-&gt;RegisterNatives(clazz, gMethods, numMethods) &lt; 0) {</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>        <span class="keywordflow">return</span> JNI_FALSE;</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>    }</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    <span class="keywordflow">return</span> JNI_TRUE;</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>}</div>
+</div><!-- fragment --><div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-2-trigger" src="closed.png" alt="+"/> 这是这个函数的调用关系图:</div>
+<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-2-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00218_a0c4a7b01410b519eeff58a050bc194cb_icgraph.svg" width="266" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a3d68440994d4ab2136706628a2e6f77f" name="a3d68440994d4ab2136706628a2e6f77f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d68440994d4ab2136706628a2e6f77f">&#9670;&nbsp;</a></span>Verify()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00242.html#acad5926f07c36447dfe9c95bc44c6569">LOADER_EXPORT</a> <a class="el" href="a00242.html#aa59fc32caa9a0e627c60a03a7a446c98">JRETURNTYPE</a> <a class="el" href="a00242.html#a70f859fa14d7c0bb2a19e4af118ee014">DECL_EXPORT_NAME</a>() Verify </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00242.html#a959f3b2a150b26823662a8c5de4af002">J_ARGS_AND_STRING</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="a00242.html#aae63af684167e1a19dc5e3332dbc7238">JSTRING</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">变量说明</h2>
+<a id="a54c4b6ec7b4876213ab9e9f888da04ec" name="a54c4b6ec7b4876213ab9e9f888da04ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54c4b6ec7b4876213ab9e9f888da04ec">&#9670;&nbsp;</a></span>method_table</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const JNINativeMethod method_table[]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>初始值:</b><div class="fragment"><div class="line">{</div>
+<div class="line">        {(<span class="keywordtype">char</span> *) <span class="stringliteral">&quot;Verify&quot;</span>, (<span class="keywordtype">char</span> *) <span class="stringliteral">&quot;(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Void;&quot;</span>, (jstring *) <a class="code hl_function" href="a00218.html#a3d68440994d4ab2136706628a2e6f77f">Verify</a>},</div>
+<div class="line">        {(<span class="keywordtype">char</span> *) <span class="stringliteral">&quot;Event&quot;</span>, (<span class="keywordtype">char</span> *) <span class="stringliteral">&quot;(Ljava/lang/String;)Ljava/lang/Void;&quot;</span>, (jstring *) <a class="code hl_function" href="a00218.html#a73d4a4e502a17765df566b528d6a9484">Event</a>},</div>
+<div class="line">        {(<span class="keywordtype">char</span> *) <span class="stringliteral">&quot;PluginDisable&quot;</span>, (<span class="keywordtype">char</span> *) <span class="stringliteral">&quot;()Ljava/lang/Void;&quot;</span>, (jobject *) <a class="code hl_function" href="a00218.html#a3b230352980d44ad05ac47ceae3f007c">PluginDisable</a>}}</div>
+<div class="ttc" id="aa00218_html_a3b230352980d44ad05ac47ceae3f007c"><div class="ttname"><a href="a00218.html#a3b230352980d44ad05ac47ceae3f007c">PluginDisable</a></div><div class="ttdeci">LOADER_EXPORT JRETURNTYPE DECL_EXPORT_NAME() PluginDisable(J_ARGS)</div></div>
+<div class="ttc" id="aa00218_html_a3d68440994d4ab2136706628a2e6f77f"><div class="ttname"><a href="a00218.html#a3d68440994d4ab2136706628a2e6f77f">Verify</a></div><div class="ttdeci">LOADER_EXPORT JRETURNTYPE DECL_EXPORT_NAME() Verify(J_ARGS_AND_STRING, JSTRING)</div></div>
+<div class="ttc" id="aa00218_html_a73d4a4e502a17765df566b528d6a9484"><div class="ttname"><a href="a00218.html#a73d4a4e502a17765df566b528d6a9484">Event</a></div><div class="ttdeci">LOADER_EXPORT JRETURNTYPE DECL_EXPORT_NAME() Event(J_ARGS_AND_STRING)</div></div>
+</div><!-- fragment -->
+<p class="definition">在文件 <a class="el" href="a00218_source.html">ktInterface.h</a> 第 <a class="el" href="a00218_source.html#l00034">34</a> 行定义.</p>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_23c80554d3059e776f1fa3b42eea10c0.html">libloader</a></li><li class="navelem"><a class="el" href="a00218.html">loaderMain.cpp</a></li>
-    <li class="footer">生成于 2023年 一月 27日 星期五 00:14:10 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_23c80554d3059e776f1fa3b42eea10c0.html">libloader</a></li><li class="navelem"><a class="el" href="a00218.html">ktInterface.h</a></li>
+    <li class="footer">生成于 2023年 二月 28日 星期二 12:14:07 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
     </body>

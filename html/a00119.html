@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiraiCP: Event.h 文件参考</title>
+<title>MiraiCP: TimeOutEvent.h 文件参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -35,7 +35,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MiraiCP
-   &#160;<span id="projectnumber">v2.13.2</span>
+   &#160;<span id="projectnumber">v2.14.0</span>
    </div>
    <div id="projectbrief">MiraiCP api document</div>
   </td>
@@ -95,24 +95,18 @@ $(document).ready(function(){initNavTree('a00119.html',''); initResizable(); });
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">类</a> &#124;
-<a href="#namespaces">命名空间</a> &#124;
-<a href="#typedef-members">类型定义</a> &#124;
-<a href="#enum-members">枚举</a>  </div>
-  <div class="headertitle"><div class="title">Event.h 文件参考</div></div>
+<a href="#namespaces">命名空间</a>  </div>
+  <div class="headertitle"><div class="title">TimeOutEvent.h 文件参考</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="a00107_source.html">Bot.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00128_source.html">Friend.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00131_source.html">Group.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00143_source.html">Logger.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00149_source.html">Member.h</a>&quot;</code><br />
-<code>#include &lt;utility&gt;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="a00077_source.html">EventBase.h</a>&quot;</code><br />
+<code>#include &lt;string&gt;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Event.h 的引用(Include)关系图:</div>
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> TimeOutEvent.h 的引用(Include)关系图:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="a00120.svg" width="1576" height="859"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00120.svg" width="387" height="187"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </div><div class="textblock"><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -120,7 +114,7 @@ $(document).ready(function(){initNavTree('a00119.html',''); initResizable(); });
 <div id="dynsection-1-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="a00121.svg" width="1406" height="262"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00121.svg" width="126" height="112"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </div>
@@ -128,122 +122,14 @@ $(document).ready(function(){initNavTree('a00119.html',''); initResizable(); });
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 类</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00445.html">MiraiCP::BaseEventData</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00449.html">MiraiCP::BaseEventData::BuiltInContact</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00453.html">MiraiCP::MiraiCPEvent</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event抽象父类  <a href="a00453.html#details">更多...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00457.html">MiraiCP::BotEvent&lt; T &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">所有事件处理timeoutevent都是机器人事件，指都有机器人实例  <a href="a00457.html#details">更多...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00461.html">MiraiCP::IMessageEvent</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">MessageEvent类型的抽象接口，用于Message类型多态实现  <a href="a00461.html#details">更多...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00465.html">MiraiCP::GroupMessageEvent</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">群消息事件声明  <a href="a00465.html#details">更多...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00469.html">MiraiCP::PrivateMessageEvent</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00473.html">MiraiCP::GroupInviteEvent</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">群聊邀请事件类声明  <a href="a00473.html#details">更多...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00477.html">MiraiCP::NewFriendRequestEvent</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">好友申请事件声明  <a href="a00477.html#details">更多...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00481.html">MiraiCP::MemberJoinEvent</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">新群成员加入  <a href="a00481.html#details">更多...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00485.html">MiraiCP::MemberLeaveEvent</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">群成员离开  <a href="a00485.html#details">更多...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00489.html">MiraiCP::FriendRecallEvent</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00493.html">MiraiCP::MemberRecallEvent</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00497.html">MiraiCP::BotJoinGroupEvent</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">机器人进入某群  <a href="a00497.html#details">更多...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00501.html">MiraiCP::GroupTempMessageEvent</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">群临时会话  <a href="a00501.html#details">更多...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00505.html">MiraiCP::TimeOutEvent</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">定时任务结束  <a href="a00505.html#details">更多...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00509.html">MiraiCP::BotOnlineEvent</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">机器人上线事件  <a href="a00509.html#details">更多...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00513.html">MiraiCP::NudgeEvent</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00517.html">MiraiCP::BotLeaveEvent</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00521.html">MiraiCP::MemberJoinRequestEvent</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">申请加群事件, bot需为管理员或者群主  <a href="a00521.html#details">更多...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00525.html">MiraiCP::MessagePreSendEvent</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00529.html">MiraiCP::MiraiCPExceptionEvent</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">异常抛出事件  <a href="a00529.html#details">更多...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00533.html">MiraiCP::NodeHandle</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">事件监听操控, 可用于stop停止监听和resume继续监听  <a href="a00533.html#details">更多...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00537.html">MiraiCP::Event</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00541.html">MiraiCP::Event::eventNode</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00557.html">MiraiCP::TimeOutEvent</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">定时任务结束  <a href="a00557.html#details">更多...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
 命名空间</h2></td></tr>
-<tr class="memitem:a00305"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00305.html">MiraiCP</a></td></tr>
+<tr class="memitem:a00394"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00394.html">MiraiCP</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00311"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00311.html">MiraiCP::eventTypes</a></td></tr>
-<tr class="memdesc:a00311"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00537.html">Event</a> 工厂 <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00312"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00312.html">MiraiCP::RecallEvent</a></td></tr>
-<tr class="memdesc:a00312"><td class="mdescLeft">&#160;</td><td class="mdescRight">撤回信息 <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
-类型定义</h2></td></tr>
-<tr class="memitem:ad8434a648fb3e49549d4455e8b319b3f"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00312.html#ad8434a648fb3e49549d4455e8b319b3f">MiraiCP::RecallEvent::FriendRecallEvent</a> = FriendRecallEvent</td></tr>
-<tr class="separator:ad8434a648fb3e49549d4455e8b319b3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa861a274e10e415dd6e51836ad98e4e7"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00312.html#aa861a274e10e415dd6e51836ad98e4e7">MiraiCP::RecallEvent::MemberRecallEvent</a> = MemberRecallEvent</td></tr>
-<tr class="separator:aa861a274e10e415dd6e51836ad98e4e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
-枚举</h2></td></tr>
-<tr class="memitem:abe9e9d8212ea8f23717b72db64393cab"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00311.html#abe9e9d8212ea8f23717b72db64393cab">MiraiCP::eventTypes::Types</a> { <br />
-&#160;&#160;<a class="el" href="a00311.html#abe9e9d8212ea8f23717b72db64393caba497dd3a8c7ae19e8a6a5e16e5e546e32">MiraiCP::eventTypes::BaseEvent</a> = -1
-, <a class="el" href="a00311.html#abe9e9d8212ea8f23717b72db64393cabac9323a42c3ef5f080ec21384295543f5">MiraiCP::eventTypes::BotOnlineEvent</a>
-, <a class="el" href="a00311.html#abe9e9d8212ea8f23717b72db64393cabadc958c860c6a02731d1f2aaf73935643">MiraiCP::eventTypes::BotJoinGroupEvent</a>
-, <a class="el" href="a00311.html#abe9e9d8212ea8f23717b72db64393cabaa0c1608d4d5428440a6880a212510e8e">MiraiCP::eventTypes::GroupInviteEvent</a>
-, <br />
-&#160;&#160;<a class="el" href="a00311.html#abe9e9d8212ea8f23717b72db64393cabab9a57352711dc24a722df5dc49b41807">MiraiCP::eventTypes::BotLeaveEvent</a>
-, <a class="el" href="a00311.html#abe9e9d8212ea8f23717b72db64393caba8e6bc9ebd9275c097d20c428d8f97fe9">MiraiCP::eventTypes::FriendMessageEvent</a>
-, <a class="el" href="a00311.html#abe9e9d8212ea8f23717b72db64393cabaca8073196614a985e9fcc7d2f964473c">MiraiCP::eventTypes::GroupMessageEvent</a>
-, <a class="el" href="a00311.html#abe9e9d8212ea8f23717b72db64393caba82138ba7d5017c9976f29de9213836dd">MiraiCP::eventTypes::GroupTempMessageEvent</a>
-, <br />
-&#160;&#160;<a class="el" href="a00311.html#abe9e9d8212ea8f23717b72db64393cabad0495f71a0d3c4228f2a5508f74f2cdb">MiraiCP::eventTypes::FriendRecallEvent</a>
-, <a class="el" href="a00311.html#abe9e9d8212ea8f23717b72db64393caba90080ec61703f479ca69d73d71f9ffe9">MiraiCP::eventTypes::MemberRecallEvent</a>
-, <a class="el" href="a00311.html#abe9e9d8212ea8f23717b72db64393cabaa46d082c80e10281a6f1f0ca942f0a1b">MiraiCP::eventTypes::MessagePreSendEvent</a>
-, <a class="el" href="a00311.html#abe9e9d8212ea8f23717b72db64393cabac32189a68a5af3a5c766f1a66d3b6e9f">MiraiCP::eventTypes::NudgeEvent</a>
-, <br />
-&#160;&#160;<a class="el" href="a00311.html#abe9e9d8212ea8f23717b72db64393caba8a554c168e28786de2f8f8991085ebd4">MiraiCP::eventTypes::NewFriendRequestEvent</a>
-, <a class="el" href="a00311.html#abe9e9d8212ea8f23717b72db64393cabae02e88376bb6d48bad1e5bcd1da1e581">MiraiCP::eventTypes::MemberLeaveEvent</a>
-, <a class="el" href="a00311.html#abe9e9d8212ea8f23717b72db64393cabaf84be9f6031b8901001ee5c3d880d3ce">MiraiCP::eventTypes::MemberJoinEvent</a>
-, <a class="el" href="a00311.html#abe9e9d8212ea8f23717b72db64393cabaa4feb188b3065acdf14ff19265a4ddb6">MiraiCP::eventTypes::MemberJoinRequestEvent</a>
-, <br />
-&#160;&#160;<a class="el" href="a00311.html#abe9e9d8212ea8f23717b72db64393caba8a7946c3deb653b0fa55009d6373403c">MiraiCP::eventTypes::TimeOutEvent</a>
-, <a class="el" href="a00311.html#abe9e9d8212ea8f23717b72db64393cabae45271795e11748f69a8762e52630d6e">MiraiCP::eventTypes::MiraiCPExceptionEvent</a> = 16
-, <a class="el" href="a00311.html#abe9e9d8212ea8f23717b72db64393caba5c5efe6fe256e4eb53a217cac3a84233">MiraiCP::eventTypes::Command</a> = 17
-, <a class="el" href="a00311.html#abe9e9d8212ea8f23717b72db64393caba19263cbf330b3b5fac1b6dbd09ccc34b">MiraiCP::eventTypes::count</a>
-, <br />
-&#160;&#160;<a class="el" href="a00311.html#abe9e9d8212ea8f23717b72db64393caba9b91a91250df41da2b9434cca56ada58">MiraiCP::eventTypes::error</a>
-<br />
- }</td></tr>
-<tr class="separator:abe9e9d8212ea8f23717b72db64393cab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -251,8 +137,8 @@ $(document).ready(function(){initNavTree('a00119.html',''); initResizable(); });
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_1ede18532ce6284c46efe733029b594d.html">sdk</a></li><li class="navelem"><a class="el" href="a00119.html">Event.h</a></li>
-    <li class="footer">生成于 2023年 一月 27日 星期五 00:14:10 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_1ede18532ce6284c46efe733029b594d.html">sdk</a></li><li class="navelem"><a class="el" href="dir_f83dc716b95661d1ef88f368581b25fb.html">Events</a></li><li class="navelem"><a class="el" href="a00119.html">TimeOutEvent.h</a></li>
+    <li class="footer">生成于 2023年 二月 28日 星期二 12:14:06 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
     </body>

@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiraiCP: ThreadIdentify.cpp 源文件</title>
+<title>MiraiCP: WindowsMin.h 源文件</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -35,7 +35,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MiraiCP
-   &#160;<span id="projectnumber">v2.13.2</span>
+   &#160;<span id="projectnumber">v2.14.0</span>
    </div>
    <div id="projectbrief">MiraiCP api document</div>
   </td>
@@ -93,130 +93,86 @@ $(document).ready(function(){initNavTree('a00191_source.html',''); initResizable
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">ThreadIdentify.cpp</div></div>
+  <div class="headertitle"><div class="title">WindowsMin.h</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="a00191.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">//</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">// Created by 60168 on 2023-1-25.</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">//</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="a00059.html">ThreadIdentify.h</a>&quot;</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;mutex&gt;</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;shared_mutex&gt;</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;thread&gt;</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;unordered_map&gt;</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#if MIRAICP_MSVC </span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;Windows.h&gt;</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;processthreadsapi.h&gt;</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#define SET_THREADNAME(name)                                   \</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">    size_t len = strlen(name);                                 \</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">    std::wstring wst(len + 1, &#39;#&#39;);                            \</span></div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">    size_t num_convert;                                        \</span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">    mbstowcs_s(&amp;num_convert, &amp;wst[0], len + 1, name, len + 1); \</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">    SetThreadDescription(GetCurrentThread(), &amp;wst[0])</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#define GET_THREADNAME(buffer, buffersize)                 \</span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">    wchar_t *wbuf;                                         \</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">    GetThreadDescription(GetCurrentThread(), &amp;wbuf);       \</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">    size_t num_convert;                                    \</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">    wcstombs_s(&amp;num_convert, buf, bufsize, wbuf, bufsize); \</span></div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">    LocalFree(wbuf);</span></div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#elif defined(_POSIX_THREADS) </span></div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#ifdef PTHREAD_SET_SUPPORTED</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#define SET_THREADNAME(name) pthread_setname_np(pthread_self(), name)</span></div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#else</span></div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#define SET_THREADNAME(name)</span></div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="preprocessor">#ifdef PTHREAD_GET_SUPPORTED</span></div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="preprocessor">#define GET_THREADNAME(buffer, buffersize) pthread_getname_np(pthread_self(), buffer, buffersize);</span></div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="preprocessor">#else</span></div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="preprocessor">#define GET_THREADNAME(buffer, buffersize) buffer[0] = 0</span></div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="preprocessor">#else </span></div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="a00191.html#afdf9b55ee6d4f7c29bc91aa7e057bdbe">   43</a></span><span class="preprocessor">#define SET_THREADNAME(name)</span></div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="a00191.html#a1c725cadd47b1c5bcd058972a3b25649">   44</a></span><span class="preprocessor">#define GET_THREADNAME(buffer, buffersize) buffer[0] = 0</span></div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="keyword">namespace </span><a class="code hl_namespace" href="a00308.html">ThreadIdentify</a> {</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="a00308.html#abb6b4c94c7b96aa0e90c6aa49d6dfa4c">   49</a></span>    <span class="keyword">thread_local</span> <span class="keywordtype">bool</span> <a class="code hl_variable" href="a00308.html#abb6b4c94c7b96aa0e90c6aa49d6dfa4c">isPoolThread</a> = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="a00308.html#ad7e184503357fc21c89db5b72220432c">   50</a></span>    <span class="keyword">thread_local</span> <span class="keywordtype">bool</span> <a class="code hl_variable" href="a00308.html#ad7e184503357fc21c89db5b72220432c">isLoaderThread</a> = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="a00308.html#ada5de831f5a14655f1dd31e6323f7831">   52</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="a00308.html#ada5de831f5a14655f1dd31e6323f7831">IAmPoolThread</a>() {</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        <a class="code hl_variable" href="a00308.html#abb6b4c94c7b96aa0e90c6aa49d6dfa4c">isPoolThread</a> = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        <a class="code hl_define" href="a00191.html#afdf9b55ee6d4f7c29bc91aa7e057bdbe">SET_THREADNAME</a>(<span class="stringliteral">&quot;LoaderWorker&quot;</span>);</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    }</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="a00308.html#a187efcd02c7ac8566c197f343b661c32">   57</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="a00308.html#a187efcd02c7ac8566c197f343b661c32">isMePoolThread</a>() {</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="a00308.html#abb6b4c94c7b96aa0e90c6aa49d6dfa4c">isPoolThread</a>;</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    }</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="a00308.html#ad607328dd0f3a6cb59e4805057a406e4">   61</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="a00308.html#ad607328dd0f3a6cb59e4805057a406e4">IAmLoaderThread</a>() {</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        <a class="code hl_variable" href="a00308.html#ad7e184503357fc21c89db5b72220432c">isLoaderThread</a> = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        <a class="code hl_define" href="a00191.html#afdf9b55ee6d4f7c29bc91aa7e057bdbe">SET_THREADNAME</a>(<span class="stringliteral">&quot;libLoader&quot;</span>);</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    }</div>
+<a href="a00191.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// Copyright (c) 2022. Eritque arcus and contributors.</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">//</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">// This program is free software: you can redistribute it and/or modify</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">// it under the terms of the GNU Affero General Public License as</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">// published by the Free Software Foundation, either version 3 of the</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">// License, or any later version(in your opinion).</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment">//</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment">// This program is distributed in the hope that it will be useful,</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment">// but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment">// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment">// GNU Affero General Public License for more details.</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment">//</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">// You should have received a copy of the GNU Affero General Public License</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">// along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">//</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#ifndef MIRAICP_PRO_WINDOWSMIN_H</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#define MIRAICP_PRO_WINDOWSMIN_H</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &quot;<a class="code" href="a00044.html">MiraiCPMacros.h</a>&quot;</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#if MIRAICP_WINDOWS</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment">// 定义下面这些宏以去掉Windows中那些没用的组件</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#ifndef FULL_WINTARD</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#define WIN32_LEAN_AND_MEAN</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#define NOGDICAPMASKS</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#define NOSYSMETRICS</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#define NOMENUS</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#define NOICONS</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#define NOSYSCOMMANDS</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#define NORASTEROPS</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">#define OEMRESOURCE</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#define NOATOM</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="preprocessor">#define NOCLIPBOARD</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="preprocessor">#define NOCOLOR</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="preprocessor">#define NOCTLMGR</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="preprocessor">#define NODRAWTEXT</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="preprocessor">#define NOKERNEL</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="preprocessor">#define NOMEMMGR</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="preprocessor">#define NOMETAFILE</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="preprocessor">#define NOOPENFILE</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="preprocessor">#define NOSCROLL</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="preprocessor">#define NOSERVICE</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="preprocessor">#define NOSOUND</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="preprocessor">#define NOTEXTMETRIC</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="preprocessor">#define NOWH</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="preprocessor">#define NOCOMM</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="preprocessor">#define NOKANJI</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="preprocessor">#define NOHELP</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="preprocessor">#define NOPROFILER</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="preprocessor">#define NODEFERWINDOWPOS</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="preprocessor">#define NOMCX</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="preprocessor">#define NORPC</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="preprocessor">#define NOPROXYSTUB</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="preprocessor">#define NOIMAGE</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="preprocessor">#define NOTAPE</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="preprocessor">#ifndef NOMINMAX</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="preprocessor">#define NOMINMAX</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="preprocessor">#include &lt;Windows.h&gt;</span></div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="a00308.html#ab77cc1ce58a450e4bfea6e3fdc065c33">   66</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="a00308.html#ab77cc1ce58a450e4bfea6e3fdc065c33">isMeLoaderThread</a>() {</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="a00308.html#ad7e184503357fc21c89db5b72220432c">isLoaderThread</a>;</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    }</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="a00308.html#a8b3ed2edac9bce5e2c943ac9295c66ec">   70</a></span>    <span class="keyword">using</span> <span class="keywordtype">id</span> = <a class="code hl_typedef" href="a00308.html#a8b3ed2edac9bce5e2c943ac9295c66ec">std::thread::id</a>;</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="a00308.html#ad0bda5e6cd7c7f38c830232faead2fb0">   71</a></span>    std::unordered_map&lt;id, std::string&gt; <a class="code hl_variable" href="a00308.html#ad0bda5e6cd7c7f38c830232faead2fb0">Identify</a>;</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="a00308.html#a81d3c5799d01e961558b108a82db5bd2">   72</a></span>    std::shared_mutex <a class="code hl_variable" href="a00308.html#a81d3c5799d01e961558b108a82db5bd2">mtx</a>;</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="a00308.html#ab6d8c466e32a47712f9206f9673b7067">   74</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="a00308.html#ab6d8c466e32a47712f9206f9673b7067">setMyThreadName</a>(<span class="keyword">const</span> std::string &amp;name) {</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        std::unique_lock _lk(<a class="code hl_variable" href="a00308.html#a81d3c5799d01e961558b108a82db5bd2">mtx</a>);</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        <span class="keyword">auto</span> success = <a class="code hl_variable" href="a00308.html#ad0bda5e6cd7c7f38c830232faead2fb0">Identify</a>.insert({std::this_thread::get_id(), name}).second;</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        <span class="keywordflow">if</span> (!success) {</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>            <span class="comment">// todo</span></div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        }</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        std::string t;</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="preprocessor">#if defined(_POSIX_THREADS) &amp;&amp; defined(PTHREAD_SET_SUPPORTED)</span></div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        <span class="comment">// 受限于Linux内核，只取前15个char，否则会失败</span></div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        <span class="keywordflow">if</span> (name.size() &gt; 15) {</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>            t.append(std::string_view(name), 15);</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>            t = name;</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        }</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        <a class="code hl_define" href="a00191.html#afdf9b55ee6d4f7c29bc91aa7e057bdbe">SET_THREADNAME</a>(t.c_str());</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="preprocessor">#else</span></div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        t = name;</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        <a class="code hl_define" href="a00191.html#afdf9b55ee6d4f7c29bc91aa7e057bdbe">SET_THREADNAME</a>(t.c_str());</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    }</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno"><a class="line" href="a00308.html#a1ebc3225eaad0bd5657f6f5e049b802c">   95</a></span>    std::string <a class="code hl_function" href="a00308.html#a1ebc3225eaad0bd5657f6f5e049b802c">identifyMe</a>() {</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        std::shared_lock _lk(<a class="code hl_variable" href="a00308.html#a81d3c5799d01e961558b108a82db5bd2">mtx</a>);</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="a00308.html#ad0bda5e6cd7c7f38c830232faead2fb0">Identify</a>[std::this_thread::get_id()];</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    }</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>} <span class="comment">// namespace ThreadIdentify</span></div>
-<div class="ttc" id="aa00059_html"><div class="ttname"><a href="a00059.html">ThreadIdentify.h</a></div></div>
-<div class="ttc" id="aa00191_html_afdf9b55ee6d4f7c29bc91aa7e057bdbe"><div class="ttname"><a href="a00191.html#afdf9b55ee6d4f7c29bc91aa7e057bdbe">SET_THREADNAME</a></div><div class="ttdeci">#define SET_THREADNAME(name)</div><div class="ttdoc">Windows case</div><div class="ttdef"><b>Definition:</b> <a href="a00191_source.html#l00043">ThreadIdentify.cpp:43</a></div></div>
-<div class="ttc" id="aa00308_html"><div class="ttname"><a href="a00308.html">ThreadIdentify</a></div><div class="ttdef"><b>Definition:</b> <a href="a00059_source.html#l00022">ThreadIdentify.h:22</a></div></div>
-<div class="ttc" id="aa00308_html_a187efcd02c7ac8566c197f343b661c32"><div class="ttname"><a href="a00308.html#a187efcd02c7ac8566c197f343b661c32">ThreadIdentify::isMePoolThread</a></div><div class="ttdeci">bool isMePoolThread()</div><div class="ttdef"><b>Definition:</b> <a href="a00191_source.html#l00057">ThreadIdentify.cpp:57</a></div></div>
-<div class="ttc" id="aa00308_html_a1ebc3225eaad0bd5657f6f5e049b802c"><div class="ttname"><a href="a00308.html#a1ebc3225eaad0bd5657f6f5e049b802c">ThreadIdentify::identifyMe</a></div><div class="ttdeci">std::string identifyMe()</div><div class="ttdef"><b>Definition:</b> <a href="a00191_source.html#l00095">ThreadIdentify.cpp:95</a></div></div>
-<div class="ttc" id="aa00308_html_a81d3c5799d01e961558b108a82db5bd2"><div class="ttname"><a href="a00308.html#a81d3c5799d01e961558b108a82db5bd2">ThreadIdentify::mtx</a></div><div class="ttdeci">std::shared_mutex mtx</div><div class="ttdef"><b>Definition:</b> <a href="a00191_source.html#l00072">ThreadIdentify.cpp:72</a></div></div>
-<div class="ttc" id="aa00308_html_a8b3ed2edac9bce5e2c943ac9295c66ec"><div class="ttname"><a href="a00308.html#a8b3ed2edac9bce5e2c943ac9295c66ec">ThreadIdentify::id</a></div><div class="ttdeci">std::thread::id id</div><div class="ttdef"><b>Definition:</b> <a href="a00191_source.html#l00070">ThreadIdentify.cpp:70</a></div></div>
-<div class="ttc" id="aa00308_html_ab6d8c466e32a47712f9206f9673b7067"><div class="ttname"><a href="a00308.html#ab6d8c466e32a47712f9206f9673b7067">ThreadIdentify::setMyThreadName</a></div><div class="ttdeci">void setMyThreadName(const std::string &amp;name)</div><div class="ttdef"><b>Definition:</b> <a href="a00191_source.html#l00074">ThreadIdentify.cpp:74</a></div></div>
-<div class="ttc" id="aa00308_html_ab77cc1ce58a450e4bfea6e3fdc065c33"><div class="ttname"><a href="a00308.html#ab77cc1ce58a450e4bfea6e3fdc065c33">ThreadIdentify::isMeLoaderThread</a></div><div class="ttdeci">bool isMeLoaderThread()</div><div class="ttdef"><b>Definition:</b> <a href="a00191_source.html#l00066">ThreadIdentify.cpp:66</a></div></div>
-<div class="ttc" id="aa00308_html_abb6b4c94c7b96aa0e90c6aa49d6dfa4c"><div class="ttname"><a href="a00308.html#abb6b4c94c7b96aa0e90c6aa49d6dfa4c">ThreadIdentify::isPoolThread</a></div><div class="ttdeci">thread_local bool isPoolThread</div><div class="ttdef"><b>Definition:</b> <a href="a00191_source.html#l00049">ThreadIdentify.cpp:49</a></div></div>
-<div class="ttc" id="aa00308_html_ad0bda5e6cd7c7f38c830232faead2fb0"><div class="ttname"><a href="a00308.html#ad0bda5e6cd7c7f38c830232faead2fb0">ThreadIdentify::Identify</a></div><div class="ttdeci">std::unordered_map&lt; id, std::string &gt; Identify</div><div class="ttdef"><b>Definition:</b> <a href="a00191_source.html#l00071">ThreadIdentify.cpp:71</a></div></div>
-<div class="ttc" id="aa00308_html_ad607328dd0f3a6cb59e4805057a406e4"><div class="ttname"><a href="a00308.html#ad607328dd0f3a6cb59e4805057a406e4">ThreadIdentify::IAmLoaderThread</a></div><div class="ttdeci">void IAmLoaderThread()</div><div class="ttdef"><b>Definition:</b> <a href="a00191_source.html#l00061">ThreadIdentify.cpp:61</a></div></div>
-<div class="ttc" id="aa00308_html_ad7e184503357fc21c89db5b72220432c"><div class="ttname"><a href="a00308.html#ad7e184503357fc21c89db5b72220432c">ThreadIdentify::isLoaderThread</a></div><div class="ttdeci">thread_local bool isLoaderThread</div><div class="ttdef"><b>Definition:</b> <a href="a00191_source.html#l00050">ThreadIdentify.cpp:50</a></div></div>
-<div class="ttc" id="aa00308_html_ada5de831f5a14655f1dd31e6323f7831"><div class="ttname"><a href="a00308.html#ada5de831f5a14655f1dd31e6323f7831">ThreadIdentify::IAmPoolThread</a></div><div class="ttdeci">void IAmPoolThread()</div><div class="ttdef"><b>Definition:</b> <a href="a00191_source.html#l00052">ThreadIdentify.cpp:52</a></div></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="preprocessor">#endif </span><span class="comment">//MIRAICP_WINDOWS</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="preprocessor">#endif </span><span class="comment">//MIRAICP_PRO_WINDOWSMIN_H</span></div>
+<div class="ttc" id="aa00044_html"><div class="ttname"><a href="a00044.html">MiraiCPMacros.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_fdedb0aba14d44ce9d99bc100e026e6a.html">common</a></li><li class="navelem"><a class="el" href="a00191.html">ThreadIdentify.cpp</a></li>
-    <li class="footer">生成于 2023年 一月 27日 星期五 00:14:10 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_fdedb0aba14d44ce9d99bc100e026e6a.html">common</a></li><li class="navelem"><a class="el" href="a00191.html">WindowsMin.h</a></li>
+    <li class="footer">生成于 2023年 二月 28日 星期二 12:14:05 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
     </body>

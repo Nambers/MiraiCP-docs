@@ -1,15 +1,13 @@
 var a00545 =
 [
-    [ "string", "a00545.html#ae7cf7e3913c2067517d3f40ff1c9a14d", null ],
-    [ "MiraiCPExceptionBase", "a00545.html#a055eb6e4a0899678793b0e4106fbf493", null ],
-    [ "~MiraiCPExceptionBase", "a00545.html#ac7fe834dc2b81b3c0d44dde55b796ac6", null ],
-    [ "basicRaise", "a00545.html#aec8e8e400265242bd3a9998af6b55880", null ],
-    [ "exceptionType", "a00545.html#a62ccfc566b59f882d0623f8e24757809", null ],
-    [ "getError", "a00545.html#a68c0d665c09da7144da6a63fd26f2dd0", null ],
-    [ "getExceptionType", "a00545.html#a55544c06d6fea1a7696421383e155f13", null ],
-    [ "raise", "a00545.html#a27e4eaeb594e067089585f1975b7eb74", null ],
-    [ "what", "a00545.html#aaac831e38c70fa529b8894b825dba04c", null ],
-    [ "filename", "a00545.html#a5d5876720c98c5c3ef2fcd2a20a0cb72", null ],
-    [ "lineNum", "a00545.html#a8724c76817d0af9f3f8fef9a6ca7f60a", null ],
-    [ "re", "a00545.html#a2eb4b42c95d1ecbc6333129ecf8c5592", null ]
+    [ "NewFriendRequestEvent", "a00545.html#a9d4028d4cc5c401c0065ae73a39647d0", null ],
+    [ "accept", "a00545.html#a460bb7fc7e69cf313e3902ae0101b459", null ],
+    [ "get_event_type", "a00545.html#a53ffb1428471bb194297d75715d964cf", null ],
+    [ "reject", "a00545.html#a887c0777813d171d8fd4241e5d6c7357", null ],
+    [ "from", "a00545.html#abb45902bd266d56fba5af99a6426c520", null ],
+    [ "fromGroup", "a00545.html#ab134e9ec9f86cdef6e02a7ce71fa57ce", null ],
+    [ "message", "a00545.html#a914502cfd8ab0db7ea570240f0bb56e5", null ],
+    [ "nick", "a00545.html#aac9936ee444a019ef2c988a4ed369b55", null ],
+    [ "requestEventId", "a00545.html#af25c77fb53186b00c3267e0f12d41c23", null ],
+    [ "source", "a00545.html#a4b48f29f9ac4443abf0a76590690a897", null ]
 ];

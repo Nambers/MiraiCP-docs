@@ -1,12 +1,8 @@
 var a00705 =
 [
-    [ "Super", "a00705.html#a7be466c4505304684ad67562567f6b1e", null ],
-    [ "Message", "a00705.html#a578443155b3d0c2c6cee9bb31b8928b8", null ],
-    [ "Message", "a00705.html#acedff3b634af4bf5cb2dbcc045119376", null ],
-    [ "getType", "a00705.html#a03b17687e7f27c5cc54e20b06192146e", null ],
-    [ "getVal", "a00705.html#aa26b32f1ea57c32a071cc7bd052ca565", null ],
-    [ "operator!=", "a00705.html#a7bf0df1c342858b560bd037b575d6d58", null ],
-    [ "operator==", "a00705.html#ac09fb6e7ab5e00c405e7bd969ffd39c4", null ],
-    [ "toJson", "a00705.html#a5f89ea721c218405d1eb7037b83f8e8d", null ],
-    [ "toMiraiCode", "a00705.html#a0cef774c0356349acaca5f78271f3849", null ]
+    [ "expirytime", "a00705.html#a666efd0312dcc5805394a02ff7c326bb", null ],
+    [ "lastmodifytime", "a00705.html#a8597f745a6869003efa097519bf34148", null ],
+    [ "size", "a00705.html#a35cc1f23bf34db4184696833b12e4605", null ],
+    [ "uploaderid", "a00705.html#accf1835e308104bde941d72053d5c5a7", null ],
+    [ "uploadtime", "a00705.html#ab5f94fd436b08eb8963d7c5d8d4907b4", null ]
 ];

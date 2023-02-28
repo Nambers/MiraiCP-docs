@@ -1,10 +1,17 @@
 var a00493 =
 [
-    [ "MemberRecallEvent", "a00493.html#ae2531a88731e49d91180cc0c890fa24d", null ],
-    [ "get_event_type", "a00493.html#aa6f3ad8649a79e18d462e9ec112ecd81", null ],
-    [ "author", "a00493.html#a42b790ec3a63e1e3681153d4450ff61c", null ],
-    [ "ids", "a00493.html#aa89c57b7458608b67fecce4cb3aec205", null ],
-    [ "internalIds", "a00493.html#a7ae3f1f378e6191e0825aaeb4e0a32d7", null ],
-    [ "operater", "a00493.html#a36111b48542b165bd42014c05b565e63", null ],
-    [ "time", "a00493.html#a10924542380ed62cbf690d8754cc7a10", null ]
+    [ "ContactType", "a00493.html#aa38779bbd1171da9518bb83264082068", [
+      [ "TypeFriend", "a00493.html#aa38779bbd1171da9518bb83264082068af62e36a099b924bed288d7ccd38ab024", null ],
+      [ "TypeGroup", "a00493.html#aa38779bbd1171da9518bb83264082068ad2ba0a69a1a41bd53332f02d149cfa80", null ],
+      [ "TypeMember", "a00493.html#aa38779bbd1171da9518bb83264082068a81fab02eb3c47d18cc9d371671e3f045", null ],
+      [ "TypeBot", "a00493.html#aa38779bbd1171da9518bb83264082068ab85ffd5dd440bc06611225b581948e55", null ],
+      [ "TypeStranger", "a00493.html#aa38779bbd1171da9518bb83264082068ab616dd158256ecadbaf1010842ee1aa7", null ],
+      [ "TypeAnonymousMember", "a00493.html#aa38779bbd1171da9518bb83264082068a2078e4769d279fa053d62f95e8a801d4", null ]
+    ] ],
+    [ "BuiltInContact", "a00493.html#a839c5a7e59d5efb34a53407844073b93", null ],
+    [ "toContactPointer", "a00493.html#a93657060055478e2132cf310015efbf8", null ],
+    [ "botId", "a00493.html#a0541df919137723469aba374ec295d3d", null ],
+    [ "groupId", "a00493.html#a7fe2fd4cc1730f7cf954daaef6c28d07", null ],
+    [ "id", "a00493.html#aac8590c3fac3b2b02d3538bbd0919f82", null ],
+    [ "type", "a00493.html#a0e15bf22071b50b12dc828d867ede022", null ]
 ];

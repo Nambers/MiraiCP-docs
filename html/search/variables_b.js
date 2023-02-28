@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['koper_0',['koper',['../a00309.html#a36a424ce478704cdd3eb5c14302351df',1,'LibLoader::JNIEnvs']]]
+  ['koper_0',['koper',['../a00409.html#a308312bdfc107fb603d353785c65b4dd',1,'LibLoader::JNIEnvs']]]
 ];

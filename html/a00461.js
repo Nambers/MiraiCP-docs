@@ -1,9 +1,11 @@
 var a00461 =
 [
-    [ "chat", "a00461.html#afc868fb91c60975d5862d0691c80ec54", null ],
-    [ "chat", "a00461.html#a240d9d0df62738e43f8de576c6b26acf", null ],
-    [ "from", "a00461.html#ace8d5250eaff54abb3631cccf37b4b49", null ],
-    [ "from", "a00461.html#a77875102a2c9021981c942d16e15435a", null ],
-    [ "getMessageChain", "a00461.html#a40be4514c0111359a8388cb0c079ec76", null ],
-    [ "getMessageChain", "a00461.html#ab05db28ad76f89f09b38ad345f557803", null ]
+    [ "NodeHandle", "a00461.html#ac7507e666d0745b99d8b1068681b4cef", null ],
+    [ "NodeHandle", "a00461.html#a0f7ecf148334b12d5545cbd0a40c4cd0", null ],
+    [ "NodeHandle", "a00461.html#a269dcef2ca38b7d0c84d479ca968ba10", null ],
+    [ "~NodeHandle", "a00461.html#aa2f95b760153e53de0828e3be2d010f2", null ],
+    [ "isEnable", "a00461.html#ad6689ddc59dc8dddd23885edba704343", null ],
+    [ "resume", "a00461.html#a8073b4a1659ba17e1fd4d7bebaf19f3a", null ],
+    [ "stop", "a00461.html#a8810cf0a165339c8bd0db2fad01f64a8", null ],
+    [ "handle", "a00461.html#a590bdd13512e2e81324202aab27ece96", null ]
 ];

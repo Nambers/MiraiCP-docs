@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiraiCP: Tools.cpp 文件参考</title>
+<title>MiraiCP: Contact.cpp 文件参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -35,7 +35,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MiraiCP
-   &#160;<span id="projectnumber">v2.13.2</span>
+   &#160;<span id="projectnumber">v2.14.0</span>
    </div>
    <div id="projectbrief">MiraiCP api document</div>
   </td>
@@ -95,19 +95,27 @@ $(document).ready(function(){initNavTree('a00296.html',''); initResizable(); });
 <div class="header">
   <div class="summary">
 <a href="#namespaces">命名空间</a> &#124;
-<a href="#func-members">函数</a>  </div>
-  <div class="headertitle"><div class="title">Tools.cpp 文件参考</div></div>
+<a href="#typedef-members">类型定义</a>  </div>
+  <div class="headertitle"><div class="title">Contact.cpp 文件参考</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="a00176_source.html">Tools.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00044_source.html">loaderApiInternal.h</a>&quot;</code><br />
-<code>#include &lt;regex&gt;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="a00056_source.html">Contact.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00299_source.html">ContactDataType/GroupRelatedData.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00314_source.html">ExceptionHandle.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00320_source.html">Exceptions/IllegalArgument.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00332_source.html">Exceptions/Upload.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00128_source.html">Friend.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00131_source.html">Group.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00041_source.html">JsonTools.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00350_source.html">KtOperation.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00359_source.html">LowLevelAPI.h</a>&quot;</code><br />
+<code>#include &quot;Member.h&quot;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Tools.cpp 的引用(Include)关系图:</div>
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Contact.cpp 的引用(Include)关系图:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="a00297.svg" width="526" height="486"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00297.svg" width="1739" height="575"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </div>
@@ -115,40 +123,13 @@ $(document).ready(function(){initNavTree('a00296.html',''); initResizable(); });
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
 命名空间</h2></td></tr>
-<tr class="memitem:a00305"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00305.html">MiraiCP</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00319"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00319.html">MiraiCP::Tools</a></td></tr>
-<tr class="memdesc:a00319"><td class="mdescLeft">&#160;</td><td class="mdescRight">工具类声明, 常用的一些转换工具 <br /></td></tr>
+<tr class="memitem:a00394"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00394.html">MiraiCP</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
-函数</h2></td></tr>
-<tr class="memitem:a939c6b8139fec1968a2d8b45bf3e46d0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00047.html#aa40df2b825bdde9207f3e87b140235c3">MIRAICP_EXPORT</a> std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00319.html#a939c6b8139fec1968a2d8b45bf3e46d0">MiraiCP::Tools::replace</a> (std::string str, std::string_view from, std::string_view to)</td></tr>
-<tr class="memdesc:a939c6b8139fec1968a2d8b45bf3e46d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">替换全部在一个字符串中.  <a href="a00319.html#a939c6b8139fec1968a2d8b45bf3e46d0">更多...</a><br /></td></tr>
-<tr class="separator:a939c6b8139fec1968a2d8b45bf3e46d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3737839941b231fed645a2213fd2e896"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00319.html#a3737839941b231fed645a2213fd2e896">MiraiCP::Tools::split</a> (const std::string &amp;s, std::vector&lt; std::string &gt; &amp;tokens, const std::string &amp;delimiters=&quot;,&quot;)</td></tr>
-<tr class="separator:a3737839941b231fed645a2213fd2e896"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab67b5a25139033a0e048a23f84b88b4d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00047.html#aa40df2b825bdde9207f3e87b140235c3">MIRAICP_EXPORT</a> std::vector&lt; QQID &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00319.html#ab67b5a25139033a0e048a23f84b88b4d">MiraiCP::Tools::StringToVector</a> (std::string temp)</td></tr>
-<tr class="memdesc:ab67b5a25139033a0e048a23f84b88b4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">从string格式化到vector  <a href="a00319.html#ab67b5a25139033a0e048a23f84b88b4d">更多...</a><br /></td></tr>
-<tr class="separator:ab67b5a25139033a0e048a23f84b88b4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae7bf212fddf60af59042677c3a7753a5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00047.html#aa40df2b825bdde9207f3e87b140235c3">MIRAICP_EXPORT</a> std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00319.html#ae7bf212fddf60af59042677c3a7753a5">MiraiCP::Tools::escapeFromMiraiCode</a> (const std::string &amp;s)</td></tr>
-<tr class="memdesc:ae7bf212fddf60af59042677c3a7753a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">从miraicode转义到正常  <a href="a00319.html#ae7bf212fddf60af59042677c3a7753a5">更多...</a><br /></td></tr>
-<tr class="separator:ae7bf212fddf60af59042677c3a7753a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a01f4fe41f8bef55b95953750f5cfb0c2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00047.html#aa40df2b825bdde9207f3e87b140235c3">MIRAICP_EXPORT</a> std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00319.html#a01f4fe41f8bef55b95953750f5cfb0c2">MiraiCP::Tools::escapeToMiraiCode</a> (const std::string &amp;s)</td></tr>
-<tr class="memdesc:a01f4fe41f8bef55b95953750f5cfb0c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">转义miraicode格式  <a href="a00319.html#a01f4fe41f8bef55b95953750f5cfb0c2">更多...</a><br /></td></tr>
-<tr class="separator:a01f4fe41f8bef55b95953750f5cfb0c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac1c9173c6218044be45605d07874e99b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00047.html#aa40df2b825bdde9207f3e87b140235c3">MIRAICP_EXPORT</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00319.html#ac1c9173c6218044be45605d07874e99b">MiraiCP::Tools::starts_with</a> (std::string_view f, std::string_view s)</td></tr>
-<tr class="memdesc:ac1c9173c6218044be45605d07874e99b"><td class="mdescLeft">&#160;</td><td class="mdescRight">starts_with, from <a href="https://stackoverflow.com/questions/1878001/how-do-i-check-if-a-c-stdstring-starts-with-a-certain-string-and-convert-a">https://stackoverflow.com/questions/1878001/how-do-i-check-if-a-c-stdstring-starts-with-a-certain-string-and-convert-a</a>  <a href="a00319.html#ac1c9173c6218044be45605d07874e99b">更多...</a><br /></td></tr>
-<tr class="separator:ac1c9173c6218044be45605d07874e99b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a795aadb1af1cd4b85e9b48b5bb5b246d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00047.html#aa40df2b825bdde9207f3e87b140235c3">MIRAICP_EXPORT</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00319.html#a795aadb1af1cd4b85e9b48b5bb5b246d">MiraiCP::Tools::icompareChar</a> (const char &amp;c1, const char &amp;c2)</td></tr>
-<tr class="memdesc:a795aadb1af1cd4b85e9b48b5bb5b246d"><td class="mdescLeft">&#160;</td><td class="mdescRight">compare char with case-insensitive  <a href="a00319.html#a795aadb1af1cd4b85e9b48b5bb5b246d">更多...</a><br /></td></tr>
-<tr class="separator:a795aadb1af1cd4b85e9b48b5bb5b246d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0b52c701b3d96bf42b4d67c21f1dab2d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00047.html#aa40df2b825bdde9207f3e87b140235c3">MIRAICP_EXPORT</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00319.html#a0b52c701b3d96bf42b4d67c21f1dab2d">MiraiCP::Tools::iequal</a> (std::string_view str1, std::string_view str2)</td></tr>
-<tr class="memdesc:a0b52c701b3d96bf42b4d67c21f1dab2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">case insensitive string compare from <a href="https://thispointer.com/c-case-insensitive-string-comparison-using-stl-c11-boost-library/">https://thispointer.com/c-case-insensitive-string-comparison-using-stl-c11-boost-library/</a>  <a href="a00319.html#a0b52c701b3d96bf42b4d67c21f1dab2d">更多...</a><br /></td></tr>
-<tr class="separator:a0b52c701b3d96bf42b4d67c21f1dab2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa9d4bfd5269173c2f6aed44f79bf976e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00047.html#aa40df2b825bdde9207f3e87b140235c3">MIRAICP_EXPORT</a> std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00319.html#aa9d4bfd5269173c2f6aed44f79bf976e">MiraiCP::Tools::split</a> (const std::string &amp;text, const std::string &amp;delim)</td></tr>
-<tr class="memdesc:aa9d4bfd5269173c2f6aed44f79bf976e"><td class="mdescLeft">&#160;</td><td class="mdescRight">from <a href="https://www.zhihu.com/question/36642771">https://www.zhihu.com/question/36642771</a>, delim is regex(ignore last <code>+</code>)  <a href="a00319.html#aa9d4bfd5269173c2f6aed44f79bf976e">更多...</a><br /></td></tr>
-<tr class="separator:aa9d4bfd5269173c2f6aed44f79bf976e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+类型定义</h2></td></tr>
+<tr class="memitem:ac0a8a1bade77a57eeb1d94cfacfb75ce"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00394.html#ac0a8a1bade77a57eeb1d94cfacfb75ce">MiraiCP::json</a> = nlohmann::json</td></tr>
+<tr class="separator:ac0a8a1bade77a57eeb1d94cfacfb75ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -156,8 +137,8 @@ $(document).ready(function(){initNavTree('a00296.html',''); initResizable(); });
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_fef842b25f8adae1261920890dd101a4.html">sdk</a></li><li class="navelem"><a class="el" href="a00296.html">Tools.cpp</a></li>
-    <li class="footer">生成于 2023年 一月 27日 星期五 00:14:11 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_fef842b25f8adae1261920890dd101a4.html">sdk</a></li><li class="navelem"><a class="el" href="a00296.html">Contact.cpp</a></li>
+    <li class="footer">生成于 2023年 二月 28日 星期二 12:14:07 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
     </body>

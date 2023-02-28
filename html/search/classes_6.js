@@ -1,11 +1,9 @@
 var searchData=
 [
-  ['group_0',['Group',['../a00649.html',1,'MiraiCP']]],
-  ['groupdata_1',['GroupData',['../a00641.html',1,'MiraiCP']]],
-  ['groupexception_2',['GroupException',['../a00589.html',1,'MiraiCP']]],
-  ['groupinviteevent_3',['GroupInviteEvent',['../a00473.html',1,'MiraiCP']]],
-  ['groupmessageevent_4',['GroupMessageEvent',['../a00465.html',1,'MiraiCP']]],
-  ['grouprelateddata_5',['GroupRelatedData',['../a00425.html',1,'MiraiCP']]],
-  ['groupsetting_6',['GroupSetting',['../a00645.html',1,'MiraiCP::GroupData']]],
-  ['grouptempmessageevent_7',['GroupTempMessageEvent',['../a00501.html',1,'MiraiCP']]]
+  ['group_0',['Group',['../a00589.html',1,'MiraiCP']]],
+  ['groupinviteevent_1',['GroupInviteEvent',['../a00509.html',1,'MiraiCP']]],
+  ['groupmessageevent_2',['GroupMessageEvent',['../a00513.html',1,'MiraiCP']]],
+  ['grouprelateddata_3',['GroupRelatedData',['../a00853.html',1,'MiraiCP']]],
+  ['groupsetting_4',['GroupSetting',['../a00593.html',1,'MiraiCP::Group']]],
+  ['grouptempmessageevent_5',['GroupTempMessageEvent',['../a00517.html',1,'MiraiCP']]]
 ];

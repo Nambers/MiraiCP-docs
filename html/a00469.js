@@ -1,14 +1,9 @@
 var a00469 =
 [
-    [ "PrivateMessageEvent", "a00469.html#ae09650a1aa7d3f7535a4792bc919e032", null ],
-    [ "chat", "a00469.html#a9a8d672f2936a6760e046c3a03790e07", null ],
-    [ "chat", "a00469.html#a3b70ad84f06df0b224c6dbd58d255a59", null ],
-    [ "from", "a00469.html#a92d1a4aad3a0b4306986cea460b84fb7", null ],
-    [ "from", "a00469.html#a9b4c13376dcef6dddab4cca9b57ffc48", null ],
-    [ "get_event_type", "a00469.html#ac2cb5df8d7346169a074cb463bc85441", null ],
-    [ "getMessageChain", "a00469.html#a547bf324dfbfbb2dbef03c3fef05168b", null ],
-    [ "getMessageChain", "a00469.html#a046a99377587f6d8278d7d6cfb55208b", null ],
-    [ "nextMessage", "a00469.html#a2fadddd37811d8dcbf7183d98eba3034", null ],
-    [ "message", "a00469.html#a8a85d06adc5634099288001409e51de0", null ],
-    [ "sender", "a00469.html#aa2ba8dfb74a6324a1a6ef5774d6ee793", null ]
+    [ "eventNode", "a00469.html#a7c0d9e7b800ebff2dbfe29d508e5904f", null ],
+    [ "eventNode", "a00469.html#a21f99c741cb8b0fe0f031e908732147b", null ],
+    [ "getHandle", "a00469.html#a22b79f5c56bc0b4aa054b898adcbbe71", null ],
+    [ "run", "a00469.html#aedef6da8603e38047a3de9006052568b", null ],
+    [ "_handle", "a00469.html#aa575e21335890f9d36954a2a97dd8171", null ],
+    [ "func", "a00469.html#a64131ff795261b80c6b37223812a3ee8", null ]
 ];

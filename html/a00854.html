@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiraiCP: logger.cpp</title>
+<title>MiraiCP: 成员列表</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -35,7 +35,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MiraiCP
-   &#160;<span id="projectnumber">v2.13.2</span>
+   &#160;<span id="projectnumber">v2.14.0</span>
    </div>
    <div id="projectbrief">MiraiCP api document</div>
   </td>
@@ -74,7 +74,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('a00854.html',''); initResizable(); });
+$(document).ready(function(){initNavTree('a00857.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -93,65 +93,37 @@ $(document).ready(function(){initNavTree('a00854.html',''); initResizable(); });
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">logger.cpp</div></div>
+  <div class="headertitle"><div class="title">MiraiCP::IContactData 成员列表</div></div>
 </div><!--header-->
 <div class="contents">
-<p >自定义logger handle以及启用禁用logger</p>
-<div class="fragment"><div class="line"><span class="comment">// Copyright (c) 2020 - 2022. Eritque arcus and contributors.</span></div>
-<div class="line"><span class="comment">//</span></div>
-<div class="line"><span class="comment">// This program is free software: you can redistribute it and/or modify</span></div>
-<div class="line"><span class="comment">// it under the terms of the GNU Affero General Public License as</span></div>
-<div class="line"><span class="comment">// published by the Free Software Foundation, either version 3 of the</span></div>
-<div class="line"><span class="comment">// License, or any later version(in your opinion).</span></div>
-<div class="line"><span class="comment">//</span></div>
-<div class="line"><span class="comment">// This program is distributed in the hope that it will be useful,</span></div>
-<div class="line"><span class="comment">// but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div>
-<div class="line"><span class="comment">// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span></div>
-<div class="line"><span class="comment">// GNU Affero General Public License for more details.</span></div>
-<div class="line"><span class="comment">//</span></div>
-<div class="line"><span class="comment">// You should have received a copy of the GNU Affero General Public License</span></div>
-<div class="line"><span class="comment">// along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</span></div>
-<div class="line"><span class="comment">//</span></div>
-<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00161.html">MiraiCP.hpp</a>&gt;</span></div>
-<div class="line"><span class="keyword">using namespace </span><a class="code hl_namespace" href="a00305.html">MiraiCP</a>;</div>
-<div class="line"> </div>
-<div class="line"><span class="keyword">const</span> PluginConfig CPPPlugin::config{</div>
-<div class="line">        <span class="stringliteral">&quot;id&quot;</span>,   <span class="comment">// 插件id</span></div>
-<div class="line">        <span class="stringliteral">&quot;test&quot;</span>, <span class="comment">// 插件名称</span></div>
-<div class="line">        <span class="stringliteral">&quot;v1.0&quot;</span>, <span class="comment">// 插件版本</span></div>
-<div class="line">        <span class="stringliteral">&quot;a&quot;</span>,    <span class="comment">// 插件作者</span></div>
-<div class="line">                <span class="comment">// 可选：插件描述</span></div>
-<div class="line">                <span class="comment">// 可选：日期</span></div>
-<div class="line">};</div>
-<div class="line"> </div>
-<div class="line"><span class="keyword">class </span>Main : <span class="keyword">public</span> CPPPlugin {</div>
-<div class="line"><span class="keyword">public</span>:</div>
-<div class="line">    Main() : <a class="code hl_function" href="a00441.html#aeeaafebf5e61e1da8a2c5e3e07dac64b">CPPPlugin</a>() {}</div>
-<div class="line">    <span class="keywordtype">void</span> onEnable()<span class="keyword"> override </span>{</div>
-<div class="line">        <a id="a0" name="a0"></a><a class="code hl_variable" href="a00304.html#a0e16fc1159d498289bcda90fcd7a734c">Logger::logger</a>.registerHandle([](std::string content, <span class="keywordtype">int</span> level) {</div>
-<div class="line">            <span class="comment">//do some things</span></div>
-<div class="line">            <span class="comment">// eg. write file</span></div>
-<div class="line">        });</div>
-<div class="line">        <span class="comment">// 设置logger是否启用</span></div>
-<div class="line">        <a class="code hl_variable" href="a00304.html#a0e16fc1159d498289bcda90fcd7a734c">Logger::logger</a>.setHandleState(<span class="keyword">true</span>);</div>
-<div class="line">    }</div>
-<div class="line">};</div>
-<div class="line"> </div>
-<div class="line"><span class="keywordtype">void</span> <a id="a1" name="a1"></a><a class="code hl_function" href="a00305.html#a12d27be6730af4fc321ac1eb231db281">MiraiCP::enrollPlugin</a>() {</div>
-<div class="line">    <a class="code hl_function" href="a00305.html#a12d27be6730af4fc321ac1eb231db281">MiraiCP::enrollPlugin</a>(<span class="keyword">new</span> Main());</div>
-<div class="line">}</div>
-<div class="ttc" id="aa00161_html"><div class="ttname"><a href="a00161.html">MiraiCP.hpp</a></div></div>
-<div class="ttc" id="aa00304_html_a0e16fc1159d498289bcda90fcd7a734c"><div class="ttname"><a href="a00304.html#a0e16fc1159d498289bcda90fcd7a734c">LibLoader::logger</a></div><div class="ttdeci">MIRAICP_EXPORT LoaderLogger logger</div><div class="ttdef"><b>Definition:</b> <a href="a00215_source.html#l00035">LoaderLogger.cpp:35</a></div></div>
-<div class="ttc" id="aa00305_html"><div class="ttname"><a href="a00305.html">MiraiCP</a></div><div class="ttdef"><b>Definition:</b> <a href="a00041_source.html#l00041">commonTypes.h:41</a></div></div>
-<div class="ttc" id="aa00305_html_a12d27be6730af4fc321ac1eb231db281"><div class="ttname"><a href="a00305.html#a12d27be6730af4fc321ac1eb231db281">MiraiCP::enrollPlugin</a></div><div class="ttdeci">void enrollPlugin()</div><div class="ttdoc">注册插件函数, 需要被插件实现, 类似onStart();</div><div class="ttdef"><b>Definition:</b> <a href="a00179_source.html#l00037">utils.h:37</a></div></div>
-<div class="ttc" id="aa00441_html_aeeaafebf5e61e1da8a2c5e3e07dac64b"><div class="ttname"><a href="a00441.html#aeeaafebf5e61e1da8a2c5e3e07dac64b">MiraiCP::CPPPlugin::CPPPlugin</a></div><div class="ttdeci">CPPPlugin()=default</div></div>
-</div><!-- fragment --> </div><!-- contents -->
+
+<p>成员的完整列表，这些成员属于 <a class="el" href="a00857.html">MiraiCP::IContactData</a>,包括所有继承而来的类成员</p>
+<table class="directory">
+  <tr class="even"><td class="entry"><a class="el" href="a00857.html#a79b6e3d759b6f3e77198dc15c8a29057">_avatarUrl</a></td><td class="entry"><a class="el" href="a00857.html">MiraiCP::IContactData</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="a00857.html#ad56f484aaaa2ec82ce2d32e3d8b51755">_botId</a></td><td class="entry"><a class="el" href="a00857.html">MiraiCP::IContactData</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="a00857.html#ab6222713565fc32fb53f1ff1300caa07">_id</a></td><td class="entry"><a class="el" href="a00857.html">MiraiCP::IContactData</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="a00857.html#a9e2084ee904597c3dcd486a833173d6d">_nickOrNameCard</a></td><td class="entry"><a class="el" href="a00857.html">MiraiCP::IContactData</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="a00857.html#a5d9cc201cdb3660afcd69128ec7f5784">_type</a></td><td class="entry"><a class="el" href="a00857.html">MiraiCP::IContactData</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="a00857.html#ab9cf06d58e4562680e5dcabec8556758">deserialize</a>(nlohmann::json inJson) override</td><td class="entry"><a class="el" href="a00857.html">MiraiCP::IContactData</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="a00861.html#abdbf2a10d21a520b782c1654beb3214a">forceRefreshNextTime</a>()</td><td class="entry"><a class="el" href="a00861.html">MiraiCP::IMiraiData</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="a00861.html#ad6440ea1909386acbfd77fe1e17d30f8">getMutex</a>()</td><td class="entry"><a class="el" href="a00861.html">MiraiCP::IMiraiData</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="a00861.html#a2079413e6c26dc563bf4e496ae25ca08">IMiraiData</a>()=default</td><td class="entry"><a class="el" href="a00861.html">MiraiCP::IMiraiData</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="a00857.html#af673a2e404372cc90719f38b9cced144">internalToJson</a>() const override</td><td class="entry"><a class="el" href="a00857.html">MiraiCP::IContactData</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="a00861.html#a862c4fbbceae111c0c37df2bf76c7859">internalToString</a>() const</td><td class="entry"><a class="el" href="a00861.html">MiraiCP::IMiraiData</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="a00861.html#a1a587f53dc97566ee040cd12f9901314">Locker</a></td><td class="entry"><a class="el" href="a00861.html">MiraiCP::IMiraiData</a></td><td class="entry"><span class="mlabel">mutable</span><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="a00857.html#a1632df966247f52553c17e25e5d47280">refreshInfo</a>() override</td><td class="entry"><a class="el" href="a00857.html">MiraiCP::IContactData</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="a00861.html#a0af5afb339c80a734ac9752d4f179069">requestRefresh</a>()</td><td class="entry"><a class="el" href="a00861.html">MiraiCP::IMiraiData</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="a00861.html#a17445e67d1cf31c184cf144f874e82f9">toJson</a>() const</td><td class="entry"><a class="el" href="a00861.html">MiraiCP::IMiraiData</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="a00861.html#a0795b1c8b45a0c122c8027f359b8f40e">toString</a>() const</td><td class="entry"><a class="el" href="a00861.html">MiraiCP::IMiraiData</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="a00857.html#ab8bb03098fb7c84497eb7f10610855e5">updateJson</a>(nlohmann::json &amp;jsonToUpdate) const</td><td class="entry"><a class="el" href="a00857.html">MiraiCP::IContactData</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="a00861.html#ab1262457e073f9c776c941962a5b6699">~IMiraiData</a>()=default</td><td class="entry"><a class="el" href="a00861.html">MiraiCP::IMiraiData</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+</table></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">生成于 2023年 一月 27日 星期五 00:14:10 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="footer">生成于 2023年 二月 28日 星期二 12:14:10 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
     </body>

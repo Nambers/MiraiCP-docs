@@ -1,8 +1,10 @@
 var a00457 =
 [
-    [ "BotEvent", "a00457.html#a5da368a0e44891433b340288bc872df3", null ],
-    [ "~BotEvent", "a00457.html#a29d6794160e0ea7cdd1598ad48185d6c", null ],
-    [ "getEventType", "a00457.html#a9e02a5aa59b72a0667260d8d487a66f8", null ],
-    [ "bot", "a00457.html#a0b14bddb4baebbd348969dac6c9a8edc", null ],
-    [ "botlogger", "a00457.html#a864b09f1e3cf406c2e96ca7b4c10e18e", null ]
+    [ "CPPPlugin", "a00457.html#aeeaafebf5e61e1da8a2c5e3e07dac64b", null ],
+    [ "~CPPPlugin", "a00457.html#af7c569aa874ccbac301c805755dcda0c", null ],
+    [ "onDisable", "a00457.html#a3ecc2c479d1ca6785e7cdcb0738c1597", null ],
+    [ "onEnable", "a00457.html#ad3d1188d089ab0fc945475f988c64fa7", null ],
+    [ "ShouldNotUse", "a00457.html#a30d82964da1ce75eb9f269c676dafc33", null ],
+    [ "config", "a00457.html#a20b8d27c47456805d38d4c366da96ac0", null ],
+    [ "plugin", "a00457.html#acfd86c042e577055f5047cb515e7bdfa", null ]
 ];

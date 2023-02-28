@@ -1,4 +1,5 @@
 var a00236 =
 [
-    [ "get_bot", "a00236.html#a6418acda5a5a017ac553dc273b57c612", null ]
+    [ "LoaderName", "a00236.html#a9d999fed21ffcc5aafcb74f16bcb9301", null ],
+    [ "logger", "a00236.html#af1031cef14711c6b7ed3805fe6d17d81", null ]
 ];

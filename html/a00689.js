@@ -1,7 +1,8 @@
 var a00689 =
 [
-    [ "info", "a00693.html", "a00693" ],
-    [ "getInfoSource", "a00689.html#ad104b6f94628a14cf351ae7da993c770", null ],
-    [ "info0", "a00689.html#a39064f9c2b148b3a3061f818bf237215", null ],
-    [ "uploadImg0", "a00689.html#ad74021eeded7e621fddaae159f2b8387", null ]
+    [ "QuoteReply", "a00689.html#a48b93dbd55eb6dabeb0ae0d8d3191dfb", null ],
+    [ "QuoteReply", "a00689.html#a92e6c154936b9341964f10830844348e", null ],
+    [ "operator==", "a00689.html#ad505141e383ead14add0a18f63d27283", null ],
+    [ "toJson", "a00689.html#a145d6719140d4d5f36253ae637522c3d", null ],
+    [ "type", "a00689.html#a5c3073e9d8f5b2ce5f7f6d2980313855", null ]
 ];

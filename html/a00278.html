@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiraiCP: MessageChain.cpp 文件参考</title>
+<title>MiraiCP: Scheduler.cpp 文件参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -35,7 +35,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MiraiCP
-   &#160;<span id="projectnumber">v2.13.2</span>
+   &#160;<span id="projectnumber">v2.14.0</span>
    </div>
    <div id="projectbrief">MiraiCP api document</div>
   </td>
@@ -94,23 +94,27 @@ $(document).ready(function(){initNavTree('a00278.html',''); initResizable(); });
 
 <div class="header">
   <div class="summary">
-<a href="#namespaces">命名空间</a>  </div>
-  <div class="headertitle"><div class="title">MessageChain.cpp 文件参考</div></div>
+<a href="#namespaces">命名空间</a> &#124;
+<a href="#typedef-members">类型定义</a> &#124;
+<a href="#func-members">函数</a> &#124;
+<a href="#var-members">变量</a>  </div>
+  <div class="headertitle"><div class="title">Scheduler.cpp 文件参考</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="a00122_source.html">Exception.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00125_source.html">ForwardedMessage.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00131_source.html">Group.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00137_source.html">KtOperation.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00143_source.html">Logger.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00176_source.html">Tools.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00152_source.html">MessageChain.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="a00281_source.html">Scheduler.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00233_source.html">LoaderExceptions.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00275_source.html">PluginListManager.h</a>&quot;</code><br />
+<code>#include &quot;json.hpp&quot;</code><br />
+<code>#include &lt;chrono&gt;</code><br />
+<code>#include &lt;condition_variable&gt;</code><br />
+<code>#include &lt;mutex&gt;</code><br />
+<code>#include &lt;queue&gt;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> MessageChain.cpp 的引用(Include)关系图:</div>
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Scheduler.cpp 的引用(Include)关系图:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="a00279.svg" width="1874" height="859"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00279.svg" width="883" height="486"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </div>
@@ -118,17 +122,68 @@ $(document).ready(function(){initNavTree('a00278.html',''); initResizable(); });
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
 命名空间</h2></td></tr>
-<tr class="memitem:a00305"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00305.html">MiraiCP</a></td></tr>
+<tr class="memitem:a00404"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00404.html">LibLoader</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00410"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00410.html">LibLoader::Scheduler</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+类型定义</h2></td></tr>
+<tr class="memitem:a91a93a375d7ae2559c52cd9558e980a6"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00278.html#a91a93a375d7ae2559c52cd9558e980a6">timepoint</a> = decltype(std::chrono::system_clock::now())</td></tr>
+<tr class="separator:a91a93a375d7ae2559c52cd9558e980a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:a46f4ab12479d61956e7dc81cfb19fef5"><td class="memItemLeft" align="right" valign="top">std::condition_variable &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00404.html#a46f4ab12479d61956e7dc81cfb19fef5">LibLoader::loaderWakeCV</a> ()</td></tr>
+<tr class="separator:a46f4ab12479d61956e7dc81cfb19fef5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acadd04359cbcb7b046e3fdcf6e442ba9"><td class="memItemLeft" align="right" valign="top">std::mutex &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00404.html#acadd04359cbcb7b046e3fdcf6e442ba9">LibLoader::loaderCVLock</a> ()</td></tr>
+<tr class="separator:acadd04359cbcb7b046e3fdcf6e442ba9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a746efd674de5c56de789a0c03be7948e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00410.html#a746efd674de5c56de789a0c03be7948e">LibLoader::Scheduler::timer</a> (std::string id, std::string content, size_t timeInSec)</td></tr>
+<tr class="memdesc:a746efd674de5c56de789a0c03be7948e"><td class="mdescLeft">&#160;</td><td class="mdescRight">新增一个计时器，对接libLoader API  <a href="a00410.html#a746efd674de5c56de789a0c03be7948e">更多...</a><br /></td></tr>
+<tr class="separator:a746efd674de5c56de789a0c03be7948e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac881189d7d1fb1cc7c41315fef6f46ad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00410.html#ac881189d7d1fb1cc7c41315fef6f46ad">LibLoader::Scheduler::sendTimeoutEvent</a> (const std::string &amp;pluginId, const std::string &amp;content) noexcept</td></tr>
+<tr class="separator:ac881189d7d1fb1cc7c41315fef6f46ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a051ec6e252e58cfd4d54158c5ef0bb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00410.html#a2a051ec6e252e58cfd4d54158c5ef0bb">LibLoader::Scheduler::checkValidTimeStamp</a> (const scheduleTask &amp;task)</td></tr>
+<tr class="separator:a2a051ec6e252e58cfd4d54158c5ef0bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60264799b74fbe2b0466d1de609cf95b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00410.html#a60264799b74fbe2b0466d1de609cf95b">LibLoader::Scheduler::popSchedule</a> () noexcept</td></tr>
+<tr class="memdesc:a60264799b74fbe2b0466d1de609cf95b"><td class="mdescLeft">&#160;</td><td class="mdescRight">libLoader线程tick调用，弹出所有计时器  <a href="a00410.html#a60264799b74fbe2b0466d1de609cf95b">更多...</a><br /></td></tr>
+<tr class="separator:a60264799b74fbe2b0466d1de609cf95b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d56b79ef43f183c0fc95d733f81906b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00410.html#a2d56b79ef43f183c0fc95d733f81906b">LibLoader::Scheduler::timeup</a> () noexcept</td></tr>
+<tr class="memdesc:a2d56b79ef43f183c0fc95d733f81906b"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取schduler是否空  <a href="a00410.html#a2d56b79ef43f183c0fc95d733f81906b">更多...</a><br /></td></tr>
+<tr class="separator:a2d56b79ef43f183c0fc95d733f81906b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+变量</h2></td></tr>
+<tr class="memitem:a8a0a35d4e72578439fdedc6ab096c982"><td class="memItemLeft" align="right" valign="top">static std::priority_queue&lt; scheduleTask, std::vector&lt; scheduleTask &gt;, std::greater&lt; scheduleTask &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00410.html#a8a0a35d4e72578439fdedc6ab096c982">LibLoader::Scheduler::timerQueue</a></td></tr>
+<tr class="separator:a8a0a35d4e72578439fdedc6ab096c982"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d9beebf77b42856a2c47963066eb462"><td class="memItemLeft" align="right" valign="top">static std::mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00410.html#a4d9beebf77b42856a2c47963066eb462">LibLoader::Scheduler::mtx</a></td></tr>
+<tr class="separator:a4d9beebf77b42856a2c47963066eb462"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">类型定义说明</h2>
+<a id="a91a93a375d7ae2559c52cd9558e980a6" name="a91a93a375d7ae2559c52cd9558e980a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91a93a375d7ae2559c52cd9558e980a6">&#9670;&nbsp;</a></span>timepoint</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="a00278.html#a91a93a375d7ae2559c52cd9558e980a6">timepoint</a> =  decltype(std::chrono::system_clock::now())</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="a00278_source.html">Scheduler.cpp</a> 第 <a class="el" href="a00278_source.html#l00027">27</a> 行定义.</p>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_fef842b25f8adae1261920890dd101a4.html">sdk</a></li><li class="navelem"><a class="el" href="a00278.html">MessageChain.cpp</a></li>
-    <li class="footer">生成于 2023年 一月 27日 星期五 00:14:11 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_23c80554d3059e776f1fa3b42eea10c0.html">libloader</a></li><li class="navelem"><a class="el" href="a00278.html">Scheduler.cpp</a></li>
+    <li class="footer">生成于 2023年 二月 28日 星期二 12:14:07 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
     </body>

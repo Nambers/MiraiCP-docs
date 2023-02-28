@@ -1,9 +1,8 @@
 var a00173 =
 [
-    [ "addTask", "a00173.html#ad89a78a5c9164f1e56e895c48ee1ec22", null ],
-    [ "get_auto_incr_id", "a00173.html#a10f626326a5bace0c7b7c9e11db994f0", null ],
-    [ "promiseTask", "a00173.html#ab84de57ea7f15a70da47472adc87061a", null ],
-    [ "push_task", "a00173.html#adfbaea0b8eb4cbbd267ff9a113a6e1a3", null ],
-    [ "remove_task", "a00173.html#ab890e46143438cf7d678f6e4f2dcb9d0", null ],
-    [ "task_interface", "a00173.html#a954499687c36452be430af25a7e94750", null ]
+    [ "plugin_entrance_func_ptr", "a00173.html#ada1a1182832115cfa634601bb4e80355", null ],
+    [ "plugin_event_func_ptr", "a00173.html#add2feb317221acb4f979e61d5e96d37f", null ],
+    [ "plugin_func_ptr", "a00173.html#afc631e11894f5d4eedc3e3ea550795fd", null ],
+    [ "plugin_handle", "a00173.html#a927f212ce2db84cca1f02ec95aa62322", null ],
+    [ "plugin_info_func_ptr", "a00173.html#a776f4f6bb745b814e23461c7742b9682", null ]
 ];

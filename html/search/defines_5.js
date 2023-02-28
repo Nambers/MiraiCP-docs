@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['get_5fsymbol_0',['GET_SYMBOL',['../a00206.html#a59a1df0cff1ee36d72e98032ab2594ff',1,'libOpen.cpp']]],
-  ['get_5fthreadname_1',['GET_THREADNAME',['../a00191.html#a1c725cadd47b1c5bcd058972a3b25649',1,'ThreadIdentify.cpp']]]
+  ['func_5fentrance_0',['FUNC_ENTRANCE',['../a00044.html#a530f8aa8a579c0ec728d5e7a46515ba4',1,'MiraiCPMacros.h']]],
+  ['func_5fevent_1',['FUNC_EVENT',['../a00044.html#a06af3829abc05f3902ed69ee480b66fa',1,'MiraiCPMacros.h']]],
+  ['func_5fexit_2',['FUNC_EXIT',['../a00044.html#a6505e9c7b381013fa532556439fb8bd0',1,'MiraiCPMacros.h']]]
 ];

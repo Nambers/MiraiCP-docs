@@ -1,17 +1,7 @@
 var a00537 =
 [
-    [ "eventNode", "a00541.html", "a00541" ],
-    [ "event_vector", "a00537.html#a6c4a73db045f973232347164dc42a21e", null ],
-    [ "eventNodeTable", "a00537.html#ab49f881b646783d970f6f87ddde0bcce", null ],
-    [ "priority_level", "a00537.html#a4cc658c6011e27187dd6660d6c33b7c9", null ],
-    [ "Event", "a00537.html#a9f36e22e23e02faaeba7f89736332c9c", null ],
-    [ "broadcast", "a00537.html#adbdeabc1c1a6797391ba47201320047c", null ],
-    [ "clear", "a00537.html#aeb2b9b9d676a9e6f392e4ce72dbe7643", null ],
-    [ "id", "a00537.html#a45303f38b1dcec3f8f1cda7df7eb4426", null ],
-    [ "incomingEvent", "a00537.html#aca8d122b5ac259f28f372f02cdd38930", null ],
-    [ "noRegistered", "a00537.html#ad55bfc3d37cf45b0ca146d1355e1f486", null ],
-    [ "registerBlockingEvent", "a00537.html#a38a7a5c9795712e2f5839ffc1e46c5d0", null ],
-    [ "registerEvent", "a00537.html#ae00f75f32055f085290929d3c2294bba", null ],
-    [ "_all_events_", "a00537.html#a8976a4000c06dde8ff810aa5ed78a5dd", null ],
-    [ "processor", "a00537.html#ab78af8afd9a5121e7ed0a1d7237f2b20", null ]
+    [ "MessagePreSendEvent", "a00537.html#af813b6325a6fa97c0f4b3a4e99d222ff", null ],
+    [ "get_event_type", "a00537.html#a3db8d323a115f3b68b06da7dc1733293", null ],
+    [ "message", "a00537.html#a2fe0731f2ede62683919e2af5deecb2c", null ],
+    [ "target", "a00537.html#aa15c8687b9e358b91851d3228c0a4d70", null ]
 ];

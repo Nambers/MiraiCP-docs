@@ -1,15 +1,20 @@
 var a00625 =
 [
-    [ "string", "a00625.html#a4b8537609144c742e4a4f26af6143fd8", null ],
-    [ "ForwardedMessageDisplayStrategy", "a00625.html#a8ed5a36a61b38da9ee2dd632310085af", null ],
-    [ "ForwardedMessageDisplayStrategy", "a00625.html#add7199a14b55773df4ef523afb0cff46", null ],
-    [ "defaultStrategy", "a00625.html#ae41f2b998365484dba1ff3f32563dfbb", null ],
-    [ "fromJson", "a00625.html#ac7a83085f9b152d720a0725b5e770ff2", null ],
-    [ "operator==", "a00625.html#a98402ca0f5eada71701f5747f4ff5601", null ],
-    [ "toJson", "a00625.html#a644621957e3c4c7eabe806003318bfe7", null ],
-    [ "brief", "a00625.html#a332c563f6760ce0f82f736416740bf75", null ],
-    [ "preview", "a00625.html#a7bc79f77b1ffff231a263faf4633949b", null ],
-    [ "source", "a00625.html#aaacb83b879ff1ab702fdf56b2d0fe9d9", null ],
-    [ "summary", "a00625.html#aef4ccc8e214cc12ac1ca842c065762b8", null ],
-    [ "title", "a00625.html#a8ebae08a0a078281d1f4400e84040573", null ]
+    [ "Member", "a00625.html#a69e77e737f0547520c2c206fce997eac", null ],
+    [ "Member", "a00625.html#a1efa452b6a65f50574eb3f380aa67544", null ],
+    [ "Member", "a00625.html#a3ca40feb7ca17732c87e770daf133891", null ],
+    [ "~Member", "a00625.html#a8cfeac92e444843dfba6905ebfc5eae0", null ],
+    [ "at", "a00625.html#ace4950bd9191fdf90ecba764c870f90e", null ],
+    [ "changeNameCard", "a00625.html#afa172c24046945b1208344d3be9d5cfe", null ],
+    [ "changeSpecialTitle", "a00625.html#a62b5b9e3c5e35214da533742f5644126", null ],
+    [ "DECL_GETTER", "a00625.html#a5d41c65afd243cf69760e060439cd22d", null ],
+    [ "DECL_GETTER", "a00625.html#a26d74206d2638c41c61efc6d6bddbb7c", null ],
+    [ "kick", "a00625.html#a2d1bc8f2dcdc9048ded62a0f5f53041a", null ],
+    [ "modifyAdmin", "a00625.html#a7207187ce22e9e1910fd3188e7140cd5", null ],
+    [ "mute", "a00625.html#ab26f7832af43cee20fcdc76d0f876219", null ],
+    [ "mute", "a00625.html#a7298e2edbbe9c1866c730ad1fef8fb23", null ],
+    [ "sendNudge", "a00625.html#aff2d2c3a907f051ca89d506b02caa5d0", null ],
+    [ "sendVoice", "a00625.html#a855bd4e1c3e457d1b906c22f560190bf", null ],
+    [ "unMute", "a00625.html#ac815c8a919d5f2b8143c8ee552acdf72", null ],
+    [ "Contact", "a00625.html#a76d4b1c8c6040df20040808941b7e764", null ]
 ];

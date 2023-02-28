@@ -1,12 +1,23 @@
 var a00737 =
 [
-    [ "PlainText", "a00737.html#af0ffa277c961cde9e5fc0ecc23ff224c", null ],
-    [ "PlainText", "a00737.html#ab68df61c1fb45cdbb5fd04b4d29dd220", null ],
-    [ "PlainText", "a00737.html#a1d7f0c7b72a55d799127a76420a1bec3", null ],
-    [ "PlainText", "a00737.html#a42816451964e21640768a4c0b34ce09f", null ],
-    [ "PlainText", "a00737.html#a0df9da1e22bad53e1f491adf5fa98032", null ],
-    [ "operator==", "a00737.html#a6c8a471bcf5cd3bcc65f6d75097ce286", null ],
-    [ "toJson", "a00737.html#a0fb7ad4530e4602d09c388d44fc4bc00", null ],
-    [ "toMiraiCode", "a00737.html#a2cbc08df42d84ad5c50e2dae680c0eb4", null ],
-    [ "type", "a00737.html#a440b92da26612820bd700e2ce9a5e999", null ]
+    [ "string", "a00737.html#a23179ec928a1d6435fabb02326c6e247", null ],
+    [ "MiraiCPString", "a00737.html#a10535c2483c0959b0997c2514d4932e4", null ],
+    [ "~MiraiCPString", "a00737.html#a249117e24f8c29889bb0c1a278c3d3ae", null ],
+    [ "MiraiCPString", "a00737.html#aa1fda8f92269bd871c94c56e793373f1", null ],
+    [ "MiraiCPString", "a00737.html#aa22e9e3bf45ad23003f5f44c964bd546", null ],
+    [ "MiraiCPString", "a00737.html#a5e97ad52cb215cb213026ce45e355dfe", null ],
+    [ "MiraiCPString", "a00737.html#a2f46607eea7c6f093e385bb9e70a3ae6", null ],
+    [ "construction", "a00737.html#a7f26a980ae47d177825250f973336e39", null ],
+    [ "copyToCharPtr", "a00737.html#ab263deade385e7b5de856d061c6027e9", null ],
+    [ "isEmpty", "a00737.html#aa3633b0912b856ddce567143f001c682", null ],
+    [ "operator std::string", "a00737.html#aba1de80f20a55d6cb8124550a10e8123", null ],
+    [ "operator=", "a00737.html#a7107d4a5b065d0c20529ee9a8a3e05a6", null ],
+    [ "operator=", "a00737.html#a4e4f57d00b444ce690bc004d2d054523", null ],
+    [ "operator==", "a00737.html#a76a02c783ddea33e9ba3b90d4ec7ece4", null ],
+    [ "swap", "a00737.html#a5b277cdf16466e26268574cb17662d20", null ],
+    [ "toString", "a00737.html#a40af897f51c62faf7ef4468017d42d3f", null ],
+    [ "_size", "a00737.html#ab6bb3947d9db2fd407b8c20f0a768183", null ],
+    [ "free_this", "a00737.html#a411445a053abae2778bd0347523a670d", null ],
+    [ "std_free_ptr", "a00737.html#aeb14e5f57bc3dae205e6eed695b61113", null ],
+    [ "str", "a00737.html#ae296eb86d0acfd5b1a5b1264f5a01a33", null ]
 ];

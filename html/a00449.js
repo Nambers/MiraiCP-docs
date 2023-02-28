@@ -1,17 +1,8 @@
 var a00449 =
 [
-    [ "ContactType", "a00449.html#aa38779bbd1171da9518bb83264082068", [
-      [ "TypeFriend", "a00449.html#aa38779bbd1171da9518bb83264082068af62e36a099b924bed288d7ccd38ab024", null ],
-      [ "TypeGroup", "a00449.html#aa38779bbd1171da9518bb83264082068ad2ba0a69a1a41bd53332f02d149cfa80", null ],
-      [ "TypeMember", "a00449.html#aa38779bbd1171da9518bb83264082068a81fab02eb3c47d18cc9d371671e3f045", null ],
-      [ "TypeBot", "a00449.html#aa38779bbd1171da9518bb83264082068ab85ffd5dd440bc06611225b581948e55", null ],
-      [ "TypeStranger", "a00449.html#aa38779bbd1171da9518bb83264082068ab616dd158256ecadbaf1010842ee1aa7", null ],
-      [ "TypeAnonymousMember", "a00449.html#aa38779bbd1171da9518bb83264082068a2078e4769d279fa053d62f95e8a801d4", null ]
-    ] ],
-    [ "BuiltInContact", "a00449.html#a839c5a7e59d5efb34a53407844073b93", null ],
-    [ "toContactPointer", "a00449.html#a93657060055478e2132cf310015efbf8", null ],
-    [ "botId", "a00449.html#a0541df919137723469aba374ec295d3d", null ],
-    [ "groupId", "a00449.html#a7fe2fd4cc1730f7cf954daaef6c28d07", null ],
-    [ "id", "a00449.html#aac8590c3fac3b2b02d3538bbd0919f82", null ],
-    [ "type", "a00449.html#a0e15bf22071b50b12dc828d867ede022", null ]
+    [ "DataType", "a00449.html#a43b7d1c1b54bb89e33ad610bbd46953f", null ],
+    [ "json", "a00449.html#a5b3c9b7d906d4cb7ee220e5e7e12c57f", null ],
+    [ "avatarUrl", "a00449.html#ac3f8a47de4224ae6fa769171cf657d40", null ],
+    [ "GetDataInternal", "a00449.html#ace946a4a220bd1573f1e42c9628a3a08", null ],
+    [ "nickOrNameCard", "a00449.html#a8b43a586164fafff5f807494d997ad5d", null ]
 ];

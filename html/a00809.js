@@ -1,8 +1,9 @@
 var a00809 =
 [
-    [ "UnSupportMessage", "a00809.html#a6be0a774db3dc14967b31ab49e057454", null ],
-    [ "operator==", "a00809.html#a0ab999563baa8193b226d442d1a7f5dc", null ],
-    [ "ShouldNotUse", "a00809.html#ab59bb45f6a86d9eba8b7de54516de620", null ],
-    [ "toJson", "a00809.html#ae28bab32ffb5b7520376b88cb0fb70e1", null ],
-    [ "type", "a00809.html#ad5b8af135be7c2201fa5cc3d81fa8912", null ]
+    [ "is_loader_exited", "a00809.html#a41be9b5aab1d2394f236e1f42a0a2482", null ],
+    [ "loaderExit", "a00809.html#ae6cd717526cfbf2a3aba7bd361ebbf4c", null ],
+    [ "loaderMain", "a00809.html#a79cbc18aabed7afe2c7ea30f989ffc8c", null ],
+    [ "mainloop", "a00809.html#a0fbfe44fb362bf323c41e3ae73717edd", null ],
+    [ "shutdownLoader", "a00809.html#a6d477440277d3907b96261db3a222d96", null ],
+    [ "loader_exit", "a00809.html#a348439e27d1a976dd143da7a8b8b0de9", null ]
 ];

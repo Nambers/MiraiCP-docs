@@ -1,9 +1,5 @@
 var a00485 =
 [
-    [ "MemberLeaveEvent", "a00485.html#a8f6ff9cbf45de4c407c467dbe37703e0", null ],
-    [ "get_event_type", "a00485.html#a1af0fe4ad2efd5f078d1203e37080ba8", null ],
-    [ "group", "a00485.html#ab693afc3bdbfddc1ae88caf9ee052d54", null ],
-    [ "member", "a00485.html#ac9bc51af54f0412f68948c648ccea5b4", null ],
-    [ "operater", "a00485.html#a3eceb70ac1c7076efca107137be9911b", null ],
-    [ "type", "a00485.html#ad28ac4243630eab3bf7d65a737cac9ca", null ]
+    [ "BotOnlineEvent", "a00485.html#af599e4d871751e367033bb1e30a62b4d", null ],
+    [ "get_event_type", "a00485.html#abff84efdb87bb73184f38794f564ce85", null ]
 ];

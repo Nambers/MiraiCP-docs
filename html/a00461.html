@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiraiCP: MiraiCP::IMessageEvent类 参考</title>
+<title>MiraiCP: MiraiCP::NodeHandle类 参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -35,7 +35,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MiraiCP
-   &#160;<span id="projectnumber">v2.13.2</span>
+   &#160;<span id="projectnumber">v2.14.0</span>
    </div>
    <div id="projectbrief">MiraiCP api document</div>
   </td>
@@ -95,56 +95,54 @@ $(document).ready(function(){initNavTree('a00461.html',''); initResizable(); });
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
 <a href="a00458.html">所有成员列表</a>  </div>
-  <div class="headertitle"><div class="title">MiraiCP::IMessageEvent类 参考<span class="mlabels"><span class="mlabel">abstract</span></span></div></div>
+  <div class="headertitle"><div class="title">MiraiCP::NodeHandle类 参考</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>MessageEvent类型的抽象接口，用于Message类型多态实现  
+<p>事件监听操控, 可用于stop停止监听和resume继续监听  
  <a href="a00461.html#details">更多...</a></p>
 
-<p><code>#include &lt;<a class="el" href="a00119_source.html">Event.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="a00062_source.html">Event.h</a>&gt;</code></p>
 <div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> 类 MiraiCP::IMessageEvent 继承关系图:</div>
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> MiraiCP::NodeHandle 的协作图:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="a00460.svg" width="711" height="654"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-<div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> MiraiCP::IMessageEvent 的协作图:</div>
-<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-1-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="a00459.svg" width="214" height="220"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00459.svg" width="226" height="500"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public 成员函数</h2></td></tr>
-<tr class="memitem:a240d9d0df62738e43f8de576c6b26acf"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="a00429.html">Contact</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00461.html#a240d9d0df62738e43f8de576c6b26acf">chat</a> ()=0</td></tr>
-<tr class="memdesc:a240d9d0df62738e43f8de576c6b26acf"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取当前聊天，可能是群，私聊，或群临时会话  <a href="a00461.html#a240d9d0df62738e43f8de576c6b26acf">更多...</a><br /></td></tr>
-<tr class="separator:a240d9d0df62738e43f8de576c6b26acf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a77875102a2c9021981c942d16e15435a"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="a00429.html">Contact</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00461.html#a77875102a2c9021981c942d16e15435a">from</a> ()=0</td></tr>
-<tr class="memdesc:a77875102a2c9021981c942d16e15435a"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取当前聊天的发送人，可能是群成员，私聊的好友，或群临时会话对应的群成员  <a href="a00461.html#a77875102a2c9021981c942d16e15435a">更多...</a><br /></td></tr>
-<tr class="separator:a77875102a2c9021981c942d16e15435a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab05db28ad76f89f09b38ad345f557803"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="a00709.html">MessageChain</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00461.html#ab05db28ad76f89f09b38ad345f557803">getMessageChain</a> ()=0</td></tr>
-<tr class="separator:ab05db28ad76f89f09b38ad345f557803"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afc868fb91c60975d5862d0691c80ec54"><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="a00429.html">Contact</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00461.html#afc868fb91c60975d5862d0691c80ec54">chat</a> () const =0</td></tr>
-<tr class="separator:afc868fb91c60975d5862d0691c80ec54"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ace8d5250eaff54abb3631cccf37b4b49"><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="a00429.html">Contact</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00461.html#ace8d5250eaff54abb3631cccf37b4b49">from</a> () const =0</td></tr>
-<tr class="separator:ace8d5250eaff54abb3631cccf37b4b49"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a40be4514c0111359a8388cb0c079ec76"><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="a00709.html">MessageChain</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00461.html#a40be4514c0111359a8388cb0c079ec76">getMessageChain</a> () const =0</td></tr>
-<tr class="separator:a40be4514c0111359a8388cb0c079ec76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7507e666d0745b99d8b1068681b4cef"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00461.html#ac7507e666d0745b99d8b1068681b4cef">NodeHandle</a> (bool a)</td></tr>
+<tr class="separator:ac7507e666d0745b99d8b1068681b4cef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f7ecf148334b12d5545cbd0a40c4cd0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00461.html#a0f7ecf148334b12d5545cbd0a40c4cd0">NodeHandle</a> (<a class="el" href="a00461.html">NodeHandle</a> &amp;&amp;)=delete</td></tr>
+<tr class="separator:a0f7ecf148334b12d5545cbd0a40c4cd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a269dcef2ca38b7d0c84d479ca968ba10"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00461.html#a269dcef2ca38b7d0c84d479ca968ba10">NodeHandle</a> (const <a class="el" href="a00461.html">NodeHandle</a> &amp;)=delete</td></tr>
+<tr class="separator:a269dcef2ca38b7d0c84d479ca968ba10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2f95b760153e53de0828e3be2d010f2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00461.html#aa2f95b760153e53de0828e3be2d010f2">~NodeHandle</a> ()</td></tr>
+<tr class="separator:aa2f95b760153e53de0828e3be2d010f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6689ddc59dc8dddd23885edba704343"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00461.html#ad6689ddc59dc8dddd23885edba704343">isEnable</a> () const</td></tr>
+<tr class="separator:ad6689ddc59dc8dddd23885edba704343"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8810cf0a165339c8bd0db2fad01f64a8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00461.html#a8810cf0a165339c8bd0db2fad01f64a8">stop</a> ()</td></tr>
+<tr class="separator:a8810cf0a165339c8bd0db2fad01f64a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8073b4a1659ba17e1fd4d7bebaf19f3a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00461.html#a8073b4a1659ba17e1fd4d7bebaf19f3a">resume</a> ()</td></tr>
+<tr class="separator:a8073b4a1659ba17e1fd4d7bebaf19f3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a590bdd13512e2e81324202aab27ece96"><td class="memItemLeft" align="right" valign="top">NodeHandleInternal *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00461.html#a590bdd13512e2e81324202aab27ece96">handle</a></td></tr>
+<tr class="separator:a590bdd13512e2e81324202aab27ece96"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
-<div class="textblock"><p >MessageEvent类型的抽象接口，用于Message类型多态实现 </p>
+<div class="textblock"><p >事件监听操控, 可用于stop停止监听和resume继续监听 </p>
 
-<p class="definition">在文件 <a class="el" href="a00119_source.html">Event.h</a> 第 <a class="el" href="a00119_source.html#l00118">118</a> 行定义.</p>
-</div><h2 class="groupheader">成员函数说明</h2>
-<a id="afc868fb91c60975d5862d0691c80ec54" name="afc868fb91c60975d5862d0691c80ec54"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afc868fb91c60975d5862d0691c80ec54">&#9670;&nbsp;</a></span>chat() <span class="overload">[1/2]</span></h2>
+<p class="definition">在文件 <a class="el" href="a00062_source.html">Event.h</a> 第 <a class="el" href="a00062_source.html#l00047">47</a> 行定义.</p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="ac7507e666d0745b99d8b1068681b4cef" name="ac7507e666d0745b99d8b1068681b4cef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7507e666d0745b99d8b1068681b4cef">&#9670;&nbsp;</a></span>NodeHandle() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -153,25 +151,29 @@ Public 成员函数</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual const <a class="el" href="a00429.html">Contact</a> * MiraiCP::IMessageEvent::chat </td>
+          <td class="memname">MiraiCP::NodeHandle::NodeHandle </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>a</em></td><td>)</td>
+          <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>在 <a class="el" href="a00465.html#a4cdd74f8d9a12c115899afc53088cde5">MiraiCP::GroupMessageEvent</a>, <a class="el" href="a00469.html#a9a8d672f2936a6760e046c3a03790e07">MiraiCP::PrivateMessageEvent</a> , 以及 <a class="el" href="a00501.html#a55718d1fe9883ea24c47c8ebb503d807">MiraiCP::GroupTempMessageEvent</a> 内被实现.</p>
-
+<p class="definition">在文件 <a class="el" href="a00308_source.html">Event.cpp</a> 第 <a class="el" href="a00308_source.html#l00407">407</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00407" name="l00407"></a><span class="lineno">  407</span>                                 : <a class="code hl_variable" href="a00461.html#a590bdd13512e2e81324202aab27ece96">handle</a>(<span class="keyword">new</span> NodeHandleInternal{a}) {</div>
+<div class="line"><a id="l00408" name="l00408"></a><span class="lineno">  408</span>    }</div>
+<div class="ttc" id="aa00461_html_a590bdd13512e2e81324202aab27ece96"><div class="ttname"><a href="a00461.html#a590bdd13512e2e81324202aab27ece96">MiraiCP::NodeHandle::handle</a></div><div class="ttdeci">NodeHandleInternal * handle</div><div class="ttdef"><b>Definition:</b> <a href="a00062_source.html#l00051">Event.h:48</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
-<a id="a240d9d0df62738e43f8de576c6b26acf" name="a240d9d0df62738e43f8de576c6b26acf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a240d9d0df62738e43f8de576c6b26acf">&#9670;&nbsp;</a></span>chat() <span class="overload">[2/2]</span></h2>
+<a id="a0f7ecf148334b12d5545cbd0a40c4cd0" name="a0f7ecf148334b12d5545cbd0a40c4cd0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f7ecf148334b12d5545cbd0a40c4cd0">&#9670;&nbsp;</a></span>NodeHandle() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -180,27 +182,24 @@ Public 成员函数</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="a00429.html">Contact</a> * MiraiCP::IMessageEvent::chat </td>
+          <td class="memname">MiraiCP::NodeHandle::NodeHandle </td>
           <td>(</td>
+          <td class="paramtype"><a class="el" href="a00461.html">NodeHandle</a> &amp;&amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>获取当前聊天，可能是群，私聊，或群临时会话 </p>
-
-<p>在 <a class="el" href="a00465.html#a8d3c0c5bbda48132c31dca900f9d4931">MiraiCP::GroupMessageEvent</a>, <a class="el" href="a00469.html#a3b70ad84f06df0b224c6dbd58d255a59">MiraiCP::PrivateMessageEvent</a> , 以及 <a class="el" href="a00501.html#ac9bee0cbf3838fa62837e62110e67067">MiraiCP::GroupTempMessageEvent</a> 内被实现.</p>
-
 </div>
 </div>
-<a id="ace8d5250eaff54abb3631cccf37b4b49" name="ace8d5250eaff54abb3631cccf37b4b49"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ace8d5250eaff54abb3631cccf37b4b49">&#9670;&nbsp;</a></span>from() <span class="overload">[1/2]</span></h2>
+<a id="a269dcef2ca38b7d0c84d479ca968ba10" name="a269dcef2ca38b7d0c84d479ca968ba10"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a269dcef2ca38b7d0c84d479ca968ba10">&#9670;&nbsp;</a></span>NodeHandle() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -209,108 +208,147 @@ Public 成员函数</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual const <a class="el" href="a00429.html">Contact</a> * MiraiCP::IMessageEvent::from </td>
+          <td class="memname">MiraiCP::NodeHandle::NodeHandle </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>在 <a class="el" href="a00465.html#ae81a0e1dec6235d786b79244ef3ae40b">MiraiCP::GroupMessageEvent</a>, <a class="el" href="a00469.html#a92d1a4aad3a0b4306986cea460b84fb7">MiraiCP::PrivateMessageEvent</a> , 以及 <a class="el" href="a00501.html#a40e9c959f267452a60b2d5e6549dd5bb">MiraiCP::GroupTempMessageEvent</a> 内被实现.</p>
-
-</div>
-</div>
-<a id="a77875102a2c9021981c942d16e15435a" name="a77875102a2c9021981c942d16e15435a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a77875102a2c9021981c942d16e15435a">&#9670;&nbsp;</a></span>from() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual <a class="el" href="a00429.html">Contact</a> * MiraiCP::IMessageEvent::from </td>
-          <td>(</td>
+          <td class="paramtype">const <a class="el" href="a00461.html">NodeHandle</a> &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>获取当前聊天的发送人，可能是群成员，私聊的好友，或群临时会话对应的群成员 </p>
-
-<p>在 <a class="el" href="a00465.html#a76b1e6102746a08259bef6d638a8c993">MiraiCP::GroupMessageEvent</a>, <a class="el" href="a00469.html#a9b4c13376dcef6dddab4cca9b57ffc48">MiraiCP::PrivateMessageEvent</a> , 以及 <a class="el" href="a00501.html#adf2a7d962bf5daba13db488d48f0da5d">MiraiCP::GroupTempMessageEvent</a> 内被实现.</p>
-
 </div>
 </div>
-<a id="a40be4514c0111359a8388cb0c079ec76" name="a40be4514c0111359a8388cb0c079ec76"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a40be4514c0111359a8388cb0c079ec76">&#9670;&nbsp;</a></span>getMessageChain() <span class="overload">[1/2]</span></h2>
+<a id="aa2f95b760153e53de0828e3be2d010f2" name="aa2f95b760153e53de0828e3be2d010f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2f95b760153e53de0828e3be2d010f2">&#9670;&nbsp;</a></span>~NodeHandle()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual const <a class="el" href="a00709.html">MessageChain</a> * MiraiCP::IMessageEvent::getMessageChain </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>在 <a class="el" href="a00465.html#a505491fdd1287b85705d706d4c54e8da">MiraiCP::GroupMessageEvent</a>, <a class="el" href="a00469.html#a547bf324dfbfbb2dbef03c3fef05168b">MiraiCP::PrivateMessageEvent</a> , 以及 <a class="el" href="a00501.html#af08cf89e9ec68ea7a71f491bac7af023">MiraiCP::GroupTempMessageEvent</a> 内被实现.</p>
-
-</div>
-</div>
-<a id="ab05db28ad76f89f09b38ad345f557803" name="ab05db28ad76f89f09b38ad345f557803"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab05db28ad76f89f09b38ad345f557803">&#9670;&nbsp;</a></span>getMessageChain() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual <a class="el" href="a00709.html">MessageChain</a> * MiraiCP::IMessageEvent::getMessageChain </td>
+          <td class="memname">MiraiCP::NodeHandle::~NodeHandle </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="a00308_source.html">Event.cpp</a> 第 <a class="el" href="a00308_source.html#l00422">422</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00422" name="l00422"></a><span class="lineno">  422</span>                            {</div>
+<div class="line"><a id="l00423" name="l00423"></a><span class="lineno">  423</span>        <span class="keyword">delete</span> <a class="code hl_variable" href="a00461.html#a590bdd13512e2e81324202aab27ece96">handle</a>;</div>
+<div class="line"><a id="l00424" name="l00424"></a><span class="lineno">  424</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="ad6689ddc59dc8dddd23885edba704343" name="ad6689ddc59dc8dddd23885edba704343"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6689ddc59dc8dddd23885edba704343">&#9670;&nbsp;</a></span>isEnable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MiraiCP::NodeHandle::isEnable </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="a00308_source.html">Event.cpp</a> 第 <a class="el" href="a00308_source.html#l00410">410</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00410" name="l00410"></a><span class="lineno">  410</span>                                    {</div>
+<div class="line"><a id="l00411" name="l00411"></a><span class="lineno">  411</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="a00461.html#a590bdd13512e2e81324202aab27ece96">handle</a>-&gt;flag.load();</div>
+<div class="line"><a id="l00412" name="l00412"></a><span class="lineno">  412</span>    }</div>
+</div><!-- fragment --><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> 这是这个函数的调用关系图:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00461_ad6689ddc59dc8dddd23885edba704343_icgraph.svg" width="408" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a8073b4a1659ba17e1fd4d7bebaf19f3a" name="a8073b4a1659ba17e1fd4d7bebaf19f3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8073b4a1659ba17e1fd4d7bebaf19f3a">&#9670;&nbsp;</a></span>resume()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MiraiCP::NodeHandle::resume </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="a00308_source.html">Event.cpp</a> 第 <a class="el" href="a00308_source.html#l00418">418</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00418" name="l00418"></a><span class="lineno">  418</span>                            {</div>
+<div class="line"><a id="l00419" name="l00419"></a><span class="lineno">  419</span>        <a class="code hl_variable" href="a00461.html#a590bdd13512e2e81324202aab27ece96">handle</a>-&gt;flag.store(<span class="keyword">true</span>);</div>
+<div class="line"><a id="l00420" name="l00420"></a><span class="lineno">  420</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a8810cf0a165339c8bd0db2fad01f64a8" name="a8810cf0a165339c8bd0db2fad01f64a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8810cf0a165339c8bd0db2fad01f64a8">&#9670;&nbsp;</a></span>stop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MiraiCP::NodeHandle::stop </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="a00308_source.html">Event.cpp</a> 第 <a class="el" href="a00308_source.html#l00414">414</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00414" name="l00414"></a><span class="lineno">  414</span>                          {</div>
+<div class="line"><a id="l00415" name="l00415"></a><span class="lineno">  415</span>        <a class="code hl_variable" href="a00461.html#a590bdd13512e2e81324202aab27ece96">handle</a>-&gt;flag.store(<span class="keyword">false</span>);</div>
+<div class="line"><a id="l00416" name="l00416"></a><span class="lineno">  416</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="a590bdd13512e2e81324202aab27ece96" name="a590bdd13512e2e81324202aab27ece96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a590bdd13512e2e81324202aab27ece96">&#9670;&nbsp;</a></span>handle</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">NodeHandleInternal* MiraiCP::NodeHandle::handle</td>
+        </tr>
+      </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>在 <a class="el" href="a00465.html#a3dd489fc2c775cb0997402525d461877">MiraiCP::GroupMessageEvent</a>, <a class="el" href="a00469.html#a046a99377587f6d8278d7d6cfb55208b">MiraiCP::PrivateMessageEvent</a> , 以及 <a class="el" href="a00501.html#af4a3409f72b9feba0671804763390592">MiraiCP::GroupTempMessageEvent</a> 内被实现.</p>
+<p class="definition">在文件 <a class="el" href="a00062_source.html">Event.h</a> 第 <a class="el" href="a00062_source.html#l00051">51</a> 行定义.</p>
 
 </div>
 </div>
 <hr/>该类的文档由以下文件生成:<ul>
-<li><a class="el" href="a00119_source.html">Event.h</a></li>
+<li><a class="el" href="a00062_source.html">Event.h</a></li>
+<li><a class="el" href="a00308_source.html">Event.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -318,8 +356,8 @@ Public 成员函数</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="a00305.html">MiraiCP</a></li><li class="navelem"><a class="el" href="a00461.html">IMessageEvent</a></li>
-    <li class="footer">生成于 2023年 一月 27日 星期五 00:14:12 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="navelem"><a class="el" href="a00394.html">MiraiCP</a></li><li class="navelem"><a class="el" href="a00461.html">NodeHandle</a></li>
+    <li class="footer">生成于 2023年 二月 28日 星期二 12:14:11 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
     </body>

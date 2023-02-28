@@ -1,5 +1,6 @@
 var a00254 =
 [
-    [ "GetFriendPool", "a00254.html#a56f06eb7dbfbef8bf78ecdeabe8b97b0", null ],
-    [ "GetFriendPool", "a00254.html#ac4c7e588378164336db18f26999103a3", null ]
+    [ "collect_plugins", "a00254.html#ac2437e37ffa99895ce42d4dd19efbbcd", null ],
+    [ "jstring2str", "a00254.html#aa5f8d0ecd9dd392b491070aace643ae3", null ],
+    [ "str2jstring", "a00254.html#a6a6fcd695791253a9b3a053d313b2b93", null ]
 ];

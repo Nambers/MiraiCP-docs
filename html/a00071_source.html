@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiraiCP: ktInterface.h 源文件</title>
+<title>MiraiCP: BotLeaveEvent.h 源文件</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -35,7 +35,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MiraiCP
-   &#160;<span id="projectnumber">v2.13.2</span>
+   &#160;<span id="projectnumber">v2.14.0</span>
    </div>
    <div id="projectbrief">MiraiCP api document</div>
   </td>
@@ -93,10 +93,10 @@ $(document).ready(function(){initNavTree('a00071_source.html',''); initResizable
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">ktInterface.h</div></div>
+  <div class="headertitle"><div class="title">BotLeaveEvent.h</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="a00071.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// Copyright (c) 2022 - 2022. Antares, Eritque arcus and contributors.</span></div>
+<a href="a00071.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// Copyright (c) 2020 - 2023. Eritque arcus and contributors.</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">//</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">// This program is free software: you can redistribute it and/or modify</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">// it under the terms of the GNU Affero General Public License as</span></div>
@@ -112,50 +112,65 @@ $(document).ready(function(){initNavTree('a00071_source.html',''); initResizable
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">// along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</span></div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">//</span></div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#ifndef MIRAICP_PRO_KTINTERFACE_H</span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#define MIRAICP_PRO_KTINTERFACE_H</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#ifndef MIRAICP_PRO_BOTLEAVEEVENT_H</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#define MIRAICP_PRO_BOTLEAVEEVENT_H</span></div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &quot;<a class="code" href="a00083.html">LoaderMacro.h</a>&quot;</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment">// EXPORT functions</span></div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="a00071.html#a3d68440994d4ab2136706628a2e6f77f">   25</a></span><a class="code hl_define" href="a00083.html#acad5926f07c36447dfe9c95bc44c6569">LOADER_EXPORT</a> <a class="code hl_define" href="a00083.html#aa59fc32caa9a0e627c60a03a7a446c98">JRETURNTYPE</a> <a class="code hl_define" href="a00083.html#a70f859fa14d7c0bb2a19e4af118ee014">DECL_EXPORT_NAME</a>(<a class="code hl_function" href="a00071.html#a3d68440994d4ab2136706628a2e6f77f">Verify</a>)(<a class="code hl_define" href="a00083.html#a959f3b2a150b26823662a8c5de4af002">J_ARGS_AND_STRING</a>, <a class="code hl_define" href="a00083.html#aae63af684167e1a19dc5e3332dbc7238">JSTRING</a>);</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="a00071.html#a73d4a4e502a17765df566b528d6a9484">   27</a></span><a class="code hl_define" href="a00083.html#acad5926f07c36447dfe9c95bc44c6569">LOADER_EXPORT</a> <a class="code hl_define" href="a00083.html#aa59fc32caa9a0e627c60a03a7a446c98">JRETURNTYPE</a> <a class="code hl_define" href="a00083.html#a70f859fa14d7c0bb2a19e4af118ee014">DECL_EXPORT_NAME</a>(<a class="code hl_function" href="a00071.html#a73d4a4e502a17765df566b528d6a9484">Event</a>)(<a class="code hl_define" href="a00083.html#a959f3b2a150b26823662a8c5de4af002">J_ARGS_AND_STRING</a>);</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="a00071.html#a3b230352980d44ad05ac47ceae3f007c">   29</a></span><a class="code hl_define" href="a00083.html#acad5926f07c36447dfe9c95bc44c6569">LOADER_EXPORT</a> <a class="code hl_define" href="a00083.html#aa59fc32caa9a0e627c60a03a7a446c98">JRETURNTYPE</a> <a class="code hl_define" href="a00083.html#a70f859fa14d7c0bb2a19e4af118ee014">DECL_EXPORT_NAME</a>(<a class="code hl_function" href="a00071.html#a3b230352980d44ad05ac47ceae3f007c">PluginDisable</a>)(<a class="code hl_define" href="a00083.html#a919c2f594760ce688ff10318059a02b6">J_ARGS</a>);</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#ifndef LOADER_NATIVE</span></div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="keywordtype">int</span> <a class="code hl_function" href="a00071.html#a0c4a7b01410b519eeff58a050bc194cb">registerMethods</a>(JNIEnv *env, <span class="keyword">const</span> <span class="keywordtype">char</span> *className, <span class="keyword">const</span> JNINativeMethod *gMethods, <span class="keywordtype">int</span> numMethods);</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="a00071.html#a54c4b6ec7b4876213ab9e9f888da04ec">   34</a></span><span class="keyword">const</span> JNINativeMethod <a class="code hl_variable" href="a00071.html#a54c4b6ec7b4876213ab9e9f888da04ec">method_table</a>[]{</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        {(<span class="keywordtype">char</span> *) <span class="stringliteral">&quot;Verify&quot;</span>, (<span class="keywordtype">char</span> *) <span class="stringliteral">&quot;(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Void;&quot;</span>, (jstring *) <a class="code hl_function" href="a00071.html#a3d68440994d4ab2136706628a2e6f77f">Verify</a>},</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        {(<span class="keywordtype">char</span> *) <span class="stringliteral">&quot;Event&quot;</span>, (<span class="keywordtype">char</span> *) <span class="stringliteral">&quot;(Ljava/lang/String;)Ljava/lang/Void;&quot;</span>, (jstring *) <a class="code hl_function" href="a00071.html#a73d4a4e502a17765df566b528d6a9484">Event</a>},</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        {(<span class="keywordtype">char</span> *) <span class="stringliteral">&quot;PluginDisable&quot;</span>, (<span class="keywordtype">char</span> *) <span class="stringliteral">&quot;()Ljava/lang/Void;&quot;</span>, (jobject *) <a class="code hl_function" href="a00071.html#a3b230352980d44ad05ac47ceae3f007c">PluginDisable</a>}};</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="preprocessor">#endif </span><span class="comment">//MIRAICP_PRO_KTINTERFACE_H</span></div>
-<div class="ttc" id="aa00071_html_a0c4a7b01410b519eeff58a050bc194cb"><div class="ttname"><a href="a00071.html#a0c4a7b01410b519eeff58a050bc194cb">registerMethods</a></div><div class="ttdeci">int registerMethods(JNIEnv *env, const char *className, const JNINativeMethod *gMethods, int numMethods)</div><div class="ttdef"><b>Definition:</b> <a href="a00203_source.html#l00141">ktInterface.cpp:141</a></div></div>
-<div class="ttc" id="aa00071_html_a3b230352980d44ad05ac47ceae3f007c"><div class="ttname"><a href="a00071.html#a3b230352980d44ad05ac47ceae3f007c">PluginDisable</a></div><div class="ttdeci">LOADER_EXPORT JRETURNTYPE DECL_EXPORT_NAME() PluginDisable(J_ARGS)</div></div>
-<div class="ttc" id="aa00071_html_a3d68440994d4ab2136706628a2e6f77f"><div class="ttname"><a href="a00071.html#a3d68440994d4ab2136706628a2e6f77f">Verify</a></div><div class="ttdeci">LOADER_EXPORT JRETURNTYPE DECL_EXPORT_NAME() Verify(J_ARGS_AND_STRING, JSTRING)</div></div>
-<div class="ttc" id="aa00071_html_a54c4b6ec7b4876213ab9e9f888da04ec"><div class="ttname"><a href="a00071.html#a54c4b6ec7b4876213ab9e9f888da04ec">method_table</a></div><div class="ttdeci">const JNINativeMethod method_table[]</div><div class="ttdef"><b>Definition:</b> <a href="a00071_source.html#l00034">ktInterface.h:34</a></div></div>
-<div class="ttc" id="aa00071_html_a73d4a4e502a17765df566b528d6a9484"><div class="ttname"><a href="a00071.html#a73d4a4e502a17765df566b528d6a9484">Event</a></div><div class="ttdeci">LOADER_EXPORT JRETURNTYPE DECL_EXPORT_NAME() Event(J_ARGS_AND_STRING)</div></div>
-<div class="ttc" id="aa00083_html"><div class="ttname"><a href="a00083.html">LoaderMacro.h</a></div></div>
-<div class="ttc" id="aa00083_html_a70f859fa14d7c0bb2a19e4af118ee014"><div class="ttname"><a href="a00083.html#a70f859fa14d7c0bb2a19e4af118ee014">DECL_EXPORT_NAME</a></div><div class="ttdeci">#define DECL_EXPORT_NAME(x)</div><div class="ttdef"><b>Definition:</b> <a href="a00083_source.html#l00030">LoaderMacro.h:30</a></div></div>
-<div class="ttc" id="aa00083_html_a919c2f594760ce688ff10318059a02b6"><div class="ttname"><a href="a00083.html#a919c2f594760ce688ff10318059a02b6">J_ARGS</a></div><div class="ttdeci">#define J_ARGS</div><div class="ttdef"><b>Definition:</b> <a href="a00083_source.html#l00031">LoaderMacro.h:31</a></div></div>
-<div class="ttc" id="aa00083_html_a959f3b2a150b26823662a8c5de4af002"><div class="ttname"><a href="a00083.html#a959f3b2a150b26823662a8c5de4af002">J_ARGS_AND_STRING</a></div><div class="ttdeci">#define J_ARGS_AND_STRING</div><div class="ttdef"><b>Definition:</b> <a href="a00083_source.html#l00032">LoaderMacro.h:32</a></div></div>
-<div class="ttc" id="aa00083_html_aa59fc32caa9a0e627c60a03a7a446c98"><div class="ttname"><a href="a00083.html#aa59fc32caa9a0e627c60a03a7a446c98">JRETURNTYPE</a></div><div class="ttdeci">#define JRETURNTYPE</div><div class="ttdef"><b>Definition:</b> <a href="a00083_source.html#l00024">LoaderMacro.h:24</a></div></div>
-<div class="ttc" id="aa00083_html_aae63af684167e1a19dc5e3332dbc7238"><div class="ttname"><a href="a00083.html#aae63af684167e1a19dc5e3332dbc7238">JSTRING</a></div><div class="ttdeci">#define JSTRING</div><div class="ttdef"><b>Definition:</b> <a href="a00083_source.html#l00026">LoaderMacro.h:26</a></div></div>
-<div class="ttc" id="aa00083_html_acad5926f07c36447dfe9c95bc44c6569"><div class="ttname"><a href="a00083.html#acad5926f07c36447dfe9c95bc44c6569">LOADER_EXPORT</a></div><div class="ttdeci">#define LOADER_EXPORT</div><div class="ttdef"><b>Definition:</b> <a href="a00083_source.html#l00029">LoaderMacro.h:29</a></div></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &quot;../Group.h&quot;</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &quot;../Member.h&quot;</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &quot;<a class="code" href="a00065.html">BotEvent.h</a>&quot;</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="keyword">namespace </span><a class="code hl_namespace" href="a00394.html">MiraiCP</a> {</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="a00481.html">   30</a></span>    <span class="keyword">class </span><a class="code hl_class" href="a00481.html">BotLeaveEvent</a> : <span class="keyword">public</span> <a class="code hl_class" href="a00473.html">BotEvent</a>&lt;BotLeaveEvent&gt; {</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="a00481.html#a6181c5b90aece0c558943c71d9a037ed">   32</a></span>        <span class="keyword">static</span> <a class="code hl_enumeration" href="a00398.html#abe9e9d8212ea8f23717b72db64393cab">eventTypes::Types</a> <a class="code hl_function" href="a00481.html#a6181c5b90aece0c558943c71d9a037ed">get_event_type</a>() {</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>            <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="a00398.html#abe9e9d8212ea8f23717b72db64393cabab9a57352711dc24a722df5dc49b41807">eventTypes::Types::BotLeaveEvent</a>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        }</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="a00481.html#ac1df44d7400ad221500364c7b3de6737">   37</a></span>        <span class="keyword">enum class</span> <a class="code hl_enumeration" href="a00481.html#ac1df44d7400ad221500364c7b3de6737">EventType</a> {</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>            <a class="code hl_enumvalue" href="a00481.html#ac1df44d7400ad221500364c7b3de6737a4d3d769b812b6faa6b76e1a8abaece2d">Active</a> = 0,</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>            <a class="code hl_enumvalue" href="a00481.html#ac1df44d7400ad221500364c7b3de6737a3e07960fcc45408894cf1402257bd9fd">Kick</a>,</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>            <a class="code hl_enumvalue" href="a00481.html#ac1df44d7400ad221500364c7b3de6737aeee6f05922080480c6043305c9d6b329">Disband</a></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        };</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="a00481.html#a8d792f877c523fc85423263a3ff60242">   49</a></span>        <a class="code hl_class" href="a00589.html">Group</a> <a class="code hl_variable" href="a00481.html#a8d792f877c523fc85423263a3ff60242">group</a>;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="a00481.html#ae417bdaa1e08bf29b51b97fd1f8f4d80">   50</a></span>        <a class="code hl_enumeration" href="a00481.html#ac1df44d7400ad221500364c7b3de6737">EventType</a> <a class="code hl_variable" href="a00481.html#ae417bdaa1e08bf29b51b97fd1f8f4d80">type</a>;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="a00481.html#aa8e91ea7bff0f0211728c25ee5402ccc">   51</a></span>        <a class="code hl_class" href="a00625.html">Member</a> <a class="code hl_variable" href="a00481.html#aa8e91ea7bff0f0211728c25ee5402ccc">operater</a>;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        <span class="keyword">explicit</span> <a class="code hl_function" href="a00481.html#adf7d87e720725c6db5fb39f0f666b9a4">BotLeaveEvent</a>(<a class="code hl_class" href="a00489.html">BaseEventData</a> j);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    };</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>} <span class="comment">// namespace MiraiCP</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="preprocessor">#endif </span><span class="comment">//MIRAICP_PRO_BOTLEAVEEVENT_H</span></div>
+<div class="ttc" id="aa00065_html"><div class="ttname"><a href="a00065.html">BotEvent.h</a></div></div>
+<div class="ttc" id="aa00394_html"><div class="ttname"><a href="a00394.html">MiraiCP</a></div><div class="ttdef"><b>Definition:</b> <a href="a00041_source.html#l00021">JsonTools.h:21</a></div></div>
+<div class="ttc" id="aa00398_html_abe9e9d8212ea8f23717b72db64393cab"><div class="ttname"><a href="a00398.html#abe9e9d8212ea8f23717b72db64393cab">MiraiCP::eventTypes::Types</a></div><div class="ttdeci">Types</div><div class="ttdef"><b>Definition:</b> <a href="a00077_source.html#l00033">EventBase.h:33</a></div></div>
+<div class="ttc" id="aa00398_html_abe9e9d8212ea8f23717b72db64393cabab9a57352711dc24a722df5dc49b41807"><div class="ttname"><a href="a00398.html#abe9e9d8212ea8f23717b72db64393cabab9a57352711dc24a722df5dc49b41807">MiraiCP::eventTypes::BotLeaveEvent</a></div><div class="ttdeci">@ BotLeaveEvent</div><div class="ttdef"><b>Definition:</b> <a href="a00077_source.html#l00038">EventBase.h:38</a></div></div>
+<div class="ttc" id="aa00473_html"><div class="ttname"><a href="a00473.html">MiraiCP::BotEvent</a></div><div class="ttdoc">所有事件处理timeoutevent都是机器人事件，指都有机器人实例</div><div class="ttdef"><b>Definition:</b> <a href="a00065_source.html#l00029">BotEvent.h:29</a></div></div>
+<div class="ttc" id="aa00481_html"><div class="ttname"><a href="a00481.html">MiraiCP::BotLeaveEvent</a></div><div class="ttdef"><b>Definition:</b> <a href="a00071_source.html#l00030">BotLeaveEvent.h:30</a></div></div>
+<div class="ttc" id="aa00481_html_a6181c5b90aece0c558943c71d9a037ed"><div class="ttname"><a href="a00481.html#a6181c5b90aece0c558943c71d9a037ed">MiraiCP::BotLeaveEvent::get_event_type</a></div><div class="ttdeci">static eventTypes::Types get_event_type()</div><div class="ttdef"><b>Definition:</b> <a href="a00071_source.html#l00032">BotLeaveEvent.h:32</a></div></div>
+<div class="ttc" id="aa00481_html_a8d792f877c523fc85423263a3ff60242"><div class="ttname"><a href="a00481.html#a8d792f877c523fc85423263a3ff60242">MiraiCP::BotLeaveEvent::group</a></div><div class="ttdeci">Group group</div><div class="ttdef"><b>Definition:</b> <a href="a00071_source.html#l00049">BotLeaveEvent.h:49</a></div></div>
+<div class="ttc" id="aa00481_html_aa8e91ea7bff0f0211728c25ee5402ccc"><div class="ttname"><a href="a00481.html#aa8e91ea7bff0f0211728c25ee5402ccc">MiraiCP::BotLeaveEvent::operater</a></div><div class="ttdeci">Member operater</div><div class="ttdef"><b>Definition:</b> <a href="a00071_source.html#l00051">BotLeaveEvent.h:51</a></div></div>
+<div class="ttc" id="aa00481_html_ac1df44d7400ad221500364c7b3de6737"><div class="ttname"><a href="a00481.html#ac1df44d7400ad221500364c7b3de6737">MiraiCP::BotLeaveEvent::EventType</a></div><div class="ttdeci">EventType</div><div class="ttdoc">事件类型</div><div class="ttdef"><b>Definition:</b> <a href="a00071_source.html#l00037">BotLeaveEvent.h:37</a></div></div>
+<div class="ttc" id="aa00481_html_ac1df44d7400ad221500364c7b3de6737a3e07960fcc45408894cf1402257bd9fd"><div class="ttname"><a href="a00481.html#ac1df44d7400ad221500364c7b3de6737a3e07960fcc45408894cf1402257bd9fd">MiraiCP::BotLeaveEvent::EventType::Kick</a></div><div class="ttdeci">@ Kick</div><div class="ttdoc">被踢出</div></div>
+<div class="ttc" id="aa00481_html_ac1df44d7400ad221500364c7b3de6737a4d3d769b812b6faa6b76e1a8abaece2d"><div class="ttname"><a href="a00481.html#ac1df44d7400ad221500364c7b3de6737a4d3d769b812b6faa6b76e1a8abaece2d">MiraiCP::BotLeaveEvent::EventType::Active</a></div><div class="ttdeci">@ Active</div><div class="ttdoc">主动退出</div></div>
+<div class="ttc" id="aa00481_html_ac1df44d7400ad221500364c7b3de6737aeee6f05922080480c6043305c9d6b329"><div class="ttname"><a href="a00481.html#ac1df44d7400ad221500364c7b3de6737aeee6f05922080480c6043305c9d6b329">MiraiCP::BotLeaveEvent::EventType::Disband</a></div><div class="ttdeci">@ Disband</div><div class="ttdoc">群被解散</div></div>
+<div class="ttc" id="aa00481_html_adf7d87e720725c6db5fb39f0f666b9a4"><div class="ttname"><a href="a00481.html#adf7d87e720725c6db5fb39f0f666b9a4">MiraiCP::BotLeaveEvent::BotLeaveEvent</a></div><div class="ttdeci">BotLeaveEvent(BaseEventData j)</div><div class="ttdef"><b>Definition:</b> <a href="a00308_source.html#l00214">Event.cpp:214</a></div></div>
+<div class="ttc" id="aa00481_html_ae417bdaa1e08bf29b51b97fd1f8f4d80"><div class="ttname"><a href="a00481.html#ae417bdaa1e08bf29b51b97fd1f8f4d80">MiraiCP::BotLeaveEvent::type</a></div><div class="ttdeci">EventType type</div><div class="ttdef"><b>Definition:</b> <a href="a00071_source.html#l00050">BotLeaveEvent.h:50</a></div></div>
+<div class="ttc" id="aa00489_html"><div class="ttname"><a href="a00489.html">MiraiCP::BaseEventData</a></div><div class="ttdef"><b>Definition:</b> <a href="a00077_source.html#l00058">EventBase.h:58</a></div></div>
+<div class="ttc" id="aa00589_html"><div class="ttname"><a href="a00589.html">MiraiCP::Group</a></div><div class="ttdoc">forward declaration</div><div class="ttdef"><b>Definition:</b> <a href="a00131_source.html#l00032">Group.h:32</a></div></div>
+<div class="ttc" id="aa00625_html"><div class="ttname"><a href="a00625.html">MiraiCP::Member</a></div><div class="ttdoc">群成员类声明</div><div class="ttdef"><b>Definition:</b> <a href="a01361_source.html#l00032">include/sdk/Member.h:32</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_bda05eb71e068b870dbf680d28584ff8.html">libloader</a></li><li class="navelem"><a class="el" href="a00071.html">ktInterface.h</a></li>
-    <li class="footer">生成于 2023年 一月 27日 星期五 00:14:10 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_1ede18532ce6284c46efe733029b594d.html">sdk</a></li><li class="navelem"><a class="el" href="dir_f83dc716b95661d1ef88f368581b25fb.html">Events</a></li><li class="navelem"><a class="el" href="a00071.html">BotLeaveEvent.h</a></li>
+    <li class="footer">生成于 2023年 二月 28日 星期二 12:14:05 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
     </body>

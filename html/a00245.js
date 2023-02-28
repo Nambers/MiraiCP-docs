@@ -1,20 +1,16 @@
 var a00245 =
 [
-    [ "getAuthor", "a00245.html#abfdf0bbad2700204a5deced1ff272ff2", null ],
-    [ "getDescription", "a00245.html#a7164279987822e9aab5a2dd15e017de3", null ],
-    [ "getId", "a00245.html#a812cdc9b9e9c46af8980f1aea9a4233c", null ],
-    [ "getMVersion", "a00245.html#a89f1f77ffc39dfa0481e7c1ddc318b23", null ],
-    [ "getName", "a00245.html#a75b62773306f64d5de37fc60f700b534", null ],
-    [ "getTime", "a00245.html#aa9519385a55e29fa632d31d97b734ac4", null ],
-    [ "getVersion", "a00245.html#a8f0131520e982b41e3c62364b9eaf2fa", null ],
-    [ "isValid", "a00245.html#a37c32e82eb4c921a9f66db00cc7a0010", null ],
-    [ "serialize", "a00245.html#a074fac12f573e3ec8ea2bb2bced66f08", null ],
-    [ "serialize2string", "a00245.html#af92596a34de37970ec76538dc2817e98", null ],
-    [ "author", "a00245.html#a6e9f61e66186687264c2020b1d6c3afe", null ],
-    [ "description", "a00245.html#a6912f54ff186c8903ce5b55000bcbc6f", null ],
-    [ "id", "a00245.html#a2c5e718b4b8ceb1cb2b5b8bbb876146a", null ],
-    [ "mversion", "a00245.html#a3c74ed2b89e386c82452f1b510d99c57", null ],
-    [ "name", "a00245.html#a2b542fc65ab1b1d6720bfcc1a9ce1602", null ],
-    [ "time", "a00245.html#a72f4752e10dc44b50911e80e37c924c2", null ],
-    [ "version", "a00245.html#a5754922ee11dbea499f6454b86357d16", null ]
+    [ "loader_disableAllPlugins", "a00245.html#ad3da09d6c8c2db437e3169b96ddb2ae9", null ],
+    [ "loader_disablePluginById", "a00245.html#a04edf8e3eda892a478591ac18c05d9b5", null ],
+    [ "loader_enableAllPlugins", "a00245.html#a6cd5117c0adf23ed373edca65148a4fd", null ],
+    [ "loader_enablePluginById", "a00245.html#a3f1b6298effea4f44e85e20b0a915c1d", null ],
+    [ "loader_loadNewPlugin", "a00245.html#a8eada9f54700edf5a2aa262e5d006691", null ],
+    [ "loader_pluginEndByException", "a00245.html#abc4b73a1b14010cd0c6e713d6579ef8b", null ],
+    [ "loader_reloadPluginById", "a00245.html#ae2bf46cd649bb6979dd268bbc428e14c", null ],
+    [ "loader_resetThreadByIndex", "a00245.html#ae437cb8e58f9ddab116aa54e71d3891a", null ],
+    [ "loader_unloadPluginById", "a00245.html#a52292cf621eb6c36b43047ee054c411d", null ],
+    [ "loaderCVLock", "a00245.html#acadd04359cbcb7b046e3fdcf6e442ba9", null ],
+    [ "loaderWakeCV", "a00245.html#a46f4ab12479d61956e7dc81cfb19fef5", null ],
+    [ "shouldTick", "a00245.html#a404a95877baaa83650de382c8896d80f", null ],
+    [ "tick", "a00245.html#a77243f9ea0159dbbb040b5eaf14113e2", null ]
 ];

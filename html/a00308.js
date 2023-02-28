@@ -1,8 +1,6 @@
 var a00308 =
 [
-    [ "blocks", "a00353.html", "a00353" ],
-    [ "multi_future", "a00349.html", "a00349" ],
-    [ "thread_pool", "a00357.html", "a00357" ],
-    [ "concurrency_t", "a00308.html#a7bb1747ef283bd1349183c445ee89aaa", null ],
-    [ "pool", "a00308.html#a4395057e1ebc1b2751bba810c33a5873", null ]
+    [ "groupInviteInternal", "a00308.html#ade37f70b66a7da09197985fe2d874348", null ],
+    [ "memberJoinRequestInternal", "a00308.html#a007cb939b04fb94a0e76805f64422783", null ],
+    [ "newFriendRequestInternal", "a00308.html#a94480131f138aabc9aba228b9d17023f", null ]
 ];

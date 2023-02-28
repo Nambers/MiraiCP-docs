@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['loaderexception_0',['LoaderException',['../a00304.html#aed8445a0eae5bb7716661acb1fc42e66',1,'LibLoader']]],
-  ['loadertask_1',['loadertask',['../a00304.html#a7d3f947f188b83a2b84f3c7e009d4e1a',1,'LibLoader']]]
+  ['json_0',['json',['../a00449.html#a5b3c9b7d906d4cb7ee220e5e7e12c57f',1,'MiraiCP::ContactDataHelper::json()'],['../a00394.html#ac0a8a1bade77a57eeb1d94cfacfb75ce',1,'MiraiCP::json()'],['../a00389.html#ab701e3ac61a85b337ec5c1abaad6742d',1,'json():&#160;utils.cpp']]]
 ];

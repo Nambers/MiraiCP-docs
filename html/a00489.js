@@ -1,10 +1,9 @@
 var a00489 =
 [
-    [ "FriendRecallEvent", "a00489.html#a4935324294a7723c3401c58fb1d09a97", null ],
-    [ "get_event_type", "a00489.html#a83537ccdbd2e454525697559827df57e", null ],
-    [ "author", "a00489.html#adb145915b7e4edcc461a7c7db2823b05", null ],
-    [ "ids", "a00489.html#a426a11bf2f5d57e80082546588abc464", null ],
-    [ "internalIds", "a00489.html#a46217bf3eabccabc4b4358d8c69e71f6", null ],
-    [ "operater", "a00489.html#a4502b63cdd39bb1574a3bfc3d18828d4", null ],
-    [ "time", "a00489.html#ab22df1619e6ad420c6166d0f3877dc74", null ]
+    [ "BuiltInContact", "a00493.html", "a00493" ],
+    [ "BaseEventData", "a00489.html#add7fec6ff79d938ab121f57d10ffa1a7", null ],
+    [ "botId", "a00489.html#a0ef2979d2f7e44318fcc251026a7b109", null ],
+    [ "eventData", "a00489.html#abd44451921253c4eb235eff3fa3fb857", null ],
+    [ "object", "a00489.html#a9d1c4b300f7c6602c21aff985e9f1757", null ],
+    [ "subject", "a00489.html#a7afa1ecf74f25007146b46f4381c736d", null ]
 ];

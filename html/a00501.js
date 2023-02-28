@@ -1,14 +1,9 @@
 var a00501 =
 [
-    [ "GroupTempMessageEvent", "a00501.html#abfddc2db81d57ac0cc5735da826b409d", null ],
-    [ "chat", "a00501.html#a55718d1fe9883ea24c47c8ebb503d807", null ],
-    [ "chat", "a00501.html#ac9bee0cbf3838fa62837e62110e67067", null ],
-    [ "from", "a00501.html#a40e9c959f267452a60b2d5e6549dd5bb", null ],
-    [ "from", "a00501.html#adf2a7d962bf5daba13db488d48f0da5d", null ],
-    [ "get_event_type", "a00501.html#aab7402e84e7d27152ee337a20d70233a", null ],
-    [ "getMessageChain", "a00501.html#af08cf89e9ec68ea7a71f491bac7af023", null ],
-    [ "getMessageChain", "a00501.html#af4a3409f72b9feba0671804763390592", null ],
-    [ "group", "a00501.html#a29c18056652c7d36248f70f359f01e74", null ],
-    [ "message", "a00501.html#a2405f8a309e3b2de0d7cba313d795cee", null ],
-    [ "sender", "a00501.html#ac0252e17c1cb9a0d4f2ebf37720951db", null ]
+    [ "chat", "a00501.html#afc868fb91c60975d5862d0691c80ec54", null ],
+    [ "chat", "a00501.html#a240d9d0df62738e43f8de576c6b26acf", null ],
+    [ "from", "a00501.html#ace8d5250eaff54abb3631cccf37b4b49", null ],
+    [ "from", "a00501.html#a77875102a2c9021981c942d16e15435a", null ],
+    [ "getMessageChain", "a00501.html#a40be4514c0111359a8388cb0c079ec76", null ],
+    [ "getMessageChain", "a00501.html#ab05db28ad76f89f09b38ad345f557803", null ]
 ];

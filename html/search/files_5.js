@@ -1,5 +1,8 @@
 var searchData=
 [
-  ['imiraidata_2ecpp_0',['IMiraiData.cpp',['../a00263.html',1,'']]],
-  ['imiraidata_2eh_1',['IMiraiData.h',['../a00134.html',1,'']]]
+  ['group_2eh_0',['Group.h',['../a00131.html',1,'']]],
+  ['groupinviteevent_2eh_1',['GroupInviteEvent.h',['../a00083.html',1,'']]],
+  ['groupmessageevent_2eh_2',['GroupMessageEvent.h',['../a00086.html',1,'']]],
+  ['grouprelateddata_2eh_3',['GroupRelatedData.h',['../a00299.html',1,'']]],
+  ['grouptempmessageevent_2eh_4',['GroupTempMessageEvent.h',['../a00089.html',1,'']]]
 ];

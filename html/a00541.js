@@ -1,11 +1,8 @@
 var a00541 =
 [
-    [ "eventNode", "a00541.html#a7c0d9e7b800ebff2dbfe29d508e5904f", null ],
-    [ "eventNode", "a00541.html#a21f99c741cb8b0fe0f031e908732147b", null ],
-    [ "eventNode", "a00541.html#a3d10d8495761b35348a9729036280b91", null ],
-    [ "eventNode", "a00541.html#a19665f22ce5e4fe9fdbc50970dab72c5", null ],
-    [ "getHandle", "a00541.html#a9840c901a9c3e81f06f84b13252b181d", null ],
-    [ "run", "a00541.html#aedef6da8603e38047a3de9006052568b", null ],
-    [ "_handle", "a00541.html#ab8b560004af0fe0e513879955328cffd", null ],
-    [ "func", "a00541.html#a64131ff795261b80c6b37223812a3ee8", null ]
+    [ "MiraiCPExceptionEvent", "a00541.html#a67f475ec3ebcf1f185e5d9ef13fcd14c", null ],
+    [ "get_event_type", "a00541.html#a444bd94208f30dfc9cad36c7e4acf87e", null ],
+    [ "getEventType", "a00541.html#a3a6155162aa6de29e9761276bbae2624", null ],
+    [ "getException", "a00541.html#a1b2f3d9a99441fda4801a7e0119b7cb7", null ],
+    [ "exceptionPtr", "a00541.html#abbe1679705abc11d256a39eb12ac6837", null ]
 ];

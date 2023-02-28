@@ -1,6 +1,7 @@
 var a00053 =
 [
-    [ "MiraiCP::PluginConfig", "a00345.html", "a00345" ],
-    [ "m_MiraiCPVersion", "a00053.html#a5e92a4c931c8d67dcc35b7b9d5de0f4e", null ],
-    [ "MiraiCPVersion", "a00053.html#ae471c96f73a019b792a82629b6bdfdf5", null ]
+    [ "MiraiCP::IRawCommand", "a00437.html", "a00437" ],
+    [ "MiraiCP::IRawCommand::Config", "a00441.html", "a00441" ],
+    [ "commandRegister", "a00053.html#a9c4f605303f4ffc836c1978d9b1e89c5", null ],
+    [ "registerCommand", "a00053.html#ade2058acff33a4c43d5c7820a1828faa", null ]
 ];
