@@ -7,117 +7,117 @@ var files_dup =
     [ "nextMessage.cpp", "a00029.html", null ],
     [ "thread.cpp", "a00035.html", "a00035" ],
     [ "commonTools.h", "a00038.html", [
-      [ "CommonTools::MiraiCPDefer", "a00425.html", "a00425" ]
+      [ "CommonTools::MiraiCPDefer", "a00428.html", "a00428" ]
     ] ],
     [ "JsonTools.h", "a00041.html", "a00041" ],
     [ "MiraiCPMacros.h", "a00044.html", "a00044" ],
     [ "PluginConfig.h", "a00047.html", "a00047" ],
     [ "Bot.h", "a00050.html", [
-      [ "MiraiCP::Bot", "a00433.html", "a00433" ]
+      [ "MiraiCP::Bot", "a00436.html", "a00436" ]
     ] ],
     [ "Command.h", "a00053.html", "a00053" ],
     [ "Contact.h", "a00056.html", "a00056" ],
     [ "CPPPlugin.h", "a00059.html", [
-      [ "MiraiCP::CPPPlugin", "a00457.html", "a00457" ]
+      [ "MiraiCP::CPPPlugin", "a00460.html", "a00460" ]
     ] ],
     [ "Event.h", "a00062.html", "a00062" ],
     [ "BotEvent.h", "a00065.html", [
-      [ "MiraiCP::BotEvent< T >", "a00473.html", "a00473" ]
+      [ "MiraiCP::BotEvent< T >", "a00476.html", "a00476" ]
     ] ],
     [ "BotJoinGroupEvent.h", "a00068.html", [
-      [ "MiraiCP::BotJoinGroupEvent", "a00477.html", "a00477" ]
+      [ "MiraiCP::BotJoinGroupEvent", "a00480.html", "a00480" ]
     ] ],
     [ "BotLeaveEvent.h", "a00071.html", [
-      [ "MiraiCP::BotLeaveEvent", "a00481.html", "a00481" ]
+      [ "MiraiCP::BotLeaveEvent", "a00484.html", "a00484" ]
     ] ],
     [ "BotOnlineEvent.h", "a00074.html", [
-      [ "MiraiCP::BotOnlineEvent", "a00485.html", "a00485" ]
+      [ "MiraiCP::BotOnlineEvent", "a00488.html", "a00488" ]
     ] ],
     [ "EventBase.h", "a00077.html", "a00077" ],
     [ "FriendRecallEvent.h", "a00080.html", [
-      [ "MiraiCP::FriendRecallEvent", "a00505.html", "a00505" ]
+      [ "MiraiCP::FriendRecallEvent", "a00508.html", "a00508" ]
     ] ],
     [ "GroupInviteEvent.h", "a00083.html", [
-      [ "MiraiCP::GroupInviteEvent", "a00509.html", "a00509" ]
+      [ "MiraiCP::GroupInviteEvent", "a00512.html", "a00512" ]
     ] ],
     [ "GroupMessageEvent.h", "a00086.html", [
-      [ "MiraiCP::GroupMessageEvent", "a00513.html", "a00513" ]
+      [ "MiraiCP::GroupMessageEvent", "a00516.html", "a00516" ]
     ] ],
     [ "GroupTempMessageEvent.h", "a00089.html", [
-      [ "MiraiCP::GroupTempMessageEvent", "a00517.html", "a00517" ]
+      [ "MiraiCP::GroupTempMessageEvent", "a00520.html", "a00520" ]
     ] ],
     [ "MemberJoinEvent.h", "a00092.html", [
-      [ "MiraiCP::MemberJoinEvent", "a00521.html", "a00521" ]
+      [ "MiraiCP::MemberJoinEvent", "a00524.html", "a00524" ]
     ] ],
     [ "MemberJoinRequestEvent.h", "a00095.html", [
-      [ "MiraiCP::MemberJoinRequestEvent", "a00525.html", "a00525" ]
+      [ "MiraiCP::MemberJoinRequestEvent", "a00528.html", "a00528" ]
     ] ],
     [ "MemberLeaveEvent.h", "a00098.html", [
-      [ "MiraiCP::MemberLeaveEvent", "a00529.html", "a00529" ]
+      [ "MiraiCP::MemberLeaveEvent", "a00532.html", "a00532" ]
     ] ],
     [ "MemberRecallEvent.h", "a00101.html", [
-      [ "MiraiCP::MemberRecallEvent", "a00533.html", "a00533" ]
+      [ "MiraiCP::MemberRecallEvent", "a00536.html", "a00536" ]
     ] ],
     [ "MessagePreSendEvent.h", "a00104.html", [
-      [ "MiraiCP::MessagePreSendEvent", "a00537.html", "a00537" ]
+      [ "MiraiCP::MessagePreSendEvent", "a00540.html", "a00540" ]
     ] ],
     [ "MiraiCPExceptionEvent.h", "a00107.html", [
-      [ "MiraiCP::MiraiCPExceptionEvent", "a00541.html", "a00541" ]
+      [ "MiraiCP::MiraiCPExceptionEvent", "a00544.html", "a00544" ]
     ] ],
     [ "NewFriendRequestEvent.h", "a00110.html", [
-      [ "MiraiCP::NewFriendRequestEvent", "a00545.html", "a00545" ]
+      [ "MiraiCP::NewFriendRequestEvent", "a00548.html", "a00548" ]
     ] ],
     [ "NudgeEvent.h", "a00113.html", [
-      [ "MiraiCP::NudgeEvent", "a00549.html", "a00549" ]
+      [ "MiraiCP::NudgeEvent", "a00552.html", "a00552" ]
     ] ],
     [ "PrivateMessageEvent.h", "a00116.html", [
-      [ "MiraiCP::PrivateMessageEvent", "a00553.html", "a00553" ]
+      [ "MiraiCP::PrivateMessageEvent", "a00556.html", "a00556" ]
     ] ],
     [ "TimeOutEvent.h", "a00119.html", [
-      [ "MiraiCP::TimeOutEvent", "a00557.html", "a00557" ]
+      [ "MiraiCP::TimeOutEvent", "a00560.html", "a00560" ]
     ] ],
     [ "Exception.h", "a00122.html", [
-      [ "MiraiCP::MiraiCPExceptionBase", "a00561.html", "a00561" ],
-      [ "MiraiCP::MiraiCPExceptionCRTP< T >", "a00565.html", "a00565" ],
-      [ "MiraiCP::MiraiCPException", "a00569.html", null ]
+      [ "MiraiCP::MiraiCPExceptionBase", "a00564.html", "a00564" ],
+      [ "MiraiCP::MiraiCPExceptionCRTP< T >", "a00568.html", "a00568" ],
+      [ "MiraiCP::MiraiCPException", "a00572.html", null ]
     ] ],
     [ "ForwardedMessage.h", "a00125.html", "a00125" ],
     [ "Friend.h", "a00128.html", [
-      [ "MiraiCP::Friend", "a00585.html", "a00585" ]
+      [ "MiraiCP::Friend", "a00588.html", "a00588" ]
     ] ],
     [ "Group.h", "a00131.html", [
-      [ "MiraiCP::Group", "a00589.html", "a00589" ],
-      [ "MiraiCP::Group::GroupSetting", "a00593.html", "a00593" ],
-      [ "MiraiCP::Group::AnnouncementParams", "a00597.html", "a00597" ],
-      [ "MiraiCP::Group::OnlineAnnouncement", "a00601.html", "a00601" ],
-      [ "MiraiCP::Group::OfflineAnnouncement", "a00605.html", "a00605" ]
+      [ "MiraiCP::Group", "a00592.html", "a00592" ],
+      [ "MiraiCP::Group::GroupSetting", "a00596.html", "a00596" ],
+      [ "MiraiCP::Group::AnnouncementParams", "a00600.html", "a00600" ],
+      [ "MiraiCP::Group::OnlineAnnouncement", "a00604.html", "a00604" ],
+      [ "MiraiCP::Group::OfflineAnnouncement", "a00608.html", "a00608" ]
     ] ],
     [ "loaderApi.h", "a00134.html", "a00134" ],
     [ "Logger.h", "a00137.html", [
-      [ "MiraiCP::Logger_interface", "a00609.html", "a00609" ],
-      [ "MiraiCP::Logger_interface::Handler", "a00613.html", "a00613" ],
-      [ "MiraiCP::Logger", "a00617.html", "a00617" ],
-      [ "MiraiCP::IdLogger", "a00621.html", "a00621" ]
+      [ "MiraiCP::Logger_interface", "a00612.html", "a00612" ],
+      [ "MiraiCP::Logger_interface::Handler", "a00616.html", "a00616" ],
+      [ "MiraiCP::Logger", "a00620.html", "a00620" ],
+      [ "MiraiCP::IdLogger", "a00624.html", "a00624" ]
     ] ],
-    [ "include/sdk/Member.h", "a01361.html", [
-      [ "MiraiCP::Member", "a00625.html", "a00625" ]
+    [ "include/sdk/Member.h", "a01364.html", [
+      [ "MiraiCP::Member", "a00628.html", "a00628" ]
     ] ],
-    [ "src/sdk/Exceptions/Member.h", "a01364.html", [
-      [ "MiraiCP::MemberException", "a00905.html", "a00905" ]
+    [ "src/sdk/Exceptions/Member.h", "a01367.html", [
+      [ "MiraiCP::MemberException", "a00916.html", "a00916" ]
     ] ],
     [ "MessageChain.h", "a00143.html", [
-      [ "MiraiCP::internal::Message", "a00629.html", "a00629" ],
-      [ "MiraiCP::MessageChain", "a00633.html", "a00633" ]
+      [ "MiraiCP::internal::Message", "a00632.html", "a00632" ],
+      [ "MiraiCP::MessageChain", "a00636.html", "a00636" ]
     ] ],
     [ "MessageSource.h", "a00146.html", [
-      [ "MiraiCP::MessageSource", "a00637.html", "a00637" ]
+      [ "MiraiCP::MessageSource", "a00640.html", "a00640" ]
     ] ],
     [ "MiraiCode.h", "a00149.html", [
-      [ "MiraiCP::MiraiCodeable", "a00641.html", "a00641" ],
-      [ "MiraiCP::MiraiCode", "a00645.html", "a00645" ]
+      [ "MiraiCP::MiraiCodeable", "a00644.html", "a00644" ],
+      [ "MiraiCP::MiraiCode", "a00648.html", "a00648" ]
     ] ],
     [ "MiraiCPNewThread.h", "a00152.html", [
-      [ "MiraiCP::MiraiCPNewThread", "a00649.html", "a00649" ]
+      [ "MiraiCP::MiraiCPNewThread", "a00652.html", "a00652" ]
     ] ],
     [ "Schedule.h", "a00155.html", "a00155" ],
     [ "SdkType.h", "a00158.html", "a00158" ],
@@ -129,111 +129,113 @@ var files_dup =
     [ "loaderApiInternal.h", "a00176.html", "a00176" ],
     [ "MiraiCPStringInternal.cpp", "a00179.html", null ],
     [ "MiraiCPStringInternal.h", "a00182.html", [
-      [ "MiraiCP::MiraiCPString", "a00737.html", "a00737" ]
+      [ "MiraiCP::MiraiCPStringview", "a00740.html", "a00740" ],
+      [ "MiraiCP::MiraiCPString", "a00744.html", "a00744" ]
     ] ],
     [ "redirectCout.cpp", "a00185.html", "a00185" ],
     [ "redirectCout.h", "a00188.html", "a00188" ],
     [ "WindowsMin.h", "a00191.html", null ],
-    [ "BS_thread_pool.hpp", "a00194.html", "a00194" ],
-    [ "eventHandle.cpp", "a00197.html", "a00197" ],
-    [ "eventHandle.h", "a00200.html", "a00200" ],
-    [ "JNIEnvManager.cpp", "a00203.html", "a00203" ],
-    [ "JNIEnvManager.h", "a00206.html", [
-      [ "JNIEnvManager", "a00773.html", "a00773" ]
+    [ "eventHandle.cpp", "a00194.html", "a00194" ],
+    [ "eventHandle.h", "a00197.html", "a00197" ],
+    [ "JNIEnvManager.cpp", "a00200.html", "a00200" ],
+    [ "JNIEnvManager.h", "a00203.html", [
+      [ "JNIEnvManager", "a00768.html", "a00768" ]
     ] ],
-    [ "JNIEnvs.cpp", "a00209.html", "a00209" ],
-    [ "JNIEnvs.h", "a00212.html", "a00212" ],
-    [ "ktInterface.cpp", "a00215.html", "a00215" ],
-    [ "ktInterface.h", "a00218.html", "a00218" ],
-    [ "libOpen.cpp", "a00221.html", "a00221" ],
-    [ "libOpen.h", "a00224.html", "a00224" ],
-    [ "libloader/loaderApi.cpp", "a01367.html", "a01367" ],
-    [ "sdk/loaderApi.cpp", "a01370.html", "a01370" ],
-    [ "LoaderExceptions.cpp", "a00230.html", null ],
-    [ "LoaderExceptions.h", "a00233.html", "a00233" ],
-    [ "LoaderLogger.cpp", "a00236.html", "a00236" ],
-    [ "LoaderLogger.h", "a00239.html", [
-      [ "LibLoader::LoaderLogger", "a00805.html", "a00805" ]
+    [ "JNIEnvs.cpp", "a00206.html", "a00206" ],
+    [ "JNIEnvs.h", "a00209.html", "a00209" ],
+    [ "ktInterface.cpp", "a00212.html", "a00212" ],
+    [ "ktInterface.h", "a00215.html", "a00215" ],
+    [ "libOpen.cpp", "a00218.html", "a00218" ],
+    [ "libOpen.h", "a00221.html", "a00221" ],
+    [ "libloader/loaderApi.cpp", "a01370.html", "a01370" ],
+    [ "sdk/loaderApi.cpp", "a01373.html", "a01373" ],
+    [ "LoaderExceptions.cpp", "a00227.html", null ],
+    [ "LoaderExceptions.h", "a00230.html", "a00230" ],
+    [ "LoaderLogger.cpp", "a00233.html", "a00233" ],
+    [ "LoaderLogger.h", "a00236.html", [
+      [ "LibLoader::LoaderLogger", "a00800.html", "a00800" ]
     ] ],
-    [ "LoaderMacro.h", "a00242.html", "a00242" ],
-    [ "loaderMain.cpp", "a00245.html", "a00245" ],
-    [ "loaderMain.h", "a00248.html", [
-      [ "LibLoader::LoaderMain", "a00809.html", "a00809" ]
+    [ "LoaderMacro.h", "a00239.html", "a00239" ],
+    [ "loaderMain.cpp", "a00242.html", "a00242" ],
+    [ "loaderMain.h", "a00245.html", [
+      [ "LibLoader::LoaderMain", "a00804.html", "a00804" ]
     ] ],
-    [ "LoaderTaskQueue.h", "a00251.html", "a00251" ],
-    [ "loaderTools.cpp", "a00254.html", "a00254" ],
-    [ "loaderTools.h", "a00257.html", "a00257" ],
-    [ "PlatformException.cpp", "a00260.html", "a00260" ],
-    [ "Plugin.cpp", "a00263.html", "a00263" ],
-    [ "Plugin.h", "a00266.html", [
-      [ "LibLoader::Plugin", "a00829.html", "a00829" ]
+    [ "LoaderTaskQueue.h", "a00248.html", "a00248" ],
+    [ "loaderTools.cpp", "a00251.html", "a00251" ],
+    [ "loaderTools.h", "a00254.html", "a00254" ],
+    [ "PlatformException.cpp", "a00257.html", "a00257" ],
+    [ "Plugin.cpp", "a00260.html", "a00260" ],
+    [ "Plugin.h", "a00263.html", [
+      [ "LibLoader::Plugin", "a00824.html", "a00824" ]
     ] ],
-    [ "PluginData.h", "a00269.html", "a00269" ],
-    [ "PluginListManager.cpp", "a00272.html", "a00272" ],
-    [ "PluginListManager.h", "a00275.html", [
-      [ "LibLoader::PluginListManager", "a00841.html", "a00841" ]
+    [ "PluginData.h", "a00266.html", "a00266" ],
+    [ "PluginListManager.cpp", "a00269.html", "a00269" ],
+    [ "PluginListManager.h", "a00272.html", [
+      [ "LibLoader::PluginListManager", "a00836.html", "a00836" ]
     ] ],
-    [ "Scheduler.cpp", "a00278.html", "a00278" ],
-    [ "Scheduler.h", "a00281.html", "a00281" ],
-    [ "ThreadIdentify.cpp", "a00284.html", "a00284" ],
-    [ "ThreadIdentify.h", "a00287.html", "a00287" ],
-    [ "Bot.cpp", "a00290.html", "a00290" ],
-    [ "examples/Command.cpp", "a01373.html", null ],
-    [ "src/sdk/Command.cpp", "a01376.html", "a01376" ],
-    [ "Contact.cpp", "a00296.html", "a00296" ],
-    [ "GroupRelatedData.h", "a00299.html", [
-      [ "MiraiCP::GroupRelatedData", "a00853.html", "a00853" ]
+    [ "Scheduler.cpp", "a00275.html", "a00275" ],
+    [ "Scheduler.h", "a00278.html", "a00278" ],
+    [ "ThreadIdentify.cpp", "a00281.html", "a00281" ],
+    [ "ThreadIdentify.h", "a00284.html", "a00284" ],
+    [ "ThreadPool.cpp", "a00287.html", "a00287" ],
+    [ "ThreadPool.h", "a00290.html", "a00290" ],
+    [ "Bot.cpp", "a00293.html", "a00293" ],
+    [ "examples/Command.cpp", "a01376.html", null ],
+    [ "src/sdk/Command.cpp", "a01379.html", "a01379" ],
+    [ "Contact.cpp", "a00299.html", "a00299" ],
+    [ "GroupRelatedData.h", "a00302.html", [
+      [ "MiraiCP::GroupRelatedData", "a00864.html", "a00864" ]
     ] ],
-    [ "IContactData.h", "a00302.html", [
-      [ "MiraiCP::IContactData", "a00857.html", "a00857" ]
+    [ "IContactData.h", "a00305.html", [
+      [ "MiraiCP::IContactData", "a00868.html", "a00868" ]
     ] ],
-    [ "IMiraiData.h", "a00305.html", [
-      [ "MiraiCP::IMiraiData", "a00861.html", "a00861" ],
-      [ "MiraiCP::IMiraiData::MiraiDataLocker", "a00865.html", "a00865" ]
+    [ "IMiraiData.h", "a00308.html", [
+      [ "MiraiCP::IMiraiData", "a00872.html", "a00872" ],
+      [ "MiraiCP::IMiraiData::MiraiDataLocker", "a00876.html", "a00876" ]
     ] ],
-    [ "Event.cpp", "a00308.html", "a00308" ],
-    [ "Exception.cpp", "a00311.html", "a00311" ],
-    [ "ExceptionHandle.h", "a00314.html", "a00314" ],
-    [ "API.h", "a00317.html", [
-      [ "MiraiCP::APIException", "a00893.html", "a00893" ]
+    [ "Event.cpp", "a00311.html", "a00311" ],
+    [ "Exception.cpp", "a00314.html", "a00314" ],
+    [ "ExceptionHandle.h", "a00317.html", "a00317" ],
+    [ "API.h", "a00320.html", [
+      [ "MiraiCP::APIException", "a00904.html", "a00904" ]
     ] ],
-    [ "IllegalArgument.h", "a00320.html", [
-      [ "MiraiCP::IllegalArgumentException", "a00897.html", "a00897" ]
+    [ "IllegalArgument.h", "a00323.html", [
+      [ "MiraiCP::IllegalArgumentException", "a00908.html", "a00908" ]
     ] ],
-    [ "IllegalState.h", "a00323.html", [
-      [ "MiraiCP::IllegalStateException", "a00901.html", "a00901" ]
+    [ "IllegalState.h", "a00326.html", [
+      [ "MiraiCP::IllegalStateException", "a00912.html", "a00912" ]
     ] ],
-    [ "RemoteAsset.h", "a00326.html", [
-      [ "MiraiCP::RemoteAssetException", "a00909.html", "a00909" ]
+    [ "RemoteAsset.h", "a00329.html", [
+      [ "MiraiCP::RemoteAssetException", "a00920.html", "a00920" ]
     ] ],
-    [ "TimeOut.h", "a00329.html", [
-      [ "MiraiCP::TimeOutException", "a00913.html", "a00913" ]
+    [ "TimeOut.h", "a00332.html", [
+      [ "MiraiCP::TimeOutException", "a00924.html", "a00924" ]
     ] ],
-    [ "Upload.h", "a00332.html", [
-      [ "MiraiCP::UploadException", "a00917.html", "a00917" ]
+    [ "Upload.h", "a00335.html", [
+      [ "MiraiCP::UploadException", "a00928.html", "a00928" ]
     ] ],
-    [ "examples/ForwardedMessage.cpp", "a01379.html", null ],
-    [ "src/sdk/ForwardedMessage.cpp", "a01382.html", null ],
-    [ "Friend.cpp", "a00338.html", "a00338" ],
-    [ "examples/Group.cpp", "a01385.html", null ],
-    [ "src/sdk/Group.cpp", "a01388.html", "a01388" ],
-    [ "IMiraiData.cpp", "a00344.html", null ],
-    [ "KtOperation.cpp", "a00347.html", "a00347" ],
-    [ "KtOperation.h", "a00350.html", "a00350" ],
-    [ "examples/Logger.cpp", "a01391.html", null ],
-    [ "src/sdk/Logger.cpp", "a01394.html", null ],
-    [ "LowLevelAPI.cpp", "a00356.html", "a00356" ],
-    [ "LowLevelAPI.h", "a00359.html", "a00359" ],
-    [ "examples/Member.cpp", "a01397.html", null ],
-    [ "src/sdk/Member.cpp", "a01400.html", "a01400" ],
-    [ "MessageChain.cpp", "a00365.html", null ],
-    [ "MessageSource.cpp", "a00368.html", null ],
-    [ "MiraiCode.cpp", "a00371.html", null ],
-    [ "MiraiCPNewThread.cpp", "a00374.html", null ],
-    [ "examples/Schedule.cpp", "a01403.html", null ],
-    [ "src/sdk/Schedule.cpp", "a01406.html", null ],
-    [ "SingleMessage.cpp", "a00380.html", null ],
-    [ "ThreadTask.cpp", "a00383.html", "a00383" ],
-    [ "Tools.cpp", "a00386.html", "a00386" ],
-    [ "utils.cpp", "a00389.html", "a00389" ]
+    [ "examples/ForwardedMessage.cpp", "a01382.html", null ],
+    [ "src/sdk/ForwardedMessage.cpp", "a01385.html", null ],
+    [ "Friend.cpp", "a00341.html", "a00341" ],
+    [ "examples/Group.cpp", "a01388.html", null ],
+    [ "src/sdk/Group.cpp", "a01391.html", "a01391" ],
+    [ "IMiraiData.cpp", "a00347.html", null ],
+    [ "KtOperation.cpp", "a00350.html", "a00350" ],
+    [ "KtOperation.h", "a00353.html", "a00353" ],
+    [ "examples/Logger.cpp", "a01394.html", null ],
+    [ "src/sdk/Logger.cpp", "a01397.html", null ],
+    [ "LowLevelAPI.cpp", "a00359.html", "a00359" ],
+    [ "LowLevelAPI.h", "a00362.html", "a00362" ],
+    [ "examples/Member.cpp", "a01400.html", null ],
+    [ "src/sdk/Member.cpp", "a01403.html", "a01403" ],
+    [ "MessageChain.cpp", "a00368.html", null ],
+    [ "MessageSource.cpp", "a00371.html", null ],
+    [ "MiraiCode.cpp", "a00374.html", null ],
+    [ "MiraiCPNewThread.cpp", "a00377.html", null ],
+    [ "examples/Schedule.cpp", "a01406.html", null ],
+    [ "src/sdk/Schedule.cpp", "a01409.html", null ],
+    [ "SingleMessage.cpp", "a00383.html", null ],
+    [ "ThreadTask.cpp", "a00386.html", "a00386" ],
+    [ "Tools.cpp", "a00389.html", "a00389" ],
+    [ "utils.cpp", "a00392.html", "a00392" ]
 ];

@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiraiCP: LoaderLogger.cpp 源文件</title>
+<title>MiraiCP: LoaderLogger.h 源文件</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -35,7 +35,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MiraiCP
-   &#160;<span id="projectnumber">v2.14.0</span>
+   &#160;<span id="projectnumber">v2.15.0-RC2</span>
    </div>
    <div id="projectbrief">MiraiCP api document</div>
   </td>
@@ -93,7 +93,7 @@ $(document).ready(function(){initNavTree('a00236_source.html',''); initResizable
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">LoaderLogger.cpp</div></div>
+  <div class="headertitle"><div class="title">LoaderLogger.h</div></div>
 </div><!--header-->
 <div class="contents">
 <a href="a00236.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// Copyright (c) 2022 - 2022. Antares, Eritque arcus and contributors.</span></div>
@@ -112,118 +112,60 @@ $(document).ready(function(){initNavTree('a00236_source.html',''); initResizable
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">// along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</span></div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">//</span></div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &quot;<a class="code" href="a00044.html">MiraiCPMacros.h</a>&quot;</span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">// -----------------------</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &quot;<a class="code" href="a00212.html">JNIEnvs.h</a>&quot;</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &quot;<a class="code" href="a00239.html">LoaderLogger.h</a>&quot;</span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &quot;<a class="code" href="a00038.html">commonTools.h</a>&quot;</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &quot;<a class="code" href="a00257.html">loaderTools.h</a>&quot;</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &quot;utf8.h&quot;</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#include &lt;json.hpp&gt;</span></div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#ifdef LOADER_NATIVE</span></div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="keyword">namespace </span>LoaderAPIs {</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="keyword">using</span> LogFunc = void (*)(<span class="keyword">const</span> <span class="keywordtype">char</span> *, int);</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keyword">extern</span> LogFunc log;</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>}; <span class="comment">// namespace LoaderAPIs</span></div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="keyword">namespace </span><a class="code hl_namespace" href="a00404.html">LibLoader</a> {</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="a00404.html#a9d999fed21ffcc5aafcb74f16bcb9301">   34</a></span>    <span class="keyword">static</span> <span class="keyword">const</span> std::string <a class="code hl_variable" href="a00404.html#a9d999fed21ffcc5aafcb74f16bcb9301">LoaderName</a> = <span class="stringliteral">&quot;MiraiCP/LibLoader&quot;</span>;</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="a00404.html#af1031cef14711c6b7ed3805fe6d17d81">   35</a></span>    <a class="code hl_class" href="a00805.html">LibLoader::LoaderLogger</a> <a class="code hl_variable" href="a00404.html#af1031cef14711c6b7ed3805fe6d17d81">logger</a>;</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="a00805.html#a666e05995de50742a39702dacf3dcbd7">   37</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="a00805.html#a666e05995de50742a39702dacf3dcbd7">LoaderLogger::init</a>() {</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="preprocessor">#ifndef LOADER_NATIVE</span></div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        <a class="code hl_variable" href="a00805.html#a298efd2ba8a74fb88313ca0c08e29235">logMethod</a> = <a class="code hl_function" href="a00409.html#a076c5f4ff8083c7cfc6523498d0ba30f">JNIEnvs::getEnv</a>()-&gt;GetStaticMethodID(<a class="code hl_variable" href="a00409.html#a26edb9ab7e5b98a29423ef8258e208a8">JNIEnvs::Class_cpplib</a>, <span class="stringliteral">&quot;KSendLog&quot;</span>, <span class="stringliteral">&quot;(Ljava/lang/String;I)V&quot;</span>);</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    }</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="a00805.html#a0d34d5ca7783c370ec08dbbb44876c1b">   43</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="a00805.html#a0d34d5ca7783c370ec08dbbb44876c1b">LoaderLogger::info</a>(<span class="keyword">const</span> <span class="keywordtype">string</span> &amp;msg)<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        <a class="code hl_function" href="a00805.html#af4d7d5164450e25f7401d1cc15f15b8d">call_logger</a>(msg, <a class="code hl_variable" href="a00404.html#a9d999fed21ffcc5aafcb74f16bcb9301">LoaderName</a>, -1, 0);</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    }</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="a00805.html#af50d0545fe7d683e54fcd03453a423e3">   47</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="a00805.html#af50d0545fe7d683e54fcd03453a423e3">LoaderLogger::warning</a>(<span class="keyword">const</span> <span class="keywordtype">string</span> &amp;msg)<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        <a class="code hl_function" href="a00805.html#af4d7d5164450e25f7401d1cc15f15b8d">call_logger</a>(msg, <a class="code hl_variable" href="a00404.html#a9d999fed21ffcc5aafcb74f16bcb9301">LoaderName</a>, -1, 1);</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    }</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="a00805.html#ae735f16b20f681d29d4e5d28ad248dbe">   51</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="a00805.html#ae735f16b20f681d29d4e5d28ad248dbe">LoaderLogger::error</a>(<span class="keyword">const</span> <span class="keywordtype">string</span> &amp;msg)<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        <a class="code hl_function" href="a00805.html#af4d7d5164450e25f7401d1cc15f15b8d">call_logger</a>(msg, <a class="code hl_variable" href="a00404.html#a9d999fed21ffcc5aafcb74f16bcb9301">LoaderName</a>, -1, 2);</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    }</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="a00805.html#ad876a34412f03e35fbae30758836e6ff">   55</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="a00805.html#a0d34d5ca7783c370ec08dbbb44876c1b">LoaderLogger::info</a>(<span class="keyword">const</span> <a class="code hl_typedef" href="a00805.html#a263f5033219fd9fde7e76a4a14e30a3a">LoaderLogger::wstring</a> &amp;msg)<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        <a class="code hl_function" href="a00805.html#af4d7d5164450e25f7401d1cc15f15b8d">call_logger</a>(msg, <a class="code hl_variable" href="a00404.html#a9d999fed21ffcc5aafcb74f16bcb9301">LoaderName</a>, -1, 0);</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    }</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="a00805.html#a17f3029197c45dc84c38a764c9e3e1b9">   59</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="a00805.html#af50d0545fe7d683e54fcd03453a423e3">LoaderLogger::warning</a>(<span class="keyword">const</span> <a class="code hl_typedef" href="a00805.html#a263f5033219fd9fde7e76a4a14e30a3a">LoaderLogger::wstring</a> &amp;msg)<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        <a class="code hl_function" href="a00805.html#af4d7d5164450e25f7401d1cc15f15b8d">call_logger</a>(msg, <a class="code hl_variable" href="a00404.html#a9d999fed21ffcc5aafcb74f16bcb9301">LoaderName</a>, -1, 1);</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    }</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="a00805.html#ab16e1bc0504135788f5ce20864deb044">   63</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="a00805.html#ae735f16b20f681d29d4e5d28ad248dbe">LoaderLogger::error</a>(<span class="keyword">const</span> <a class="code hl_typedef" href="a00805.html#a263f5033219fd9fde7e76a4a14e30a3a">LoaderLogger::wstring</a> &amp;msg)<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        <a class="code hl_function" href="a00805.html#af4d7d5164450e25f7401d1cc15f15b8d">call_logger</a>(msg, <a class="code hl_variable" href="a00404.html#a9d999fed21ffcc5aafcb74f16bcb9301">LoaderName</a>, -1, 2);</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    }</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="a00805.html#af4d7d5164450e25f7401d1cc15f15b8d">   67</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="a00805.html#af4d7d5164450e25f7401d1cc15f15b8d">LoaderLogger::call_logger</a>(<span class="keyword">const</span> <span class="keywordtype">string</span> &amp;content, <span class="keywordtype">string</span> name, <span class="keywordtype">long</span> <span class="keywordtype">long</span> <span class="keywordtype">id</span>, <span class="keywordtype">int</span> level)<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        <a class="code hl_typedef" href="a00389.html#ab701e3ac61a85b337ec5c1abaad6742d">nlohmann::json</a> j = {</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>                {<span class="stringliteral">&quot;id&quot;</span>, <span class="keywordtype">id</span>},</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>                {<span class="stringliteral">&quot;log&quot;</span>, content}};</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        <span class="keywordflow">if</span> (!name.empty()) j[<span class="stringliteral">&quot;name&quot;</span>] = std::move(name);</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="preprocessor">#ifdef LOADER_NATIVE</span></div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        LoaderAPIs::log(j.dump().c_str(), level);</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="preprocessor">#else</span></div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        <span class="keyword">auto</span> env = <a class="code hl_function" href="a00409.html#a076c5f4ff8083c7cfc6523498d0ba30f">JNIEnvs::getEnv</a>();</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        env-&gt;CallStaticVoidMethod(<a class="code hl_variable" href="a00409.html#a26edb9ab7e5b98a29423ef8258e208a8">JNIEnvs::Class_cpplib</a>, <a class="code hl_variable" href="a00805.html#a298efd2ba8a74fb88313ca0c08e29235">logMethod</a>, <a class="code hl_function" href="a00404.html#a6a6fcd695791253a9b3a053d313b2b93">LibLoader::str2jstring</a>(j.dump().c_str()), (jint) (level));</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    }</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="a00805.html#a4c48551e7c6b1fe442d394c4333c4f5c">   80</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="a00805.html#af4d7d5164450e25f7401d1cc15f15b8d">LoaderLogger::call_logger</a>(<span class="keyword">const</span> <a class="code hl_typedef" href="a00805.html#a263f5033219fd9fde7e76a4a14e30a3a">wstring</a> &amp;content, <span class="keywordtype">string</span> name, <span class="keywordtype">long</span> <span class="keywordtype">long</span> <span class="keywordtype">id</span>, <span class="keywordtype">int</span> level)<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        std::string rcontent;</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="preprocessor">#if WCHAR_MAX &lt;= 0xFFFFu</span></div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        utf8::utf16to8(content.begin(), content.end(), std::back_inserter(rcontent)); <span class="comment">// Windows</span></div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span><span class="preprocessor">#else</span></div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        utf8::utf32to8(content.begin(), content.end(), std::back_inserter(rcontent)); <span class="comment">// Linux &amp; others</span></div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        <a class="code hl_typedef" href="a00389.html#ab701e3ac61a85b337ec5c1abaad6742d">nlohmann::json</a> j = {</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>                {<span class="stringliteral">&quot;id&quot;</span>, <span class="keywordtype">id</span>},</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>                {<span class="stringliteral">&quot;log&quot;</span>, rcontent}};</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        <span class="keywordflow">if</span> (!name.empty()) j[<span class="stringliteral">&quot;name&quot;</span>] = std::move(name);</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span><span class="preprocessor">#ifdef LOADER_NATIVE</span></div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        LoaderAPIs::log(j.dump().c_str(), level);</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span><span class="preprocessor">#else</span></div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        <span class="keyword">auto</span> env = <a class="code hl_function" href="a00409.html#a076c5f4ff8083c7cfc6523498d0ba30f">JNIEnvs::getEnv</a>();</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        env-&gt;CallStaticVoidMethod(<a class="code hl_variable" href="a00409.html#a26edb9ab7e5b98a29423ef8258e208a8">JNIEnvs::Class_cpplib</a>, <a class="code hl_variable" href="a00805.html#a298efd2ba8a74fb88313ca0c08e29235">logMethod</a>, <a class="code hl_function" href="a00404.html#a6a6fcd695791253a9b3a053d313b2b93">LibLoader::str2jstring</a>(j.dump().c_str()), (jint) (level));</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    }</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>} <span class="comment">// namespace LibLoader</span></div>
-<div class="ttc" id="aa00038_html"><div class="ttname"><a href="a00038.html">commonTools.h</a></div></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#ifndef MIRAICP_PRO_LOADERLOGGER_H</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#define MIRAICP_PRO_LOADERLOGGER_H</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &quot;<a class="code" href="a00044.html">MiraiCPMacros.h</a>&quot;</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keyword">struct </span>_jmethodID;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keyword">namespace </span><a class="code hl_namespace" href="a00407.html">LibLoader</a> {</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="a00800.html">   26</a></span>    <span class="keyword">class </span><a class="code hl_define" href="a00044.html#aa40df2b825bdde9207f3e87b140235c3">MIRAICP_EXPORT</a> <a class="code hl_class" href="a00800.html">LoaderLogger</a> {</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="a00800.html#acfe4e8f9dd9fdd3774c50f4843ea4c57">   27</a></span>        <span class="keyword">using</span> <span class="keywordtype">string</span> = std::string;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="a00800.html#a263f5033219fd9fde7e76a4a14e30a3a">   28</a></span>        <span class="keyword">using</span> <a class="code hl_typedef" href="a00800.html#a263f5033219fd9fde7e76a4a14e30a3a">wstring</a> = std::wstring;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="a00800.html#a298efd2ba8a74fb88313ca0c08e29235">   30</a></span>        _jmethodID *<a class="code hl_variable" href="a00800.html#a298efd2ba8a74fb88313ca0c08e29235">logMethod</a>;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <span class="keywordtype">void</span> init();</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <span class="keywordtype">void</span> info(<span class="keyword">const</span> <span class="keywordtype">string</span> &amp;) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <span class="keywordtype">void</span> warning(<span class="keyword">const</span> <span class="keywordtype">string</span> &amp;) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <span class="keywordtype">void</span> <a class="code hl_enumvalue" href="a00401.html#abe9e9d8212ea8f23717b72db64393caba9b91a91250df41da2b9434cca56ada58">error</a>(<span class="keyword">const</span> <span class="keywordtype">string</span> &amp;) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        <span class="comment">// wstring support</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        <span class="keywordtype">void</span> info(<span class="keyword">const</span> <a class="code hl_typedef" href="a00800.html#a263f5033219fd9fde7e76a4a14e30a3a">wstring</a> &amp;) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <span class="keywordtype">void</span> warning(<span class="keyword">const</span> <a class="code hl_typedef" href="a00800.html#a263f5033219fd9fde7e76a4a14e30a3a">wstring</a> &amp;) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <span class="keywordtype">void</span> <a class="code hl_enumvalue" href="a00401.html#abe9e9d8212ea8f23717b72db64393caba9b91a91250df41da2b9434cca56ada58">error</a>(<span class="keyword">const</span> <a class="code hl_typedef" href="a00800.html#a263f5033219fd9fde7e76a4a14e30a3a">wstring</a> &amp;) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <span class="keywordtype">void</span> call_logger(<span class="keyword">const</span> <span class="keywordtype">string</span> &amp;content, <span class="keywordtype">string</span> name, <span class="keywordtype">long</span> <span class="keywordtype">long</span> <span class="keywordtype">id</span>, <span class="keywordtype">int</span> level) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        <span class="keywordtype">void</span> call_logger(<span class="keyword">const</span> <a class="code hl_typedef" href="a00800.html#a263f5033219fd9fde7e76a4a14e30a3a">wstring</a> &amp;content, <span class="keywordtype">string</span> name, <span class="keywordtype">long</span> <span class="keywordtype">long</span> <span class="keywordtype">id</span>, <span class="keywordtype">int</span> level) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    };</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <a class="code hl_define" href="a00044.html#aa40df2b825bdde9207f3e87b140235c3">MIRAICP_EXPORT</a> <span class="keyword">extern</span> <a class="code hl_class" href="a00800.html">LoaderLogger</a> <a class="code hl_variable" href="a00407.html#af1031cef14711c6b7ed3805fe6d17d81">logger</a>;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>} <span class="comment">// namespace LibLoader</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="preprocessor">#endif </span><span class="comment">//MIRAICP_PRO_LOADERLOGGER_H</span></div>
 <div class="ttc" id="aa00044_html"><div class="ttname"><a href="a00044.html">MiraiCPMacros.h</a></div></div>
-<div class="ttc" id="aa00212_html"><div class="ttname"><a href="a00212.html">JNIEnvs.h</a></div></div>
-<div class="ttc" id="aa00239_html"><div class="ttname"><a href="a00239.html">LoaderLogger.h</a></div></div>
-<div class="ttc" id="aa00257_html"><div class="ttname"><a href="a00257.html">loaderTools.h</a></div></div>
-<div class="ttc" id="aa00389_html_ab701e3ac61a85b337ec5c1abaad6742d"><div class="ttname"><a href="a00389.html#ab701e3ac61a85b337ec5c1abaad6742d">json</a></div><div class="ttdeci">nlohmann::json json</div><div class="ttdef"><b>Definition:</b> <a href="a00389_source.html#l00033">utils.cpp:33</a></div></div>
-<div class="ttc" id="aa00404_html"><div class="ttname"><a href="a00404.html">LibLoader</a></div><div class="ttdef"><b>Definition:</b> <a href="a00173_source.html#l00028">commonTypes.h:28</a></div></div>
-<div class="ttc" id="aa00404_html_a6a6fcd695791253a9b3a053d313b2b93"><div class="ttname"><a href="a00404.html#a6a6fcd695791253a9b3a053d313b2b93">LibLoader::str2jstring</a></div><div class="ttdeci">jstring str2jstring(const char *cstr)</div><div class="ttdef"><b>Definition:</b> <a href="a00254_source.html#l00080">loaderTools.cpp:80</a></div></div>
-<div class="ttc" id="aa00404_html_a9d999fed21ffcc5aafcb74f16bcb9301"><div class="ttname"><a href="a00404.html#a9d999fed21ffcc5aafcb74f16bcb9301">LibLoader::LoaderName</a></div><div class="ttdeci">static const std::string LoaderName</div><div class="ttdef"><b>Definition:</b> <a href="a00236_source.html#l00034">LoaderLogger.cpp:34</a></div></div>
-<div class="ttc" id="aa00404_html_af1031cef14711c6b7ed3805fe6d17d81"><div class="ttname"><a href="a00404.html#af1031cef14711c6b7ed3805fe6d17d81">LibLoader::logger</a></div><div class="ttdeci">LibLoader::LoaderLogger logger</div><div class="ttdef"><b>Definition:</b> <a href="a00236_source.html#l00035">LoaderLogger.cpp:35</a></div></div>
-<div class="ttc" id="aa00409_html_a076c5f4ff8083c7cfc6523498d0ba30f"><div class="ttname"><a href="a00409.html#a076c5f4ff8083c7cfc6523498d0ba30f">LibLoader::JNIEnvs::getEnv</a></div><div class="ttdeci">JNIEnv * getEnv()</div><div class="ttdef"><b>Definition:</b> <a href="a00209_source.html#l00039">JNIEnvs.cpp:39</a></div></div>
-<div class="ttc" id="aa00409_html_a26edb9ab7e5b98a29423ef8258e208a8"><div class="ttname"><a href="a00409.html#a26edb9ab7e5b98a29423ef8258e208a8">LibLoader::JNIEnvs::Class_cpplib</a></div><div class="ttdeci">volatile jclass Class_cpplib</div><div class="ttdef"><b>Definition:</b> <a href="a00209_source.html#l00025">JNIEnvs.cpp:25</a></div></div>
-<div class="ttc" id="aa00805_html"><div class="ttname"><a href="a00805.html">LibLoader::LoaderLogger</a></div><div class="ttdef"><b>Definition:</b> <a href="a00239_source.html#l00026">LoaderLogger.h:26</a></div></div>
-<div class="ttc" id="aa00805_html_a0d34d5ca7783c370ec08dbbb44876c1b"><div class="ttname"><a href="a00805.html#a0d34d5ca7783c370ec08dbbb44876c1b">LibLoader::LoaderLogger::info</a></div><div class="ttdeci">void info(const string &amp;) const</div><div class="ttdef"><b>Definition:</b> <a href="a00236_source.html#l00043">LoaderLogger.cpp:43</a></div></div>
-<div class="ttc" id="aa00805_html_a263f5033219fd9fde7e76a4a14e30a3a"><div class="ttname"><a href="a00805.html#a263f5033219fd9fde7e76a4a14e30a3a">LibLoader::LoaderLogger::wstring</a></div><div class="ttdeci">std::wstring wstring</div><div class="ttdef"><b>Definition:</b> <a href="a00239_source.html#l00028">LoaderLogger.h:28</a></div></div>
-<div class="ttc" id="aa00805_html_a298efd2ba8a74fb88313ca0c08e29235"><div class="ttname"><a href="a00805.html#a298efd2ba8a74fb88313ca0c08e29235">LibLoader::LoaderLogger::logMethod</a></div><div class="ttdeci">_jmethodID * logMethod</div><div class="ttdef"><b>Definition:</b> <a href="a00239_source.html#l00030">LoaderLogger.h:30</a></div></div>
-<div class="ttc" id="aa00805_html_a666e05995de50742a39702dacf3dcbd7"><div class="ttname"><a href="a00805.html#a666e05995de50742a39702dacf3dcbd7">LibLoader::LoaderLogger::init</a></div><div class="ttdeci">void init()</div><div class="ttdef"><b>Definition:</b> <a href="a00236_source.html#l00037">LoaderLogger.cpp:37</a></div></div>
-<div class="ttc" id="aa00805_html_ae735f16b20f681d29d4e5d28ad248dbe"><div class="ttname"><a href="a00805.html#ae735f16b20f681d29d4e5d28ad248dbe">LibLoader::LoaderLogger::error</a></div><div class="ttdeci">void error(const string &amp;) const</div><div class="ttdef"><b>Definition:</b> <a href="a00236_source.html#l00051">LoaderLogger.cpp:51</a></div></div>
-<div class="ttc" id="aa00805_html_af4d7d5164450e25f7401d1cc15f15b8d"><div class="ttname"><a href="a00805.html#af4d7d5164450e25f7401d1cc15f15b8d">LibLoader::LoaderLogger::call_logger</a></div><div class="ttdeci">void call_logger(const string &amp;content, string name, long long id, int level) const</div><div class="ttdoc">实际暴露的接口</div><div class="ttdef"><b>Definition:</b> <a href="a00236_source.html#l00067">LoaderLogger.cpp:67</a></div></div>
-<div class="ttc" id="aa00805_html_af50d0545fe7d683e54fcd03453a423e3"><div class="ttname"><a href="a00805.html#af50d0545fe7d683e54fcd03453a423e3">LibLoader::LoaderLogger::warning</a></div><div class="ttdeci">void warning(const string &amp;) const</div><div class="ttdef"><b>Definition:</b> <a href="a00236_source.html#l00047">LoaderLogger.cpp:47</a></div></div>
+<div class="ttc" id="aa00044_html_aa40df2b825bdde9207f3e87b140235c3"><div class="ttname"><a href="a00044.html#aa40df2b825bdde9207f3e87b140235c3">MIRAICP_EXPORT</a></div><div class="ttdeci">#define MIRAICP_EXPORT</div><div class="ttdef"><b>Definition:</b> <a href="a00044_source.html#l00180">MiraiCPMacros.h:180</a></div></div>
+<div class="ttc" id="aa00401_html_abe9e9d8212ea8f23717b72db64393caba9b91a91250df41da2b9434cca56ada58"><div class="ttname"><a href="a00401.html#abe9e9d8212ea8f23717b72db64393caba9b91a91250df41da2b9434cca56ada58">MiraiCP::eventTypes::error</a></div><div class="ttdeci">@ error</div><div class="ttdef"><b>Definition:</b> <a href="a00077_source.html#l00055">EventBase.h:54</a></div></div>
+<div class="ttc" id="aa00407_html"><div class="ttname"><a href="a00407.html">LibLoader</a></div><div class="ttdef"><b>Definition:</b> <a href="a00173_source.html#l00028">commonTypes.h:28</a></div></div>
+<div class="ttc" id="aa00407_html_af1031cef14711c6b7ed3805fe6d17d81"><div class="ttname"><a href="a00407.html#af1031cef14711c6b7ed3805fe6d17d81">LibLoader::logger</a></div><div class="ttdeci">LibLoader::LoaderLogger logger</div><div class="ttdef"><b>Definition:</b> <a href="a00233_source.html#l00035">LoaderLogger.cpp:35</a></div></div>
+<div class="ttc" id="aa00800_html"><div class="ttname"><a href="a00800.html">LibLoader::LoaderLogger</a></div><div class="ttdef"><b>Definition:</b> <a href="a00236_source.html#l00026">LoaderLogger.h:26</a></div></div>
+<div class="ttc" id="aa00800_html_a263f5033219fd9fde7e76a4a14e30a3a"><div class="ttname"><a href="a00800.html#a263f5033219fd9fde7e76a4a14e30a3a">LibLoader::LoaderLogger::wstring</a></div><div class="ttdeci">std::wstring wstring</div><div class="ttdef"><b>Definition:</b> <a href="a00236_source.html#l00028">LoaderLogger.h:28</a></div></div>
+<div class="ttc" id="aa00800_html_a298efd2ba8a74fb88313ca0c08e29235"><div class="ttname"><a href="a00800.html#a298efd2ba8a74fb88313ca0c08e29235">LibLoader::LoaderLogger::logMethod</a></div><div class="ttdeci">_jmethodID * logMethod</div><div class="ttdef"><b>Definition:</b> <a href="a00236_source.html#l00030">LoaderLogger.h:30</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_23c80554d3059e776f1fa3b42eea10c0.html">libloader</a></li><li class="navelem"><a class="el" href="a00236.html">LoaderLogger.cpp</a></li>
-    <li class="footer">生成于 2023年 二月 28日 星期二 12:14:05 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_23c80554d3059e776f1fa3b42eea10c0.html">libloader</a></li><li class="navelem"><a class="el" href="a00236.html">LoaderLogger.h</a></li>
+    <li class="footer">生成于 2023年 四月 10日 星期一 00:26:30 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
     </body>

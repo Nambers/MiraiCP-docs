@@ -1,9 +1,9 @@
 var a00712 =
 [
-    [ "MiraiCPNewThread", "a00712.html#aac9f1899dc2dd508fb87c393dce95569", null ],
-    [ "MiraiCPNewThread", "a00712.html#ae04a775fb43599b61f29e831f98bfee0", null ],
-    [ "operator=", "a00712.html#a72e06856d9b8a870c2405bd8345e4e9a", null ],
-    [ "operator=", "a00712.html#ab26297cb5d0e97dffe4983d75bbdf413", null ],
-    [ "operator=", "a00712.html#adff0ce4c4549e6803c61cb55128f41d7", null ],
-    [ "operator=", "a00712.html#afa2a7ce9f57f6c96fad78f347bcca5af", null ]
+    [ "Face", "a00712.html#aa0b031aa2e11403be44150ebce3dbb93", null ],
+    [ "operator==", "a00712.html#a013671a618db0081ea79cbecec88190f", null ],
+    [ "toJson", "a00712.html#a866de1e28199fa542e760d0caeea434e", null ],
+    [ "toMiraiCode", "a00712.html#a6f40de2d5ca391a1fb5a67fefe55d3e8", null ],
+    [ "type", "a00712.html#a73da05ce5bcbf5d40106b2db705fecb5", null ],
+    [ "id", "a00712.html#a213699a327644eb13d2dc0a5f935cdd8", null ]
 ];

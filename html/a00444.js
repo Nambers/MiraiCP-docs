@@ -1,8 +1,10 @@
 var a00444 =
 [
-    [ "BotEvent", "a00444.html#a5da368a0e44891433b340288bc872df3", null ],
-    [ "~BotEvent", "a00444.html#a29d6794160e0ea7cdd1598ad48185d6c", null ],
-    [ "getEventType", "a00444.html#a9e02a5aa59b72a0667260d8d487a66f8", null ],
-    [ "bot", "a00444.html#a0b14bddb4baebbd348969dac6c9a8edc", null ],
-    [ "botlogger", "a00444.html#a864b09f1e3cf406c2e96ca7b4c10e18e", null ]
+    [ "string", "a00444.html#a40264477acbe1fada19b45463ba39f5a", null ],
+    [ "description", "a00444.html#ae924c02b04ee3fec68c0838ee34bd45d", null ],
+    [ "overrideOrigin", "a00444.html#acb9a0a0c0b1933c9aa28bb361f284489", null ],
+    [ "preFixOption", "a00444.html#af40c74e212dd165a72e7b2e8769e0dcb", null ],
+    [ "primaryName", "a00444.html#a21a4c0a9fe2032ce10efbd76c5388dce", null ],
+    [ "secondNames", "a00444.html#a5211c63986e404f8edc7b36cbd0c3618", null ],
+    [ "usage", "a00444.html#a3f604db6531d4956520cf813d57aa544", null ]
 ];

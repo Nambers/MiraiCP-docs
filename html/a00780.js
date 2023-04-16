@@ -1,6 +1,5 @@
 var a00780 =
 [
-    [ "MarketFace", "a00780.html#a4caebb2c1479ca9039f6102f25e5547f", null ],
-    [ "operator==", "a00780.html#a06db9ba5cb8e759845fc44cabf5c4a8e", null ],
-    [ "type", "a00780.html#a4b1a9e71197d9810f31b09b6e5ee5b0a", null ]
+    [ "PluginLoadException", "a00780.html#abcadf418c532d132fba49357902e2e7e", null ],
+    [ "exceptionType", "a00780.html#ac82d122c331d273b9d62327055f197f1", null ]
 ];

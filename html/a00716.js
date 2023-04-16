@@ -1,8 +1,13 @@
 var a00716 =
 [
-    [ "brief", "a00716.html#a922825f2fe708a70c66ff6585d688bb6", null ],
-    [ "cover", "a00716.html#a38c4579d9ccb887f3cab0573a39b96fa", null ],
-    [ "summary", "a00716.html#a5927b32bbb8fc21efe5d183fb12ddd1a", null ],
-    [ "title", "a00716.html#a929d703d700b67f4a1c1d17111271922", null ],
-    [ "url", "a00716.html#aba141291ce2939583450057c338b1fc5", null ]
+    [ "MusicShare", "a00716.html#adebd57e07a89d64fa3e42e067d3b6d77", null ],
+    [ "toMiraiCode", "a00716.html#a1bffdbd7cd143a903f22fb376b79c855", null ],
+    [ "type", "a00716.html#a0d066ebbca63439a3eea2e564e31403a", null ],
+    [ "appName", "a00716.html#a87a20d867c8dadbe4a8f55ef2b6d0d4d", null ],
+    [ "brief", "a00716.html#ab3e91b8220d2e80dbb84ff17b83ce3f8", null ],
+    [ "jumpUrl", "a00716.html#aa4239e8aadb82d6c79bc8986f55e68b6", null ],
+    [ "musicUrl", "a00716.html#a98dc3816bcdd57e551a55ff88b2ea4fa", null ],
+    [ "picUrl", "a00716.html#a0615bbf6886985e1438ab1493cdc012a", null ],
+    [ "summary", "a00716.html#a2da932b20adbdc6f9fa58bda8c0623ac", null ],
+    [ "title", "a00716.html#aa4f1eb91480d538d2aead5904f1cc4b9", null ]
 ];

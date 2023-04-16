@@ -1,11 +1,13 @@
 var a00528 =
 [
-    [ "eventNode", "a00528.html#a7c0d9e7b800ebff2dbfe29d508e5904f", null ],
-    [ "eventNode", "a00528.html#a21f99c741cb8b0fe0f031e908732147b", null ],
-    [ "eventNode", "a00528.html#a3d10d8495761b35348a9729036280b91", null ],
-    [ "eventNode", "a00528.html#a19665f22ce5e4fe9fdbc50970dab72c5", null ],
-    [ "getHandle", "a00528.html#a9840c901a9c3e81f06f84b13252b181d", null ],
-    [ "run", "a00528.html#aedef6da8603e38047a3de9006052568b", null ],
-    [ "_handle", "a00528.html#ab8b560004af0fe0e513879955328cffd", null ],
-    [ "func", "a00528.html#a64131ff795261b80c6b37223812a3ee8", null ]
+    [ "MemberJoinRequestEvent", "a00528.html#a205de53afc65122d17f336d9f1cacf01", null ],
+    [ "accept", "a00528.html#ace031723d310c72ed25b83485f66a034", null ],
+    [ "get_event_type", "a00528.html#a91bdec8138ea1cc5416cb0eb8427b45f", null ],
+    [ "reject", "a00528.html#a83dc1fb94b0c26bf2ef1e4c8c5069520", null ],
+    [ "from", "a00528.html#a313f0577b5ece4ff0955322f59b93528", null ],
+    [ "fromNick", "a00528.html#ab1b5b0fb40c552ef63c6628712abff7a", null ],
+    [ "group", "a00528.html#a10b7aaaaf0e8f31c2f9cc0ffd40232b2", null ],
+    [ "inviter", "a00528.html#a1a2aa46fd5e85786f2e3858e12ceaeea", null ],
+    [ "message", "a00528.html#af8b8a41e8a844640d4544a5f96b35ed3", null ],
+    [ "source", "a00528.html#aa1b90d95a75a1e6b79aa54a777eb8bf7", null ]
 ];

@@ -1,9 +1,9 @@
 var a00077 =
 [
-    [ "MiraiCP::BaseEventData", "a00489.html", "a00489" ],
-    [ "MiraiCP::BaseEventData::BuiltInContact", "a00493.html", "a00493" ],
-    [ "MiraiCP::MiraiCPEvent", "a00497.html", "a00497" ],
-    [ "MiraiCP::IMessageEvent", "a00501.html", "a00501" ],
+    [ "MiraiCP::BaseEventData", "a00492.html", "a00492" ],
+    [ "MiraiCP::BaseEventData::BuiltInContact", "a00496.html", "a00496" ],
+    [ "MiraiCP::MiraiCPEvent", "a00500.html", "a00500" ],
+    [ "MiraiCP::IMessageEvent", "a00504.html", "a00504" ],
     [ "Types", "a00077.html#abe9e9d8212ea8f23717b72db64393cab", [
       [ "BaseEvent", "a00077.html#abe9e9d8212ea8f23717b72db64393caba497dd3a8c7ae19e8a6a5e16e5e546e32", null ],
       [ "BotOnlineEvent", "a00077.html#abe9e9d8212ea8f23717b72db64393cabac9323a42c3ef5f080ec21384295543f5", null ],

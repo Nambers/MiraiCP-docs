@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiraiCP: group.cpp</title>
+<title>MiraiCP: Antares::ThreadPoolBase类 参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -35,7 +35,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MiraiCP
-   &#160;<span id="projectnumber">v2.13.2</span>
+   &#160;<span id="projectnumber">v2.15.0-RC2</span>
    </div>
    <div id="projectbrief">MiraiCP api document</div>
   </td>
@@ -93,70 +93,801 @@ $(document).ready(function(){initNavTree('a00852.html',''); initResizable(); });
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">group.cpp</div></div>
+  <div class="summary">
+<a href="#nested-classes">类</a> &#124;
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="#pro-methods">Protected 成员函数</a> &#124;
+<a href="#pro-static-methods">静态 Protected 成员函数</a> &#124;
+<a href="#pro-attribs">Protected 属性</a> &#124;
+<a href="a00849.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">Antares::ThreadPoolBase类 参考</div></div>
 </div><!--header-->
 <div class="contents">
-<p >群操作</p>
-<div class="fragment"><div class="line"><span class="comment">// Copyright (c) 2020 - 2022. Eritque arcus and contributors.</span></div>
-<div class="line"><span class="comment">//</span></div>
-<div class="line"><span class="comment">// This program is free software: you can redistribute it and/or modify</span></div>
-<div class="line"><span class="comment">// it under the terms of the GNU Affero General Public License as</span></div>
-<div class="line"><span class="comment">// published by the Free Software Foundation, either version 3 of the</span></div>
-<div class="line"><span class="comment">// License, or any later version(in your opinion).</span></div>
-<div class="line"><span class="comment">//</span></div>
-<div class="line"><span class="comment">// This program is distributed in the hope that it will be useful,</span></div>
-<div class="line"><span class="comment">// but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div>
-<div class="line"><span class="comment">// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span></div>
-<div class="line"><span class="comment">// GNU Affero General Public License for more details.</span></div>
-<div class="line"><span class="comment">//</span></div>
-<div class="line"><span class="comment">// You should have received a copy of the GNU Affero General Public License</span></div>
-<div class="line"><span class="comment">// along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</span></div>
-<div class="line"><span class="comment">//</span></div>
-<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00161.html">MiraiCP.hpp</a>&gt;</span></div>
-<div class="line"><span class="keyword">using namespace </span><a class="code hl_namespace" href="a00305.html">MiraiCP</a>;</div>
-<div class="line"> </div>
-<div class="line"><span class="keyword">const</span> PluginConfig CPPPlugin::config{</div>
-<div class="line">        <span class="stringliteral">&quot;id&quot;</span>,   <span class="comment">// 插件id</span></div>
-<div class="line">        <span class="stringliteral">&quot;test&quot;</span>, <span class="comment">// 插件名称</span></div>
-<div class="line">        <span class="stringliteral">&quot;v1.0&quot;</span>, <span class="comment">// 插件版本</span></div>
-<div class="line">        <span class="stringliteral">&quot;a&quot;</span>,    <span class="comment">// 插件作者</span></div>
-<div class="line">                <span class="comment">// 可选：插件描述</span></div>
-<div class="line">                <span class="comment">// 可选：日期</span></div>
-<div class="line">};</div>
-<div class="line"> </div>
-<div class="line"><span class="keyword">class </span>Main : <span class="keyword">public</span> CPPPlugin {</div>
-<div class="line"><span class="keyword">public</span>:</div>
-<div class="line">    Main() : <a class="code hl_function" href="a00441.html#aeeaafebf5e61e1da8a2c5e3e07dac64b">CPPPlugin</a>() {}</div>
-<div class="line">    <span class="keywordtype">void</span> onEnable()<span class="keyword"> override </span>{</div>
-<div class="line">        Event::registerEvent&lt;GroupMessageEvent&gt;([](<a id="a0" name="a0"></a><a class="code hl_enumvalue" href="a00311.html#abe9e9d8212ea8f23717b72db64393cabaca8073196614a985e9fcc7d2f964473c">GroupMessageEvent</a> e) {</div>
-<div class="line">            <span class="comment">// 用 id 构建群对象</span></div>
-<div class="line">            Group a(e.group.id(), e.bot.id);</div>
-<div class="line">            <span class="comment">// 发送D:\\ValveUnhandledExceptionFilter.txt本地文件到qq群的 /test.txt 路径</span></div>
-<div class="line">            RemoteFile tmp = e.group.sendFile(<span class="stringliteral">&quot;/test.txt&quot;</span>, <span class="stringliteral">&quot;D:\\ValveUnhandledExceptionFilter.txt&quot;</span>);</div>
-<div class="line">            e.group.sendMessage(e.group.getFile(<span class="stringliteral">&quot;/&quot;</span>, tmp.id).name);</div>
-<div class="line">            e.group.sendMessage(e.group.getFile(<span class="stringliteral">&quot;/test.txt&quot;</span>).name);</div>
-<div class="line">            e.group.sendMessage(e.group.getFileListString(<span class="stringliteral">&quot;/&quot;</span>));</div>
-<div class="line">            <span class="comment">// 取群文件列表</span></div>
-<div class="line">            e.group.getFileListString(<span class="stringliteral">&quot;/&quot;</span>);</div>
-<div class="line">        });</div>
-<div class="line">    }</div>
-<div class="line">};</div>
-<div class="line"> </div>
-<div class="line"><span class="keywordtype">void</span> <a id="a1" name="a1"></a><a class="code hl_function" href="a00305.html#a12d27be6730af4fc321ac1eb231db281">MiraiCP::enrollPlugin</a>() {</div>
-<div class="line">    <a class="code hl_function" href="a00305.html#a12d27be6730af4fc321ac1eb231db281">MiraiCP::enrollPlugin</a>(<span class="keyword">new</span> Main());</div>
-<div class="line">}</div>
-<div class="ttc" id="aa00161_html"><div class="ttname"><a href="a00161.html">MiraiCP.hpp</a></div></div>
-<div class="ttc" id="aa00305_html"><div class="ttname"><a href="a00305.html">MiraiCP</a></div><div class="ttdef"><b>Definition:</b> <a href="a00041_source.html#l00041">commonTypes.h:41</a></div></div>
-<div class="ttc" id="aa00305_html_a12d27be6730af4fc321ac1eb231db281"><div class="ttname"><a href="a00305.html#a12d27be6730af4fc321ac1eb231db281">MiraiCP::enrollPlugin</a></div><div class="ttdeci">void enrollPlugin()</div><div class="ttdoc">注册插件函数, 需要被插件实现, 类似onStart();</div><div class="ttdef"><b>Definition:</b> <a href="a00179_source.html#l00037">utils.h:37</a></div></div>
-<div class="ttc" id="aa00311_html_abe9e9d8212ea8f23717b72db64393cabaca8073196614a985e9fcc7d2f964473c"><div class="ttname"><a href="a00311.html#abe9e9d8212ea8f23717b72db64393cabaca8073196614a985e9fcc7d2f964473c">MiraiCP::eventTypes::GroupMessageEvent</a></div><div class="ttdeci">@ GroupMessageEvent</div><div class="ttdef"><b>Definition:</b> <a href="a00119_source.html#l00038">Event.h:38</a></div></div>
-<div class="ttc" id="aa00441_html_aeeaafebf5e61e1da8a2c5e3e07dac64b"><div class="ttname"><a href="a00441.html#aeeaafebf5e61e1da8a2c5e3e07dac64b">MiraiCP::CPPPlugin::CPPPlugin</a></div><div class="ttdeci">CPPPlugin()=default</div></div>
-</div><!-- fragment --> </div><!-- contents -->
+
+<p><code>#include &lt;<a class="el" href="a00290_source.html">ThreadPool.h</a>&gt;</code></p>
+<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> 类 Antares::ThreadPoolBase 继承关系图:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00851.svg" width="194" height="1035"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Antares::ThreadPoolBase 的协作图:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00850.svg" width="498" height="580"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00856.html">blocks</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:acef7a56bb01d0412c2b0b8e3b9e26e21"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00852.html#acef7a56bb01d0412c2b0b8e3b9e26e21">ThreadPoolBase</a> ()</td></tr>
+<tr class="separator:acef7a56bb01d0412c2b0b8e3b9e26e21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9d70546000c1b850468d88e8d8bada5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00852.html#ad9d70546000c1b850468d88e8d8bada5">~ThreadPoolBase</a> ()=default</td></tr>
+<tr class="separator:ad9d70546000c1b850468d88e8d8bada5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c7e29f3fb47ae19a02ffd48961fce5f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00852.html#a1c7e29f3fb47ae19a02ffd48961fce5f">wait_for_tasks</a> ()</td></tr>
+<tr class="memdesc:a1c7e29f3fb47ae19a02ffd48961fce5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">a bad design, should avoid calling this  <a href="a00852.html#a1c7e29f3fb47ae19a02ffd48961fce5f">更多...</a><br /></td></tr>
+<tr class="separator:a1c7e29f3fb47ae19a02ffd48961fce5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4fbb555748053333e9c85b9c2fa2274"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00852.html#aa4fbb555748053333e9c85b9c2fa2274">pause</a> ()</td></tr>
+<tr class="separator:aa4fbb555748053333e9c85b9c2fa2274"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1423f5d4a8e8e063908b58a47787d5ce"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00852.html#a1423f5d4a8e8e063908b58a47787d5ce">get_tasks_total</a> () const</td></tr>
+<tr class="separator:a1423f5d4a8e8e063908b58a47787d5ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2061fcf72f6313036c96fa0f7eb82363"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00852.html#a2061fcf72f6313036c96fa0f7eb82363">get_tasks_queued</a> () const</td></tr>
+<tr class="memdesc:a2061fcf72f6313036c96fa0f7eb82363"><td class="mdescLeft">&#160;</td><td class="mdescRight">may not be accurate!  <a href="a00852.html#a2061fcf72f6313036c96fa0f7eb82363">更多...</a><br /></td></tr>
+<tr class="separator:a2061fcf72f6313036c96fa0f7eb82363"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86adf0479c1c3f88e6a92195681bfd39"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00852.html#a86adf0479c1c3f88e6a92195681bfd39">get_tasks_running</a> () const</td></tr>
+<tr class="memdesc:a86adf0479c1c3f88e6a92195681bfd39"><td class="mdescLeft">&#160;</td><td class="mdescRight">may not be accurate!  <a href="a00852.html#a86adf0479c1c3f88e6a92195681bfd39">更多...</a><br /></td></tr>
+<tr class="separator:a86adf0479c1c3f88e6a92195681bfd39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af339bef805e095f0fe01cc3e41d14c23"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00852.html#af339bef805e095f0fe01cc3e41d14c23">is_paused</a> () const</td></tr>
+<tr class="separator:af339bef805e095f0fe01cc3e41d14c23"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85c157d87f8ca171fc50f46c3d46dec9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00852.html#a85c157d87f8ca171fc50f46c3d46dec9">unpause</a> ()</td></tr>
+<tr class="separator:a85c157d87f8ca171fc50f46c3d46dec9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a6bf1d55c081cc77cca35adaeb3780d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00852.html#a9a6bf1d55c081cc77cca35adaeb3780d">setThreadIndex</a> ()</td></tr>
+<tr class="separator:a9a6bf1d55c081cc77cca35adaeb3780d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:ae109966b4dce505bdc1bebcdf2bd4cd0"><td class="memItemLeft" align="right" valign="top">static size_t &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00852.html#ae109966b4dce505bdc1bebcdf2bd4cd0">getThreadIndex</a> ()</td></tr>
+<tr class="separator:ae109966b4dce505bdc1bebcdf2bd4cd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+Protected 成员函数</h2></td></tr>
+<tr class="memitem:a90f9311eac6c03fb4cb36cb8ce9c7d31"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00852.html#a90f9311eac6c03fb4cb36cb8ce9c7d31">worker</a> ()</td></tr>
+<tr class="separator:a90f9311eac6c03fb4cb36cb8ce9c7d31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-static-methods" name="pro-static-methods"></a>
+静态 Protected 成员函数</h2></td></tr>
+<tr class="memitem:a593ca1f5215bd03585a9bee1c8653494"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="a00414.html#a87f27e5607e5dd60acdec4eb59e490cd">concurrency_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00852.html#a593ca1f5215bd03585a9bee1c8653494">determine_thread_count</a> (<a class="el" href="a00414.html#a87f27e5607e5dd60acdec4eb59e490cd">concurrency_t</a> thread_count_)</td></tr>
+<tr class="separator:a593ca1f5215bd03585a9bee1c8653494"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Protected 属性</h2></td></tr>
+<tr class="memitem:ac73cd8837657465d1c52e1fb1ab6fb36"><td class="memItemLeft" align="right" valign="top">std::mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00852.html#ac73cd8837657465d1c52e1fb1ab6fb36">tasks_mtx</a> {}</td></tr>
+<tr class="separator:ac73cd8837657465d1c52e1fb1ab6fb36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af57e6f698dddd43557043ff658b9900f"><td class="memItemLeft" align="right" valign="top">std::queue&lt; std::function&lt; void()&gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00852.html#af57e6f698dddd43557043ff658b9900f">tasks</a></td></tr>
+<tr class="separator:af57e6f698dddd43557043ff658b9900f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ca7e77d1f3ea87103408c1b43a41582"><td class="memItemLeft" align="right" valign="top">std::condition_variable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00852.html#a0ca7e77d1f3ea87103408c1b43a41582">task_available_cv</a> = {}</td></tr>
+<tr class="separator:a0ca7e77d1f3ea87103408c1b43a41582"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a310037680ec6129396c4e0720e6ad14a"><td class="memItemLeft" align="right" valign="top">std::condition_variable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00852.html#a310037680ec6129396c4e0720e6ad14a">task_done_cv</a> = {}</td></tr>
+<tr class="separator:a310037680ec6129396c4e0720e6ad14a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15c006ee092ea8c57710e571495b856d"><td class="memItemLeft" align="right" valign="top">std::atomic&lt; size_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00852.html#a15c006ee092ea8c57710e571495b856d">tasks_total</a> = 0</td></tr>
+<tr class="separator:a15c006ee092ea8c57710e571495b856d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60ed3cef0ad2a8cffe6d7499866b48d0"><td class="memItemLeft" align="right" valign="top">std::atomic&lt; size_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00852.html#a60ed3cef0ad2a8cffe6d7499866b48d0">threadIndexCounter</a> = 0</td></tr>
+<tr class="separator:a60ed3cef0ad2a8cffe6d7499866b48d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a988216b10c8059cf5b884fb12d718e3c"><td class="memItemLeft" align="right" valign="top">std::atomic&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00852.html#a988216b10c8059cf5b884fb12d718e3c">running</a> = false</td></tr>
+<tr class="separator:a988216b10c8059cf5b884fb12d718e3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a186ce734a22cf4f9dd313da4ef2ee33d"><td class="memItemLeft" align="right" valign="top">std::atomic&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00852.html#a186ce734a22cf4f9dd313da4ef2ee33d">waiting</a> = false</td></tr>
+<tr class="separator:a186ce734a22cf4f9dd313da4ef2ee33d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27c81a6ada2657ac00c748531326130d"><td class="memItemLeft" align="right" valign="top">std::atomic&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00852.html#a27c81a6ada2657ac00c748531326130d">paused</a> = false</td></tr>
+<tr class="separator:a27c81a6ada2657ac00c748531326130d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock">
+<p class="definition">在文件 <a class="el" href="a00290_source.html">ThreadPool.h</a> 第 <a class="el" href="a00290_source.html#l00041">41</a> 行定义.</p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="acef7a56bb01d0412c2b0b8e3b9e26e21" name="acef7a56bb01d0412c2b0b8e3b9e26e21"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acef7a56bb01d0412c2b0b8e3b9e26e21">&#9670;&nbsp;</a></span>ThreadPoolBase()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Antares::ThreadPoolBase::ThreadPoolBase </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad9d70546000c1b850468d88e8d8bada5" name="ad9d70546000c1b850468d88e8d8bada5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9d70546000c1b850468d88e8d8bada5">&#9670;&nbsp;</a></span>~ThreadPoolBase()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Antares::ThreadPoolBase::~ThreadPoolBase </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a593ca1f5215bd03585a9bee1c8653494" name="a593ca1f5215bd03585a9bee1c8653494"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a593ca1f5215bd03585a9bee1c8653494">&#9670;&nbsp;</a></span>determine_thread_count()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00414.html#a87f27e5607e5dd60acdec4eb59e490cd">concurrency_t</a> Antares::ThreadPoolBase::determine_thread_count </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00414.html#a87f27e5607e5dd60acdec4eb59e490cd">concurrency_t</a>&#160;</td>
+          <td class="paramname"><em>thread_count_</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="a00287_source.html">ThreadPool.cpp</a> 第 <a class="el" href="a00287_source.html#l00036">36</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>                                                                                    {</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        <span class="keywordflow">if</span> (thread_count_ &gt; 0)</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>            <span class="keywordflow">return</span> thread_count_;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>            <span class="keywordflow">if</span> (std::thread::hardware_concurrency() &gt; 0)</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>                <span class="keywordflow">return</span> std::thread::hardware_concurrency();</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>                <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        }</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    }</div>
+</div><!-- fragment --><div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-2-trigger" src="closed.png" alt="+"/> 这是这个函数的调用关系图:</div>
+<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-2-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00852_a593ca1f5215bd03585a9bee1c8653494_icgraph.svg" width="370" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a2061fcf72f6313036c96fa0f7eb82363" name="a2061fcf72f6313036c96fa0f7eb82363"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2061fcf72f6313036c96fa0f7eb82363">&#9670;&nbsp;</a></span>get_tasks_queued()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t Antares::ThreadPoolBase::get_tasks_queued </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>may not be accurate! </p>
+
+<p class="definition">在文件 <a class="el" href="a00290_source.html">ThreadPool.h</a> 第 <a class="el" href="a00290_source.html#l00107">107</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>                                                      {</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="a00852.html#af57e6f698dddd43557043ff658b9900f">tasks</a>.size();</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        }</div>
+<div class="ttc" id="aa00852_html_af57e6f698dddd43557043ff658b9900f"><div class="ttname"><a href="a00852.html#af57e6f698dddd43557043ff658b9900f">Antares::ThreadPoolBase::tasks</a></div><div class="ttdeci">std::queue&lt; std::function&lt; void()&gt; &gt; tasks</div><div class="ttdef"><b>Definition:</b> <a href="a00290_source.html#l00085">ThreadPool.h:85</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a86adf0479c1c3f88e6a92195681bfd39" name="a86adf0479c1c3f88e6a92195681bfd39"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86adf0479c1c3f88e6a92195681bfd39">&#9670;&nbsp;</a></span>get_tasks_running()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t Antares::ThreadPoolBase::get_tasks_running </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>may not be accurate! </p>
+
+<p class="definition">在文件 <a class="el" href="a00290_source.html">ThreadPool.h</a> 第 <a class="el" href="a00290_source.html#l00112">112</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>                                                       {</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>            <span class="keywordflow">return</span> <a class="code hl_function" href="a00852.html#a1423f5d4a8e8e063908b58a47787d5ce">get_tasks_total</a>() - <a class="code hl_variable" href="a00852.html#af57e6f698dddd43557043ff658b9900f">tasks</a>.size();</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        }</div>
+<div class="ttc" id="aa00852_html_a1423f5d4a8e8e063908b58a47787d5ce"><div class="ttname"><a href="a00852.html#a1423f5d4a8e8e063908b58a47787d5ce">Antares::ThreadPoolBase::get_tasks_total</a></div><div class="ttdeci">size_t get_tasks_total() const</div><div class="ttdef"><b>Definition:</b> <a href="a00287_source.html#l00062">ThreadPool.cpp:62</a></div></div>
+</div><!-- fragment --><div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-3-trigger" src="closed.png" alt="+"/> 函数调用图:</div>
+<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-3-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00852_a86adf0479c1c3f88e6a92195681bfd39_cgraph.svg" width="400" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a1423f5d4a8e8e063908b58a47787d5ce" name="a1423f5d4a8e8e063908b58a47787d5ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1423f5d4a8e8e063908b58a47787d5ce">&#9670;&nbsp;</a></span>get_tasks_total()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t Antares::ThreadPoolBase::get_tasks_total </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="a00287_source.html">ThreadPool.cpp</a> 第 <a class="el" href="a00287_source.html#l00062">62</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>                                                 {</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="a00852.html#a15c006ee092ea8c57710e571495b856d">tasks_total</a>.load(<a class="code hl_variable" href="a00414.html#a58a69ab1da2ee848fcfe298560f87313">order_relaxed</a>);</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    }</div>
+<div class="ttc" id="aa00414_html_a58a69ab1da2ee848fcfe298560f87313"><div class="ttname"><a href="a00414.html#a58a69ab1da2ee848fcfe298560f87313">Antares::order_relaxed</a></div><div class="ttdeci">constexpr auto order_relaxed</div><div class="ttdef"><b>Definition:</b> <a href="a00287_source.html#l00009">ThreadPool.cpp:9</a></div></div>
+<div class="ttc" id="aa00852_html_a15c006ee092ea8c57710e571495b856d"><div class="ttname"><a href="a00852.html#a15c006ee092ea8c57710e571495b856d">Antares::ThreadPoolBase::tasks_total</a></div><div class="ttdeci">std::atomic&lt; size_t &gt; tasks_total</div><div class="ttdef"><b>Definition:</b> <a href="a00290_source.html#l00088">ThreadPool.h:88</a></div></div>
+</div><!-- fragment --><div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-4-trigger" src="closed.png" alt="+"/> 这是这个函数的调用关系图:</div>
+<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-4-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00852_a1423f5d4a8e8e063908b58a47787d5ce_icgraph.svg" width="588" height="150"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="ae109966b4dce505bdc1bebcdf2bd4cd0" name="ae109966b4dce505bdc1bebcdf2bd4cd0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae109966b4dce505bdc1bebcdf2bd4cd0">&#9670;&nbsp;</a></span>getThreadIndex()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t &amp; Antares::ThreadPoolBase::getThreadIndex </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="a00287_source.html">ThreadPool.cpp</a> 第 <a class="el" href="a00287_source.html#l00074">74</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>                                           {</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        <span class="comment">// for windows compatibility, use parentheses to avoid calling the macro &quot;max&quot;</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        <span class="keyword">static</span> <span class="keyword">thread_local</span> <span class="keywordtype">size_t</span> index = (std::numeric_limits&lt;size_t&gt;::max)();</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        <span class="keywordflow">return</span> index;</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    }</div>
+</div><!-- fragment --><div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-5-trigger" src="closed.png" alt="+"/> 这是这个函数的调用关系图:</div>
+<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-5-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00852_ae109966b4dce505bdc1bebcdf2bd4cd0_icgraph.svg" width="1018" height="150"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="af339bef805e095f0fe01cc3e41d14c23" name="af339bef805e095f0fe01cc3e41d14c23"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af339bef805e095f0fe01cc3e41d14c23">&#9670;&nbsp;</a></span>is_paused()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Antares::ThreadPoolBase::is_paused </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="a00287_source.html">ThreadPool.cpp</a> 第 <a class="el" href="a00287_source.html#l00066">66</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>                                         {</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="a00852.html#a27c81a6ada2657ac00c748531326130d">paused</a>.load(<a class="code hl_variable" href="a00414.html#a58a69ab1da2ee848fcfe298560f87313">order_relaxed</a>);</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    }</div>
+<div class="ttc" id="aa00852_html_a27c81a6ada2657ac00c748531326130d"><div class="ttname"><a href="a00852.html#a27c81a6ada2657ac00c748531326130d">Antares::ThreadPoolBase::paused</a></div><div class="ttdeci">std::atomic&lt; bool &gt; paused</div><div class="ttdef"><b>Definition:</b> <a href="a00290_source.html#l00092">ThreadPool.h:92</a></div></div>
+</div><!-- fragment --><div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-6-trigger" src="closed.png" alt="+"/> 这是这个函数的调用关系图:</div>
+<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-6-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00852_af339bef805e095f0fe01cc3e41d14c23_icgraph.svg" width="782" height="212"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="aa4fbb555748053333e9c85b9c2fa2274" name="aa4fbb555748053333e9c85b9c2fa2274"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4fbb555748053333e9c85b9c2fa2274">&#9670;&nbsp;</a></span>pause()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Antares::ThreadPoolBase::pause </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="a00287_source.html">ThreadPool.cpp</a> 第 <a class="el" href="a00287_source.html#l00058">58</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>                               {</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        <a class="code hl_variable" href="a00852.html#a27c81a6ada2657ac00c748531326130d">paused</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a9a6bf1d55c081cc77cca35adaeb3780d" name="a9a6bf1d55c081cc77cca35adaeb3780d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a6bf1d55c081cc77cca35adaeb3780d">&#9670;&nbsp;</a></span>setThreadIndex()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Antares::ThreadPoolBase::setThreadIndex </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="a00287_source.html">ThreadPool.cpp</a> 第 <a class="el" href="a00287_source.html#l00080">80</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>                                        {</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        <a class="code hl_function" href="a00852.html#ae109966b4dce505bdc1bebcdf2bd4cd0">getThreadIndex</a>() = <a class="code hl_variable" href="a00852.html#a60ed3cef0ad2a8cffe6d7499866b48d0">threadIndexCounter</a>++;</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    }</div>
+<div class="ttc" id="aa00852_html_a60ed3cef0ad2a8cffe6d7499866b48d0"><div class="ttname"><a href="a00852.html#a60ed3cef0ad2a8cffe6d7499866b48d0">Antares::ThreadPoolBase::threadIndexCounter</a></div><div class="ttdeci">std::atomic&lt; size_t &gt; threadIndexCounter</div><div class="ttdef"><b>Definition:</b> <a href="a00290_source.html#l00089">ThreadPool.h:89</a></div></div>
+<div class="ttc" id="aa00852_html_ae109966b4dce505bdc1bebcdf2bd4cd0"><div class="ttname"><a href="a00852.html#ae109966b4dce505bdc1bebcdf2bd4cd0">Antares::ThreadPoolBase::getThreadIndex</a></div><div class="ttdeci">static size_t &amp; getThreadIndex()</div><div class="ttdef"><b>Definition:</b> <a href="a00287_source.html#l00074">ThreadPool.cpp:74</a></div></div>
+</div><!-- fragment --><div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-7-trigger" src="closed.png" alt="+"/> 函数调用图:</div>
+<div id="dynsection-7-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-7-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00852_a9a6bf1d55c081cc77cca35adaeb3780d_cgraph.svg" width="400" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-8-trigger" src="closed.png" alt="+"/> 这是这个函数的调用关系图:</div>
+<div id="dynsection-8-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-8-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00852_a9a6bf1d55c081cc77cca35adaeb3780d_icgraph.svg" width="782" height="150"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a85c157d87f8ca171fc50f46c3d46dec9" name="a85c157d87f8ca171fc50f46c3d46dec9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a85c157d87f8ca171fc50f46c3d46dec9">&#9670;&nbsp;</a></span>unpause()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Antares::ThreadPoolBase::unpause </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="a00287_source.html">ThreadPool.cpp</a> 第 <a class="el" href="a00287_source.html#l00070">70</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>                                 {</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        <a class="code hl_variable" href="a00852.html#a27c81a6ada2657ac00c748531326130d">paused</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a1c7e29f3fb47ae19a02ffd48961fce5f" name="a1c7e29f3fb47ae19a02ffd48961fce5f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c7e29f3fb47ae19a02ffd48961fce5f">&#9670;&nbsp;</a></span>wait_for_tasks()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Antares::ThreadPoolBase::wait_for_tasks </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>a bad design, should avoid calling this </p>
+
+<p class="definition">在文件 <a class="el" href="a00287_source.html">ThreadPool.cpp</a> 第 <a class="el" href="a00287_source.html#l00047">47</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>                                        {</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        std::unique_lock&lt;std::mutex&gt; tasks_lock(<a class="code hl_variable" href="a00852.html#ac73cd8837657465d1c52e1fb1ab6fb36">tasks_mtx</a>);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        <a class="code hl_variable" href="a00852.html#a186ce734a22cf4f9dd313da4ef2ee33d">waiting</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <span class="keywordflow">while</span> ((<a class="code hl_function" href="a00852.html#a1423f5d4a8e8e063908b58a47787d5ce">get_tasks_total</a>() != (<a class="code hl_function" href="a00852.html#af339bef805e095f0fe01cc3e41d14c23">is_paused</a>() ? <a class="code hl_variable" href="a00852.html#af57e6f698dddd43557043ff658b9900f">tasks</a>.size() : 0))) {</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>            <span class="comment">// if you require a faster way to know the tasks are over, you should implement it in your tasks,</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>            <span class="comment">// instead of calling this stupid function to help you.</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>            <a class="code hl_variable" href="a00852.html#a310037680ec6129396c4e0720e6ad14a">task_done_cv</a>.wait_for(tasks_lock, std::chrono::milliseconds(10));</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        }</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        <a class="code hl_variable" href="a00852.html#a186ce734a22cf4f9dd313da4ef2ee33d">waiting</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    }</div>
+<div class="ttc" id="aa00852_html_a186ce734a22cf4f9dd313da4ef2ee33d"><div class="ttname"><a href="a00852.html#a186ce734a22cf4f9dd313da4ef2ee33d">Antares::ThreadPoolBase::waiting</a></div><div class="ttdeci">std::atomic&lt; bool &gt; waiting</div><div class="ttdef"><b>Definition:</b> <a href="a00290_source.html#l00091">ThreadPool.h:91</a></div></div>
+<div class="ttc" id="aa00852_html_a310037680ec6129396c4e0720e6ad14a"><div class="ttname"><a href="a00852.html#a310037680ec6129396c4e0720e6ad14a">Antares::ThreadPoolBase::task_done_cv</a></div><div class="ttdeci">std::condition_variable task_done_cv</div><div class="ttdef"><b>Definition:</b> <a href="a00290_source.html#l00087">ThreadPool.h:87</a></div></div>
+<div class="ttc" id="aa00852_html_ac73cd8837657465d1c52e1fb1ab6fb36"><div class="ttname"><a href="a00852.html#ac73cd8837657465d1c52e1fb1ab6fb36">Antares::ThreadPoolBase::tasks_mtx</a></div><div class="ttdeci">std::mutex tasks_mtx</div><div class="ttdef"><b>Definition:</b> <a href="a00290_source.html#l00084">ThreadPool.h:84</a></div></div>
+<div class="ttc" id="aa00852_html_af339bef805e095f0fe01cc3e41d14c23"><div class="ttname"><a href="a00852.html#af339bef805e095f0fe01cc3e41d14c23">Antares::ThreadPoolBase::is_paused</a></div><div class="ttdeci">bool is_paused() const</div><div class="ttdef"><b>Definition:</b> <a href="a00287_source.html#l00066">ThreadPool.cpp:66</a></div></div>
+</div><!-- fragment --><div id="dynsection-9" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-9-trigger" src="closed.png" alt="+"/> 函数调用图:</div>
+<div id="dynsection-9-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-9-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00852_a1c7e29f3fb47ae19a02ffd48961fce5f_cgraph.svg" width="400" height="118"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div id="dynsection-10" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-10-trigger" src="closed.png" alt="+"/> 这是这个函数的调用关系图:</div>
+<div id="dynsection-10-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-10-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00852_a1c7e29f3fb47ae19a02ffd48961fce5f_icgraph.svg" width="370" height="118"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a90f9311eac6c03fb4cb36cb8ce9c7d31" name="a90f9311eac6c03fb4cb36cb8ce9c7d31"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90f9311eac6c03fb4cb36cb8ce9c7d31">&#9670;&nbsp;</a></span>worker()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Antares::ThreadPoolBase::worker </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="a00287_source.html">ThreadPool.cpp</a> 第 <a class="el" href="a00287_source.html#l00011">11</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>                                {</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>        <a class="code hl_function" href="a00413.html#ada5de831f5a14655f1dd31e6323f7831">ThreadIdentify::IAmPoolThread</a>();</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        <a class="code hl_function" href="a00852.html#a9a6bf1d55c081cc77cca35adaeb3780d">setThreadIndex</a>();</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        std::unique_lock&lt;std::mutex&gt; tasks_lock(<a class="code hl_variable" href="a00852.html#ac73cd8837657465d1c52e1fb1ab6fb36">tasks_mtx</a>);</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        <span class="keywordflow">while</span> (<a class="code hl_variable" href="a00852.html#a988216b10c8059cf5b884fb12d718e3c">running</a>.load(<a class="code hl_variable" href="a00414.html#a58a69ab1da2ee848fcfe298560f87313">order_relaxed</a>)) {</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>            std::function&lt;void()&gt; task;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>            <span class="keywordflow">while</span> (<a class="code hl_variable" href="a00852.html#af57e6f698dddd43557043ff658b9900f">tasks</a>.empty() &amp;&amp; <a class="code hl_variable" href="a00852.html#a988216b10c8059cf5b884fb12d718e3c">running</a>.load(<a class="code hl_variable" href="a00414.html#a58a69ab1da2ee848fcfe298560f87313">order_relaxed</a>)) {</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>                <a class="code hl_variable" href="a00852.html#a0ca7e77d1f3ea87103408c1b43a41582">task_available_cv</a>.wait_for(tasks_lock, std::chrono::milliseconds(100));</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>            }</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>            <span class="keywordflow">while</span> (!<a class="code hl_function" href="a00852.html#af339bef805e095f0fe01cc3e41d14c23">is_paused</a>() &amp;&amp; !<a class="code hl_variable" href="a00852.html#af57e6f698dddd43557043ff658b9900f">tasks</a>.empty()) {</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>                task = std::move(<a class="code hl_variable" href="a00852.html#af57e6f698dddd43557043ff658b9900f">tasks</a>.front());</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>                <a class="code hl_variable" href="a00852.html#af57e6f698dddd43557043ff658b9900f">tasks</a>.pop();</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>                tasks_lock.unlock();</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>                task();</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>                <a class="code hl_variable" href="a00852.html#a15c006ee092ea8c57710e571495b856d">tasks_total</a>.fetch_sub(1, std::memory_order_release);</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>                tasks_lock.lock();</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="a00852.html#a186ce734a22cf4f9dd313da4ef2ee33d">waiting</a>.load(<a class="code hl_variable" href="a00414.html#a58a69ab1da2ee848fcfe298560f87313">order_relaxed</a>))</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>                    <a class="code hl_variable" href="a00852.html#a310037680ec6129396c4e0720e6ad14a">task_done_cv</a>.notify_one();</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>            }</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        }</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    }</div>
+<div class="ttc" id="aa00413_html_ada5de831f5a14655f1dd31e6323f7831"><div class="ttname"><a href="a00413.html#ada5de831f5a14655f1dd31e6323f7831">ThreadIdentify::IAmPoolThread</a></div><div class="ttdeci">void IAmPoolThread()</div><div class="ttdef"><b>Definition:</b> <a href="a00281_source.html#l00048">ThreadIdentify.cpp:48</a></div></div>
+<div class="ttc" id="aa00852_html_a0ca7e77d1f3ea87103408c1b43a41582"><div class="ttname"><a href="a00852.html#a0ca7e77d1f3ea87103408c1b43a41582">Antares::ThreadPoolBase::task_available_cv</a></div><div class="ttdeci">std::condition_variable task_available_cv</div><div class="ttdef"><b>Definition:</b> <a href="a00290_source.html#l00086">ThreadPool.h:86</a></div></div>
+<div class="ttc" id="aa00852_html_a988216b10c8059cf5b884fb12d718e3c"><div class="ttname"><a href="a00852.html#a988216b10c8059cf5b884fb12d718e3c">Antares::ThreadPoolBase::running</a></div><div class="ttdeci">std::atomic&lt; bool &gt; running</div><div class="ttdef"><b>Definition:</b> <a href="a00290_source.html#l00090">ThreadPool.h:90</a></div></div>
+<div class="ttc" id="aa00852_html_a9a6bf1d55c081cc77cca35adaeb3780d"><div class="ttname"><a href="a00852.html#a9a6bf1d55c081cc77cca35adaeb3780d">Antares::ThreadPoolBase::setThreadIndex</a></div><div class="ttdeci">void setThreadIndex()</div><div class="ttdef"><b>Definition:</b> <a href="a00287_source.html#l00080">ThreadPool.cpp:80</a></div></div>
+</div><!-- fragment --><div id="dynsection-11" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-11-trigger" src="closed.png" alt="+"/> 函数调用图:</div>
+<div id="dynsection-11-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-11-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00852_a90f9311eac6c03fb4cb36cb8ce9c7d31_cgraph.svg" width="647" height="170"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div id="dynsection-12" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-12-trigger" src="closed.png" alt="+"/> 这是这个函数的调用关系图:</div>
+<div id="dynsection-12-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-12-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00852_a90f9311eac6c03fb4cb36cb8ce9c7d31_icgraph.svg" width="563" height="150"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="a27c81a6ada2657ac00c748531326130d" name="a27c81a6ada2657ac00c748531326130d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27c81a6ada2657ac00c748531326130d">&#9670;&nbsp;</a></span>paused</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::atomic&lt;bool&gt; Antares::ThreadPoolBase::paused = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="a00290_source.html">ThreadPool.h</a> 第 <a class="el" href="a00290_source.html#l00092">92</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a988216b10c8059cf5b884fb12d718e3c" name="a988216b10c8059cf5b884fb12d718e3c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a988216b10c8059cf5b884fb12d718e3c">&#9670;&nbsp;</a></span>running</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::atomic&lt;bool&gt; Antares::ThreadPoolBase::running = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="a00290_source.html">ThreadPool.h</a> 第 <a class="el" href="a00290_source.html#l00090">90</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a0ca7e77d1f3ea87103408c1b43a41582" name="a0ca7e77d1f3ea87103408c1b43a41582"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ca7e77d1f3ea87103408c1b43a41582">&#9670;&nbsp;</a></span>task_available_cv</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::condition_variable Antares::ThreadPoolBase::task_available_cv = {}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="a00290_source.html">ThreadPool.h</a> 第 <a class="el" href="a00290_source.html#l00086">86</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a310037680ec6129396c4e0720e6ad14a" name="a310037680ec6129396c4e0720e6ad14a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a310037680ec6129396c4e0720e6ad14a">&#9670;&nbsp;</a></span>task_done_cv</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::condition_variable Antares::ThreadPoolBase::task_done_cv = {}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="a00290_source.html">ThreadPool.h</a> 第 <a class="el" href="a00290_source.html#l00087">87</a> 行定义.</p>
+
+</div>
+</div>
+<a id="af57e6f698dddd43557043ff658b9900f" name="af57e6f698dddd43557043ff658b9900f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af57e6f698dddd43557043ff658b9900f">&#9670;&nbsp;</a></span>tasks</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::queue&lt;std::function&lt;void()&gt; &gt; Antares::ThreadPoolBase::tasks</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="a00290_source.html">ThreadPool.h</a> 第 <a class="el" href="a00290_source.html#l00085">85</a> 行定义.</p>
+
+</div>
+</div>
+<a id="ac73cd8837657465d1c52e1fb1ab6fb36" name="ac73cd8837657465d1c52e1fb1ab6fb36"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac73cd8837657465d1c52e1fb1ab6fb36">&#9670;&nbsp;</a></span>tasks_mtx</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::mutex Antares::ThreadPoolBase::tasks_mtx {}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="a00290_source.html">ThreadPool.h</a> 第 <a class="el" href="a00290_source.html#l00084">84</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a15c006ee092ea8c57710e571495b856d" name="a15c006ee092ea8c57710e571495b856d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15c006ee092ea8c57710e571495b856d">&#9670;&nbsp;</a></span>tasks_total</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::atomic&lt;size_t&gt; Antares::ThreadPoolBase::tasks_total = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="a00290_source.html">ThreadPool.h</a> 第 <a class="el" href="a00290_source.html#l00088">88</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a60ed3cef0ad2a8cffe6d7499866b48d0" name="a60ed3cef0ad2a8cffe6d7499866b48d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60ed3cef0ad2a8cffe6d7499866b48d0">&#9670;&nbsp;</a></span>threadIndexCounter</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::atomic&lt;size_t&gt; Antares::ThreadPoolBase::threadIndexCounter = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="a00290_source.html">ThreadPool.h</a> 第 <a class="el" href="a00290_source.html#l00089">89</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a186ce734a22cf4f9dd313da4ef2ee33d" name="a186ce734a22cf4f9dd313da4ef2ee33d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a186ce734a22cf4f9dd313da4ef2ee33d">&#9670;&nbsp;</a></span>waiting</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::atomic&lt;bool&gt; Antares::ThreadPoolBase::waiting = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="a00290_source.html">ThreadPool.h</a> 第 <a class="el" href="a00290_source.html#l00091">91</a> 行定义.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li><a class="el" href="a00290_source.html">ThreadPool.h</a></li>
+<li><a class="el" href="a00287_source.html">ThreadPool.cpp</a></li>
+</ul>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">生成于 2023年 一月 27日 星期五 00:14:10 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="navelem"><a class="el" href="a00414.html">Antares</a></li><li class="navelem"><a class="el" href="a00852.html">ThreadPoolBase</a></li>
+    <li class="footer">生成于 2023年 四月 10日 星期一 00:26:34 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
     </body>

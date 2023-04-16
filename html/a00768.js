@@ -1,8 +1,9 @@
 var a00768 =
 [
-    [ "expirytime", "a00768.html#a666efd0312dcc5805394a02ff7c326bb", null ],
-    [ "lastmodifytime", "a00768.html#a8597f745a6869003efa097519bf34148", null ],
-    [ "size", "a00768.html#a35cc1f23bf34db4184696833b12e4605", null ],
-    [ "uploaderid", "a00768.html#accf1835e308104bde941d72053d5c5a7", null ],
-    [ "uploadtime", "a00768.html#ab5f94fd436b08eb8963d7c5d8d4907b4", null ]
+    [ "JNIEnvManager", "a00768.html#a11ff3fa2dd110bf0a8fcacfc6bfd4bac", null ],
+    [ "detach", "a00768.html#ac5486f22055db723d78404b8b822034f", null ],
+    [ "getEnv", "a00768.html#aea7d58ff9f04d6d4849c25a2506603a5", null ],
+    [ "getGvm", "a00768.html#ae0e482c6a813848a8f5d34957d1b6307", null ],
+    [ "setEnv", "a00768.html#ab22cd8979e49e6bdad9c67fbf335853b", null ],
+    [ "setGvm", "a00768.html#a4053a39604df12d52f938cd7d60850fd", null ]
 ];

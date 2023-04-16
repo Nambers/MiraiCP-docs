@@ -1,7 +1,9 @@
 var a00492 =
 [
-    [ "TimeOutEvent", "a00492.html#abcaf0a409f7f3a66e0da48ada27a6820", null ],
-    [ "get_event_type", "a00492.html#a3f8c12581718bf6c1fe9d6b75ef76b7e", null ],
-    [ "getEventType", "a00492.html#aece701e59d0c95f0fde7680fe0265543", null ],
-    [ "msg", "a00492.html#ad6869868495ecef440a6d4b909188b77", null ]
+    [ "BuiltInContact", "a00496.html", "a00496" ],
+    [ "BaseEventData", "a00492.html#add7fec6ff79d938ab121f57d10ffa1a7", null ],
+    [ "botId", "a00492.html#a0ef2979d2f7e44318fcc251026a7b109", null ],
+    [ "eventData", "a00492.html#abd44451921253c4eb235eff3fa3fb857", null ],
+    [ "object", "a00492.html#a9d1c4b300f7c6602c21aff985e9f1757", null ],
+    [ "subject", "a00492.html#a7afa1ecf74f25007146b46f4381c736d", null ]
 ];

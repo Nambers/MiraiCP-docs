@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['bs_5fthread_5fpool_5fversion_0',['BS_THREAD_POOL_VERSION',['../a00194.html#a1149cbbef0b0be59576a0787b2606af4',1,'BS_thread_pool.hpp']]]
+  ['close_5flibrary_0',['CLOSE_LIBRARY',['../a00218.html#a071a5a9d769c6e787e4101850fff1a54',1,'libOpen.cpp']]]
 ];

@@ -1,14 +1,15 @@
 var a00800 =
 [
-    [ "Face", "a00800.html#aa0b031aa2e11403be44150ebce3dbb93", null ],
-    [ "Face", "a00800.html#aa0b031aa2e11403be44150ebce3dbb93", null ],
-    [ "operator==", "a00800.html#a013671a618db0081ea79cbecec88190f", null ],
-    [ "operator==", "a00800.html#a013671a618db0081ea79cbecec88190f", null ],
-    [ "toJson", "a00800.html#a866de1e28199fa542e760d0caeea434e", null ],
-    [ "toJson", "a00800.html#a866de1e28199fa542e760d0caeea434e", null ],
-    [ "toMiraiCode", "a00800.html#a6f40de2d5ca391a1fb5a67fefe55d3e8", null ],
-    [ "toMiraiCode", "a00800.html#a6f40de2d5ca391a1fb5a67fefe55d3e8", null ],
-    [ "type", "a00800.html#a73da05ce5bcbf5d40106b2db705fecb5", null ],
-    [ "type", "a00800.html#a73da05ce5bcbf5d40106b2db705fecb5", null ],
-    [ "id", "a00800.html#a213699a327644eb13d2dc0a5f935cdd8", null ]
+    [ "string", "a00800.html#acfe4e8f9dd9fdd3774c50f4843ea4c57", null ],
+    [ "wstring", "a00800.html#a263f5033219fd9fde7e76a4a14e30a3a", null ],
+    [ "call_logger", "a00800.html#af4d7d5164450e25f7401d1cc15f15b8d", null ],
+    [ "call_logger", "a00800.html#a4c48551e7c6b1fe442d394c4333c4f5c", null ],
+    [ "error", "a00800.html#ae735f16b20f681d29d4e5d28ad248dbe", null ],
+    [ "error", "a00800.html#ab16e1bc0504135788f5ce20864deb044", null ],
+    [ "info", "a00800.html#a0d34d5ca7783c370ec08dbbb44876c1b", null ],
+    [ "info", "a00800.html#ad876a34412f03e35fbae30758836e6ff", null ],
+    [ "init", "a00800.html#a666e05995de50742a39702dacf3dcbd7", null ],
+    [ "warning", "a00800.html#af50d0545fe7d683e54fcd03453a423e3", null ],
+    [ "warning", "a00800.html#a17f3029197c45dc84c38a764c9e3e1b9", null ],
+    [ "logMethod", "a00800.html#a298efd2ba8a74fb88313ca0c08e29235", null ]
 ];

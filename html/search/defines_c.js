@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['open_5flibrary_0',['OPEN_LIBRARY',['../a00221.html#a8d9660e662b6e570295b95769dc5bf32',1,'libOpen.cpp']]]
+  ['plugin_5ferror_0',['PLUGIN_ERROR',['../a00044.html#a65f3816ccdd5cca99d33252c804602a9',1,'MiraiCPMacros.h']]],
+  ['plugin_5finfo_1',['PLUGIN_INFO',['../a00044.html#ac4ea748794ca932109fca8a936954720',1,'MiraiCPMacros.h']]],
+  ['plugin_5fnormal_2',['PLUGIN_NORMAL',['../a00044.html#a5ef35c73710d7e1047bf83809e40d2c8',1,'MiraiCPMacros.h']]]
 ];

@@ -25,7 +25,7 @@
 var NAVTREE =
 [
   [ "MiraiCP", "index.html", [
-    [ "弃用列表", "a00392.html", null ],
+    [ "弃用列表", "a00395.html", null ],
     [ "命名空间", "namespaces.html", [
       [ "命名空间列表", "namespaces.html", "namespaces_dup" ],
       [ "命名空间成员", "namespacemembers.html", [
@@ -69,17 +69,17 @@ var NAVTREEINDEX =
 [
 "a00002.html",
 "a00185.html#a5ea76c388296e6066ae4e30a99837f41",
-"a00320_source.html",
-"a00404.html#a52292cf621eb6c36b43047ee054c411d",
-"a00445.html#a6b03b38226c3f85050dac7135f06cec6",
-"a00501.html#a240d9d0df62738e43f8de576c6b26acf",
-"a00553.html#a9b4c13376dcef6dddab4cca9b57ffc48",
-"a00605.html#ac5e2613306079cce18866fa1f2809357",
-"a00645.html#ad7e09968df7b19ccd68e144c2388e365",
-"a00697.html#ac51de6637e95569a0a56f15334d10ab3",
-"a00765.html#a6f36df0501ab738b10baee833e9ed960",
-"a00837.html#af4e8baa9d706f75b1bf21d95069d3f42",
-"a01370.html#acab9ccd86eed6b2d17836f5f2899b2a7"
+"a00329.html",
+"a00407.html#a6cd5117c0adf23ed373edca65148a4fd",
+"a00448.html#a76bc51237847ebb3cca3d2d8478f527f",
+"a00504.html#a40be4514c0111359a8388cb0c079ec76",
+"a00556.html#aa2ba8dfb74a6324a1a6ef5774d6ee793",
+"a00608.html#ad41adfb9b859845999f24978087af62b",
+"a00652.html",
+"a00700.html#ad5c2c64b98d4ac3ee79f40640090b649",
+"a00780.html#ac82d122c331d273b9d62327055f197f1",
+"a00852.html#a1c7e29f3fb47ae19a02ffd48961fce5f",
+"a01373.html#a05f1524120bb7a5a65abbde063d9e557"
 ];
 
 var SYNCONMSG = '点击 关闭 面板同步';

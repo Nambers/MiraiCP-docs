@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['plugin_5ferror_0',['PLUGIN_ERROR',['../a00044.html#a65f3816ccdd5cca99d33252c804602a9',1,'MiraiCPMacros.h']]],
-  ['plugin_5finfo_1',['PLUGIN_INFO',['../a00044.html#ac4ea748794ca932109fca8a936954720',1,'MiraiCPMacros.h']]],
-  ['plugin_5fnormal_2',['PLUGIN_NORMAL',['../a00044.html#a5ef35c73710d7e1047bf83809e40d2c8',1,'MiraiCPMacros.h']]]
+  ['set_5fenv_0',['SET_ENV',['../a00239.html#a9cc65c0aaa7628e4d689bb2377099144',1,'LoaderMacro.h']]],
+  ['set_5fthreadname_1',['SET_THREADNAME',['../a00281.html#afdf9b55ee6d4f7c29bc91aa7e057bdbe',1,'ThreadIdentify.cpp']]],
+  ['shouldnotuse_2',['ShouldNotUse',['../a00044.html#ae1d03b516481fc8bce7d91943b41aaad',1,'MiraiCPMacros.h']]],
+  ['stringify_3',['STRINGIFY',['../a00044.html#ab06e1eb2e9bf38e0d452b1f796aed208',1,'MiraiCPMacros.h']]]
 ];

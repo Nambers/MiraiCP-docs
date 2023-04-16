@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiraiCP: group.cpp</title>
+<title>MiraiCP: Antares::ThreadPoolDefaultTraits结构体 参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -35,7 +35,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MiraiCP
-   &#160;<span id="projectnumber">v2.13.1</span>
+   &#160;<span id="projectnumber">v2.15.0-RC2</span>
    </div>
    <div id="projectbrief">MiraiCP api document</div>
   </td>
@@ -93,70 +93,121 @@ $(document).ready(function(){initNavTree('a00848.html',''); initResizable(); });
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">group.cpp</div></div>
+  <div class="summary">
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="a00845.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">Antares::ThreadPoolDefaultTraits结构体 参考</div></div>
 </div><!--header-->
 <div class="contents">
-<p >群操作</p>
-<div class="fragment"><div class="line"><span class="comment">// Copyright (c) 2020 - 2022. Eritque arcus and contributors.</span></div>
-<div class="line"><span class="comment">//</span></div>
-<div class="line"><span class="comment">// This program is free software: you can redistribute it and/or modify</span></div>
-<div class="line"><span class="comment">// it under the terms of the GNU Affero General Public License as</span></div>
-<div class="line"><span class="comment">// published by the Free Software Foundation, either version 3 of the</span></div>
-<div class="line"><span class="comment">// License, or any later version(in your opinion).</span></div>
-<div class="line"><span class="comment">//</span></div>
-<div class="line"><span class="comment">// This program is distributed in the hope that it will be useful,</span></div>
-<div class="line"><span class="comment">// but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div>
-<div class="line"><span class="comment">// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span></div>
-<div class="line"><span class="comment">// GNU Affero General Public License for more details.</span></div>
-<div class="line"><span class="comment">//</span></div>
-<div class="line"><span class="comment">// You should have received a copy of the GNU Affero General Public License</span></div>
-<div class="line"><span class="comment">// along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</span></div>
-<div class="line"><span class="comment">//</span></div>
-<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00161.html">MiraiCP.hpp</a>&gt;</span></div>
-<div class="line"><span class="keyword">using namespace </span><a class="code hl_namespace" href="a00302.html">MiraiCP</a>;</div>
-<div class="line"> </div>
-<div class="line"><span class="keyword">const</span> PluginConfig CPPPlugin::config{</div>
-<div class="line">        <span class="stringliteral">&quot;id&quot;</span>,   <span class="comment">// 插件id</span></div>
-<div class="line">        <span class="stringliteral">&quot;test&quot;</span>, <span class="comment">// 插件名称</span></div>
-<div class="line">        <span class="stringliteral">&quot;v1.0&quot;</span>, <span class="comment">// 插件版本</span></div>
-<div class="line">        <span class="stringliteral">&quot;a&quot;</span>,    <span class="comment">// 插件作者</span></div>
-<div class="line">                <span class="comment">// 可选：插件描述</span></div>
-<div class="line">                <span class="comment">// 可选：日期</span></div>
-<div class="line">};</div>
-<div class="line"> </div>
-<div class="line"><span class="keyword">class </span>Main : <span class="keyword">public</span> CPPPlugin {</div>
-<div class="line"><span class="keyword">public</span>:</div>
-<div class="line">    Main() : <a class="code hl_function" href="a00437.html#aeeaafebf5e61e1da8a2c5e3e07dac64b">CPPPlugin</a>() {}</div>
-<div class="line">    <span class="keywordtype">void</span> onEnable()<span class="keyword"> override </span>{</div>
-<div class="line">        Event::registerEvent&lt;GroupMessageEvent&gt;([](<a id="a0" name="a0"></a><a class="code hl_enumvalue" href="a00307.html#abe9e9d8212ea8f23717b72db64393cabaca8073196614a985e9fcc7d2f964473c">GroupMessageEvent</a> e) {</div>
-<div class="line">            <span class="comment">// 用 id 构建群对象</span></div>
-<div class="line">            Group a(e.group.id(), e.bot.id);</div>
-<div class="line">            <span class="comment">// 发送D:\\ValveUnhandledExceptionFilter.txt本地文件到qq群的 /test.txt 路径</span></div>
-<div class="line">            RemoteFile tmp = e.group.sendFile(<span class="stringliteral">&quot;/test.txt&quot;</span>, <span class="stringliteral">&quot;D:\\ValveUnhandledExceptionFilter.txt&quot;</span>);</div>
-<div class="line">            e.group.sendMessage(e.group.getFile(<span class="stringliteral">&quot;/&quot;</span>, tmp.id).name);</div>
-<div class="line">            e.group.sendMessage(e.group.getFile(<span class="stringliteral">&quot;/test.txt&quot;</span>).name);</div>
-<div class="line">            e.group.sendMessage(e.group.getFileListString(<span class="stringliteral">&quot;/&quot;</span>));</div>
-<div class="line">            <span class="comment">// 取群文件列表</span></div>
-<div class="line">            e.group.getFileListString(<span class="stringliteral">&quot;/&quot;</span>);</div>
-<div class="line">        });</div>
-<div class="line">    }</div>
-<div class="line">};</div>
-<div class="line"> </div>
-<div class="line"><span class="keywordtype">void</span> <a id="a1" name="a1"></a><a class="code hl_function" href="a00302.html#a12d27be6730af4fc321ac1eb231db281">MiraiCP::enrollPlugin</a>() {</div>
-<div class="line">    <a class="code hl_function" href="a00302.html#a12d27be6730af4fc321ac1eb231db281">MiraiCP::enrollPlugin</a>(<span class="keyword">new</span> Main());</div>
-<div class="line">}</div>
-<div class="ttc" id="aa00161_html"><div class="ttname"><a href="a00161.html">MiraiCP.hpp</a></div></div>
-<div class="ttc" id="aa00302_html"><div class="ttname"><a href="a00302.html">MiraiCP</a></div><div class="ttdef"><b>Definition:</b> <a href="a00041_source.html#l00041">commonTypes.h:41</a></div></div>
-<div class="ttc" id="aa00302_html_a12d27be6730af4fc321ac1eb231db281"><div class="ttname"><a href="a00302.html#a12d27be6730af4fc321ac1eb231db281">MiraiCP::enrollPlugin</a></div><div class="ttdeci">void enrollPlugin()</div><div class="ttdoc">注册插件函数, 需要被插件实现, 类似onStart();</div><div class="ttdef"><b>Definition:</b> <a href="a00179_source.html#l00037">utils.h:37</a></div></div>
-<div class="ttc" id="aa00307_html_abe9e9d8212ea8f23717b72db64393cabaca8073196614a985e9fcc7d2f964473c"><div class="ttname"><a href="a00307.html#abe9e9d8212ea8f23717b72db64393cabaca8073196614a985e9fcc7d2f964473c">MiraiCP::eventTypes::GroupMessageEvent</a></div><div class="ttdeci">@ GroupMessageEvent</div><div class="ttdef"><b>Definition:</b> <a href="a00119_source.html#l00038">Event.h:38</a></div></div>
-<div class="ttc" id="aa00437_html_aeeaafebf5e61e1da8a2c5e3e07dac64b"><div class="ttname"><a href="a00437.html#aeeaafebf5e61e1da8a2c5e3e07dac64b">MiraiCP::CPPPlugin::CPPPlugin</a></div><div class="ttdeci">CPPPlugin()=default</div></div>
-</div><!-- fragment --> </div><!-- contents -->
+
+<p><code>#include &lt;<a class="el" href="a00290_source.html">ThreadPool.h</a>&gt;</code></p>
+<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Antares::ThreadPoolDefaultTraits 的协作图:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00846.svg" width="191" height="147"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:a832263ff5f9560c357159d1fa72c52a6"><td class="memItemLeft" align="right" valign="top">static void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00848.html#a832263ff5f9560c357159d1fa72c52a6">malloc</a> (size_t size)</td></tr>
+<tr class="separator:a832263ff5f9560c357159d1fa72c52a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf571314957622d4aed7c344317e5fb5"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00848.html#adf571314957622d4aed7c344317e5fb5">free</a> (void *ptr)</td></tr>
+<tr class="separator:adf571314957622d4aed7c344317e5fb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock">
+<p class="definition">在文件 <a class="el" href="a00290_source.html">ThreadPool.h</a> 第 <a class="el" href="a00290_source.html#l00031">31</a> 行定义.</p>
+</div><h2 class="groupheader">成员函数说明</h2>
+<a id="adf571314957622d4aed7c344317e5fb5" name="adf571314957622d4aed7c344317e5fb5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf571314957622d4aed7c344317e5fb5">&#9670;&nbsp;</a></span>free()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void Antares::ThreadPoolDefaultTraits::free </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>ptr</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="a00290_source.html">ThreadPool.h</a> 第 <a class="el" href="a00290_source.html#l00036">36</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>                                           {</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>            <a class="code hl_function" href="a00848.html#adf571314957622d4aed7c344317e5fb5">::free</a>(ptr);</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        }</div>
+<div class="ttc" id="aa00848_html_adf571314957622d4aed7c344317e5fb5"><div class="ttname"><a href="a00848.html#adf571314957622d4aed7c344317e5fb5">Antares::ThreadPoolDefaultTraits::free</a></div><div class="ttdeci">static void free(void *ptr)</div><div class="ttdef"><b>Definition:</b> <a href="a00290_source.html#l00036">ThreadPool.h:36</a></div></div>
+</div><!-- fragment --><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> 函数调用图:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00848_adf571314957622d4aed7c344317e5fb5_cgraph.svg" width="191" height="76"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-2-trigger" src="closed.png" alt="+"/> 这是这个函数的调用关系图:</div>
+<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-2-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00848_adf571314957622d4aed7c344317e5fb5_icgraph.svg" width="191" height="76"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a832263ff5f9560c357159d1fa72c52a6" name="a832263ff5f9560c357159d1fa72c52a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a832263ff5f9560c357159d1fa72c52a6">&#9670;&nbsp;</a></span>malloc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void * Antares::ThreadPoolDefaultTraits::malloc </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>size</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="a00290_source.html">ThreadPool.h</a> 第 <a class="el" href="a00290_source.html#l00032">32</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>                                                {</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>            return ::malloc(size);</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<hr/>该结构体的文档由以下文件生成:<ul>
+<li><a class="el" href="a00290_source.html">ThreadPool.h</a></li>
+</ul>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">生成于 2023年 一月 22日 星期日 13:18:23 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="navelem"><a class="el" href="a00414.html">Antares</a></li><li class="navelem"><a class="el" href="a00848.html">ThreadPoolDefaultTraits</a></li>
+    <li class="footer">生成于 2023年 四月 10日 星期一 00:26:34 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
     </body>

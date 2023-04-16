@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiraiCP: ThreadTask.cpp 文件参考</title>
+<title>MiraiCP: Bot.cpp 文件参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -35,7 +35,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MiraiCP
-   &#160;<span id="projectnumber">v2.13.2</span>
+   &#160;<span id="projectnumber">v2.15.0-RC2</span>
    </div>
    <div id="projectbrief">MiraiCP api document</div>
   </td>
@@ -95,62 +95,41 @@ $(document).ready(function(){initNavTree('a00293.html',''); initResizable(); });
 <div class="header">
   <div class="summary">
 <a href="#namespaces">命名空间</a> &#124;
-<a href="#typedef-members">类型定义</a> &#124;
 <a href="#func-members">函数</a>  </div>
-  <div class="headertitle"><div class="title">ThreadTask.cpp 文件参考</div></div>
+  <div class="headertitle"><div class="title">Bot.cpp 文件参考</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="a00173_source.html">ThreadTask.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00143_source.html">Logger.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00044_source.html">loaderApiInternal.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="a00050_source.html">Bot.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00305_source.html">ContactDataType/IContactData.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00128_source.html">Friend.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00131_source.html">Group.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00353_source.html">KtOperation.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00362_source.html">LowLevelAPI.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00167_source.html">Tools.h</a>&quot;</code><br />
 <code>#include &lt;atomic&gt;</code><br />
-<code>#include &lt;deque&gt;</code><br />
-<code>#include &lt;shared_mutex&gt;</code><br />
+<code>#include &lt;memory&gt;</code><br />
+<code>#include &lt;mutex&gt;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> ThreadTask.cpp 的引用(Include)关系图:</div>
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Bot.cpp 的引用(Include)关系图:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="a00294.svg" width="879" height="560"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00294.svg" width="1883" height="575"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 <p><a href="a00293_source.html">浏览源代码.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
 命名空间</h2></td></tr>
-<tr class="memitem:a00305"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00305.html">MiraiCP</a></td></tr>
+<tr class="memitem:a00397"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00397.html">MiraiCP</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00317"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00317.html">MiraiCP::ThreadTask</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00318"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00318.html">MiraiCP::ThreadTask::internal</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
-类型定义</h2></td></tr>
-<tr class="memitem:a203c69b79e476ef8c6e13bfb9bba4ff7"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00318.html#a203c69b79e476ef8c6e13bfb9bba4ff7">MiraiCP::ThreadTask::internal::functionType</a> = std::function&lt; void()&gt;</td></tr>
-<tr class="separator:a203c69b79e476ef8c6e13bfb9bba4ff7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae4923f6c201a288de0e0224e8a8d35a1"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00318.html#ae4923f6c201a288de0e0224e8a8d35a1">MiraiCP::ThreadTask::internal::functionPointerType</a> = std::shared_ptr&lt; functionType &gt;</td></tr>
-<tr class="separator:ae4923f6c201a288de0e0224e8a8d35a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2cc1dc71776e7644c62cfc034e414654"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00318.html#a2cc1dc71776e7644c62cfc034e414654">MiraiCP::ThreadTask::internal::storerType</a> = std::unordered_map&lt; size_t, functionPointerType &gt;</td></tr>
-<tr class="separator:a2cc1dc71776e7644c62cfc034e414654"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aef1f03dc407748c08395bd81bcb66fba"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00318.html#aef1f03dc407748c08395bd81bcb66fba">MiraiCP::ThreadTask::internal::storerIteratorType</a> = storerType::iterator</td></tr>
-<tr class="separator:aef1f03dc407748c08395bd81bcb66fba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 函数</h2></td></tr>
-<tr class="memitem:a3830d60f883d192d8d6dc65ae537c5c1"><td class="memItemLeft" align="right" valign="top">auto &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00318.html#a3830d60f883d192d8d6dc65ae537c5c1">MiraiCP::ThreadTask::internal::get_function_storer</a> ()</td></tr>
-<tr class="separator:a3830d60f883d192d8d6dc65ae537c5c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab64116c47ac8841acfd734f7069eaa10"><td class="memItemLeft" align="right" valign="top">auto &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00318.html#ab64116c47ac8841acfd734f7069eaa10">MiraiCP::ThreadTask::internal::get_mutex</a> ()</td></tr>
-<tr class="separator:ab64116c47ac8841acfd734f7069eaa10"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a10f626326a5bace0c7b7c9e11db994f0"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00318.html#a10f626326a5bace0c7b7c9e11db994f0">MiraiCP::ThreadTask::internal::get_auto_incr_id</a> ()</td></tr>
-<tr class="separator:a10f626326a5bace0c7b7c9e11db994f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac0e1bc3b94e5ebafbad6fde1a0eb55fc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00318.html#ac0e1bc3b94e5ebafbad6fde1a0eb55fc">MiraiCP::ThreadTask::internal::push_task</a> (size_t id, functionPointerType <a class="el" href="a00035.html#a9a37a193bc61a8127790f891efc1af05">func</a>)</td></tr>
-<tr class="separator:ac0e1bc3b94e5ebafbad6fde1a0eb55fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab890e46143438cf7d678f6e4f2dcb9d0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00318.html#ab890e46143438cf7d678f6e4f2dcb9d0">MiraiCP::ThreadTask::internal::remove_task</a> (size_t id)</td></tr>
-<tr class="separator:ab890e46143438cf7d678f6e4f2dcb9d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a954499687c36452be430af25a7e94750"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00318.html#a954499687c36452be430af25a7e94750">MiraiCP::ThreadTask::internal::task_interface</a> (size_t id)</td></tr>
-<tr class="separator:a954499687c36452be430af25a7e94750"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6418acda5a5a017ac553dc273b57c612"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; IContactData &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00397.html#a6418acda5a5a017ac553dc273b57c612">MiraiCP::get_bot</a> (QQID id)</td></tr>
+<tr class="separator:a6418acda5a5a017ac553dc273b57c612"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9ded1af6d3b5b7e3b556d52484d56b8"><td class="memItemLeft" align="right" valign="top">std::vector&lt; QQID &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00397.html#af9ded1af6d3b5b7e3b556d52484d56b8">MiraiCP::queryList</a> (<a class="el" href="a00392.html#ab701e3ac61a85b337ec5c1abaad6742d">nlohmann::json</a> bot, KtOperation::QueryBotListCode type)</td></tr>
+<tr class="separator:af9ded1af6d3b5b7e3b556d52484d56b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -158,8 +137,8 @@ $(document).ready(function(){initNavTree('a00293.html',''); initResizable(); });
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_fef842b25f8adae1261920890dd101a4.html">sdk</a></li><li class="navelem"><a class="el" href="a00293.html">ThreadTask.cpp</a></li>
-    <li class="footer">生成于 2023年 一月 27日 星期五 00:14:11 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_fef842b25f8adae1261920890dd101a4.html">sdk</a></li><li class="navelem"><a class="el" href="a00293.html">Bot.cpp</a></li>
+    <li class="footer">生成于 2023年 四月 10日 星期一 00:26:32 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
     </body>

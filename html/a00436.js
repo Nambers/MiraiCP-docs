@@ -1,17 +1,15 @@
 var a00436 =
 [
-    [ "ContactType", "a00436.html#aa38779bbd1171da9518bb83264082068", [
-      [ "TypeFriend", "a00436.html#aa38779bbd1171da9518bb83264082068af62e36a099b924bed288d7ccd38ab024", null ],
-      [ "TypeGroup", "a00436.html#aa38779bbd1171da9518bb83264082068ad2ba0a69a1a41bd53332f02d149cfa80", null ],
-      [ "TypeMember", "a00436.html#aa38779bbd1171da9518bb83264082068a81fab02eb3c47d18cc9d371671e3f045", null ],
-      [ "TypeBot", "a00436.html#aa38779bbd1171da9518bb83264082068ab85ffd5dd440bc06611225b581948e55", null ],
-      [ "TypeStranger", "a00436.html#aa38779bbd1171da9518bb83264082068ab616dd158256ecadbaf1010842ee1aa7", null ],
-      [ "TypeAnonymousMember", "a00436.html#aa38779bbd1171da9518bb83264082068a2078e4769d279fa053d62f95e8a801d4", null ]
-    ] ],
-    [ "BuiltInContact", "a00436.html#a839c5a7e59d5efb34a53407844073b93", null ],
-    [ "toContactPointer", "a00436.html#a93657060055478e2132cf310015efbf8", null ],
-    [ "botId", "a00436.html#a0541df919137723469aba374ec295d3d", null ],
-    [ "groupId", "a00436.html#a7fe2fd4cc1730f7cf954daaef6c28d07", null ],
-    [ "id", "a00436.html#aac8590c3fac3b2b02d3538bbd0919f82", null ],
-    [ "type", "a00436.html#a0e15bf22071b50b12dc828d867ede022", null ]
+    [ "Bot", "a00436.html#a779666a5cea6df0dca4247a3943ede91", null ],
+    [ "avatarUrl", "a00436.html#a6b0ebecc9de3fdf10852b341c88561c0", null ],
+    [ "FriendListToString", "a00436.html#a6803e521b4209f73e70d3a20b1e20195", null ],
+    [ "getFriend", "a00436.html#a2758676cf03748603d57ef31fc5cbec0", null ],
+    [ "getFriendList", "a00436.html#ae3c41bbf773ad22ee9a0b29f4ed769ea", null ],
+    [ "getGroup", "a00436.html#a9306303b8bb86a920e32290b0d167d85", null ],
+    [ "getGroupList", "a00436.html#a93687b7b6b881aa74a011dc0b979cae1", null ],
+    [ "getOnlineBotsList", "a00436.html#aa3653efd4bf60ccebeb2025defe777a4", null ],
+    [ "GroupListToString", "a00436.html#ac036f287d56751ca5e33bd4d0292e306", null ],
+    [ "nick", "a00436.html#a14f2c875a64bf63c487be2f45454f517", null ],
+    [ "OnlineBotsListToString", "a00436.html#a729a0670edf58101023d1e8de649939f", null ],
+    [ "operator==", "a00436.html#a2eccb558dd0dfe6adbd2245fd8ca5ca4", null ]
 ];

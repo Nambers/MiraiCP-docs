@@ -184,7 +184,6 @@ var menudata={children:[
 {text:"全部",url:"globals.html",children:[
 {text:"_",url:"globals.html#index__5F"},
 {text:"a",url:"globals.html#index_a"},
-{text:"b",url:"globals.html#index_b"},
 {text:"c",url:"globals.html#index_c"},
 {text:"d",url:"globals.html#index_d"},
 {text:"e",url:"globals.html#index_e"},
@@ -207,7 +206,6 @@ var menudata={children:[
 {text:"宏定义",url:"globals_defs.html",children:[
 {text:"_",url:"globals_defs.html#index__5F"},
 {text:"a",url:"globals_defs.html#index_a"},
-{text:"b",url:"globals_defs.html#index_b"},
 {text:"c",url:"globals_defs.html#index_c"},
 {text:"d",url:"globals_defs.html#index_d"},
 {text:"f",url:"globals_defs.html#index_f"},

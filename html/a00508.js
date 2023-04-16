@@ -1,14 +1,10 @@
 var a00508 =
 [
-    [ "MemberJoinRequestEvent", "a00508.html#a205de53afc65122d17f336d9f1cacf01", null ],
-    [ "accept", "a00508.html#ace031723d310c72ed25b83485f66a034", null ],
-    [ "get_event_type", "a00508.html#a91bdec8138ea1cc5416cb0eb8427b45f", null ],
-    [ "operate", "a00508.html#a734601e2d26833d8056591d8ac2457b2", null ],
-    [ "reject", "a00508.html#a855d60c9e71eda3fd438e45728a8799d", null ],
-    [ "from", "a00508.html#a313f0577b5ece4ff0955322f59b93528", null ],
-    [ "fromNick", "a00508.html#ab1b5b0fb40c552ef63c6628712abff7a", null ],
-    [ "group", "a00508.html#a10b7aaaaf0e8f31c2f9cc0ffd40232b2", null ],
-    [ "inviter", "a00508.html#a1a2aa46fd5e85786f2e3858e12ceaeea", null ],
-    [ "message", "a00508.html#af8b8a41e8a844640d4544a5f96b35ed3", null ],
-    [ "source", "a00508.html#aa1b90d95a75a1e6b79aa54a777eb8bf7", null ]
+    [ "FriendRecallEvent", "a00508.html#a4935324294a7723c3401c58fb1d09a97", null ],
+    [ "get_event_type", "a00508.html#a83537ccdbd2e454525697559827df57e", null ],
+    [ "author", "a00508.html#adb145915b7e4edcc461a7c7db2823b05", null ],
+    [ "ids", "a00508.html#a426a11bf2f5d57e80082546588abc464", null ],
+    [ "internalIds", "a00508.html#a46217bf3eabccabc4b4358d8c69e71f6", null ],
+    [ "operater", "a00508.html#a4502b63cdd39bb1574a3bfc3d18828d4", null ],
+    [ "time", "a00508.html#ab22df1619e6ad420c6166d0f3877dc74", null ]
 ];

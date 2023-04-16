@@ -1,5 +1,5 @@
 var a00792 =
 [
-    [ "idpair", "a00792.html#aa78ad4c83041058a14a3d355cc84e61e", null ],
-    [ "operator()", "a00792.html#a267cadbbab0dd18a7461cdc790776015", null ]
+    [ "PluginNotLoadedException", "a00792.html#abb1e2984d2eeb1b0630841183204c345", null ],
+    [ "exceptionType", "a00792.html#a8f9b2e4fe0f2464746909d5751fa95ae", null ]
 ];

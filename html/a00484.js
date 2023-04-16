@@ -1,8 +1,13 @@
 var a00484 =
 [
-    [ "BotJoinGroupEvent", "a00484.html#a8f7dc98e36bb978d811374c320a477d3", null ],
-    [ "get_event_type", "a00484.html#a878210850980c87c542d850fe2f17521", null ],
-    [ "group", "a00484.html#ad3643d9978133be026420f1d71594ec7", null ],
-    [ "inviter", "a00484.html#a5ae5ef04e1516b8e83ddae251cf18583", null ],
-    [ "type", "a00484.html#afecd637a84090e12fa5721074711c05d", null ]
+    [ "EventType", "a00484.html#ac1df44d7400ad221500364c7b3de6737", [
+      [ "Active", "a00484.html#ac1df44d7400ad221500364c7b3de6737a4d3d769b812b6faa6b76e1a8abaece2d", null ],
+      [ "Kick", "a00484.html#ac1df44d7400ad221500364c7b3de6737a3e07960fcc45408894cf1402257bd9fd", null ],
+      [ "Disband", "a00484.html#ac1df44d7400ad221500364c7b3de6737aeee6f05922080480c6043305c9d6b329", null ]
+    ] ],
+    [ "BotLeaveEvent", "a00484.html#adf7d87e720725c6db5fb39f0f666b9a4", null ],
+    [ "get_event_type", "a00484.html#a6181c5b90aece0c558943c71d9a037ed", null ],
+    [ "group", "a00484.html#a8d792f877c523fc85423263a3ff60242", null ],
+    [ "operater", "a00484.html#aa8e91ea7bff0f0211728c25ee5402ccc", null ],
+    [ "type", "a00484.html#ae417bdaa1e08bf29b51b97fd1f8f4d80", null ]
 ];

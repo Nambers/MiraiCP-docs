@@ -1,13 +1,9 @@
 var a00504 =
 [
-    [ "EventType", "a00504.html#ac1df44d7400ad221500364c7b3de6737", [
-      [ "Active", "a00504.html#ac1df44d7400ad221500364c7b3de6737a4d3d769b812b6faa6b76e1a8abaece2d", null ],
-      [ "Kick", "a00504.html#ac1df44d7400ad221500364c7b3de6737a3e07960fcc45408894cf1402257bd9fd", null ],
-      [ "Disband", "a00504.html#ac1df44d7400ad221500364c7b3de6737aeee6f05922080480c6043305c9d6b329", null ]
-    ] ],
-    [ "BotLeaveEvent", "a00504.html#adf7d87e720725c6db5fb39f0f666b9a4", null ],
-    [ "get_event_type", "a00504.html#a6181c5b90aece0c558943c71d9a037ed", null ],
-    [ "group", "a00504.html#a8d792f877c523fc85423263a3ff60242", null ],
-    [ "operater", "a00504.html#aa8e91ea7bff0f0211728c25ee5402ccc", null ],
-    [ "type", "a00504.html#ae417bdaa1e08bf29b51b97fd1f8f4d80", null ]
+    [ "chat", "a00504.html#afc868fb91c60975d5862d0691c80ec54", null ],
+    [ "chat", "a00504.html#a240d9d0df62738e43f8de576c6b26acf", null ],
+    [ "from", "a00504.html#ace8d5250eaff54abb3631cccf37b4b49", null ],
+    [ "from", "a00504.html#a77875102a2c9021981c942d16e15435a", null ],
+    [ "getMessageChain", "a00504.html#a40be4514c0111359a8388cb0c079ec76", null ],
+    [ "getMessageChain", "a00504.html#ab05db28ad76f89f09b38ad345f557803", null ]
 ];

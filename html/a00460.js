@@ -1,14 +1,10 @@
 var a00460 =
 [
-    [ "GroupInviteEvent", "a00460.html#aa7c23690e2b1371cddf1a729610bfdc8", null ],
-    [ "accept", "a00460.html#a3847df3907111c8443c1e1b71ee35d1d", null ],
-    [ "get_event_type", "a00460.html#aae84c8414b3d16c0b3faf6bae4ebcf94", null ],
-    [ "operation0", "a00460.html#a542b23744671466b1b1ebc591a777caa", null ],
-    [ "reject", "a00460.html#a749d773136fff280e951e66e21959a6c", null ],
-    [ "group", "a00460.html#aa206585209f1577c2986cc277d7fcce9", null ],
-    [ "groupName", "a00460.html#a578c8a027cb9f1574fba3de4b3646fc0", null ],
-    [ "inviter", "a00460.html#a808375e58728ef32e49375a1f23573f8", null ],
-    [ "inviterNick", "a00460.html#abf7cb41022c0cf81725c2925507f1d58", null ],
-    [ "requestEventId", "a00460.html#a785f78b051fc5ccfbf789d3cfab2a37c", null ],
-    [ "source", "a00460.html#affaff17057d8b347a51ba2516f529596", null ]
+    [ "CPPPlugin", "a00460.html#aeeaafebf5e61e1da8a2c5e3e07dac64b", null ],
+    [ "~CPPPlugin", "a00460.html#af7c569aa874ccbac301c805755dcda0c", null ],
+    [ "onDisable", "a00460.html#a3ecc2c479d1ca6785e7cdcb0738c1597", null ],
+    [ "onEnable", "a00460.html#ad3d1188d089ab0fc945475f988c64fa7", null ],
+    [ "ShouldNotUse", "a00460.html#a30d82964da1ce75eb9f269c676dafc33", null ],
+    [ "config", "a00460.html#a20b8d27c47456805d38d4c366da96ac0", null ],
+    [ "plugin", "a00460.html#acfd86c042e577055f5047cb515e7bdfa", null ]
 ];

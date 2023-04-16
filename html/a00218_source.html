@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiraiCP: ktInterface.h 源文件</title>
+<title>MiraiCP: libOpen.cpp 源文件</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -35,7 +35,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MiraiCP
-   &#160;<span id="projectnumber">v2.14.0</span>
+   &#160;<span id="projectnumber">v2.15.0-RC2</span>
    </div>
    <div id="projectbrief">MiraiCP api document</div>
   </td>
@@ -93,7 +93,7 @@ $(document).ready(function(){initNavTree('a00218_source.html',''); initResizable
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">ktInterface.h</div></div>
+  <div class="headertitle"><div class="title">libOpen.cpp</div></div>
 </div><!--header-->
 <div class="contents">
 <a href="a00218.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// Copyright (c) 2022 - 2022. Antares, Eritque arcus and contributors.</span></div>
@@ -112,50 +112,90 @@ $(document).ready(function(){initNavTree('a00218_source.html',''); initResizable
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">// along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</span></div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">//</span></div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#ifndef MIRAICP_PRO_KTINTERFACE_H</span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#define MIRAICP_PRO_KTINTERFACE_H</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &quot;<a class="code" href="a00221.html">libOpen.h</a>&quot;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &quot;<a class="code" href="a00242.html">LoaderMacro.h</a>&quot;</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment">// EXPORT functions</span></div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="a00218.html#a3d68440994d4ab2136706628a2e6f77f">   25</a></span><a class="code hl_define" href="a00242.html#acad5926f07c36447dfe9c95bc44c6569">LOADER_EXPORT</a> <a class="code hl_define" href="a00242.html#aa59fc32caa9a0e627c60a03a7a446c98">JRETURNTYPE</a> <a class="code hl_define" href="a00242.html#a70f859fa14d7c0bb2a19e4af118ee014">DECL_EXPORT_NAME</a>(<a class="code hl_function" href="a00218.html#a3d68440994d4ab2136706628a2e6f77f">Verify</a>)(<a class="code hl_define" href="a00242.html#a959f3b2a150b26823662a8c5de4af002">J_ARGS_AND_STRING</a>, <a class="code hl_define" href="a00242.html#aae63af684167e1a19dc5e3332dbc7238">JSTRING</a>);</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="a00218.html#a73d4a4e502a17765df566b528d6a9484">   27</a></span><a class="code hl_define" href="a00242.html#acad5926f07c36447dfe9c95bc44c6569">LOADER_EXPORT</a> <a class="code hl_define" href="a00242.html#aa59fc32caa9a0e627c60a03a7a446c98">JRETURNTYPE</a> <a class="code hl_define" href="a00242.html#a70f859fa14d7c0bb2a19e4af118ee014">DECL_EXPORT_NAME</a>(<a class="code hl_function" href="a00218.html#a73d4a4e502a17765df566b528d6a9484">Event</a>)(<a class="code hl_define" href="a00242.html#a959f3b2a150b26823662a8c5de4af002">J_ARGS_AND_STRING</a>);</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="a00218.html#a3b230352980d44ad05ac47ceae3f007c">   29</a></span><a class="code hl_define" href="a00242.html#acad5926f07c36447dfe9c95bc44c6569">LOADER_EXPORT</a> <a class="code hl_define" href="a00242.html#aa59fc32caa9a0e627c60a03a7a446c98">JRETURNTYPE</a> <a class="code hl_define" href="a00242.html#a70f859fa14d7c0bb2a19e4af118ee014">DECL_EXPORT_NAME</a>(<a class="code hl_function" href="a00218.html#a3b230352980d44ad05ac47ceae3f007c">PluginDisable</a>)(<a class="code hl_define" href="a00242.html#a919c2f594760ce688ff10318059a02b6">J_ARGS</a>);</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#ifndef LOADER_NATIVE</span></div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="keywordtype">int</span> <a class="code hl_function" href="a00218.html#a0c4a7b01410b519eeff58a050bc194cb">registerMethods</a>(JNIEnv *env, <span class="keyword">const</span> <span class="keywordtype">char</span> *className, <span class="keyword">const</span> JNINativeMethod *gMethods, <span class="keywordtype">int</span> numMethods);</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#if MIRAICP_WINDOWS</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &quot;utf8.h&quot;</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &lt;cstdio&gt;</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &quot;<a class="code" href="a00191.html">WindowsMin.h</a>&quot;</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#define OPEN_LIBRARY(path) LoadLibrary(TEXT(path.c_str()))</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#define CLOSE_LIBRARY(handle) FreeLibrary((HMODULE) handle)</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#define GET_SYMBOL(handle, symbol) GetProcAddress((HINSTANCE) handle, symbol)</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#else</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;dlfcn.h&gt;</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="a00218.html#a8d9660e662b6e570295b95769dc5bf32">   29</a></span><span class="preprocessor">#define OPEN_LIBRARY(path) dlopen(path.c_str(), RTLD_LAZY)</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="a00218.html#a071a5a9d769c6e787e4101850fff1a54">   30</a></span><span class="preprocessor">#define CLOSE_LIBRARY(handle) dlclose(handle)</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="a00218.html#a59a1df0cff1ee36d72e98032ab2594ff">   31</a></span><span class="preprocessor">#define GET_SYMBOL(handle, symbol) dlsym(handle, symbol)</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="a00218.html#a54c4b6ec7b4876213ab9e9f888da04ec">   34</a></span><span class="keyword">const</span> JNINativeMethod <a class="code hl_variable" href="a00218.html#a54c4b6ec7b4876213ab9e9f888da04ec">method_table</a>[]{</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        {(<span class="keywordtype">char</span> *) <span class="stringliteral">&quot;Verify&quot;</span>, (<span class="keywordtype">char</span> *) <span class="stringliteral">&quot;(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Void;&quot;</span>, (jstring *) <a class="code hl_function" href="a00218.html#a3d68440994d4ab2136706628a2e6f77f">Verify</a>},</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        {(<span class="keywordtype">char</span> *) <span class="stringliteral">&quot;Event&quot;</span>, (<span class="keywordtype">char</span> *) <span class="stringliteral">&quot;(Ljava/lang/String;)Ljava/lang/Void;&quot;</span>, (jstring *) <a class="code hl_function" href="a00218.html#a73d4a4e502a17765df566b528d6a9484">Event</a>},</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        {(<span class="keywordtype">char</span> *) <span class="stringliteral">&quot;PluginDisable&quot;</span>, (<span class="keywordtype">char</span> *) <span class="stringliteral">&quot;()Ljava/lang/Void;&quot;</span>, (jobject *) <a class="code hl_function" href="a00218.html#a3b230352980d44ad05ac47ceae3f007c">PluginDisable</a>}};</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="preprocessor">#endif </span><span class="comment">//MIRAICP_PRO_KTINTERFACE_H</span></div>
-<div class="ttc" id="aa00218_html_a0c4a7b01410b519eeff58a050bc194cb"><div class="ttname"><a href="a00218.html#a0c4a7b01410b519eeff58a050bc194cb">registerMethods</a></div><div class="ttdeci">int registerMethods(JNIEnv *env, const char *className, const JNINativeMethod *gMethods, int numMethods)</div><div class="ttdef"><b>Definition:</b> <a href="a00215_source.html#l00144">ktInterface.cpp:144</a></div></div>
-<div class="ttc" id="aa00218_html_a3b230352980d44ad05ac47ceae3f007c"><div class="ttname"><a href="a00218.html#a3b230352980d44ad05ac47ceae3f007c">PluginDisable</a></div><div class="ttdeci">LOADER_EXPORT JRETURNTYPE DECL_EXPORT_NAME() PluginDisable(J_ARGS)</div></div>
-<div class="ttc" id="aa00218_html_a3d68440994d4ab2136706628a2e6f77f"><div class="ttname"><a href="a00218.html#a3d68440994d4ab2136706628a2e6f77f">Verify</a></div><div class="ttdeci">LOADER_EXPORT JRETURNTYPE DECL_EXPORT_NAME() Verify(J_ARGS_AND_STRING, JSTRING)</div></div>
-<div class="ttc" id="aa00218_html_a54c4b6ec7b4876213ab9e9f888da04ec"><div class="ttname"><a href="a00218.html#a54c4b6ec7b4876213ab9e9f888da04ec">method_table</a></div><div class="ttdeci">const JNINativeMethod method_table[]</div><div class="ttdef"><b>Definition:</b> <a href="a00218_source.html#l00034">ktInterface.h:34</a></div></div>
-<div class="ttc" id="aa00218_html_a73d4a4e502a17765df566b528d6a9484"><div class="ttname"><a href="a00218.html#a73d4a4e502a17765df566b528d6a9484">Event</a></div><div class="ttdeci">LOADER_EXPORT JRETURNTYPE DECL_EXPORT_NAME() Event(J_ARGS_AND_STRING)</div></div>
-<div class="ttc" id="aa00242_html"><div class="ttname"><a href="a00242.html">LoaderMacro.h</a></div></div>
-<div class="ttc" id="aa00242_html_a70f859fa14d7c0bb2a19e4af118ee014"><div class="ttname"><a href="a00242.html#a70f859fa14d7c0bb2a19e4af118ee014">DECL_EXPORT_NAME</a></div><div class="ttdeci">#define DECL_EXPORT_NAME(x)</div><div class="ttdef"><b>Definition:</b> <a href="a00242_source.html#l00030">LoaderMacro.h:30</a></div></div>
-<div class="ttc" id="aa00242_html_a919c2f594760ce688ff10318059a02b6"><div class="ttname"><a href="a00242.html#a919c2f594760ce688ff10318059a02b6">J_ARGS</a></div><div class="ttdeci">#define J_ARGS</div><div class="ttdef"><b>Definition:</b> <a href="a00242_source.html#l00031">LoaderMacro.h:31</a></div></div>
-<div class="ttc" id="aa00242_html_a959f3b2a150b26823662a8c5de4af002"><div class="ttname"><a href="a00242.html#a959f3b2a150b26823662a8c5de4af002">J_ARGS_AND_STRING</a></div><div class="ttdeci">#define J_ARGS_AND_STRING</div><div class="ttdef"><b>Definition:</b> <a href="a00242_source.html#l00032">LoaderMacro.h:32</a></div></div>
-<div class="ttc" id="aa00242_html_aa59fc32caa9a0e627c60a03a7a446c98"><div class="ttname"><a href="a00242.html#aa59fc32caa9a0e627c60a03a7a446c98">JRETURNTYPE</a></div><div class="ttdeci">#define JRETURNTYPE</div><div class="ttdef"><b>Definition:</b> <a href="a00242_source.html#l00024">LoaderMacro.h:24</a></div></div>
-<div class="ttc" id="aa00242_html_aae63af684167e1a19dc5e3332dbc7238"><div class="ttname"><a href="a00242.html#aae63af684167e1a19dc5e3332dbc7238">JSTRING</a></div><div class="ttdeci">#define JSTRING</div><div class="ttdef"><b>Definition:</b> <a href="a00242_source.html#l00026">LoaderMacro.h:26</a></div></div>
-<div class="ttc" id="aa00242_html_acad5926f07c36447dfe9c95bc44c6569"><div class="ttname"><a href="a00242.html#acad5926f07c36447dfe9c95bc44c6569">LOADER_EXPORT</a></div><div class="ttdeci">#define LOADER_EXPORT</div><div class="ttdef"><b>Definition:</b> <a href="a00242_source.html#l00029">LoaderMacro.h:29</a></div></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="keyword">namespace </span><a class="code hl_namespace" href="a00408.html">LibLoader::LoaderApi</a> {</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="a00408.html#a7765f4c313a98cf08466f0a6ed291aac">   35</a></span>    <a class="code hl_typedef" href="a00407.html#a927f212ce2db84cca1f02ec95aa62322">plugin_handle</a> <a class="code hl_function" href="a00408.html#a7765f4c313a98cf08466f0a6ed291aac">libOpen</a>(<span class="keyword">const</span> std::string &amp;path) {</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        <span class="keywordflow">return</span> <a class="code hl_define" href="a00218.html#a8d9660e662b6e570295b95769dc5bf32">OPEN_LIBRARY</a>(path);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    }</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="a00408.html#a96701ab7dcebb86755310b5c9c434842">   39</a></span>    <a class="code hl_typedef" href="a00407.html#afc631e11894f5d4eedc3e3ea550795fd">plugin_func_ptr</a> <a class="code hl_function" href="a00408.html#a96701ab7dcebb86755310b5c9c434842">libSymbolLookup</a>(<span class="keywordtype">void</span> *handle, <span class="keyword">const</span> <span class="keywordtype">char</span> *symbol) {</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <span class="keywordflow">return</span> (<a class="code hl_typedef" href="a00407.html#afc631e11894f5d4eedc3e3ea550795fd">plugin_func_ptr</a>) <a class="code hl_define" href="a00218.html#a59a1df0cff1ee36d72e98032ab2594ff">GET_SYMBOL</a>(handle, symbol);</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    }</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="a00408.html#a830b51c74068e1461e1baf677dd10ac2">   43</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="a00408.html#a830b51c74068e1461e1baf677dd10ac2">libClose</a>(<span class="keywordtype">void</span> *handle) {</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        <span class="keywordflow">return</span> <a class="code hl_define" href="a00218.html#a071a5a9d769c6e787e4101850fff1a54">CLOSE_LIBRARY</a>(handle);</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    }</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="a00408.html#a56d03468b20e6187b1af71750a9f815d">   47</a></span>    std::string <a class="code hl_function" href="a00408.html#a56d03468b20e6187b1af71750a9f815d">libError</a>() {</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="preprocessor">#if MIRAICP_WINDOWS</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        <span class="comment">// https://stackoverflow.com/questions/1387064/how-to-get-the-error-message-from-the-error-code-returned-by-getlasterror</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <span class="comment">//Returns the last Win32 error, in string format. Returns an empty string if there is no error.</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        <span class="comment">//Get the error message ID, if any.</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        DWORD errorMessageID = ::GetLastError();</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        <span class="keywordflow">if</span> (errorMessageID == 0) {</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>            <span class="keywordflow">return</span> {}; <span class="comment">//No error message has been recorded</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        }</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        LPWSTR messageBuffer = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        <span class="comment">//Ask Win32 to give us the string version of that message ID.</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        <span class="comment">//The parameters we pass in, tell Win32 to create the buffer that holds the message for us (because we don&#39;t yet know how long the message string will be).</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        <span class="keywordtype">size_t</span> size = FormatMessageW(FORMAT_MESSAGE_ALLOCATE_BUFFER | FORMAT_MESSAGE_FROM_SYSTEM | FORMAT_MESSAGE_IGNORE_INSERTS,</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>                                     <span class="keyword">nullptr</span>, errorMessageID, MAKELANGID(LANG_NEUTRAL, SUBLANG_DEFAULT), (LPWSTR) &amp;messageBuffer, 0, <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        <span class="comment">//Copy the error message into a std::string.</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        std::wstring message(messageBuffer, size);</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        <span class="comment">//Free the Win32&#39;s string&#39;s buffer.</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        LocalFree(messageBuffer);</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        <span class="comment">// Translate to utf8 encoded std::string</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        std::string ans;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        utf8::utf16to8(message.begin(), message.end(), std::back_inserter(ans));</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        <span class="keywordflow">return</span> ans;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="preprocessor">#else</span></div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        <span class="keywordflow">return</span> dlerror();</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    }</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>} <span class="comment">// namespace LibLoader::LoaderApi</span></div>
+<div class="ttc" id="aa00191_html"><div class="ttname"><a href="a00191.html">WindowsMin.h</a></div></div>
+<div class="ttc" id="aa00218_html_a071a5a9d769c6e787e4101850fff1a54"><div class="ttname"><a href="a00218.html#a071a5a9d769c6e787e4101850fff1a54">CLOSE_LIBRARY</a></div><div class="ttdeci">#define CLOSE_LIBRARY(handle)</div><div class="ttdef"><b>Definition:</b> <a href="a00218_source.html#l00030">libOpen.cpp:30</a></div></div>
+<div class="ttc" id="aa00218_html_a59a1df0cff1ee36d72e98032ab2594ff"><div class="ttname"><a href="a00218.html#a59a1df0cff1ee36d72e98032ab2594ff">GET_SYMBOL</a></div><div class="ttdeci">#define GET_SYMBOL(handle, symbol)</div><div class="ttdef"><b>Definition:</b> <a href="a00218_source.html#l00031">libOpen.cpp:31</a></div></div>
+<div class="ttc" id="aa00218_html_a8d9660e662b6e570295b95769dc5bf32"><div class="ttname"><a href="a00218.html#a8d9660e662b6e570295b95769dc5bf32">OPEN_LIBRARY</a></div><div class="ttdeci">#define OPEN_LIBRARY(path)</div><div class="ttdef"><b>Definition:</b> <a href="a00218_source.html#l00029">libOpen.cpp:29</a></div></div>
+<div class="ttc" id="aa00221_html"><div class="ttname"><a href="a00221.html">libOpen.h</a></div></div>
+<div class="ttc" id="aa00407_html_a927f212ce2db84cca1f02ec95aa62322"><div class="ttname"><a href="a00407.html#a927f212ce2db84cca1f02ec95aa62322">LibLoader::plugin_handle</a></div><div class="ttdeci">void * plugin_handle</div><div class="ttdef"><b>Definition:</b> <a href="a00173_source.html#l00029">commonTypes.h:29</a></div></div>
+<div class="ttc" id="aa00407_html_afc631e11894f5d4eedc3e3ea550795fd"><div class="ttname"><a href="a00407.html#afc631e11894f5d4eedc3e3ea550795fd">LibLoader::plugin_func_ptr</a></div><div class="ttdeci">int(* plugin_func_ptr)()</div><div class="ttdef"><b>Definition:</b> <a href="a00173_source.html#l00035">commonTypes.h:35</a></div></div>
+<div class="ttc" id="aa00408_html"><div class="ttname"><a href="a00408.html">LibLoader::LoaderApi</a></div><div class="ttdef"><b>Definition:</b> <a href="a00176_source.html#l00035">loaderApiInternal.h:35</a></div></div>
+<div class="ttc" id="aa00408_html_a56d03468b20e6187b1af71750a9f815d"><div class="ttname"><a href="a00408.html#a56d03468b20e6187b1af71750a9f815d">LibLoader::LoaderApi::libError</a></div><div class="ttdeci">std::string libError()</div><div class="ttdef"><b>Definition:</b> <a href="a00218_source.html#l00047">libOpen.cpp:47</a></div></div>
+<div class="ttc" id="aa00408_html_a7765f4c313a98cf08466f0a6ed291aac"><div class="ttname"><a href="a00408.html#a7765f4c313a98cf08466f0a6ed291aac">LibLoader::LoaderApi::libOpen</a></div><div class="ttdeci">plugin_handle libOpen(const std::string &amp;path)</div><div class="ttdef"><b>Definition:</b> <a href="a00218_source.html#l00035">libOpen.cpp:35</a></div></div>
+<div class="ttc" id="aa00408_html_a830b51c74068e1461e1baf677dd10ac2"><div class="ttname"><a href="a00408.html#a830b51c74068e1461e1baf677dd10ac2">LibLoader::LoaderApi::libClose</a></div><div class="ttdeci">int libClose(void *handle)</div><div class="ttdef"><b>Definition:</b> <a href="a00218_source.html#l00043">libOpen.cpp:43</a></div></div>
+<div class="ttc" id="aa00408_html_a96701ab7dcebb86755310b5c9c434842"><div class="ttname"><a href="a00408.html#a96701ab7dcebb86755310b5c9c434842">LibLoader::LoaderApi::libSymbolLookup</a></div><div class="ttdeci">plugin_func_ptr libSymbolLookup(void *handle, const char *symbol)</div><div class="ttdef"><b>Definition:</b> <a href="a00218_source.html#l00039">libOpen.cpp:39</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_23c80554d3059e776f1fa3b42eea10c0.html">libloader</a></li><li class="navelem"><a class="el" href="a00218.html">ktInterface.h</a></li>
-    <li class="footer">生成于 2023年 二月 28日 星期二 12:14:05 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_23c80554d3059e776f1fa3b42eea10c0.html">libloader</a></li><li class="navelem"><a class="el" href="a00218.html">libOpen.cpp</a></li>
+    <li class="footer">生成于 2023年 四月 10日 星期一 00:26:29 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
     </body>

@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiraiCP: MiraiCP::MusicShare类 参考</title>
+<title>MiraiCP: LibLoader::LoaderExceptionCRTP&lt; T &gt; 模板接口 参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -35,7 +35,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MiraiCP
-   &#160;<span id="projectnumber">v2.13.1</span>
+   &#160;<span id="projectnumber">v2.15.0-RC2</span>
    </div>
    <div id="projectbrief">MiraiCP api document</div>
   </td>
@@ -95,171 +95,113 @@ $(document).ready(function(){initNavTree('a00776.html',''); initResizable(); });
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public 成员函数</a> &#124;
-<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
-<a href="#pub-attribs">Public 属性</a> &#124;
 <a href="a00773.html">所有成员列表</a>  </div>
-  <div class="headertitle"><div class="title">MiraiCP::MusicShare类 参考</div></div>
+  <div class="headertitle"><div class="title">LibLoader::LoaderExceptionCRTP&lt; T &gt; 模板接口 参考</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>一些可以被mirai识别的音乐卡片, 如果不能被mirai识别, 那应该被表现成lightApp类型(可能收费/vip歌曲用lightApp, 免费用MusicShare)  
+<p>总异常CRTP抽象类，不要直接抛出该类，不知道抛出什么的时候请抛出 LoaderException。 该类是用于继承的基类，需要新的异常类型时，继承该类并以子类作为模板参数。 子类需要实现的方法：  
  <a href="a00776.html#details">更多...</a></p>
 
-<p><code>#include &lt;<a class="el" href="a00170_source.html">SingleMessage.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="a00230_source.html">LoaderExceptions.h</a>&gt;</code></p>
 <div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> 类 MiraiCP::MusicShare 继承关系图:</div>
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> 类 LibLoader::LoaderExceptionCRTP&lt; T &gt; 继承关系图:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="a00775.svg" width="230" height="970"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00775.svg" width="2094" height="1078"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> MiraiCP::MusicShare 的协作图:</div>
+  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> LibLoader::LoaderExceptionCRTP&lt; T &gt; 的协作图:</div>
 <div id="dynsection-1-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="a00774.svg" width="555" height="824"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00774.svg" width="330" height="634"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public 成员函数</h2></td></tr>
-<tr class="memitem:a1bffdbd7cd143a903f22fb376b79c855"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00776.html#a1bffdbd7cd143a903f22fb376b79c855">toMiraiCode</a> () const override</td></tr>
-<tr class="memdesc:a1bffdbd7cd143a903f22fb376b79c855"><td class="mdescLeft">&#160;</td><td class="mdescRight">返回MiraiCode  <a href="a00776.html#a1bffdbd7cd143a903f22fb376b79c855">更多...</a><br /></td></tr>
-<tr class="separator:a1bffdbd7cd143a903f22fb376b79c855"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adebd57e07a89d64fa3e42e067d3b6d77"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00776.html#adebd57e07a89d64fa3e42e067d3b6d77">MusicShare</a> (std::string <a class="el" href="a00776.html#a87a20d867c8dadbe4a8f55ef2b6d0d4d">appName</a>, std::string <a class="el" href="a00776.html#aa4f1eb91480d538d2aead5904f1cc4b9">title</a>, std::string <a class="el" href="a00776.html#a2da932b20adbdc6f9fa58bda8c0623ac">summary</a>, std::string <a class="el" href="a00776.html#aa4239e8aadb82d6c79bc8986f55e68b6">jumpUrl</a>, std::string <a class="el" href="a00776.html#a0615bbf6886985e1438ab1493cdc012a">picUrl</a>, std::string <a class="el" href="a00776.html#a98dc3816bcdd57e551a55ff88b2ea4fa">musicUrl</a>, std::string <a class="el" href="a00776.html#ab3e91b8220d2e80dbb84ff17b83ce3f8">brief</a>)</td></tr>
-<tr class="separator:adebd57e07a89d64fa3e42e067d3b6d77"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_methods_a00720"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_a00720')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="a00720.html">MiraiCP::SingleMessage</a></td></tr>
-<tr class="memitem:aed26a8868000100e8bd51e3e76557909 inherit pub_methods_a00720"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00720.html#aed26a8868000100e8bd51e3e76557909">SingleMessage</a> (int inType, std::string <a class="el" href="a00720.html#a7ebcc9775985874bb7a09bd1d8274a24">content</a>, std::string <a class="el" href="a00720.html#a207f61ebfd79e0ae18833f2edf954595">prefix</a>=&quot;:&quot;) noexcept</td></tr>
-<tr class="memdesc:aed26a8868000100e8bd51e3e76557909 inherit pub_methods_a00720"><td class="mdescLeft">&#160;</td><td class="mdescRight">构建单条  <a href="a00720.html#aed26a8868000100e8bd51e3e76557909">更多...</a><br /></td></tr>
-<tr class="separator:aed26a8868000100e8bd51e3e76557909 inherit pub_methods_a00720"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7adb6b788b9c549ae5802224a25ae4a5 inherit pub_methods_a00720"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00720.html#a7adb6b788b9c549ae5802224a25ae4a5">~SingleMessage</a> () noexcept=default</td></tr>
-<tr class="separator:a7adb6b788b9c549ae5802224a25ae4a5 inherit pub_methods_a00720"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a70c16e9bd925a9031989537f9efd96af inherit pub_methods_a00720"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="a00296.html#ab701e3ac61a85b337ec5c1abaad6742d">nlohmann::json</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00720.html#a70c16e9bd925a9031989537f9efd96af">toJson</a> () const</td></tr>
-<tr class="separator:a70c16e9bd925a9031989537f9efd96af inherit pub_methods_a00720"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9d501cb4ed4cf97c4eb43246c35224b0 inherit pub_methods_a00720"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00720.html#a9d501cb4ed4cf97c4eb43246c35224b0">operator==</a> (const <a class="el" href="a00720.html">SingleMessage</a> &amp;m) const</td></tr>
-<tr class="separator:a9d501cb4ed4cf97c4eb43246c35224b0 inherit pub_methods_a00720"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa2836bc9c5110cbada54ecbb65341b8f inherit pub_methods_a00720"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00720.html#aa2836bc9c5110cbada54ecbb65341b8f">operator==</a> (<a class="el" href="a00720.html">SingleMessage</a> *m) const</td></tr>
-<tr class="separator:aa2836bc9c5110cbada54ecbb65341b8f inherit pub_methods_a00720"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_methods_a00704"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_a00704')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="a00704.html">MiraiCP::MiraiCodeable</a></td></tr>
-<tr class="memitem:a23623d8bc79505796ccaa8e2d137fd5e inherit pub_methods_a00704"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00704.html#a23623d8bc79505796ccaa8e2d137fd5e">~MiraiCodeable</a> ()=default</td></tr>
-<tr class="separator:a23623d8bc79505796ccaa8e2d137fd5e inherit pub_methods_a00704"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
-静态 Public 成员函数</h2></td></tr>
-<tr class="memitem:a0d066ebbca63439a3eea2e564e31403a"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00776.html#a0d066ebbca63439a3eea2e564e31403a">type</a> ()</td></tr>
-<tr class="separator:a0d066ebbca63439a3eea2e564e31403a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_static_methods_a00720"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_a00720')"><img src="closed.png" alt="-"/>&#160;静态 Public 成员函数 继承自 <a class="el" href="a00720.html">MiraiCP::SingleMessage</a></td></tr>
-<tr class="memitem:aeb04373bc8b0d8e8710597c35c89f21d inherit pub_static_methods_a00720"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00720.html#aeb04373bc8b0d8e8710597c35c89f21d">getTypeString</a> (int type)</td></tr>
-<tr class="separator:aeb04373bc8b0d8e8710597c35c89f21d inherit pub_static_methods_a00720"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7412c91a4b45c7f1d77cf904af64b6d7 inherit pub_static_methods_a00720"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00720.html#a7412c91a4b45c7f1d77cf904af64b6d7">getKey</a> (const std::string &amp;value)</td></tr>
-<tr class="memdesc:a7412c91a4b45c7f1d77cf904af64b6d7 inherit pub_static_methods_a00720"><td class="mdescLeft">&#160;</td><td class="mdescRight">找对应类型的index key  <a href="a00720.html#a7412c91a4b45c7f1d77cf904af64b6d7">更多...</a><br /></td></tr>
-<tr class="separator:a7412c91a4b45c7f1d77cf904af64b6d7 inherit pub_static_methods_a00720"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac77c5fffe428cdaedb84ee2d6383ecea inherit pub_static_methods_a00720"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00720.html#ac77c5fffe428cdaedb84ee2d6383ecea">getMiraiCodeKey</a> (const std::string &amp;value)</td></tr>
-<tr class="separator:ac77c5fffe428cdaedb84ee2d6383ecea inherit pub_static_methods_a00720"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
-Public 属性</h2></td></tr>
-<tr class="memitem:a87a20d867c8dadbe4a8f55ef2b6d0d4d"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00776.html#a87a20d867c8dadbe4a8f55ef2b6d0d4d">appName</a></td></tr>
-<tr class="memdesc:a87a20d867c8dadbe4a8f55ef2b6d0d4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">应用名称, 如NeteaseCloudMusic  <a href="a00776.html#a87a20d867c8dadbe4a8f55ef2b6d0d4d">更多...</a><br /></td></tr>
-<tr class="separator:a87a20d867c8dadbe4a8f55ef2b6d0d4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa4f1eb91480d538d2aead5904f1cc4b9"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00776.html#aa4f1eb91480d538d2aead5904f1cc4b9">title</a></td></tr>
-<tr class="memdesc:aa4f1eb91480d538d2aead5904f1cc4b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">歌名  <a href="a00776.html#aa4f1eb91480d538d2aead5904f1cc4b9">更多...</a><br /></td></tr>
-<tr class="separator:aa4f1eb91480d538d2aead5904f1cc4b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2da932b20adbdc6f9fa58bda8c0623ac"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00776.html#a2da932b20adbdc6f9fa58bda8c0623ac">summary</a></td></tr>
-<tr class="memdesc:a2da932b20adbdc6f9fa58bda8c0623ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">卡片第二行的文字内容  <a href="a00776.html#a2da932b20adbdc6f9fa58bda8c0623ac">更多...</a><br /></td></tr>
-<tr class="separator:a2da932b20adbdc6f9fa58bda8c0623ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa4239e8aadb82d6c79bc8986f55e68b6"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00776.html#aa4239e8aadb82d6c79bc8986f55e68b6">jumpUrl</a></td></tr>
-<tr class="memdesc:aa4239e8aadb82d6c79bc8986f55e68b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">点击跳转到的链接  <a href="a00776.html#aa4239e8aadb82d6c79bc8986f55e68b6">更多...</a><br /></td></tr>
-<tr class="separator:aa4239e8aadb82d6c79bc8986f55e68b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0615bbf6886985e1438ab1493cdc012a"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00776.html#a0615bbf6886985e1438ab1493cdc012a">picUrl</a></td></tr>
-<tr class="memdesc:a0615bbf6886985e1438ab1493cdc012a"><td class="mdescLeft">&#160;</td><td class="mdescRight">图片链接  <a href="a00776.html#a0615bbf6886985e1438ab1493cdc012a">更多...</a><br /></td></tr>
-<tr class="separator:a0615bbf6886985e1438ab1493cdc012a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a98dc3816bcdd57e551a55ff88b2ea4fa"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00776.html#a98dc3816bcdd57e551a55ff88b2ea4fa">musicUrl</a></td></tr>
-<tr class="memdesc:a98dc3816bcdd57e551a55ff88b2ea4fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">音乐文件链接  <a href="a00776.html#a98dc3816bcdd57e551a55ff88b2ea4fa">更多...</a><br /></td></tr>
-<tr class="separator:a98dc3816bcdd57e551a55ff88b2ea4fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab3e91b8220d2e80dbb84ff17b83ce3f8"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00776.html#ab3e91b8220d2e80dbb84ff17b83ce3f8">brief</a></td></tr>
-<tr class="memdesc:ab3e91b8220d2e80dbb84ff17b83ce3f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">简介, 点进聊天节目前显示的小文字, 一般是<code>分享</code>  <a href="a00776.html#ab3e91b8220d2e80dbb84ff17b83ce3f8">更多...</a><br /></td></tr>
-<tr class="separator:ab3e91b8220d2e80dbb84ff17b83ce3f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_attribs_a00720"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_a00720')"><img src="closed.png" alt="-"/>&#160;Public 属性 继承自 <a class="el" href="a00720.html">MiraiCP::SingleMessage</a></td></tr>
-<tr class="memitem:a7ebcc9775985874bb7a09bd1d8274a24 inherit pub_attribs_a00720"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00720.html#a7ebcc9775985874bb7a09bd1d8274a24">content</a></td></tr>
-<tr class="separator:a7ebcc9775985874bb7a09bd1d8274a24 inherit pub_attribs_a00720"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a207f61ebfd79e0ae18833f2edf954595 inherit pub_attribs_a00720"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00720.html#a207f61ebfd79e0ae18833f2edf954595">prefix</a></td></tr>
-<tr class="separator:a207f61ebfd79e0ae18833f2edf954595 inherit pub_attribs_a00720"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a324dc329305747b20a6b42dd22480c46 inherit pub_attribs_a00720"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00720.html#a324dc329305747b20a6b42dd22480c46">internalType</a> = SingleMessageType::UnsupportedMessage_t</td></tr>
-<tr class="separator:a324dc329305747b20a6b42dd22480c46 inherit pub_attribs_a00720"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a569816ed3d22d644f7935ec745d03bd8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00776.html#a569816ed3d22d644f7935ec745d03bd8">LoaderExceptionCRTP</a> (std::string _re, <a class="el" href="a00772.html#a426a5f32b7a2a56205d68c118579c216">string</a> _filename, int _lineNum)</td></tr>
+<tr class="memdesc:a569816ed3d22d644f7935ec745d03bd8"><td class="mdescLeft">&#160;</td><td class="mdescRight">委托构造函数  <a href="a00776.html#a569816ed3d22d644f7935ec745d03bd8">更多...</a><br /></td></tr>
+<tr class="separator:a569816ed3d22d644f7935ec745d03bd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2922c4bc8a26626dad74f11ec9bf6df0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00772.html#a426a5f32b7a2a56205d68c118579c216">string</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00776.html#a2922c4bc8a26626dad74f11ec9bf6df0">getExceptionType</a> () const override</td></tr>
+<tr class="memdesc:a2922c4bc8a26626dad74f11ec9bf6df0"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取异常类型，通用接口  <a href="a00776.html#a2922c4bc8a26626dad74f11ec9bf6df0">更多...</a><br /></td></tr>
+<tr class="separator:a2922c4bc8a26626dad74f11ec9bf6df0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_a00772"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_a00772')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="a00772.html">LibLoader::LoaderBaseException</a></td></tr>
+<tr class="memitem:a5cae5e7ccb01c5851b2a06e95e81b907 inherit pub_methods_a00772"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00772.html#a5cae5e7ccb01c5851b2a06e95e81b907">~LoaderBaseException</a> () override=default</td></tr>
+<tr class="separator:a5cae5e7ccb01c5851b2a06e95e81b907 inherit pub_methods_a00772"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0928090784126f3081fb2b7e73c39b22 inherit pub_methods_a00772"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00772.html#a0928090784126f3081fb2b7e73c39b22">what</a> () const noexcept override</td></tr>
+<tr class="memdesc:a0928090784126f3081fb2b7e73c39b22 inherit pub_methods_a00772"><td class="mdescLeft">&#160;</td><td class="mdescRight">异常信息（std::exception接口）  <a href="a00772.html#a0928090784126f3081fb2b7e73c39b22">更多...</a><br /></td></tr>
+<tr class="separator:a0928090784126f3081fb2b7e73c39b22 inherit pub_methods_a00772"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa78df717d01813327f31b3cc2b8b0efb inherit pub_methods_a00772"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00772.html#aa78df717d01813327f31b3cc2b8b0efb">raise</a> () const noexcept</td></tr>
+<tr class="separator:aa78df717d01813327f31b3cc2b8b0efb inherit pub_methods_a00772"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
 额外继承的成员函数</h2></td></tr>
-<tr class="inherit_header pub_types_a00720"><td colspan="2" onclick="javascript:toggleInherit('pub_types_a00720')"><img src="closed.png" alt="-"/>&#160;Public 类型 继承自 <a class="el" href="a00720.html">MiraiCP::SingleMessage</a></td></tr>
-<tr class="memitem:a2b54a40292d297baaf370931efdc8085 inherit pub_types_a00720"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00720.html#a2b54a40292d297baaf370931efdc8085">Types</a> = SingleMessageType::Type</td></tr>
-<tr class="separator:a2b54a40292d297baaf370931efdc8085 inherit pub_types_a00720"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_static_attribs_a00720"><td colspan="2" onclick="javascript:toggleInherit('pub_static_attribs_a00720')"><img src="closed.png" alt="-"/>&#160;静态 Public 属性 继承自 <a class="el" href="a00720.html">MiraiCP::SingleMessage</a></td></tr>
-<tr class="memitem:ac8e48dc2e735821c5e4ad78d21233346 inherit pub_static_attribs_a00720"><td class="memItemLeft" align="right" valign="top">static const char *const  *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00720.html#ac8e48dc2e735821c5e4ad78d21233346">messageType</a> = <a class="el" href="a00312.html#a4e9038dcc8db18e7b70e877663fd5dc2">SingleMessageType::messageTypeInternal</a> + 6</td></tr>
-<tr class="separator:ac8e48dc2e735821c5e4ad78d21233346 inherit pub_static_attribs_a00720"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a473ac201093671e8832cebc7226ee61d inherit pub_static_attribs_a00720"><td class="memItemLeft" align="right" valign="top">static const char *const  *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00720.html#a473ac201093671e8832cebc7226ee61d">miraiCodeName</a> = SingleMessageType::miraiCodeNameInternal + 6</td></tr>
-<tr class="separator:a473ac201093671e8832cebc7226ee61d inherit pub_static_attribs_a00720"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pro_methods_a00720"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_a00720')"><img src="closed.png" alt="-"/>&#160;Protected 成员函数 继承自 <a class="el" href="a00720.html">MiraiCP::SingleMessage</a></td></tr>
-<tr class="memitem:afd9fc5e5ce28680eaf331144903f025b inherit pro_methods_a00720"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00720.html#afd9fc5e5ce28680eaf331144903f025b">SingleMessage</a> ()=default</td></tr>
-<tr class="memdesc:afd9fc5e5ce28680eaf331144903f025b inherit pro_methods_a00720"><td class="mdescLeft">&#160;</td><td class="mdescRight">仅限于让子类允许默认构造，以保证子类可以通过动态判断类型构造  <a href="a00720.html#afd9fc5e5ce28680eaf331144903f025b">更多...</a><br /></td></tr>
-<tr class="separator:afd9fc5e5ce28680eaf331144903f025b inherit pro_methods_a00720"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_static_methods_a00772"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_a00772')"><img src="closed.png" alt="-"/>&#160;静态 Public 成员函数 继承自 <a class="el" href="a00772.html">LibLoader::LoaderBaseException</a></td></tr>
+<tr class="memitem:a256993d5a0b22f6057ddd19a50bdc872 inherit pub_static_methods_a00772"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="a00772.html#a426a5f32b7a2a56205d68c118579c216">string</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00772.html#a256993d5a0b22f6057ddd19a50bdc872">exceptionType</a> ()</td></tr>
+<tr class="memdesc:a256993d5a0b22f6057ddd19a50bdc872 inherit pub_static_methods_a00772"><td class="mdescLeft">&#160;</td><td class="mdescRight">返回异常的类型，该静态方法无法正确实现多态，请使用 getExceptionType  <a href="a00772.html#a256993d5a0b22f6057ddd19a50bdc872">更多...</a><br /></td></tr>
+<tr class="separator:a256993d5a0b22f6057ddd19a50bdc872 inherit pub_static_methods_a00772"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_attribs_a00772"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_a00772')"><img src="closed.png" alt="-"/>&#160;Public 属性 继承自 <a class="el" href="a00772.html">LibLoader::LoaderBaseException</a></td></tr>
+<tr class="memitem:acfb18c7eb10c0dc2205c98e73ad0e647 inherit pub_attribs_a00772"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00772.html#a426a5f32b7a2a56205d68c118579c216">string</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00772.html#acfb18c7eb10c0dc2205c98e73ad0e647">filename</a></td></tr>
+<tr class="memdesc:acfb18c7eb10c0dc2205c98e73ad0e647 inherit pub_attribs_a00772"><td class="mdescLeft">&#160;</td><td class="mdescRight">发生异常的文件名  <a href="a00772.html#acfb18c7eb10c0dc2205c98e73ad0e647">更多...</a><br /></td></tr>
+<tr class="separator:acfb18c7eb10c0dc2205c98e73ad0e647 inherit pub_attribs_a00772"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a260f9ce0d0fc07df498b22eec899eb68 inherit pub_attribs_a00772"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00772.html#a260f9ce0d0fc07df498b22eec899eb68">lineNum</a> = 0</td></tr>
+<tr class="memdesc:a260f9ce0d0fc07df498b22eec899eb68 inherit pub_attribs_a00772"><td class="mdescLeft">&#160;</td><td class="mdescRight">发生异常的行号  <a href="a00772.html#a260f9ce0d0fc07df498b22eec899eb68">更多...</a><br /></td></tr>
+<tr class="separator:a260f9ce0d0fc07df498b22eec899eb68 inherit pub_attribs_a00772"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_types_a00772"><td colspan="2" onclick="javascript:toggleInherit('pro_types_a00772')"><img src="closed.png" alt="-"/>&#160;Protected 类型 继承自 <a class="el" href="a00772.html">LibLoader::LoaderBaseException</a></td></tr>
+<tr class="memitem:a426a5f32b7a2a56205d68c118579c216 inherit pro_types_a00772"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00772.html#a426a5f32b7a2a56205d68c118579c216">string</a> = std::string</td></tr>
+<tr class="separator:a426a5f32b7a2a56205d68c118579c216 inherit pro_types_a00772"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_methods_a00772"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_a00772')"><img src="closed.png" alt="-"/>&#160;Protected 成员函数 继承自 <a class="el" href="a00772.html">LibLoader::LoaderBaseException</a></td></tr>
+<tr class="memitem:a60617c64dab00d3d3c64d012ba6dda9f inherit pro_methods_a00772"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00772.html#a60617c64dab00d3d3c64d012ba6dda9f">LoaderBaseException</a> (<a class="el" href="a00772.html#a426a5f32b7a2a56205d68c118579c216">string</a> info, <a class="el" href="a00772.html#a426a5f32b7a2a56205d68c118579c216">string</a> _filename, int _lineNum)</td></tr>
+<tr class="memdesc:a60617c64dab00d3d3c64d012ba6dda9f inherit pro_methods_a00772"><td class="mdescLeft">&#160;</td><td class="mdescRight">受保护构造函数，供子类调用  <a href="a00772.html#a60617c64dab00d3d3c64d012ba6dda9f">更多...</a><br /></td></tr>
+<tr class="separator:a60617c64dab00d3d3c64d012ba6dda9f inherit pro_methods_a00772"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aefe83b46523df9d571e0f25b9283f793 inherit pro_methods_a00772"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00772.html#aefe83b46523df9d571e0f25b9283f793">warningRaise</a> () const noexcept</td></tr>
+<tr class="separator:aefe83b46523df9d571e0f25b9283f793 inherit pro_methods_a00772"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_a00772"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_a00772')"><img src="closed.png" alt="-"/>&#160;Protected 属性 继承自 <a class="el" href="a00772.html">LibLoader::LoaderBaseException</a></td></tr>
+<tr class="memitem:a4e41edc9cdc52ef5ed27b5f65938a928 inherit pro_attribs_a00772"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00772.html#a426a5f32b7a2a56205d68c118579c216">string</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00772.html#a4e41edc9cdc52ef5ed27b5f65938a928">errorMessage</a></td></tr>
+<tr class="memdesc:a4e41edc9cdc52ef5ed27b5f65938a928 inherit pro_attribs_a00772"><td class="mdescLeft">&#160;</td><td class="mdescRight">异常内容  <a href="a00772.html#a4e41edc9cdc52ef5ed27b5f65938a928">更多...</a><br /></td></tr>
+<tr class="separator:a4e41edc9cdc52ef5ed27b5f65938a928 inherit pro_attribs_a00772"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
-<div class="textblock"><p >一些可以被mirai识别的音乐卡片, 如果不能被mirai识别, 那应该被表现成lightApp类型(可能收费/vip歌曲用lightApp, 免费用MusicShare) </p>
+<div class="textblock"><div class="compoundTemplParams">template&lt;class T&gt;<br />
+interface LibLoader::LoaderExceptionCRTP&lt; T &gt;</div><p >总异常CRTP抽象类，不要直接抛出该类，不知道抛出什么的时候请抛出 LoaderException。 该类是用于继承的基类，需要新的异常类型时，继承该类并以子类作为模板参数。 子类需要实现的方法： </p>
+<ol type="1">
+<li>构造函数，要求必须委托 <a class="el" href="a00776.html" title="总异常CRTP抽象类，不要直接抛出该类，不知道抛出什么的时候请抛出 LoaderException。 该类是用于继承的基类，需要新的异常类型时，继承该类并以子类作为模板参数。 子类需要实现的方法：">LoaderExceptionCRTP</a> 构造。</li>
+<li><code>static std::string <a class="el" href="a00772.html#a256993d5a0b22f6057ddd19a50bdc872" title="返回异常的类型，该静态方法无法正确实现多态，请使用 getExceptionType">exceptionType()</a></code> 返回一个字符串表示异常类型。 继承该类后异常类能正确实现多态。</li>
+</ol>
+<dl class="section note"><dt>注解</dt><dd>请勿给该类增加新的属性。如果要增加属性应在 <a class="el" href="a00772.html">LoaderBaseException</a> 中增加 </dd></dl>
 
-<p class="definition">在文件 <a class="el" href="a00170_source.html">SingleMessage.h</a> 第 <a class="el" href="a00170_source.html#l00614">614</a> 行定义.</p>
+<p class="definition">在文件 <a class="el" href="a00230_source.html">LoaderExceptions.h</a> 第 <a class="el" href="a00230_source.html#l00078">78</a> 行定义.</p>
 </div><h2 class="groupheader">构造及析构函数说明</h2>
-<a id="adebd57e07a89d64fa3e42e067d3b6d77" name="adebd57e07a89d64fa3e42e067d3b6d77"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adebd57e07a89d64fa3e42e067d3b6d77">&#9670;&nbsp;</a></span>MusicShare()</h2>
+<a id="a569816ed3d22d644f7935ec745d03bd8" name="a569816ed3d22d644f7935ec745d03bd8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a569816ed3d22d644f7935ec745d03bd8">&#9670;&nbsp;</a></span>LoaderExceptionCRTP()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">MiraiCP::MusicShare::MusicShare </td>
+          <td class="memname"><a class="el" href="a00776.html">LibLoader::LoaderExceptionCRTP</a>&lt; T &gt;::<a class="el" href="a00776.html">LoaderExceptionCRTP</a> </td>
           <td>(</td>
           <td class="paramtype">std::string&#160;</td>
-          <td class="paramname"><em>appName</em>, </td>
+          <td class="paramname"><em>_re</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::string&#160;</td>
-          <td class="paramname"><em>title</em>, </td>
+          <td class="paramtype"><a class="el" href="a00772.html#a426a5f32b7a2a56205d68c118579c216">string</a>&#160;</td>
+          <td class="paramname"><em>_filename</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::string&#160;</td>
-          <td class="paramname"><em>summary</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::string&#160;</td>
-          <td class="paramname"><em>jumpUrl</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::string&#160;</td>
-          <td class="paramname"><em>picUrl</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::string&#160;</td>
-          <td class="paramname"><em>musicUrl</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::string&#160;</td>
-          <td class="paramname"><em>brief</em>&#160;</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>_lineNum</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -269,44 +211,33 @@ Public 属性</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="a00170_source.html">SingleMessage.h</a> 第 <a class="el" href="a00170_source.html#l00638">638</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l00645" name="l00645"></a><span class="lineno">  645</span>            : <a class="code hl_function" href="a00720.html#afd9fc5e5ce28680eaf331144903f025b">SingleMessage</a>(<a class="code hl_function" href="a00776.html#a0d066ebbca63439a3eea2e564e31403a">MusicShare::type</a>(), <span class="stringliteral">&quot;&quot;</span>),</div>
-<div class="line"><a id="l00646" name="l00646"></a><span class="lineno">  646</span>              <a class="code hl_variable" href="a00776.html#a87a20d867c8dadbe4a8f55ef2b6d0d4d">appName</a>(std::move(<a class="code hl_variable" href="a00776.html#a87a20d867c8dadbe4a8f55ef2b6d0d4d">appName</a>)),</div>
-<div class="line"><a id="l00647" name="l00647"></a><span class="lineno">  647</span>              <a class="code hl_variable" href="a00776.html#aa4f1eb91480d538d2aead5904f1cc4b9">title</a>(std::move(<a class="code hl_variable" href="a00776.html#aa4f1eb91480d538d2aead5904f1cc4b9">title</a>)),</div>
-<div class="line"><a id="l00648" name="l00648"></a><span class="lineno">  648</span>              <a class="code hl_variable" href="a00776.html#a2da932b20adbdc6f9fa58bda8c0623ac">summary</a>(std::move(<a class="code hl_variable" href="a00776.html#a2da932b20adbdc6f9fa58bda8c0623ac">summary</a>)),</div>
-<div class="line"><a id="l00649" name="l00649"></a><span class="lineno">  649</span>              <a class="code hl_variable" href="a00776.html#aa4239e8aadb82d6c79bc8986f55e68b6">jumpUrl</a>(std::move(<a class="code hl_variable" href="a00776.html#aa4239e8aadb82d6c79bc8986f55e68b6">jumpUrl</a>)),</div>
-<div class="line"><a id="l00650" name="l00650"></a><span class="lineno">  650</span>              <a class="code hl_variable" href="a00776.html#a0615bbf6886985e1438ab1493cdc012a">picUrl</a>(std::move(<a class="code hl_variable" href="a00776.html#a0615bbf6886985e1438ab1493cdc012a">picUrl</a>)),</div>
-<div class="line"><a id="l00651" name="l00651"></a><span class="lineno">  651</span>              <a class="code hl_variable" href="a00776.html#a98dc3816bcdd57e551a55ff88b2ea4fa">musicUrl</a>(std::move(<a class="code hl_variable" href="a00776.html#a98dc3816bcdd57e551a55ff88b2ea4fa">musicUrl</a>)),</div>
-<div class="line"><a id="l00652" name="l00652"></a><span class="lineno">  652</span>              <a class="code hl_variable" href="a00776.html#ab3e91b8220d2e80dbb84ff17b83ce3f8">brief</a>(std::move(<a class="code hl_variable" href="a00776.html#ab3e91b8220d2e80dbb84ff17b83ce3f8">brief</a>)) {}</div>
-<div class="ttc" id="aa00720_html_afd9fc5e5ce28680eaf331144903f025b"><div class="ttname"><a href="a00720.html#afd9fc5e5ce28680eaf331144903f025b">MiraiCP::SingleMessage::SingleMessage</a></div><div class="ttdeci">SingleMessage()=default</div><div class="ttdoc">仅限于让子类允许默认构造，以保证子类可以通过动态判断类型构造</div></div>
-<div class="ttc" id="aa00776_html_a0615bbf6886985e1438ab1493cdc012a"><div class="ttname"><a href="a00776.html#a0615bbf6886985e1438ab1493cdc012a">MiraiCP::MusicShare::picUrl</a></div><div class="ttdeci">std::string picUrl</div><div class="ttdoc">图片链接</div><div class="ttdef"><b>Definition:</b> <a href="a00170_source.html#l00630">SingleMessage.h:630</a></div></div>
-<div class="ttc" id="aa00776_html_a0d066ebbca63439a3eea2e564e31403a"><div class="ttname"><a href="a00776.html#a0d066ebbca63439a3eea2e564e31403a">MiraiCP::MusicShare::type</a></div><div class="ttdeci">static int type()</div><div class="ttdef"><b>Definition:</b> <a href="a00170_source.html#l00616">SingleMessage.h:616</a></div></div>
-<div class="ttc" id="aa00776_html_a2da932b20adbdc6f9fa58bda8c0623ac"><div class="ttname"><a href="a00776.html#a2da932b20adbdc6f9fa58bda8c0623ac">MiraiCP::MusicShare::summary</a></div><div class="ttdeci">std::string summary</div><div class="ttdoc">卡片第二行的文字内容</div><div class="ttdef"><b>Definition:</b> <a href="a00170_source.html#l00626">SingleMessage.h:626</a></div></div>
-<div class="ttc" id="aa00776_html_a87a20d867c8dadbe4a8f55ef2b6d0d4d"><div class="ttname"><a href="a00776.html#a87a20d867c8dadbe4a8f55ef2b6d0d4d">MiraiCP::MusicShare::appName</a></div><div class="ttdeci">std::string appName</div><div class="ttdoc">应用名称, 如NeteaseCloudMusic</div><div class="ttdef"><b>Definition:</b> <a href="a00170_source.html#l00622">SingleMessage.h:622</a></div></div>
-<div class="ttc" id="aa00776_html_a98dc3816bcdd57e551a55ff88b2ea4fa"><div class="ttname"><a href="a00776.html#a98dc3816bcdd57e551a55ff88b2ea4fa">MiraiCP::MusicShare::musicUrl</a></div><div class="ttdeci">std::string musicUrl</div><div class="ttdoc">音乐文件链接</div><div class="ttdef"><b>Definition:</b> <a href="a00170_source.html#l00632">SingleMessage.h:632</a></div></div>
-<div class="ttc" id="aa00776_html_aa4239e8aadb82d6c79bc8986f55e68b6"><div class="ttname"><a href="a00776.html#aa4239e8aadb82d6c79bc8986f55e68b6">MiraiCP::MusicShare::jumpUrl</a></div><div class="ttdeci">std::string jumpUrl</div><div class="ttdoc">点击跳转到的链接</div><div class="ttdef"><b>Definition:</b> <a href="a00170_source.html#l00628">SingleMessage.h:628</a></div></div>
-<div class="ttc" id="aa00776_html_aa4f1eb91480d538d2aead5904f1cc4b9"><div class="ttname"><a href="a00776.html#aa4f1eb91480d538d2aead5904f1cc4b9">MiraiCP::MusicShare::title</a></div><div class="ttdeci">std::string title</div><div class="ttdoc">歌名</div><div class="ttdef"><b>Definition:</b> <a href="a00170_source.html#l00624">SingleMessage.h:624</a></div></div>
-<div class="ttc" id="aa00776_html_ab3e91b8220d2e80dbb84ff17b83ce3f8"><div class="ttname"><a href="a00776.html#ab3e91b8220d2e80dbb84ff17b83ce3f8">MiraiCP::MusicShare::brief</a></div><div class="ttdeci">std::string brief</div><div class="ttdoc">简介, 点进聊天节目前显示的小文字, 一般是分享</div><div class="ttdef"><b>Definition:</b> <a href="a00170_source.html#l00634">SingleMessage.h:634</a></div></div>
+<p>委托构造函数 </p>
+
+<p class="definition">在文件 <a class="el" href="a00230_source.html">LoaderExceptions.h</a> 第 <a class="el" href="a00230_source.html#l00081">81</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>            : <a class="code hl_function" href="a00772.html#a60617c64dab00d3d3c64d012ba6dda9f">LoaderBaseException</a>(std::move(_re), std::move(_filename), _lineNum) {}</div>
+<div class="ttc" id="aa00772_html_a60617c64dab00d3d3c64d012ba6dda9f"><div class="ttname"><a href="a00772.html#a60617c64dab00d3d3c64d012ba6dda9f">LibLoader::LoaderBaseException::LoaderBaseException</a></div><div class="ttdeci">LoaderBaseException(string info, string _filename, int _lineNum)</div><div class="ttdoc">受保护构造函数，供子类调用</div><div class="ttdef"><b>Definition:</b> <a href="a00227_source.html#l00022">LoaderExceptions.cpp:22</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">成员函数说明</h2>
-<a id="a1bffdbd7cd143a903f22fb376b79c855" name="a1bffdbd7cd143a903f22fb376b79c855"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1bffdbd7cd143a903f22fb376b79c855">&#9670;&nbsp;</a></span>toMiraiCode()</h2>
+<a id="a2922c4bc8a26626dad74f11ec9bf6df0" name="a2922c4bc8a26626dad74f11ec9bf6df0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2922c4bc8a26626dad74f11ec9bf6df0">&#9670;&nbsp;</a></span>getExceptionType()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::string MiraiCP::MusicShare::toMiraiCode </td>
+          <td class="memname"><a class="el" href="a00772.html#a426a5f32b7a2a56205d68c118579c216">string</a> <a class="el" href="a00776.html">LibLoader::LoaderExceptionCRTP</a>&lt; T &gt;::getExceptionType </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -319,178 +250,17 @@ Public 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>返回MiraiCode </p>
+<p>获取异常类型，通用接口 </p>
 
-<p>重载 <a class="el" href="a00720.html#ade93b603f22f584ada2a003c9e523b89">MiraiCP::SingleMessage</a> .</p>
+<p>实现了 <a class="el" href="a00772.html#a0c228099ad2d23da15b72123bb255f67">LibLoader::LoaderBaseException</a>.</p>
 
-<p class="definition">在文件 <a class="el" href="a00170_source.html">SingleMessage.h</a> 第 <a class="el" href="a00170_source.html#l00635">635</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l00635" name="l00635"></a><span class="lineno">  635</span>                                                             {</div>
-<div class="line"><a id="l00636" name="l00636"></a><span class="lineno">  636</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;[mirai:musicshare:&quot;</span> + <a class="code hl_variable" href="a00776.html#a87a20d867c8dadbe4a8f55ef2b6d0d4d">appName</a> + <span class="stringliteral">&quot;,&quot;</span> + <a class="code hl_variable" href="a00776.html#aa4f1eb91480d538d2aead5904f1cc4b9">title</a> + <span class="stringliteral">&quot;,&quot;</span> + <a class="code hl_variable" href="a00776.html#a2da932b20adbdc6f9fa58bda8c0623ac">summary</a> + <span class="stringliteral">&quot;,&quot;</span> + <a class="code hl_variable" href="a00776.html#aa4239e8aadb82d6c79bc8986f55e68b6">jumpUrl</a> + <span class="stringliteral">&quot;,&quot;</span> + <a class="code hl_variable" href="a00776.html#a0615bbf6886985e1438ab1493cdc012a">picUrl</a> + <span class="stringliteral">&quot;,&quot;</span> + <a class="code hl_variable" href="a00776.html#a98dc3816bcdd57e551a55ff88b2ea4fa">musicUrl</a> + <span class="stringliteral">&quot;,&quot;</span> + <a class="code hl_variable" href="a00776.html#ab3e91b8220d2e80dbb84ff17b83ce3f8">brief</a> + <span class="stringliteral">&quot;]&quot;</span>;</div>
-<div class="line"><a id="l00637" name="l00637"></a><span class="lineno">  637</span>        }</div>
+<p class="definition">在文件 <a class="el" href="a00230_source.html">LoaderExceptions.h</a> 第 <a class="el" href="a00230_source.html#l00086">86</a> 行定义.</p>
+<div class="fragment"><div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>{ <span class="keywordflow">return</span> T::exceptionType(); }</div>
 </div><!-- fragment -->
 </div>
 </div>
-<a id="a0d066ebbca63439a3eea2e564e31403a" name="a0d066ebbca63439a3eea2e564e31403a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0d066ebbca63439a3eea2e564e31403a">&#9670;&nbsp;</a></span>type()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static int MiraiCP::MusicShare::type </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">在文件 <a class="el" href="a00170_source.html">SingleMessage.h</a> 第 <a class="el" href="a00170_source.html#l00616">616</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l00616" name="l00616"></a><span class="lineno">  616</span>                          {</div>
-<div class="line"><a id="l00617" name="l00617"></a><span class="lineno">  617</span>            <a class="code hl_define" href="a00170.html#a7641aaf09c6c5c892cccfd8c7815ad98">SINGLEMESSAGE_REFACTOR_ASSERTION</a>(9, Types::MusicShare_t);</div>
-<div class="line"><a id="l00618" name="l00618"></a><span class="lineno">  618</span>            <span class="keywordflow">return</span> Types::MusicShare_t;</div>
-<div class="line"><a id="l00619" name="l00619"></a><span class="lineno">  619</span>        }</div>
-<div class="ttc" id="aa00170_html_a7641aaf09c6c5c892cccfd8c7815ad98"><div class="ttname"><a href="a00170.html#a7641aaf09c6c5c892cccfd8c7815ad98">SINGLEMESSAGE_REFACTOR_ASSERTION</a></div><div class="ttdeci">#define SINGLEMESSAGE_REFACTOR_ASSERTION(x, y)</div><div class="ttdef"><b>Definition:</b> <a href="a00170_source.html#l00033">SingleMessage.h:33</a></div></div>
-</div><!-- fragment -->
-</div>
-</div>
-<h2 class="groupheader">类成员变量说明</h2>
-<a id="a87a20d867c8dadbe4a8f55ef2b6d0d4d" name="a87a20d867c8dadbe4a8f55ef2b6d0d4d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a87a20d867c8dadbe4a8f55ef2b6d0d4d">&#9670;&nbsp;</a></span>appName</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::string MiraiCP::MusicShare::appName</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>应用名称, 如NeteaseCloudMusic </p>
-
-<p class="definition">在文件 <a class="el" href="a00170_source.html">SingleMessage.h</a> 第 <a class="el" href="a00170_source.html#l00622">622</a> 行定义.</p>
-
-</div>
-</div>
-<a id="ab3e91b8220d2e80dbb84ff17b83ce3f8" name="ab3e91b8220d2e80dbb84ff17b83ce3f8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab3e91b8220d2e80dbb84ff17b83ce3f8">&#9670;&nbsp;</a></span>brief</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::string MiraiCP::MusicShare::brief</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>简介, 点进聊天节目前显示的小文字, 一般是<code>分享</code> </p>
-
-<p class="definition">在文件 <a class="el" href="a00170_source.html">SingleMessage.h</a> 第 <a class="el" href="a00170_source.html#l00634">634</a> 行定义.</p>
-
-</div>
-</div>
-<a id="aa4239e8aadb82d6c79bc8986f55e68b6" name="aa4239e8aadb82d6c79bc8986f55e68b6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa4239e8aadb82d6c79bc8986f55e68b6">&#9670;&nbsp;</a></span>jumpUrl</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::string MiraiCP::MusicShare::jumpUrl</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>点击跳转到的链接 </p>
-
-<p class="definition">在文件 <a class="el" href="a00170_source.html">SingleMessage.h</a> 第 <a class="el" href="a00170_source.html#l00628">628</a> 行定义.</p>
-
-</div>
-</div>
-<a id="a98dc3816bcdd57e551a55ff88b2ea4fa" name="a98dc3816bcdd57e551a55ff88b2ea4fa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a98dc3816bcdd57e551a55ff88b2ea4fa">&#9670;&nbsp;</a></span>musicUrl</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::string MiraiCP::MusicShare::musicUrl</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>音乐文件链接 </p>
-
-<p class="definition">在文件 <a class="el" href="a00170_source.html">SingleMessage.h</a> 第 <a class="el" href="a00170_source.html#l00632">632</a> 行定义.</p>
-
-</div>
-</div>
-<a id="a0615bbf6886985e1438ab1493cdc012a" name="a0615bbf6886985e1438ab1493cdc012a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0615bbf6886985e1438ab1493cdc012a">&#9670;&nbsp;</a></span>picUrl</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::string MiraiCP::MusicShare::picUrl</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>图片链接 </p>
-
-<p class="definition">在文件 <a class="el" href="a00170_source.html">SingleMessage.h</a> 第 <a class="el" href="a00170_source.html#l00630">630</a> 行定义.</p>
-
-</div>
-</div>
-<a id="a2da932b20adbdc6f9fa58bda8c0623ac" name="a2da932b20adbdc6f9fa58bda8c0623ac"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2da932b20adbdc6f9fa58bda8c0623ac">&#9670;&nbsp;</a></span>summary</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::string MiraiCP::MusicShare::summary</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>卡片第二行的文字内容 </p>
-
-<p class="definition">在文件 <a class="el" href="a00170_source.html">SingleMessage.h</a> 第 <a class="el" href="a00170_source.html#l00626">626</a> 行定义.</p>
-
-</div>
-</div>
-<a id="aa4f1eb91480d538d2aead5904f1cc4b9" name="aa4f1eb91480d538d2aead5904f1cc4b9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa4f1eb91480d538d2aead5904f1cc4b9">&#9670;&nbsp;</a></span>title</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::string MiraiCP::MusicShare::title</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>歌名 </p>
-
-<p class="definition">在文件 <a class="el" href="a00170_source.html">SingleMessage.h</a> 第 <a class="el" href="a00170_source.html#l00624">624</a> 行定义.</p>
-
-</div>
-</div>
-<hr/>该类的文档由以下文件生成:<ul>
-<li><a class="el" href="a00170_source.html">SingleMessage.h</a></li>
+<hr/>该接口的文档由以下文件生成:<ul>
+<li><a class="el" href="a00230_source.html">LoaderExceptions.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -498,8 +268,8 @@ Public 属性</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="a00302.html">MiraiCP</a></li><li class="navelem"><a class="el" href="a00776.html">MusicShare</a></li>
-    <li class="footer">生成于 2023年 一月 22日 星期日 13:17:00 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="navelem"><a class="el" href="a00407.html">LibLoader</a></li><li class="navelem"><a class="el" href="a00776.html">LoaderExceptionCRTP</a></li>
+    <li class="footer">生成于 2023年 四月 10日 星期一 00:26:34 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
     </body>

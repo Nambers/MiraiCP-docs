@@ -1,5 +1,8 @@
 var a00656 =
 [
-    [ "_inited", "a00656.html#a4bcdf4847dcf76ac6db03677b5268f93", null ],
-    [ "_mtx", "a00656.html#af5678b958259cd9fb1cb1e30b9675b93", null ]
+    [ "brief", "a00656.html#a922825f2fe708a70c66ff6585d688bb6", null ],
+    [ "cover", "a00656.html#a38c4579d9ccb887f3cab0573a39b96fa", null ],
+    [ "summary", "a00656.html#a5927b32bbb8fc21efe5d183fb12ddd1a", null ],
+    [ "title", "a00656.html#a929d703d700b67f4a1c1d17111271922", null ],
+    [ "url", "a00656.html#aba141291ce2939583450057c338b1fc5", null ]
 ];

@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiraiCP: MiraiCP::IMiraiData::MiraiDataLocker结构体 参考</title>
+<title>MiraiCP: MiraiCP::URLSharer结构体 参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -35,7 +35,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MiraiCP
-   &#160;<span id="projectnumber">v2.13.1</span>
+   &#160;<span id="projectnumber">v2.15.0-RC2</span>
    </div>
    <div id="projectbrief">MiraiCP api document</div>
   </td>
@@ -96,73 +96,137 @@ $(document).ready(function(){initNavTree('a00656.html',''); initResizable(); });
   <div class="summary">
 <a href="#pub-attribs">Public 属性</a> &#124;
 <a href="a00653.html">所有成员列表</a>  </div>
-  <div class="headertitle"><div class="title">MiraiCP::IMiraiData::MiraiDataLocker结构体 参考<span class="mlabels"><span class="mlabel">final</span></span></div></div>
+  <div class="headertitle"><div class="title">MiraiCP::URLSharer结构体 参考</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>锁  
+<p>用serviceMessage的分享信息  
  <a href="a00656.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="a00161_source.html">SingleMessage.h</a>&gt;</code></p>
 <div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> MiraiCP::IMiraiData::MiraiDataLocker 的协作图:</div>
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> MiraiCP::URLSharer 的协作图:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="a00654.svg" width="208" height="243"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00654.svg" width="150" height="287"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public 属性</h2></td></tr>
-<tr class="memitem:af5678b958259cd9fb1cb1e30b9675b93"><td class="memItemLeft" align="right" valign="top">std::shared_mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00656.html#af5678b958259cd9fb1cb1e30b9675b93">_mtx</a></td></tr>
-<tr class="memdesc:af5678b958259cd9fb1cb1e30b9675b93"><td class="mdescLeft">&#160;</td><td class="mdescRight">该数据是否上锁  <a href="a00656.html#af5678b958259cd9fb1cb1e30b9675b93">更多...</a><br /></td></tr>
-<tr class="separator:af5678b958259cd9fb1cb1e30b9675b93"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4bcdf4847dcf76ac6db03677b5268f93"><td class="memItemLeft" align="right" valign="top">std::atomic&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00656.html#a4bcdf4847dcf76ac6db03677b5268f93">_inited</a> = false</td></tr>
-<tr class="memdesc:a4bcdf4847dcf76ac6db03677b5268f93"><td class="mdescLeft">&#160;</td><td class="mdescRight">该数据是否已经初始化  <a href="a00656.html#a4bcdf4847dcf76ac6db03677b5268f93">更多...</a><br /></td></tr>
-<tr class="separator:a4bcdf4847dcf76ac6db03677b5268f93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a922825f2fe708a70c66ff6585d688bb6"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00656.html#a922825f2fe708a70c66ff6585d688bb6">brief</a> = &quot;简介 没点进来看见的样子&quot;</td></tr>
+<tr class="memdesc:a922825f2fe708a70c66ff6585d688bb6"><td class="mdescLeft">&#160;</td><td class="mdescRight">简介 没点进来看见的样子  <a href="a00656.html#a922825f2fe708a70c66ff6585d688bb6">更多...</a><br /></td></tr>
+<tr class="separator:a922825f2fe708a70c66ff6585d688bb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba141291ce2939583450057c338b1fc5"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00656.html#aba141291ce2939583450057c338b1fc5">url</a> = &quot;目标url&quot;</td></tr>
+<tr class="memdesc:aba141291ce2939583450057c338b1fc5"><td class="mdescLeft">&#160;</td><td class="mdescRight">目标url  <a href="a00656.html#aba141291ce2939583450057c338b1fc5">更多...</a><br /></td></tr>
+<tr class="separator:aba141291ce2939583450057c338b1fc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38c4579d9ccb887f3cab0573a39b96fa"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00656.html#a38c4579d9ccb887f3cab0573a39b96fa">cover</a> = &quot;图标地址&quot;</td></tr>
+<tr class="memdesc:a38c4579d9ccb887f3cab0573a39b96fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">图标地址  <a href="a00656.html#a38c4579d9ccb887f3cab0573a39b96fa">更多...</a><br /></td></tr>
+<tr class="separator:a38c4579d9ccb887f3cab0573a39b96fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a929d703d700b67f4a1c1d17111271922"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00656.html#a929d703d700b67f4a1c1d17111271922">title</a> = &quot;标题&quot;</td></tr>
+<tr class="memdesc:a929d703d700b67f4a1c1d17111271922"><td class="mdescLeft">&#160;</td><td class="mdescRight">标题  <a href="a00656.html#a929d703d700b67f4a1c1d17111271922">更多...</a><br /></td></tr>
+<tr class="separator:a929d703d700b67f4a1c1d17111271922"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5927b32bbb8fc21efe5d183fb12ddd1a"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00656.html#a5927b32bbb8fc21efe5d183fb12ddd1a">summary</a> = &quot;描述文字&quot;</td></tr>
+<tr class="memdesc:a5927b32bbb8fc21efe5d183fb12ddd1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">描述文字  <a href="a00656.html#a5927b32bbb8fc21efe5d183fb12ddd1a">更多...</a><br /></td></tr>
+<tr class="separator:a5927b32bbb8fc21efe5d183fb12ddd1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
-<div class="textblock"><p >锁 </p>
+<div class="textblock"><p >用serviceMessage的分享信息 </p>
 
-<p class="definition">在文件 <a class="el" href="a00134_source.html">IMiraiData.h</a> 第 <a class="el" href="a00134_source.html#l00030">30</a> 行定义.</p>
+<p class="definition">在文件 <a class="el" href="a00161_source.html">SingleMessage.h</a> 第 <a class="el" href="a00161_source.html#l00099">99</a> 行定义.</p>
 </div><h2 class="groupheader">类成员变量说明</h2>
-<a id="a4bcdf4847dcf76ac6db03677b5268f93" name="a4bcdf4847dcf76ac6db03677b5268f93"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4bcdf4847dcf76ac6db03677b5268f93">&#9670;&nbsp;</a></span>_inited</h2>
+<a id="a922825f2fe708a70c66ff6585d688bb6" name="a922825f2fe708a70c66ff6585d688bb6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a922825f2fe708a70c66ff6585d688bb6">&#9670;&nbsp;</a></span>brief</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::atomic&lt;bool&gt; MiraiCP::IMiraiData::MiraiDataLocker::_inited = false</td>
+          <td class="memname">std::string MiraiCP::URLSharer::brief = &quot;简介 没点进来看见的样子&quot;</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>该数据是否已经初始化 </p>
+<p>简介 没点进来看见的样子 </p>
 
-<p class="definition">在文件 <a class="el" href="a00134_source.html">IMiraiData.h</a> 第 <a class="el" href="a00134_source.html#l00034">34</a> 行定义.</p>
+<p class="definition">在文件 <a class="el" href="a00161_source.html">SingleMessage.h</a> 第 <a class="el" href="a00161_source.html#l00101">101</a> 行定义.</p>
 
 </div>
 </div>
-<a id="af5678b958259cd9fb1cb1e30b9675b93" name="af5678b958259cd9fb1cb1e30b9675b93"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af5678b958259cd9fb1cb1e30b9675b93">&#9670;&nbsp;</a></span>_mtx</h2>
+<a id="a38c4579d9ccb887f3cab0573a39b96fa" name="a38c4579d9ccb887f3cab0573a39b96fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38c4579d9ccb887f3cab0573a39b96fa">&#9670;&nbsp;</a></span>cover</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::shared_mutex MiraiCP::IMiraiData::MiraiDataLocker::_mtx</td>
+          <td class="memname">std::string MiraiCP::URLSharer::cover = &quot;图标地址&quot;</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>该数据是否上锁 </p>
+<p>图标地址 </p>
 
-<p class="definition">在文件 <a class="el" href="a00134_source.html">IMiraiData.h</a> 第 <a class="el" href="a00134_source.html#l00032">32</a> 行定义.</p>
+<p class="definition">在文件 <a class="el" href="a00161_source.html">SingleMessage.h</a> 第 <a class="el" href="a00161_source.html#l00105">105</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a5927b32bbb8fc21efe5d183fb12ddd1a" name="a5927b32bbb8fc21efe5d183fb12ddd1a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5927b32bbb8fc21efe5d183fb12ddd1a">&#9670;&nbsp;</a></span>summary</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string MiraiCP::URLSharer::summary = &quot;描述文字&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>描述文字 </p>
+
+<p class="definition">在文件 <a class="el" href="a00161_source.html">SingleMessage.h</a> 第 <a class="el" href="a00161_source.html#l00109">109</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a929d703d700b67f4a1c1d17111271922" name="a929d703d700b67f4a1c1d17111271922"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a929d703d700b67f4a1c1d17111271922">&#9670;&nbsp;</a></span>title</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string MiraiCP::URLSharer::title = &quot;标题&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>标题 </p>
+
+<p class="definition">在文件 <a class="el" href="a00161_source.html">SingleMessage.h</a> 第 <a class="el" href="a00161_source.html#l00107">107</a> 行定义.</p>
+
+</div>
+</div>
+<a id="aba141291ce2939583450057c338b1fc5" name="aba141291ce2939583450057c338b1fc5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba141291ce2939583450057c338b1fc5">&#9670;&nbsp;</a></span>url</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string MiraiCP::URLSharer::url = &quot;目标url&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>目标url </p>
+
+<p class="definition">在文件 <a class="el" href="a00161_source.html">SingleMessage.h</a> 第 <a class="el" href="a00161_source.html#l00103">103</a> 行定义.</p>
 
 </div>
 </div>
 <hr/>该结构体的文档由以下文件生成:<ul>
-<li><a class="el" href="a00134_source.html">IMiraiData.h</a></li>
+<li><a class="el" href="a00161_source.html">SingleMessage.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -170,8 +234,8 @@ Public 属性</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="a00302.html">MiraiCP</a></li><li class="navelem"><a class="el" href="a00652.html">IMiraiData</a></li><li class="navelem"><a class="el" href="a00656.html">MiraiDataLocker</a></li>
-    <li class="footer">生成于 2023年 一月 22日 星期日 13:16:59 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="navelem"><a class="el" href="a00397.html">MiraiCP</a></li><li class="navelem"><a class="el" href="a00656.html">URLSharer</a></li>
+    <li class="footer">生成于 2023年 四月 10日 星期一 00:26:35 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
     </body>

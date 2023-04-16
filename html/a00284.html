@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiraiCP: ThreadIdentify.cpp 文件参考</title>
+<title>MiraiCP: ThreadIdentify.h 文件参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -35,7 +35,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MiraiCP
-   &#160;<span id="projectnumber">v2.14.0</span>
+   &#160;<span id="projectnumber">v2.15.0-RC2</span>
    </div>
    <div id="projectbrief">MiraiCP api document</div>
   </td>
@@ -95,147 +95,62 @@ $(document).ready(function(){initNavTree('a00284.html',''); initResizable(); });
 <div class="header">
   <div class="summary">
 <a href="#namespaces">命名空间</a> &#124;
-<a href="#define-members">宏定义</a> &#124;
-<a href="#typedef-members">类型定义</a> &#124;
-<a href="#func-members">函数</a> &#124;
-<a href="#var-members">变量</a>  </div>
-  <div class="headertitle"><div class="title">ThreadIdentify.cpp 文件参考</div></div>
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle"><div class="title">ThreadIdentify.h 文件参考</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="a00287_source.html">ThreadIdentify.h</a>&quot;</code><br />
-<code>#include &lt;mutex&gt;</code><br />
-<code>#include &lt;shared_mutex&gt;</code><br />
-<code>#include &lt;thread&gt;</code><br />
-<code>#include &lt;unordered_map&gt;</code><br />
+<div class="textblock"><code>#include &lt;string&gt;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> ThreadIdentify.cpp 的引用(Include)关系图:</div>
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> ThreadIdentify.h 的引用(Include)关系图:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="a00285.svg" width="554" height="187"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00285.svg" width="124" height="112"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
+</div><div class="textblock"><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> 此图展示该文件直接或间接的被哪些文件引用了:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00286.svg" width="695" height="112"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 <p><a href="a00284_source.html">浏览源代码.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
 命名空间</h2></td></tr>
-<tr class="memitem:a00411"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00411.html">ThreadIdentify</a></td></tr>
+<tr class="memitem:a00413"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00413.html">ThreadIdentify</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
-宏定义</h2></td></tr>
-<tr class="memitem:afdf9b55ee6d4f7c29bc91aa7e057bdbe"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00284.html#afdf9b55ee6d4f7c29bc91aa7e057bdbe">SET_THREADNAME</a>(name)</td></tr>
-<tr class="memdesc:afdf9b55ee6d4f7c29bc91aa7e057bdbe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Windows case  <a href="a00284.html#afdf9b55ee6d4f7c29bc91aa7e057bdbe">更多...</a><br /></td></tr>
-<tr class="separator:afdf9b55ee6d4f7c29bc91aa7e057bdbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1c725cadd47b1c5bcd058972a3b25649"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00284.html#a1c725cadd47b1c5bcd058972a3b25649">GET_THREADNAME</a>(buffer,  buffersize)&#160;&#160;&#160;buffer[0] = 0</td></tr>
-<tr class="separator:a1c725cadd47b1c5bcd058972a3b25649"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
-类型定义</h2></td></tr>
-<tr class="memitem:a8b3ed2edac9bce5e2c943ac9295c66ec"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00411.html#a8b3ed2edac9bce5e2c943ac9295c66ec">ThreadIdentify::id</a> = std::thread::id</td></tr>
-<tr class="separator:a8b3ed2edac9bce5e2c943ac9295c66ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 函数</h2></td></tr>
-<tr class="memitem:ada5de831f5a14655f1dd31e6323f7831"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00411.html#ada5de831f5a14655f1dd31e6323f7831">ThreadIdentify::IAmPoolThread</a> ()</td></tr>
+<tr class="memitem:ada5de831f5a14655f1dd31e6323f7831"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00413.html#ada5de831f5a14655f1dd31e6323f7831">ThreadIdentify::IAmPoolThread</a> ()</td></tr>
 <tr class="separator:ada5de831f5a14655f1dd31e6323f7831"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a187efcd02c7ac8566c197f343b661c32"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00411.html#a187efcd02c7ac8566c197f343b661c32">ThreadIdentify::isMePoolThread</a> ()</td></tr>
+<tr class="memitem:a187efcd02c7ac8566c197f343b661c32"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00413.html#a187efcd02c7ac8566c197f343b661c32">ThreadIdentify::isMePoolThread</a> ()</td></tr>
 <tr class="separator:a187efcd02c7ac8566c197f343b661c32"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad607328dd0f3a6cb59e4805057a406e4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00411.html#ad607328dd0f3a6cb59e4805057a406e4">ThreadIdentify::IAmLoaderThread</a> ()</td></tr>
+<tr class="memitem:ad607328dd0f3a6cb59e4805057a406e4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00413.html#ad607328dd0f3a6cb59e4805057a406e4">ThreadIdentify::IAmLoaderThread</a> ()</td></tr>
 <tr class="separator:ad607328dd0f3a6cb59e4805057a406e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab77cc1ce58a450e4bfea6e3fdc065c33"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00411.html#ab77cc1ce58a450e4bfea6e3fdc065c33">ThreadIdentify::isMeLoaderThread</a> ()</td></tr>
+<tr class="memitem:ab77cc1ce58a450e4bfea6e3fdc065c33"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00413.html#ab77cc1ce58a450e4bfea6e3fdc065c33">ThreadIdentify::isMeLoaderThread</a> ()</td></tr>
 <tr class="separator:ab77cc1ce58a450e4bfea6e3fdc065c33"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab6d8c466e32a47712f9206f9673b7067"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00411.html#ab6d8c466e32a47712f9206f9673b7067">ThreadIdentify::setMyThreadName</a> (const std::string &amp;name)</td></tr>
+<tr class="memitem:ab6d8c466e32a47712f9206f9673b7067"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00413.html#ab6d8c466e32a47712f9206f9673b7067">ThreadIdentify::setMyThreadName</a> (const std::string &amp;name)</td></tr>
 <tr class="separator:ab6d8c466e32a47712f9206f9673b7067"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1ebc3225eaad0bd5657f6f5e049b802c"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00411.html#a1ebc3225eaad0bd5657f6f5e049b802c">ThreadIdentify::identifyMe</a> ()</td></tr>
+<tr class="memitem:a1ebc3225eaad0bd5657f6f5e049b802c"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00413.html#a1ebc3225eaad0bd5657f6f5e049b802c">ThreadIdentify::identifyMe</a> ()</td></tr>
 <tr class="separator:a1ebc3225eaad0bd5657f6f5e049b802c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3faddb4b1d901c39b71cd3559fbd5e3b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00411.html#a3faddb4b1d901c39b71cd3559fbd5e3b">ThreadIdentify::internalSetThreadWorkingName</a> (std::string name)</td></tr>
-<tr class="separator:a3faddb4b1d901c39b71cd3559fbd5e3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aae621af986af1d6d3203f63858d3ac26"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00411.html#aae621af986af1d6d3203f63858d3ac26">ThreadIdentify::setThreadWorkingName</a> (std::string name)</td></tr>
+<tr class="memitem:aae621af986af1d6d3203f63858d3ac26"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00413.html#aae621af986af1d6d3203f63858d3ac26">ThreadIdentify::setThreadWorkingName</a> (std::string name)</td></tr>
 <tr class="separator:aae621af986af1d6d3203f63858d3ac26"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2db790edad6d2f47d59c98f494d89b17"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00411.html#a2db790edad6d2f47d59c98f494d89b17">ThreadIdentify::unsetThreadWorkingName</a> ()</td></tr>
+<tr class="memitem:a2db790edad6d2f47d59c98f494d89b17"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00413.html#a2db790edad6d2f47d59c98f494d89b17">ThreadIdentify::unsetThreadWorkingName</a> ()</td></tr>
 <tr class="separator:a2db790edad6d2f47d59c98f494d89b17"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ace23309b3586adad87a7af44a95877dd"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00411.html#ace23309b3586adad87a7af44a95877dd">ThreadIdentify::getThreadWorkingName</a> ()</td></tr>
+<tr class="memitem:ace23309b3586adad87a7af44a95877dd"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00413.html#ace23309b3586adad87a7af44a95877dd">ThreadIdentify::getThreadWorkingName</a> ()</td></tr>
 <tr class="separator:ace23309b3586adad87a7af44a95877dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
-变量</h2></td></tr>
-<tr class="memitem:abb6b4c94c7b96aa0e90c6aa49d6dfa4c"><td class="memItemLeft" align="right" valign="top">thread_local bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00411.html#abb6b4c94c7b96aa0e90c6aa49d6dfa4c">ThreadIdentify::isPoolThread</a> = false</td></tr>
-<tr class="separator:abb6b4c94c7b96aa0e90c6aa49d6dfa4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad7e184503357fc21c89db5b72220432c"><td class="memItemLeft" align="right" valign="top">thread_local bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00411.html#ad7e184503357fc21c89db5b72220432c">ThreadIdentify::isLoaderThread</a> = false</td></tr>
-<tr class="separator:ad7e184503357fc21c89db5b72220432c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad0bda5e6cd7c7f38c830232faead2fb0"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; id, std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00411.html#ad0bda5e6cd7c7f38c830232faead2fb0">ThreadIdentify::Identify</a></td></tr>
-<tr class="separator:ad0bda5e6cd7c7f38c830232faead2fb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a81d3c5799d01e961558b108a82db5bd2"><td class="memItemLeft" align="right" valign="top">std::shared_mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00411.html#a81d3c5799d01e961558b108a82db5bd2">ThreadIdentify::mtx</a></td></tr>
-<tr class="separator:a81d3c5799d01e961558b108a82db5bd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afdbb107a5e2c23feec95a22550860b84"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; id, std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00411.html#afdbb107a5e2c23feec95a22550860b84">ThreadIdentify::Working</a></td></tr>
-<tr class="separator:afdbb107a5e2c23feec95a22550860b84"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a68437fa1cc061fb41596b0ca3fc0637a"><td class="memItemLeft" align="right" valign="top">std::shared_mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00411.html#a68437fa1cc061fb41596b0ca3fc0637a">ThreadIdentify::wk_mtx</a></td></tr>
-<tr class="separator:a68437fa1cc061fb41596b0ca3fc0637a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">宏定义说明</h2>
-<a id="a1c725cadd47b1c5bcd058972a3b25649" name="a1c725cadd47b1c5bcd058972a3b25649"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1c725cadd47b1c5bcd058972a3b25649">&#9670;&nbsp;</a></span>GET_THREADNAME</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define GET_THREADNAME</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">buffer, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">buffersize&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td>&#160;&#160;&#160;buffer[0] = 0</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">在文件 <a class="el" href="a00284_source.html">ThreadIdentify.cpp</a> 第 <a class="el" href="a00284_source.html#l00039">39</a> 行定义.</p>
-
-</div>
-</div>
-<a id="afdf9b55ee6d4f7c29bc91aa7e057bdbe" name="afdf9b55ee6d4f7c29bc91aa7e057bdbe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afdf9b55ee6d4f7c29bc91aa7e057bdbe">&#9670;&nbsp;</a></span>SET_THREADNAME</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define SET_THREADNAME</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">name</td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Windows case </p>
-<p >pthread case </p>
-
-<p class="definition">在文件 <a class="el" href="a00284_source.html">ThreadIdentify.cpp</a> 第 <a class="el" href="a00284_source.html#l00033">33</a> 行定义.</p>
-
-</div>
-</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_23c80554d3059e776f1fa3b42eea10c0.html">libloader</a></li><li class="navelem"><a class="el" href="a00284.html">ThreadIdentify.cpp</a></li>
-    <li class="footer">生成于 2023年 二月 28日 星期二 12:14:07 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_23c80554d3059e776f1fa3b42eea10c0.html">libloader</a></li><li class="navelem"><a class="el" href="a00284.html">ThreadIdentify.h</a></li>
+    <li class="footer">生成于 2023年 四月 10日 星期一 00:26:32 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
     </body>

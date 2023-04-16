@@ -1,7 +1,7 @@
 var a00440 =
 [
-    [ "MiraiCPEvent", "a00440.html#ac85886499f0138dbdd661dea59c7596d", null ],
-    [ "~MiraiCPEvent", "a00440.html#a42d37c121315a51870afcc0b9306675a", null ],
-    [ "get_event_type", "a00440.html#a2df44719d2520c5197b90a9b17ffb34d", null ],
-    [ "getEventType", "a00440.html#a8b6261853c107755fd808ba2879c06d8", null ]
+    [ "Config", "a00444.html", "a00444" ],
+    [ "~IRawCommand", "a00440.html#a63339f9bad4e8dfe025b1f59272d6d81", null ],
+    [ "config", "a00440.html#a562a5a0ef7a17c47efdc613b6bb7aa4f", null ],
+    [ "onCommand", "a00440.html#a17487c6802a716861fc41cfda8ecfbd6", null ]
 ];

@@ -1,9 +1,14 @@
 var a00772 =
 [
-    [ "Face", "a00772.html#aa0b031aa2e11403be44150ebce3dbb93", null ],
-    [ "operator==", "a00772.html#a013671a618db0081ea79cbecec88190f", null ],
-    [ "toJson", "a00772.html#a866de1e28199fa542e760d0caeea434e", null ],
-    [ "toMiraiCode", "a00772.html#a6f40de2d5ca391a1fb5a67fefe55d3e8", null ],
-    [ "type", "a00772.html#a73da05ce5bcbf5d40106b2db705fecb5", null ],
-    [ "id", "a00772.html#a213699a327644eb13d2dc0a5f935cdd8", null ]
+    [ "string", "a00772.html#a426a5f32b7a2a56205d68c118579c216", null ],
+    [ "LoaderBaseException", "a00772.html#a60617c64dab00d3d3c64d012ba6dda9f", null ],
+    [ "~LoaderBaseException", "a00772.html#a5cae5e7ccb01c5851b2a06e95e81b907", null ],
+    [ "exceptionType", "a00772.html#a256993d5a0b22f6057ddd19a50bdc872", null ],
+    [ "getExceptionType", "a00772.html#a0c228099ad2d23da15b72123bb255f67", null ],
+    [ "raise", "a00772.html#aa78df717d01813327f31b3cc2b8b0efb", null ],
+    [ "warningRaise", "a00772.html#aefe83b46523df9d571e0f25b9283f793", null ],
+    [ "what", "a00772.html#a0928090784126f3081fb2b7e73c39b22", null ],
+    [ "errorMessage", "a00772.html#a4e41edc9cdc52ef5ed27b5f65938a928", null ],
+    [ "filename", "a00772.html#acfb18c7eb10c0dc2205c98e73ad0e647", null ],
+    [ "lineNum", "a00772.html#a260f9ce0d0fc07df498b22eec899eb68", null ]
 ];

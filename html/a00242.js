@@ -1,14 +1,16 @@
 var a00242 =
 [
-    [ "DECL_EXPORT_NAME", "a00242.html#a70f859fa14d7c0bb2a19e4af118ee014", null ],
-    [ "J_ARGS", "a00242.html#a919c2f594760ce688ff10318059a02b6", null ],
-    [ "J_ARGS_AND_STRING", "a00242.html#a959f3b2a150b26823662a8c5de4af002", null ],
-    [ "J_TO_STD_STRING", "a00242.html#a2b25927c16145a58f2e14e2a1a93a5d1", null ],
-    [ "JRETURNTYPE", "a00242.html#aa59fc32caa9a0e627c60a03a7a446c98", null ],
-    [ "JRETURNVAL", "a00242.html#a42e2560107678a5eee2d7fd5edccd19a", null ],
-    [ "JSTRING", "a00242.html#aae63af684167e1a19dc5e3332dbc7238", null ],
-    [ "LOADER_EXPORT", "a00242.html#acad5926f07c36447dfe9c95bc44c6569", null ],
-    [ "MIRAICP_JNIPPTR", "a00242.html#ac13ebc2b7d3f45e80eb756215e824ba6", null ],
-    [ "MIRAICP_JVER", "a00242.html#af300645522bf4453ad6f597e92b7c9cc", null ],
-    [ "SET_ENV", "a00242.html#a9cc65c0aaa7628e4d689bb2377099144", null ]
+    [ "loader_disableAllPlugins", "a00242.html#ad3da09d6c8c2db437e3169b96ddb2ae9", null ],
+    [ "loader_disablePluginById", "a00242.html#a04edf8e3eda892a478591ac18c05d9b5", null ],
+    [ "loader_enableAllPlugins", "a00242.html#a6cd5117c0adf23ed373edca65148a4fd", null ],
+    [ "loader_enablePluginById", "a00242.html#a3f1b6298effea4f44e85e20b0a915c1d", null ],
+    [ "loader_loadNewPlugin", "a00242.html#a8eada9f54700edf5a2aa262e5d006691", null ],
+    [ "loader_pluginEndByException", "a00242.html#abc4b73a1b14010cd0c6e713d6579ef8b", null ],
+    [ "loader_reloadPluginById", "a00242.html#ae2bf46cd649bb6979dd268bbc428e14c", null ],
+    [ "loader_resetThreadByIndex", "a00242.html#ae437cb8e58f9ddab116aa54e71d3891a", null ],
+    [ "loader_unloadPluginById", "a00242.html#a52292cf621eb6c36b43047ee054c411d", null ],
+    [ "loaderCVLock", "a00242.html#acadd04359cbcb7b046e3fdcf6e442ba9", null ],
+    [ "loaderWakeCV", "a00242.html#a46f4ab12479d61956e7dc81cfb19fef5", null ],
+    [ "shouldTick", "a00242.html#a404a95877baaa83650de382c8896d80f", null ],
+    [ "tick", "a00242.html#a77243f9ea0159dbbb040b5eaf14113e2", null ]
 ];

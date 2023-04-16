@@ -1,9 +1,9 @@
 var a00684 =
 [
-    [ "Super", "a00684.html#aaea4d406d7045381eee7914a5595f76d", null ],
-    [ "MemberData", "a00684.html#a438176d2b44593c197a36703fe1ea66e", null ],
-    [ "deserialize", "a00684.html#a1681ff4e1859f24abec68681fcf8b40e", null ],
-    [ "refreshInfo", "a00684.html#a904da5608fbac3b2258168b2f62e8c4b", null ],
-    [ "_anonymous", "a00684.html#abb4f4f2a91f1b18ab4d21f14b4d073ed", null ],
-    [ "_permission", "a00684.html#a556b696baad932311d072131f4ce1ab0", null ]
+    [ "LightApp", "a00684.html#a7cfcefeb788e3046fb321fab0a7b813a", null ],
+    [ "LightApp", "a00684.html#a1803b5deeb42af5f4770751aa4160a25", null ],
+    [ "operator==", "a00684.html#a9ceafd3b445af7cdd24c541e761ba655", null ],
+    [ "toJson", "a00684.html#a95599fbda45f4240f9241f6dfa6fe05d", null ],
+    [ "toMiraiCode", "a00684.html#ad1637240306cd3dd587044054381d991", null ],
+    [ "type", "a00684.html#abba0c279393369d31f7ebc88ee6756fd", null ]
 ];

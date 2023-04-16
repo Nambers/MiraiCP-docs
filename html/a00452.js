@@ -1,16 +1,8 @@
 var a00452 =
 [
-    [ "GroupMessageEvent", "a00452.html#a382a42e39f6370420f61a77bde517365", null ],
-    [ "chat", "a00452.html#a4cdd74f8d9a12c115899afc53088cde5", null ],
-    [ "chat", "a00452.html#a8d3c0c5bbda48132c31dca900f9d4931", null ],
-    [ "from", "a00452.html#ae81a0e1dec6235d786b79244ef3ae40b", null ],
-    [ "from", "a00452.html#a76b1e6102746a08259bef6d638a8c993", null ],
-    [ "get_event_type", "a00452.html#ad54cdae9c5b4b8119d307931278b0dab", null ],
-    [ "getMessageChain", "a00452.html#a505491fdd1287b85705d706d4c54e8da", null ],
-    [ "getMessageChain", "a00452.html#a3dd489fc2c775cb0997402525d461877", null ],
-    [ "nextMessage", "a00452.html#addb043788194a8bffd2eeddff17080ef", null ],
-    [ "senderNextMessage", "a00452.html#a67d98fb7d7214cb2bc916da47e3e5ce3", null ],
-    [ "group", "a00452.html#abac98c5b1373ad6c8483f9978952c553", null ],
-    [ "message", "a00452.html#a722dc1ca031c471c953c710367067ae7", null ],
-    [ "sender", "a00452.html#acd0e90e4fb7862986215aae7e47cb2d6", null ]
+    [ "DataType", "a00452.html#a43b7d1c1b54bb89e33ad610bbd46953f", null ],
+    [ "json", "a00452.html#a5b3c9b7d906d4cb7ee220e5e7e12c57f", null ],
+    [ "avatarUrl", "a00452.html#ac3f8a47de4224ae6fa769171cf657d40", null ],
+    [ "GetDataInternal", "a00452.html#ace946a4a220bd1573f1e42c9628a3a08", null ],
+    [ "nickOrNameCard", "a00452.html#a8b43a586164fafff5f807494d997ad5d", null ]
 ];
