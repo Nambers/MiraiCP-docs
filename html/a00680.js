@@ -1,11 +1,12 @@
 var a00680 =
 [
-    [ "FlashImage", "a00680.html#a6a97f2f10a1484d49882eeb51ddeb9e9", null ],
-    [ "FlashImage", "a00680.html#ae6562b2f43aede32b4746f50b9fcab5c", null ],
-    [ "deserialize", "a00680.html#a6f20e47833479a9669d78727527fe31f", null ],
-    [ "operator==", "a00680.html#aa01313f396a7623547ba0c2a409ef74c", null ],
-    [ "toImage", "a00680.html#ae2547ca115caa61991a59c5507028cb4", null ],
-    [ "toJson", "a00680.html#a55dd67b46186624fd4882406e16ff2c2", null ],
-    [ "toMiraiCode", "a00680.html#ac2edbd27eb5d904b56a599a176cf416f", null ],
-    [ "type", "a00680.html#ad31100fa57d8f8cf79a2267cfe10ae97", null ]
+    [ "PlainText", "a00680.html#af0ffa277c961cde9e5fc0ecc23ff224c", null ],
+    [ "PlainText", "a00680.html#ab68df61c1fb45cdbb5fd04b4d29dd220", null ],
+    [ "PlainText", "a00680.html#a1d7f0c7b72a55d799127a76420a1bec3", null ],
+    [ "PlainText", "a00680.html#a42816451964e21640768a4c0b34ce09f", null ],
+    [ "PlainText", "a00680.html#a0df9da1e22bad53e1f491adf5fa98032", null ],
+    [ "operator==", "a00680.html#a6c8a471bcf5cd3bcc65f6d75097ce286", null ],
+    [ "toJson", "a00680.html#a0fb7ad4530e4602d09c388d44fc4bc00", null ],
+    [ "toMiraiCode", "a00680.html#a2cbc08df42d84ad5c50e2dae680c0eb4", null ],
+    [ "type", "a00680.html#a440b92da26612820bd700e2ce9a5e999", null ]
 ];

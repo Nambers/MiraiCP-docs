@@ -1,14 +1,16 @@
 var a00083 =
 [
-    [ "DECL_EXPORT_NAME", "a00083.html#a70f859fa14d7c0bb2a19e4af118ee014", null ],
-    [ "J_ARGS", "a00083.html#a919c2f594760ce688ff10318059a02b6", null ],
-    [ "J_ARGS_AND_STRING", "a00083.html#a959f3b2a150b26823662a8c5de4af002", null ],
-    [ "J_TO_STD_STRING", "a00083.html#a2b25927c16145a58f2e14e2a1a93a5d1", null ],
-    [ "JRETURNTYPE", "a00083.html#aa59fc32caa9a0e627c60a03a7a446c98", null ],
-    [ "JRETURNVAL", "a00083.html#a42e2560107678a5eee2d7fd5edccd19a", null ],
-    [ "JSTRING", "a00083.html#aae63af684167e1a19dc5e3332dbc7238", null ],
-    [ "LOADER_EXPORT", "a00083.html#acad5926f07c36447dfe9c95bc44c6569", null ],
-    [ "MIRAICP_JNIPPTR", "a00083.html#ac13ebc2b7d3f45e80eb756215e824ba6", null ],
-    [ "MIRAICP_JVER", "a00083.html#af300645522bf4453ad6f597e92b7c9cc", null ],
-    [ "SET_ENV", "a00083.html#a9cc65c0aaa7628e4d689bb2377099144", null ]
+    [ "MiraiCP::Tools::idpair", "a00744.html", "a00744" ],
+    [ "std::hash< MiraiCP::Tools::idpair >", "a00748.html", "a00748" ],
+    [ "escapeFromMiraiCode", "a00083.html#ae7bf212fddf60af59042677c3a7753a5", null ],
+    [ "escapeToMiraiCode", "a00083.html#a01f4fe41f8bef55b95953750f5cfb0c2", null ],
+    [ "icompareChar", "a00083.html#a795aadb1af1cd4b85e9b48b5bb5b246d", null ],
+    [ "iequal", "a00083.html#a0b52c701b3d96bf42b4d67c21f1dab2d", null ],
+    [ "replace", "a00083.html#a939c6b8139fec1968a2d8b45bf3e46d0", null ],
+    [ "split", "a00083.html#aa9d4bfd5269173c2f6aed44f79bf976e", null ],
+    [ "starts_with", "a00083.html#ac1c9173c6218044be45605d07874e99b", null ],
+    [ "StringToVector", "a00083.html#ab67b5a25139033a0e048a23f84b88b4d", null ],
+    [ "VectorToString", "a00083.html#a01e59cf61789edde5a8b6cf6e882dee6", null ],
+    [ "VectorToString", "a00083.html#a0509568e9b7b09efc86e2577ee03797e", null ],
+    [ "VectorToString", "a00083.html#a913031600a073d2166b905a535e599f2", null ]
 ];

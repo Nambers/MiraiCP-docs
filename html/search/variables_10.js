@@ -1,17 +1,19 @@
 var searchData=
 [
-  ['params_0',['params',['../a00604.html#a0be35844059d66dc274fcf84de90e368',1,'MiraiCP::Group::OnlineAnnouncement::params()'],['../a00608.html#ab1ff075cae77526d00c8f96b135c2873',1,'MiraiCP::Group::OfflineAnnouncement::params()']]],
-  ['path_1',['path',['../a00700.html#ad5c2c64b98d4ac3ee79f40640090b649',1,'MiraiCP::RemoteFile::path()'],['../a00832.html#ae432fc77d05928e6090714a079c002d3',1,'LibLoader::PluginData::path()']]],
-  ['paused_2',['paused',['../a00852.html#a27c81a6ada2657ac00c748531326130d',1,'Antares::ThreadPoolBase']]],
-  ['picurl_3',['picUrl',['../a00716.html#a0615bbf6886985e1438ab1493cdc012a',1,'MiraiCP::MusicShare']]],
-  ['pinned_4',['pinned',['../a00600.html#a1045432e9f2c822b1150bc278e99de05',1,'MiraiCP::Group::AnnouncementParams']]],
-  ['plugin_5',['plugin',['../a00460.html#acfd86c042e577055f5047cb515e7bdfa',1,'MiraiCP::CPPPlugin']]],
-  ['pluginlist_5fmtx_6',['pluginlist_mtx',['../a00836.html#af3a6d5b92816ff933ab2eb101b355ae2',1,'LibLoader::PluginListManager']]],
-  ['pool_7',['pool',['../a00414.html#a343ec36721fc4bf72fd64e712c71ad1d',1,'Antares']]],
-  ['prefix_8',['prefix',['../a00660.html#a207f61ebfd79e0ae18833f2edf954595',1,'MiraiCP::SingleMessage']]],
-  ['prefixoption_9',['preFixOption',['../a00444.html#af40c74e212dd165a72e7b2e8769e0dcb',1,'MiraiCP::IRawCommand::Config']]],
-  ['preview_10',['preview',['../a00576.html#a7bc79f77b1ffff231a263faf4633949b',1,'MiraiCP::ForwardedMessageDisplayStrategy']]],
-  ['primaryname_11',['primaryName',['../a00444.html#a21a4c0a9fe2032ce10efbd76c5388dce',1,'MiraiCP::IRawCommand::Config']]],
-  ['processor_12',['processor',['../a00468.html#ab78af8afd9a5121e7ed0a1d7237f2b20',1,'MiraiCP::Event']]],
-  ['publicationtime_13',['publicationTime',['../a00604.html#a60b71b2b35023e7774485f696c0c84f7',1,'MiraiCP::Group::OnlineAnnouncement']]]
+  ['params_0',['params',['../a00620.html#af1fabaec4eedb209f7b42ed2baa45663',1,'MiraiCP::internal::OfflineAnnouncement::params'],['../a00616.html#ac9c435d4fe1a01e1c7eb8ee61fe6b518',1,'MiraiCP::internal::OnlineAnnouncement::params']]],
+  ['path_1',['path',['../a00716.html#ad5c2c64b98d4ac3ee79f40640090b649',1,'MiraiCP::RemoteFile::path'],['../a00924.html#ae432fc77d05928e6090714a079c002d3',1,'LibLoader::PluginData::path']]],
+  ['paused_2',['paused',['../a00944.html#a27c81a6ada2657ac00c748531326130d',1,'Antares::ThreadPoolBase']]],
+  ['payload_3',['payload',['../a00768.html#a41ed1122d41c2eb3e85a9e148c3f719b',1,'MiraiCP::PluginInterface::PayLoadInfo::payload'],['../a00888.html#a62cfc944716bf1f5d4498cfec1eba7c6',1,'LibLoader::MessageProxy::payload']]],
+  ['payload_5fid_4',['payload_id',['../a00768.html#ab9a628101d177c6f0d1da0f5f13a83d8',1,'MiraiCP::PluginInterface::PayLoadInfo']]],
+  ['picurl_5',['picUrl',['../a00732.html#a0615bbf6886985e1438ab1493cdc012a',1,'MiraiCP::MusicShare']]],
+  ['pinned_6',['pinned',['../a00612.html#abfa445e7bc7a473d8087f777a94fbcff',1,'MiraiCP::internal::AnnouncementParams']]],
+  ['plugin_7',['plugin',['../a00472.html#acfd86c042e577055f5047cb515e7bdfa',1,'MiraiCP::CPPPlugin::plugin'],['../a00888.html#a1214455da62f9ba479c83aa51f98dead',1,'LibLoader::MessageProxy::plugin']]],
+  ['pluginlist_5fmtx_8',['pluginlist_mtx',['../a00928.html#ab8d33d2f35ab56ca60c4f27cc352ad4b',1,'LibLoader::PluginManager']]],
+  ['pool_9',['pool',['../a00434.html#a343ec36721fc4bf72fd64e712c71ad1d',1,'Antares']]],
+  ['prefix_10',['prefix',['../a00676.html#a207f61ebfd79e0ae18833f2edf954595',1,'MiraiCP::SingleMessage']]],
+  ['prefixoption_11',['preFixOption',['../a00456.html#af40c74e212dd165a72e7b2e8769e0dcb',1,'MiraiCP::IRawCommand::Config']]],
+  ['preview_12',['preview',['../a00592.html#a7bc79f77b1ffff231a263faf4633949b',1,'MiraiCP::ForwardedMessageDisplayStrategy']]],
+  ['primaryname_13',['primaryName',['../a00456.html#a21a4c0a9fe2032ce10efbd76c5388dce',1,'MiraiCP::IRawCommand::Config']]],
+  ['processor_14',['processor',['../a00480.html#ab78af8afd9a5121e7ed0a1d7237f2b20',1,'MiraiCP::Event::processor'],['../a00884.html#a2ea090a88f73398ceb4171f694da6b57',1,'LibLoader::MessageManager::processor']]],
+  ['publicationtime_15',['publicationTime',['../a00616.html#acdb964cca7c150b8eb677f9e8a760999',1,'MiraiCP::internal::OnlineAnnouncement']]]
 ];

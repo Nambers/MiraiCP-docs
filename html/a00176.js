@@ -1,20 +1,23 @@
 var a00176 =
 [
-    [ "LibLoader::LoaderApi::interface_funcs", "a00736.html", "a00736" ],
-    [ "LOADER_API_COUNT", "a00176.html#acbac5e7c5f4941a592808414fe5caada", null ],
-    [ "task_func", "a00176.html#a495bf58ac891b805834e2cc7fa49f2f9", null ],
-    [ "task_func_with_id", "a00176.html#a78fdbf75bfb384856ebf9ffb28b21b1f", null ],
-    [ "disableAllPlugins", "a00176.html#a9fed350b41c9fb052ca061e3866a66a4", null ],
-    [ "disablePluginById", "a00176.html#a08a6725cb4a33402962f2b67130e8bac", null ],
-    [ "enableAllPlugins", "a00176.html#a2a1eb02235baa6f86d8e8176b4364a72", null ],
-    [ "enablePluginById", "a00176.html#a65331125b91df8d475fd7b74bf1bb8e9", null ],
-    [ "loadNewPlugin", "a00176.html#aff28b2ad21b60cabc3c735a4b9562df9", null ],
-    [ "loggerInterface", "a00176.html#a4def9f25b87d48d142d6752184aadc92", null ],
-    [ "pluginOperation", "a00176.html#a4c6ac4cf4ba5ff0adb7656708bbb67d0", null ],
-    [ "pushTask", "a00176.html#a4dc4ecd3d86eb509647b3130a5239ecf", null ],
-    [ "pushTaskWithId", "a00176.html#ae86871d4f062f45edee7501e0596cd3d", null ],
-    [ "reloadPluginById", "a00176.html#ad038612c1e2a43498411f0b77240e20b", null ],
-    [ "showAllPluginId", "a00176.html#a1dc2ed7eb6845af70bc796bb347b74ef", null ],
-    [ "timer", "a00176.html#a05f1524120bb7a5a65abbde063d9e557", null ],
-    [ "unloadPluginById", "a00176.html#ace6aa7d8b5baf1f2be8908a5e103c92a", null ]
+    [ "MiraiCP::MessageTraits< T, t_blocking >", "a00788.html", "a00788" ],
+    [ "MiraiCP::OperationMessage", "a00792.html", "a00792" ],
+    [ "MiraiCP::LoggerMessage", "a00796.html", "a00796" ],
+    [ "MiraiCP::PluginIdMessage", "a00800.html", null ],
+    [ "MiraiCP::PushTaskMessage", "a00804.html", "a00804" ],
+    [ "MiraiCP::PushTaskWithIdMessage", "a00808.html", "a00808" ],
+    [ "MiraiCP::TimerMessage", "a00812.html", "a00812" ],
+    [ "MiraiCP::AdminMessage", "a00816.html", "a00816" ],
+    [ "GEN_MSG_BODY", "a00176.html#a6e52c6f03dbb64a18bd355a305ceea04", null ],
+    [ "Type", "a00176.html#af76683b14290aaf91c64ac12113776e1", [
+      [ "OperationMessage", "a00176.html#af76683b14290aaf91c64ac12113776e1ad001b03caf2b72c575c9cd92b8e5fe54", null ],
+      [ "LoggerMessage", "a00176.html#af76683b14290aaf91c64ac12113776e1acc3ba26a4777d2aac9e1dc91e8787a3a", null ],
+      [ "PluginIdMessage", "a00176.html#af76683b14290aaf91c64ac12113776e1a06d7c29ab254c33645315840dab1472d", null ],
+      [ "PushTaskMessage", "a00176.html#af76683b14290aaf91c64ac12113776e1aaedb92c2670d5f10d3bb43e80c528bab", null ],
+      [ "PushTaskWithIdMessage", "a00176.html#af76683b14290aaf91c64ac12113776e1a7c4926d28546aa14d5ffb3afb7353107", null ],
+      [ "TimerMessage", "a00176.html#af76683b14290aaf91c64ac12113776e1abde0907743b698e9af4124d25faca4b9", null ],
+      [ "AdminMessage", "a00176.html#af76683b14290aaf91c64ac12113776e1a1ab35c00c7bc5490674dfaf35c218806", null ],
+      [ "MESSAGE_TYPE_COUNT", "a00176.html#af76683b14290aaf91c64ac12113776e1a4a4bfde69dfa6da9854e22d38d60c89e", null ],
+      [ "RET", "a00176.html#af76683b14290aaf91c64ac12113776e1a13b1279621b1c6beb2a97958e6910fd8", null ]
+    ] ]
 ];

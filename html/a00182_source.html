@@ -4,9 +4,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiraiCP: MiraiCPStringInternal.h 源文件</title>
+<title>MiraiCP: commonTypes.h 源文件</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -35,7 +35,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MiraiCP
-   &#160;<span id="projectnumber">v2.15.0-RC2</span>
+   &#160;<span id="projectnumber">v2.16.0</span>
    </div>
    <div id="projectbrief">MiraiCP api document</div>
   </td>
@@ -44,10 +44,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.9.2 -->
+<!-- 制作者 Doxygen 1.9.8 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search",'搜索','.html');
+var searchBox = new SearchBox("searchBox", "search/",'.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -61,6 +61,11 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -87,13 +92,20 @@ $(document).ready(function(){initNavTree('a00182_source.html',''); initResizable
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">MiraiCPStringInternal.h</div></div>
+  <div class="headertitle"><div class="title">commonTypes.h</div></div>
 </div><!--header-->
 <div class="contents">
 <a href="a00182.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// Copyright (c) 2022. Eritque arcus and contributors.</span></div>
@@ -112,153 +124,130 @@ $(document).ready(function(){initNavTree('a00182_source.html',''); initResizable
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">// along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</span></div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">//</span></div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#ifndef MIRAICP_PRO_MIRAICPSTRINGINTERNAL_H</span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#define MIRAICP_PRO_MIRAICPSTRINGINTERNAL_H</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#ifndef MIRAICP_PRO_COMMONTYPES_H</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#define MIRAICP_PRO_COMMONTYPES_H</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment">// don&#39;t create cpp for this header</span></div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &quot;<a class="code" href="a00044.html">MiraiCPMacros.h</a>&quot;</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">// -----------------------</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &lt;cassert&gt;</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="keyword">namespace </span><a class="code hl_namespace" href="a00397.html">MiraiCP</a> {</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="keyword">class </span>MiraiCPString;</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="a00740.html">   32</a></span>    <span class="keyword">class </span><a class="code hl_define" href="a00044.html#aa40df2b825bdde9207f3e87b140235c3">MIRAICP_EXPORT</a> <a class="code hl_class" href="a00740.html">MiraiCPStringview</a> final {</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="a00740.html#a63c47ce4d25427267565197eda409d8e">   33</a></span>        <span class="keyword">using</span> <span class="keywordtype">string</span> = std::string;</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="a00740.html#ab3a0624992f04528d1151e670af89fef">   36</a></span>        <span class="keyword">const</span> <span class="keywordtype">char</span> *str = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="a00740.html#a729cb8ab61ef2dd5b03bbb4df0a31455">   37</a></span>        <span class="keywordtype">size_t</span> _size = 0;</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="a00740.html#a02f42c8676dac0fcaa20fd6de0e8cbe7">   40</a></span>        <a class="code hl_function" href="a00740.html#a02f42c8676dac0fcaa20fd6de0e8cbe7">MiraiCPStringview</a>() = <span class="keyword">delete</span>;</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="a00740.html#a692061d7858de87f5ac6403bd6f75b99">   42</a></span>        <a class="code hl_function" href="a00740.html#a692061d7858de87f5ac6403bd6f75b99">MiraiCPStringview</a>(<span class="keyword">const</span> <a class="code hl_class" href="a00740.html">MiraiCPStringview</a> &amp;other) = <span class="keywordflow">default</span>;</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="a00740.html#a175435d3624c619551695f1791cb1c49">   44</a></span>        <a class="code hl_function" href="a00740.html#a175435d3624c619551695f1791cb1c49">MiraiCPStringview</a>(<a class="code hl_class" href="a00740.html">MiraiCPStringview</a> &amp;&amp;temp) <span class="keyword">noexcept</span> = <span class="keywordflow">default</span>;</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <a class="code hl_class" href="a00740.html">MiraiCPStringview</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *char_str); <span class="comment">// NOLINT(google-explicit-constructor)</span></div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        <a class="code hl_class" href="a00740.html">MiraiCPStringview</a>(<span class="keyword">const</span> std::string &amp;string_str); <span class="comment">// NOLINT(google-explicit-constructor)</span></div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <a class="code hl_class" href="a00740.html">MiraiCPStringview</a>(<span class="keyword">const</span> <a class="code hl_class" href="a00744.html">MiraiCPString</a> &amp;miraiCPString); <span class="comment">// NOLINT(google-explicit-constructor)</span></div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="a00740.html#a6c92cb458a70104d24bfccd9058630ea">   52</a></span>        <a class="code hl_function" href="a00740.html#a6c92cb458a70104d24bfccd9058630ea">~MiraiCPStringview</a>() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="a00740.html#af6a8e3f5836d4665e7317b7026685e91">   55</a></span>        [[nodiscard]] <span class="keywordtype">bool</span> <a class="code hl_function" href="a00740.html#af6a8e3f5836d4665e7317b7026685e91">isEmpty</a>()<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>            <span class="keywordflow">return</span> _size == 0;</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        }</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="a00740.html#acc90fdac094544c4ddd9d6fd13baa5da">   59</a></span>        [[nodiscard]] <span class="keyword">const</span> <span class="keywordtype">char</span> *<a class="code hl_function" href="a00740.html#acc90fdac094544c4ddd9d6fd13baa5da">c_str</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> str; }</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="a00740.html#a2baf5152efc57efffd1fb79f2ad3b4fd">   61</a></span>        [[nodiscard]] <span class="keywordtype">size_t</span> <a class="code hl_function" href="a00740.html#a2baf5152efc57efffd1fb79f2ad3b4fd">size</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _size; }</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    };</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="comment">// this class is used to ensure data consistency between dynamic libs</span></div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="comment">// note: DO NOT use this directly;</span></div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="comment">// always convert to const char* or std::string before using.</span></div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="a00744.html">   69</a></span><span class="comment"></span>    <span class="keyword">class </span><a class="code hl_define" href="a00044.html#aa40df2b825bdde9207f3e87b140235c3">MIRAICP_EXPORT</a> <a class="code hl_class" href="a00744.html">MiraiCPString</a> final {</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="a00744.html#a23179ec928a1d6435fabb02326c6e247">   70</a></span>        <span class="keyword">using</span> <span class="keywordtype">string</span> = std::string;</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="a00744.html#aeb14e5f57bc3dae205e6eed695b61113">   73</a></span>        <span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keyword">decltype</span>(&amp;::std::free) std_free_ptr = &amp;::std::free;</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        <span class="comment">// to keep integration and safe for empty construction/deconstruction, always initialize here</span></div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="a00744.html#ae296eb86d0acfd5b1a5b1264f5a01a33">   77</a></span>        <span class="keywordtype">char</span> *str = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="a00744.html#ab6bb3947d9db2fd407b8c20f0a768183">   78</a></span>        <span class="keywordtype">size_t</span> _size = 0;</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="a00744.html#a411445a053abae2778bd0347523a670d">   79</a></span>        <span class="keyword">decltype</span>(&amp;::std::free) free_this = std_free_ptr; <span class="comment">// specify which free() to use; ensure deconstruction is paired to construction</span></div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="a00744.html#a10535c2483c0959b0997c2514d4932e4">   82</a></span>        <a class="code hl_function" href="a00744.html#a10535c2483c0959b0997c2514d4932e4">MiraiCPString</a>() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        <a class="code hl_class" href="a00744.html">MiraiCPString</a>(<span class="keyword">const</span> <a class="code hl_class" href="a00744.html">MiraiCPString</a> &amp;other);</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &quot;<a class="code" href="a00041.html">MiraiCPMacros.h</a>&quot;</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment">// -----------------------</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#include &quot;<a class="code" href="a00044.html">PluginConfig.h</a>&quot;</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#include &quot;<a class="code" href="a00179.html">loaderApiInternal.h</a>&quot;</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &quot;polym/Msg.hpp&quot;</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> {</div>
+<div class="foldopen" id="foldopen00030" data-start="{" data-end="};">
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="a00760.html">   30</a></span><span class="keyword">struct </span><a class="code hl_struct" href="a00760.html">PluginMessageHandles_C</a> {</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="a00760.html#a32e2abd7afb8c622ce7974a90034b76a">   31</a></span>    <span class="keywordtype">void</span> *<a class="code hl_variable" href="a00760.html#a32e2abd7afb8c622ce7974a90034b76a">try_get_payload</a>;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="a00760.html#a459b1b840e9187f6a16c8d0806eba789">   32</a></span>    <span class="keywordtype">void</span> *<a class="code hl_variable" href="a00760.html#a459b1b840e9187f6a16c8d0806eba789">delete_one_msg</a>;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="a00760.html#a875079f54263a08a2fb4a145d5ba2d20">   33</a></span>    <span class="keywordtype">void</span> *<a class="code hl_variable" href="a00760.html#a875079f54263a08a2fb4a145d5ba2d20">make_response</a>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>};</div>
+</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="foldopen" id="foldopen00036" data-start="{" data-end="};">
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="a00764.html">   36</a></span><span class="keyword">struct </span><a class="code hl_struct" href="a00764.html">PluginArgv_C</a> {</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="a00764.html#a4016b48b027aa8aa09ae1166cc6bd88d">   37</a></span>    void (*<a class="code hl_variable" href="a00764.html#a4016b48b027aa8aa09ae1166cc6bd88d">wake_loader</a>)();</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>};</div>
+</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>}</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="foldopen" id="foldopen00041" data-start="{" data-end="}">
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="a00424.html">   41</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="a00424.html">MiraiCP::PluginInterface</a> {</div>
+<div class="foldopen" id="foldopen00042" data-start="{" data-end="};">
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="a00768.html">   42</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="a00768.html">PayLoadInfo</a> {</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="a00768.html#a0ab519c47416f69ff5380b90bb221427">   43</a></span>        <span class="keyword">typedef</span> <span class="keywordtype">void</span> *<a class="code hl_typedef" href="a00768.html#a0ab519c47416f69ff5380b90bb221427">payload_ptr</a>;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="a00768.html#a41ed1122d41c2eb3e85a9e148c3f719b">   44</a></span>        <span class="keywordtype">void</span> *<a class="code hl_variable" href="a00768.html#a41ed1122d41c2eb3e85a9e148c3f719b">payload</a>;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="a00768.html#ab9a628101d177c6f0d1da0f5f13a83d8">   45</a></span>        <span class="keywordtype">int</span> <a class="code hl_variable" href="a00768.html#ab9a628101d177c6f0d1da0f5f13a83d8">payload_id</a>;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    };</div>
+</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="a00424.html#a40272b4bfc79023eed93de263751364b">   47</a></span>    <span class="keyword">typedef</span> <a class="code hl_struct" href="a00768.html">MiraiCP::PluginInterface::PayLoadInfo</a> (*<a class="code hl_typedef" href="a00424.html#a40272b4bfc79023eed93de263751364b">message_queue_handle</a>)();</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="a00424.html#ab534007973470b0fee5e3ed32c59da23">   48</a></span>    <span class="keyword">typedef</span> void (*<a class="code hl_typedef" href="a00424.html#ab534007973470b0fee5e3ed32c59da23">message_delete_handle</a>)();</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="a00424.html#aa1ae927cd07b9029ffd8697e38ec27df">   49</a></span>    <span class="keyword">typedef</span> void (*<a class="code hl_typedef" href="a00424.html#aa1ae927cd07b9029ffd8697e38ec27df">message_ret_handle</a>)(PolyM::MsgUID, <a class="code hl_class" href="a00784.html">MiraiCPString</a>);</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="foldopen" id="foldopen00051" data-start="{" data-end="};">
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="a00772.html">   51</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="a00772.html">PluginMessageHandles</a> {</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="a00772.html#a4bc0d9d2018a6d437be0ce84d5d47bc2">   52</a></span>        <a class="code hl_typedef" href="a00424.html#a40272b4bfc79023eed93de263751364b">message_queue_handle</a> <a class="code hl_variable" href="a00772.html#a4bc0d9d2018a6d437be0ce84d5d47bc2">try_get_payload</a>{};</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="a00772.html#ad4a019158268135638b7e1c1f55e2384">   53</a></span>        <a class="code hl_typedef" href="a00424.html#ab534007973470b0fee5e3ed32c59da23">message_delete_handle</a> <a class="code hl_variable" href="a00772.html#ad4a019158268135638b7e1c1f55e2384">delete_one_msg</a>{};</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="a00772.html#a6d256ab310454204ee0d5b6ec4bc5e26">   54</a></span>        <a class="code hl_typedef" href="a00424.html#aa1ae927cd07b9029ffd8697e38ec27df">message_ret_handle</a> <a class="code hl_variable" href="a00772.html#a6d256ab310454204ee0d5b6ec4bc5e26">make_response</a>{};</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="foldopen" id="foldopen00056" data-start="{" data-end="}">
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="a00772.html#a62b91390b919ca8df0b6036c7e07f326">   56</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="a00772.html#a62b91390b919ca8df0b6036c7e07f326">clear</a>() {</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>            <a class="code hl_variable" href="a00772.html#a4bc0d9d2018a6d437be0ce84d5d47bc2">try_get_payload</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>            <a class="code hl_variable" href="a00772.html#ad4a019158268135638b7e1c1f55e2384">delete_one_msg</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>            <a class="code hl_variable" href="a00772.html#a6d256ab310454204ee0d5b6ec4bc5e26">make_response</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        }</div>
+</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="foldopen" id="foldopen00062" data-start="{" data-end="}">
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="a00772.html#aba127f01f9e293a1ba70913d20c25236">   62</a></span>        [[nodiscard]] <a class="code hl_struct" href="a00760.html">PluginMessageHandles_C</a> <a class="code hl_function" href="a00772.html#aba127f01f9e293a1ba70913d20c25236">toC</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>            <span class="keywordflow">return</span> {<span class="keyword">reinterpret_cast&lt;</span><span class="keywordtype">void</span> *<span class="keyword">&gt;</span>(<a class="code hl_variable" href="a00772.html#a4bc0d9d2018a6d437be0ce84d5d47bc2">try_get_payload</a>), <span class="keyword">reinterpret_cast&lt;</span><span class="keywordtype">void</span> *<span class="keyword">&gt;</span>(<a class="code hl_variable" href="a00772.html#ad4a019158268135638b7e1c1f55e2384">delete_one_msg</a>), <span class="keyword">reinterpret_cast&lt;</span><span class="keywordtype">void</span> *<span class="keyword">&gt;</span>(<a class="code hl_variable" href="a00772.html#a6d256ab310454204ee0d5b6ec4bc5e26">make_response</a>)};</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        }</div>
+</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="foldopen" id="foldopen00066" data-start="{" data-end="}">
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="a00772.html#a592c612d7c3e0199341ea1fe0e7c099d">   66</a></span>        <span class="keyword">static</span> <a class="code hl_struct" href="a00772.html">PluginMessageHandles</a> <a class="code hl_function" href="a00772.html#a592c612d7c3e0199341ea1fe0e7c099d">fromC</a>(<a class="code hl_struct" href="a00760.html">PluginMessageHandles_C</a> handles) {</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>            <span class="keywordflow">return</span> {<span class="keyword">reinterpret_cast&lt;</span><a class="code hl_typedef" href="a00424.html#a40272b4bfc79023eed93de263751364b">message_queue_handle</a><span class="keyword">&gt;</span>(handles.<a class="code hl_variable" href="a00760.html#a32e2abd7afb8c622ce7974a90034b76a">try_get_payload</a>),</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>                    <span class="keyword">reinterpret_cast&lt;</span><a class="code hl_typedef" href="a00424.html#ab534007973470b0fee5e3ed32c59da23">message_delete_handle</a><span class="keyword">&gt;</span>(handles.<a class="code hl_variable" href="a00760.html#a459b1b840e9187f6a16c8d0806eba789">delete_one_msg</a>),</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>                    <span class="keyword">reinterpret_cast&lt;</span><a class="code hl_typedef" href="a00424.html#aa1ae927cd07b9029ffd8697e38ec27df">message_ret_handle</a><span class="keyword">&gt;</span>(handles.<a class="code hl_variable" href="a00760.html#a875079f54263a08a2fb4a145d5ba2d20">make_response</a>)};</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        }</div>
+</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    };</div>
+</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>} <span class="comment">// namespace MiraiCP::PluginInterface</span></div>
+</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="foldopen" id="foldopen00074" data-start="{" data-end="}">
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="a00425.html">   74</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="a00425.html">LibLoader</a> {</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="a00425.html#a927f212ce2db84cca1f02ec95aa62322">   75</a></span>    <span class="keyword">typedef</span> <span class="keywordtype">void</span> *<a class="code hl_typedef" href="a00425.html#a927f212ce2db84cca1f02ec95aa62322">plugin_handle</a>;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="a00425.html#a03f4f966e06582e099eeda25f7f83f8d">   77</a></span>    <span class="keyword">typedef</span> <a class="code hl_struct" href="a00760.html">PluginMessageHandles_C</a> (*<a class="code hl_typedef" href="a00425.html#a03f4f966e06582e099eeda25f7f83f8d">plugin_entrance_func_ptr</a>)(<a class="code hl_struct" href="a00764.html">PluginArgv_C</a>);</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="a00425.html#add2feb317221acb4f979e61d5e96d37f">   79</a></span>    <span class="keyword">typedef</span> int (*<a class="code hl_typedef" href="a00425.html#add2feb317221acb4f979e61d5e96d37f">plugin_event_func_ptr</a>)(<span class="keyword">const</span> <a class="code hl_class" href="a00784.html">MiraiCP::MiraiCPString</a> &amp;);</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="a00425.html#afc631e11894f5d4eedc3e3ea550795fd">   81</a></span>    <span class="keyword">typedef</span> int (*<a class="code hl_typedef" href="a00425.html#afc631e11894f5d4eedc3e3ea550795fd">plugin_func_ptr</a>)();</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno"><a class="line" href="a00425.html#a776f4f6bb745b814e23461c7742b9682">   83</a></span>    <span class="keyword">typedef</span> <span class="keyword">const</span> <a class="code hl_struct" href="a00444.html">MiraiCP::PluginConfig</a> *(*plugin_info_func_ptr)();</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>} <span class="comment">// namespace LibLoader</span></div>
+</div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        <a class="code hl_class" href="a00744.html">MiraiCPString</a>(<a class="code hl_class" href="a00744.html">MiraiCPString</a> &amp;&amp;temp) <span class="keyword">noexcept</span>;</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        <a class="code hl_class" href="a00744.html">MiraiCPString</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *char_str); <span class="comment">// NOLINT(google-explicit-constructor)</span></div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        <a class="code hl_class" href="a00744.html">MiraiCPString</a>(<span class="keyword">const</span> std::string &amp;string_str); <span class="comment">// NOLINT(google-explicit-constructor)</span></div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        <a class="code hl_class" href="a00744.html">~MiraiCPString</a>();</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        <span class="comment">// call if _size is set to non-zero</span></div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        <span class="comment">// allocate memory for str</span></div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        <span class="keywordtype">void</span> construction();</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno"><a class="line" href="a00744.html#aa3633b0912b856ddce567143f001c682">  100</a></span>        [[nodiscard]] <span class="keywordtype">bool</span> <a class="code hl_function" href="a00744.html#aa3633b0912b856ddce567143f001c682">isEmpty</a>()<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>            <span class="keywordflow">return</span> _size == 0;</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        }</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno"><a class="line" href="a00744.html#a40af897f51c62faf7ef4468017d42d3f">  104</a></span>        [[nodiscard]] std::string <a class="code hl_function" href="a00744.html#a40af897f51c62faf7ef4468017d42d3f">toString</a>()<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>            <span class="keywordflow">if</span> (str == <span class="keyword">nullptr</span> || _size == 0) <span class="keywordflow">return</span> {};</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>            <span class="keywordflow">return</span> {str};</div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        }</div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno"><a class="line" href="a00744.html#aba1de80f20a55d6cb8124550a10e8123">  109</a></span>        <span class="keyword">operator</span> std::string()<span class="keyword"> const </span>{ <span class="comment">// NOLINT(google-explicit-constructor)</span></div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>            <span class="keywordflow">return</span> toString();</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>        }</div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span> </div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>        <span class="comment">// for safe destruction, DO NOT provide move conversion to char*</span></div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        <span class="comment">// the return value of this method can always be deleted by delete[] and is never nullptr</span></div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>        [[nodiscard]] <span class="keyword">const</span> <span class="keywordtype">char</span> *copyToCharPtr() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno"><a class="line" href="a00744.html#a4d61529cddcbabb51a084e2a1a95bda6">  117</a></span>        [[nodiscard]] <span class="keyword">const</span> <span class="keywordtype">char</span> *<a class="code hl_function" href="a00744.html#a4d61529cddcbabb51a084e2a1a95bda6">c_str</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> str; }</div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span> </div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno"><a class="line" href="a00744.html#a1ca51b393eabd74a803ca923c0995d12">  119</a></span>        [[nodiscard]] <span class="keywordtype">size_t</span> <a class="code hl_function" href="a00744.html#a1ca51b393eabd74a803ca923c0995d12">size</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _size; }</div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span> </div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>        <span class="keywordtype">void</span> reserve(<span class="keywordtype">size_t</span> inSize);</div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span> </div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno"><a class="line" href="a00744.html#ad5d30755a2922a509bd7d4869cc9841a">  124</a></span>        [[nodiscard]] <span class="keywordtype">char</span> *<a class="code hl_function" href="a00744.html#ad5d30755a2922a509bd7d4869cc9841a">data</a>() { <span class="keywordflow">return</span> str; }</div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span> </div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>        <span class="keywordtype">bool</span> operator==(<span class="keyword">const</span> <a class="code hl_class" href="a00744.html">MiraiCPString</a> &amp;another) <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span> </div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>        <a class="code hl_class" href="a00744.html">MiraiCPString</a> &amp;operator=(<span class="keyword">const</span> <a class="code hl_class" href="a00744.html">MiraiCPString</a> &amp;another);</div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span> </div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>        <a class="code hl_class" href="a00744.html">MiraiCPString</a> &amp;operator=(<a class="code hl_class" href="a00744.html">MiraiCPString</a> &amp;&amp;another) <span class="keyword">noexcept</span>;</div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span> </div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>        <span class="keywordtype">void</span> swap(<a class="code hl_class" href="a00744.html">MiraiCPString</a> &amp;other) <span class="keyword">noexcept</span>;</div>
-<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>    };</div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span> </div>
-<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    <span class="keyword">static_assert</span>(<span class="keyword">sizeof</span>(<span class="keywordtype">char</span> *) == 8, <span class="stringliteral">&quot;Please make sure the size of pointers is 8 bytes&quot;</span>);</div>
-<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>    <span class="keyword">static_assert</span>(<span class="keyword">sizeof</span>(MiraiCPString) == 3 * 8, <span class="stringliteral">&quot;Please make sure the size of size_t is 8 bytes&quot;</span>);</div>
-<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>} <span class="comment">// namespace MiraiCP</span></div>
-<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span> </div>
-<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span><span class="preprocessor">#endif </span><span class="comment">//MIRAICP_PRO_MIRAICPSTRINGINTERNAL_H</span></div>
-<div class="ttc" id="aa00044_html"><div class="ttname"><a href="a00044.html">MiraiCPMacros.h</a></div></div>
-<div class="ttc" id="aa00044_html_aa40df2b825bdde9207f3e87b140235c3"><div class="ttname"><a href="a00044.html#aa40df2b825bdde9207f3e87b140235c3">MIRAICP_EXPORT</a></div><div class="ttdeci">#define MIRAICP_EXPORT</div><div class="ttdef"><b>Definition:</b> <a href="a00044_source.html#l00180">MiraiCPMacros.h:180</a></div></div>
-<div class="ttc" id="aa00397_html"><div class="ttname"><a href="a00397.html">MiraiCP</a></div><div class="ttdef"><b>Definition:</b> <a href="a00041_source.html#l00021">JsonTools.h:21</a></div></div>
-<div class="ttc" id="aa00740_html"><div class="ttname"><a href="a00740.html">MiraiCP::MiraiCPStringview</a></div><div class="ttdoc">stringview的类似实现</div><div class="ttdef"><b>Definition:</b> <a href="a00182_source.html#l00032">MiraiCPStringInternal.h:32</a></div></div>
-<div class="ttc" id="aa00740_html_a02f42c8676dac0fcaa20fd6de0e8cbe7"><div class="ttname"><a href="a00740.html#a02f42c8676dac0fcaa20fd6de0e8cbe7">MiraiCP::MiraiCPStringview::MiraiCPStringview</a></div><div class="ttdeci">MiraiCPStringview()=delete</div></div>
-<div class="ttc" id="aa00740_html_a175435d3624c619551695f1791cb1c49"><div class="ttname"><a href="a00740.html#a175435d3624c619551695f1791cb1c49">MiraiCP::MiraiCPStringview::MiraiCPStringview</a></div><div class="ttdeci">MiraiCPStringview(MiraiCPStringview &amp;&amp;temp) noexcept=default</div></div>
-<div class="ttc" id="aa00740_html_a2baf5152efc57efffd1fb79f2ad3b4fd"><div class="ttname"><a href="a00740.html#a2baf5152efc57efffd1fb79f2ad3b4fd">MiraiCP::MiraiCPStringview::size</a></div><div class="ttdeci">size_t size() const</div><div class="ttdef"><b>Definition:</b> <a href="a00182_source.html#l00061">MiraiCPStringInternal.h:61</a></div></div>
-<div class="ttc" id="aa00740_html_a692061d7858de87f5ac6403bd6f75b99"><div class="ttname"><a href="a00740.html#a692061d7858de87f5ac6403bd6f75b99">MiraiCP::MiraiCPStringview::MiraiCPStringview</a></div><div class="ttdeci">MiraiCPStringview(const MiraiCPStringview &amp;other)=default</div></div>
-<div class="ttc" id="aa00740_html_a6c92cb458a70104d24bfccd9058630ea"><div class="ttname"><a href="a00740.html#a6c92cb458a70104d24bfccd9058630ea">MiraiCP::MiraiCPStringview::~MiraiCPStringview</a></div><div class="ttdeci">~MiraiCPStringview()=default</div></div>
-<div class="ttc" id="aa00740_html_acc90fdac094544c4ddd9d6fd13baa5da"><div class="ttname"><a href="a00740.html#acc90fdac094544c4ddd9d6fd13baa5da">MiraiCP::MiraiCPStringview::c_str</a></div><div class="ttdeci">const char * c_str() const</div><div class="ttdef"><b>Definition:</b> <a href="a00182_source.html#l00059">MiraiCPStringInternal.h:59</a></div></div>
-<div class="ttc" id="aa00740_html_af6a8e3f5836d4665e7317b7026685e91"><div class="ttname"><a href="a00740.html#af6a8e3f5836d4665e7317b7026685e91">MiraiCP::MiraiCPStringview::isEmpty</a></div><div class="ttdeci">bool isEmpty() const</div><div class="ttdef"><b>Definition:</b> <a href="a00182_source.html#l00055">MiraiCPStringInternal.h:55</a></div></div>
-<div class="ttc" id="aa00744_html"><div class="ttname"><a href="a00744.html">MiraiCP::MiraiCPString</a></div><div class="ttdoc">MiraiCP内部传递string数据用</div><div class="ttdef"><b>Definition:</b> <a href="a00182_source.html#l00069">MiraiCPStringInternal.h:69</a></div></div>
-<div class="ttc" id="aa00744_html_a10535c2483c0959b0997c2514d4932e4"><div class="ttname"><a href="a00744.html#a10535c2483c0959b0997c2514d4932e4">MiraiCP::MiraiCPString::MiraiCPString</a></div><div class="ttdeci">MiraiCPString()=default</div></div>
-<div class="ttc" id="aa00744_html_a1ca51b393eabd74a803ca923c0995d12"><div class="ttname"><a href="a00744.html#a1ca51b393eabd74a803ca923c0995d12">MiraiCP::MiraiCPString::size</a></div><div class="ttdeci">size_t size() const</div><div class="ttdef"><b>Definition:</b> <a href="a00182_source.html#l00119">MiraiCPStringInternal.h:119</a></div></div>
-<div class="ttc" id="aa00744_html_a40af897f51c62faf7ef4468017d42d3f"><div class="ttname"><a href="a00744.html#a40af897f51c62faf7ef4468017d42d3f">MiraiCP::MiraiCPString::toString</a></div><div class="ttdeci">std::string toString() const</div><div class="ttdef"><b>Definition:</b> <a href="a00182_source.html#l00104">MiraiCPStringInternal.h:104</a></div></div>
-<div class="ttc" id="aa00744_html_a4d61529cddcbabb51a084e2a1a95bda6"><div class="ttname"><a href="a00744.html#a4d61529cddcbabb51a084e2a1a95bda6">MiraiCP::MiraiCPString::c_str</a></div><div class="ttdeci">const char * c_str() const</div><div class="ttdef"><b>Definition:</b> <a href="a00182_source.html#l00117">MiraiCPStringInternal.h:117</a></div></div>
-<div class="ttc" id="aa00744_html_aa3633b0912b856ddce567143f001c682"><div class="ttname"><a href="a00744.html#aa3633b0912b856ddce567143f001c682">MiraiCP::MiraiCPString::isEmpty</a></div><div class="ttdeci">bool isEmpty() const</div><div class="ttdef"><b>Definition:</b> <a href="a00182_source.html#l00100">MiraiCPStringInternal.h:100</a></div></div>
-<div class="ttc" id="aa00744_html_ad5d30755a2922a509bd7d4869cc9841a"><div class="ttname"><a href="a00744.html#ad5d30755a2922a509bd7d4869cc9841a">MiraiCP::MiraiCPString::data</a></div><div class="ttdeci">char * data()</div><div class="ttdef"><b>Definition:</b> <a href="a00182_source.html#l00124">MiraiCPStringInternal.h:124</a></div></div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span><span class="preprocessor">#endif </span><span class="comment">//MIRAICP_PRO_COMMONTYPES_H</span></div>
+<div class="ttc" id="aa00041_html"><div class="ttname"><a href="a00041.html">MiraiCPMacros.h</a></div></div>
+<div class="ttc" id="aa00044_html"><div class="ttname"><a href="a00044.html">PluginConfig.h</a></div></div>
+<div class="ttc" id="aa00179_html"><div class="ttname"><a href="a00179.html">loaderApiInternal.h</a></div></div>
+<div class="ttc" id="aa00424_html"><div class="ttname"><a href="a00424.html">MiraiCP::PluginInterface</a></div><div class="ttdef"><b>Definition</b> <a href="a00182_source.html#l00041">commonTypes.h:41</a></div></div>
+<div class="ttc" id="aa00424_html_a40272b4bfc79023eed93de263751364b"><div class="ttname"><a href="a00424.html#a40272b4bfc79023eed93de263751364b">MiraiCP::PluginInterface::message_queue_handle</a></div><div class="ttdeci">MiraiCP::PluginInterface::PayLoadInfo(* message_queue_handle)()</div><div class="ttdef"><b>Definition</b> <a href="a00182_source.html#l00047">commonTypes.h:47</a></div></div>
+<div class="ttc" id="aa00424_html_aa1ae927cd07b9029ffd8697e38ec27df"><div class="ttname"><a href="a00424.html#aa1ae927cd07b9029ffd8697e38ec27df">MiraiCP::PluginInterface::message_ret_handle</a></div><div class="ttdeci">void(* message_ret_handle)(PolyM::MsgUID, MiraiCPString)</div><div class="ttdef"><b>Definition</b> <a href="a00182_source.html#l00049">commonTypes.h:49</a></div></div>
+<div class="ttc" id="aa00424_html_ab534007973470b0fee5e3ed32c59da23"><div class="ttname"><a href="a00424.html#ab534007973470b0fee5e3ed32c59da23">MiraiCP::PluginInterface::message_delete_handle</a></div><div class="ttdeci">void(* message_delete_handle)()</div><div class="ttdef"><b>Definition</b> <a href="a00182_source.html#l00048">commonTypes.h:48</a></div></div>
+<div class="ttc" id="aa00425_html"><div class="ttname"><a href="a00425.html">LibLoader</a></div><div class="ttdef"><b>Definition</b> <a href="a00182_source.html#l00074">commonTypes.h:74</a></div></div>
+<div class="ttc" id="aa00425_html_a03f4f966e06582e099eeda25f7f83f8d"><div class="ttname"><a href="a00425.html#a03f4f966e06582e099eeda25f7f83f8d">LibLoader::plugin_entrance_func_ptr</a></div><div class="ttdeci">PluginMessageHandles_C(* plugin_entrance_func_ptr)(PluginArgv_C)</div><div class="ttdef"><b>Definition</b> <a href="a00182_source.html#l00077">commonTypes.h:77</a></div></div>
+<div class="ttc" id="aa00425_html_a927f212ce2db84cca1f02ec95aa62322"><div class="ttname"><a href="a00425.html#a927f212ce2db84cca1f02ec95aa62322">LibLoader::plugin_handle</a></div><div class="ttdeci">void * plugin_handle</div><div class="ttdef"><b>Definition</b> <a href="a00182_source.html#l00075">commonTypes.h:75</a></div></div>
+<div class="ttc" id="aa00425_html_add2feb317221acb4f979e61d5e96d37f"><div class="ttname"><a href="a00425.html#add2feb317221acb4f979e61d5e96d37f">LibLoader::plugin_event_func_ptr</a></div><div class="ttdeci">int(* plugin_event_func_ptr)(const MiraiCP::MiraiCPString &amp;)</div><div class="ttdef"><b>Definition</b> <a href="a00182_source.html#l00079">commonTypes.h:79</a></div></div>
+<div class="ttc" id="aa00425_html_afc631e11894f5d4eedc3e3ea550795fd"><div class="ttname"><a href="a00425.html#afc631e11894f5d4eedc3e3ea550795fd">LibLoader::plugin_func_ptr</a></div><div class="ttdeci">int(* plugin_func_ptr)()</div><div class="ttdef"><b>Definition</b> <a href="a00182_source.html#l00081">commonTypes.h:81</a></div></div>
+<div class="ttc" id="aa00444_html"><div class="ttname"><a href="a00444.html">MiraiCP::PluginConfig</a></div><div class="ttdef"><b>Definition</b> <a href="a00044_source.html#l00028">PluginConfig.h:28</a></div></div>
+<div class="ttc" id="aa00760_html"><div class="ttname"><a href="a00760.html">PluginMessageHandles_C</a></div><div class="ttdef"><b>Definition</b> <a href="a00182_source.html#l00030">commonTypes.h:30</a></div></div>
+<div class="ttc" id="aa00760_html_a32e2abd7afb8c622ce7974a90034b76a"><div class="ttname"><a href="a00760.html#a32e2abd7afb8c622ce7974a90034b76a">PluginMessageHandles_C::try_get_payload</a></div><div class="ttdeci">void * try_get_payload</div><div class="ttdef"><b>Definition</b> <a href="a00182_source.html#l00031">commonTypes.h:31</a></div></div>
+<div class="ttc" id="aa00760_html_a459b1b840e9187f6a16c8d0806eba789"><div class="ttname"><a href="a00760.html#a459b1b840e9187f6a16c8d0806eba789">PluginMessageHandles_C::delete_one_msg</a></div><div class="ttdeci">void * delete_one_msg</div><div class="ttdef"><b>Definition</b> <a href="a00182_source.html#l00032">commonTypes.h:32</a></div></div>
+<div class="ttc" id="aa00760_html_a875079f54263a08a2fb4a145d5ba2d20"><div class="ttname"><a href="a00760.html#a875079f54263a08a2fb4a145d5ba2d20">PluginMessageHandles_C::make_response</a></div><div class="ttdeci">void * make_response</div><div class="ttdef"><b>Definition</b> <a href="a00182_source.html#l00033">commonTypes.h:33</a></div></div>
+<div class="ttc" id="aa00764_html"><div class="ttname"><a href="a00764.html">PluginArgv_C</a></div><div class="ttdef"><b>Definition</b> <a href="a00182_source.html#l00036">commonTypes.h:36</a></div></div>
+<div class="ttc" id="aa00764_html_a4016b48b027aa8aa09ae1166cc6bd88d"><div class="ttname"><a href="a00764.html#a4016b48b027aa8aa09ae1166cc6bd88d">PluginArgv_C::wake_loader</a></div><div class="ttdeci">void(* wake_loader)()</div><div class="ttdef"><b>Definition</b> <a href="a00182_source.html#l00037">commonTypes.h:37</a></div></div>
+<div class="ttc" id="aa00768_html"><div class="ttname"><a href="a00768.html">MiraiCP::PluginInterface::PayLoadInfo</a></div><div class="ttdef"><b>Definition</b> <a href="a00182_source.html#l00042">commonTypes.h:42</a></div></div>
+<div class="ttc" id="aa00768_html_a0ab519c47416f69ff5380b90bb221427"><div class="ttname"><a href="a00768.html#a0ab519c47416f69ff5380b90bb221427">MiraiCP::PluginInterface::PayLoadInfo::payload_ptr</a></div><div class="ttdeci">void * payload_ptr</div><div class="ttdef"><b>Definition</b> <a href="a00182_source.html#l00043">commonTypes.h:43</a></div></div>
+<div class="ttc" id="aa00768_html_a41ed1122d41c2eb3e85a9e148c3f719b"><div class="ttname"><a href="a00768.html#a41ed1122d41c2eb3e85a9e148c3f719b">MiraiCP::PluginInterface::PayLoadInfo::payload</a></div><div class="ttdeci">void * payload</div><div class="ttdef"><b>Definition</b> <a href="a00182_source.html#l00044">commonTypes.h:44</a></div></div>
+<div class="ttc" id="aa00768_html_ab9a628101d177c6f0d1da0f5f13a83d8"><div class="ttname"><a href="a00768.html#ab9a628101d177c6f0d1da0f5f13a83d8">MiraiCP::PluginInterface::PayLoadInfo::payload_id</a></div><div class="ttdeci">int payload_id</div><div class="ttdef"><b>Definition</b> <a href="a00182_source.html#l00045">commonTypes.h:45</a></div></div>
+<div class="ttc" id="aa00772_html"><div class="ttname"><a href="a00772.html">MiraiCP::PluginInterface::PluginMessageHandles</a></div><div class="ttdef"><b>Definition</b> <a href="a00182_source.html#l00051">commonTypes.h:51</a></div></div>
+<div class="ttc" id="aa00772_html_a4bc0d9d2018a6d437be0ce84d5d47bc2"><div class="ttname"><a href="a00772.html#a4bc0d9d2018a6d437be0ce84d5d47bc2">MiraiCP::PluginInterface::PluginMessageHandles::try_get_payload</a></div><div class="ttdeci">message_queue_handle try_get_payload</div><div class="ttdef"><b>Definition</b> <a href="a00182_source.html#l00052">commonTypes.h:52</a></div></div>
+<div class="ttc" id="aa00772_html_a592c612d7c3e0199341ea1fe0e7c099d"><div class="ttname"><a href="a00772.html#a592c612d7c3e0199341ea1fe0e7c099d">MiraiCP::PluginInterface::PluginMessageHandles::fromC</a></div><div class="ttdeci">static PluginMessageHandles fromC(PluginMessageHandles_C handles)</div><div class="ttdef"><b>Definition</b> <a href="a00182_source.html#l00066">commonTypes.h:66</a></div></div>
+<div class="ttc" id="aa00772_html_a62b91390b919ca8df0b6036c7e07f326"><div class="ttname"><a href="a00772.html#a62b91390b919ca8df0b6036c7e07f326">MiraiCP::PluginInterface::PluginMessageHandles::clear</a></div><div class="ttdeci">void clear()</div><div class="ttdef"><b>Definition</b> <a href="a00182_source.html#l00056">commonTypes.h:56</a></div></div>
+<div class="ttc" id="aa00772_html_a6d256ab310454204ee0d5b6ec4bc5e26"><div class="ttname"><a href="a00772.html#a6d256ab310454204ee0d5b6ec4bc5e26">MiraiCP::PluginInterface::PluginMessageHandles::make_response</a></div><div class="ttdeci">message_ret_handle make_response</div><div class="ttdef"><b>Definition</b> <a href="a00182_source.html#l00054">commonTypes.h:54</a></div></div>
+<div class="ttc" id="aa00772_html_aba127f01f9e293a1ba70913d20c25236"><div class="ttname"><a href="a00772.html#aba127f01f9e293a1ba70913d20c25236">MiraiCP::PluginInterface::PluginMessageHandles::toC</a></div><div class="ttdeci">PluginMessageHandles_C toC() const</div><div class="ttdef"><b>Definition</b> <a href="a00182_source.html#l00062">commonTypes.h:62</a></div></div>
+<div class="ttc" id="aa00772_html_ad4a019158268135638b7e1c1f55e2384"><div class="ttname"><a href="a00772.html#ad4a019158268135638b7e1c1f55e2384">MiraiCP::PluginInterface::PluginMessageHandles::delete_one_msg</a></div><div class="ttdeci">message_delete_handle delete_one_msg</div><div class="ttdef"><b>Definition</b> <a href="a00182_source.html#l00053">commonTypes.h:53</a></div></div>
+<div class="ttc" id="aa00784_html"><div class="ttname"><a href="a00784.html">MiraiCP::MiraiCPString</a></div><div class="ttdoc">MiraiCP内部传递string数据用</div><div class="ttdef"><b>Definition</b> <a href="a00191_source.html#l00070">MiraiCPStringInternal.h:70</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_fdedb0aba14d44ce9d99bc100e026e6a.html">common</a></li><li class="navelem"><a class="el" href="a00182.html">MiraiCPStringInternal.h</a></li>
-    <li class="footer">生成于 2023年 四月 10日 星期一 00:26:29 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_fdedb0aba14d44ce9d99bc100e026e6a.html">common</a></li><li class="navelem"><a class="el" href="a00182.html">commonTypes.h</a></li>
+    <li class="footer">生成于 2023年 十月 26日 星期四 01:16:24 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
     </body>

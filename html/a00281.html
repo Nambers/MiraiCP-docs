@@ -4,9 +4,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiraiCP: ThreadIdentify.cpp 文件参考</title>
+<title>MiraiCP: loaderMain.cpp 文件参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -35,7 +35,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MiraiCP
-   &#160;<span id="projectnumber">v2.15.0-RC2</span>
+   &#160;<span id="projectnumber">v2.16.0</span>
    </div>
    <div id="projectbrief">MiraiCP api document</div>
   </td>
@@ -44,10 +44,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.9.2 -->
+<!-- 制作者 Doxygen 1.9.8 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search",'搜索','.html');
+var searchBox = new SearchBox("searchBox", "search/",'.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -87,143 +87,147 @@ $(document).ready(function(){initNavTree('a00281.html',''); initResizable(); });
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
 </div>
 
 <div class="header">
   <div class="summary">
 <a href="#namespaces">命名空间</a> &#124;
-<a href="#define-members">宏定义</a> &#124;
-<a href="#typedef-members">类型定义</a> &#124;
 <a href="#func-members">函数</a> &#124;
 <a href="#var-members">变量</a>  </div>
-  <div class="headertitle"><div class="title">ThreadIdentify.cpp 文件参考</div></div>
+  <div class="headertitle"><div class="title">loaderMain.cpp 文件参考</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="a00284_source.html">ThreadIdentify.h</a>&quot;</code><br />
-<code>#include &lt;mutex&gt;</code><br />
-<code>#include &lt;shared_mutex&gt;</code><br />
-<code>#include &lt;thread&gt;</code><br />
-<code>#include &lt;unordered_map&gt;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="a00266_source.html">loaderMain.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00299_source.html">LoaderExceptions.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00251_source.html">LoaderLogger.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00239_source.html">LoaderTaskQueue.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00227_source.html">MessageManager.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00215_source.html">MessageProcessor.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00320_source.html">Plugin.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00284_source.html">PluginManager.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00275_source.html">Scheduler.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00248_source.html">ThreadIdentify.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00212_source.html">ThreadPool.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00305_source.html">loaderTools.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00188_source.html">redirectCout.h</a>&quot;</code><br />
+<code>#include &lt;chrono&gt;</code><br />
+<code>#include &lt;nlohmann/json.hpp&gt;</code><br />
+<code>#include &lt;utility&gt;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> ThreadIdentify.cpp 的引用(Include)关系图:</div>
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> loaderMain.cpp 的引用(Include)关系图:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="a00282.svg" width="554" height="187"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00282.svg" width="2908" height="560"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 <p><a href="a00281_source.html">浏览源代码.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
 命名空间</h2></td></tr>
-<tr class="memitem:a00413"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00413.html">ThreadIdentify</a></td></tr>
+<tr class="memitem:a00425" id="r_a00425"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00425.html">LibLoader</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
-宏定义</h2></td></tr>
-<tr class="memitem:afdf9b55ee6d4f7c29bc91aa7e057bdbe"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00281.html#afdf9b55ee6d4f7c29bc91aa7e057bdbe">SET_THREADNAME</a>(name)</td></tr>
-<tr class="memdesc:afdf9b55ee6d4f7c29bc91aa7e057bdbe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Windows case  <a href="a00281.html#afdf9b55ee6d4f7c29bc91aa7e057bdbe">更多...</a><br /></td></tr>
-<tr class="separator:afdf9b55ee6d4f7c29bc91aa7e057bdbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1c725cadd47b1c5bcd058972a3b25649"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00281.html#a1c725cadd47b1c5bcd058972a3b25649">GET_THREADNAME</a>(buffer,  buffersize)&#160;&#160;&#160;buffer[0] = 0</td></tr>
-<tr class="separator:a1c725cadd47b1c5bcd058972a3b25649"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
-类型定义</h2></td></tr>
-<tr class="memitem:a8b3ed2edac9bce5e2c943ac9295c66ec"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00413.html#a8b3ed2edac9bce5e2c943ac9295c66ec">ThreadIdentify::id</a> = std::thread::id</td></tr>
-<tr class="separator:a8b3ed2edac9bce5e2c943ac9295c66ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 函数</h2></td></tr>
-<tr class="memitem:ada5de831f5a14655f1dd31e6323f7831"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00413.html#ada5de831f5a14655f1dd31e6323f7831">ThreadIdentify::IAmPoolThread</a> ()</td></tr>
-<tr class="separator:ada5de831f5a14655f1dd31e6323f7831"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a187efcd02c7ac8566c197f343b661c32"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00413.html#a187efcd02c7ac8566c197f343b661c32">ThreadIdentify::isMePoolThread</a> ()</td></tr>
-<tr class="separator:a187efcd02c7ac8566c197f343b661c32"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad607328dd0f3a6cb59e4805057a406e4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00413.html#ad607328dd0f3a6cb59e4805057a406e4">ThreadIdentify::IAmLoaderThread</a> ()</td></tr>
-<tr class="separator:ad607328dd0f3a6cb59e4805057a406e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab77cc1ce58a450e4bfea6e3fdc065c33"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00413.html#ab77cc1ce58a450e4bfea6e3fdc065c33">ThreadIdentify::isMeLoaderThread</a> ()</td></tr>
-<tr class="separator:ab77cc1ce58a450e4bfea6e3fdc065c33"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab6d8c466e32a47712f9206f9673b7067"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00413.html#ab6d8c466e32a47712f9206f9673b7067">ThreadIdentify::setMyThreadName</a> (const std::string &amp;name)</td></tr>
-<tr class="separator:ab6d8c466e32a47712f9206f9673b7067"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1ebc3225eaad0bd5657f6f5e049b802c"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00413.html#a1ebc3225eaad0bd5657f6f5e049b802c">ThreadIdentify::identifyMe</a> ()</td></tr>
-<tr class="separator:a1ebc3225eaad0bd5657f6f5e049b802c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3faddb4b1d901c39b71cd3559fbd5e3b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00413.html#a3faddb4b1d901c39b71cd3559fbd5e3b">ThreadIdentify::internalSetThreadWorkingName</a> (std::string name)</td></tr>
-<tr class="separator:a3faddb4b1d901c39b71cd3559fbd5e3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aae621af986af1d6d3203f63858d3ac26"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00413.html#aae621af986af1d6d3203f63858d3ac26">ThreadIdentify::setThreadWorkingName</a> (std::string name)</td></tr>
-<tr class="separator:aae621af986af1d6d3203f63858d3ac26"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2db790edad6d2f47d59c98f494d89b17"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00413.html#a2db790edad6d2f47d59c98f494d89b17">ThreadIdentify::unsetThreadWorkingName</a> ()</td></tr>
-<tr class="separator:a2db790edad6d2f47d59c98f494d89b17"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ace23309b3586adad87a7af44a95877dd"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00413.html#ace23309b3586adad87a7af44a95877dd">ThreadIdentify::getThreadWorkingName</a> ()</td></tr>
-<tr class="separator:ace23309b3586adad87a7af44a95877dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36a04ab86ecc081ee51d32866ef7a332" id="r_a36a04ab86ecc081ee51d32866ef7a332"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00281.html#a36a04ab86ecc081ee51d32866ef7a332">plugin_raw_API_try_wake_loader</a> ()</td></tr>
+<tr class="separator:a36a04ab86ecc081ee51d32866ef7a332"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46f4ab12479d61956e7dc81cfb19fef5" id="r_a46f4ab12479d61956e7dc81cfb19fef5"><td class="memItemLeft" align="right" valign="top">std::condition_variable &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00425.html#a46f4ab12479d61956e7dc81cfb19fef5">LibLoader::loaderWakeCV</a> ()</td></tr>
+<tr class="separator:a46f4ab12479d61956e7dc81cfb19fef5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6cd5117c0adf23ed373edca65148a4fd" id="r_a6cd5117c0adf23ed373edca65148a4fd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00425.html#a6cd5117c0adf23ed373edca65148a4fd">LibLoader::loader_enableAllPlugins</a> ()</td></tr>
+<tr class="separator:a6cd5117c0adf23ed373edca65148a4fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3da09d6c8c2db437e3169b96ddb2ae9" id="r_ad3da09d6c8c2db437e3169b96ddb2ae9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00425.html#ad3da09d6c8c2db437e3169b96ddb2ae9">LibLoader::loader_disableAllPlugins</a> ()</td></tr>
+<tr class="separator:ad3da09d6c8c2db437e3169b96ddb2ae9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8eada9f54700edf5a2aa262e5d006691" id="r_a8eada9f54700edf5a2aa262e5d006691"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00425.html#a8eada9f54700edf5a2aa262e5d006691">LibLoader::loader_loadNewPlugin</a> (const std::string &amp;path, bool activateNow)</td></tr>
+<tr class="separator:a8eada9f54700edf5a2aa262e5d006691"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52292cf621eb6c36b43047ee054c411d" id="r_a52292cf621eb6c36b43047ee054c411d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00425.html#a52292cf621eb6c36b43047ee054c411d">LibLoader::loader_unloadPluginById</a> (const std::string &amp;id)</td></tr>
+<tr class="separator:a52292cf621eb6c36b43047ee054c411d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f1b6298effea4f44e85e20b0a915c1d" id="r_a3f1b6298effea4f44e85e20b0a915c1d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00425.html#a3f1b6298effea4f44e85e20b0a915c1d">LibLoader::loader_enablePluginById</a> (const std::string &amp;id)</td></tr>
+<tr class="separator:a3f1b6298effea4f44e85e20b0a915c1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04edf8e3eda892a478591ac18c05d9b5" id="r_a04edf8e3eda892a478591ac18c05d9b5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00425.html#a04edf8e3eda892a478591ac18c05d9b5">LibLoader::loader_disablePluginById</a> (const std::string &amp;id)</td></tr>
+<tr class="separator:a04edf8e3eda892a478591ac18c05d9b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2bf46cd649bb6979dd268bbc428e14c" id="r_ae2bf46cd649bb6979dd268bbc428e14c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00425.html#ae2bf46cd649bb6979dd268bbc428e14c">LibLoader::loader_reloadPluginById</a> (const std::string &amp;id)</td></tr>
+<tr class="separator:ae2bf46cd649bb6979dd268bbc428e14c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc4b73a1b14010cd0c6e713d6579ef8b" id="r_abc4b73a1b14010cd0c6e713d6579ef8b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00425.html#abc4b73a1b14010cd0c6e713d6579ef8b">LibLoader::loader_pluginEndByException</a> (const std::string &amp;id)</td></tr>
+<tr class="separator:abc4b73a1b14010cd0c6e713d6579ef8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae437cb8e58f9ddab116aa54e71d3891a" id="r_ae437cb8e58f9ddab116aa54e71d3891a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00425.html#ae437cb8e58f9ddab116aa54e71d3891a">LibLoader::loader_resetThreadByIndex</a> (const std::string &amp;index)</td></tr>
+<tr class="separator:ae437cb8e58f9ddab116aa54e71d3891a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 变量</h2></td></tr>
-<tr class="memitem:abb6b4c94c7b96aa0e90c6aa49d6dfa4c"><td class="memItemLeft" align="right" valign="top">thread_local bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00413.html#abb6b4c94c7b96aa0e90c6aa49d6dfa4c">ThreadIdentify::isPoolThread</a> = false</td></tr>
-<tr class="separator:abb6b4c94c7b96aa0e90c6aa49d6dfa4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad7e184503357fc21c89db5b72220432c"><td class="memItemLeft" align="right" valign="top">thread_local bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00413.html#ad7e184503357fc21c89db5b72220432c">ThreadIdentify::isLoaderThread</a> = false</td></tr>
-<tr class="separator:ad7e184503357fc21c89db5b72220432c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad0bda5e6cd7c7f38c830232faead2fb0"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; id, std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00413.html#ad0bda5e6cd7c7f38c830232faead2fb0">ThreadIdentify::Identify</a></td></tr>
-<tr class="separator:ad0bda5e6cd7c7f38c830232faead2fb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a81d3c5799d01e961558b108a82db5bd2"><td class="memItemLeft" align="right" valign="top">std::shared_mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00413.html#a81d3c5799d01e961558b108a82db5bd2">ThreadIdentify::mtx</a></td></tr>
-<tr class="separator:a81d3c5799d01e961558b108a82db5bd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afdbb107a5e2c23feec95a22550860b84"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; id, std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00413.html#afdbb107a5e2c23feec95a22550860b84">ThreadIdentify::Working</a></td></tr>
-<tr class="separator:afdbb107a5e2c23feec95a22550860b84"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a68437fa1cc061fb41596b0ca3fc0637a"><td class="memItemLeft" align="right" valign="top">std::shared_mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00413.html#a68437fa1cc061fb41596b0ca3fc0637a">ThreadIdentify::wk_mtx</a></td></tr>
-<tr class="separator:a68437fa1cc061fb41596b0ca3fc0637a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afab67516ca0a1569c9c6a978e874c5fc" id="r_afab67516ca0a1569c9c6a978e874c5fc"><td class="memItemLeft" align="right" valign="top">constexpr size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00281.html#afab67516ca0a1569c9c6a978e874c5fc">US_IN_SEC</a> = 1000000</td></tr>
+<tr class="separator:afab67516ca0a1569c9c6a978e874c5fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">宏定义说明</h2>
-<a id="a1c725cadd47b1c5bcd058972a3b25649" name="a1c725cadd47b1c5bcd058972a3b25649"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1c725cadd47b1c5bcd058972a3b25649">&#9670;&nbsp;</a></span>GET_THREADNAME</h2>
+<h2 class="groupheader">函数说明</h2>
+<a id="a36a04ab86ecc081ee51d32866ef7a332" name="a36a04ab86ecc081ee51d32866ef7a332"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36a04ab86ecc081ee51d32866ef7a332">&#9670;&#160;</a></span>plugin_raw_API_try_wake_loader()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define GET_THREADNAME</td>
+          <td class="memname">void plugin_raw_API_try_wake_loader </td>
           <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">buffer, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">buffersize&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td>&#160;&#160;&#160;buffer[0] = 0</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">在文件 <a class="el" href="a00281_source.html">ThreadIdentify.cpp</a> 第 <a class="el" href="a00281_source.html#l00039">39</a> 行定义.</p>
+<p class="definition">在文件 <a class="el" href="a00281_source.html">loaderMain.cpp</a> 第 <a class="el" href="a00281_source.html#l00036">36</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">   36</span>                                      {</div>
+<div class="line"><span class="lineno">   37</span>    <a class="code hl_function" href="a00425.html#a46f4ab12479d61956e7dc81cfb19fef5">LibLoader::loaderWakeCV</a>().notify_one();</div>
+<div class="line"><span class="lineno">   38</span>}</div>
+<div class="ttc" id="aa00425_html_a46f4ab12479d61956e7dc81cfb19fef5"><div class="ttname"><a href="a00425.html#a46f4ab12479d61956e7dc81cfb19fef5">LibLoader::loaderWakeCV</a></div><div class="ttdeci">std::condition_variable &amp; loaderWakeCV()</div><div class="ttdef"><b>Definition</b> <a href="a00281_source.html#l00056">loaderMain.cpp:56</a></div></div>
+</div><!-- fragment --><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> 函数调用图:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00281_a36a04ab86ecc081ee51d32866ef7a332_cgraph.svg" width="4648" height="2044"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-2-trigger" src="closed.png" alt="+"/> 这是这个函数的调用关系图:</div>
+<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-2-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00281_a36a04ab86ecc081ee51d32866ef7a332_icgraph.svg" width="855" height="120"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 
 </div>
 </div>
-<a id="afdf9b55ee6d4f7c29bc91aa7e057bdbe" name="afdf9b55ee6d4f7c29bc91aa7e057bdbe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afdf9b55ee6d4f7c29bc91aa7e057bdbe">&#9670;&nbsp;</a></span>SET_THREADNAME</h2>
+<h2 class="groupheader">变量说明</h2>
+<a id="afab67516ca0a1569c9c6a978e874c5fc" name="afab67516ca0a1569c9c6a978e874c5fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afab67516ca0a1569c9c6a978e874c5fc">&#9670;&#160;</a></span>US_IN_SEC</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">#define SET_THREADNAME</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">name</td><td>)</td>
-          <td></td>
+          <td class="memname">constexpr size_t US_IN_SEC = 1000000</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>Windows case </p>
-<p >pthread case </p>
-
-<p class="definition">在文件 <a class="el" href="a00281_source.html">ThreadIdentify.cpp</a> 第 <a class="el" href="a00281_source.html#l00033">33</a> 行定义.</p>
+<p class="definition">在文件 <a class="el" href="a00281_source.html">loaderMain.cpp</a> 第 <a class="el" href="a00281_source.html#l00041">41</a> 行定义.</p>
 
 </div>
 </div>
@@ -233,8 +237,8 @@ $(document).ready(function(){initNavTree('a00281.html',''); initResizable(); });
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_23c80554d3059e776f1fa3b42eea10c0.html">libloader</a></li><li class="navelem"><a class="el" href="a00281.html">ThreadIdentify.cpp</a></li>
-    <li class="footer">生成于 2023年 四月 10日 星期一 00:26:32 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_23c80554d3059e776f1fa3b42eea10c0.html">libloader</a></li><li class="navelem"><a class="el" href="a00281.html">loaderMain.cpp</a></li>
+    <li class="footer">生成于 2023年 十月 26日 星期四 01:16:24 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
     </body>

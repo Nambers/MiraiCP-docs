@@ -1,8 +1,8 @@
 var a00708 =
 [
-    [ "expirytime", "a00708.html#a666efd0312dcc5805394a02ff7c326bb", null ],
-    [ "lastmodifytime", "a00708.html#a8597f745a6869003efa097519bf34148", null ],
-    [ "size", "a00708.html#a35cc1f23bf34db4184696833b12e4605", null ],
-    [ "uploaderid", "a00708.html#accf1835e308104bde941d72053d5c5a7", null ],
-    [ "uploadtime", "a00708.html#ab5f94fd436b08eb8963d7c5d8d4907b4", null ]
+    [ "QuoteReply", "a00708.html#a31f70f2b88254fa241ee58c8e335a0a8", null ],
+    [ "QuoteReply", "a00708.html#a92e6c154936b9341964f10830844348e", null ],
+    [ "operator==", "a00708.html#ad505141e383ead14add0a18f63d27283", null ],
+    [ "toJson", "a00708.html#a145d6719140d4d5f36253ae637522c3d", null ],
+    [ "type", "a00708.html#a5c3073e9d8f5b2ce5f7f6d2980313855", null ]
 ];

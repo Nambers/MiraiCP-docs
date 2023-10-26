@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['announcementparams_0',['AnnouncementParams',['../a00600.html',1,'MiraiCP::Group']]],
-  ['apiexception_1',['APIException',['../a00904.html',1,'MiraiCP']]],
-  ['at_2',['At',['../a00668.html',1,'MiraiCP']]],
-  ['atall_3',['AtAll',['../a00672.html',1,'MiraiCP']]]
+  ['adminmessage_0',['AdminMessage',['../a00816.html',1,'MiraiCP']]],
+  ['announcementparams_1',['AnnouncementParams',['../a00612.html',1,'MiraiCP::internal']]],
+  ['at_2',['At',['../a00684.html',1,'MiraiCP']]],
+  ['atall_3',['AtAll',['../a00688.html',1,'MiraiCP']]]
 ];

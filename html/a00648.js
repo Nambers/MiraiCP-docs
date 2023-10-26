@@ -1,18 +1,14 @@
 var a00648 =
 [
-    [ "~MiraiCode", "a00648.html#a5becb05c91f9dd5e95df39ab8d4aff6c", null ],
-    [ "MiraiCode", "a00648.html#a357aa786136dc94421877f5572ca150a", null ],
-    [ "MiraiCode", "a00648.html#a0d635f5decbaa8f14f9e255efb8654f0", null ],
-    [ "MiraiCodeWithoutEscape", "a00648.html#a91e0549cd91bb441980909cc5b32bee0", null ],
-    [ "MiraiCodeWithoutEscape", "a00648.html#ad116a6d05b09bb93b637ead57b499042", null ],
-    [ "operator+", "a00648.html#a03a38b9280bf4ec1039a1c7a1efd136f", null ],
-    [ "operator+", "a00648.html#aa2296db186d60e6ccf5cd46448eced94", null ],
-    [ "operator+", "a00648.html#ad5d0dd8566b6d330a35f7fca5c20c1ab", null ],
-    [ "operator+", "a00648.html#aced348510d8532bf2a101cd50a9fae19", null ],
-    [ "operator=", "a00648.html#ad7e09968df7b19ccd68e144c2388e365", null ],
-    [ "plus", "a00648.html#acfec7789b210c8a082f0dc93c21f8ed7", null ],
-    [ "plus", "a00648.html#a016fbece8589f03516f5a92a8a3cb177", null ],
-    [ "toMiraiCode", "a00648.html#a2a17d996287c93b8b048a18b58e955c9", null ],
-    [ "toString", "a00648.html#a9b46bf5804f88f2504d97c87d3e1b7fc", null ],
-    [ "content", "a00648.html#a10f382c47adbdf7874ee6aff2c1b1850", null ]
+    [ "Super", "a00648.html#a7be466c4505304684ad67562567f6b1e", null ],
+    [ "Message", "a00648.html#a578443155b3d0c2c6cee9bb31b8928b8", null ],
+    [ "Message", "a00648.html#acedff3b634af4bf5cb2dbcc045119376", null ],
+    [ "getRef", "a00648.html#a03adf97040d8d7ab939406f6f8bb42ed", null ],
+    [ "getType", "a00648.html#a03b17687e7f27c5cc54e20b06192146e", null ],
+    [ "getVal", "a00648.html#aa26b32f1ea57c32a071cc7bd052ca565", null ],
+    [ "messageThrow", "a00648.html#a4b9a19bb584b22b1446fe6930db4bb49", null ],
+    [ "operator!=", "a00648.html#a7bf0df1c342858b560bd037b575d6d58", null ],
+    [ "operator==", "a00648.html#ac09fb6e7ab5e00c405e7bd969ffd39c4", null ],
+    [ "toJson", "a00648.html#a5f89ea721c218405d1eb7037b83f8e8d", null ],
+    [ "toMiraiCode", "a00648.html#a0cef774c0356349acaca5f78271f3849", null ]
 ];

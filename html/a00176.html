@@ -4,9 +4,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiraiCP: loaderApiInternal.h 文件参考</title>
+<title>MiraiCP: MsgDefine.h 文件参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -35,7 +35,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MiraiCP
-   &#160;<span id="projectnumber">v2.15.0-RC2</span>
+   &#160;<span id="projectnumber">v2.16.0</span>
    </div>
    <div id="projectbrief">MiraiCP api document</div>
   </td>
@@ -44,10 +44,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.9.2 -->
+<!-- 制作者 Doxygen 1.9.8 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search",'搜索','.html');
+var searchBox = new SearchBox("searchBox", "search/",'.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -87,9 +87,16 @@ $(document).ready(function(){initNavTree('a00176.html',''); initResizable(); });
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
 </div>
 
 <div class="header">
@@ -97,98 +104,198 @@ $(document).ready(function(){initNavTree('a00176.html',''); initResizable(); });
 <a href="#nested-classes">类</a> &#124;
 <a href="#namespaces">命名空间</a> &#124;
 <a href="#define-members">宏定义</a> &#124;
-<a href="#typedef-members">类型定义</a> &#124;
-<a href="#func-members">函数</a>  </div>
-  <div class="headertitle"><div class="title">loaderApiInternal.h 文件参考</div></div>
+<a href="#enum-members">枚举</a>  </div>
+  <div class="headertitle"><div class="title">MsgDefine.h 文件参考</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="a00182_source.html">MiraiCPStringInternal.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="a00191_source.html">MiraiCPStringInternal.h</a>&quot;</code><br />
+<code>#include &quot;polym/Msg.hpp&quot;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> loaderApiInternal.h 的引用(Include)关系图:</div>
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> MsgDefine.h 的引用(Include)关系图:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="a00177.svg" width="264" height="262"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00177.svg" width="383" height="262"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div><div class="textblock"><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-1-trigger" src="closed.png" alt="+"/> 此图展示该文件直接或间接的被哪些文件引用了:</div>
 <div id="dynsection-1-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="a00178.svg" width="1598" height="336"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00178.svg" width="1052" height="262"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 <p><a href="a00176_source.html">浏览源代码.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 类</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00736.html">LibLoader::LoaderApi::interface_funcs</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00788.html">MiraiCP::MessageTraits&lt; T, t_blocking &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00792.html">MiraiCP::OperationMessage</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00796.html">MiraiCP::LoggerMessage</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00800.html">MiraiCP::PluginIdMessage</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00804.html">MiraiCP::PushTaskMessage</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00808.html">MiraiCP::PushTaskWithIdMessage</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00812.html">MiraiCP::TimerMessage</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00816.html">MiraiCP::AdminMessage</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
 命名空间</h2></td></tr>
-<tr class="memitem:a00407"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00407.html">LibLoader</a></td></tr>
+<tr class="memitem:a00412" id="r_a00412"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00412.html">MiraiCP</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00408"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00408.html">LibLoader::LoaderApi</a></td></tr>
+<tr class="memitem:a00427" id="r_a00427"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00427.html">MiraiCP::MessageType</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 宏定义</h2></td></tr>
-<tr class="memitem:acbac5e7c5f4941a592808414fe5caada"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00176.html#acbac5e7c5f4941a592808414fe5caada">LOADER_API_COUNT</a></td></tr>
-<tr class="separator:acbac5e7c5f4941a592808414fe5caada"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e52c6f03dbb64a18bd355a305ceea04" id="r_a6e52c6f03dbb64a18bd355a305ceea04"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00176.html#a6e52c6f03dbb64a18bd355a305ceea04">GEN_MSG_BODY</a>(_class_name)</td></tr>
+<tr class="separator:a6e52c6f03dbb64a18bd355a305ceea04"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
-类型定义</h2></td></tr>
-<tr class="memitem:a495bf58ac891b805834e2cc7fa49f2f9"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00408.html#a495bf58ac891b805834e2cc7fa49f2f9">LibLoader::LoaderApi::task_func</a>) ()</td></tr>
-<tr class="separator:a495bf58ac891b805834e2cc7fa49f2f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a78fdbf75bfb384856ebf9ffb28b21b1f"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00408.html#a78fdbf75bfb384856ebf9ffb28b21b1f">LibLoader::LoaderApi::task_func_with_id</a>) (size_t)</td></tr>
-<tr class="separator:a78fdbf75bfb384856ebf9ffb28b21b1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
-函数</h2></td></tr>
-<tr class="memitem:a4c6ac4cf4ba5ff0adb7656708bbb67d0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00176.html#acbac5e7c5f4941a592808414fe5caada">LOADER_API_COUNT</a> MiraiCPString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00408.html#a4c6ac4cf4ba5ff0adb7656708bbb67d0">LibLoader::LoaderApi::pluginOperation</a> (MiraiCPStringview s)</td></tr>
-<tr class="memdesc:a4c6ac4cf4ba5ff0adb7656708bbb67d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">interfaces for plugins  <a href="a00408.html#a4c6ac4cf4ba5ff0adb7656708bbb67d0">更多...</a><br /></td></tr>
-<tr class="separator:a4c6ac4cf4ba5ff0adb7656708bbb67d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4def9f25b87d48d142d6752184aadc92"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00176.html#acbac5e7c5f4941a592808414fe5caada">LOADER_API_COUNT</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00408.html#a4def9f25b87d48d142d6752184aadc92">LibLoader::LoaderApi::loggerInterface</a> (const MiraiCPString &amp;content, const MiraiCPString &amp;name, long long id, int level)</td></tr>
-<tr class="separator:a4def9f25b87d48d142d6752184aadc92"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1dc2ed7eb6845af70bc796bb347b74ef"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00176.html#acbac5e7c5f4941a592808414fe5caada">LOADER_API_COUNT</a> MiraiCPString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00408.html#a1dc2ed7eb6845af70bc796bb347b74ef">LibLoader::LoaderApi::showAllPluginId</a> ()</td></tr>
-<tr class="separator:a1dc2ed7eb6845af70bc796bb347b74ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4dc4ecd3d86eb509647b3130a5239ecf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00176.html#acbac5e7c5f4941a592808414fe5caada">LOADER_API_COUNT</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00408.html#a4dc4ecd3d86eb509647b3130a5239ecf">LibLoader::LoaderApi::pushTask</a> (task_func)</td></tr>
-<tr class="separator:a4dc4ecd3d86eb509647b3130a5239ecf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae86871d4f062f45edee7501e0596cd3d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00176.html#acbac5e7c5f4941a592808414fe5caada">LOADER_API_COUNT</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00408.html#ae86871d4f062f45edee7501e0596cd3d">LibLoader::LoaderApi::pushTaskWithId</a> (task_func_with_id, size_t)</td></tr>
-<tr class="separator:ae86871d4f062f45edee7501e0596cd3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a05f1524120bb7a5a65abbde063d9e557"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00176.html#acbac5e7c5f4941a592808414fe5caada">LOADER_API_COUNT</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00408.html#a05f1524120bb7a5a65abbde063d9e557">LibLoader::LoaderApi::timer</a> (const MiraiCPString &amp;, const MiraiCPString &amp;, size_t)</td></tr>
-<tr class="separator:a05f1524120bb7a5a65abbde063d9e557"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a65331125b91df8d475fd7b74bf1bb8e9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00176.html#acbac5e7c5f4941a592808414fe5caada">LOADER_API_COUNT</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00408.html#a65331125b91df8d475fd7b74bf1bb8e9">LibLoader::LoaderApi::enablePluginById</a> (const MiraiCPString &amp;)</td></tr>
-<tr class="separator:a65331125b91df8d475fd7b74bf1bb8e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a08a6725cb4a33402962f2b67130e8bac"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00176.html#acbac5e7c5f4941a592808414fe5caada">LOADER_API_COUNT</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00408.html#a08a6725cb4a33402962f2b67130e8bac">LibLoader::LoaderApi::disablePluginById</a> (const MiraiCPString &amp;)</td></tr>
-<tr class="separator:a08a6725cb4a33402962f2b67130e8bac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2a1eb02235baa6f86d8e8176b4364a72"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00176.html#acbac5e7c5f4941a592808414fe5caada">LOADER_API_COUNT</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00408.html#a2a1eb02235baa6f86d8e8176b4364a72">LibLoader::LoaderApi::enableAllPlugins</a> ()</td></tr>
-<tr class="separator:a2a1eb02235baa6f86d8e8176b4364a72"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9fed350b41c9fb052ca061e3866a66a4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00176.html#acbac5e7c5f4941a592808414fe5caada">LOADER_API_COUNT</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00408.html#a9fed350b41c9fb052ca061e3866a66a4">LibLoader::LoaderApi::disableAllPlugins</a> ()</td></tr>
-<tr class="separator:a9fed350b41c9fb052ca061e3866a66a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aff28b2ad21b60cabc3c735a4b9562df9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00176.html#acbac5e7c5f4941a592808414fe5caada">LOADER_API_COUNT</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00408.html#aff28b2ad21b60cabc3c735a4b9562df9">LibLoader::LoaderApi::loadNewPlugin</a> (const MiraiCPString &amp;, bool)</td></tr>
-<tr class="separator:aff28b2ad21b60cabc3c735a4b9562df9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ace6aa7d8b5baf1f2be8908a5e103c92a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00176.html#acbac5e7c5f4941a592808414fe5caada">LOADER_API_COUNT</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00408.html#ace6aa7d8b5baf1f2be8908a5e103c92a">LibLoader::LoaderApi::unloadPluginById</a> (const MiraiCPString &amp;)</td></tr>
-<tr class="separator:ace6aa7d8b5baf1f2be8908a5e103c92a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad038612c1e2a43498411f0b77240e20b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00176.html#acbac5e7c5f4941a592808414fe5caada">LOADER_API_COUNT</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00408.html#ad038612c1e2a43498411f0b77240e20b">LibLoader::LoaderApi::reloadPluginById</a> (const MiraiCPString &amp;)</td></tr>
-<tr class="separator:ad038612c1e2a43498411f0b77240e20b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+枚举</h2></td></tr>
+<tr class="memitem:af76683b14290aaf91c64ac12113776e1" id="r_af76683b14290aaf91c64ac12113776e1"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00427.html#af76683b14290aaf91c64ac12113776e1">MiraiCP::MessageType::Type</a> { <br />
+&#160;&#160;<a class="el" href="a00427.html#af76683b14290aaf91c64ac12113776e1ad001b03caf2b72c575c9cd92b8e5fe54">MiraiCP::MessageType::OperationMessage</a>
+, <a class="el" href="a00427.html#af76683b14290aaf91c64ac12113776e1acc3ba26a4777d2aac9e1dc91e8787a3a">MiraiCP::MessageType::LoggerMessage</a>
+, <a class="el" href="a00427.html#af76683b14290aaf91c64ac12113776e1a06d7c29ab254c33645315840dab1472d">MiraiCP::MessageType::PluginIdMessage</a>
+, <a class="el" href="a00427.html#af76683b14290aaf91c64ac12113776e1aaedb92c2670d5f10d3bb43e80c528bab">MiraiCP::MessageType::PushTaskMessage</a>
+, <br />
+&#160;&#160;<a class="el" href="a00427.html#af76683b14290aaf91c64ac12113776e1a7c4926d28546aa14d5ffb3afb7353107">MiraiCP::MessageType::PushTaskWithIdMessage</a>
+, <a class="el" href="a00427.html#af76683b14290aaf91c64ac12113776e1abde0907743b698e9af4124d25faca4b9">MiraiCP::MessageType::TimerMessage</a>
+, <a class="el" href="a00427.html#af76683b14290aaf91c64ac12113776e1a1ab35c00c7bc5490674dfaf35c218806">MiraiCP::MessageType::AdminMessage</a>
+, <a class="el" href="a00427.html#af76683b14290aaf91c64ac12113776e1a4a4bfde69dfa6da9854e22d38d60c89e">MiraiCP::MessageType::MESSAGE_TYPE_COUNT</a>
+, <br />
+&#160;&#160;<a class="el" href="a00427.html#af76683b14290aaf91c64ac12113776e1a13b1279621b1c6beb2a97958e6910fd8">MiraiCP::MessageType::RET</a> = MESSAGE_TYPE_COUNT
+<br />
+ }</td></tr>
+<tr class="separator:af76683b14290aaf91c64ac12113776e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">宏定义说明</h2>
-<a id="acbac5e7c5f4941a592808414fe5caada" name="acbac5e7c5f4941a592808414fe5caada"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acbac5e7c5f4941a592808414fe5caada">&#9670;&nbsp;</a></span>LOADER_API_COUNT</h2>
+<a id="a6e52c6f03dbb64a18bd355a305ceea04" name="a6e52c6f03dbb64a18bd355a305ceea04"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e52c6f03dbb64a18bd355a305ceea04">&#9670;&#160;</a></span>GEN_MSG_BODY</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define LOADER_API_COUNT</td>
+          <td class="memname">#define GEN_MSG_BODY</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">_class_name</td><td>)</td>
+          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p class="definition">在文件 <a class="el" href="a00176_source.html">loaderApiInternal.h</a> 第 <a class="el" href="a00176_source.html#l00030">30</a> 行定义.</p>
-
+<b>值:</b><div class="fragment"><div class="line">    <span class="keyword">constexpr</span> <span class="keyword">static</span> <span class="keywordtype">int</span> class_payload_id = MessageType::_class_name; \</div>
+<div class="line">    ~_class_name() <span class="keyword">override</span> = <span class="keywordflow">default</span>;</div>
+</div><!-- fragment -->
+<p class="definition">在文件 <a class="el" href="a00176_source.html">MsgDefine.h</a> 第 <a class="el" href="a00176_source.html#l00023">23</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">   27</span>                  {</div>
+<div class="line"><span class="lineno">   28</span> </div>
+<div class="line"><span class="lineno">   29</span>    <span class="keyword">namespace </span>MessageType {</div>
+<div class="line"><span class="lineno">   30</span>        <span class="keyword">enum</span> <a class="code hl_enumeration" href="a00427.html#af76683b14290aaf91c64ac12113776e1">Type</a> {</div>
+<div class="line"><span class="lineno">   31</span>            <a class="code hl_enumvalue" href="a00427.html#af76683b14290aaf91c64ac12113776e1ad001b03caf2b72c575c9cd92b8e5fe54">OperationMessage</a>,</div>
+<div class="line"><span class="lineno">   32</span>            <a class="code hl_enumvalue" href="a00427.html#af76683b14290aaf91c64ac12113776e1acc3ba26a4777d2aac9e1dc91e8787a3a">LoggerMessage</a>,</div>
+<div class="line"><span class="lineno">   33</span>            <a class="code hl_enumvalue" href="a00427.html#af76683b14290aaf91c64ac12113776e1a06d7c29ab254c33645315840dab1472d">PluginIdMessage</a>,</div>
+<div class="line"><span class="lineno">   34</span>            <a class="code hl_enumvalue" href="a00427.html#af76683b14290aaf91c64ac12113776e1aaedb92c2670d5f10d3bb43e80c528bab">PushTaskMessage</a>,</div>
+<div class="line"><span class="lineno">   35</span>            <a class="code hl_enumvalue" href="a00427.html#af76683b14290aaf91c64ac12113776e1a7c4926d28546aa14d5ffb3afb7353107">PushTaskWithIdMessage</a>,</div>
+<div class="line"><span class="lineno">   36</span>            <a class="code hl_enumvalue" href="a00427.html#af76683b14290aaf91c64ac12113776e1abde0907743b698e9af4124d25faca4b9">TimerMessage</a>,</div>
+<div class="line"><span class="lineno">   37</span>            <a class="code hl_enumvalue" href="a00427.html#af76683b14290aaf91c64ac12113776e1a1ab35c00c7bc5490674dfaf35c218806">AdminMessage</a>,</div>
+<div class="line"><span class="lineno">   38</span>            <a class="code hl_enumvalue" href="a00427.html#af76683b14290aaf91c64ac12113776e1a4a4bfde69dfa6da9854e22d38d60c89e">MESSAGE_TYPE_COUNT</a>,</div>
+<div class="line"><span class="lineno">   39</span>            <a class="code hl_enumvalue" href="a00427.html#af76683b14290aaf91c64ac12113776e1a13b1279621b1c6beb2a97958e6910fd8">RET</a> = <a class="code hl_enumvalue" href="a00427.html#af76683b14290aaf91c64ac12113776e1a4a4bfde69dfa6da9854e22d38d60c89e">MESSAGE_TYPE_COUNT</a>,</div>
+<div class="line"><span class="lineno">   40</span>        };</div>
+<div class="line"><span class="lineno">   41</span>    }</div>
+<div class="line"><span class="lineno">   42</span> </div>
+<div class="line"><span class="lineno">   43</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T, <span class="keywordtype">bool</span> t_blocking = false&gt;</div>
+<div class="line"><span class="lineno">   44</span>    <span class="keyword">struct </span>MessageTraits {</div>
+<div class="line"><span class="lineno">   45</span>        PolyM::MsgUID uid;</div>
+<div class="line"><span class="lineno">   46</span> </div>
+<div class="line"><span class="lineno">   47</span>        <span class="keyword">constexpr</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> blocking = t_blocking;</div>
+<div class="line"><span class="lineno">   48</span>        <span class="keyword">virtual</span> <span class="keywordtype">int</span> get_payload_class_id() {</div>
+<div class="line"><span class="lineno">   49</span>            <span class="keywordflow">return</span> static_payload_class_id();</div>
+<div class="line"><span class="lineno">   50</span>        }</div>
+<div class="line"><span class="lineno">   51</span>        <span class="keyword">virtual</span> ~MessageTraits() = <span class="keywordflow">default</span>;</div>
+<div class="line"><span class="lineno">   52</span> </div>
+<div class="line"><span class="lineno">   53</span>        <span class="keyword">constexpr</span> <span class="keyword">static</span> <span class="keywordtype">int</span> static_payload_class_id() {</div>
+<div class="line"><span class="lineno">   54</span>            <span class="keywordflow">return</span> T::class_payload_id;</div>
+<div class="line"><span class="lineno">   55</span>        }</div>
+<div class="line"><span class="lineno">   56</span>    };</div>
+<div class="line"><span class="lineno">   57</span> </div>
+<div class="line"><span class="lineno">   58</span>    <span class="keyword">struct </span><a class="code hl_enumvalue" href="a00427.html#af76683b14290aaf91c64ac12113776e1ad001b03caf2b72c575c9cd92b8e5fe54">OperationMessage</a> : <span class="keyword">public</span> MessageTraits&lt;OperationMessage, true&gt; {</div>
+<div class="line"><span class="lineno">   59</span>        MiraiCPStringview msg_string;</div>
+<div class="line"><span class="lineno">   60</span>        <a class="code hl_define" href="a00176.html#a6e52c6f03dbb64a18bd355a305ceea04">GEN_MSG_BODY</a>(OperationMessage)</div>
+<div class="line"><span class="lineno">   61</span>    };</div>
+<div class="line"><span class="lineno">   62</span> </div>
+<div class="line"><span class="lineno">   63</span>    <span class="keyword">struct </span><a class="code hl_enumvalue" href="a00427.html#af76683b14290aaf91c64ac12113776e1acc3ba26a4777d2aac9e1dc91e8787a3a">LoggerMessage</a> : <span class="keyword">public</span> MessageTraits&lt;LoggerMessage, false&gt; {</div>
+<div class="line"><span class="lineno">   64</span>        MiraiCPString msg_string;</div>
+<div class="line"><span class="lineno">   65</span>        MiraiCPString name;</div>
+<div class="line"><span class="lineno">   66</span>        <span class="keywordtype">long</span> <span class="keywordtype">long</span> msg_lid;</div>
+<div class="line"><span class="lineno">   67</span>        <span class="keywordtype">int</span> msg_level;</div>
+<div class="line"><span class="lineno">   68</span>        <a class="code hl_define" href="a00176.html#a6e52c6f03dbb64a18bd355a305ceea04">GEN_MSG_BODY</a>(LoggerMessage)</div>
+<div class="line"><span class="lineno">   69</span>    };</div>
+<div class="line"><span class="lineno">   70</span> </div>
+<div class="line"><span class="lineno">   71</span>    <span class="keyword">struct </span><a class="code hl_enumvalue" href="a00427.html#af76683b14290aaf91c64ac12113776e1a06d7c29ab254c33645315840dab1472d">PluginIdMessage</a> : <span class="keyword">public</span> MessageTraits&lt;PluginIdMessage, true&gt; {</div>
+<div class="line"><span class="lineno">   72</span>        <a class="code hl_define" href="a00176.html#a6e52c6f03dbb64a18bd355a305ceea04">GEN_MSG_BODY</a>(PluginIdMessage)</div>
+<div class="line"><span class="lineno">   73</span>    };</div>
+<div class="line"><span class="lineno">   74</span> </div>
+<div class="line"><span class="lineno">   75</span>    <span class="keyword">struct </span><a class="code hl_enumvalue" href="a00427.html#af76683b14290aaf91c64ac12113776e1aaedb92c2670d5f10d3bb43e80c528bab">PushTaskMessage</a> : <span class="keyword">public</span> MessageTraits&lt;PushTaskMessage, false&gt; {</div>
+<div class="line"><span class="lineno">   76</span>        void (*task_func)();</div>
+<div class="line"><span class="lineno">   77</span>        <a class="code hl_define" href="a00176.html#a6e52c6f03dbb64a18bd355a305ceea04">GEN_MSG_BODY</a>(PushTaskMessage)</div>
+<div class="line"><span class="lineno">   78</span>    };</div>
+<div class="line"><span class="lineno">   79</span> </div>
+<div class="line"><span class="lineno">   80</span>    <span class="keyword">struct </span><a class="code hl_enumvalue" href="a00427.html#af76683b14290aaf91c64ac12113776e1a7c4926d28546aa14d5ffb3afb7353107">PushTaskWithIdMessage</a> : <span class="keyword">public</span> MessageTraits&lt;PushTaskWithIdMessage, false&gt; {</div>
+<div class="line"><span class="lineno">   81</span>        void (*task_func_with_id)(size_t);</div>
+<div class="line"><span class="lineno">   82</span>        <span class="keywordtype">size_t</span> <a class="code hl_typedef" href="a00433.html#a8b3ed2edac9bce5e2c943ac9295c66ec">id</a>;</div>
+<div class="line"><span class="lineno">   83</span>        <a class="code hl_define" href="a00176.html#a6e52c6f03dbb64a18bd355a305ceea04">GEN_MSG_BODY</a>(PushTaskWithIdMessage)</div>
+<div class="line"><span class="lineno">   84</span>    };</div>
+<div class="line"><span class="lineno">   85</span> </div>
+<div class="line"><span class="lineno">   86</span>    <span class="keyword">struct </span><a class="code hl_enumvalue" href="a00427.html#af76683b14290aaf91c64ac12113776e1abde0907743b698e9af4124d25faca4b9">TimerMessage</a> : <span class="keyword">public</span> MessageTraits&lt;TimerMessage, false&gt; {</div>
+<div class="line"><span class="lineno">   87</span>        MiraiCPString timer_id;</div>
+<div class="line"><span class="lineno">   88</span>        MiraiCPString content;</div>
+<div class="line"><span class="lineno">   89</span>        <span class="keywordtype">size_t</span> sec;</div>
+<div class="line"><span class="lineno">   90</span>        <a class="code hl_define" href="a00176.html#a6e52c6f03dbb64a18bd355a305ceea04">GEN_MSG_BODY</a>(TimerMessage)</div>
+<div class="line"><span class="lineno">   91</span>    };</div>
+<div class="line"><span class="lineno">   92</span> </div>
+<div class="line"><span class="lineno">   93</span>    <span class="keyword">struct </span><a class="code hl_enumvalue" href="a00427.html#af76683b14290aaf91c64ac12113776e1a1ab35c00c7bc5490674dfaf35c218806">AdminMessage</a> : <span class="keyword">public</span> MessageTraits&lt;AdminMessage, false&gt; {</div>
+<div class="line"><span class="lineno">   94</span>        <span class="keyword">enum</span> CmdId {</div>
+<div class="line"><span class="lineno">   95</span>            ENABLE_ONE,  <span class="comment">// arg: plugin id</span></div>
+<div class="line"><span class="lineno">   96</span>            DISABLE_ONE, <span class="comment">// arg: plugin id</span></div>
+<div class="line"><span class="lineno">   97</span>            <a class="code hl_enumvalue" href="a00425.html#a30aa31bdebda65b5dc09459f065cf482af7642b9b513ebc4d2d35907325564f6a">ENABLE_ALL</a>,  <span class="comment">// arg: none</span></div>
+<div class="line"><span class="lineno">   98</span>            <a class="code hl_enumvalue" href="a00425.html#a30aa31bdebda65b5dc09459f065cf482aa4f23572e2e2fcd98c6396ea9d77312e">DISABLE_ALL</a>, <span class="comment">// arg: none</span></div>
+<div class="line"><span class="lineno">   99</span>            RELOAD_ONE,  <span class="comment">// arg: plugin id</span></div>
+<div class="line"><span class="lineno">  100</span>            UNLOAD_ONE,  <span class="comment">// arg: plugin id</span></div>
+<div class="line"><span class="lineno">  101</span>            LOAD_NEW,    <span class="comment">// arg: path, bool immediate</span></div>
+<div class="line"><span class="lineno">  102</span>        };</div>
+<div class="line"><span class="lineno">  103</span>        <span class="keywordtype">int</span> cmd_id;</div>
+<div class="line"><span class="lineno">  104</span>        MiraiCPString cmd_arg;</div>
+<div class="line"><span class="lineno">  105</span>        <span class="keywordtype">bool</span> immediate;</div>
+<div class="line"><span class="lineno">  106</span>        <a class="code hl_define" href="a00176.html#a6e52c6f03dbb64a18bd355a305ceea04">GEN_MSG_BODY</a>(AdminMessage)</div>
+<div class="line"><span class="lineno">  107</span>    };</div>
+<div class="line"><span class="lineno">  108</span>} <span class="comment">// namespace MiraiCP</span></div>
+<div class="line"><span class="lineno">  109</span> </div>
+<div class="line"><span class="lineno">  110</span> </div>
+<div class="line"><span class="lineno">  111</span><span class="preprocessor">#endif </span><span class="comment">//MIRAICP_PRO_MSGDEFINE_H</span></div>
+<div class="ttc" id="aa00176_html_a6e52c6f03dbb64a18bd355a305ceea04"><div class="ttname"><a href="a00176.html#a6e52c6f03dbb64a18bd355a305ceea04">GEN_MSG_BODY</a></div><div class="ttdeci">#define GEN_MSG_BODY(_class_name)</div><div class="ttdef"><b>Definition</b> <a href="a00176_source.html#l00023">MsgDefine.h:23</a></div></div>
+<div class="ttc" id="aa00425_html_a30aa31bdebda65b5dc09459f065cf482aa4f23572e2e2fcd98c6396ea9d77312e"><div class="ttname"><a href="a00425.html#a30aa31bdebda65b5dc09459f065cf482aa4f23572e2e2fcd98c6396ea9d77312e">LibLoader::LOADER_TASKS::DISABLE_ALL</a></div><div class="ttdeci">@ DISABLE_ALL</div></div>
+<div class="ttc" id="aa00425_html_a30aa31bdebda65b5dc09459f065cf482af7642b9b513ebc4d2d35907325564f6a"><div class="ttname"><a href="a00425.html#a30aa31bdebda65b5dc09459f065cf482af7642b9b513ebc4d2d35907325564f6a">LibLoader::LOADER_TASKS::ENABLE_ALL</a></div><div class="ttdeci">@ ENABLE_ALL</div></div>
+<div class="ttc" id="aa00427_html_af76683b14290aaf91c64ac12113776e1"><div class="ttname"><a href="a00427.html#af76683b14290aaf91c64ac12113776e1">MiraiCP::MessageType::Type</a></div><div class="ttdeci">Type</div><div class="ttdef"><b>Definition</b> <a href="a00176_source.html#l00031">MsgDefine.h:31</a></div></div>
+<div class="ttc" id="aa00427_html_af76683b14290aaf91c64ac12113776e1a06d7c29ab254c33645315840dab1472d"><div class="ttname"><a href="a00427.html#af76683b14290aaf91c64ac12113776e1a06d7c29ab254c33645315840dab1472d">MiraiCP::MessageType::PluginIdMessage</a></div><div class="ttdeci">@ PluginIdMessage</div><div class="ttdef"><b>Definition</b> <a href="a00176_source.html#l00034">MsgDefine.h:34</a></div></div>
+<div class="ttc" id="aa00427_html_af76683b14290aaf91c64ac12113776e1a13b1279621b1c6beb2a97958e6910fd8"><div class="ttname"><a href="a00427.html#af76683b14290aaf91c64ac12113776e1a13b1279621b1c6beb2a97958e6910fd8">MiraiCP::MessageType::RET</a></div><div class="ttdeci">@ RET</div><div class="ttdef"><b>Definition</b> <a href="a00176_source.html#l00040">MsgDefine.h:40</a></div></div>
+<div class="ttc" id="aa00427_html_af76683b14290aaf91c64ac12113776e1a1ab35c00c7bc5490674dfaf35c218806"><div class="ttname"><a href="a00427.html#af76683b14290aaf91c64ac12113776e1a1ab35c00c7bc5490674dfaf35c218806">MiraiCP::MessageType::AdminMessage</a></div><div class="ttdeci">@ AdminMessage</div><div class="ttdef"><b>Definition</b> <a href="a00176_source.html#l00038">MsgDefine.h:38</a></div></div>
+<div class="ttc" id="aa00427_html_af76683b14290aaf91c64ac12113776e1a4a4bfde69dfa6da9854e22d38d60c89e"><div class="ttname"><a href="a00427.html#af76683b14290aaf91c64ac12113776e1a4a4bfde69dfa6da9854e22d38d60c89e">MiraiCP::MessageType::MESSAGE_TYPE_COUNT</a></div><div class="ttdeci">@ MESSAGE_TYPE_COUNT</div><div class="ttdef"><b>Definition</b> <a href="a00176_source.html#l00039">MsgDefine.h:39</a></div></div>
+<div class="ttc" id="aa00427_html_af76683b14290aaf91c64ac12113776e1a7c4926d28546aa14d5ffb3afb7353107"><div class="ttname"><a href="a00427.html#af76683b14290aaf91c64ac12113776e1a7c4926d28546aa14d5ffb3afb7353107">MiraiCP::MessageType::PushTaskWithIdMessage</a></div><div class="ttdeci">@ PushTaskWithIdMessage</div><div class="ttdef"><b>Definition</b> <a href="a00176_source.html#l00036">MsgDefine.h:36</a></div></div>
+<div class="ttc" id="aa00427_html_af76683b14290aaf91c64ac12113776e1aaedb92c2670d5f10d3bb43e80c528bab"><div class="ttname"><a href="a00427.html#af76683b14290aaf91c64ac12113776e1aaedb92c2670d5f10d3bb43e80c528bab">MiraiCP::MessageType::PushTaskMessage</a></div><div class="ttdeci">@ PushTaskMessage</div><div class="ttdef"><b>Definition</b> <a href="a00176_source.html#l00035">MsgDefine.h:35</a></div></div>
+<div class="ttc" id="aa00427_html_af76683b14290aaf91c64ac12113776e1abde0907743b698e9af4124d25faca4b9"><div class="ttname"><a href="a00427.html#af76683b14290aaf91c64ac12113776e1abde0907743b698e9af4124d25faca4b9">MiraiCP::MessageType::TimerMessage</a></div><div class="ttdeci">@ TimerMessage</div><div class="ttdef"><b>Definition</b> <a href="a00176_source.html#l00037">MsgDefine.h:37</a></div></div>
+<div class="ttc" id="aa00427_html_af76683b14290aaf91c64ac12113776e1acc3ba26a4777d2aac9e1dc91e8787a3a"><div class="ttname"><a href="a00427.html#af76683b14290aaf91c64ac12113776e1acc3ba26a4777d2aac9e1dc91e8787a3a">MiraiCP::MessageType::LoggerMessage</a></div><div class="ttdeci">@ LoggerMessage</div><div class="ttdef"><b>Definition</b> <a href="a00176_source.html#l00033">MsgDefine.h:33</a></div></div>
+<div class="ttc" id="aa00427_html_af76683b14290aaf91c64ac12113776e1ad001b03caf2b72c575c9cd92b8e5fe54"><div class="ttname"><a href="a00427.html#af76683b14290aaf91c64ac12113776e1ad001b03caf2b72c575c9cd92b8e5fe54">MiraiCP::MessageType::OperationMessage</a></div><div class="ttdeci">@ OperationMessage</div><div class="ttdef"><b>Definition</b> <a href="a00176_source.html#l00032">MsgDefine.h:32</a></div></div>
+<div class="ttc" id="aa00433_html_a8b3ed2edac9bce5e2c943ac9295c66ec"><div class="ttname"><a href="a00433.html#a8b3ed2edac9bce5e2c943ac9295c66ec">ThreadIdentify::id</a></div><div class="ttdeci">std::thread::id id</div><div class="ttdef"><b>Definition</b> <a href="a00236_source.html#l00082">ThreadIdentify.cpp:82</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 </div><!-- contents -->
@@ -197,8 +304,8 @@ $(document).ready(function(){initNavTree('a00176.html',''); initResizable(); });
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_fdedb0aba14d44ce9d99bc100e026e6a.html">common</a></li><li class="navelem"><a class="el" href="a00176.html">loaderApiInternal.h</a></li>
-    <li class="footer">生成于 2023年 四月 10日 星期一 00:26:32 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_fdedb0aba14d44ce9d99bc100e026e6a.html">common</a></li><li class="navelem"><a class="el" href="a00176.html">MsgDefine.h</a></li>
+    <li class="footer">生成于 2023年 十月 26日 星期四 01:16:24 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
     </body>

@@ -1,10 +1,15 @@
 var a00536 =
 [
-    [ "MemberRecallEvent", "a00536.html#ae2531a88731e49d91180cc0c890fa24d", null ],
-    [ "get_event_type", "a00536.html#aa6f3ad8649a79e18d462e9ec112ecd81", null ],
-    [ "author", "a00536.html#a42b790ec3a63e1e3681153d4450ff61c", null ],
-    [ "ids", "a00536.html#aa89c57b7458608b67fecce4cb3aec205", null ],
-    [ "internalIds", "a00536.html#a7ae3f1f378e6191e0825aaeb4e0a32d7", null ],
-    [ "operater", "a00536.html#a36111b48542b165bd42014c05b565e63", null ],
-    [ "time", "a00536.html#a10924542380ed62cbf690d8754cc7a10", null ]
+    [ "joinType", "a00536.html#a1d73fdd5e84653d078b859b37dd1bcc8", [
+      [ "error", "a00536.html#a1d73fdd5e84653d078b859b37dd1bcc8ac7223d287b6643e82449fdfc84a78b17", null ],
+      [ "invited", "a00536.html#a1d73fdd5e84653d078b859b37dd1bcc8aa328607b0546483fb4503bf453508821", null ],
+      [ "applied", "a00536.html#a1d73fdd5e84653d078b859b37dd1bcc8a24c75b1f74122bc5b2b618daa89b14c9", null ],
+      [ "rehab", "a00536.html#a1d73fdd5e84653d078b859b37dd1bcc8a0f0421157cba536506b325cefe9fac90", null ]
+    ] ],
+    [ "MemberJoinEvent", "a00536.html#a9d849d293475e646a0a443ec5052e55d", null ],
+    [ "get_event_type", "a00536.html#a314da8d93a0056d08d6fb8b87929584d", null ],
+    [ "group", "a00536.html#a1f879c48cc7b54fa387853b5330b0caf", null ],
+    [ "inviter", "a00536.html#ab23dddf1df4fa7d572f964fa3b3b6163", null ],
+    [ "member", "a00536.html#aa1a42b944df9f40fc96629a1c5687f01", null ],
+    [ "type", "a00536.html#aaef692838d233a5ddcf8d54e1b02eb40", null ]
 ];

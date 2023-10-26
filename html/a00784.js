@@ -1,6 +1,28 @@
 var a00784 =
 [
-    [ "PluginAlreadyLoadedException", "a00784.html#a2f2470e6df0f8933b758b097baf14684", null ],
-    [ "exceptionType", "a00784.html#ae99698dba6ffbe0c342d030af56e4cf0", null ],
-    [ "raise", "a00784.html#a6e17d4591ca87686d5f3bd663cd856e7", null ]
+    [ "string", "a00784.html#a23179ec928a1d6435fabb02326c6e247", null ],
+    [ "MiraiCPString", "a00784.html#a10535c2483c0959b0997c2514d4932e4", null ],
+    [ "MiraiCPString", "a00784.html#aa1fda8f92269bd871c94c56e793373f1", null ],
+    [ "MiraiCPString", "a00784.html#aa22e9e3bf45ad23003f5f44c964bd546", null ],
+    [ "MiraiCPString", "a00784.html#a5e97ad52cb215cb213026ce45e355dfe", null ],
+    [ "MiraiCPString", "a00784.html#a7b9d7edbf82a2752a028b32643292221", null ],
+    [ "MiraiCPString", "a00784.html#a2f46607eea7c6f093e385bb9e70a3ae6", null ],
+    [ "~MiraiCPString", "a00784.html#a249117e24f8c29889bb0c1a278c3d3ae", null ],
+    [ "c_str", "a00784.html#a4d61529cddcbabb51a084e2a1a95bda6", null ],
+    [ "construction", "a00784.html#a7f26a980ae47d177825250f973336e39", null ],
+    [ "copyToCharPtr", "a00784.html#ab263deade385e7b5de856d061c6027e9", null ],
+    [ "data", "a00784.html#ad5d30755a2922a509bd7d4869cc9841a", null ],
+    [ "isEmpty", "a00784.html#aa3633b0912b856ddce567143f001c682", null ],
+    [ "operator std::string", "a00784.html#aba1de80f20a55d6cb8124550a10e8123", null ],
+    [ "operator=", "a00784.html#a7107d4a5b065d0c20529ee9a8a3e05a6", null ],
+    [ "operator=", "a00784.html#a4e4f57d00b444ce690bc004d2d054523", null ],
+    [ "operator==", "a00784.html#a76a02c783ddea33e9ba3b90d4ec7ece4", null ],
+    [ "reserve", "a00784.html#ae6cd9e6cde61c7bb722368d7b37121b1", null ],
+    [ "size", "a00784.html#a1ca51b393eabd74a803ca923c0995d12", null ],
+    [ "swap", "a00784.html#a5b277cdf16466e26268574cb17662d20", null ],
+    [ "toString", "a00784.html#a40af897f51c62faf7ef4468017d42d3f", null ],
+    [ "_size", "a00784.html#ab6bb3947d9db2fd407b8c20f0a768183", null ],
+    [ "free_this", "a00784.html#a411445a053abae2778bd0347523a670d", null ],
+    [ "std_free_ptr", "a00784.html#aeb14e5f57bc3dae205e6eed695b61113", null ],
+    [ "str", "a00784.html#ae296eb86d0acfd5b1a5b1264f5a01a33", null ]
 ];

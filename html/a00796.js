@@ -1,5 +1,7 @@
 var a00796 =
 [
-    [ "PluginIdDuplicateException", "a00796.html#a3e32543f3b4e5f62d228628c1c01c7b3", null ],
-    [ "exceptionType", "a00796.html#a49dd6c05df7bceb20d302111d70759ef", null ]
+    [ "msg_level", "a00796.html#a08b3248c49106ad0279be22f26698c37", null ],
+    [ "msg_lid", "a00796.html#ab8f7e70e002a19b3c13201313ceb3b0a", null ],
+    [ "msg_string", "a00796.html#af769b619801bbe89e966431c1c78821d", null ],
+    [ "name", "a00796.html#a98385ea877aee5e6eef5a73a44001e39", null ]
 ];

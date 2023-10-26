@@ -1,7 +1,7 @@
 var a00224 =
 [
-    [ "libClose", "a00224.html#a830b51c74068e1461e1baf677dd10ac2", null ],
-    [ "libError", "a00224.html#a56d03468b20e6187b1af71750a9f815d", null ],
-    [ "libOpen", "a00224.html#a7765f4c313a98cf08466f0a6ed291aac", null ],
-    [ "libSymbolLookup", "a00224.html#a96701ab7dcebb86755310b5c9c434842", null ]
+    [ "checkPluginInfoValid", "a00224.html#aa09e6340966a9de13ad8ce1e88175fa6", null ],
+    [ "formatInternal", "a00224.html#a404fe153b293b8220f6737f1ab530246", null ],
+    [ "plugin_raw_API_try_wake_loader", "a00224.html#a36a04ab86ecc081ee51d32866ef7a332", null ],
+    [ "registerAllPlugin", "a00224.html#a3e5aed817aba5aa6d9426a6ea4981748", null ]
 ];

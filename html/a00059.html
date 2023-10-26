@@ -4,9 +4,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiraiCP: CPPPlugin.h 文件参考</title>
+<title>MiraiCP: Exception.h 文件参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -35,7 +35,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MiraiCP
-   &#160;<span id="projectnumber">v2.15.0-RC2</span>
+   &#160;<span id="projectnumber">v2.16.0</span>
    </div>
    <div id="projectbrief">MiraiCP api document</div>
   </td>
@@ -44,10 +44,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.9.2 -->
+<!-- 制作者 Doxygen 1.9.8 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search",'搜索','.html');
+var searchBox = new SearchBox("searchBox", "search/",'.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -87,58 +87,265 @@ $(document).ready(function(){initNavTree('a00059.html',''); initResizable(); });
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
 </div>
 
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">类</a> &#124;
-<a href="#namespaces">命名空间</a>  </div>
-  <div class="headertitle"><div class="title">CPPPlugin.h 文件参考</div></div>
+<a href="#namespaces">命名空间</a> &#124;
+<a href="#define-members">宏定义</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle"><div class="title">Exception.h 文件参考</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="a00044_source.html">MiraiCPMacros.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00047_source.html">PluginConfig.h</a>&quot;</code><br />
-<code>#include &lt;memory&gt;</code><br />
-<code>#include &lt;utility&gt;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="a00041_source.html">MiraiCPMacros.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00101_source.html">CPPPlugin.h</a>&quot;</code><br />
+<code>#include &quot;nlohmann/json.hpp&quot;</code><br />
+<code>#include &lt;exception&gt;</code><br />
+<code>#include &lt;sstream&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
+<code>#include &lt;thread&gt;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> CPPPlugin.h 的引用(Include)关系图:</div>
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Exception.h 的引用(Include)关系图:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="a00060.svg" width="435" height="187"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00060.svg" width="914" height="262"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div><div class="textblock"><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-1-trigger" src="closed.png" alt="+"/> 此图展示该文件直接或间接的被哪些文件引用了:</div>
 <div id="dynsection-1-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="a00061.svg" width="736" height="187"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00061.svg" width="1831" height="187"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 <p><a href="a00059_source.html">浏览源代码.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 类</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00460.html">MiraiCP::CPPPlugin</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">插件父类  <a href="a00460.html#details">更多...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">interface &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00576.html">MiraiCP::MiraiCPExceptionBase</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">总异常抽象类，用于一般捕获，不要直接抛出该类，不知道抛出什么的时候请抛出 <a class="el" href="a00584.html" title="通用MiraiCP异常">MiraiCPException</a>  <a href="a00576.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">interface &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00580.html">MiraiCP::MiraiCPExceptionCRTP&lt; T &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">总异常CRTP抽象类，不要直接抛出该类，不知道抛出什么的时候请抛出 MiraiCPException。 该类是用于继承的基类，需要新的异常类型时，继承该类并以子类作为模板参数。 子类需要实现的方法：  <a href="a00580.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00584.html">MiraiCP::MiraiCPException</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">通用MiraiCP异常  <a href="a00584.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00588.html">MiraiCP::MiraiCPThreadException</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
 命名空间</h2></td></tr>
-<tr class="memitem:a00397"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00397.html">MiraiCP</a></td></tr>
+<tr class="memitem:a00412" id="r_a00412"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00412.html">MiraiCP</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+宏定义</h2></td></tr>
+<tr class="memitem:abf207a42d9588e9c7718dfb9dfddb8e4" id="r_abf207a42d9588e9c7718dfb9dfddb8e4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00059.html#abf207a42d9588e9c7718dfb9dfddb8e4">EXCEPTION_DEFINE</a>(name,  cause)</td></tr>
+<tr class="separator:abf207a42d9588e9c7718dfb9dfddb8e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86f37368c8f59b71c06b0939bd047564" id="r_a86f37368c8f59b71c06b0939bd047564"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00059.html#a86f37368c8f59b71c06b0939bd047564">EXCEPTION_DEFINE_W_NUM</a>(name,  cause)</td></tr>
+<tr class="separator:a86f37368c8f59b71c06b0939bd047564"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d3eef307cc501b1deeb222135471d4e" id="r_a0d3eef307cc501b1deeb222135471d4e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00059.html#a0d3eef307cc501b1deeb222135471d4e">EXCEPTION_DEFINE_W_STR</a>(name,  cause)</td></tr>
+<tr class="separator:a0d3eef307cc501b1deeb222135471d4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:a314d84841afd9ab10efd54a8387401c3" id="r_a314d84841afd9ab10efd54a8387401c3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00412.html#a314d84841afd9ab10efd54a8387401c3">MiraiCP::EXCEPTION_DEFINE</a> (BotPermException,(nlohmann::json{{&quot;cause&quot;, &quot;没有权限执行该操作&quot;}}))</td></tr>
+<tr class="separator:a314d84841afd9ab10efd54a8387401c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a539d6f2f2fd1e89c8004da26175517c0" id="r_a539d6f2f2fd1e89c8004da26175517c0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00412.html#a539d6f2f2fd1e89c8004da26175517c0">MiraiCP::EXCEPTION_DEFINE_W_STR</a> (BotNotFoundException,(nlohmann::json{{&quot;cause&quot;, &quot;找不到bot&quot;}, {&quot;botId&quot;, info}}))</td></tr>
+<tr class="separator:a539d6f2f2fd1e89c8004da26175517c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c2f46a8af115f2d43f6799f2b24fd66" id="r_a5c2f46a8af115f2d43f6799f2b24fd66"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00412.html#a5c2f46a8af115f2d43f6799f2b24fd66">MiraiCP::EXCEPTION_DEFINE_W_NUM</a> (BotIsBeingMutedException,(nlohmann::json{{&quot;cause&quot;, &quot;发送信息失败, bot已被禁言&quot;}, {&quot;timeRemain&quot;, info}}))</td></tr>
+<tr class="separator:a5c2f46a8af115f2d43f6799f2b24fd66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab75d88a9ca1ffd4a1633b80f3265487b" id="r_ab75d88a9ca1ffd4a1633b80f3265487b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00412.html#ab75d88a9ca1ffd4a1633b80f3265487b">MiraiCP::EXCEPTION_DEFINE</a> (EventCancelledException,(nlohmann::json{{&quot;cause&quot;, &quot;发送信息被取消&quot;}}))</td></tr>
+<tr class="memdesc:ab75d88a9ca1ffd4a1633b80f3265487b"><td class="mdescLeft">&#160;</td><td class="mdescRight">事件被取消, 一般出现在发送消息时在preSendMessageEvent取消的时候抛出  <br /></td></tr>
+<tr class="separator:ab75d88a9ca1ffd4a1633b80f3265487b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a707821180ce03cdd3b1790dfed574b" id="r_a2a707821180ce03cdd3b1790dfed574b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00412.html#a2a707821180ce03cdd3b1790dfed574b">MiraiCP::EXCEPTION_DEFINE</a> (FriendException,(nlohmann::json{{&quot;cause&quot;, &quot;找不到好友&quot;}}))</td></tr>
+<tr class="separator:a2a707821180ce03cdd3b1790dfed574b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adba3508d5051e587dd5c05fe45682b2a" id="r_adba3508d5051e587dd5c05fe45682b2a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00412.html#adba3508d5051e587dd5c05fe45682b2a">MiraiCP::EXCEPTION_DEFINE</a> (GroupException,(nlohmann::json{{&quot;cause&quot;, &quot;找不到群&quot;}}))</td></tr>
+<tr class="memdesc:adba3508d5051e587dd5c05fe45682b2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取群错误  <br /></td></tr>
+<tr class="separator:adba3508d5051e587dd5c05fe45682b2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9878aadcf2b6f761d68208817384d292" id="r_a9878aadcf2b6f761d68208817384d292"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00412.html#a9878aadcf2b6f761d68208817384d292">MiraiCP::EXCEPTION_DEFINE</a> (MemberGroupNotFoundException,(nlohmann::json{{&quot;cause&quot;, &quot;获取群成员错误:找不到群&quot;}}))</td></tr>
+<tr class="separator:a9878aadcf2b6f761d68208817384d292"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42e35e1b033573442695602c4a28e79a" id="r_a42e35e1b033573442695602c4a28e79a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00412.html#a42e35e1b033573442695602c4a28e79a">MiraiCP::EXCEPTION_DEFINE</a> (MemberNotFoundException,(nlohmann::json{{&quot;cause&quot;, &quot;获取群成员错误:找不到群成员&quot;}}))</td></tr>
+<tr class="separator:a42e35e1b033573442695602c4a28e79a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad31c882a7cc43261f422eabc16ccb00e" id="r_ad31c882a7cc43261f422eabc16ccb00e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00412.html#ad31c882a7cc43261f422eabc16ccb00e">MiraiCP::EXCEPTION_DEFINE_W_STR</a> (APIException,(nlohmann::json{{&quot;cause&quot;, &quot;MiraiCP内部无法预料的错误&quot;}, {&quot;info&quot;, info}}))</td></tr>
+<tr class="memdesc:ad31c882a7cc43261f422eabc16ccb00e"><td class="mdescLeft">&#160;</td><td class="mdescRight">内部异常, 通常为json读写问题  <br /></td></tr>
+<tr class="separator:ad31c882a7cc43261f422eabc16ccb00e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7be5cfb495f48b2a7a8857f74944ecd" id="r_ad7be5cfb495f48b2a7a8857f74944ecd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00412.html#ad7be5cfb495f48b2a7a8857f74944ecd">MiraiCP::EXCEPTION_DEFINE_W_STR</a> (IllegalArgumentException,(nlohmann::json{{&quot;cause&quot;, &quot;参数错误&quot;}, {&quot;info&quot;, info}}))</td></tr>
+<tr class="separator:ad7be5cfb495f48b2a7a8857f74944ecd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4260f05b72a0b695d6c4c08d10a4fb13" id="r_a4260f05b72a0b695d6c4c08d10a4fb13"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00412.html#a4260f05b72a0b695d6c4c08d10a4fb13">MiraiCP::EXCEPTION_DEFINE_W_STR</a> (IllegalStateException,(nlohmann::json{{&quot;cause&quot;, &quot;状态错误&quot;}, {&quot;info&quot;, info}}))</td></tr>
+<tr class="memdesc:a4260f05b72a0b695d6c4c08d10a4fb13"><td class="mdescLeft">&#160;</td><td class="mdescRight">通常为Mirai返回  <br /></td></tr>
+<tr class="separator:a4260f05b72a0b695d6c4c08d10a4fb13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8b686c26de7756315771dd9d11f1679" id="r_ab8b686c26de7756315771dd9d11f1679"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00412.html#ab8b686c26de7756315771dd9d11f1679">MiraiCP::EXCEPTION_DEFINE_W_STR</a> (RemoteAssetException,(nlohmann::json{{&quot;cause&quot;, &quot;远程资源出现问题&quot;}, {&quot;info&quot;, info}}))</td></tr>
+<tr class="memdesc:ab8b686c26de7756315771dd9d11f1679"><td class="mdescLeft">&#160;</td><td class="mdescRight">远程资源出现问题  <br /></td></tr>
+<tr class="separator:ab8b686c26de7756315771dd9d11f1679"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa68df6719eb11ecc789cac4caf93a1bd" id="r_aa68df6719eb11ecc789cac4caf93a1bd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00412.html#aa68df6719eb11ecc789cac4caf93a1bd">MiraiCP::EXCEPTION_DEFINE_W_STR</a> (TimeOutException,(nlohmann::json{{&quot;cause&quot;, &quot;执行超时&quot;}, {&quot;info&quot;, info}}))</td></tr>
+<tr class="separator:aa68df6719eb11ecc789cac4caf93a1bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9324648e0006a34c85f45c551e0e5f8" id="r_af9324648e0006a34c85f45c551e0e5f8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00412.html#af9324648e0006a34c85f45c551e0e5f8">MiraiCP::EXCEPTION_DEFINE_W_STR</a> (UploadException,(nlohmann::json{{&quot;cause&quot;, &quot;上传(图片/文件)异常&quot;}, {&quot;info&quot;, info}}))</td></tr>
+<tr class="memdesc:af9324648e0006a34c85f45c551e0e5f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">文件读取异常  <br /></td></tr>
+<tr class="separator:af9324648e0006a34c85f45c551e0e5f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf5b06c93d680e83f47ab6793fc5182d" id="r_adf5b06c93d680e83f47ab6793fc5182d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00412.html#adf5b06c93d680e83f47ab6793fc5182d">MiraiCP::EXCEPTION_DEFINE</a> (PluginNotAuthorizedException,(nlohmann::json{{&quot;cause&quot;, &quot;插件&quot;+CPPPlugin::config.getId()+&quot;没有管理权限&quot;}}))</td></tr>
+<tr class="separator:adf5b06c93d680e83f47ab6793fc5182d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a735dfff0793de19d86cee2b3a6f01bd2" id="r_a735dfff0793de19d86cee2b3a6f01bd2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00412.html#a735dfff0793de19d86cee2b3a6f01bd2">MiraiCP::EXCEPTION_DEFINE</a> (PluginNotEnabledException,(nlohmann::json{{&quot;cause&quot;, &quot;插件&quot;+CPPPlugin::config.getId()+&quot;未加载&quot;}}))</td></tr>
+<tr class="separator:a735dfff0793de19d86cee2b3a6f01bd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a280940241f5831e1ce505dd4ccf64296" id="r_a280940241f5831e1ce505dd4ccf64296"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00412.html#a280940241f5831e1ce505dd4ccf64296">MiraiCP::EXCEPTION_DEFINE</a> (LibLoaderNoResponseException,(nlohmann::json{{&quot;cause&quot;, &quot;LibLoader返回了空的响应&quot;}}))</td></tr>
+<tr class="memdesc:a280940241f5831e1ce505dd4ccf64296"><td class="mdescLeft">&#160;</td><td class="mdescRight">LoaderAPI返回空Msg unique指针  <br /></td></tr>
+<tr class="separator:a280940241f5831e1ce505dd4ccf64296"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e5851ac9af8d754c51f309d7221e099" id="r_a9e5851ac9af8d754c51f309d7221e099"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00412.html#a9e5851ac9af8d754c51f309d7221e099">MiraiCP::EXCEPTION_DEFINE</a> (MuteException,(nlohmann::json{{&quot;cause&quot;, &quot;禁言时长不在0s~30d中间&quot;}}))</td></tr>
+<tr class="memdesc:a9e5851ac9af8d754c51f309d7221e099"><td class="mdescLeft">&#160;</td><td class="mdescRight">禁言异常  <br /></td></tr>
+<tr class="separator:a9e5851ac9af8d754c51f309d7221e099"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0bd959ef2084752731fa48665c88f1e" id="r_af0bd959ef2084752731fa48665c88f1e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00412.html#af0bd959ef2084752731fa48665c88f1e">MiraiCP::EXCEPTION_DEFINE</a> (RecallException,(nlohmann::json{{&quot;cause&quot;, &quot;该消息已经被撤回&quot;}}))</td></tr>
+<tr class="memdesc:af0bd959ef2084752731fa48665c88f1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">撤回异常  <br /></td></tr>
+<tr class="separator:af0bd959ef2084752731fa48665c88f1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">宏定义说明</h2>
+<a id="abf207a42d9588e9c7718dfb9dfddb8e4" name="abf207a42d9588e9c7718dfb9dfddb8e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf207a42d9588e9c7718dfb9dfddb8e4">&#9670;&#160;</a></span>EXCEPTION_DEFINE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define EXCEPTION_DEFINE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">name, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">cause&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>值:</b><div class="fragment"><div class="line">    <span class="keyword">class </span><a class="code hl_define" href="a00041.html#aa40df2b825bdde9207f3e87b140235c3">MIRAICP_EXPORT</a> name : <span class="keyword">public</span> MiraiCPExceptionCRTP&lt;name&gt; {                                                   \</div>
+<div class="line">    <span class="keyword">public</span>:                                                                                                           \</div>
+<div class="line">        <span class="keyword">explicit</span> name(<span class="keywordtype">string</span> _filename, <span class="keywordtype">int</span> _lineNum) : MiraiCPExceptionCRTP(cause, std::move(_filename), _lineNum) { \</div>
+<div class="line">        }                                                                                                             \</div>
+<div class="line">        <span class="keyword">static</span> <span class="keywordtype">string</span> exceptionType() { <span class="keywordflow">return</span> #name; }                                                               \</div>
+<div class="line">    }</div>
+<div class="ttc" id="aa00041_html_aa40df2b825bdde9207f3e87b140235c3"><div class="ttname"><a href="a00041.html#aa40df2b825bdde9207f3e87b140235c3">MIRAICP_EXPORT</a></div><div class="ttdeci">#define MIRAICP_EXPORT</div><div class="ttdef"><b>Definition</b> <a href="a00041_source.html#l00168">MiraiCPMacros.h:168</a></div></div>
+</div><!-- fragment -->
+<p class="definition">在文件 <a class="el" href="a00059_source.html">Exception.h</a> 第 <a class="el" href="a00059_source.html#l00030">30</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">   31</span>                              : <span class="keyword">public</span> MiraiCPExceptionCRTP&lt;name&gt; {                                                   \</div>
+<div class="line"><span class="lineno">   32</span>    <span class="keyword">public</span>:                                                                                                           \</div>
+<div class="line"><span class="lineno">   33</span>        <span class="keyword">explicit</span> name(<span class="keywordtype">string</span> _filename, <span class="keywordtype">int</span> _lineNum) : MiraiCPExceptionCRTP(cause, std::move(_filename), _lineNum) { \</div>
+<div class="line"><span class="lineno">   34</span>        }                                                                                                             \</div>
+<div class="line"><span class="lineno">   35</span>        <span class="keyword">static</span> <span class="keywordtype">string</span> exceptionType() { <span class="keywordflow">return</span> #name; }                                                               \</div>
+<div class="line"><span class="lineno">   36</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a86f37368c8f59b71c06b0939bd047564" name="a86f37368c8f59b71c06b0939bd047564"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86f37368c8f59b71c06b0939bd047564">&#9670;&#160;</a></span>EXCEPTION_DEFINE_W_NUM</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define EXCEPTION_DEFINE_W_NUM</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">name, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">cause&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>值:</b><div class="fragment"><div class="line">    <span class="keyword">class </span><a class="code hl_define" href="a00041.html#aa40df2b825bdde9207f3e87b140235c3">MIRAICP_EXPORT</a> name : <span class="keyword">public</span> MiraiCPExceptionCRTP&lt;name&gt; {                                                             \</div>
+<div class="line">    <span class="keyword">public</span>:                                                                                                                     \</div>
+<div class="line">        <span class="keyword">explicit</span> name(<span class="keywordtype">int</span> info, <span class="keywordtype">string</span> _filename, <span class="keywordtype">int</span> _lineNum) : MiraiCPExceptionCRTP(cause, std::move(_filename), _lineNum) { \</div>
+<div class="line">        }                                                                                                                       \</div>
+<div class="line">        <span class="keyword">static</span> <span class="keywordtype">string</span> exceptionType() { <span class="keywordflow">return</span> #name; }                                                                         \</div>
+<div class="line">    }</div>
+</div><!-- fragment -->
+<p class="definition">在文件 <a class="el" href="a00059_source.html">Exception.h</a> 第 <a class="el" href="a00059_source.html#l00037">37</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">   38</span>                              : <span class="keyword">public</span> MiraiCPExceptionCRTP&lt;name&gt; {                                                             \</div>
+<div class="line"><span class="lineno">   39</span>    <span class="keyword">public</span>:                                                                                                                     \</div>
+<div class="line"><span class="lineno">   40</span>        <span class="keyword">explicit</span> name(<span class="keywordtype">int</span> info, <span class="keywordtype">string</span> _filename, <span class="keywordtype">int</span> _lineNum) : MiraiCPExceptionCRTP(cause, std::move(_filename), _lineNum) { \</div>
+<div class="line"><span class="lineno">   41</span>        }                                                                                                                       \</div>
+<div class="line"><span class="lineno">   42</span>        <span class="keyword">static</span> <span class="keywordtype">string</span> exceptionType() { <span class="keywordflow">return</span> #name; }                                                                         \</div>
+<div class="line"><span class="lineno">   43</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a0d3eef307cc501b1deeb222135471d4e" name="a0d3eef307cc501b1deeb222135471d4e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d3eef307cc501b1deeb222135471d4e">&#9670;&#160;</a></span>EXCEPTION_DEFINE_W_STR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define EXCEPTION_DEFINE_W_STR</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">name, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">cause&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>值:</b><div class="fragment"><div class="line">    <span class="keyword">class </span><a class="code hl_define" href="a00041.html#aa40df2b825bdde9207f3e87b140235c3">MIRAICP_EXPORT</a> name : <span class="keyword">public</span> MiraiCPExceptionCRTP&lt;name&gt; {                                                                \</div>
+<div class="line">    <span class="keyword">public</span>:                                                                                                                        \</div>
+<div class="line">        <span class="keyword">explicit</span> name(<span class="keywordtype">string</span> info, <span class="keywordtype">string</span> _filename, <span class="keywordtype">int</span> _lineNum) : MiraiCPExceptionCRTP(cause, std::move(_filename), _lineNum) { \</div>
+<div class="line">        }                                                                                                                          \</div>
+<div class="line">        <span class="keyword">static</span> <span class="keywordtype">string</span> exceptionType() { <span class="keywordflow">return</span> #name; }                                                                            \</div>
+<div class="line">    }</div>
+</div><!-- fragment -->
+<p class="definition">在文件 <a class="el" href="a00059_source.html">Exception.h</a> 第 <a class="el" href="a00059_source.html#l00044">44</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">   45</span>                              : <span class="keyword">public</span> MiraiCPExceptionCRTP&lt;name&gt; {                                                                \</div>
+<div class="line"><span class="lineno">   46</span>    <span class="keyword">public</span>:                                                                                                                        \</div>
+<div class="line"><span class="lineno">   47</span>        <span class="keyword">explicit</span> name(<span class="keywordtype">string</span> info, <span class="keywordtype">string</span> _filename, <span class="keywordtype">int</span> _lineNum) : MiraiCPExceptionCRTP(cause, std::move(_filename), _lineNum) { \</div>
+<div class="line"><span class="lineno">   48</span>        }                                                                                                                          \</div>
+<div class="line"><span class="lineno">   49</span>        <span class="keyword">static</span> <span class="keywordtype">string</span> exceptionType() { <span class="keywordflow">return</span> #name; }                                                                            \</div>
+<div class="line"><span class="lineno">   50</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_1ede18532ce6284c46efe733029b594d.html">sdk</a></li><li class="navelem"><a class="el" href="a00059.html">CPPPlugin.h</a></li>
-    <li class="footer">生成于 2023年 四月 10日 星期一 00:26:31 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_1ede18532ce6284c46efe733029b594d.html">sdk</a></li><li class="navelem"><a class="el" href="a00059.html">Exception.h</a></li>
+    <li class="footer">生成于 2023年 十月 26日 星期四 01:16:24 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
     </body>

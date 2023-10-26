@@ -4,9 +4,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiraiCP: PluginListManager.cpp 文件参考</title>
+<title>MiraiCP: ktInterface.h 文件参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -35,7 +35,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MiraiCP
-   &#160;<span id="projectnumber">v2.15.0-RC2</span>
+   &#160;<span id="projectnumber">v2.16.0</span>
    </div>
    <div id="projectbrief">MiraiCP api document</div>
   </td>
@@ -44,10 +44,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.9.2 -->
+<!-- 制作者 Doxygen 1.9.8 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search",'搜索','.html');
+var searchBox = new SearchBox("searchBox", "search/",'.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -87,57 +87,236 @@ $(document).ready(function(){initNavTree('a00269.html',''); initResizable(); });
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
 </div>
 
 <div class="header">
   <div class="summary">
-<a href="#namespaces">命名空间</a> &#124;
-<a href="#func-members">函数</a>  </div>
-  <div class="headertitle"><div class="title">PluginListManager.cpp 文件参考</div></div>
+<a href="#func-members">函数</a> &#124;
+<a href="#var-members">变量</a>  </div>
+  <div class="headertitle"><div class="title">ktInterface.h 文件参考</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="a00272_source.html">PluginListManager.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00290_source.html">ThreadPool.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00230_source.html">LoaderExceptions.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00236_source.html">LoaderLogger.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00263_source.html">Plugin.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00047_source.html">PluginConfig.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00038_source.html">commonTools.h</a>&quot;</code><br />
-<code>#include &lt;iomanip&gt;</code><br />
-<code>#include &lt;sstream&gt;</code><br />
-<code>#include &lt;string&gt;</code><br />
-<code>#include &lt;utility&gt;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="a00245_source.html">LoaderMacro.h</a>&quot;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> PluginListManager.cpp 的引用(Include)关系图:</div>
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> ktInterface.h 的引用(Include)关系图:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="a00270.svg" width="1735" height="560"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00270.svg" width="203" height="262"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div><div class="textblock"><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> 此图展示该文件直接或间接的被哪些文件引用了:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00271.svg" width="119" height="112"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 <p><a href="a00269_source.html">浏览源代码.</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
-命名空间</h2></td></tr>
-<tr class="memitem:a00407"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00407.html">LibLoader</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 函数</h2></td></tr>
-<tr class="memitem:ae77abb0f18a3ecc1ea156600598f33f4"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00407.html#ae77abb0f18a3ecc1ea156600598f33f4">LibLoader::PluginInfoStream</a> (const std::vector&lt; std::string &gt; &amp;plugin_info, size_t(&amp;charNum)[4])</td></tr>
-<tr class="separator:ae77abb0f18a3ecc1ea156600598f33f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeded54fe2569c120e6a70b7e8dbf36f5" id="r_aeded54fe2569c120e6a70b7e8dbf36f5"><td class="memItemLeft" align="right" valign="top">JNIEXPORT jobject&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00269.html#aeded54fe2569c120e6a70b7e8dbf36f5">Verify</a> (<a class="el" href="a00245.html#a919c2f594760ce688ff10318059a02b6">J_ARGS</a>, <a class="el" href="a00245.html#aae63af684167e1a19dc5e3332dbc7238">JSTRING</a>, <a class="el" href="a00245.html#aae63af684167e1a19dc5e3332dbc7238">JSTRING</a>)</td></tr>
+<tr class="separator:aeded54fe2569c120e6a70b7e8dbf36f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1498fc409b939ee7467709b5618f176" id="r_aa1498fc409b939ee7467709b5618f176"><td class="memItemLeft" align="right" valign="top">JNIEXPORT jobject&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00269.html#aa1498fc409b939ee7467709b5618f176">Event</a> (<a class="el" href="a00245.html#a919c2f594760ce688ff10318059a02b6">J_ARGS</a>, <a class="el" href="a00245.html#aae63af684167e1a19dc5e3332dbc7238">JSTRING</a>)</td></tr>
+<tr class="separator:aa1498fc409b939ee7467709b5618f176"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73faf33c7c263b9def00cf1d28bb9ffa" id="r_a73faf33c7c263b9def00cf1d28bb9ffa"><td class="memItemLeft" align="right" valign="top">JNIEXPORT jobject&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00269.html#a73faf33c7c263b9def00cf1d28bb9ffa">PluginDisable</a> (<a class="el" href="a00245.html#a919c2f594760ce688ff10318059a02b6">J_ARGS</a>)</td></tr>
+<tr class="separator:a73faf33c7c263b9def00cf1d28bb9ffa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c4a7b01410b519eeff58a050bc194cb" id="r_a0c4a7b01410b519eeff58a050bc194cb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00269.html#a0c4a7b01410b519eeff58a050bc194cb">registerMethods</a> (JNIEnv *env, const char *className, const JNINativeMethod *gMethods, int numMethods)</td></tr>
+<tr class="separator:a0c4a7b01410b519eeff58a050bc194cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+变量</h2></td></tr>
+<tr class="memitem:a54c4b6ec7b4876213ab9e9f888da04ec" id="r_a54c4b6ec7b4876213ab9e9f888da04ec"><td class="memItemLeft" align="right" valign="top">const JNINativeMethod&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00269.html#a54c4b6ec7b4876213ab9e9f888da04ec">method_table</a> []</td></tr>
+<tr class="separator:a54c4b6ec7b4876213ab9e9f888da04ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">函数说明</h2>
+<a id="aa1498fc409b939ee7467709b5618f176" name="aa1498fc409b939ee7467709b5618f176"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1498fc409b939ee7467709b5618f176">&#9670;&#160;</a></span>Event()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">JNIEXPORT jobject Event </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00245.html#a919c2f594760ce688ff10318059a02b6">J_ARGS</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="a00245.html#aae63af684167e1a19dc5e3332dbc7238">JSTRING</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a73faf33c7c263b9def00cf1d28bb9ffa" name="a73faf33c7c263b9def00cf1d28bb9ffa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73faf33c7c263b9def00cf1d28bb9ffa">&#9670;&#160;</a></span>PluginDisable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">JNIEXPORT jobject PluginDisable </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00245.html#a919c2f594760ce688ff10318059a02b6">J_ARGS</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0c4a7b01410b519eeff58a050bc194cb" name="a0c4a7b01410b519eeff58a050bc194cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c4a7b01410b519eeff58a050bc194cb">&#9670;&#160;</a></span>registerMethods()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int registerMethods </td>
+          <td>(</td>
+          <td class="paramtype">JNIEnv *&#160;</td>
+          <td class="paramname"><em>env</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>className</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const JNINativeMethod *&#160;</td>
+          <td class="paramname"><em>gMethods</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>numMethods</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="a00314_source.html">ktInterface.cpp</a> 第 <a class="el" href="a00314_source.html#l00116">116</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  116</span>                                                                                                         {</div>
+<div class="line"><span class="lineno">  117</span>    jclass clazz = env-&gt;FindClass(className);</div>
+<div class="line"><span class="lineno">  118</span>    <span class="keywordflow">if</span> (clazz == <span class="keyword">nullptr</span>) {</div>
+<div class="line"><span class="lineno">  119</span>        <span class="keywordflow">return</span> JNI_FALSE;</div>
+<div class="line"><span class="lineno">  120</span>    }</div>
+<div class="line"><span class="lineno">  121</span>    <span class="comment">//注册native方法</span></div>
+<div class="line"><span class="lineno">  122</span>    <span class="keywordflow">if</span> (env-&gt;RegisterNatives(clazz, gMethods, numMethods) &lt; 0) {</div>
+<div class="line"><span class="lineno">  123</span>        <span class="keywordflow">return</span> JNI_FALSE;</div>
+<div class="line"><span class="lineno">  124</span>    }</div>
+<div class="line"><span class="lineno">  125</span>    <span class="keywordflow">return</span> JNI_TRUE;</div>
+<div class="line"><span class="lineno">  126</span>}</div>
+</div><!-- fragment --><div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-2-trigger" src="closed.png" alt="+"/> 这是这个函数的调用关系图:</div>
+<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-2-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00269_a0c4a7b01410b519eeff58a050bc194cb_icgraph.svg" width="268" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="aeded54fe2569c120e6a70b7e8dbf36f5" name="aeded54fe2569c120e6a70b7e8dbf36f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeded54fe2569c120e6a70b7e8dbf36f5">&#9670;&#160;</a></span>Verify()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">JNIEXPORT jobject Verify </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00245.html#a919c2f594760ce688ff10318059a02b6">J_ARGS</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="a00245.html#aae63af684167e1a19dc5e3332dbc7238">JSTRING</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="a00245.html#aae63af684167e1a19dc5e3332dbc7238">JSTRING</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">变量说明</h2>
+<a id="a54c4b6ec7b4876213ab9e9f888da04ec" name="a54c4b6ec7b4876213ab9e9f888da04ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54c4b6ec7b4876213ab9e9f888da04ec">&#9670;&#160;</a></span>method_table</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const JNINativeMethod method_table[]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>初始值:</b><div class="fragment"><div class="line">{</div>
+<div class="line">        {(<span class="keywordtype">char</span> *) <span class="stringliteral">&quot;Verify&quot;</span>, (<span class="keywordtype">char</span> *) <span class="stringliteral">&quot;(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Void;&quot;</span>, (jstring *) <a class="code hl_function" href="a00269.html#aeded54fe2569c120e6a70b7e8dbf36f5">Verify</a>},</div>
+<div class="line">        {(<span class="keywordtype">char</span> *) <span class="stringliteral">&quot;Event&quot;</span>, (<span class="keywordtype">char</span> *) <span class="stringliteral">&quot;(Ljava/lang/String;)Ljava/lang/Void;&quot;</span>, (jstring *) <a class="code hl_function" href="a00269.html#aa1498fc409b939ee7467709b5618f176">Event</a>},</div>
+<div class="line">        {(<span class="keywordtype">char</span> *) <span class="stringliteral">&quot;PluginDisable&quot;</span>, (<span class="keywordtype">char</span> *) <span class="stringliteral">&quot;()Ljava/lang/Void;&quot;</span>, (jobject *) <a class="code hl_function" href="a00269.html#a73faf33c7c263b9def00cf1d28bb9ffa">PluginDisable</a>}}</div>
+<div class="ttc" id="aa00269_html_a73faf33c7c263b9def00cf1d28bb9ffa"><div class="ttname"><a href="a00269.html#a73faf33c7c263b9def00cf1d28bb9ffa">PluginDisable</a></div><div class="ttdeci">JNIEXPORT jobject PluginDisable(J_ARGS)</div></div>
+<div class="ttc" id="aa00269_html_aa1498fc409b939ee7467709b5618f176"><div class="ttname"><a href="a00269.html#aa1498fc409b939ee7467709b5618f176">Event</a></div><div class="ttdeci">JNIEXPORT jobject Event(J_ARGS, JSTRING)</div></div>
+<div class="ttc" id="aa00269_html_aeded54fe2569c120e6a70b7e8dbf36f5"><div class="ttname"><a href="a00269.html#aeded54fe2569c120e6a70b7e8dbf36f5">Verify</a></div><div class="ttdeci">JNIEXPORT jobject Verify(J_ARGS, JSTRING, JSTRING)</div></div>
+</div><!-- fragment -->
+<p class="definition">在文件 <a class="el" href="a00269_source.html">ktInterface.h</a> 第 <a class="el" href="a00269_source.html#l00033">33</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">   33</span>                                    {</div>
+<div class="line"><span class="lineno">   34</span>        {(<span class="keywordtype">char</span> *) <span class="stringliteral">&quot;Verify&quot;</span>, (<span class="keywordtype">char</span> *) <span class="stringliteral">&quot;(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Void;&quot;</span>, (jstring *) <a class="code hl_function" href="a00269.html#aeded54fe2569c120e6a70b7e8dbf36f5">Verify</a>},</div>
+<div class="line"><span class="lineno">   35</span>        {(<span class="keywordtype">char</span> *) <span class="stringliteral">&quot;Event&quot;</span>, (<span class="keywordtype">char</span> *) <span class="stringliteral">&quot;(Ljava/lang/String;)Ljava/lang/Void;&quot;</span>, (jstring *) <a class="code hl_function" href="a00269.html#aa1498fc409b939ee7467709b5618f176">Event</a>},</div>
+<div class="line"><span class="lineno">   36</span>        {(<span class="keywordtype">char</span> *) <span class="stringliteral">&quot;PluginDisable&quot;</span>, (<span class="keywordtype">char</span> *) <span class="stringliteral">&quot;()Ljava/lang/Void;&quot;</span>, (jobject *) <a class="code hl_function" href="a00269.html#a73faf33c7c263b9def00cf1d28bb9ffa">PluginDisable</a>}};</div>
+</div><!-- fragment -->
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_23c80554d3059e776f1fa3b42eea10c0.html">libloader</a></li><li class="navelem"><a class="el" href="a00269.html">PluginListManager.cpp</a></li>
-    <li class="footer">生成于 2023年 四月 10日 星期一 00:26:32 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_23c80554d3059e776f1fa3b42eea10c0.html">libloader</a></li><li class="navelem"><a class="el" href="a00269.html">ktInterface.h</a></li>
+    <li class="footer">生成于 2023年 十月 26日 星期四 01:16:24 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
     </body>

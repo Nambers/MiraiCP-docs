@@ -4,9 +4,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiraiCP: Scheduler.h 源文件</title>
+<title>MiraiCP: MessageHandler.cpp 源文件</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -35,7 +35,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MiraiCP
-   &#160;<span id="projectnumber">v2.15.0-RC2</span>
+   &#160;<span id="projectnumber">v2.16.0</span>
    </div>
    <div id="projectbrief">MiraiCP api document</div>
   </td>
@@ -44,10 +44,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.9.2 -->
+<!-- 制作者 Doxygen 1.9.8 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search",'搜索','.html');
+var searchBox = new SearchBox("searchBox", "search/",'.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -61,6 +61,11 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -87,48 +92,178 @@ $(document).ready(function(){initNavTree('a00278_source.html',''); initResizable
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">Scheduler.h</div></div>
+  <div class="headertitle"><div class="title">MessageHandler.cpp</div></div>
 </div><!--header-->
 <div class="contents">
 <a href="a00278.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">//</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">// Created by antares on 11/11/22.</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">// Created by Antares on 2023/9/24.</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">//</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#ifndef MIRAICP_PRO_SCHEDULER_H</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#define MIRAICP_PRO_SCHEDULER_H</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;chrono&gt;</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">namespace </span><a class="code hl_namespace" href="a00412.html">LibLoader::Scheduler</a> {</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="a00412.html#a60264799b74fbe2b0466d1de609cf95b">popSchedule</a>() noexcept;</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="a00412.html#a746efd674de5c56de789a0c03be7948e">timer</a>(std::<span class="keywordtype">string</span> <span class="keywordtype">id</span>, std::<span class="keywordtype">string</span> content, <span class="keywordtype">size_t</span> timeInSec);</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="a00412.html#a2d56b79ef43f183c0fc95d733f81906b">timeup</a>() noexcept;</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>} <span class="comment">// namespace LibLoader::Scheduler</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="a00290.html">MessageHandler.h</a>&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;<a class="code" href="a00176.html">MsgDefine.h</a>&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="a00320.html">Plugin.h</a>&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="a00179.html">loaderApiInternal.h</a>&quot;</span></div>
+<div class="foldopen" id="foldopen00009" data-start="{" data-end="}">
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="a00431.html">    9</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="a00431.html">LibLoader::MessageHandler</a> {</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="foldopen" id="foldopen00011" data-start="{" data-end="}">
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="a00431.html#a5330d3faccc453bc459132b5736e97c9">   11</a></span>    T *<a class="code hl_function" href="a00431.html#a5330d3faccc453bc459132b5736e97c9">message_cast</a>(<span class="keywordtype">void</span> *msg) {</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>        <span class="keywordflow">return</span> <span class="keyword">reinterpret_cast&lt;</span>T *<span class="keyword">&gt;</span>(msg);</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    }</div>
+</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="foldopen" id="foldopen00015" data-start="{" data-end="}">
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="a00431.html#a2f58906e9fca9a85df84272d64863ca7">   15</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="a00431.html#a2f58906e9fca9a85df84272d64863ca7">operation_message</a>(<a class="code hl_typedef" href="a00892.html#aa9f62a8e1293e4c3a5f8c02082cfdec4">MessageProcessor::payload_ptr</a> msg, <span class="keyword">const</span> <a class="code hl_typedef" href="a00431.html#ad299a8a1fe4337ec39da204c5d247cca">plugin_ptr</a> &amp;plugin) {</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        <span class="keywordflow">if</span> (!plugin-&gt;isEnabled()) <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        <span class="keyword">using </span>PayloadClass = <a class="code hl_struct" href="a00792.html">MiraiCP::OperationMessage</a>;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        <span class="keyword">auto</span> operation = message_cast&lt;PayloadClass&gt;(msg);</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        <span class="keyword">auto</span> ret = <a class="code hl_function" href="a00426.html#a4c6ac4cf4ba5ff0adb7656708bbb67d0">LoaderApi::pluginOperation</a>(operation-&gt;msg_string);</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        plugin-&gt;makeResponse(operation-&gt;uid, ret);</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    }</div>
+</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#endif </span><span class="comment">//MIRAICP_PRO_SCHEDULER_H</span></div>
-<div class="ttc" id="aa00412_html"><div class="ttname"><a href="a00412.html">LibLoader::Scheduler</a></div><div class="ttdef"><b>Definition:</b> <a href="a00275_source.html#l00048">Scheduler.cpp:48</a></div></div>
-<div class="ttc" id="aa00412_html_a2d56b79ef43f183c0fc95d733f81906b"><div class="ttname"><a href="a00412.html#a2d56b79ef43f183c0fc95d733f81906b">LibLoader::Scheduler::timeup</a></div><div class="ttdeci">bool timeup() noexcept</div><div class="ttdoc">获取schduler是否空</div><div class="ttdef"><b>Definition:</b> <a href="a00275_source.html#l00091">Scheduler.cpp:91</a></div></div>
-<div class="ttc" id="aa00412_html_a60264799b74fbe2b0466d1de609cf95b"><div class="ttname"><a href="a00412.html#a60264799b74fbe2b0466d1de609cf95b">LibLoader::Scheduler::popSchedule</a></div><div class="ttdeci">void popSchedule() noexcept</div><div class="ttdoc">libLoader线程tick调用，弹出所有计时器</div><div class="ttdef"><b>Definition:</b> <a href="a00275_source.html#l00075">Scheduler.cpp:75</a></div></div>
-<div class="ttc" id="aa00412_html_a746efd674de5c56de789a0c03be7948e"><div class="ttname"><a href="a00412.html#a746efd674de5c56de789a0c03be7948e">LibLoader::Scheduler::timer</a></div><div class="ttdeci">void timer(std::string pluginId, std::string content, size_t timeInSecond)</div><div class="ttdoc">新增一个计时器，对接libLoader API</div><div class="ttdef"><b>Definition:</b> <a href="a00275_source.html#l00052">Scheduler.cpp:52</a></div></div>
+<div class="foldopen" id="foldopen00023" data-start="{" data-end="}">
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="a00431.html#a0eaf4740d7c7b34643a18898822a9bfd">   23</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="a00431.html#a0eaf4740d7c7b34643a18898822a9bfd">logger_message</a>(<a class="code hl_typedef" href="a00892.html#aa9f62a8e1293e4c3a5f8c02082cfdec4">MessageProcessor::payload_ptr</a> msg, <span class="keyword">const</span> <a class="code hl_typedef" href="a00431.html#ad299a8a1fe4337ec39da204c5d247cca">plugin_ptr</a> &amp;plugin) {</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        <span class="keywordflow">if</span> (!plugin-&gt;isEnabled()) <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        <span class="keyword">using </span>PayloadClass = <a class="code hl_struct" href="a00796.html">MiraiCP::LoggerMessage</a>;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        <span class="keyword">auto</span> log = message_cast&lt;PayloadClass&gt;(msg);</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        <a class="code hl_function" href="a00426.html#a4def9f25b87d48d142d6752184aadc92">LoaderApi::loggerInterface</a>(log-&gt;msg_string, log-&gt;name, log-&gt;msg_lid, log-&gt;msg_level);</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    }</div>
+</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="foldopen" id="foldopen00030" data-start="{" data-end="}">
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="a00431.html#a9e4b6ffc27d9a64681c3f810d71700ad">   30</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="a00431.html#a9e4b6ffc27d9a64681c3f810d71700ad">plugin_id_message</a>(<a class="code hl_typedef" href="a00892.html#aa9f62a8e1293e4c3a5f8c02082cfdec4">MessageProcessor::payload_ptr</a> msg, <span class="keyword">const</span> <a class="code hl_typedef" href="a00431.html#ad299a8a1fe4337ec39da204c5d247cca">plugin_ptr</a> &amp;plugin) {</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        <span class="keywordflow">if</span> (!plugin-&gt;isEnabled()) <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <span class="keyword">using </span>PayloadClass = <a class="code hl_struct" href="a00800.html">MiraiCP::PluginIdMessage</a>;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        <span class="keyword">auto</span> plugin_id_msg = message_cast&lt;PayloadClass&gt;(msg);</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        plugin-&gt;makeResponse(plugin_id_msg-&gt;uid, <a class="code hl_function" href="a00426.html#a1dc2ed7eb6845af70bc796bb347b74ef">LoaderApi::showAllPluginId</a>());</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    }</div>
+</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="foldopen" id="foldopen00037" data-start="{" data-end="}">
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="a00431.html#ababc50641714b47061367e940ce3ceef">   37</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="a00431.html#ababc50641714b47061367e940ce3ceef">push_task_message</a>(<a class="code hl_typedef" href="a00892.html#aa9f62a8e1293e4c3a5f8c02082cfdec4">MessageProcessor::payload_ptr</a> msg, <span class="keyword">const</span> <a class="code hl_typedef" href="a00431.html#ad299a8a1fe4337ec39da204c5d247cca">plugin_ptr</a> &amp;plugin) {</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <span class="keywordflow">if</span> (!plugin-&gt;isEnabled()) <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        <span class="keyword">using </span>PayloadClass = <a class="code hl_struct" href="a00804.html">MiraiCP::PushTaskMessage</a>;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <span class="keyword">auto</span> push_task_msg = message_cast&lt;PayloadClass&gt;(msg);</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        <a class="code hl_function" href="a00426.html#a4dc4ecd3d86eb509647b3130a5239ecf">LoaderApi::pushTask</a>(push_task_msg-&gt;task_func);</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    }</div>
+</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="foldopen" id="foldopen00044" data-start="{" data-end="}">
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="a00431.html#a10d399d863aead5a382694135edb5697">   44</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="a00431.html#a10d399d863aead5a382694135edb5697">push_task_with_id_message</a>(<a class="code hl_typedef" href="a00892.html#aa9f62a8e1293e4c3a5f8c02082cfdec4">MessageProcessor::payload_ptr</a> msg, <span class="keyword">const</span> <a class="code hl_typedef" href="a00431.html#ad299a8a1fe4337ec39da204c5d247cca">plugin_ptr</a> &amp;plugin) {</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <span class="keywordflow">if</span> (!plugin-&gt;isEnabled()) <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <span class="keyword">using </span>PayloadClass = <a class="code hl_struct" href="a00808.html">MiraiCP::PushTaskWithIdMessage</a>;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <span class="keyword">auto</span> push_task_with_id_msg = message_cast&lt;PayloadClass&gt;(msg);</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        <a class="code hl_function" href="a00426.html#ae86871d4f062f45edee7501e0596cd3d">LoaderApi::pushTaskWithId</a>(push_task_with_id_msg-&gt;task_func_with_id, push_task_with_id_msg-&gt;id);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    }</div>
+</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="foldopen" id="foldopen00051" data-start="{" data-end="}">
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="a00431.html#ac6360f8f60a063ca92ee816f65a8a2a1">   51</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="a00431.html#ac6360f8f60a063ca92ee816f65a8a2a1">timer_message</a>(<a class="code hl_typedef" href="a00892.html#aa9f62a8e1293e4c3a5f8c02082cfdec4">MessageProcessor::payload_ptr</a> msg, <span class="keyword">const</span> <a class="code hl_typedef" href="a00431.html#ad299a8a1fe4337ec39da204c5d247cca">plugin_ptr</a> &amp;plugin) {</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        <span class="keywordflow">if</span> (!plugin-&gt;isEnabled()) <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        <span class="keyword">using </span>PayloadClass = <a class="code hl_struct" href="a00812.html">MiraiCP::TimerMessage</a>;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        <span class="keyword">auto</span> timer_msg = message_cast&lt;PayloadClass&gt;(msg);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        <a class="code hl_function" href="a00426.html#a05f1524120bb7a5a65abbde063d9e557">LoaderApi::timer</a>(timer_msg-&gt;timer_id, timer_msg-&gt;content, timer_msg-&gt;sec);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    }</div>
+</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="foldopen" id="foldopen00058" data-start="{" data-end="}">
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="a00431.html#a23c30511bf483a1559577dcb67c05e55">   58</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="a00431.html#a23c30511bf483a1559577dcb67c05e55">admin_message</a>(<a class="code hl_typedef" href="a00892.html#aa9f62a8e1293e4c3a5f8c02082cfdec4">MessageProcessor::payload_ptr</a> msg, <span class="keyword">const</span> <a class="code hl_typedef" href="a00431.html#ad299a8a1fe4337ec39da204c5d247cca">plugin_ptr</a> &amp;plugin) {</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        <span class="keywordflow">if</span> (!plugin-&gt;isEnabled()) <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        <span class="keyword">using </span>PayloadClass = <a class="code hl_struct" href="a00816.html">MiraiCP::AdminMessage</a>;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        <span class="keyword">auto</span> admin_msg = message_cast&lt;PayloadClass&gt;(msg);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        <span class="keywordflow">switch</span> (admin_msg-&gt;cmd_id) {</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>            <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="a00816.html#ad435da30a5e9c5b98309e804231201bba8722f879a7dc98ad4fd6583f2a0b67cb">MiraiCP::AdminMessage::ENABLE_ONE</a>:</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>                <a class="code hl_function" href="a00426.html#a65331125b91df8d475fd7b74bf1bb8e9">LoaderApi::enablePluginById</a>(admin_msg-&gt;cmd_arg);</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>            <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="a00816.html#ad435da30a5e9c5b98309e804231201bba1defc47dfde752a92899bd612a20fa93">MiraiCP::AdminMessage::DISABLE_ONE</a>:</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>                <a class="code hl_function" href="a00426.html#a08a6725cb4a33402962f2b67130e8bac">LoaderApi::disablePluginById</a>(admin_msg-&gt;cmd_arg);</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>            <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="a00816.html#ad435da30a5e9c5b98309e804231201bba3bd2d79c7061287730488a3ceb77ea2f">MiraiCP::AdminMessage::ENABLE_ALL</a>:</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>                <a class="code hl_function" href="a00426.html#a2a1eb02235baa6f86d8e8176b4364a72">LoaderApi::enableAllPlugins</a>();</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>            <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="a00816.html#ad435da30a5e9c5b98309e804231201bba4b3d5edfaddf77237bb86a809eabd6ec">MiraiCP::AdminMessage::DISABLE_ALL</a>:</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>                <a class="code hl_function" href="a00426.html#a9fed350b41c9fb052ca061e3866a66a4">LoaderApi::disableAllPlugins</a>();</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>            <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="a00816.html#ad435da30a5e9c5b98309e804231201bba66ffd3f06a57e0788746c8279f93ae27">MiraiCP::AdminMessage::RELOAD_ONE</a>:</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>                <a class="code hl_function" href="a00426.html#ad038612c1e2a43498411f0b77240e20b">LoaderApi::reloadPluginById</a>(admin_msg-&gt;cmd_arg);</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>            <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="a00816.html#ad435da30a5e9c5b98309e804231201bba745f2dc1a6a3dbb03c50cfd31c27fcde">MiraiCP::AdminMessage::UNLOAD_ONE</a>:</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>                <a class="code hl_function" href="a00426.html#ace6aa7d8b5baf1f2be8908a5e103c92a">LoaderApi::unloadPluginById</a>(admin_msg-&gt;cmd_arg);</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>            <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="a00816.html#ad435da30a5e9c5b98309e804231201bba8d5045dfbaece72870429dbe7edffaf6">MiraiCP::AdminMessage::LOAD_NEW</a>:</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>                <a class="code hl_function" href="a00426.html#aff28b2ad21b60cabc3c735a4b9562df9">LoaderApi::loadNewPlugin</a>(admin_msg-&gt;cmd_arg, admin_msg-&gt;immediate);</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>            <span class="keywordflow">default</span>:</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        }</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    }</div>
+</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>} <span class="comment">// namespace LibLoader::MessageHandler</span></div>
+</div>
+<div class="ttc" id="aa00176_html"><div class="ttname"><a href="a00176.html">MsgDefine.h</a></div></div>
+<div class="ttc" id="aa00179_html"><div class="ttname"><a href="a00179.html">loaderApiInternal.h</a></div></div>
+<div class="ttc" id="aa00290_html"><div class="ttname"><a href="a00290.html">MessageHandler.h</a></div></div>
+<div class="ttc" id="aa00320_html"><div class="ttname"><a href="a00320.html">Plugin.h</a></div></div>
+<div class="ttc" id="aa00426_html_a05f1524120bb7a5a65abbde063d9e557"><div class="ttname"><a href="a00426.html#a05f1524120bb7a5a65abbde063d9e557">LibLoader::LoaderApi::timer</a></div><div class="ttdeci">LOADER_API_COUNT void timer(const MiraiCPString &amp;, const MiraiCPString &amp;, size_t)</div><div class="ttdef"><b>Definition</b> <a href="a01461_source.html#l00073">libloader/loaderApi.cpp:73</a></div></div>
+<div class="ttc" id="aa00426_html_a08a6725cb4a33402962f2b67130e8bac"><div class="ttname"><a href="a00426.html#a08a6725cb4a33402962f2b67130e8bac">LibLoader::LoaderApi::disablePluginById</a></div><div class="ttdeci">LOADER_API_COUNT void disablePluginById(const MiraiCPString &amp;)</div><div class="ttdef"><b>Definition</b> <a href="a01461_source.html#l00081">libloader/loaderApi.cpp:81</a></div></div>
+<div class="ttc" id="aa00426_html_a1dc2ed7eb6845af70bc796bb347b74ef"><div class="ttname"><a href="a00426.html#a1dc2ed7eb6845af70bc796bb347b74ef">LibLoader::LoaderApi::showAllPluginId</a></div><div class="ttdeci">LOADER_API_COUNT MiraiCPString showAllPluginId()</div><div class="ttdef"><b>Definition</b> <a href="a01461_source.html#l00061">libloader/loaderApi.cpp:61</a></div></div>
+<div class="ttc" id="aa00426_html_a2a1eb02235baa6f86d8e8176b4364a72"><div class="ttname"><a href="a00426.html#a2a1eb02235baa6f86d8e8176b4364a72">LibLoader::LoaderApi::enableAllPlugins</a></div><div class="ttdeci">LOADER_API_COUNT void enableAllPlugins()</div><div class="ttdef"><b>Definition</b> <a href="a01461_source.html#l00085">libloader/loaderApi.cpp:85</a></div></div>
+<div class="ttc" id="aa00426_html_a4c6ac4cf4ba5ff0adb7656708bbb67d0"><div class="ttname"><a href="a00426.html#a4c6ac4cf4ba5ff0adb7656708bbb67d0">LibLoader::LoaderApi::pluginOperation</a></div><div class="ttdeci">LOADER_API_COUNT MiraiCPString pluginOperation(MiraiCPStringview view)</div><div class="ttdoc">interfaces for plugins</div><div class="ttdef"><b>Definition</b> <a href="a01461_source.html#l00049">libloader/loaderApi.cpp:49</a></div></div>
+<div class="ttc" id="aa00426_html_a4dc4ecd3d86eb509647b3130a5239ecf"><div class="ttname"><a href="a00426.html#a4dc4ecd3d86eb509647b3130a5239ecf">LibLoader::LoaderApi::pushTask</a></div><div class="ttdeci">LOADER_API_COUNT void pushTask(task_func)</div><div class="ttdef"><b>Definition</b> <a href="a01461_source.html#l00065">libloader/loaderApi.cpp:65</a></div></div>
+<div class="ttc" id="aa00426_html_a4def9f25b87d48d142d6752184aadc92"><div class="ttname"><a href="a00426.html#a4def9f25b87d48d142d6752184aadc92">LibLoader::LoaderApi::loggerInterface</a></div><div class="ttdeci">LOADER_API_COUNT void loggerInterface(const MiraiCPString &amp;content, const MiraiCPString &amp;name, long long id, int level)</div><div class="ttdef"><b>Definition</b> <a href="a01461_source.html#l00057">libloader/loaderApi.cpp:57</a></div></div>
+<div class="ttc" id="aa00426_html_a65331125b91df8d475fd7b74bf1bb8e9"><div class="ttname"><a href="a00426.html#a65331125b91df8d475fd7b74bf1bb8e9">LibLoader::LoaderApi::enablePluginById</a></div><div class="ttdeci">LOADER_API_COUNT void enablePluginById(const MiraiCPString &amp;)</div><div class="ttdef"><b>Definition</b> <a href="a01461_source.html#l00077">libloader/loaderApi.cpp:77</a></div></div>
+<div class="ttc" id="aa00426_html_a9fed350b41c9fb052ca061e3866a66a4"><div class="ttname"><a href="a00426.html#a9fed350b41c9fb052ca061e3866a66a4">LibLoader::LoaderApi::disableAllPlugins</a></div><div class="ttdeci">LOADER_API_COUNT void disableAllPlugins()</div><div class="ttdef"><b>Definition</b> <a href="a01461_source.html#l00089">libloader/loaderApi.cpp:89</a></div></div>
+<div class="ttc" id="aa00426_html_ace6aa7d8b5baf1f2be8908a5e103c92a"><div class="ttname"><a href="a00426.html#ace6aa7d8b5baf1f2be8908a5e103c92a">LibLoader::LoaderApi::unloadPluginById</a></div><div class="ttdeci">LOADER_API_COUNT void unloadPluginById(const MiraiCPString &amp;)</div><div class="ttdef"><b>Definition</b> <a href="a01461_source.html#l00097">libloader/loaderApi.cpp:97</a></div></div>
+<div class="ttc" id="aa00426_html_ad038612c1e2a43498411f0b77240e20b"><div class="ttname"><a href="a00426.html#ad038612c1e2a43498411f0b77240e20b">LibLoader::LoaderApi::reloadPluginById</a></div><div class="ttdeci">LOADER_API_COUNT void reloadPluginById(const MiraiCPString &amp;)</div><div class="ttdef"><b>Definition</b> <a href="a01461_source.html#l00101">libloader/loaderApi.cpp:101</a></div></div>
+<div class="ttc" id="aa00426_html_ae86871d4f062f45edee7501e0596cd3d"><div class="ttname"><a href="a00426.html#ae86871d4f062f45edee7501e0596cd3d">LibLoader::LoaderApi::pushTaskWithId</a></div><div class="ttdeci">LOADER_API_COUNT void pushTaskWithId(task_func_with_id, size_t)</div><div class="ttdef"><b>Definition</b> <a href="a01461_source.html#l00069">libloader/loaderApi.cpp:69</a></div></div>
+<div class="ttc" id="aa00426_html_aff28b2ad21b60cabc3c735a4b9562df9"><div class="ttname"><a href="a00426.html#aff28b2ad21b60cabc3c735a4b9562df9">LibLoader::LoaderApi::loadNewPlugin</a></div><div class="ttdeci">LOADER_API_COUNT void loadNewPlugin(const MiraiCPString &amp;, bool)</div><div class="ttdef"><b>Definition</b> <a href="a01461_source.html#l00093">libloader/loaderApi.cpp:93</a></div></div>
+<div class="ttc" id="aa00431_html"><div class="ttname"><a href="a00431.html">LibLoader::MessageHandler</a></div><div class="ttdef"><b>Definition</b> <a href="a00278_source.html#l00009">MessageHandler.cpp:9</a></div></div>
+<div class="ttc" id="aa00431_html_a0eaf4740d7c7b34643a18898822a9bfd"><div class="ttname"><a href="a00431.html#a0eaf4740d7c7b34643a18898822a9bfd">LibLoader::MessageHandler::logger_message</a></div><div class="ttdeci">void logger_message(MessageProcessor::payload_ptr msg, const plugin_ptr &amp;plugin)</div><div class="ttdef"><b>Definition</b> <a href="a00278_source.html#l00023">MessageHandler.cpp:23</a></div></div>
+<div class="ttc" id="aa00431_html_a10d399d863aead5a382694135edb5697"><div class="ttname"><a href="a00431.html#a10d399d863aead5a382694135edb5697">LibLoader::MessageHandler::push_task_with_id_message</a></div><div class="ttdeci">void push_task_with_id_message(MessageProcessor::payload_ptr msg, const plugin_ptr &amp;plugin)</div><div class="ttdef"><b>Definition</b> <a href="a00278_source.html#l00044">MessageHandler.cpp:44</a></div></div>
+<div class="ttc" id="aa00431_html_a23c30511bf483a1559577dcb67c05e55"><div class="ttname"><a href="a00431.html#a23c30511bf483a1559577dcb67c05e55">LibLoader::MessageHandler::admin_message</a></div><div class="ttdeci">void admin_message(MessageProcessor::payload_ptr msg, const plugin_ptr &amp;plugin)</div><div class="ttdef"><b>Definition</b> <a href="a00278_source.html#l00058">MessageHandler.cpp:58</a></div></div>
+<div class="ttc" id="aa00431_html_a2f58906e9fca9a85df84272d64863ca7"><div class="ttname"><a href="a00431.html#a2f58906e9fca9a85df84272d64863ca7">LibLoader::MessageHandler::operation_message</a></div><div class="ttdeci">void operation_message(MessageProcessor::payload_ptr msg, const plugin_ptr &amp;plugin)</div><div class="ttdef"><b>Definition</b> <a href="a00278_source.html#l00015">MessageHandler.cpp:15</a></div></div>
+<div class="ttc" id="aa00431_html_a5330d3faccc453bc459132b5736e97c9"><div class="ttname"><a href="a00431.html#a5330d3faccc453bc459132b5736e97c9">LibLoader::MessageHandler::message_cast</a></div><div class="ttdeci">T * message_cast(void *msg)</div><div class="ttdef"><b>Definition</b> <a href="a00278_source.html#l00011">MessageHandler.cpp:11</a></div></div>
+<div class="ttc" id="aa00431_html_a9e4b6ffc27d9a64681c3f810d71700ad"><div class="ttname"><a href="a00431.html#a9e4b6ffc27d9a64681c3f810d71700ad">LibLoader::MessageHandler::plugin_id_message</a></div><div class="ttdeci">void plugin_id_message(MessageProcessor::payload_ptr msg, const plugin_ptr &amp;plugin)</div><div class="ttdef"><b>Definition</b> <a href="a00278_source.html#l00030">MessageHandler.cpp:30</a></div></div>
+<div class="ttc" id="aa00431_html_ababc50641714b47061367e940ce3ceef"><div class="ttname"><a href="a00431.html#ababc50641714b47061367e940ce3ceef">LibLoader::MessageHandler::push_task_message</a></div><div class="ttdeci">void push_task_message(MessageProcessor::payload_ptr msg, const plugin_ptr &amp;plugin)</div><div class="ttdef"><b>Definition</b> <a href="a00278_source.html#l00037">MessageHandler.cpp:37</a></div></div>
+<div class="ttc" id="aa00431_html_ac6360f8f60a063ca92ee816f65a8a2a1"><div class="ttname"><a href="a00431.html#ac6360f8f60a063ca92ee816f65a8a2a1">LibLoader::MessageHandler::timer_message</a></div><div class="ttdeci">void timer_message(MessageProcessor::payload_ptr msg, const plugin_ptr &amp;plugin)</div><div class="ttdef"><b>Definition</b> <a href="a00278_source.html#l00051">MessageHandler.cpp:51</a></div></div>
+<div class="ttc" id="aa00431_html_ad299a8a1fe4337ec39da204c5d247cca"><div class="ttname"><a href="a00431.html#ad299a8a1fe4337ec39da204c5d247cca">LibLoader::MessageHandler::plugin_ptr</a></div><div class="ttdeci">std::shared_ptr&lt; const Plugin &gt; plugin_ptr</div><div class="ttdef"><b>Definition</b> <a href="a00290_source.html#l00010">MessageHandler.h:10</a></div></div>
+<div class="ttc" id="aa00792_html"><div class="ttname"><a href="a00792.html">MiraiCP::OperationMessage</a></div><div class="ttdef"><b>Definition</b> <a href="a00176_source.html#l00059">MsgDefine.h:59</a></div></div>
+<div class="ttc" id="aa00796_html"><div class="ttname"><a href="a00796.html">MiraiCP::LoggerMessage</a></div><div class="ttdef"><b>Definition</b> <a href="a00176_source.html#l00064">MsgDefine.h:64</a></div></div>
+<div class="ttc" id="aa00800_html"><div class="ttname"><a href="a00800.html">MiraiCP::PluginIdMessage</a></div><div class="ttdef"><b>Definition</b> <a href="a00176_source.html#l00072">MsgDefine.h:72</a></div></div>
+<div class="ttc" id="aa00804_html"><div class="ttname"><a href="a00804.html">MiraiCP::PushTaskMessage</a></div><div class="ttdef"><b>Definition</b> <a href="a00176_source.html#l00076">MsgDefine.h:76</a></div></div>
+<div class="ttc" id="aa00808_html"><div class="ttname"><a href="a00808.html">MiraiCP::PushTaskWithIdMessage</a></div><div class="ttdef"><b>Definition</b> <a href="a00176_source.html#l00081">MsgDefine.h:81</a></div></div>
+<div class="ttc" id="aa00812_html"><div class="ttname"><a href="a00812.html">MiraiCP::TimerMessage</a></div><div class="ttdef"><b>Definition</b> <a href="a00176_source.html#l00087">MsgDefine.h:87</a></div></div>
+<div class="ttc" id="aa00816_html"><div class="ttname"><a href="a00816.html">MiraiCP::AdminMessage</a></div><div class="ttdef"><b>Definition</b> <a href="a00176_source.html#l00094">MsgDefine.h:94</a></div></div>
+<div class="ttc" id="aa00816_html_ad435da30a5e9c5b98309e804231201bba1defc47dfde752a92899bd612a20fa93"><div class="ttname"><a href="a00816.html#ad435da30a5e9c5b98309e804231201bba1defc47dfde752a92899bd612a20fa93">MiraiCP::AdminMessage::DISABLE_ONE</a></div><div class="ttdeci">@ DISABLE_ONE</div><div class="ttdef"><b>Definition</b> <a href="a00176_source.html#l00097">MsgDefine.h:97</a></div></div>
+<div class="ttc" id="aa00816_html_ad435da30a5e9c5b98309e804231201bba3bd2d79c7061287730488a3ceb77ea2f"><div class="ttname"><a href="a00816.html#ad435da30a5e9c5b98309e804231201bba3bd2d79c7061287730488a3ceb77ea2f">MiraiCP::AdminMessage::ENABLE_ALL</a></div><div class="ttdeci">@ ENABLE_ALL</div><div class="ttdef"><b>Definition</b> <a href="a00176_source.html#l00098">MsgDefine.h:98</a></div></div>
+<div class="ttc" id="aa00816_html_ad435da30a5e9c5b98309e804231201bba4b3d5edfaddf77237bb86a809eabd6ec"><div class="ttname"><a href="a00816.html#ad435da30a5e9c5b98309e804231201bba4b3d5edfaddf77237bb86a809eabd6ec">MiraiCP::AdminMessage::DISABLE_ALL</a></div><div class="ttdeci">@ DISABLE_ALL</div><div class="ttdef"><b>Definition</b> <a href="a00176_source.html#l00099">MsgDefine.h:99</a></div></div>
+<div class="ttc" id="aa00816_html_ad435da30a5e9c5b98309e804231201bba66ffd3f06a57e0788746c8279f93ae27"><div class="ttname"><a href="a00816.html#ad435da30a5e9c5b98309e804231201bba66ffd3f06a57e0788746c8279f93ae27">MiraiCP::AdminMessage::RELOAD_ONE</a></div><div class="ttdeci">@ RELOAD_ONE</div><div class="ttdef"><b>Definition</b> <a href="a00176_source.html#l00100">MsgDefine.h:100</a></div></div>
+<div class="ttc" id="aa00816_html_ad435da30a5e9c5b98309e804231201bba745f2dc1a6a3dbb03c50cfd31c27fcde"><div class="ttname"><a href="a00816.html#ad435da30a5e9c5b98309e804231201bba745f2dc1a6a3dbb03c50cfd31c27fcde">MiraiCP::AdminMessage::UNLOAD_ONE</a></div><div class="ttdeci">@ UNLOAD_ONE</div><div class="ttdef"><b>Definition</b> <a href="a00176_source.html#l00101">MsgDefine.h:101</a></div></div>
+<div class="ttc" id="aa00816_html_ad435da30a5e9c5b98309e804231201bba8722f879a7dc98ad4fd6583f2a0b67cb"><div class="ttname"><a href="a00816.html#ad435da30a5e9c5b98309e804231201bba8722f879a7dc98ad4fd6583f2a0b67cb">MiraiCP::AdminMessage::ENABLE_ONE</a></div><div class="ttdeci">@ ENABLE_ONE</div><div class="ttdef"><b>Definition</b> <a href="a00176_source.html#l00096">MsgDefine.h:96</a></div></div>
+<div class="ttc" id="aa00816_html_ad435da30a5e9c5b98309e804231201bba8d5045dfbaece72870429dbe7edffaf6"><div class="ttname"><a href="a00816.html#ad435da30a5e9c5b98309e804231201bba8d5045dfbaece72870429dbe7edffaf6">MiraiCP::AdminMessage::LOAD_NEW</a></div><div class="ttdeci">@ LOAD_NEW</div><div class="ttdef"><b>Definition</b> <a href="a00176_source.html#l00102">MsgDefine.h:102</a></div></div>
+<div class="ttc" id="aa00892_html_aa9f62a8e1293e4c3a5f8c02082cfdec4"><div class="ttname"><a href="a00892.html#aa9f62a8e1293e4c3a5f8c02082cfdec4">LibLoader::MessageProcessor::payload_ptr</a></div><div class="ttdeci">PayLoadInfo::payload_ptr payload_ptr</div><div class="ttdef"><b>Definition</b> <a href="a00215_source.html#l00043">MessageProcessor.h:43</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_23c80554d3059e776f1fa3b42eea10c0.html">libloader</a></li><li class="navelem"><a class="el" href="a00278.html">Scheduler.h</a></li>
-    <li class="footer">生成于 2023年 四月 10日 星期一 00:26:30 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_23c80554d3059e776f1fa3b42eea10c0.html">libloader</a></li><li class="navelem"><a class="el" href="a00278.html">MessageHandler.cpp</a></li>
+    <li class="footer">生成于 2023年 十月 26日 星期四 01:16:24 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
     </body>

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['memberrecallevent_0',['MemberRecallEvent',['../a00400.html#a84741a9cf0d0f7667429c841ef2e5358',1,'MiraiCP::RecallEvent']]],
-  ['message_1',['Message',['../a00636.html#a20c956b141205bb3b3fc17b936e08fb8',1,'MiraiCP::MessageChain']]]
+  ['loaderexception_0',['LoaderException',['../a00425.html#aed8445a0eae5bb7716661acb1fc42e66',1,'LibLoader']]],
+  ['loadertask_1',['loadertask',['../a00425.html#a7d3f947f188b83a2b84f3c7e009d4e1a',1,'LibLoader']]]
 ];

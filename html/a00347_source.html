@@ -4,9 +4,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiraiCP: IMiraiData.cpp 源文件</title>
+<title>MiraiCP: MiraiCode.cpp 源文件</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -35,7 +35,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MiraiCP
-   &#160;<span id="projectnumber">v2.15.0-RC2</span>
+   &#160;<span id="projectnumber">v2.16.0</span>
    </div>
    <div id="projectbrief">MiraiCP api document</div>
   </td>
@@ -44,10 +44,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.9.2 -->
+<!-- 制作者 Doxygen 1.9.8 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search",'搜索','.html');
+var searchBox = new SearchBox("searchBox", "search/",'.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -61,6 +61,11 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -87,16 +92,23 @@ $(document).ready(function(){initNavTree('a00347_source.html',''); initResizable
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">IMiraiData.cpp</div></div>
+  <div class="headertitle"><div class="title">MiraiCode.cpp</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="a00347.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// Copyright (c) 2022 - 2022. Eritque arcus and contributors.</span></div>
+<a href="a00347.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// Copyright (c) 2020 - 2022. Eritque arcus and contributors.</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">//</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">// This program is free software: you can redistribute it and/or modify</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">// it under the terms of the GNU Affero General Public License as</span></div>
@@ -112,60 +124,40 @@ $(document).ready(function(){initNavTree('a00347_source.html',''); initResizable
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">// along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</span></div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">//</span></div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &quot;<a class="code" href="a00308.html">ContactDataType/IMiraiData.h</a>&quot;</span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &quot;<a class="code" href="a00362.html">LowLevelAPI.h</a>&quot;</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &quot;json.hpp&quot;</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &lt;mutex&gt;</span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keyword">namespace </span><a class="code hl_namespace" href="a00397.html">MiraiCP</a> {</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="a00872.html#a0af5afb339c80a734ac9752d4f179069">   24</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="a00872.html#a0af5afb339c80a734ac9752d4f179069">IMiraiData::requestRefresh</a>() {</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        <span class="keywordflow">if</span> (!<a class="code hl_function" href="a00397.html#a0a223033909ab4ca1f424c337fda2b85">MiraiCP::checkSafeCall</a>() || <a class="code hl_variable" href="a00872.html#a1a587f53dc97566ee040cd12f9901314">Locker</a>.<a class="code hl_variable" href="a00876.html#a4bcdf4847dcf76ac6db03677b5268f93">_inited</a>.exchange(<span class="keyword">true</span>)) <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        std::unique_lock&lt;std::shared_mutex&gt; _lck(<a class="code hl_variable" href="a00872.html#a1a587f53dc97566ee040cd12f9901314">Locker</a>.<a class="code hl_variable" href="a00876.html#af5678b958259cd9fb1cb1e30b9675b93">_mtx</a>);</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        <a class="code hl_function" href="a00872.html#a628b8885f118d1f20b2f4afd1add0e8b">refreshInfo</a>();</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &quot;<a class="code" href="a00068.html">MiraiCode.h</a>&quot;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &quot;<a class="code" href="a00083.html">Tools.h</a>&quot;</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">namespace </span><a class="code hl_namespace" href="a00412.html">MiraiCP</a> {</div>
+<div class="foldopen" id="foldopen00021" data-start="{" data-end="}">
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="a00664.html#a9b46bf5804f88f2504d97c87d3e1b7fc">   21</a></span>    std::string <a class="code hl_function" href="a00664.html#a9b46bf5804f88f2504d97c87d3e1b7fc">MiraiCode::toString</a>() {</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="a00421.html#ae7bf212fddf60af59042677c3a7753a5">Tools::escapeFromMiraiCode</a>(this-&gt;<a class="code hl_variable" href="a00664.html#a10f382c47adbdf7874ee6aff2c1b1850">content</a>);</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    }</div>
+</div>
+<div class="foldopen" id="foldopen00024" data-start="{" data-end="}">
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="a00664.html#a0d635f5decbaa8f14f9e255efb8654f0">   24</a></span>    <a class="code hl_function" href="a00664.html#a357aa786136dc94421877f5572ca150a">MiraiCode::MiraiCode</a>(<span class="keyword">const</span> std::string &amp;a, <span class="keywordtype">bool</span> convert) { <span class="comment">// NOLINT(google-explicit-constructor)</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        <span class="keywordflow">if</span> (!convert)</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>            <a class="code hl_variable" href="a00664.html#a10f382c47adbdf7874ee6aff2c1b1850">content</a> = a;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>            <a class="code hl_variable" href="a00664.html#a10f382c47adbdf7874ee6aff2c1b1850">content</a> = <a class="code hl_function" href="a00421.html#a01f4fe41f8bef55b95953750f5cfb0c2">Tools::escapeToMiraiCode</a>(a);</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    }</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="a00872.html#abdbf2a10d21a520b782c1654beb3214a">   31</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="a00872.html#abdbf2a10d21a520b782c1654beb3214a">IMiraiData::forceRefreshNextTime</a>() {</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <a class="code hl_variable" href="a00872.html#a1a587f53dc97566ee040cd12f9901314">Locker</a>.<a class="code hl_variable" href="a00876.html#a4bcdf4847dcf76ac6db03677b5268f93">_inited</a> = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    }</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="a00872.html#a0795b1c8b45a0c122c8027f359b8f40e">   35</a></span>    std::string <a class="code hl_function" href="a00872.html#a0795b1c8b45a0c122c8027f359b8f40e">IMiraiData::toString</a>()<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="a00872.html#a17445e67d1cf31c184cf144f874e82f9">toJson</a>().dump();</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    }</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="a00872.html#a17445e67d1cf31c184cf144f874e82f9">   39</a></span>    <a class="code hl_typedef" href="a00392.html#ab701e3ac61a85b337ec5c1abaad6742d">nlohmann::json</a> <a class="code hl_function" href="a00872.html#a17445e67d1cf31c184cf144f874e82f9">IMiraiData::toJson</a>()<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        std::shared_lock&lt;std::shared_mutex&gt; lck(<a class="code hl_variable" href="a00872.html#a1a587f53dc97566ee040cd12f9901314">Locker</a>.<a class="code hl_variable" href="a00876.html#af5678b958259cd9fb1cb1e30b9675b93">_mtx</a>);</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="a00872.html#ae9f9f272fbb0b68b07dd4750745fae1d">internalToJson</a>();</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    }</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="a00872.html#a862c4fbbceae111c0c37df2bf76c7859">   44</a></span>    <a class="code hl_typedef" href="a00392.html#ab701e3ac61a85b337ec5c1abaad6742d">nlohmann::json</a> <a class="code hl_function" href="a00872.html#a862c4fbbceae111c0c37df2bf76c7859">IMiraiData::internalToString</a>()<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="a00872.html#ae9f9f272fbb0b68b07dd4750745fae1d">internalToJson</a>().dump();</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    }</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>} <span class="comment">// namespace MiraiCP</span></div>
-<div class="ttc" id="aa00308_html"><div class="ttname"><a href="a00308.html">IMiraiData.h</a></div></div>
-<div class="ttc" id="aa00362_html"><div class="ttname"><a href="a00362.html">LowLevelAPI.h</a></div></div>
-<div class="ttc" id="aa00392_html_ab701e3ac61a85b337ec5c1abaad6742d"><div class="ttname"><a href="a00392.html#ab701e3ac61a85b337ec5c1abaad6742d">json</a></div><div class="ttdeci">nlohmann::json json</div><div class="ttdef"><b>Definition:</b> <a href="a00392_source.html#l00033">utils.cpp:33</a></div></div>
-<div class="ttc" id="aa00397_html"><div class="ttname"><a href="a00397.html">MiraiCP</a></div><div class="ttdef"><b>Definition:</b> <a href="a00041_source.html#l00021">JsonTools.h:21</a></div></div>
-<div class="ttc" id="aa00397_html_a0a223033909ab4ca1f424c337fda2b85"><div class="ttname"><a href="a00397.html#a0a223033909ab4ca1f424c337fda2b85">MiraiCP::checkSafeCall</a></div><div class="ttdeci">bool checkSafeCall()</div><div class="ttdoc">判断目前是否可以安全地call LoaderApi</div><div class="ttdef"><b>Definition:</b> <a href="a00359_source.html#l00050">LowLevelAPI.cpp:50</a></div></div>
-<div class="ttc" id="aa00872_html_a0795b1c8b45a0c122c8027f359b8f40e"><div class="ttname"><a href="a00872.html#a0795b1c8b45a0c122c8027f359b8f40e">MiraiCP::IMiraiData::toString</a></div><div class="ttdeci">std::string toString() const</div><div class="ttdoc">序列化为string, 带锁</div><div class="ttdef"><b>Definition:</b> <a href="a00347_source.html#l00035">IMiraiData.cpp:35</a></div></div>
-<div class="ttc" id="aa00872_html_a0af5afb339c80a734ac9752d4f179069"><div class="ttname"><a href="a00872.html#a0af5afb339c80a734ac9752d4f179069">MiraiCP::IMiraiData::requestRefresh</a></div><div class="ttdeci">void requestRefresh()</div><div class="ttdoc">请求一次刷新数据, 但不保证会进行</div><div class="ttdef"><b>Definition:</b> <a href="a00347_source.html#l00024">IMiraiData.cpp:24</a></div></div>
-<div class="ttc" id="aa00872_html_a17445e67d1cf31c184cf144f874e82f9"><div class="ttname"><a href="a00872.html#a17445e67d1cf31c184cf144f874e82f9">MiraiCP::IMiraiData::toJson</a></div><div class="ttdeci">nlohmann::json toJson() const</div><div class="ttdoc">转为json, 由子类实现, 多线程安全(带锁)</div><div class="ttdef"><b>Definition:</b> <a href="a00347_source.html#l00039">IMiraiData.cpp:39</a></div></div>
-<div class="ttc" id="aa00872_html_a1a587f53dc97566ee040cd12f9901314"><div class="ttname"><a href="a00872.html#a1a587f53dc97566ee040cd12f9901314">MiraiCP::IMiraiData::Locker</a></div><div class="ttdeci">MiraiDataLocker Locker</div><div class="ttdoc">锁实例</div><div class="ttdef"><b>Definition:</b> <a href="a00308_source.html#l00039">IMiraiData.h:39</a></div></div>
-<div class="ttc" id="aa00872_html_a628b8885f118d1f20b2f4afd1add0e8b"><div class="ttname"><a href="a00872.html#a628b8885f118d1f20b2f4afd1add0e8b">MiraiCP::IMiraiData::refreshInfo</a></div><div class="ttdeci">virtual void refreshInfo()=0</div><div class="ttdoc">刷新数据, 由子类实现</div></div>
-<div class="ttc" id="aa00872_html_a862c4fbbceae111c0c37df2bf76c7859"><div class="ttname"><a href="a00872.html#a862c4fbbceae111c0c37df2bf76c7859">MiraiCP::IMiraiData::internalToString</a></div><div class="ttdeci">nlohmann::json internalToString() const</div><div class="ttdef"><b>Definition:</b> <a href="a00347_source.html#l00044">IMiraiData.cpp:44</a></div></div>
-<div class="ttc" id="aa00872_html_abdbf2a10d21a520b782c1654beb3214a"><div class="ttname"><a href="a00872.html#abdbf2a10d21a520b782c1654beb3214a">MiraiCP::IMiraiData::forceRefreshNextTime</a></div><div class="ttdeci">void forceRefreshNextTime()</div><div class="ttdoc">确保下次调用 requestRefresh 时刷新数据</div><div class="ttdef"><b>Definition:</b> <a href="a00347_source.html#l00031">IMiraiData.cpp:31</a></div></div>
-<div class="ttc" id="aa00872_html_ae9f9f272fbb0b68b07dd4750745fae1d"><div class="ttname"><a href="a00872.html#ae9f9f272fbb0b68b07dd4750745fae1d">MiraiCP::IMiraiData::internalToJson</a></div><div class="ttdeci">virtual nlohmann::json internalToJson() const =0</div><div class="ttdoc">转为json, 由子类实现, 无锁</div></div>
-<div class="ttc" id="aa00876_html_a4bcdf4847dcf76ac6db03677b5268f93"><div class="ttname"><a href="a00876.html#a4bcdf4847dcf76ac6db03677b5268f93">MiraiCP::IMiraiData::MiraiDataLocker::_inited</a></div><div class="ttdeci">std::atomic&lt; bool &gt; _inited</div><div class="ttdoc">该数据是否已经初始化</div><div class="ttdef"><b>Definition:</b> <a href="a00308_source.html#l00034">IMiraiData.h:34</a></div></div>
-<div class="ttc" id="aa00876_html_af5678b958259cd9fb1cb1e30b9675b93"><div class="ttname"><a href="a00876.html#af5678b958259cd9fb1cb1e30b9675b93">MiraiCP::IMiraiData::MiraiDataLocker::_mtx</a></div><div class="ttdeci">std::shared_mutex _mtx</div><div class="ttdoc">该数据是否上锁</div><div class="ttdef"><b>Definition:</b> <a href="a00308_source.html#l00032">IMiraiData.h:32</a></div></div>
+</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>} <span class="comment">// namespace MiraiCP</span></div>
+<div class="ttc" id="aa00068_html"><div class="ttname"><a href="a00068.html">MiraiCode.h</a></div></div>
+<div class="ttc" id="aa00083_html"><div class="ttname"><a href="a00083.html">Tools.h</a></div></div>
+<div class="ttc" id="aa00412_html"><div class="ttname"><a href="a00412.html">MiraiCP</a></div><div class="ttdef"><b>Definition</b> <a href="a00050_source.html#l00021">JsonTools.h:21</a></div></div>
+<div class="ttc" id="aa00421_html_a01f4fe41f8bef55b95953750f5cfb0c2"><div class="ttname"><a href="a00421.html#a01f4fe41f8bef55b95953750f5cfb0c2">MiraiCP::Tools::escapeToMiraiCode</a></div><div class="ttdeci">MIRAICP_EXPORT std::string escapeToMiraiCode(const std::string &amp;s)</div><div class="ttdoc">转义miraicode格式</div><div class="ttdef"><b>Definition</b> <a href="a00377_source.html#l00075">Tools.cpp:75</a></div></div>
+<div class="ttc" id="aa00421_html_ae7bf212fddf60af59042677c3a7753a5"><div class="ttname"><a href="a00421.html#ae7bf212fddf60af59042677c3a7753a5">MiraiCP::Tools::escapeFromMiraiCode</a></div><div class="ttdeci">MIRAICP_EXPORT std::string escapeFromMiraiCode(const std::string &amp;s)</div><div class="ttdoc">从miraicode转义到正常</div><div class="ttdef"><b>Definition</b> <a href="a00377_source.html#l00061">Tools.cpp:61</a></div></div>
+<div class="ttc" id="aa00664_html_a10f382c47adbdf7874ee6aff2c1b1850"><div class="ttname"><a href="a00664.html#a10f382c47adbdf7874ee6aff2c1b1850">MiraiCP::MiraiCode::content</a></div><div class="ttdeci">std::string content</div><div class="ttdef"><b>Definition</b> <a href="a00068_source.html#l00039">MiraiCode.h:39</a></div></div>
+<div class="ttc" id="aa00664_html_a357aa786136dc94421877f5572ca150a"><div class="ttname"><a href="a00664.html#a357aa786136dc94421877f5572ca150a">MiraiCP::MiraiCode::MiraiCode</a></div><div class="ttdeci">MiraiCode(MiraiCodeable *a)</div><div class="ttdoc">从MiraiCodeable类型初始化一个miraicode字符串</div><div class="ttdef"><b>Definition</b> <a href="a00068_source.html#l00053">MiraiCode.h:53</a></div></div>
+<div class="ttc" id="aa00664_html_a9b46bf5804f88f2504d97c87d3e1b7fc"><div class="ttname"><a href="a00664.html#a9b46bf5804f88f2504d97c87d3e1b7fc">MiraiCP::MiraiCode::toString</a></div><div class="ttdeci">std::string toString()</div><div class="ttdoc">输出当前内容, 会自动转码</div><div class="ttdef"><b>Definition</b> <a href="a00347_source.html#l00021">MiraiCode.cpp:21</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_fef842b25f8adae1261920890dd101a4.html">sdk</a></li><li class="navelem"><a class="el" href="a00347.html">IMiraiData.cpp</a></li>
-    <li class="footer">生成于 2023年 四月 10日 星期一 00:26:31 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_fef842b25f8adae1261920890dd101a4.html">sdk</a></li><li class="navelem"><a class="el" href="a00347.html">MiraiCode.cpp</a></li>
+    <li class="footer">生成于 2023年 十月 26日 星期四 01:16:24 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
     </body>

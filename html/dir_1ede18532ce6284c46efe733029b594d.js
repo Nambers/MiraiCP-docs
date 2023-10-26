@@ -1,0 +1,26 @@
+var dir_1ede18532ce6284c46efe733029b594d =
+[
+    [ "Events", "dir_f83dc716b95661d1ef88f368581b25fb.html", "dir_f83dc716b95661d1ef88f368581b25fb" ],
+    [ "Bot.h", "a00170.html", "a00170" ],
+    [ "Command.h", "a00098.html", "a00098" ],
+    [ "Contact.h", "a00095.html", "a00095" ],
+    [ "CPPPlugin.h", "a00101.html", "a00101" ],
+    [ "Event.h", "a00173.html", "a00173" ],
+    [ "Exception.h", "a00059.html", "a00059" ],
+    [ "ForwardedMessage.h", "a00077.html", "a00077" ],
+    [ "Friend.h", "a00071.html", "a00071" ],
+    [ "Group.h", "a00056.html", "a00056" ],
+    [ "loaderApi.h", "a00080.html", "a00080" ],
+    [ "Logger.h", "a00167.html", "a00167" ],
+    [ "Member.h", "a00065.html", "a00065" ],
+    [ "MessageChain.h", "a00092.html", "a00092" ],
+    [ "MessageSource.h", "a00086.html", "a00086" ],
+    [ "MiraiCode.h", "a00068.html", "a00068" ],
+    [ "MiraiCPNewThread.h", "a00053.html", "a00053" ],
+    [ "MiraiCPSchedule.h", "a00107.html", "a00107" ],
+    [ "SdkType.h", "a00062.html", "a00062" ],
+    [ "SingleMessage.h", "a00089.html", "a00089" ],
+    [ "ThreadTask.h", "a00104.html", "a00104" ],
+    [ "Tools.h", "a00083.html", "a00083" ],
+    [ "utils.h", "a00074.html", "a00074" ]
+];

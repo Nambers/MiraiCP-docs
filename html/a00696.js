@@ -1,11 +1,11 @@
 var a00696 =
 [
-    [ "operator==", "a00696.html#adf77a906cd6705425a28ab4483c634b5", null ],
-    [ "type", "a00696.html#ab55cc2add22064ea6437677abc6d2555", null ],
-    [ "codec", "a00696.html#afe96592ba24d9c3f1887c7668d788c97", null ],
-    [ "filename", "a00696.html#a9cf8841f7297be7d0b8404aeaf1727a1", null ],
-    [ "length", "a00696.html#a963774ddebf115bebd86386cb84a5117", null ],
-    [ "md5", "a00696.html#a403a5a5837bbf02f5e0c5a4327f51ff3", null ],
-    [ "size", "a00696.html#a06c764f6c1f6f65def69fcfe378ebef1", null ],
-    [ "url", "a00696.html#aedf31534944297bea3c997cc49329443", null ]
+    [ "FlashImage", "a00696.html#a6a97f2f10a1484d49882eeb51ddeb9e9", null ],
+    [ "FlashImage", "a00696.html#ae6562b2f43aede32b4746f50b9fcab5c", null ],
+    [ "deserialize", "a00696.html#adba6a0e96f7cc85d9992e7463fc93025", null ],
+    [ "operator==", "a00696.html#aa01313f396a7623547ba0c2a409ef74c", null ],
+    [ "toImage", "a00696.html#ae2547ca115caa61991a59c5507028cb4", null ],
+    [ "toJson", "a00696.html#a55dd67b46186624fd4882406e16ff2c2", null ],
+    [ "toMiraiCode", "a00696.html#ac2edbd27eb5d904b56a599a176cf416f", null ],
+    [ "type", "a00696.html#ad31100fa57d8f8cf79a2267cfe10ae97", null ]
 ];

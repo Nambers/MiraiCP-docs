@@ -1,10 +1,11 @@
 var a00668 =
 [
-    [ "At", "a00668.html#ab5b225ea67cf995d13b384ec622c86e7", null ],
-    [ "At", "a00668.html#a3e12195fc4d9ae026ec8a438a368342a", null ],
-    [ "operator==", "a00668.html#a58dbd3db49d9d2fed357b791ff3ba816", null ],
-    [ "toJson", "a00668.html#a60af12c9073c8734f98ee682a61ce184", null ],
-    [ "toMiraiCode", "a00668.html#abaa95fab044eebb3e355da0040c0bfa7", null ],
-    [ "type", "a00668.html#a125a356ddd55ec22117d8fafb1f32dc9", null ],
-    [ "target", "a00668.html#a4c451a3d12d38f6a83d425cab2d2aa25", null ]
+    [ "MiraiCPNewThread", "a00668.html#aac9f1899dc2dd508fb87c393dce95569", null ],
+    [ "MiraiCPNewThread", "a00668.html#ae04a775fb43599b61f29e831f98bfee0", null ],
+    [ "operator=", "a00668.html#a72e06856d9b8a870c2405bd8345e4e9a", null ],
+    [ "operator=", "a00668.html#ab26297cb5d0e97dffe4983d75bbdf413", null ],
+    [ "operator=", "a00668.html#adff0ce4c4549e6803c61cb55128f41d7", null ],
+    [ "operator=", "a00668.html#afa2a7ce9f57f6c96fad78f347bcca5af", null ],
+    [ "threadExceptionBroadcast", "a00668.html#a0fc8daf263296676e2714fd681c401d2", null ],
+    [ "threadThrows", "a00668.html#a18227b40882a2c115f0303ad61cd652a", null ]
 ];

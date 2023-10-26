@@ -1,26 +1,5 @@
 var a00852 =
 [
-    [ "blocks", "a00856.html", "a00856" ],
-    [ "ThreadPoolBase", "a00852.html#acef7a56bb01d0412c2b0b8e3b9e26e21", null ],
-    [ "~ThreadPoolBase", "a00852.html#ad9d70546000c1b850468d88e8d8bada5", null ],
-    [ "determine_thread_count", "a00852.html#a593ca1f5215bd03585a9bee1c8653494", null ],
-    [ "get_tasks_queued", "a00852.html#a2061fcf72f6313036c96fa0f7eb82363", null ],
-    [ "get_tasks_running", "a00852.html#a86adf0479c1c3f88e6a92195681bfd39", null ],
-    [ "get_tasks_total", "a00852.html#a1423f5d4a8e8e063908b58a47787d5ce", null ],
-    [ "getThreadIndex", "a00852.html#ae109966b4dce505bdc1bebcdf2bd4cd0", null ],
-    [ "is_paused", "a00852.html#af339bef805e095f0fe01cc3e41d14c23", null ],
-    [ "pause", "a00852.html#aa4fbb555748053333e9c85b9c2fa2274", null ],
-    [ "setThreadIndex", "a00852.html#a9a6bf1d55c081cc77cca35adaeb3780d", null ],
-    [ "unpause", "a00852.html#a85c157d87f8ca171fc50f46c3d46dec9", null ],
-    [ "wait_for_tasks", "a00852.html#a1c7e29f3fb47ae19a02ffd48961fce5f", null ],
-    [ "worker", "a00852.html#a90f9311eac6c03fb4cb36cb8ce9c7d31", null ],
-    [ "paused", "a00852.html#a27c81a6ada2657ac00c748531326130d", null ],
-    [ "running", "a00852.html#a988216b10c8059cf5b884fb12d718e3c", null ],
-    [ "task_available_cv", "a00852.html#a0ca7e77d1f3ea87103408c1b43a41582", null ],
-    [ "task_done_cv", "a00852.html#a310037680ec6129396c4e0720e6ad14a", null ],
-    [ "tasks", "a00852.html#af57e6f698dddd43557043ff658b9900f", null ],
-    [ "tasks_mtx", "a00852.html#ac73cd8837657465d1c52e1fb1ab6fb36", null ],
-    [ "tasks_total", "a00852.html#a15c006ee092ea8c57710e571495b856d", null ],
-    [ "threadIndexCounter", "a00852.html#a60ed3cef0ad2a8cffe6d7499866b48d0", null ],
-    [ "waiting", "a00852.html#a186ce734a22cf4f9dd313da4ef2ee33d", null ]
+    [ "PluginLoadException", "a00852.html#abcadf418c532d132fba49357902e2e7e", null ],
+    [ "exceptionType", "a00852.html#ac82d122c331d273b9d62327055f197f1", null ]
 ];

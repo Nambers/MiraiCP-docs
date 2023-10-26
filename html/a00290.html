@@ -4,9 +4,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiraiCP: ThreadPool.h 文件参考</title>
+<title>MiraiCP: MessageHandler.h 文件参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -35,7 +35,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MiraiCP
-   &#160;<span id="projectnumber">v2.15.0-RC2</span>
+   &#160;<span id="projectnumber">v2.16.0</span>
    </div>
    <div id="projectbrief">MiraiCP api document</div>
   </td>
@@ -44,10 +44,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.9.2 -->
+<!-- 制作者 Doxygen 1.9.8 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search",'搜索','.html');
+var searchBox = new SearchBox("searchBox", "search/",'.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -87,67 +87,72 @@ $(document).ready(function(){initNavTree('a00290.html',''); initResizable(); });
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
 </div>
 
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">类</a> &#124;
 <a href="#namespaces">命名空间</a> &#124;
 <a href="#typedef-members">类型定义</a> &#124;
-<a href="#var-members">变量</a>  </div>
-  <div class="headertitle"><div class="title">ThreadPool.h 文件参考</div></div>
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle"><div class="title">MessageHandler.h 文件参考</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="a00236_source.html">LoaderLogger.h</a>&quot;</code><br />
-<code>#include &lt;functional&gt;</code><br />
-<code>#include &lt;future&gt;</code><br />
-<code>#include &lt;queue&gt;</code><br />
-<code>#include &lt;type_traits&gt;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="a00215_source.html">MessageProcessor.h</a>&quot;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> ThreadPool.h 的引用(Include)关系图:</div>
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> MessageHandler.h 的引用(Include)关系图:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="a00291.svg" width="611" height="262"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00291.svg" width="679" height="486"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div><div class="textblock"><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-1-trigger" src="closed.png" alt="+"/> 此图展示该文件直接或间接的被哪些文件引用了:</div>
 <div id="dynsection-1-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="a00292.svg" width="847" height="112"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00292.svg" width="339" height="112"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 <p><a href="a00290_source.html">浏览源代码.</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
-类</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00848.html">Antares::ThreadPoolDefaultTraits</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00852.html">Antares::ThreadPoolBase</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00856.html">Antares::ThreadPoolBase::blocks&lt; T1, T2, T &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00860.html">Antares::ThreadPool&lt; Traits &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
 命名空间</h2></td></tr>
-<tr class="memitem:a00414"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00414.html">Antares</a></td></tr>
+<tr class="memitem:a00425" id="r_a00425"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00425.html">LibLoader</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00431" id="r_a00431"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00431.html">LibLoader::MessageHandler</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 类型定义</h2></td></tr>
-<tr class="memitem:a87f27e5607e5dd60acdec4eb59e490cd"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00414.html#a87f27e5607e5dd60acdec4eb59e490cd">Antares::concurrency_t</a> = decltype(std::thread::hardware_concurrency())</td></tr>
-<tr class="separator:a87f27e5607e5dd60acdec4eb59e490cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad299a8a1fe4337ec39da204c5d247cca" id="r_ad299a8a1fe4337ec39da204c5d247cca"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00431.html#ad299a8a1fe4337ec39da204c5d247cca">LibLoader::MessageHandler::plugin_ptr</a> = std::shared_ptr&lt; const <a class="el" href="a00916.html">Plugin</a> &gt;</td></tr>
+<tr class="separator:ad299a8a1fe4337ec39da204c5d247cca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
-变量</h2></td></tr>
-<tr class="memitem:a343ec36721fc4bf72fd64e712c71ad1d"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; ThreadPool&lt;&gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00414.html#a343ec36721fc4bf72fd64e712c71ad1d">Antares::pool</a></td></tr>
-<tr class="separator:a343ec36721fc4bf72fd64e712c71ad1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:a2f58906e9fca9a85df84272d64863ca7" id="r_a2f58906e9fca9a85df84272d64863ca7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00431.html#a2f58906e9fca9a85df84272d64863ca7">LibLoader::MessageHandler::operation_message</a> (<a class="el" href="a00892.html#aa9f62a8e1293e4c3a5f8c02082cfdec4">MessageProcessor::payload_ptr</a> msg, const <a class="el" href="a00431.html#ad299a8a1fe4337ec39da204c5d247cca">plugin_ptr</a> &amp;plugin)</td></tr>
+<tr class="separator:a2f58906e9fca9a85df84272d64863ca7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0eaf4740d7c7b34643a18898822a9bfd" id="r_a0eaf4740d7c7b34643a18898822a9bfd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00431.html#a0eaf4740d7c7b34643a18898822a9bfd">LibLoader::MessageHandler::logger_message</a> (<a class="el" href="a00892.html#aa9f62a8e1293e4c3a5f8c02082cfdec4">MessageProcessor::payload_ptr</a> msg, const <a class="el" href="a00431.html#ad299a8a1fe4337ec39da204c5d247cca">plugin_ptr</a> &amp;plugin)</td></tr>
+<tr class="separator:a0eaf4740d7c7b34643a18898822a9bfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e4b6ffc27d9a64681c3f810d71700ad" id="r_a9e4b6ffc27d9a64681c3f810d71700ad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00431.html#a9e4b6ffc27d9a64681c3f810d71700ad">LibLoader::MessageHandler::plugin_id_message</a> (<a class="el" href="a00892.html#aa9f62a8e1293e4c3a5f8c02082cfdec4">MessageProcessor::payload_ptr</a> msg, const <a class="el" href="a00431.html#ad299a8a1fe4337ec39da204c5d247cca">plugin_ptr</a> &amp;plugin)</td></tr>
+<tr class="separator:a9e4b6ffc27d9a64681c3f810d71700ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ababc50641714b47061367e940ce3ceef" id="r_ababc50641714b47061367e940ce3ceef"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00431.html#ababc50641714b47061367e940ce3ceef">LibLoader::MessageHandler::push_task_message</a> (<a class="el" href="a00892.html#aa9f62a8e1293e4c3a5f8c02082cfdec4">MessageProcessor::payload_ptr</a> msg, const <a class="el" href="a00431.html#ad299a8a1fe4337ec39da204c5d247cca">plugin_ptr</a> &amp;plugin)</td></tr>
+<tr class="separator:ababc50641714b47061367e940ce3ceef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10d399d863aead5a382694135edb5697" id="r_a10d399d863aead5a382694135edb5697"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00431.html#a10d399d863aead5a382694135edb5697">LibLoader::MessageHandler::push_task_with_id_message</a> (<a class="el" href="a00892.html#aa9f62a8e1293e4c3a5f8c02082cfdec4">MessageProcessor::payload_ptr</a> msg, const <a class="el" href="a00431.html#ad299a8a1fe4337ec39da204c5d247cca">plugin_ptr</a> &amp;plugin)</td></tr>
+<tr class="separator:a10d399d863aead5a382694135edb5697"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6360f8f60a063ca92ee816f65a8a2a1" id="r_ac6360f8f60a063ca92ee816f65a8a2a1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00431.html#ac6360f8f60a063ca92ee816f65a8a2a1">LibLoader::MessageHandler::timer_message</a> (<a class="el" href="a00892.html#aa9f62a8e1293e4c3a5f8c02082cfdec4">MessageProcessor::payload_ptr</a> msg, const <a class="el" href="a00431.html#ad299a8a1fe4337ec39da204c5d247cca">plugin_ptr</a> &amp;plugin)</td></tr>
+<tr class="separator:ac6360f8f60a063ca92ee816f65a8a2a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23c30511bf483a1559577dcb67c05e55" id="r_a23c30511bf483a1559577dcb67c05e55"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00431.html#a23c30511bf483a1559577dcb67c05e55">LibLoader::MessageHandler::admin_message</a> (<a class="el" href="a00892.html#aa9f62a8e1293e4c3a5f8c02082cfdec4">MessageProcessor::payload_ptr</a> msg, const <a class="el" href="a00431.html#ad299a8a1fe4337ec39da204c5d247cca">plugin_ptr</a> &amp;plugin)</td></tr>
+<tr class="separator:a23c30511bf483a1559577dcb67c05e55"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -155,8 +160,8 @@ $(document).ready(function(){initNavTree('a00290.html',''); initResizable(); });
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_23c80554d3059e776f1fa3b42eea10c0.html">libloader</a></li><li class="navelem"><a class="el" href="a00290.html">ThreadPool.h</a></li>
-    <li class="footer">生成于 2023年 四月 10日 星期一 00:26:32 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_23c80554d3059e776f1fa3b42eea10c0.html">libloader</a></li><li class="navelem"><a class="el" href="a00290.html">MessageHandler.h</a></li>
+    <li class="footer">生成于 2023年 十月 26日 星期四 01:16:24 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
     </body>

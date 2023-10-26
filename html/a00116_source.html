@@ -4,9 +4,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiraiCP: PrivateMessageEvent.h 源文件</title>
+<title>MiraiCP: MessagePreSendEvent.h 源文件</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -35,7 +35,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MiraiCP
-   &#160;<span id="projectnumber">v2.15.0-RC2</span>
+   &#160;<span id="projectnumber">v2.16.0</span>
    </div>
    <div id="projectbrief">MiraiCP api document</div>
   </td>
@@ -44,10 +44,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.9.2 -->
+<!-- 制作者 Doxygen 1.9.8 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search",'搜索','.html');
+var searchBox = new SearchBox("searchBox", "search/",'.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -61,6 +61,11 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -87,13 +92,20 @@ $(document).ready(function(){initNavTree('a00116_source.html',''); initResizable
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">PrivateMessageEvent.h</div></div>
+  <div class="headertitle"><div class="title">MessagePreSendEvent.h</div></div>
 </div><!--header-->
 <div class="contents">
 <a href="a00116.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// Copyright (c) 2020 - 2023. Eritque arcus and contributors.</span></div>
@@ -112,84 +124,54 @@ $(document).ready(function(){initNavTree('a00116_source.html',''); initResizable
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">// along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</span></div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">//</span></div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#ifndef MIRAICP_PRO_PRIVATEMESSAGEEVENT_H</span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#define MIRAICP_PRO_PRIVATEMESSAGEEVENT_H</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#ifndef MIRAICP_PRO_MESSAGEPRESENDEVENT_H</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#define MIRAICP_PRO_MESSAGEPRESENDEVENT_H</span></div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &quot;../Friend.h&quot;</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &quot;<a class="code" href="a00065.html">BotEvent.h</a>&quot;</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &quot;<a class="code" href="a00164.html">BotEvent.h</a>&quot;</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keyword">namespace </span><a class="code hl_namespace" href="a00397.html">MiraiCP</a> {</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="a00556.html">   30</a></span>    <span class="keyword">class </span><a class="code hl_class" href="a00556.html">PrivateMessageEvent</a> : <span class="keyword">public</span> <a class="code hl_class" href="a00476.html">BotEvent</a>&lt;PrivateMessageEvent&gt;, <span class="keyword">public</span> <a class="code hl_class" href="a00504.html">IMessageEvent</a> {</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="a00556.html#ac2cb5df8d7346169a074cb463bc85441">   32</a></span>        <span class="keyword">static</span> <a class="code hl_enumeration" href="a00401.html#abe9e9d8212ea8f23717b72db64393cab">eventTypes::Types</a> <a class="code hl_function" href="a00556.html#ac2cb5df8d7346169a074cb463bc85441">get_event_type</a>() {</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>            <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="a00401.html#abe9e9d8212ea8f23717b72db64393caba8e6bc9ebd9275c097d20c428d8f97fe9">eventTypes::Types::FriendMessageEvent</a>;</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        }</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="a00556.html#aa2ba8dfb74a6324a1a6ef5774d6ee793">   38</a></span>        <a class="code hl_class" href="a00588.html">Friend</a> <a class="code hl_variable" href="a00556.html#aa2ba8dfb74a6324a1a6ef5774d6ee793">sender</a>;</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="a00556.html#a8a85d06adc5634099288001409e51de0">   40</a></span>        <a class="code hl_class" href="a00636.html">MessageChain</a> <a class="code hl_variable" href="a00556.html#a8a85d06adc5634099288001409e51de0">message</a>{};</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        <span class="keyword">explicit</span> <a class="code hl_function" href="a00556.html#ae09650a1aa7d3f7535a4792bc919e032">PrivateMessageEvent</a>(<a class="code hl_class" href="a00492.html">BaseEventData</a> j);</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        <a class="code hl_class" href="a00636.html">MessageChain</a> <a class="code hl_function" href="a00556.html#a2fadddd37811d8dcbf7183d98eba3034">nextMessage</a>(<span class="keywordtype">long</span> time = -1, <span class="keywordtype">bool</span> halt = <span class="keyword">true</span>) <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="a00556.html#a3b70ad84f06df0b224c6dbd58d255a59">   61</a></span>        <a class="code hl_class" href="a00448.html">Contact</a> *<a class="code hl_function" href="a00556.html#a3b70ad84f06df0b224c6dbd58d255a59">chat</a>()<span class="keyword"> override </span>{</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>            <span class="keywordflow">return</span> &amp;<a class="code hl_variable" href="a00556.html#aa2ba8dfb74a6324a1a6ef5774d6ee793">sender</a>;</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        }</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="a00556.html#a9a8d672f2936a6760e046c3a03790e07">   65</a></span>        <span class="keyword">const</span> <a class="code hl_class" href="a00448.html">Contact</a> *<a class="code hl_function" href="a00556.html#a9a8d672f2936a6760e046c3a03790e07">chat</a>()<span class="keyword"> const override </span>{</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>            <span class="keywordflow">return</span> &amp;<a class="code hl_variable" href="a00556.html#aa2ba8dfb74a6324a1a6ef5774d6ee793">sender</a>;</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        }</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="a00556.html#a9b4c13376dcef6dddab4cca9b57ffc48">   69</a></span>        <a class="code hl_class" href="a00448.html">Contact</a> *<a class="code hl_function" href="a00556.html#a9b4c13376dcef6dddab4cca9b57ffc48">from</a>()<span class="keyword"> override </span>{</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>            <span class="keywordflow">return</span> &amp;<a class="code hl_variable" href="a00556.html#aa2ba8dfb74a6324a1a6ef5774d6ee793">sender</a>;</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        }</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="a00556.html#a92d1a4aad3a0b4306986cea460b84fb7">   72</a></span>        <span class="keyword">const</span> <a class="code hl_class" href="a00448.html">Contact</a> *<a class="code hl_function" href="a00556.html#a92d1a4aad3a0b4306986cea460b84fb7">from</a>()<span class="keyword"> const override </span>{</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>            <span class="keywordflow">return</span> &amp;<a class="code hl_variable" href="a00556.html#aa2ba8dfb74a6324a1a6ef5774d6ee793">sender</a>;</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        }</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="a00556.html#a046a99377587f6d8278d7d6cfb55208b">   75</a></span>        <a class="code hl_class" href="a00636.html">MessageChain</a> *<a class="code hl_function" href="a00556.html#a046a99377587f6d8278d7d6cfb55208b">getMessageChain</a>()<span class="keyword"> override </span>{</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>            <span class="keywordflow">return</span> &amp;<a class="code hl_variable" href="a00556.html#a8a85d06adc5634099288001409e51de0">message</a>;</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        }</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="a00556.html#a547bf324dfbfbb2dbef03c3fef05168b">   78</a></span>        <span class="keyword">const</span> <a class="code hl_class" href="a00636.html">MessageChain</a> *<a class="code hl_function" href="a00556.html#a547bf324dfbfbb2dbef03c3fef05168b">getMessageChain</a>()<span class="keyword"> const override </span>{</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>            <span class="keywordflow">return</span> &amp;<a class="code hl_variable" href="a00556.html#a8a85d06adc5634099288001409e51de0">message</a>;</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        }</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    };</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>} <span class="comment">// namespace MiraiCP</span></div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span><span class="preprocessor">#endif </span><span class="comment">//MIRAICP_PRO_PRIVATEMESSAGEEVENT_H</span></div>
-<div class="ttc" id="aa00065_html"><div class="ttname"><a href="a00065.html">BotEvent.h</a></div></div>
-<div class="ttc" id="aa00397_html"><div class="ttname"><a href="a00397.html">MiraiCP</a></div><div class="ttdef"><b>Definition:</b> <a href="a00041_source.html#l00021">JsonTools.h:21</a></div></div>
-<div class="ttc" id="aa00401_html_abe9e9d8212ea8f23717b72db64393cab"><div class="ttname"><a href="a00401.html#abe9e9d8212ea8f23717b72db64393cab">MiraiCP::eventTypes::Types</a></div><div class="ttdeci">Types</div><div class="ttdef"><b>Definition:</b> <a href="a00077_source.html#l00033">EventBase.h:33</a></div></div>
-<div class="ttc" id="aa00401_html_abe9e9d8212ea8f23717b72db64393caba8e6bc9ebd9275c097d20c428d8f97fe9"><div class="ttname"><a href="a00401.html#abe9e9d8212ea8f23717b72db64393caba8e6bc9ebd9275c097d20c428d8f97fe9">MiraiCP::eventTypes::FriendMessageEvent</a></div><div class="ttdeci">@ FriendMessageEvent</div><div class="ttdef"><b>Definition:</b> <a href="a00077_source.html#l00039">EventBase.h:39</a></div></div>
-<div class="ttc" id="aa00448_html"><div class="ttname"><a href="a00448.html">MiraiCP::Contact</a></div><div class="ttdoc">group, friend, member的父类</div><div class="ttdef"><b>Definition:</b> <a href="a00056_source.html#l00053">Contact.h:53</a></div></div>
-<div class="ttc" id="aa00476_html"><div class="ttname"><a href="a00476.html">MiraiCP::BotEvent</a></div><div class="ttdoc">所有事件处理timeoutevent都是机器人事件，指都有机器人实例</div><div class="ttdef"><b>Definition:</b> <a href="a00065_source.html#l00029">BotEvent.h:29</a></div></div>
-<div class="ttc" id="aa00492_html"><div class="ttname"><a href="a00492.html">MiraiCP::BaseEventData</a></div><div class="ttdef"><b>Definition:</b> <a href="a00077_source.html#l00058">EventBase.h:58</a></div></div>
-<div class="ttc" id="aa00504_html"><div class="ttname"><a href="a00504.html">MiraiCP::IMessageEvent</a></div><div class="ttdoc">MessageEvent类型的抽象接口，用于Message类型多态实现</div><div class="ttdef"><b>Definition:</b> <a href="a00077_source.html#l00102">EventBase.h:102</a></div></div>
-<div class="ttc" id="aa00556_html"><div class="ttname"><a href="a00556.html">MiraiCP::PrivateMessageEvent</a></div><div class="ttdef"><b>Definition:</b> <a href="a00116_source.html#l00030">PrivateMessageEvent.h:30</a></div></div>
-<div class="ttc" id="aa00556_html_a046a99377587f6d8278d7d6cfb55208b"><div class="ttname"><a href="a00556.html#a046a99377587f6d8278d7d6cfb55208b">MiraiCP::PrivateMessageEvent::getMessageChain</a></div><div class="ttdeci">MessageChain * getMessageChain() override</div><div class="ttdef"><b>Definition:</b> <a href="a00116_source.html#l00075">PrivateMessageEvent.h:75</a></div></div>
-<div class="ttc" id="aa00556_html_a2fadddd37811d8dcbf7183d98eba3034"><div class="ttname"><a href="a00556.html#a2fadddd37811d8dcbf7183d98eba3034">MiraiCP::PrivateMessageEvent::nextMessage</a></div><div class="ttdeci">MessageChain nextMessage(long time=-1, bool halt=true) const</div><div class="ttdoc">取下一个消息(发送人和接收人和本事件一样)</div><div class="ttdef"><b>Definition:</b> <a href="a00311_source.html#l00094">Event.cpp:94</a></div></div>
-<div class="ttc" id="aa00556_html_a3b70ad84f06df0b224c6dbd58d255a59"><div class="ttname"><a href="a00556.html#a3b70ad84f06df0b224c6dbd58d255a59">MiraiCP::PrivateMessageEvent::chat</a></div><div class="ttdeci">Contact * chat() override</div><div class="ttdoc">获取当前聊天，可能是群，私聊，或群临时会话</div><div class="ttdef"><b>Definition:</b> <a href="a00116_source.html#l00061">PrivateMessageEvent.h:61</a></div></div>
-<div class="ttc" id="aa00556_html_a547bf324dfbfbb2dbef03c3fef05168b"><div class="ttname"><a href="a00556.html#a547bf324dfbfbb2dbef03c3fef05168b">MiraiCP::PrivateMessageEvent::getMessageChain</a></div><div class="ttdeci">const MessageChain * getMessageChain() const override</div><div class="ttdef"><b>Definition:</b> <a href="a00116_source.html#l00078">PrivateMessageEvent.h:78</a></div></div>
-<div class="ttc" id="aa00556_html_a8a85d06adc5634099288001409e51de0"><div class="ttname"><a href="a00556.html#a8a85d06adc5634099288001409e51de0">MiraiCP::PrivateMessageEvent::message</a></div><div class="ttdeci">MessageChain message</div><div class="ttdoc">信息</div><div class="ttdef"><b>Definition:</b> <a href="a00116_source.html#l00040">PrivateMessageEvent.h:40</a></div></div>
-<div class="ttc" id="aa00556_html_a92d1a4aad3a0b4306986cea460b84fb7"><div class="ttname"><a href="a00556.html#a92d1a4aad3a0b4306986cea460b84fb7">MiraiCP::PrivateMessageEvent::from</a></div><div class="ttdeci">const Contact * from() const override</div><div class="ttdef"><b>Definition:</b> <a href="a00116_source.html#l00072">PrivateMessageEvent.h:72</a></div></div>
-<div class="ttc" id="aa00556_html_a9a8d672f2936a6760e046c3a03790e07"><div class="ttname"><a href="a00556.html#a9a8d672f2936a6760e046c3a03790e07">MiraiCP::PrivateMessageEvent::chat</a></div><div class="ttdeci">const Contact * chat() const override</div><div class="ttdef"><b>Definition:</b> <a href="a00116_source.html#l00065">PrivateMessageEvent.h:65</a></div></div>
-<div class="ttc" id="aa00556_html_a9b4c13376dcef6dddab4cca9b57ffc48"><div class="ttname"><a href="a00556.html#a9b4c13376dcef6dddab4cca9b57ffc48">MiraiCP::PrivateMessageEvent::from</a></div><div class="ttdeci">Contact * from() override</div><div class="ttdoc">获取当前聊天的发送人，可能是群成员，私聊的好友，或群临时会话对应的群成员</div><div class="ttdef"><b>Definition:</b> <a href="a00116_source.html#l00069">PrivateMessageEvent.h:69</a></div></div>
-<div class="ttc" id="aa00556_html_aa2ba8dfb74a6324a1a6ef5774d6ee793"><div class="ttname"><a href="a00556.html#aa2ba8dfb74a6324a1a6ef5774d6ee793">MiraiCP::PrivateMessageEvent::sender</a></div><div class="ttdeci">Friend sender</div><div class="ttdoc">发起人</div><div class="ttdef"><b>Definition:</b> <a href="a00116_source.html#l00038">PrivateMessageEvent.h:38</a></div></div>
-<div class="ttc" id="aa00556_html_ac2cb5df8d7346169a074cb463bc85441"><div class="ttname"><a href="a00556.html#ac2cb5df8d7346169a074cb463bc85441">MiraiCP::PrivateMessageEvent::get_event_type</a></div><div class="ttdeci">static eventTypes::Types get_event_type()</div><div class="ttdef"><b>Definition:</b> <a href="a00116_source.html#l00032">PrivateMessageEvent.h:32</a></div></div>
-<div class="ttc" id="aa00556_html_ae09650a1aa7d3f7535a4792bc919e032"><div class="ttname"><a href="a00556.html#ae09650a1aa7d3f7535a4792bc919e032">MiraiCP::PrivateMessageEvent::PrivateMessageEvent</a></div><div class="ttdeci">PrivateMessageEvent(BaseEventData j)</div><div class="ttdoc">构建私聊信息</div><div class="ttdef"><b>Definition:</b> <a href="a00311_source.html#l00086">Event.cpp:86</a></div></div>
-<div class="ttc" id="aa00588_html"><div class="ttname"><a href="a00588.html">MiraiCP::Friend</a></div><div class="ttdoc">好友类声明</div><div class="ttdef"><b>Definition:</b> <a href="a00128_source.html#l00025">Friend.h:25</a></div></div>
-<div class="ttc" id="aa00636_html"><div class="ttname"><a href="a00636.html">MiraiCP::MessageChain</a></div><div class="ttdoc">消息链, 一般由SingleMessage组成</div><div class="ttdef"><b>Definition:</b> <a href="a00143_source.html#l00086">MessageChain.h:86</a></div></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keyword">namespace </span><a class="code hl_namespace" href="a00412.html">MiraiCP</a> {</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keyword">class </span>Contact;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="foldopen" id="foldopen00031" data-start="{" data-end="};">
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="a00552.html">   31</a></span>    <span class="keyword">class </span><a class="code hl_class" href="a00552.html">MessagePreSendEvent</a> : <span class="keyword">public</span> <a class="code hl_class" href="a00488.html">BotEvent</a>&lt;MessagePreSendEvent&gt; {</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keyword">public</span>:</div>
+<div class="foldopen" id="foldopen00033" data-start="{" data-end="}">
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="a00552.html#a3db8d323a115f3b68b06da7dc1733293">   33</a></span>        <span class="keyword">static</span> <a class="code hl_enumeration" href="a00416.html#abe9e9d8212ea8f23717b72db64393cab">eventTypes::Types</a> <a class="code hl_function" href="a00552.html#a3db8d323a115f3b68b06da7dc1733293">get_event_type</a>() {</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>            <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="a00416.html#abe9e9d8212ea8f23717b72db64393cabaa46d082c80e10281a6f1f0ca942f0a1b">eventTypes::Types::MessagePreSendEvent</a>;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        }</div>
+</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="a00552.html#aa15c8687b9e358b91851d3228c0a4d70">   39</a></span>        std::shared_ptr&lt;Contact&gt; <a class="code hl_variable" href="a00552.html#aa15c8687b9e358b91851d3228c0a4d70">target</a>;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="a00552.html#a2fe0731f2ede62683919e2af5deecb2c">   41</a></span>        <a class="code hl_class" href="a00652.html">MessageChain</a> <a class="code hl_variable" href="a00552.html#a2fe0731f2ede62683919e2af5deecb2c">message</a>;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        <span class="keyword">explicit</span> <a class="code hl_class" href="a00552.html">MessagePreSendEvent</a>(<a class="code hl_class" href="a00504.html">BaseEventData</a> j);</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    };</div>
+</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>} <span class="comment">// namespace MiraiCP</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="preprocessor">#endif </span><span class="comment">//MIRAICP_PRO_MESSAGEPRESENDEVENT_H</span></div>
+<div class="ttc" id="aa00164_html"><div class="ttname"><a href="a00164.html">BotEvent.h</a></div></div>
+<div class="ttc" id="aa00412_html"><div class="ttname"><a href="a00412.html">MiraiCP</a></div><div class="ttdef"><b>Definition</b> <a href="a00050_source.html#l00021">JsonTools.h:21</a></div></div>
+<div class="ttc" id="aa00416_html_abe9e9d8212ea8f23717b72db64393cab"><div class="ttname"><a href="a00416.html#abe9e9d8212ea8f23717b72db64393cab">MiraiCP::eventTypes::Types</a></div><div class="ttdeci">Types</div><div class="ttdef"><b>Definition</b> <a href="a00149_source.html#l00033">EventBase.h:33</a></div></div>
+<div class="ttc" id="aa00416_html_abe9e9d8212ea8f23717b72db64393cabaa46d082c80e10281a6f1f0ca942f0a1b"><div class="ttname"><a href="a00416.html#abe9e9d8212ea8f23717b72db64393cabaa46d082c80e10281a6f1f0ca942f0a1b">MiraiCP::eventTypes::MessagePreSendEvent</a></div><div class="ttdeci">@ MessagePreSendEvent</div><div class="ttdef"><b>Definition</b> <a href="a00149_source.html#l00044">EventBase.h:44</a></div></div>
+<div class="ttc" id="aa00488_html"><div class="ttname"><a href="a00488.html">MiraiCP::BotEvent</a></div><div class="ttdoc">所有事件处理timeoutevent都是机器人事件，指都有机器人实例</div><div class="ttdef"><b>Definition</b> <a href="a00164_source.html#l00029">BotEvent.h:29</a></div></div>
+<div class="ttc" id="aa00504_html"><div class="ttname"><a href="a00504.html">MiraiCP::BaseEventData</a></div><div class="ttdef"><b>Definition</b> <a href="a00149_source.html#l00058">EventBase.h:58</a></div></div>
+<div class="ttc" id="aa00552_html"><div class="ttname"><a href="a00552.html">MiraiCP::MessagePreSendEvent</a></div><div class="ttdef"><b>Definition</b> <a href="a00116_source.html#l00031">MessagePreSendEvent.h:31</a></div></div>
+<div class="ttc" id="aa00552_html_a2fe0731f2ede62683919e2af5deecb2c"><div class="ttname"><a href="a00552.html#a2fe0731f2ede62683919e2af5deecb2c">MiraiCP::MessagePreSendEvent::message</a></div><div class="ttdeci">MessageChain message</div><div class="ttdoc">消息</div><div class="ttdef"><b>Definition</b> <a href="a00116_source.html#l00041">MessagePreSendEvent.h:41</a></div></div>
+<div class="ttc" id="aa00552_html_a3db8d323a115f3b68b06da7dc1733293"><div class="ttname"><a href="a00552.html#a3db8d323a115f3b68b06da7dc1733293">MiraiCP::MessagePreSendEvent::get_event_type</a></div><div class="ttdeci">static eventTypes::Types get_event_type()</div><div class="ttdef"><b>Definition</b> <a href="a00116_source.html#l00033">MessagePreSendEvent.h:33</a></div></div>
+<div class="ttc" id="aa00552_html_aa15c8687b9e358b91851d3228c0a4d70"><div class="ttname"><a href="a00552.html#aa15c8687b9e358b91851d3228c0a4d70">MiraiCP::MessagePreSendEvent::target</a></div><div class="ttdeci">std::shared_ptr&lt; Contact &gt; target</div><div class="ttdoc">发送目标</div><div class="ttdef"><b>Definition</b> <a href="a00116_source.html#l00039">MessagePreSendEvent.h:39</a></div></div>
+<div class="ttc" id="aa00652_html"><div class="ttname"><a href="a00652.html">MiraiCP::MessageChain</a></div><div class="ttdoc">消息链, 一般由SingleMessage组成</div><div class="ttdef"><b>Definition</b> <a href="a00092_source.html#l00086">MessageChain.h:86</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_1ede18532ce6284c46efe733029b594d.html">sdk</a></li><li class="navelem"><a class="el" href="dir_f83dc716b95661d1ef88f368581b25fb.html">Events</a></li><li class="navelem"><a class="el" href="a00116.html">PrivateMessageEvent.h</a></li>
-    <li class="footer">生成于 2023年 四月 10日 星期一 00:26:29 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_1ede18532ce6284c46efe733029b594d.html">sdk</a></li><li class="navelem"><a class="el" href="dir_f83dc716b95661d1ef88f368581b25fb.html">Events</a></li><li class="navelem"><a class="el" href="a00116.html">MessagePreSendEvent.h</a></li>
+    <li class="footer">生成于 2023年 十月 26日 星期四 01:16:24 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
     </body>

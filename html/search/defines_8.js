@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['loader_5fapi_5fcount_0',['LOADER_API_COUNT',['../a00176.html#acbac5e7c5f4941a592808414fe5caada',1,'loaderApiInternal.h']]],
-  ['loc_5fclass_5fnamespace_1',['LOC_CLASS_NAMESPACE',['../a01391.html#a456c32e8a3956d0ef6567fd95554864d',1,'LOC_CLASS_NAMESPACE():&#160;Group.cpp'],['../a01403.html#a456c32e8a3956d0ef6567fd95554864d',1,'LOC_CLASS_NAMESPACE():&#160;Member.cpp']]]
+  ['j_5fargs_0',['J_ARGS',['../a00245.html#a919c2f594760ce688ff10318059a02b6',1,'LoaderMacro.h']]],
+  ['j_5fto_5fstd_5fstring_1',['J_TO_STD_STRING',['../a00245.html#a2b25927c16145a58f2e14e2a1a93a5d1',1,'LoaderMacro.h']]],
+  ['jstring_2',['JSTRING',['../a00245.html#aae63af684167e1a19dc5e3332dbc7238',1,'LoaderMacro.h']]]
 ];

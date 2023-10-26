@@ -4,9 +4,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiraiCP: PluginData.h 源文件</title>
+<title>MiraiCP: loaderMain.h 源文件</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -35,7 +35,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MiraiCP
-   &#160;<span id="projectnumber">v2.15.0-RC2</span>
+   &#160;<span id="projectnumber">v2.16.0</span>
    </div>
    <div id="projectbrief">MiraiCP api document</div>
   </td>
@@ -44,10 +44,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.9.2 -->
+<!-- 制作者 Doxygen 1.9.8 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search",'搜索','.html');
+var searchBox = new SearchBox("searchBox", "search/",'.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -61,6 +61,11 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -87,13 +92,20 @@ $(document).ready(function(){initNavTree('a00266_source.html',''); initResizable
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">PluginData.h</div></div>
+  <div class="headertitle"><div class="title">loaderMain.h</div></div>
 </div><!--header-->
 <div class="contents">
 <a href="a00266.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// Copyright (c) 2022 - 2022. Antares, Eritque arcus and contributors.</span></div>
@@ -112,116 +124,80 @@ $(document).ready(function(){initNavTree('a00266_source.html',''); initResizable
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">// along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</span></div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">//</span></div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#ifndef MIRAICP_PRO_PLUGINDATA_H</span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#define MIRAICP_PRO_PLUGINDATA_H</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#ifndef MIRAICP_PRO_LOADERMAIN_H</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#define MIRAICP_PRO_LOADERMAIN_H</span></div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &quot;<a class="code" href="a00236.html">LoaderLogger.h</a>&quot;</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &quot;<a class="code" href="a00173.html">commonTypes.h</a>&quot;</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &lt;condition_variable&gt;</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &lt;string&gt;</span></div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keyword">namespace </span><a class="code hl_namespace" href="a00407.html">LibLoader</a> {</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="a00407.html#a25dcf37316806dd07a4e960c5eb537a4">   26</a></span>    <span class="keyword">enum</span> <a class="code hl_enumeration" href="a00407.html#a25dcf37316806dd07a4e960c5eb537a4">PluginAuthority</a> {</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="a00407.html#a25dcf37316806dd07a4e960c5eb537a4a37a69db536daf1ceabf89dc14346092d">   27</a></span>        <a class="code hl_enumvalue" href="a00407.html#a25dcf37316806dd07a4e960c5eb537a4a37a69db536daf1ceabf89dc14346092d">PLUGIN_AUTHORITY_NORMAL</a> = 0,</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="a00407.html#a25dcf37316806dd07a4e960c5eb537a4a94365761d42a1db02c02bce01be06220">   28</a></span>        <a class="code hl_enumvalue" href="a00407.html#a25dcf37316806dd07a4e960c5eb537a4a94365761d42a1db02c02bce01be06220">PLUGIN_AUTHORITY_ADMIN</a> = 1,</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    };</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="a00828.html">   31</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="a00828.html">PluginFuncAddrData</a> {</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="a00828.html#a3b5be4f8fc59ec90cd708e3ac43b869d">   32</a></span>        <a class="code hl_typedef" href="a00407.html#ada1a1182832115cfa634601bb4e80355">plugin_entrance_func_ptr</a> <a class="code hl_variable" href="a00828.html#a3b5be4f8fc59ec90cd708e3ac43b869d">entrance</a> = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="a00828.html#ac9d44c135831a2876f1607de5c08ad10">   33</a></span>        <a class="code hl_typedef" href="a00407.html#add2feb317221acb4f979e61d5e96d37f">plugin_event_func_ptr</a> <a class="code hl_variable" href="a00828.html#ac9d44c135831a2876f1607de5c08ad10">eventFunc</a> = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="a00828.html#a024639c8f518ae08921d6e26c5ff8711">   34</a></span>        <a class="code hl_typedef" href="a00407.html#afc631e11894f5d4eedc3e3ea550795fd">plugin_func_ptr</a> <a class="code hl_variable" href="a00828.html#a024639c8f518ae08921d6e26c5ff8711">exit</a> = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="a00828.html#aa5a860b7e360452285200e8a62b8acd4">   35</a></span>        <a class="code hl_typedef" href="a00407.html#a776f4f6bb745b814e23461c7742b9682">plugin_info_func_ptr</a> <a class="code hl_variable" href="a00828.html#aa5a860b7e360452285200e8a62b8acd4">infoFunc</a> = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="a00828.html#a81c7f6972e7ed7429f2ce9ba82c9ba31">   37</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="a00828.html#a81c7f6972e7ed7429f2ce9ba82c9ba31">_resetAddrData</a>() {</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>            <a class="code hl_struct" href="a00828.html">PluginFuncAddrData</a> tmp;</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>            std::swap(*<span class="keyword">this</span>, tmp);</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        }</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    };</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="a00832.html">   43</a></span>    <span class="keyword">class </span><a class="code hl_class" href="a00832.html">PluginData</a> : <span class="keyword">protected</span> <a class="code hl_struct" href="a00828.html">PluginFuncAddrData</a> {</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="a00832.html#ae432fc77d05928e6090714a079c002d3">   45</a></span>        <span class="keyword">const</span> std::string <a class="code hl_variable" href="a00832.html#ae432fc77d05928e6090714a079c002d3">path</a>;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keyword">namespace </span><a class="code hl_namespace" href="a00425.html">LibLoader</a> {</div>
+<div class="foldopen" id="foldopen00026" data-start="{" data-end="};">
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="a00880.html">   26</a></span>    <span class="keyword">class </span><a class="code hl_class" href="a00880.html">LoaderMain</a> {</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="a00880.html#a348439e27d1a976dd143da7a8b8b0de9">   27</a></span>        <span class="keyword">volatile</span> <span class="keywordtype">bool</span> <a class="code hl_variable" href="a00880.html#a348439e27d1a976dd143da7a8b8b0de9">loader_exit</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="a00880.html#ade323ba8f9e6d1fd184346fdd88227d6">   28</a></span>        std::condition_variable <a class="code hl_variable" href="a00880.html#ade323ba8f9e6d1fd184346fdd88227d6">cv</a>;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="a00880.html#a73f97e660db4d60fd257ccc4b4dac522">   29</a></span>        <span class="keyword">mutable</span> std::mutex <a class="code hl_variable" href="a00880.html#a73f97e660db4d60fd257ccc4b4dac522">loaderCVLock</a>;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="a00880.html#a8ca3ba0c79f091eb5c390f623f618f71">   30</a></span>        std::string <a class="code hl_variable" href="a00880.html#a8ca3ba0c79f091eb5c390f623f618f71">config_path</a>;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="a00880.html#a72091c85e213a8ee55fb2dd9128907b7">   31</a></span>        <span class="keywordtype">size_t</span> <a class="code hl_variable" href="a00880.html#a72091c85e213a8ee55fb2dd9128907b7">tickRate</a> = 100;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="a00880.html#a9ca8ba2c9fcbfade9adf4a0a2bb47eaa">mainloop</a>() const noexcept;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="a00880.html#a6d477440277d3907b96261db3a222d96">shutdownLoader</a>();</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="a00880.html#aa2dac3324ec614040340dcb2a5c76110">tick</a>() const noexcept;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="a00880.html#adb67a1dbb48fb151a7f581fcd2afa2e5">process_task_queue</a>() const;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="a00880.html#a6e92ea42b2356d4e4c1e5b000ae31c1c">readConfig</a>();</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    public:</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        static <a class="code hl_class" href="a00880.html">LoaderMain</a> &amp;<a class="code hl_function" href="a00880.html#a22eacbd6aa585f32d0fccce0a69ab642">get</a>();</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keyword">protected</span>:</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="a00832.html#a9164ae6fb4cd9bde2398c687bad1990a">   48</a></span>        <a class="code hl_typedef" href="a00407.html#a927f212ce2db84cca1f02ec95aa62322">plugin_handle</a> <a class="code hl_variable" href="a00832.html#a9164ae6fb4cd9bde2398c687bad1990a">handle</a> = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="a00832.html#a7a48cf7b921eb5af21da08f33f60c921">   50</a></span>        <a class="code hl_enumeration" href="a00407.html#a25dcf37316806dd07a4e960c5eb537a4">PluginAuthority</a> <a class="code hl_variable" href="a00832.html#a7a48cf7b921eb5af21da08f33f60c921">authority</a> = <a class="code hl_enumvalue" href="a00407.html#a25dcf37316806dd07a4e960c5eb537a4a37a69db536daf1ceabf89dc14346092d">PLUGIN_AUTHORITY_NORMAL</a>;</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="a00832.html#a8f2deebffeac046cf4a765dad3ff0494">   51</a></span>        <span class="keywordtype">bool</span> <a class="code hl_variable" href="a00832.html#a8f2deebffeac046cf4a765dad3ff0494">enabled</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="a00880.html#a6f64cf5a04eb79ed0e3080aed30aa711">   47</a></span>        [[nodiscard]] <span class="keywordtype">bool</span> <a class="code hl_function" href="a00880.html#a6f64cf5a04eb79ed0e3080aed30aa711">is_loader_exited</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="a00880.html#a348439e27d1a976dd143da7a8b8b0de9">loader_exit</a>; }</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="a00880.html#aec84fa3b93bdf0829d86415cf329ffe3">   49</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="a00880.html#aec84fa3b93bdf0829d86415cf329ffe3">loaderExit</a>() { <a class="code hl_variable" href="a00880.html#a348439e27d1a976dd143da7a8b8b0de9">loader_exit</a> = <span class="keyword">true</span>; }</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="a00880.html#a79cbc18aabed7afe2c7ea30f989ffc8c">loaderMain</a>();</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="keyword">protected</span>:</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="a00832.html#a8ed641c6ac328d3da7caca76cc4248b4">   54</a></span>        <span class="keyword">explicit</span> <a class="code hl_function" href="a00832.html#a8ed641c6ac328d3da7caca76cc4248b4">PluginData</a>(std::string inPath) : <a class="code hl_variable" href="a00832.html#ae432fc77d05928e6090714a079c002d3">path</a>(std::move(inPath)) {}</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keyword">protected</span>:</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="a00832.html#a0c7449a3e94c1e4659337e62fc513fd8">   57</a></span>        [[nodiscard]] std::string <a class="code hl_function" href="a00832.html#a0c7449a3e94c1e4659337e62fc513fd8">_getId</a>()<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>            <a class="code hl_define" href="a00044.html#ae90784e7cdd9af82802f90079c4e64e8">assert</a>(<a class="code hl_variable" href="a00828.html#aa5a860b7e360452285200e8a62b8acd4">infoFunc</a>);</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="a00828.html#aa5a860b7e360452285200e8a62b8acd4">infoFunc</a>()-&gt;getId();</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        }</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="a00832.html#af60692dd94aac398ccf9ddf27c304298">   62</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="a00832.html#af60692dd94aac398ccf9ddf27c304298">_load</a>(<a class="code hl_typedef" href="a00407.html#a927f212ce2db84cca1f02ec95aa62322">plugin_handle</a> _handle, <span class="keyword">const</span> <a class="code hl_struct" href="a00828.html">PluginFuncAddrData</a> &amp;funcAddrs) {</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>            <a class="code hl_variable" href="a00832.html#a9164ae6fb4cd9bde2398c687bad1990a">handle</a> = _handle;</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>            *<span class="keyword">static_cast&lt;</span><a class="code hl_struct" href="a00828.html">PluginFuncAddrData</a> *<span class="keyword">&gt;</span>(<span class="keyword">this</span>) = funcAddrs;</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        }</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="a00832.html#a06be765d6cf55aa951f7eecb7ba578e8">   67</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="a00832.html#a06be765d6cf55aa951f7eecb7ba578e8">_unload</a>() {</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>            <span class="comment">// cannot modify path</span></div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>            <a class="code hl_variable" href="a00832.html#a9164ae6fb4cd9bde2398c687bad1990a">handle</a> = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>            <a class="code hl_function" href="a00828.html#a81c7f6972e7ed7429f2ce9ba82c9ba31">_resetAddrData</a>();</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        }</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="a00832.html#a07ae911aa0c0f4dae33405e0a8400642">   73</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="a00832.html#a07ae911aa0c0f4dae33405e0a8400642">_enable</a>() {</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>            <a class="code hl_variable" href="a00832.html#a8f2deebffeac046cf4a765dad3ff0494">enabled</a> = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        }</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="a00832.html#af4e8baa9d706f75b1bf21d95069d3f42">   77</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="a00832.html#af4e8baa9d706f75b1bf21d95069d3f42">_disable</a>() {</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>            <a class="code hl_variable" href="a00832.html#a8f2deebffeac046cf4a765dad3ff0494">enabled</a> = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        }</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="a00832.html#a44997d66149ab4722f54f89056b8658b">   82</a></span>        [[nodiscard]] <span class="keywordtype">bool</span> <a class="code hl_function" href="a00832.html#a44997d66149ab4722f54f89056b8658b">isEnabled</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="a00832.html#a8f2deebffeac046cf4a765dad3ff0494">enabled</a>; }</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="a00832.html#a5907aa03cd2b359eb901423314467338">   84</a></span>        [[nodiscard]] <span class="keywordtype">bool</span> <a class="code hl_function" href="a00832.html#a5907aa03cd2b359eb901423314467338">isLoaded</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="a00832.html#a9164ae6fb4cd9bde2398c687bad1990a">handle</a> != <span class="keyword">nullptr</span>; }</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    };</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>} <span class="comment">// namespace LibLoader</span></div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span><span class="preprocessor">#endif </span><span class="comment">//MIRAICP_PRO_PLUGINDATA_H</span></div>
-<div class="ttc" id="aa00044_html_ae90784e7cdd9af82802f90079c4e64e8"><div class="ttname"><a href="a00044.html#ae90784e7cdd9af82802f90079c4e64e8">assert</a></div><div class="ttdeci">#define assert(ignore)</div><div class="ttdef"><b>Definition:</b> <a href="a00044_source.html#l00115">MiraiCPMacros.h:115</a></div></div>
-<div class="ttc" id="aa00173_html"><div class="ttname"><a href="a00173.html">commonTypes.h</a></div></div>
-<div class="ttc" id="aa00236_html"><div class="ttname"><a href="a00236.html">LoaderLogger.h</a></div></div>
-<div class="ttc" id="aa00407_html"><div class="ttname"><a href="a00407.html">LibLoader</a></div><div class="ttdef"><b>Definition:</b> <a href="a00173_source.html#l00028">commonTypes.h:28</a></div></div>
-<div class="ttc" id="aa00407_html_a25dcf37316806dd07a4e960c5eb537a4"><div class="ttname"><a href="a00407.html#a25dcf37316806dd07a4e960c5eb537a4">LibLoader::PluginAuthority</a></div><div class="ttdeci">PluginAuthority</div><div class="ttdef"><b>Definition:</b> <a href="a00266_source.html#l00026">PluginData.h:26</a></div></div>
-<div class="ttc" id="aa00407_html_a25dcf37316806dd07a4e960c5eb537a4a37a69db536daf1ceabf89dc14346092d"><div class="ttname"><a href="a00407.html#a25dcf37316806dd07a4e960c5eb537a4a37a69db536daf1ceabf89dc14346092d">LibLoader::PLUGIN_AUTHORITY_NORMAL</a></div><div class="ttdeci">@ PLUGIN_AUTHORITY_NORMAL</div><div class="ttdef"><b>Definition:</b> <a href="a00266_source.html#l00027">PluginData.h:27</a></div></div>
-<div class="ttc" id="aa00407_html_a25dcf37316806dd07a4e960c5eb537a4a94365761d42a1db02c02bce01be06220"><div class="ttname"><a href="a00407.html#a25dcf37316806dd07a4e960c5eb537a4a94365761d42a1db02c02bce01be06220">LibLoader::PLUGIN_AUTHORITY_ADMIN</a></div><div class="ttdeci">@ PLUGIN_AUTHORITY_ADMIN</div><div class="ttdef"><b>Definition:</b> <a href="a00266_source.html#l00028">PluginData.h:28</a></div></div>
-<div class="ttc" id="aa00407_html_a776f4f6bb745b814e23461c7742b9682"><div class="ttname"><a href="a00407.html#a776f4f6bb745b814e23461c7742b9682">LibLoader::plugin_info_func_ptr</a></div><div class="ttdeci">const MiraiCP::PluginConfig *(* plugin_info_func_ptr)()</div><div class="ttdef"><b>Definition:</b> <a href="a00173_source.html#l00037">commonTypes.h:37</a></div></div>
-<div class="ttc" id="aa00407_html_a927f212ce2db84cca1f02ec95aa62322"><div class="ttname"><a href="a00407.html#a927f212ce2db84cca1f02ec95aa62322">LibLoader::plugin_handle</a></div><div class="ttdeci">void * plugin_handle</div><div class="ttdef"><b>Definition:</b> <a href="a00173_source.html#l00029">commonTypes.h:29</a></div></div>
-<div class="ttc" id="aa00407_html_ada1a1182832115cfa634601bb4e80355"><div class="ttname"><a href="a00407.html#ada1a1182832115cfa634601bb4e80355">LibLoader::plugin_entrance_func_ptr</a></div><div class="ttdeci">int(* plugin_entrance_func_ptr)(const LoaderApi::interface_funcs &amp;)</div><div class="ttdef"><b>Definition:</b> <a href="a00173_source.html#l00031">commonTypes.h:31</a></div></div>
-<div class="ttc" id="aa00407_html_add2feb317221acb4f979e61d5e96d37f"><div class="ttname"><a href="a00407.html#add2feb317221acb4f979e61d5e96d37f">LibLoader::plugin_event_func_ptr</a></div><div class="ttdeci">int(* plugin_event_func_ptr)(const MiraiCP::MiraiCPString &amp;)</div><div class="ttdef"><b>Definition:</b> <a href="a00173_source.html#l00033">commonTypes.h:33</a></div></div>
-<div class="ttc" id="aa00407_html_afc631e11894f5d4eedc3e3ea550795fd"><div class="ttname"><a href="a00407.html#afc631e11894f5d4eedc3e3ea550795fd">LibLoader::plugin_func_ptr</a></div><div class="ttdeci">int(* plugin_func_ptr)()</div><div class="ttdef"><b>Definition:</b> <a href="a00173_source.html#l00035">commonTypes.h:35</a></div></div>
-<div class="ttc" id="aa00828_html"><div class="ttname"><a href="a00828.html">LibLoader::PluginFuncAddrData</a></div><div class="ttdef"><b>Definition:</b> <a href="a00266_source.html#l00031">PluginData.h:31</a></div></div>
-<div class="ttc" id="aa00828_html_a024639c8f518ae08921d6e26c5ff8711"><div class="ttname"><a href="a00828.html#a024639c8f518ae08921d6e26c5ff8711">LibLoader::PluginFuncAddrData::exit</a></div><div class="ttdeci">plugin_func_ptr exit</div><div class="ttdef"><b>Definition:</b> <a href="a00266_source.html#l00034">PluginData.h:34</a></div></div>
-<div class="ttc" id="aa00828_html_a3b5be4f8fc59ec90cd708e3ac43b869d"><div class="ttname"><a href="a00828.html#a3b5be4f8fc59ec90cd708e3ac43b869d">LibLoader::PluginFuncAddrData::entrance</a></div><div class="ttdeci">plugin_entrance_func_ptr entrance</div><div class="ttdef"><b>Definition:</b> <a href="a00266_source.html#l00032">PluginData.h:32</a></div></div>
-<div class="ttc" id="aa00828_html_a81c7f6972e7ed7429f2ce9ba82c9ba31"><div class="ttname"><a href="a00828.html#a81c7f6972e7ed7429f2ce9ba82c9ba31">LibLoader::PluginFuncAddrData::_resetAddrData</a></div><div class="ttdeci">void _resetAddrData()</div><div class="ttdef"><b>Definition:</b> <a href="a00266_source.html#l00037">PluginData.h:37</a></div></div>
-<div class="ttc" id="aa00828_html_aa5a860b7e360452285200e8a62b8acd4"><div class="ttname"><a href="a00828.html#aa5a860b7e360452285200e8a62b8acd4">LibLoader::PluginFuncAddrData::infoFunc</a></div><div class="ttdeci">plugin_info_func_ptr infoFunc</div><div class="ttdef"><b>Definition:</b> <a href="a00266_source.html#l00035">PluginData.h:35</a></div></div>
-<div class="ttc" id="aa00828_html_ac9d44c135831a2876f1607de5c08ad10"><div class="ttname"><a href="a00828.html#ac9d44c135831a2876f1607de5c08ad10">LibLoader::PluginFuncAddrData::eventFunc</a></div><div class="ttdeci">plugin_event_func_ptr eventFunc</div><div class="ttdef"><b>Definition:</b> <a href="a00266_source.html#l00033">PluginData.h:33</a></div></div>
-<div class="ttc" id="aa00832_html"><div class="ttname"><a href="a00832.html">LibLoader::PluginData</a></div><div class="ttdef"><b>Definition:</b> <a href="a00266_source.html#l00043">PluginData.h:43</a></div></div>
-<div class="ttc" id="aa00832_html_a06be765d6cf55aa951f7eecb7ba578e8"><div class="ttname"><a href="a00832.html#a06be765d6cf55aa951f7eecb7ba578e8">LibLoader::PluginData::_unload</a></div><div class="ttdeci">void _unload()</div><div class="ttdef"><b>Definition:</b> <a href="a00266_source.html#l00067">PluginData.h:67</a></div></div>
-<div class="ttc" id="aa00832_html_a07ae911aa0c0f4dae33405e0a8400642"><div class="ttname"><a href="a00832.html#a07ae911aa0c0f4dae33405e0a8400642">LibLoader::PluginData::_enable</a></div><div class="ttdeci">void _enable()</div><div class="ttdef"><b>Definition:</b> <a href="a00266_source.html#l00073">PluginData.h:73</a></div></div>
-<div class="ttc" id="aa00832_html_a0c7449a3e94c1e4659337e62fc513fd8"><div class="ttname"><a href="a00832.html#a0c7449a3e94c1e4659337e62fc513fd8">LibLoader::PluginData::_getId</a></div><div class="ttdeci">std::string _getId() const</div><div class="ttdef"><b>Definition:</b> <a href="a00266_source.html#l00057">PluginData.h:57</a></div></div>
-<div class="ttc" id="aa00832_html_a44997d66149ab4722f54f89056b8658b"><div class="ttname"><a href="a00832.html#a44997d66149ab4722f54f89056b8658b">LibLoader::PluginData::isEnabled</a></div><div class="ttdeci">bool isEnabled() const</div><div class="ttdef"><b>Definition:</b> <a href="a00266_source.html#l00082">PluginData.h:82</a></div></div>
-<div class="ttc" id="aa00832_html_a5907aa03cd2b359eb901423314467338"><div class="ttname"><a href="a00832.html#a5907aa03cd2b359eb901423314467338">LibLoader::PluginData::isLoaded</a></div><div class="ttdeci">bool isLoaded() const</div><div class="ttdef"><b>Definition:</b> <a href="a00266_source.html#l00084">PluginData.h:84</a></div></div>
-<div class="ttc" id="aa00832_html_a7a48cf7b921eb5af21da08f33f60c921"><div class="ttname"><a href="a00832.html#a7a48cf7b921eb5af21da08f33f60c921">LibLoader::PluginData::authority</a></div><div class="ttdeci">PluginAuthority authority</div><div class="ttdef"><b>Definition:</b> <a href="a00266_source.html#l00050">PluginData.h:50</a></div></div>
-<div class="ttc" id="aa00832_html_a8ed641c6ac328d3da7caca76cc4248b4"><div class="ttname"><a href="a00832.html#a8ed641c6ac328d3da7caca76cc4248b4">LibLoader::PluginData::PluginData</a></div><div class="ttdeci">PluginData(std::string inPath)</div><div class="ttdef"><b>Definition:</b> <a href="a00266_source.html#l00054">PluginData.h:54</a></div></div>
-<div class="ttc" id="aa00832_html_a8f2deebffeac046cf4a765dad3ff0494"><div class="ttname"><a href="a00832.html#a8f2deebffeac046cf4a765dad3ff0494">LibLoader::PluginData::enabled</a></div><div class="ttdeci">bool enabled</div><div class="ttdef"><b>Definition:</b> <a href="a00266_source.html#l00051">PluginData.h:51</a></div></div>
-<div class="ttc" id="aa00832_html_a9164ae6fb4cd9bde2398c687bad1990a"><div class="ttname"><a href="a00832.html#a9164ae6fb4cd9bde2398c687bad1990a">LibLoader::PluginData::handle</a></div><div class="ttdeci">plugin_handle handle</div><div class="ttdef"><b>Definition:</b> <a href="a00266_source.html#l00048">PluginData.h:48</a></div></div>
-<div class="ttc" id="aa00832_html_ae432fc77d05928e6090714a079c002d3"><div class="ttname"><a href="a00832.html#ae432fc77d05928e6090714a079c002d3">LibLoader::PluginData::path</a></div><div class="ttdeci">const std::string path</div><div class="ttdef"><b>Definition:</b> <a href="a00266_source.html#l00045">PluginData.h:45</a></div></div>
-<div class="ttc" id="aa00832_html_af4e8baa9d706f75b1bf21d95069d3f42"><div class="ttname"><a href="a00832.html#af4e8baa9d706f75b1bf21d95069d3f42">LibLoader::PluginData::_disable</a></div><div class="ttdeci">void _disable()</div><div class="ttdef"><b>Definition:</b> <a href="a00266_source.html#l00077">PluginData.h:77</a></div></div>
-<div class="ttc" id="aa00832_html_af60692dd94aac398ccf9ddf27c304298"><div class="ttname"><a href="a00832.html#af60692dd94aac398ccf9ddf27c304298">LibLoader::PluginData::_load</a></div><div class="ttdeci">void _load(plugin_handle _handle, const PluginFuncAddrData &amp;funcAddrs)</div><div class="ttdef"><b>Definition:</b> <a href="a00266_source.html#l00062">PluginData.h:62</a></div></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="a00880.html#a7f17320f76d8e70d493deb075fc532d7">   53</a></span>        <span class="keyword">auto</span> &amp;<a class="code hl_function" href="a00880.html#a7f17320f76d8e70d493deb075fc532d7">get_cv</a>() { <span class="keywordflow">return</span> <a class="code hl_variable" href="a00880.html#ade323ba8f9e6d1fd184346fdd88227d6">cv</a>; }</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="foldopen" id="foldopen00055" data-start="{" data-end="}">
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="a00880.html#a8fb1a9402e7d723e6294ee6750ce11f8">   55</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="a00880.html#a8fb1a9402e7d723e6294ee6750ce11f8">setConfigPath</a>(<span class="keyword">const</span> std::string &amp;in_config_path) {</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>            <a class="code hl_variable" href="a00880.html#a8ca3ba0c79f091eb5c390f623f618f71">config_path</a> = in_config_path;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        }</div>
+</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    };</div>
+</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>} <span class="comment">// namespace LibLoader</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="preprocessor">#endif </span><span class="comment">//MIRAICP_PRO_LOADERMAIN_H</span></div>
+<div class="ttc" id="aa00425_html"><div class="ttname"><a href="a00425.html">LibLoader</a></div><div class="ttdef"><b>Definition</b> <a href="a00182_source.html#l00074">commonTypes.h:74</a></div></div>
+<div class="ttc" id="aa00880_html"><div class="ttname"><a href="a00880.html">LibLoader::LoaderMain</a></div><div class="ttdef"><b>Definition</b> <a href="a00266_source.html#l00026">loaderMain.h:26</a></div></div>
+<div class="ttc" id="aa00880_html_a22eacbd6aa585f32d0fccce0a69ab642"><div class="ttname"><a href="a00880.html#a22eacbd6aa585f32d0fccce0a69ab642">LibLoader::LoaderMain::get</a></div><div class="ttdeci">static LoaderMain &amp; get()</div><div class="ttdef"><b>Definition</b> <a href="a00281_source.html#l00051">loaderMain.cpp:51</a></div></div>
+<div class="ttc" id="aa00880_html_a348439e27d1a976dd143da7a8b8b0de9"><div class="ttname"><a href="a00880.html#a348439e27d1a976dd143da7a8b8b0de9">LibLoader::LoaderMain::loader_exit</a></div><div class="ttdeci">volatile bool loader_exit</div><div class="ttdef"><b>Definition</b> <a href="a00266_source.html#l00027">loaderMain.h:27</a></div></div>
+<div class="ttc" id="aa00880_html_a6d477440277d3907b96261db3a222d96"><div class="ttname"><a href="a00880.html#a6d477440277d3907b96261db3a222d96">LibLoader::LoaderMain::shutdownLoader</a></div><div class="ttdeci">void shutdownLoader()</div><div class="ttdef"><b>Definition</b> <a href="a00281_source.html#l00152">loaderMain.cpp:152</a></div></div>
+<div class="ttc" id="aa00880_html_a6e92ea42b2356d4e4c1e5b000ae31c1c"><div class="ttname"><a href="a00880.html#a6e92ea42b2356d4e4c1e5b000ae31c1c">LibLoader::LoaderMain::readConfig</a></div><div class="ttdeci">void readConfig()</div><div class="ttdef"><b>Definition</b> <a href="a00281_source.html#l00210">loaderMain.cpp:210</a></div></div>
+<div class="ttc" id="aa00880_html_a6f64cf5a04eb79ed0e3080aed30aa711"><div class="ttname"><a href="a00880.html#a6f64cf5a04eb79ed0e3080aed30aa711">LibLoader::LoaderMain::is_loader_exited</a></div><div class="ttdeci">bool is_loader_exited() const</div><div class="ttdef"><b>Definition</b> <a href="a00266_source.html#l00047">loaderMain.h:47</a></div></div>
+<div class="ttc" id="aa00880_html_a72091c85e213a8ee55fb2dd9128907b7"><div class="ttname"><a href="a00880.html#a72091c85e213a8ee55fb2dd9128907b7">LibLoader::LoaderMain::tickRate</a></div><div class="ttdeci">size_t tickRate</div><div class="ttdef"><b>Definition</b> <a href="a00266_source.html#l00031">loaderMain.h:31</a></div></div>
+<div class="ttc" id="aa00880_html_a73f97e660db4d60fd257ccc4b4dac522"><div class="ttname"><a href="a00880.html#a73f97e660db4d60fd257ccc4b4dac522">LibLoader::LoaderMain::loaderCVLock</a></div><div class="ttdeci">std::mutex loaderCVLock</div><div class="ttdef"><b>Definition</b> <a href="a00266_source.html#l00029">loaderMain.h:29</a></div></div>
+<div class="ttc" id="aa00880_html_a79cbc18aabed7afe2c7ea30f989ffc8c"><div class="ttname"><a href="a00880.html#a79cbc18aabed7afe2c7ea30f989ffc8c">LibLoader::LoaderMain::loaderMain</a></div><div class="ttdeci">void loaderMain()</div><div class="ttdoc">LoaderMain实现开始</div><div class="ttdef"><b>Definition</b> <a href="a00281_source.html#l00062">loaderMain.cpp:62</a></div></div>
+<div class="ttc" id="aa00880_html_a7f17320f76d8e70d493deb075fc532d7"><div class="ttname"><a href="a00880.html#a7f17320f76d8e70d493deb075fc532d7">LibLoader::LoaderMain::get_cv</a></div><div class="ttdeci">auto &amp; get_cv()</div><div class="ttdef"><b>Definition</b> <a href="a00266_source.html#l00053">loaderMain.h:53</a></div></div>
+<div class="ttc" id="aa00880_html_a8ca3ba0c79f091eb5c390f623f618f71"><div class="ttname"><a href="a00880.html#a8ca3ba0c79f091eb5c390f623f618f71">LibLoader::LoaderMain::config_path</a></div><div class="ttdeci">std::string config_path</div><div class="ttdef"><b>Definition</b> <a href="a00266_source.html#l00030">loaderMain.h:30</a></div></div>
+<div class="ttc" id="aa00880_html_a8fb1a9402e7d723e6294ee6750ce11f8"><div class="ttname"><a href="a00880.html#a8fb1a9402e7d723e6294ee6750ce11f8">LibLoader::LoaderMain::setConfigPath</a></div><div class="ttdeci">void setConfigPath(const std::string &amp;in_config_path)</div><div class="ttdef"><b>Definition</b> <a href="a00266_source.html#l00055">loaderMain.h:55</a></div></div>
+<div class="ttc" id="aa00880_html_a9ca8ba2c9fcbfade9adf4a0a2bb47eaa"><div class="ttname"><a href="a00880.html#a9ca8ba2c9fcbfade9adf4a0a2bb47eaa">LibLoader::LoaderMain::mainloop</a></div><div class="ttdeci">void mainloop() const noexcept</div><div class="ttdef"><b>Definition</b> <a href="a00281_source.html#l00132">loaderMain.cpp:132</a></div></div>
+<div class="ttc" id="aa00880_html_aa2dac3324ec614040340dcb2a5c76110"><div class="ttname"><a href="a00880.html#aa2dac3324ec614040340dcb2a5c76110">LibLoader::LoaderMain::tick</a></div><div class="ttdeci">void tick() const noexcept</div><div class="ttdef"><b>Definition</b> <a href="a00281_source.html#l00124">loaderMain.cpp:124</a></div></div>
+<div class="ttc" id="aa00880_html_adb67a1dbb48fb151a7f581fcd2afa2e5"><div class="ttname"><a href="a00880.html#adb67a1dbb48fb151a7f581fcd2afa2e5">LibLoader::LoaderMain::process_task_queue</a></div><div class="ttdeci">void process_task_queue() const</div><div class="ttdef"><b>Definition</b> <a href="a00281_source.html#l00159">loaderMain.cpp:159</a></div></div>
+<div class="ttc" id="aa00880_html_ade323ba8f9e6d1fd184346fdd88227d6"><div class="ttname"><a href="a00880.html#ade323ba8f9e6d1fd184346fdd88227d6">LibLoader::LoaderMain::cv</a></div><div class="ttdeci">std::condition_variable cv</div><div class="ttdef"><b>Definition</b> <a href="a00266_source.html#l00028">loaderMain.h:28</a></div></div>
+<div class="ttc" id="aa00880_html_aec84fa3b93bdf0829d86415cf329ffe3"><div class="ttname"><a href="a00880.html#aec84fa3b93bdf0829d86415cf329ffe3">LibLoader::LoaderMain::loaderExit</a></div><div class="ttdeci">void loaderExit()</div><div class="ttdef"><b>Definition</b> <a href="a00266_source.html#l00049">loaderMain.h:49</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_23c80554d3059e776f1fa3b42eea10c0.html">libloader</a></li><li class="navelem"><a class="el" href="a00266.html">PluginData.h</a></li>
-    <li class="footer">生成于 2023年 四月 10日 星期一 00:26:30 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_23c80554d3059e776f1fa3b42eea10c0.html">libloader</a></li><li class="navelem"><a class="el" href="a00266.html">loaderMain.h</a></li>
+    <li class="footer">生成于 2023年 十月 26日 星期四 01:16:24 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
     </body>

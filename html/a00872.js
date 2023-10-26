@@ -1,16 +1,15 @@
 var a00872 =
 [
-    [ "MiraiDataLocker", "a00876.html", "a00876" ],
-    [ "IMiraiData", "a00872.html#a2079413e6c26dc563bf4e496ae25ca08", null ],
-    [ "~IMiraiData", "a00872.html#ab1262457e073f9c776c941962a5b6699", null ],
-    [ "deserialize", "a00872.html#aadb307b6bd6a1f901a6504c5afa37e79", null ],
-    [ "forceRefreshNextTime", "a00872.html#abdbf2a10d21a520b782c1654beb3214a", null ],
-    [ "getMutex", "a00872.html#ad6440ea1909386acbfd77fe1e17d30f8", null ],
-    [ "internalToJson", "a00872.html#ae9f9f272fbb0b68b07dd4750745fae1d", null ],
-    [ "internalToString", "a00872.html#a862c4fbbceae111c0c37df2bf76c7859", null ],
-    [ "refreshInfo", "a00872.html#a628b8885f118d1f20b2f4afd1add0e8b", null ],
-    [ "requestRefresh", "a00872.html#a0af5afb339c80a734ac9752d4f179069", null ],
-    [ "toJson", "a00872.html#a17445e67d1cf31c184cf144f874e82f9", null ],
-    [ "toString", "a00872.html#a0795b1c8b45a0c122c8027f359b8f40e", null ],
-    [ "Locker", "a00872.html#a1a587f53dc97566ee040cd12f9901314", null ]
+    [ "string", "a00872.html#acfe4e8f9dd9fdd3774c50f4843ea4c57", null ],
+    [ "wstring", "a00872.html#a263f5033219fd9fde7e76a4a14e30a3a", null ],
+    [ "call_logger", "a00872.html#af4d7d5164450e25f7401d1cc15f15b8d", null ],
+    [ "call_logger", "a00872.html#a4c48551e7c6b1fe442d394c4333c4f5c", null ],
+    [ "error", "a00872.html#ae735f16b20f681d29d4e5d28ad248dbe", null ],
+    [ "error", "a00872.html#ab16e1bc0504135788f5ce20864deb044", null ],
+    [ "info", "a00872.html#a0d34d5ca7783c370ec08dbbb44876c1b", null ],
+    [ "info", "a00872.html#ad876a34412f03e35fbae30758836e6ff", null ],
+    [ "init", "a00872.html#a666e05995de50742a39702dacf3dcbd7", null ],
+    [ "warning", "a00872.html#af50d0545fe7d683e54fcd03453a423e3", null ],
+    [ "warning", "a00872.html#a17f3029197c45dc84c38a764c9e3e1b9", null ],
+    [ "logMethod", "a00872.html#a298efd2ba8a74fb88313ca0c08e29235", null ]
 ];

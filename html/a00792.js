@@ -1,5 +1,4 @@
 var a00792 =
 [
-    [ "PluginNotLoadedException", "a00792.html#abb1e2984d2eeb1b0630841183204c345", null ],
-    [ "exceptionType", "a00792.html#a8f9b2e4fe0f2464746909d5751fa95ae", null ]
+    [ "msg_string", "a00792.html#aeae8cf3e76aeebad11fcd6f500728ca7", null ]
 ];

@@ -1,9 +1,10 @@
 var a00472 =
 [
-    [ "eventNode", "a00472.html#a7c0d9e7b800ebff2dbfe29d508e5904f", null ],
-    [ "eventNode", "a00472.html#a21f99c741cb8b0fe0f031e908732147b", null ],
-    [ "getHandle", "a00472.html#a22b79f5c56bc0b4aa054b898adcbbe71", null ],
-    [ "run", "a00472.html#aedef6da8603e38047a3de9006052568b", null ],
-    [ "_handle", "a00472.html#aa575e21335890f9d36954a2a97dd8171", null ],
-    [ "func", "a00472.html#a64131ff795261b80c6b37223812a3ee8", null ]
+    [ "CPPPlugin", "a00472.html#aeeaafebf5e61e1da8a2c5e3e07dac64b", null ],
+    [ "~CPPPlugin", "a00472.html#af7c569aa874ccbac301c805755dcda0c", null ],
+    [ "onDisable", "a00472.html#a3ecc2c479d1ca6785e7cdcb0738c1597", null ],
+    [ "onEnable", "a00472.html#ad3d1188d089ab0fc945475f988c64fa7", null ],
+    [ "ShouldNotUse", "a00472.html#a30d82964da1ce75eb9f269c676dafc33", null ],
+    [ "config", "a00472.html#a20b8d27c47456805d38d4c366da96ac0", null ],
+    [ "plugin", "a00472.html#acfd86c042e577055f5047cb515e7bdfa", null ]
 ];

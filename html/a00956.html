@@ -4,9 +4,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiraiCP: group.cpp</title>
+<title>MiraiCP: MiraiCP::GroupRelatedData结构体 参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -35,7 +35,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MiraiCP
-   &#160;<span id="projectnumber">v2.14.0</span>
+   &#160;<span id="projectnumber">v2.16.0</span>
    </div>
    <div id="projectbrief">MiraiCP api document</div>
   </td>
@@ -44,10 +44,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.9.2 -->
+<!-- 制作者 Doxygen 1.9.8 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search",'搜索','.html');
+var searchBox = new SearchBox("searchBox", "search/",'.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -87,75 +87,248 @@ $(document).ready(function(){initNavTree('a00956.html',''); initResizable(); });
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">group.cpp</div></div>
+  <div class="summary">
+<a href="#pub-types">Public 类型</a> &#124;
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-attribs">Public 属性</a> &#124;
+<a href="a00953.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">MiraiCP::GroupRelatedData结构体 参考</div></div>
 </div><!--header-->
 <div class="contents">
-<p >群操作</p>
-<div class="fragment"><div class="line"><span class="comment">// Copyright (c) 2020 - 2022. Eritque arcus and contributors.</span></div>
-<div class="line"><span class="comment">//</span></div>
-<div class="line"><span class="comment">// This program is free software: you can redistribute it and/or modify</span></div>
-<div class="line"><span class="comment">// it under the terms of the GNU Affero General Public License as</span></div>
-<div class="line"><span class="comment">// published by the Free Software Foundation, either version 3 of the</span></div>
-<div class="line"><span class="comment">// License, or any later version(in your opinion).</span></div>
-<div class="line"><span class="comment">//</span></div>
-<div class="line"><span class="comment">// This program is distributed in the hope that it will be useful,</span></div>
-<div class="line"><span class="comment">// but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div>
-<div class="line"><span class="comment">// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span></div>
-<div class="line"><span class="comment">// GNU Affero General Public License for more details.</span></div>
-<div class="line"><span class="comment">//</span></div>
-<div class="line"><span class="comment">// You should have received a copy of the GNU Affero General Public License</span></div>
-<div class="line"><span class="comment">// along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</span></div>
-<div class="line"><span class="comment">//</span></div>
-<div class="line"><span class="preprocessor">#include &lt;MiraiCP.hpp&gt;</span></div>
-<div class="line"><span class="keyword">using namespace </span><a class="code hl_namespace" href="a00394.html">MiraiCP</a>;</div>
-<div class="line"> </div>
-<div class="line"><span class="keyword">const</span> PluginConfig CPPPlugin::config{</div>
-<div class="line">        <span class="stringliteral">&quot;id&quot;</span>,   <span class="comment">// 插件id</span></div>
-<div class="line">        <span class="stringliteral">&quot;test&quot;</span>, <span class="comment">// 插件名称</span></div>
-<div class="line">        <span class="stringliteral">&quot;v1.0&quot;</span>, <span class="comment">// 插件版本</span></div>
-<div class="line">        <span class="stringliteral">&quot;a&quot;</span>,    <span class="comment">// 插件作者</span></div>
-<div class="line">                <span class="comment">// 可选：插件描述</span></div>
-<div class="line">                <span class="comment">// 可选：日期</span></div>
-<div class="line">};</div>
-<div class="line"> </div>
-<div class="line"><span class="keyword">class </span>Main : <span class="keyword">public</span> CPPPlugin {</div>
-<div class="line"><span class="keyword">public</span>:</div>
-<div class="line">    Main() : <a class="code hl_function" href="a00457.html#aeeaafebf5e61e1da8a2c5e3e07dac64b">CPPPlugin</a>() {}</div>
-<div class="line">    <span class="keywordtype">void</span> onEnable()<span class="keyword"> override </span>{</div>
-<div class="line">        Event::registerEvent&lt;GroupMessageEvent&gt;([](<a id="a0" name="a0"></a><a class="code hl_enumvalue" href="a00398.html#abe9e9d8212ea8f23717b72db64393cabaca8073196614a985e9fcc7d2f964473c">GroupMessageEvent</a> e) {</div>
-<div class="line">            <span class="comment">// 用 id 构建群对象</span></div>
-<div class="line">            Group a(e.group.id(), e.bot.id);</div>
-<div class="line">            <span class="comment">// 发送D:\\ValveUnhandledExceptionFilter.txt本地文件到qq群的 /test.txt 路径</span></div>
-<div class="line">            RemoteFile tmp = e.group.sendFile(<span class="stringliteral">&quot;/test.txt&quot;</span>, <span class="stringliteral">&quot;D:\\ValveUnhandledExceptionFilter.txt&quot;</span>);</div>
-<div class="line">            e.group.sendMessage(e.group.getFile(<span class="stringliteral">&quot;/&quot;</span>, tmp.id).name);</div>
-<div class="line">            e.group.sendMessage(e.group.getFile(<span class="stringliteral">&quot;/test.txt&quot;</span>).name);</div>
-<div class="line">            e.group.sendMessage(e.group.getFileListString(<span class="stringliteral">&quot;/&quot;</span>));</div>
-<div class="line">            <span class="comment">// 取群文件列表</span></div>
-<div class="line">            e.group.getFileListString(<span class="stringliteral">&quot;/&quot;</span>);</div>
-<div class="line">        });</div>
-<div class="line">    }</div>
-<div class="line">};</div>
-<div class="line"> </div>
-<div class="line"><span class="keywordtype">void</span> <a id="a1" name="a1"></a><a class="code hl_function" href="a00394.html#a12d27be6730af4fc321ac1eb231db281">MiraiCP::enrollPlugin</a>() {</div>
-<div class="line">    <a class="code hl_function" href="a00394.html#a12d27be6730af4fc321ac1eb231db281">MiraiCP::enrollPlugin</a>(<span class="keyword">new</span> Main());</div>
-<div class="line">}</div>
-<div class="ttc" id="aa00394_html"><div class="ttname"><a href="a00394.html">MiraiCP</a></div><div class="ttdef"><b>Definition:</b> <a href="a00041_source.html#l00021">JsonTools.h:21</a></div></div>
-<div class="ttc" id="aa00394_html_a12d27be6730af4fc321ac1eb231db281"><div class="ttname"><a href="a00394.html#a12d27be6730af4fc321ac1eb231db281">MiraiCP::enrollPlugin</a></div><div class="ttdeci">void enrollPlugin()</div><div class="ttdoc">注册插件函数, 需要被插件实现, 类似onStart();</div><div class="ttdef"><b>Definition:</b> <a href="a00170_source.html#l00035">utils.h:35</a></div></div>
-<div class="ttc" id="aa00398_html_abe9e9d8212ea8f23717b72db64393cabaca8073196614a985e9fcc7d2f964473c"><div class="ttname"><a href="a00398.html#abe9e9d8212ea8f23717b72db64393cabaca8073196614a985e9fcc7d2f964473c">MiraiCP::eventTypes::GroupMessageEvent</a></div><div class="ttdeci">@ GroupMessageEvent</div><div class="ttdef"><b>Definition:</b> <a href="a00077_source.html#l00040">EventBase.h:40</a></div></div>
-<div class="ttc" id="aa00457_html_aeeaafebf5e61e1da8a2c5e3e07dac64b"><div class="ttname"><a href="a00457.html#aeeaafebf5e61e1da8a2c5e3e07dac64b">MiraiCP::CPPPlugin::CPPPlugin</a></div><div class="ttdeci">CPPPlugin()=default</div></div>
-</div><!-- fragment --> </div><!-- contents -->
+
+<p><code>#include &lt;<a class="el" href="a00329_source.html">GroupRelatedData.h</a>&gt;</code></p>
+<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> 类 MiraiCP::GroupRelatedData 继承关系图:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00955.svg" width="382" height="1158"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> MiraiCP::GroupRelatedData 的协作图:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00954.svg" width="536" height="1138"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public 类型</h2></td></tr>
+<tr class="memitem:aee7f1cab5fd143538cecf17c4aaf764c" id="r_aee7f1cab5fd143538cecf17c4aaf764c"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="a00960.html">IContactData</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00956.html#aee7f1cab5fd143538cecf17c4aaf764c">Super</a></td></tr>
+<tr class="separator:aee7f1cab5fd143538cecf17c4aaf764c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a1b7b6643de0b824f1306b3dad3232122" id="r_a1b7b6643de0b824f1306b3dad3232122"><td class="memItemLeft" align="right" valign="top">nlohmann::json&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00956.html#a1b7b6643de0b824f1306b3dad3232122">internalToJson</a> () const override</td></tr>
+<tr class="memdesc:a1b7b6643de0b824f1306b3dad3232122"><td class="mdescLeft">&#160;</td><td class="mdescRight">转为json, 由子类实现, 无锁  <br /></td></tr>
+<tr class="separator:a1b7b6643de0b824f1306b3dad3232122"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae682a77761a2216feb6bbbb8b79cb3ba" id="r_ae682a77761a2216feb6bbbb8b79cb3ba"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00956.html#ae682a77761a2216feb6bbbb8b79cb3ba">GroupRelatedData</a> (<a class="el" href="a00412.html#a3ae2ebfdaa4574d341b8e7935f29ddb8">QQID</a> in_groupid)</td></tr>
+<tr class="separator:ae682a77761a2216feb6bbbb8b79cb3ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_a00960"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_a00960')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="a00960.html">MiraiCP::IContactData</a></td></tr>
+<tr class="memitem:ab9cf06d58e4562680e5dcabec8556758 inherit pub_methods_a00960" id="r_ab9cf06d58e4562680e5dcabec8556758"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00960.html#ab9cf06d58e4562680e5dcabec8556758">deserialize</a> (nlohmann::json inJson) override</td></tr>
+<tr class="memdesc:ab9cf06d58e4562680e5dcabec8556758 inherit pub_methods_a00960"><td class="mdescLeft">&#160;</td><td class="mdescRight">读入json数据, 由子类实现, 无锁  <br /></td></tr>
+<tr class="separator:ab9cf06d58e4562680e5dcabec8556758 inherit pub_methods_a00960"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af673a2e404372cc90719f38b9cced144 inherit pub_methods_a00960" id="r_af673a2e404372cc90719f38b9cced144"><td class="memItemLeft" align="right" valign="top">nlohmann::json&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00960.html#af673a2e404372cc90719f38b9cced144">internalToJson</a> () const override</td></tr>
+<tr class="memdesc:af673a2e404372cc90719f38b9cced144 inherit pub_methods_a00960"><td class="mdescLeft">&#160;</td><td class="mdescRight">转为json, 由子类实现, 无锁  <br /></td></tr>
+<tr class="separator:af673a2e404372cc90719f38b9cced144 inherit pub_methods_a00960"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1632df966247f52553c17e25e5d47280 inherit pub_methods_a00960" id="r_a1632df966247f52553c17e25e5d47280"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00960.html#a1632df966247f52553c17e25e5d47280">refreshInfo</a> () override</td></tr>
+<tr class="memdesc:a1632df966247f52553c17e25e5d47280 inherit pub_methods_a00960"><td class="mdescLeft">&#160;</td><td class="mdescRight">刷新数据  <br /></td></tr>
+<tr class="separator:a1632df966247f52553c17e25e5d47280 inherit pub_methods_a00960"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8bb03098fb7c84497eb7f10610855e5 inherit pub_methods_a00960" id="r_ab8bb03098fb7c84497eb7f10610855e5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00960.html#ab8bb03098fb7c84497eb7f10610855e5">updateJson</a> (nlohmann::json &amp;jsonToUpdate) const</td></tr>
+<tr class="separator:ab8bb03098fb7c84497eb7f10610855e5 inherit pub_methods_a00960"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_a00964"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_a00964')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="a00964.html">MiraiCP::IMiraiData</a></td></tr>
+<tr class="memitem:a2079413e6c26dc563bf4e496ae25ca08 inherit pub_methods_a00964" id="r_a2079413e6c26dc563bf4e496ae25ca08"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00964.html#a2079413e6c26dc563bf4e496ae25ca08">IMiraiData</a> ()=default</td></tr>
+<tr class="separator:a2079413e6c26dc563bf4e496ae25ca08 inherit pub_methods_a00964"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1262457e073f9c776c941962a5b6699 inherit pub_methods_a00964" id="r_ab1262457e073f9c776c941962a5b6699"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00964.html#ab1262457e073f9c776c941962a5b6699">~IMiraiData</a> ()=default</td></tr>
+<tr class="separator:ab1262457e073f9c776c941962a5b6699 inherit pub_methods_a00964"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17445e67d1cf31c184cf144f874e82f9 inherit pub_methods_a00964" id="r_a17445e67d1cf31c184cf144f874e82f9"><td class="memItemLeft" align="right" valign="top">nlohmann::json&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00964.html#a17445e67d1cf31c184cf144f874e82f9">toJson</a> () const</td></tr>
+<tr class="memdesc:a17445e67d1cf31c184cf144f874e82f9 inherit pub_methods_a00964"><td class="mdescLeft">&#160;</td><td class="mdescRight">转为json, 由子类实现, 多线程安全(带锁)  <br /></td></tr>
+<tr class="separator:a17445e67d1cf31c184cf144f874e82f9 inherit pub_methods_a00964"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0af5afb339c80a734ac9752d4f179069 inherit pub_methods_a00964" id="r_a0af5afb339c80a734ac9752d4f179069"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00964.html#a0af5afb339c80a734ac9752d4f179069">requestRefresh</a> ()</td></tr>
+<tr class="memdesc:a0af5afb339c80a734ac9752d4f179069 inherit pub_methods_a00964"><td class="mdescLeft">&#160;</td><td class="mdescRight">请求一次刷新数据, 但不保证会进行  <br /></td></tr>
+<tr class="separator:a0af5afb339c80a734ac9752d4f179069 inherit pub_methods_a00964"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abdbf2a10d21a520b782c1654beb3214a inherit pub_methods_a00964" id="r_abdbf2a10d21a520b782c1654beb3214a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00964.html#abdbf2a10d21a520b782c1654beb3214a">forceRefreshNextTime</a> ()</td></tr>
+<tr class="memdesc:abdbf2a10d21a520b782c1654beb3214a inherit pub_methods_a00964"><td class="mdescLeft">&#160;</td><td class="mdescRight">确保下次调用 requestRefresh 时刷新数据  <br /></td></tr>
+<tr class="separator:abdbf2a10d21a520b782c1654beb3214a inherit pub_methods_a00964"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0795b1c8b45a0c122c8027f359b8f40e inherit pub_methods_a00964" id="r_a0795b1c8b45a0c122c8027f359b8f40e"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00964.html#a0795b1c8b45a0c122c8027f359b8f40e">toString</a> () const</td></tr>
+<tr class="memdesc:a0795b1c8b45a0c122c8027f359b8f40e inherit pub_methods_a00964"><td class="mdescLeft">&#160;</td><td class="mdescRight">序列化为string, 带锁  <br /></td></tr>
+<tr class="separator:a0795b1c8b45a0c122c8027f359b8f40e inherit pub_methods_a00964"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6440ea1909386acbfd77fe1e17d30f8 inherit pub_methods_a00964" id="r_ad6440ea1909386acbfd77fe1e17d30f8"><td class="memItemLeft" align="right" valign="top">std::shared_mutex &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00964.html#ad6440ea1909386acbfd77fe1e17d30f8">getMutex</a> ()</td></tr>
+<tr class="memdesc:ad6440ea1909386acbfd77fe1e17d30f8 inherit pub_methods_a00964"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取锁  <br /></td></tr>
+<tr class="separator:ad6440ea1909386acbfd77fe1e17d30f8 inherit pub_methods_a00964"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public 属性</h2></td></tr>
+<tr class="memitem:a95b33f990d28fd8d08fdad75c2ab66e3" id="r_a95b33f990d28fd8d08fdad75c2ab66e3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00412.html#a3ae2ebfdaa4574d341b8e7935f29ddb8">QQID</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00956.html#a95b33f990d28fd8d08fdad75c2ab66e3">_groupId</a></td></tr>
+<tr class="memdesc:a95b33f990d28fd8d08fdad75c2ab66e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">group id  <br /></td></tr>
+<tr class="separator:a95b33f990d28fd8d08fdad75c2ab66e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_attribs_a00960"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_a00960')"><img src="closed.png" alt="-"/>&#160;Public 属性 继承自 <a class="el" href="a00960.html">MiraiCP::IContactData</a></td></tr>
+<tr class="memitem:a9e2084ee904597c3dcd486a833173d6d inherit pub_attribs_a00960" id="r_a9e2084ee904597c3dcd486a833173d6d"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00960.html#a9e2084ee904597c3dcd486a833173d6d">_nickOrNameCard</a></td></tr>
+<tr class="memdesc:a9e2084ee904597c3dcd486a833173d6d inherit pub_attribs_a00960"><td class="mdescLeft">&#160;</td><td class="mdescRight">昵称或者群名片  <br /></td></tr>
+<tr class="separator:a9e2084ee904597c3dcd486a833173d6d inherit pub_attribs_a00960"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79b6e3d759b6f3e77198dc15c8a29057 inherit pub_attribs_a00960" id="r_a79b6e3d759b6f3e77198dc15c8a29057"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00960.html#a79b6e3d759b6f3e77198dc15c8a29057">_avatarUrl</a></td></tr>
+<tr class="memdesc:a79b6e3d759b6f3e77198dc15c8a29057 inherit pub_attribs_a00960"><td class="mdescLeft">&#160;</td><td class="mdescRight">头像 url  <br /></td></tr>
+<tr class="separator:a79b6e3d759b6f3e77198dc15c8a29057 inherit pub_attribs_a00960"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6222713565fc32fb53f1ff1300caa07 inherit pub_attribs_a00960" id="r_ab6222713565fc32fb53f1ff1300caa07"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00412.html#a3ae2ebfdaa4574d341b8e7935f29ddb8">QQID</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00960.html#ab6222713565fc32fb53f1ff1300caa07">_id</a> {}</td></tr>
+<tr class="memdesc:ab6222713565fc32fb53f1ff1300caa07 inherit pub_attribs_a00960"><td class="mdescLeft">&#160;</td><td class="mdescRight">id  <br /></td></tr>
+<tr class="separator:ab6222713565fc32fb53f1ff1300caa07 inherit pub_attribs_a00960"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad56f484aaaa2ec82ce2d32e3d8b51755 inherit pub_attribs_a00960" id="r_ad56f484aaaa2ec82ce2d32e3d8b51755"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00412.html#a3ae2ebfdaa4574d341b8e7935f29ddb8">QQID</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00960.html#ad56f484aaaa2ec82ce2d32e3d8b51755">_botId</a> {}</td></tr>
+<tr class="memdesc:ad56f484aaaa2ec82ce2d32e3d8b51755 inherit pub_attribs_a00960"><td class="mdescLeft">&#160;</td><td class="mdescRight">所属的 bot 的 id  <br /></td></tr>
+<tr class="separator:ad56f484aaaa2ec82ce2d32e3d8b51755 inherit pub_attribs_a00960"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d9cc201cdb3660afcd69128ec7f5784 inherit pub_attribs_a00960" id="r_a5d9cc201cdb3660afcd69128ec7f5784"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00412.html#a0d1866090dd6e204aff05337260f3a57">ContactType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00960.html#a5d9cc201cdb3660afcd69128ec7f5784">_type</a> = <a class="el" href="a00412.html#a0d1866090dd6e204aff05337260f3a57aeb5e49b11f2d1ca3eb284cae0513f35e">MIRAI_CONTACT</a></td></tr>
+<tr class="memdesc:a5d9cc201cdb3660afcd69128ec7f5784 inherit pub_attribs_a00960"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00460.html" title="group, friend, member的父类">Contact</a> 类型  <br /></td></tr>
+<tr class="separator:a5d9cc201cdb3660afcd69128ec7f5784 inherit pub_attribs_a00960"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+额外继承的成员函数</h2></td></tr>
+<tr class="inherit_header pro_methods_a00964"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_a00964')"><img src="closed.png" alt="-"/>&#160;Protected 成员函数 继承自 <a class="el" href="a00964.html">MiraiCP::IMiraiData</a></td></tr>
+<tr class="memitem:a862c4fbbceae111c0c37df2bf76c7859 inherit pro_methods_a00964" id="r_a862c4fbbceae111c0c37df2bf76c7859"><td class="memItemLeft" align="right" valign="top">nlohmann::json&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00964.html#a862c4fbbceae111c0c37df2bf76c7859">internalToString</a> () const</td></tr>
+<tr class="separator:a862c4fbbceae111c0c37df2bf76c7859 inherit pro_methods_a00964"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_a00964"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_a00964')"><img src="closed.png" alt="-"/>&#160;Protected 属性 继承自 <a class="el" href="a00964.html">MiraiCP::IMiraiData</a></td></tr>
+<tr class="memitem:a1a587f53dc97566ee040cd12f9901314 inherit pro_attribs_a00964" id="r_a1a587f53dc97566ee040cd12f9901314"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00968.html">MiraiDataLocker</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00964.html#a1a587f53dc97566ee040cd12f9901314">Locker</a></td></tr>
+<tr class="memdesc:a1a587f53dc97566ee040cd12f9901314 inherit pro_attribs_a00964"><td class="mdescLeft">&#160;</td><td class="mdescRight">锁实例  <br /></td></tr>
+<tr class="separator:a1a587f53dc97566ee040cd12f9901314 inherit pro_attribs_a00964"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock">
+<p class="definition">在文件 <a class="el" href="a00329_source.html">GroupRelatedData.h</a> 第 <a class="el" href="a00329_source.html#l00024">24</a> 行定义.</p>
+</div><h2 class="groupheader">成员类型定义说明</h2>
+<a id="aee7f1cab5fd143538cecf17c4aaf764c" name="aee7f1cab5fd143538cecf17c4aaf764c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee7f1cab5fd143538cecf17c4aaf764c">&#9670;&#160;</a></span>Super</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="a00960.html">IContactData</a> <a class="el" href="a00956.html#aee7f1cab5fd143538cecf17c4aaf764c">MiraiCP::GroupRelatedData::Super</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="a00329_source.html">GroupRelatedData.h</a> 第 <a class="el" href="a00329_source.html#l00025">25</a> 行定义.</p>
+
+</div>
+</div>
+<h2 class="groupheader">构造及析构函数说明</h2>
+<a id="ae682a77761a2216feb6bbbb8b79cb3ba" name="ae682a77761a2216feb6bbbb8b79cb3ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae682a77761a2216feb6bbbb8b79cb3ba">&#9670;&#160;</a></span>GroupRelatedData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">MiraiCP::GroupRelatedData::GroupRelatedData </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00412.html#a3ae2ebfdaa4574d341b8e7935f29ddb8">QQID</a>&#160;</td>
+          <td class="paramname"><em>in_groupid</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="a00329_source.html">GroupRelatedData.h</a> 第 <a class="el" href="a00329_source.html#l00031">31</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">   31</span>: <a class="code hl_variable" href="a00956.html#a95b33f990d28fd8d08fdad75c2ab66e3">_groupId</a>(in_groupid) {}</div>
+<div class="ttc" id="aa00956_html_a95b33f990d28fd8d08fdad75c2ab66e3"><div class="ttname"><a href="a00956.html#a95b33f990d28fd8d08fdad75c2ab66e3">MiraiCP::GroupRelatedData::_groupId</a></div><div class="ttdeci">QQID _groupId</div><div class="ttdoc">group id</div><div class="ttdef"><b>Definition</b> <a href="a00329_source.html#l00027">GroupRelatedData.h:27</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a1b7b6643de0b824f1306b3dad3232122" name="a1b7b6643de0b824f1306b3dad3232122"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b7b6643de0b824f1306b3dad3232122">&#9670;&#160;</a></span>internalToJson()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nlohmann::json MiraiCP::GroupRelatedData::internalToJson </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>转为json, 由子类实现, 无锁 </p>
+
+<p>实现了 <a class="el" href="a00964.html#ae9f9f272fbb0b68b07dd4750745fae1d">MiraiCP::IMiraiData</a>.</p>
+
+<p class="definition">在文件 <a class="el" href="a00380_source.html">Contact.cpp</a> 第 <a class="el" href="a00380_source.html#l00087">87</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">   87</span>                                                        {</div>
+<div class="line"><span class="lineno">   88</span>        <span class="keyword">auto</span> result = <a class="code hl_function" href="a00960.html#af673a2e404372cc90719f38b9cced144">IContactData::internalToJson</a>();</div>
+<div class="line"><span class="lineno">   89</span>        result[<span class="stringliteral">&quot;groupId&quot;</span>] = <a class="code hl_variable" href="a00956.html#a95b33f990d28fd8d08fdad75c2ab66e3">_groupId</a>;</div>
+<div class="line"><span class="lineno">   90</span>        <span class="keywordflow">return</span> result;</div>
+<div class="line"><span class="lineno">   91</span>    }</div>
+<div class="ttc" id="aa00960_html_af673a2e404372cc90719f38b9cced144"><div class="ttname"><a href="a00960.html#af673a2e404372cc90719f38b9cced144">MiraiCP::IContactData::internalToJson</a></div><div class="ttdeci">nlohmann::json internalToJson() const override</div><div class="ttdoc">转为json, 由子类实现, 无锁</div><div class="ttdef"><b>Definition</b> <a href="a00380_source.html#l00079">Contact.cpp:79</a></div></div>
+</div><!-- fragment --><div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-2-trigger" src="closed.png" alt="+"/> 函数调用图:</div>
+<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-2-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00956_a1b7b6643de0b824f1306b3dad3232122_cgraph.svg" width="398" height="54"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="a95b33f990d28fd8d08fdad75c2ab66e3" name="a95b33f990d28fd8d08fdad75c2ab66e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95b33f990d28fd8d08fdad75c2ab66e3">&#9670;&#160;</a></span>_groupId</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00412.html#a3ae2ebfdaa4574d341b8e7935f29ddb8">QQID</a> MiraiCP::GroupRelatedData::_groupId</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>group id </p>
+
+<p class="definition">在文件 <a class="el" href="a00329_source.html">GroupRelatedData.h</a> 第 <a class="el" href="a00329_source.html#l00027">27</a> 行定义.</p>
+
+</div>
+</div>
+<hr/>该结构体的文档由以下文件生成:<ul>
+<li><a class="el" href="a00329_source.html">GroupRelatedData.h</a></li>
+<li><a class="el" href="a00380_source.html">Contact.cpp</a></li>
+</ul>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">生成于 2023年 二月 28日 星期二 12:14:05 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="navelem"><a class="el" href="a00412.html">MiraiCP</a></li><li class="navelem"><a class="el" href="a00956.html">GroupRelatedData</a></li>
+    <li class="footer">生成于 2023年 十月 26日 星期四 01:16:24 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
     </body>

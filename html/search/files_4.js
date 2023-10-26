@@ -1,7 +1,8 @@
 var searchData=
 [
-  ['forwardedmessage_2eh_0',['ForwardedMessage.h',['../a00125.html',1,'']]],
-  ['friend_2ecpp_1',['Friend.cpp',['../a00341.html',1,'']]],
-  ['friend_2eh_2',['Friend.h',['../a00128.html',1,'']]],
-  ['friendrecallevent_2eh_3',['FriendRecallEvent.h',['../a00080.html',1,'']]]
+  ['group_2eh_0',['Group.h',['../a00056.html',1,'']]],
+  ['groupinviteevent_2eh_1',['GroupInviteEvent.h',['../a00134.html',1,'']]],
+  ['groupmessageevent_2eh_2',['GroupMessageEvent.h',['../a00119.html',1,'']]],
+  ['grouprelateddata_2eh_3',['GroupRelatedData.h',['../a00329.html',1,'']]],
+  ['grouptempmessageevent_2eh_4',['GroupTempMessageEvent.h',['../a00122.html',1,'']]]
 ];

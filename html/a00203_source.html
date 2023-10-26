@@ -4,9 +4,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiraiCP: JNIEnvManager.h 源文件</title>
+<title>MiraiCP: redirectCout.cpp 源文件</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -35,7 +35,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MiraiCP
-   &#160;<span id="projectnumber">v2.15.0-RC2</span>
+   &#160;<span id="projectnumber">v2.16.0</span>
    </div>
    <div id="projectbrief">MiraiCP api document</div>
   </td>
@@ -44,10 +44,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.9.2 -->
+<!-- 制作者 Doxygen 1.9.8 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search",'搜索','.html');
+var searchBox = new SearchBox("searchBox", "search/",'.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -61,6 +61,11 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -87,16 +92,23 @@ $(document).ready(function(){initNavTree('a00203_source.html',''); initResizable
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">JNIEnvManager.h</div></div>
+  <div class="headertitle"><div class="title">redirectCout.cpp</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="a00203.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// Copyright (c) 2020 - 2022. Eritque arcus and contributors.</span></div>
+<a href="a00203.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// Copyright (c) 2022. Eritque arcus and contributors.</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">//</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">// This program is free software: you can redistribute it and/or modify</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">// it under the terms of the GNU Affero General Public License as</span></div>
@@ -112,58 +124,207 @@ $(document).ready(function(){initNavTree('a00203_source.html',''); initResizable
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">// along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</span></div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">//</span></div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#ifndef MIRAICP_PRO_JNIENVMANAGER_H</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#define MIRAICP_PRO_JNIENVMANAGER_H</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#ifndef LOADER_NATIVE</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &quot;<a class="code" href="a00044.html">MiraiCPMacros.h</a>&quot;</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment">// -----------------------</span></div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#include &lt;functional&gt;</span></div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &lt;jni.h&gt;</span></div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;mutex&gt;</span></div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;thread&gt;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &quot;<a class="code" href="a00041.html">MiraiCPMacros.h</a>&quot;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">// -----------------------</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &quot;<a class="code" href="a00188.html">redirectCout.h</a>&quot;</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &lt;sstream&gt;</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#ifdef MIRAICP_LIB_LOADER</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#include &quot;<a class="code" href="a00251.html">LoaderLogger.h</a>&quot;</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#else</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &quot;<a class="code" href="a00167.html">Logger.h</a>&quot;</span></div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="keyword">class </span><a class="code hl_class" href="a00768.html">JNIEnvManager</a>;</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="a00768.html">   34</a></span><span class="keyword">class </span><a class="code hl_define" href="a00044.html#aa40df2b825bdde9207f3e87b140235c3">MIRAICP_EXPORT</a> <a class="code hl_class" href="a00768.html">JNIEnvManager</a> {</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keyword">class </span>ThreadInfo;</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="a00768.html#a11ff3fa2dd110bf0a8fcacfc6bfd4bac">   41</a></span>    <a class="code hl_function" href="a00768.html#a11ff3fa2dd110bf0a8fcacfc6bfd4bac">JNIEnvManager</a>() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keyword">static</span> JavaVM *getGvm();</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keyword">static</span> <span class="keywordtype">void</span> setGvm(JavaVM *_gvm);</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keyword">static</span> <span class="keywordtype">bool</span> setEnv(JNIEnv *e);</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="keyword">class </span>OStreamRedirector {</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="comment">// 旧的缓冲区目标</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    std::streambuf *old;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="comment">// 被重定向的流</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    std::ostream *obj;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    std::ostream oldStream;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    ~OStreamRedirector() {</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        obj-&gt;rdbuf(old);</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        obj = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        old = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    }</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keyword">explicit</span> OStreamRedirector(std::ostream *in_obj, std::streambuf *newBuffer) : old(in_obj-&gt;rdbuf(newBuffer)),</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>                                                                                  obj(in_obj), oldStream(old) {}</div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keyword">static</span> <span class="keywordtype">void</span> detach();</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="keyword">static</span> JNIEnv *<a class="code hl_function" href="a00411.html#a076c5f4ff8083c7cfc6523498d0ba30f">getEnv</a>();</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>};</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="preprocessor">#endif </span><span class="comment">//LOADER_NATIVE</span></div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="preprocessor">#endif </span><span class="comment">//MIRAICP_PRO_JNIENVMANAGER_H</span></div>
-<div class="ttc" id="aa00044_html"><div class="ttname"><a href="a00044.html">MiraiCPMacros.h</a></div></div>
-<div class="ttc" id="aa00044_html_aa40df2b825bdde9207f3e87b140235c3"><div class="ttname"><a href="a00044.html#aa40df2b825bdde9207f3e87b140235c3">MIRAICP_EXPORT</a></div><div class="ttdeci">#define MIRAICP_EXPORT</div><div class="ttdef"><b>Definition:</b> <a href="a00044_source.html#l00180">MiraiCPMacros.h:180</a></div></div>
-<div class="ttc" id="aa00411_html_a076c5f4ff8083c7cfc6523498d0ba30f"><div class="ttname"><a href="a00411.html#a076c5f4ff8083c7cfc6523498d0ba30f">LibLoader::JNIEnvs::getEnv</a></div><div class="ttdeci">JNIEnv * getEnv()</div><div class="ttdef"><b>Definition:</b> <a href="a00206_source.html#l00039">JNIEnvs.cpp:39</a></div></div>
-<div class="ttc" id="aa00768_html"><div class="ttname"><a href="a00768.html">JNIEnvManager</a></div><div class="ttdef"><b>Definition:</b> <a href="a00203_source.html#l00034">JNIEnvManager.h:34</a></div></div>
-<div class="ttc" id="aa00768_html_a11ff3fa2dd110bf0a8fcacfc6bfd4bac"><div class="ttname"><a href="a00768.html#a11ff3fa2dd110bf0a8fcacfc6bfd4bac">JNIEnvManager::JNIEnvManager</a></div><div class="ttdeci">JNIEnvManager()=default</div></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="comment">// print directly</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keyword">friend</span> <span class="keywordtype">void</span> <a class="code hl_function" href="a00203.html#a4d2a8186429cb8b469e21c03dc4c8e33">print</a>(<span class="keyword">const</span> std::string &amp;);</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>};</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="keyword">class </span>OString : <span class="keyword">public</span> std::ostream {</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="keyword">class </span>OStringBuf : <span class="keyword">public</span> std::streambuf {</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        <span class="keyword">friend</span> <span class="keyword">class </span>OString;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        <span class="keyword">typedef</span> void (*Recorder)(std::string);</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        <span class="comment">//</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        <span class="keyword">explicit</span> OStringBuf(<span class="keywordtype">bool</span> inIsInfoLevel) : isInfoLevel(inIsInfoLevel) {}</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        ~OStringBuf() <span class="keyword">override</span> = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        <span class="comment">//</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        std::ostringstream result{};</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        Recorder recorder = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        <span class="keywordtype">bool</span> isInfoLevel;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        <span class="comment">//</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        <span class="comment">// 输出缓冲区内容, 相当于 flush</span></div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        std::string out();</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        <span class="comment">// std::streambuf interface</span></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        <span class="keywordtype">int</span> sync()<span class="keyword"> override </span>{</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>            record(out());</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>            <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        }</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        <span class="comment">// std::streambuf interface</span></div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        <span class="comment">// 加入缓冲区</span></div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        <span class="keywordtype">int</span> overflow(std::streambuf::int_type c)<span class="keyword"> override </span>{</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>            <span class="keywordflow">if</span> (c == EOF)</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>                record(out());</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>            <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>                result.put((std::streambuf::char_type) c);</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>            <span class="keywordflow">return</span> c;</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        }</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        <span class="keywordtype">void</span> record(std::string message) {</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>            <span class="keywordflow">if</span> (recorder) [[unlikely]] {</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>                recorder(std::move(message));</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>            }</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        }</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    };</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    <span class="keyword">using </span>Recorder = OStringBuf::Recorder;</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    <span class="comment">// 缓冲区</span></div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    OStringBuf sbuf;</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    <span class="comment">// 输出是否为 info 级别</span></div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    <span class="keyword">explicit</span> OString(<span class="keywordtype">bool</span> info) : std::ostream(&amp;sbuf), sbuf(info) {}</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span> </div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    ~OString() <span class="keyword">override</span> = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    <span class="keywordtype">void</span> setRecorder(Recorder recorder) {</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>        sbuf.recorder = recorder;</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    }</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>};</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span> </div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span><span class="comment">// --- impl ---</span></div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span> </div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno"><a class="line" href="a00203.html#a5ea76c388296e6066ae4e30a99837f41">  122</a></span>OString <a class="code hl_function" href="a00203.html#a5ea76c388296e6066ae4e30a99837f41">outTarget</a>(<span class="keyword">true</span>);</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno"><a class="line" href="a00203.html#a1defcc132542aa9411395eb08b0fe844">  123</a></span>OString <a class="code hl_function" href="a00203.html#a1defcc132542aa9411395eb08b0fe844">errTarget</a>(<span class="keyword">false</span>);</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno"><a class="line" href="a00203.html#a7424110a4e217977934256f0bb6699de">  124</a></span>std::unique_ptr&lt;OStreamRedirector&gt; <a class="code hl_variable" href="a00203.html#a7424110a4e217977934256f0bb6699de">outRedirector</a>;</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno"><a class="line" href="a00203.html#a222c24969464cb912fc16dafc9b72bf2">  125</a></span>std::unique_ptr&lt;OStreamRedirector&gt; <a class="code hl_variable" href="a00203.html#a222c24969464cb912fc16dafc9b72bf2">errRedirector</a>;</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span> </div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span><span class="keyword">struct </span>RedirectedOstreamPair {</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    std::ostream *out = &amp;std::cout;</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    std::ostream *err = &amp;std::cerr;</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno"><a class="line" href="a00203.html#acb5e2f19b4391ee51798dfa8ea732085">  131</a></span>} <a class="code hl_variable" href="a00203.html#acb5e2f19b4391ee51798dfa8ea732085">RedirectedOstreamPointers</a>;</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span> </div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>std::string OString::OStringBuf::out() {</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>    std::string resultstr = result.str();</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>    result.str(<span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span> </div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span><span class="preprocessor">#ifdef MIRAICP_LIB_LOADER</span></div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>    <span class="keyword">auto</span> &amp;localLogger = <a class="code hl_variable" href="a00425.html#af1031cef14711c6b7ed3805fe6d17d81">LibLoader::logger</a>;</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span><span class="preprocessor">#else</span></div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>    <span class="keyword">auto</span> &amp;localLogger = <a class="code hl_variable" href="a00636.html#a268fd602157c3fa49616a8872c82bfb1">MiraiCP::Logger::logger</a>;</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>    <span class="keywordflow">if</span> (isInfoLevel)</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>        localLogger.<a class="code hl_function" href="a00628.html#ade15a5c23198ffcb4454a28356e78759">info</a>(resultstr);</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>    <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>        localLogger.error(resultstr);</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>    <span class="keywordflow">return</span> resultstr;</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>}</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span> </div>
+<div class="foldopen" id="foldopen00149" data-start="{" data-end="}">
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno"><a class="line" href="a00428.html#a2f7aa94ac874600ec7b20a833dd467cc">  149</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="a00428.html#a2f7aa94ac874600ec7b20a833dd467cc">MiraiCP::Redirector::reset</a>() {</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>    <a class="code hl_variable" href="a00203.html#a7424110a4e217977934256f0bb6699de">outRedirector</a>.reset();</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>    <a class="code hl_variable" href="a00203.html#a222c24969464cb912fc16dafc9b72bf2">errRedirector</a>.reset();</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>}</div>
+</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span> </div>
+<div class="foldopen" id="foldopen00154" data-start="{" data-end="}">
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno"><a class="line" href="a00203.html#a4d2a8186429cb8b469e21c03dc4c8e33">  154</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="a00203.html#a4d2a8186429cb8b469e21c03dc4c8e33">print</a>(<span class="keyword">const</span> std::string &amp;str) {</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="a00203.html#a7424110a4e217977934256f0bb6699de">outRedirector</a> == <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>        std::cout &lt;&lt; str &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>        <a class="code hl_variable" href="a00203.html#a7424110a4e217977934256f0bb6699de">outRedirector</a>-&gt;oldStream &lt;&lt; str;</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>        <a class="code hl_variable" href="a00203.html#a7424110a4e217977934256f0bb6699de">outRedirector</a>-&gt;oldStream.flush();</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>    }</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>}</div>
+</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span> </div>
+<div class="foldopen" id="foldopen00163" data-start="{" data-end="}">
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno"><a class="line" href="a00428.html#a6f9a0b99180a04b476efd970445182d1">  163</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="a00428.html#a6f9a0b99180a04b476efd970445182d1">MiraiCP::Redirector::setRedirectedObjs</a>(std::ostream *outStream, std::ostream *errStream) {</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>    <a class="code hl_variable" href="a00203.html#acb5e2f19b4391ee51798dfa8ea732085">RedirectedOstreamPointers</a> = {outStream, errStream};</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>}</div>
+</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span> </div>
+<div class="foldopen" id="foldopen00167" data-start="{" data-end="}">
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno"><a class="line" href="a00428.html#a2c77251c039e439f1dd5018eab3dc0b8">  167</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="a00428.html#a2c77251c039e439f1dd5018eab3dc0b8">MiraiCP::Redirector::start</a>() {</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>    <a class="code hl_variable" href="a00203.html#a7424110a4e217977934256f0bb6699de">outRedirector</a> = std::make_unique&lt;OStreamRedirector&gt;(<a class="code hl_variable" href="a00203.html#acb5e2f19b4391ee51798dfa8ea732085">RedirectedOstreamPointers</a>.out, <a class="code hl_function" href="a00203.html#a5ea76c388296e6066ae4e30a99837f41">outTarget</a>.rdbuf());</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>    <a class="code hl_variable" href="a00203.html#a222c24969464cb912fc16dafc9b72bf2">errRedirector</a> = std::make_unique&lt;OStreamRedirector&gt;(<a class="code hl_variable" href="a00203.html#acb5e2f19b4391ee51798dfa8ea732085">RedirectedOstreamPointers</a>.err, <a class="code hl_function" href="a00203.html#a1defcc132542aa9411395eb08b0fe844">errTarget</a>.rdbuf());</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>}</div>
+</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span> </div>
+<div class="foldopen" id="foldopen00172" data-start="{" data-end="}">
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno"><a class="line" href="a00428.html">  172</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="a00428.html">MiraiCP::Redirector</a> {</div>
+<div class="foldopen" id="foldopen00175" data-start="{" data-end="}">
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno"><a class="line" href="a00428.html#a46ebe1f3f5d7f68b71a86572066a0f66">  175</a></span>    <a class="code hl_define" href="a00041.html#aa40df2b825bdde9207f3e87b140235c3">MIRAICP_EXPORT</a> <span class="keywordtype">void</span> <a class="code hl_function" href="a00428.html#a46ebe1f3f5d7f68b71a86572066a0f66">SetCoutRecorder</a>(<span class="keywordtype">void</span> (*recorder)(std::string)) {</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>        <a class="code hl_function" href="a00203.html#a5ea76c388296e6066ae4e30a99837f41">outTarget</a>.setRecorder(recorder);</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>    }</div>
+</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span> </div>
+<div class="foldopen" id="foldopen00181" data-start="{" data-end="}">
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno"><a class="line" href="a00428.html#a7a43144762a698c10973885b2b4f2964">  181</a></span>    <a class="code hl_define" href="a00041.html#aa40df2b825bdde9207f3e87b140235c3">MIRAICP_EXPORT</a> <span class="keywordtype">void</span> <a class="code hl_function" href="a00428.html#a7a43144762a698c10973885b2b4f2964">SetCerrRecorder</a>(<span class="keywordtype">void</span> (*recorder)(std::string)) {</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>        <a class="code hl_function" href="a00203.html#a1defcc132542aa9411395eb08b0fe844">errTarget</a>.setRecorder(recorder);</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>    }</div>
+</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>} <span class="comment">// namespace MiraiCP::Redirector</span></div>
+</div>
+<div class="ttc" id="aa00041_html"><div class="ttname"><a href="a00041.html">MiraiCPMacros.h</a></div></div>
+<div class="ttc" id="aa00041_html_aa40df2b825bdde9207f3e87b140235c3"><div class="ttname"><a href="a00041.html#aa40df2b825bdde9207f3e87b140235c3">MIRAICP_EXPORT</a></div><div class="ttdeci">#define MIRAICP_EXPORT</div><div class="ttdef"><b>Definition</b> <a href="a00041_source.html#l00168">MiraiCPMacros.h:168</a></div></div>
+<div class="ttc" id="aa00167_html"><div class="ttname"><a href="a00167.html">Logger.h</a></div></div>
+<div class="ttc" id="aa00188_html"><div class="ttname"><a href="a00188.html">redirectCout.h</a></div></div>
+<div class="ttc" id="aa00203_html_a1defcc132542aa9411395eb08b0fe844"><div class="ttname"><a href="a00203.html#a1defcc132542aa9411395eb08b0fe844">errTarget</a></div><div class="ttdeci">OString errTarget(false)</div></div>
+<div class="ttc" id="aa00203_html_a222c24969464cb912fc16dafc9b72bf2"><div class="ttname"><a href="a00203.html#a222c24969464cb912fc16dafc9b72bf2">errRedirector</a></div><div class="ttdeci">std::unique_ptr&lt; OStreamRedirector &gt; errRedirector</div><div class="ttdef"><b>Definition</b> <a href="a00203_source.html#l00125">redirectCout.cpp:125</a></div></div>
+<div class="ttc" id="aa00203_html_a4d2a8186429cb8b469e21c03dc4c8e33"><div class="ttname"><a href="a00203.html#a4d2a8186429cb8b469e21c03dc4c8e33">print</a></div><div class="ttdeci">void print(const std::string &amp;str)</div><div class="ttdef"><b>Definition</b> <a href="a00203_source.html#l00154">redirectCout.cpp:154</a></div></div>
+<div class="ttc" id="aa00203_html_a5ea76c388296e6066ae4e30a99837f41"><div class="ttname"><a href="a00203.html#a5ea76c388296e6066ae4e30a99837f41">outTarget</a></div><div class="ttdeci">OString outTarget(true)</div></div>
+<div class="ttc" id="aa00203_html_a7424110a4e217977934256f0bb6699de"><div class="ttname"><a href="a00203.html#a7424110a4e217977934256f0bb6699de">outRedirector</a></div><div class="ttdeci">std::unique_ptr&lt; OStreamRedirector &gt; outRedirector</div><div class="ttdef"><b>Definition</b> <a href="a00203_source.html#l00124">redirectCout.cpp:124</a></div></div>
+<div class="ttc" id="aa00203_html_acb5e2f19b4391ee51798dfa8ea732085"><div class="ttname"><a href="a00203.html#acb5e2f19b4391ee51798dfa8ea732085">RedirectedOstreamPointers</a></div><div class="ttdeci">struct RedirectedOstreamPair RedirectedOstreamPointers</div></div>
+<div class="ttc" id="aa00251_html"><div class="ttname"><a href="a00251.html">LoaderLogger.h</a></div></div>
+<div class="ttc" id="aa00425_html_af1031cef14711c6b7ed3805fe6d17d81"><div class="ttname"><a href="a00425.html#af1031cef14711c6b7ed3805fe6d17d81">LibLoader::logger</a></div><div class="ttdeci">LibLoader::LoaderLogger logger</div><div class="ttdef"><b>Definition</b> <a href="a00221_source.html#l00028">LoaderLogger.cpp:28</a></div></div>
+<div class="ttc" id="aa00428_html"><div class="ttname"><a href="a00428.html">MiraiCP::Redirector</a></div><div class="ttdef"><b>Definition</b> <a href="a00203_source.html#l00172">redirectCout.cpp:172</a></div></div>
+<div class="ttc" id="aa00428_html_a2c77251c039e439f1dd5018eab3dc0b8"><div class="ttname"><a href="a00428.html#a2c77251c039e439f1dd5018eab3dc0b8">MiraiCP::Redirector::start</a></div><div class="ttdeci">MIRAICP_EXPORT void start()</div><div class="ttdoc">start redirecting cout and cerr</div><div class="ttdef"><b>Definition</b> <a href="a00203_source.html#l00167">redirectCout.cpp:167</a></div></div>
+<div class="ttc" id="aa00428_html_a2f7aa94ac874600ec7b20a833dd467cc"><div class="ttname"><a href="a00428.html#a2f7aa94ac874600ec7b20a833dd467cc">MiraiCP::Redirector::reset</a></div><div class="ttdeci">MIRAICP_EXPORT void reset()</div><div class="ttdoc">reset all redirecting</div><div class="ttdef"><b>Definition</b> <a href="a00203_source.html#l00149">redirectCout.cpp:149</a></div></div>
+<div class="ttc" id="aa00428_html_a46ebe1f3f5d7f68b71a86572066a0f66"><div class="ttname"><a href="a00428.html#a46ebe1f3f5d7f68b71a86572066a0f66">MiraiCP::Redirector::SetCoutRecorder</a></div><div class="ttdeci">MIRAICP_EXPORT void SetCoutRecorder(void(*recorder)(std::string))</div><div class="ttdef"><b>Definition</b> <a href="a00203_source.html#l00175">redirectCout.cpp:175</a></div></div>
+<div class="ttc" id="aa00428_html_a6f9a0b99180a04b476efd970445182d1"><div class="ttname"><a href="a00428.html#a6f9a0b99180a04b476efd970445182d1">MiraiCP::Redirector::setRedirectedObjs</a></div><div class="ttdeci">MIRAICP_EXPORT void setRedirectedObjs(std::ostream *, std::ostream *)</div><div class="ttdef"><b>Definition</b> <a href="a00203_source.html#l00163">redirectCout.cpp:163</a></div></div>
+<div class="ttc" id="aa00428_html_a7a43144762a698c10973885b2b4f2964"><div class="ttname"><a href="a00428.html#a7a43144762a698c10973885b2b4f2964">MiraiCP::Redirector::SetCerrRecorder</a></div><div class="ttdeci">MIRAICP_EXPORT void SetCerrRecorder(void(*recorder)(std::string))</div><div class="ttdef"><b>Definition</b> <a href="a00203_source.html#l00181">redirectCout.cpp:181</a></div></div>
+<div class="ttc" id="aa00628_html_ade15a5c23198ffcb4454a28356e78759"><div class="ttname"><a href="a00628.html#ade15a5c23198ffcb4454a28356e78759">MiraiCP::Logger_interface::info</a></div><div class="ttdeci">void info(T &amp;&amp;...val)</div><div class="ttdoc">发送普通(info级日志)</div><div class="ttdef"><b>Definition</b> <a href="a00167_source.html#l00103">Logger.h:103</a></div></div>
+<div class="ttc" id="aa00636_html_a268fd602157c3fa49616a8872c82bfb1"><div class="ttname"><a href="a00636.html#a268fd602157c3fa49616a8872c82bfb1">MiraiCP::Logger::logger</a></div><div class="ttdeci">static Logger logger</div><div class="ttdef"><b>Definition</b> <a href="a00167_source.html#l00141">Logger.h:141</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_23c80554d3059e776f1fa3b42eea10c0.html">libloader</a></li><li class="navelem"><a class="el" href="a00203.html">JNIEnvManager.h</a></li>
-    <li class="footer">生成于 2023年 四月 10日 星期一 00:26:29 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_fdedb0aba14d44ce9d99bc100e026e6a.html">common</a></li><li class="navelem"><a class="el" href="a00203.html">redirectCout.cpp</a></li>
+    <li class="footer">生成于 2023年 十月 26日 星期四 01:16:24 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
     </body>

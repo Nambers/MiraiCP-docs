@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['open_5flibrary_0',['OPEN_LIBRARY',['../a00218.html#a8d9660e662b6e570295b95769dc5bf32',1,'libOpen.cpp']]]
+  ['nolock_5fimpl_5fgetter_0',['NOLOCK_IMPL_GETTER',['../a00041.html#a108e06b136ffee3da2c3843952152586',1,'MiraiCPMacros.h']]]
 ];

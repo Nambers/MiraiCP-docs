@@ -1,10 +1,18 @@
 var a00508 =
 [
-    [ "FriendRecallEvent", "a00508.html#a4935324294a7723c3401c58fb1d09a97", null ],
-    [ "get_event_type", "a00508.html#a83537ccdbd2e454525697559827df57e", null ],
-    [ "author", "a00508.html#adb145915b7e4edcc461a7c7db2823b05", null ],
-    [ "ids", "a00508.html#a426a11bf2f5d57e80082546588abc464", null ],
-    [ "internalIds", "a00508.html#a46217bf3eabccabc4b4358d8c69e71f6", null ],
-    [ "operater", "a00508.html#a4502b63cdd39bb1574a3bfc3d18828d4", null ],
-    [ "time", "a00508.html#ab22df1619e6ad420c6166d0f3877dc74", null ]
+    [ "ContactType", "a00508.html#aa38779bbd1171da9518bb83264082068", [
+      [ "TypeFriend", "a00508.html#aa38779bbd1171da9518bb83264082068af62e36a099b924bed288d7ccd38ab024", null ],
+      [ "TypeGroup", "a00508.html#aa38779bbd1171da9518bb83264082068ad2ba0a69a1a41bd53332f02d149cfa80", null ],
+      [ "TypeMember", "a00508.html#aa38779bbd1171da9518bb83264082068a81fab02eb3c47d18cc9d371671e3f045", null ],
+      [ "TypeBot", "a00508.html#aa38779bbd1171da9518bb83264082068ab85ffd5dd440bc06611225b581948e55", null ],
+      [ "TypeStranger", "a00508.html#aa38779bbd1171da9518bb83264082068ab616dd158256ecadbaf1010842ee1aa7", null ],
+      [ "TypeAnonymousMember", "a00508.html#aa38779bbd1171da9518bb83264082068a2078e4769d279fa053d62f95e8a801d4", null ]
+    ] ],
+    [ "BuiltInContact", "a00508.html#a839c5a7e59d5efb34a53407844073b93", null ],
+    [ "toContactPointer", "a00508.html#a93657060055478e2132cf310015efbf8", null ],
+    [ "toString", "a00508.html#adfc96315ff258d32b482a3ccee215303", null ],
+    [ "botId", "a00508.html#a0541df919137723469aba374ec295d3d", null ],
+    [ "groupId", "a00508.html#a7fe2fd4cc1730f7cf954daaef6c28d07", null ],
+    [ "id", "a00508.html#aac8590c3fac3b2b02d3538bbd0919f82", null ],
+    [ "type", "a00508.html#a0e15bf22071b50b12dc828d867ede022", null ]
 ];

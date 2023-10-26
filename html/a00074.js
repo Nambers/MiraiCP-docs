@@ -1,7 +1,6 @@
 var a00074 =
 [
-    [ "libClose", "a00074.html#a830b51c74068e1461e1baf677dd10ac2", null ],
-    [ "libError", "a00074.html#a56d03468b20e6187b1af71750a9f815d", null ],
-    [ "libOpen", "a00074.html#a7765f4c313a98cf08466f0a6ed291aac", null ],
-    [ "libSymbolLookup", "a00074.html#a96701ab7dcebb86755310b5c9c434842", null ]
+    [ "enrollPlugin", "a00074.html#a12d27be6730af4fc321ac1eb231db281", null ],
+    [ "enrollPlugin", "a00074.html#aeaf5553425610f0edfc5674f3a4d1b9b", null ],
+    [ "enrollPlugin", "a00074.html#a20f1478e77515c6bf43c43ad4b558e91", null ]
 ];

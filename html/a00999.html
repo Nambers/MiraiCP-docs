@@ -4,9 +4,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiraiCP: Group.cpp 文件参考</title>
+<title>MiraiCP: forwardedMessage.cpp</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -35,7 +35,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MiraiCP
-   &#160;<span id="projectnumber">v2.13.0-alpha-3</span>
+   &#160;<span id="projectnumber">v2.16.0</span>
    </div>
    <div id="projectbrief">MiraiCP api document</div>
   </td>
@@ -44,10 +44,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.9.2 -->
+<!-- 制作者 Doxygen 1.9.8 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search",'搜索','.html');
+var searchBox = new SearchBox("searchBox", "search/",'.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -87,130 +87,108 @@ $(document).ready(function(){initNavTree('a00999.html',''); initResizable(); });
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
 </div>
 
 <div class="header">
-  <div class="summary">
-<a href="#namespaces">命名空间</a> &#124;
-<a href="#define-members">宏定义</a> &#124;
-<a href="#func-members">函数</a>  </div>
-  <div class="headertitle"><div class="title">include/Group.cpp 文件参考</div></div>
+  <div class="headertitle"><div class="title">forwardedMessage.cpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="a00089_source.html">Group.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00071_source.html">Exception.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00101_source.html">KtOperation.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00119_source.html">LowLevelAPI.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00125_source.html">Member.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00173_source.html">Tools.h</a>&quot;</code><br />
-</div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> include/Group.cpp 的引用(Include)关系图:</div>
-<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="a01000.png" border="0" usemap="#a_group_8cpp" alt=""/></div>
-<map name="a_group_8cpp" id="a_group_8cpp">
-<area shape="rect" title=" " alt="" coords="483,5,565,32"/>
-<area shape="rect" href="a00089.html" title=" " alt="" coords="510,80,578,107"/>
-<area shape="rect" href="a00101.html" title=" " alt="" coords="191,229,294,256"/>
-<area shape="rect" href="a00119.html" title=" " alt="" coords="5,229,112,256"/>
-<area shape="rect" href="a00071.html" title=" " alt="" coords="1011,304,1101,331"/>
-<area shape="rect" href="a00125.html" title=" " alt="" coords="345,80,425,107"/>
-<area shape="rect" href="a00173.html" title=" " alt="" coords="1216,453,1280,480"/>
-<area shape="rect" href="a00053.html" title=" " alt="" coords="310,155,389,181"/>
-<area shape="rect" title=" " alt="" coords="266,379,363,405"/>
-<area shape="rect" title=" " alt="" coords="1139,453,1192,480"/>
-<area shape="rect" href="a00095.html" title=" " alt="" coords="372,229,463,256"/>
-<area shape="rect" href="a00131.html" title=" " alt="" coords="705,229,823,256"/>
-<area shape="rect" title=" " alt="" coords="489,752,543,779"/>
-<area shape="rect" title=" " alt="" coords="388,304,449,331"/>
-<area shape="rect" title=" " alt="" coords="473,304,577,331"/>
-<area shape="rect" href="a00191.html" title=" " alt="" coords="760,752,883,779"/>
-<area shape="rect" href="a00161.html" title=" " alt="" coords="703,304,825,331"/>
-<area shape="rect" href="a00182.html" title=" " alt="" coords="336,453,451,480"/>
-<area shape="rect" title=" " alt="" coords="842,827,907,853"/>
-<area shape="rect" href="a00059.html" title=" " alt="" coords="1008,379,1104,405"/>
-<area shape="rect" title=" " alt="" coords="1211,379,1290,405"/>
-<area shape="rect" title=" " alt="" coords="1128,379,1187,405"/>
-<area shape="rect" href="a00113.html" title=" " alt="" coords="861,453,933,480"/>
-<area shape="rect" href="a00206.html" title=" " alt="" coords="1009,603,1114,629"/>
-<area shape="rect" href="a00143.html" title=" " alt="" coords="635,528,725,555"/>
-<area shape="rect" href="a00185.html" title=" " alt="" coords="851,528,970,555"/>
-<area shape="rect" title=" " alt="" coords="533,528,611,555"/>
-<area shape="rect" title=" " alt="" coords="995,528,1064,555"/>
-<area shape="rect" href="a00188.html" title=" " alt="" coords="855,603,985,629"/>
-<area shape="rect" href="a00197.html" title=" " alt="" coords="855,677,1009,704"/>
-<area shape="rect" title=" " alt="" coords="1034,677,1105,704"/>
-<area shape="rect" href="a00137.html" title=" " alt="" coords="555,453,682,480"/>
-<area shape="rect" title=" " alt="" coords="731,379,781,405"/>
-<area shape="rect" title=" " alt="" coords="504,379,571,405"/>
-<area shape="rect" title=" " alt="" coords="595,379,706,405"/>
-<area shape="rect" title=" " alt="" coords="1240,528,1296,555"/>
-</map>
-</div>
-</div>
-<p><a href="a00999_source.html">浏览源代码.</a></p>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
-命名空间</h2></td></tr>
-<tr class="memitem:a00218"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00218.html">MiraiCP</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
-宏定义</h2></td></tr>
-<tr class="memitem:a456c32e8a3956d0ef6567fd95554864d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00999.html#a456c32e8a3956d0ef6567fd95554864d">LOC_CLASS_NAMESPACE</a>&#160;&#160;&#160;Group</td></tr>
-<tr class="separator:a456c32e8a3956d0ef6567fd95554864d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
-函数</h2></td></tr>
-<tr class="memitem:ae4701e98bfe99b105a26bf1ab73c773b"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00218.html#ae4701e98bfe99b105a26bf1ab73c773b">MiraiCP::GetGroupFromPool</a> (QQID groupid, QQID botid) noexcept</td></tr>
-<tr class="separator:ae4701e98bfe99b105a26bf1ab73c773b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a79e725d6e5b9a134a8862a3eeeef298c"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00218.html#a79e725d6e5b9a134a8862a3eeeef298c">MiraiCP::GetGroupFromPool</a> (const <a class="el" href="a00176.html#ab701e3ac61a85b337ec5c1abaad6742d">json</a> &amp;in_json)</td></tr>
-<tr class="separator:a79e725d6e5b9a134a8862a3eeeef298c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a564fdee0439f73ca716a26f8d4591dd9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00218.html#a564fdee0439f73ca716a26f8d4591dd9">MiraiCP::IMPL_GETTER</a> (setting) void GroupData</td></tr>
-<tr class="separator:a564fdee0439f73ca716a26f8d4591dd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table>
-<h2 class="groupheader">宏定义说明</h2>
-<a id="a456c32e8a3956d0ef6567fd95554864d" name="a456c32e8a3956d0ef6567fd95554864d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a456c32e8a3956d0ef6567fd95554864d">&#9670;&nbsp;</a></span>LOC_CLASS_NAMESPACE</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define LOC_CLASS_NAMESPACE&#160;&#160;&#160;Group</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">在文件 <a class="el" href="a00999_source.html">include/Group.cpp</a> 第 <a class="el" href="a00999_source.html#l00026">26</a> 行定义.</p>
-
-</div>
-</div>
-</div><!-- contents -->
+<p>构造转发信息</p>
+<div class="fragment"><div class="line"><span class="comment">// Copyright (c) 2020 - 2022. Eritque arcus and contributors.</span></div>
+<div class="line"><span class="comment">//</span></div>
+<div class="line"><span class="comment">// This program is free software: you can redistribute it and/or modify</span></div>
+<div class="line"><span class="comment">// it under the terms of the GNU Affero General Public License as</span></div>
+<div class="line"><span class="comment">// published by the Free Software Foundation, either version 3 of the</span></div>
+<div class="line"><span class="comment">// License, or any later version(in your opinion).</span></div>
+<div class="line"><span class="comment">//</span></div>
+<div class="line"><span class="comment">// This program is distributed in the hope that it will be useful,</span></div>
+<div class="line"><span class="comment">// but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div>
+<div class="line"><span class="comment">// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span></div>
+<div class="line"><span class="comment">// GNU Affero General Public License for more details.</span></div>
+<div class="line"><span class="comment">//</span></div>
+<div class="line"><span class="comment">// You should have received a copy of the GNU Affero General Public License</span></div>
+<div class="line"><span class="comment">// along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</span></div>
+<div class="line"><span class="comment">//</span></div>
+<div class="line"><span class="preprocessor">#include &lt;MiraiCP.hpp&gt;</span></div>
+<div class="line"><span class="keyword">using namespace </span><a class="code hl_namespace" href="a00412.html">MiraiCP</a>;</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">const</span> <a id="_a0" name="_a0"></a><a class="code hl_struct" href="a00444.html">PluginConfig</a> CPPPlugin::config{</div>
+<div class="line">        <span class="stringliteral">&quot;id&quot;</span>,   <span class="comment">// 插件id</span></div>
+<div class="line">        <span class="stringliteral">&quot;test&quot;</span>, <span class="comment">// 插件名称</span></div>
+<div class="line">        <span class="stringliteral">&quot;v1.0&quot;</span>, <span class="comment">// 插件版本</span></div>
+<div class="line">        <span class="stringliteral">&quot;a&quot;</span>,    <span class="comment">// 插件作者</span></div>
+<div class="line">                <span class="comment">// 可选：插件描述</span></div>
+<div class="line">                <span class="comment">// 可选：日期</span></div>
+<div class="line">};</div>
+<div class="line"> </div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">class </span>Main : <span class="keyword">public</span> <a id="_a1" name="_a1"></a><a class="code hl_class" href="a00472.html">CPPPlugin</a> {</div>
+<div class="line"><span class="keyword">public</span>:</div>
+<div class="line">    Main() : <a class="code hl_class" href="a00472.html">CPPPlugin</a>() {}</div>
+<div class="line">    <span class="keywordtype">void</span> onEnable()<span class="keyword"> override </span>{</div>
+<div class="line">        Event::registerEvent&lt;GroupMessageEvent&gt;([](<a id="_a2" name="_a2"></a><a class="code hl_class" href="a00528.html">GroupMessageEvent</a> e) {</div>
+<div class="line">            <span class="keyword">auto</span> style1 = <a id="_a3" name="_a3"></a><a class="code hl_class" href="a00592.html">ForwardedMessageDisplayStrategy</a>();</div>
+<div class="line">            style1.summary = <span class="stringliteral">&quot;Summarya&quot;</span>;</div>
+<div class="line">            style1.preview.emplace_back(<span class="stringliteral">&quot;preview1&quot;</span>);</div>
+<div class="line">            style1.source = <span class="stringliteral">&quot;SourceA&quot;</span>;</div>
+<div class="line">            style1.brief = <span class="stringliteral">&quot;BriefA&quot;</span>;</div>
+<div class="line">            e.<a id="a4" name="a4"></a><a class="code hl_variable" href="a00528.html#abac98c5b1373ad6c8483f9978952c553">group</a>.<a id="a5" name="a5"></a><a class="code hl_function" href="a00460.html#a23d1f4a6834867f956473f4329d2cb39">sendMessage</a>(<span class="stringliteral">&quot;Origin:&quot;</span>);</div>
+<div class="line">            <a id="_a6" name="_a6"></a><a class="code hl_class" href="a00600.html">ForwardedMessage</a>(</div>
+<div class="line">                    {<a id="_a7" name="_a7"></a><a class="code hl_class" href="a00596.html">ForwardedNode</a>(12, <span class="stringliteral">&quot;a&quot;</span>, <a id="_a8" name="_a8"></a><a class="code hl_class" href="a00652.html">MessageChain</a>(<a id="_a9" name="_a9"></a><a class="code hl_class" href="a00680.html">PlainText</a>(<span class="stringliteral">&quot;test&quot;</span>)), 1),</div>
+<div class="line">                     <a class="code hl_class" href="a00596.html">ForwardedNode</a>(12, <span class="stringliteral">&quot;b&quot;</span>, <a class="code hl_class" href="a00600.html">ForwardedMessage</a>({<a class="code hl_class" href="a00596.html">ForwardedNode</a>(12, <span class="stringliteral">&quot;a&quot;</span>, <a class="code hl_class" href="a00652.html">MessageChain</a>(<a class="code hl_class" href="a00680.html">PlainText</a>(<span class="stringliteral">&quot;test&quot;</span>)), 1)}), 1)},</div>
+<div class="line">                    ForwardedMessageDisplayStrategy::defaultStrategy())</div>
+<div class="line">                    .sendTo(&amp;e.<a class="code hl_variable" href="a00528.html#abac98c5b1373ad6c8483f9978952c553">group</a>);</div>
+<div class="line">            <span class="keywordflow">if</span> (e.<a id="a10" name="a10"></a><a class="code hl_variable" href="a00528.html#a722dc1ca031c471c953c710367067ae7">message</a>[0].getType() == <a id="a11" name="a11"></a><a class="code hl_function" href="a00600.html#a5e0251cfd856a4226b2a625485c82db8">OnlineForwardedMessage::type</a>())</div>
+<div class="line">                e.<a class="code hl_variable" href="a00528.html#a722dc1ca031c471c953c710367067ae7">message</a>[0].getVal&lt;<a class="code hl_class" href="a00600.html">OnlineForwardedMessage</a>&gt;().setDisplayStrategy(ForwardedMessageDisplayStrategy::defaultStrategy()).sendTo(&amp;e.<a class="code hl_variable" href="a00528.html#abac98c5b1373ad6c8483f9978952c553">group</a>);</div>
+<div class="line">            e.<a class="code hl_variable" href="a00528.html#abac98c5b1373ad6c8483f9978952c553">group</a>.<a class="code hl_function" href="a00460.html#a23d1f4a6834867f956473f4329d2cb39">sendMessage</a>(<span class="stringliteral">&quot;style1&quot;</span>);</div>
+<div class="line">            <a class="code hl_class" href="a00600.html">ForwardedMessage</a>(</div>
+<div class="line">                    {<a class="code hl_class" href="a00596.html">ForwardedNode</a>(12, <span class="stringliteral">&quot;a&quot;</span>, <a class="code hl_class" href="a00652.html">MessageChain</a>(<a class="code hl_class" href="a00680.html">PlainText</a>(<span class="stringliteral">&quot;test&quot;</span>)), 1),</div>
+<div class="line">                     <a class="code hl_class" href="a00596.html">ForwardedNode</a>(12, <span class="stringliteral">&quot;b&quot;</span>, <a class="code hl_class" href="a00600.html">ForwardedMessage</a>({<a class="code hl_class" href="a00596.html">ForwardedNode</a>(12, <span class="stringliteral">&quot;a&quot;</span>, <a class="code hl_class" href="a00652.html">MessageChain</a>(<a class="code hl_class" href="a00680.html">PlainText</a>(<span class="stringliteral">&quot;test&quot;</span>)), 1)}), 1)},</div>
+<div class="line">                    style1)</div>
+<div class="line">                    .sendTo(&amp;e.<a class="code hl_variable" href="a00528.html#abac98c5b1373ad6c8483f9978952c553">group</a>);</div>
+<div class="line"> </div>
+<div class="line">            <span class="keywordflow">if</span> (e.<a class="code hl_variable" href="a00528.html#a722dc1ca031c471c953c710367067ae7">message</a>[0].getType() == <a class="code hl_function" href="a00600.html#a5e0251cfd856a4226b2a625485c82db8">OnlineForwardedMessage::type</a>())</div>
+<div class="line">                e.<a class="code hl_variable" href="a00528.html#a722dc1ca031c471c953c710367067ae7">message</a>[0].getVal&lt;<a class="code hl_class" href="a00600.html">OnlineForwardedMessage</a>&gt;().setDisplayStrategy(style1).<a id="a12" name="a12"></a><a class="code hl_function" href="a00600.html#ac80faf9f28a0031b30f30728dae3e39b">sendTo</a>(&amp;e.<a class="code hl_variable" href="a00528.html#abac98c5b1373ad6c8483f9978952c553">group</a>);</div>
+<div class="line">        });</div>
+<div class="line">    }</div>
+<div class="line">};</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> <a id="a13" name="a13"></a><a class="code hl_function" href="a00412.html#a12d27be6730af4fc321ac1eb231db281">MiraiCP::enrollPlugin</a>() {</div>
+<div class="line">    MiraiCP::enrollPlugin&lt;Main&gt;();</div>
+<div class="line">}</div>
+<div class="ttc" id="aa00412_html"><div class="ttname"><a href="a00412.html">MiraiCP</a></div><div class="ttdef"><b>Definition</b> <a href="a00050_source.html#l00021">JsonTools.h:21</a></div></div>
+<div class="ttc" id="aa00412_html_a12d27be6730af4fc321ac1eb231db281"><div class="ttname"><a href="a00412.html#a12d27be6730af4fc321ac1eb231db281">MiraiCP::enrollPlugin</a></div><div class="ttdeci">MIRAICP_EXPORT void enrollPlugin()</div><div class="ttdoc">注册插件函数, 需要被插件实现, 类似onStart();</div><div class="ttdef"><b>Definition</b> <a href="a00032_source.html#l00058">callbackHandle.cpp:58</a></div></div>
+<div class="ttc" id="aa00444_html"><div class="ttname"><a href="a00444.html">MiraiCP::PluginConfig</a></div><div class="ttdef"><b>Definition</b> <a href="a00044_source.html#l00028">PluginConfig.h:28</a></div></div>
+<div class="ttc" id="aa00460_html_a23d1f4a6834867f956473f4329d2cb39"><div class="ttname"><a href="a00460.html#a23d1f4a6834867f956473f4329d2cb39">MiraiCP::Contact::sendMessage</a></div><div class="ttdeci">MessageSource sendMessage(T &amp;&amp;...msg) const</div><div class="ttdoc">发送信息</div><div class="ttdef"><b>Definition</b> <a href="a00095_source.html#l00170">Contact.h:170</a></div></div>
+<div class="ttc" id="aa00472_html"><div class="ttname"><a href="a00472.html">MiraiCP::CPPPlugin</a></div><div class="ttdoc">插件父类</div><div class="ttdef"><b>Definition</b> <a href="a00101_source.html#l00029">CPPPlugin.h:29</a></div></div>
+<div class="ttc" id="aa00528_html"><div class="ttname"><a href="a00528.html">MiraiCP::GroupMessageEvent</a></div><div class="ttdoc">群消息事件声明</div><div class="ttdef"><b>Definition</b> <a href="a00119_source.html#l00030">GroupMessageEvent.h:30</a></div></div>
+<div class="ttc" id="aa00528_html_a722dc1ca031c471c953c710367067ae7"><div class="ttname"><a href="a00528.html#a722dc1ca031c471c953c710367067ae7">MiraiCP::GroupMessageEvent::message</a></div><div class="ttdeci">MessageChain message</div><div class="ttdoc">信息</div><div class="ttdef"><b>Definition</b> <a href="a00119_source.html#l00042">GroupMessageEvent.h:42</a></div></div>
+<div class="ttc" id="aa00528_html_abac98c5b1373ad6c8483f9978952c553"><div class="ttname"><a href="a00528.html#abac98c5b1373ad6c8483f9978952c553">MiraiCP::GroupMessageEvent::group</a></div><div class="ttdeci">Group group</div><div class="ttdoc">来源群</div><div class="ttdef"><b>Definition</b> <a href="a00119_source.html#l00038">GroupMessageEvent.h:38</a></div></div>
+<div class="ttc" id="aa00592_html"><div class="ttname"><a href="a00592.html">MiraiCP::ForwardedMessageDisplayStrategy</a></div><div class="ttdoc">转发信息显示策略, 目前好像只在转发信息内的转发信息生效</div><div class="ttdef"><b>Definition</b> <a href="a00077_source.html#l00032">ForwardedMessage.h:32</a></div></div>
+<div class="ttc" id="aa00596_html"><div class="ttname"><a href="a00596.html">MiraiCP::ForwardedNode</a></div><div class="ttdef"><b>Definition</b> <a href="a00077_source.html#l00059">ForwardedMessage.h:59</a></div></div>
+<div class="ttc" id="aa00600_html"><div class="ttname"><a href="a00600.html">MiraiCP::ForwardedMessage</a></div><div class="ttdef"><b>Definition</b> <a href="a00077_source.html#l00098">ForwardedMessage.h:98</a></div></div>
+<div class="ttc" id="aa00600_html_a5e0251cfd856a4226b2a625485c82db8"><div class="ttname"><a href="a00600.html#a5e0251cfd856a4226b2a625485c82db8">MiraiCP::ForwardedMessage::type</a></div><div class="ttdeci">static int type()</div><div class="ttdef"><b>Definition</b> <a href="a00077_source.html#l00106">ForwardedMessage.h:106</a></div></div>
+<div class="ttc" id="aa00600_html_ac80faf9f28a0031b30f30728dae3e39b"><div class="ttname"><a href="a00600.html#ac80faf9f28a0031b30f30728dae3e39b">MiraiCP::ForwardedMessage::sendTo</a></div><div class="ttdeci">MessageSource sendTo(Contact *c) const</div><div class="ttdoc">发送给群或好友或群成员</div><div class="ttdef"><b>Definition</b> <a href="a01476_source.html#l00080">src/sdk/ForwardedMessage.cpp:80</a></div></div>
+<div class="ttc" id="aa00652_html"><div class="ttname"><a href="a00652.html">MiraiCP::MessageChain</a></div><div class="ttdoc">消息链, 一般由SingleMessage组成</div><div class="ttdef"><b>Definition</b> <a href="a00092_source.html#l00086">MessageChain.h:86</a></div></div>
+<div class="ttc" id="aa00680_html"><div class="ttname"><a href="a00680.html">MiraiCP::PlainText</a></div><div class="ttdoc">纯文本信息</div><div class="ttdef"><b>Definition</b> <a href="a00089_source.html#l00169">SingleMessage.h:169</a></div></div>
+</div><!-- fragment --> </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b0856f6b0d80ccb263b2f415c91f9e17.html">include</a></li><li class="navelem"><a class="el" href="a00999.html">Group.cpp</a></li>
-    <li class="footer">生成于 2022年 十一月 19日 星期六 13:37:53 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="footer">生成于 2023年 十月 26日 星期四 01:16:24 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
-<script type="text/javascript">
-            $(function() {
-			  toggleButton = document.createElement('doxygen-awesome-dark-mode-toggle')
-			  toggleButton.title = "Toggle Light/Dark Mode"
-			  $(document).ready(function(){
-				document.getElementById("MSearchBox").parentNode.appendChild(toggleButton)
-			  })
-			  $(window).resize(function(){
-				document.getElementById("MSearchBox").parentNode.appendChild(toggleButton)
-			  })
-			})
-        </script>
     </body>
 </html>

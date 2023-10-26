@@ -1,4 +1,26 @@
 var searchData=
 [
-  ['nolock_5fimpl_5fgetter_0',['NOLOCK_IMPL_GETTER',['../a00044.html#a108e06b136ffee3da2c3843952152586',1,'MiraiCPMacros.h']]]
+  ['miraicp_5fandroid_0',['MIRAICP_ANDROID',['../a00041.html#a2ecb1edf5540e04cd5f3fbb5d9feff07',1,'MiraiCPMacros.h']]],
+  ['miraicp_5fclang_1',['MIRAICP_CLANG',['../a00041.html#a3a3650c8f6b9f484752ee9c0fc3db1ca',1,'MiraiCPMacros.h']]],
+  ['miraicp_5fcompiler_5fother_2',['miraicp_compiler_other',['../a00041.html#a36ecaac4a9e848888ce9dfe7fed015c3',1,'MIRAICP_COMPILER_OTHER:&#160;MiraiCPMacros.h'],['../a00041.html#a36ecaac4a9e848888ce9dfe7fed015c3',1,'MIRAICP_COMPILER_OTHER:&#160;MiraiCPMacros.h']]],
+  ['miraicp_5fcritical_5fnoexcept_5fblock_3',['MIRAICP_CRITICAL_NOEXCEPT_BLOCK',['../a00041.html#a3671e76be883be26f67b4764e520ed83',1,'MiraiCPMacros.h']]],
+  ['miraicp_5fdatalock_4',['MIRAICP_DATALOCK',['../a00041.html#a0a7b7ea28b74799d356ca908c1a65b3e',1,'MiraiCPMacros.h']]],
+  ['miraicp_5fdefer_5',['MIRAICP_DEFER',['../a00041.html#aa05206ce52ebadc805b64d69749a63d3',1,'MiraiCPMacros.h']]],
+  ['miraicp_5fdefer_5flambda_6',['MIRAICP_DEFER_LAMBDA',['../a00041.html#ac54623efc038ebe5e36e3d7a0103805f',1,'MiraiCPMacros.h']]],
+  ['miraicp_5fexception_5fwhere_7',['MIRAICP_EXCEPTION_WHERE',['../a00041.html#a64a15c1bd1292eb8eb8b5874281372c6',1,'MiraiCPMacros.h']]],
+  ['miraicp_5fexport_8',['miraicp_export',['../a00041.html#aa40df2b825bdde9207f3e87b140235c3',1,'MIRAICP_EXPORT:&#160;MiraiCPMacros.h'],['../a00041.html#aa40df2b825bdde9207f3e87b140235c3',1,'MIRAICP_EXPORT:&#160;MiraiCPMacros.h']]],
+  ['miraicp_5fexport_5funittest_9',['MIRAICP_EXPORT_UNITTEST',['../a00041.html#a14061c4f3b1e567887b3db80746b208f',1,'MiraiCPMacros.h']]],
+  ['miraicp_5fgcc_10',['MIRAICP_GCC',['../a00041.html#af233daf4569ac557e6615301b224ecb0',1,'MiraiCPMacros.h']]],
+  ['miraicp_5fios_11',['MIRAICP_IOS',['../a00041.html#a1d68cb8f2e943376575be26ad3e92415',1,'MiraiCPMacros.h']]],
+  ['miraicp_5fiterable_5fenum_12',['MIRAICP_ITERABLE_ENUM',['../a00041.html#a319e05adbf3646676ebdf2dbdbe2a016',1,'MiraiCPMacros.h']]],
+  ['miraicp_5fiterable_5fenum_5foperator_5fplusplus_13',['MIRAICP_ITERABLE_ENUM_OPERATOR_PLUSPLUS',['../a00041.html#a2f94bc6361f734dcaf4b045e253f12b4',1,'MiraiCPMacros.h']]],
+  ['miraicp_5fjnipptr_14',['MIRAICP_JNIPPTR',['../a00245.html#ac13ebc2b7d3f45e80eb756215e824ba6',1,'LoaderMacro.h']]],
+  ['miraicp_5fjver_15',['MIRAICP_JVER',['../a00245.html#af300645522bf4453ad6f597e92b7c9cc',1,'LoaderMacro.h']]],
+  ['miraicp_5flinux_16',['MIRAICP_LINUX',['../a00041.html#ae88c5ce1eaa60e875b164d420af4f12b',1,'MiraiCPMacros.h']]],
+  ['miraicp_5fmacos_17',['MIRAICP_MACOS',['../a00041.html#aaf85a340e7f4e271bcdda974ad69e1e0',1,'MiraiCPMacros.h']]],
+  ['miraicp_5fmsvc_18',['MIRAICP_MSVC',['../a00041.html#ae5f800c38ea99aae261a3073da2d3bd9',1,'MiraiCPMacros.h']]],
+  ['miraicp_5ftermux_19',['MIRAICP_TERMUX',['../a00041.html#a349a0fde5cfa105826641a603ea7cafd',1,'MiraiCPMacros.h']]],
+  ['miraicp_5fthrow_20',['MIRAICP_THROW',['../a00041.html#a0cb8d31be366ba6e083f879387b56bb9',1,'MiraiCPMacros.h']]],
+  ['miraicp_5funix_21',['MIRAICP_UNIX',['../a00041.html#ab5b6dac9e32602961daefead6015bb89',1,'MiraiCPMacros.h']]],
+  ['miraicp_5fwindows_22',['MIRAICP_WINDOWS',['../a00041.html#ae77e84ac8ed5405a64218ccf55f50323',1,'MiraiCPMacros.h']]]
 ];

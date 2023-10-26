@@ -4,9 +4,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiraiCP: LibLoader::LoaderExceptionCRTP&lt; T &gt; 模板接口 参考</title>
+<title>MiraiCP: LibLoader::LoaderApi::interface_funcs结构体 参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -35,7 +35,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MiraiCP
-   &#160;<span id="projectnumber">v2.15.0-RC2</span>
+   &#160;<span id="projectnumber">v2.16.0</span>
    </div>
    <div id="projectbrief">MiraiCP api document</div>
   </td>
@@ -44,10 +44,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.9.2 -->
+<!-- 制作者 Doxygen 1.9.8 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search",'搜索','.html');
+var searchBox = new SearchBox("searchBox", "search/",'.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -87,180 +87,491 @@ $(document).ready(function(){initNavTree('a00776.html',''); initResizable(); });
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
 </div>
 
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-static-attribs">静态 Public 属性</a> &#124;
 <a href="a00773.html">所有成员列表</a>  </div>
-  <div class="headertitle"><div class="title">LibLoader::LoaderExceptionCRTP&lt; T &gt; 模板接口 参考</div></div>
+  <div class="headertitle"><div class="title">LibLoader::LoaderApi::interface_funcs结构体 参考</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>总异常CRTP抽象类，不要直接抛出该类，不知道抛出什么的时候请抛出 LoaderException。 该类是用于继承的基类，需要新的异常类型时，继承该类并以子类作为模板参数。 子类需要实现的方法：  
- <a href="a00776.html#details">更多...</a></p>
-
-<p><code>#include &lt;<a class="el" href="a00230_source.html">LoaderExceptions.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="a00179_source.html">loaderApiInternal.h</a>&gt;</code></p>
 <div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> 类 LibLoader::LoaderExceptionCRTP&lt; T &gt; 继承关系图:</div>
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> LibLoader::LoaderApi::interface_funcs 的协作图:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="a00775.svg" width="2094" height="1078"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
-<div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> LibLoader::LoaderExceptionCRTP&lt; T &gt; 的协作图:</div>
-<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-1-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="a00774.svg" width="330" height="634"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00774.svg" width="222" height="598"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public 成员函数</h2></td></tr>
-<tr class="memitem:a569816ed3d22d644f7935ec745d03bd8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00776.html#a569816ed3d22d644f7935ec745d03bd8">LoaderExceptionCRTP</a> (std::string _re, <a class="el" href="a00772.html#a426a5f32b7a2a56205d68c118579c216">string</a> _filename, int _lineNum)</td></tr>
-<tr class="memdesc:a569816ed3d22d644f7935ec745d03bd8"><td class="mdescLeft">&#160;</td><td class="mdescRight">委托构造函数  <a href="a00776.html#a569816ed3d22d644f7935ec745d03bd8">更多...</a><br /></td></tr>
-<tr class="separator:a569816ed3d22d644f7935ec745d03bd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2922c4bc8a26626dad74f11ec9bf6df0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00772.html#a426a5f32b7a2a56205d68c118579c216">string</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00776.html#a2922c4bc8a26626dad74f11ec9bf6df0">getExceptionType</a> () const override</td></tr>
-<tr class="memdesc:a2922c4bc8a26626dad74f11ec9bf6df0"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取异常类型，通用接口  <a href="a00776.html#a2922c4bc8a26626dad74f11ec9bf6df0">更多...</a><br /></td></tr>
-<tr class="separator:a2922c4bc8a26626dad74f11ec9bf6df0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_methods_a00772"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_a00772')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="a00772.html">LibLoader::LoaderBaseException</a></td></tr>
-<tr class="memitem:a5cae5e7ccb01c5851b2a06e95e81b907 inherit pub_methods_a00772"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00772.html#a5cae5e7ccb01c5851b2a06e95e81b907">~LoaderBaseException</a> () override=default</td></tr>
-<tr class="separator:a5cae5e7ccb01c5851b2a06e95e81b907 inherit pub_methods_a00772"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0928090784126f3081fb2b7e73c39b22 inherit pub_methods_a00772"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00772.html#a0928090784126f3081fb2b7e73c39b22">what</a> () const noexcept override</td></tr>
-<tr class="memdesc:a0928090784126f3081fb2b7e73c39b22 inherit pub_methods_a00772"><td class="mdescLeft">&#160;</td><td class="mdescRight">异常信息（std::exception接口）  <a href="a00772.html#a0928090784126f3081fb2b7e73c39b22">更多...</a><br /></td></tr>
-<tr class="separator:a0928090784126f3081fb2b7e73c39b22 inherit pub_methods_a00772"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa78df717d01813327f31b3cc2b8b0efb inherit pub_methods_a00772"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00772.html#aa78df717d01813327f31b3cc2b8b0efb">raise</a> () const noexcept</td></tr>
-<tr class="separator:aa78df717d01813327f31b3cc2b8b0efb inherit pub_methods_a00772"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac937330fc25c0d6ad018c7091650c261" id="r_ac937330fc25c0d6ad018c7091650c261"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00776.html#ac937330fc25c0d6ad018c7091650c261">DECL_API</a> (<a class="el" href="a00426.html#a4c6ac4cf4ba5ff0adb7656708bbb67d0">pluginOperation</a>)</td></tr>
+<tr class="separator:ac937330fc25c0d6ad018c7091650c261"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad707a52555ef28272480ede9e229946b" id="r_ad707a52555ef28272480ede9e229946b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00776.html#ad707a52555ef28272480ede9e229946b">DECL_API</a> (<a class="el" href="a00426.html#a4def9f25b87d48d142d6752184aadc92">loggerInterface</a>)</td></tr>
+<tr class="separator:ad707a52555ef28272480ede9e229946b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3cecebbd87c028f330bb92a5440bff83" id="r_a3cecebbd87c028f330bb92a5440bff83"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00776.html#a3cecebbd87c028f330bb92a5440bff83">DECL_API</a> (<a class="el" href="a00426.html#a1dc2ed7eb6845af70bc796bb347b74ef">showAllPluginId</a>)</td></tr>
+<tr class="separator:a3cecebbd87c028f330bb92a5440bff83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afdb5c4798f7f4d427a59bdbfc0637f02" id="r_afdb5c4798f7f4d427a59bdbfc0637f02"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00776.html#afdb5c4798f7f4d427a59bdbfc0637f02">DECL_API</a> (<a class="el" href="a00426.html#a4dc4ecd3d86eb509647b3130a5239ecf">pushTask</a>)</td></tr>
+<tr class="separator:afdb5c4798f7f4d427a59bdbfc0637f02"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adeb8ee9c92ca094b907b8c13c155f849" id="r_adeb8ee9c92ca094b907b8c13c155f849"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00776.html#adeb8ee9c92ca094b907b8c13c155f849">DECL_API</a> (<a class="el" href="a00426.html#ae86871d4f062f45edee7501e0596cd3d">pushTaskWithId</a>)</td></tr>
+<tr class="separator:adeb8ee9c92ca094b907b8c13c155f849"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afcacf8988303c4341917baae0a31d976" id="r_afcacf8988303c4341917baae0a31d976"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00776.html#afcacf8988303c4341917baae0a31d976">DECL_API</a> (<a class="el" href="a00426.html#a05f1524120bb7a5a65abbde063d9e557">timer</a>)</td></tr>
+<tr class="separator:afcacf8988303c4341917baae0a31d976"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3cfd3c6e38b9536dd773d24ff401c8b" id="r_aa3cfd3c6e38b9536dd773d24ff401c8b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00776.html#aa3cfd3c6e38b9536dd773d24ff401c8b">DECL_API</a> (<a class="el" href="a00426.html#a65331125b91df8d475fd7b74bf1bb8e9">enablePluginById</a>)</td></tr>
+<tr class="separator:aa3cfd3c6e38b9536dd773d24ff401c8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af021205c3b4b99514dd567179504f45a" id="r_af021205c3b4b99514dd567179504f45a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00776.html#af021205c3b4b99514dd567179504f45a">DECL_API</a> (<a class="el" href="a00426.html#a08a6725cb4a33402962f2b67130e8bac">disablePluginById</a>)</td></tr>
+<tr class="separator:af021205c3b4b99514dd567179504f45a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46f48abae8f98dff7ca8599c48cb7193" id="r_a46f48abae8f98dff7ca8599c48cb7193"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00776.html#a46f48abae8f98dff7ca8599c48cb7193">DECL_API</a> (<a class="el" href="a00426.html#a2a1eb02235baa6f86d8e8176b4364a72">enableAllPlugins</a>)</td></tr>
+<tr class="separator:a46f48abae8f98dff7ca8599c48cb7193"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f59004aa2a2bb981ec02529c14b88f0" id="r_a5f59004aa2a2bb981ec02529c14b88f0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00776.html#a5f59004aa2a2bb981ec02529c14b88f0">DECL_API</a> (<a class="el" href="a00426.html#a9fed350b41c9fb052ca061e3866a66a4">disableAllPlugins</a>)</td></tr>
+<tr class="separator:a5f59004aa2a2bb981ec02529c14b88f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d75d4ff9bcf01d554146410596827e2" id="r_a2d75d4ff9bcf01d554146410596827e2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00776.html#a2d75d4ff9bcf01d554146410596827e2">DECL_API</a> (<a class="el" href="a00426.html#aff28b2ad21b60cabc3c735a4b9562df9">loadNewPlugin</a>)</td></tr>
+<tr class="separator:a2d75d4ff9bcf01d554146410596827e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8365c67a2016c47b0984ccd2a7cb9a7c" id="r_a8365c67a2016c47b0984ccd2a7cb9a7c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00776.html#a8365c67a2016c47b0984ccd2a7cb9a7c">DECL_API</a> (<a class="el" href="a00426.html#ace6aa7d8b5baf1f2be8908a5e103c92a">unloadPluginById</a>)</td></tr>
+<tr class="separator:a8365c67a2016c47b0984ccd2a7cb9a7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4fe8efce4ed0d28c8587fed57e374fd" id="r_ad4fe8efce4ed0d28c8587fed57e374fd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00776.html#ad4fe8efce4ed0d28c8587fed57e374fd">DECL_API</a> (<a class="el" href="a00426.html#ad038612c1e2a43498411f0b77240e20b">reloadPluginById</a>)</td></tr>
+<tr class="separator:ad4fe8efce4ed0d28c8587fed57e374fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
-额外继承的成员函数</h2></td></tr>
-<tr class="inherit_header pub_static_methods_a00772"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_a00772')"><img src="closed.png" alt="-"/>&#160;静态 Public 成员函数 继承自 <a class="el" href="a00772.html">LibLoader::LoaderBaseException</a></td></tr>
-<tr class="memitem:a256993d5a0b22f6057ddd19a50bdc872 inherit pub_static_methods_a00772"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="a00772.html#a426a5f32b7a2a56205d68c118579c216">string</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00772.html#a256993d5a0b22f6057ddd19a50bdc872">exceptionType</a> ()</td></tr>
-<tr class="memdesc:a256993d5a0b22f6057ddd19a50bdc872 inherit pub_static_methods_a00772"><td class="mdescLeft">&#160;</td><td class="mdescRight">返回异常的类型，该静态方法无法正确实现多态，请使用 getExceptionType  <a href="a00772.html#a256993d5a0b22f6057ddd19a50bdc872">更多...</a><br /></td></tr>
-<tr class="separator:a256993d5a0b22f6057ddd19a50bdc872 inherit pub_static_methods_a00772"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_attribs_a00772"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_a00772')"><img src="closed.png" alt="-"/>&#160;Public 属性 继承自 <a class="el" href="a00772.html">LibLoader::LoaderBaseException</a></td></tr>
-<tr class="memitem:acfb18c7eb10c0dc2205c98e73ad0e647 inherit pub_attribs_a00772"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00772.html#a426a5f32b7a2a56205d68c118579c216">string</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00772.html#acfb18c7eb10c0dc2205c98e73ad0e647">filename</a></td></tr>
-<tr class="memdesc:acfb18c7eb10c0dc2205c98e73ad0e647 inherit pub_attribs_a00772"><td class="mdescLeft">&#160;</td><td class="mdescRight">发生异常的文件名  <a href="a00772.html#acfb18c7eb10c0dc2205c98e73ad0e647">更多...</a><br /></td></tr>
-<tr class="separator:acfb18c7eb10c0dc2205c98e73ad0e647 inherit pub_attribs_a00772"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a260f9ce0d0fc07df498b22eec899eb68 inherit pub_attribs_a00772"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00772.html#a260f9ce0d0fc07df498b22eec899eb68">lineNum</a> = 0</td></tr>
-<tr class="memdesc:a260f9ce0d0fc07df498b22eec899eb68 inherit pub_attribs_a00772"><td class="mdescLeft">&#160;</td><td class="mdescRight">发生异常的行号  <a href="a00772.html#a260f9ce0d0fc07df498b22eec899eb68">更多...</a><br /></td></tr>
-<tr class="separator:a260f9ce0d0fc07df498b22eec899eb68 inherit pub_attribs_a00772"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pro_types_a00772"><td colspan="2" onclick="javascript:toggleInherit('pro_types_a00772')"><img src="closed.png" alt="-"/>&#160;Protected 类型 继承自 <a class="el" href="a00772.html">LibLoader::LoaderBaseException</a></td></tr>
-<tr class="memitem:a426a5f32b7a2a56205d68c118579c216 inherit pro_types_a00772"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00772.html#a426a5f32b7a2a56205d68c118579c216">string</a> = std::string</td></tr>
-<tr class="separator:a426a5f32b7a2a56205d68c118579c216 inherit pro_types_a00772"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pro_methods_a00772"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_a00772')"><img src="closed.png" alt="-"/>&#160;Protected 成员函数 继承自 <a class="el" href="a00772.html">LibLoader::LoaderBaseException</a></td></tr>
-<tr class="memitem:a60617c64dab00d3d3c64d012ba6dda9f inherit pro_methods_a00772"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00772.html#a60617c64dab00d3d3c64d012ba6dda9f">LoaderBaseException</a> (<a class="el" href="a00772.html#a426a5f32b7a2a56205d68c118579c216">string</a> info, <a class="el" href="a00772.html#a426a5f32b7a2a56205d68c118579c216">string</a> _filename, int _lineNum)</td></tr>
-<tr class="memdesc:a60617c64dab00d3d3c64d012ba6dda9f inherit pro_methods_a00772"><td class="mdescLeft">&#160;</td><td class="mdescRight">受保护构造函数，供子类调用  <a href="a00772.html#a60617c64dab00d3d3c64d012ba6dda9f">更多...</a><br /></td></tr>
-<tr class="separator:a60617c64dab00d3d3c64d012ba6dda9f inherit pro_methods_a00772"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aefe83b46523df9d571e0f25b9283f793 inherit pro_methods_a00772"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00772.html#aefe83b46523df9d571e0f25b9283f793">warningRaise</a> () const noexcept</td></tr>
-<tr class="separator:aefe83b46523df9d571e0f25b9283f793 inherit pro_methods_a00772"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pro_attribs_a00772"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_a00772')"><img src="closed.png" alt="-"/>&#160;Protected 属性 继承自 <a class="el" href="a00772.html">LibLoader::LoaderBaseException</a></td></tr>
-<tr class="memitem:a4e41edc9cdc52ef5ed27b5f65938a928 inherit pro_attribs_a00772"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00772.html#a426a5f32b7a2a56205d68c118579c216">string</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00772.html#a4e41edc9cdc52ef5ed27b5f65938a928">errorMessage</a></td></tr>
-<tr class="memdesc:a4e41edc9cdc52ef5ed27b5f65938a928 inherit pro_attribs_a00772"><td class="mdescLeft">&#160;</td><td class="mdescRight">异常内容  <a href="a00772.html#a4e41edc9cdc52ef5ed27b5f65938a928">更多...</a><br /></td></tr>
-<tr class="separator:a4e41edc9cdc52ef5ed27b5f65938a928 inherit pro_attribs_a00772"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
+静态 Public 属性</h2></td></tr>
+<tr class="memitem:aa70a27332a8eec24f1faf41b87dd576e" id="r_aa70a27332a8eec24f1faf41b87dd576e"><td class="memItemLeft" align="right" valign="top">static constexpr size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00776.html#aa70a27332a8eec24f1faf41b87dd576e">line0</a> = __LINE__</td></tr>
+<tr class="separator:aa70a27332a8eec24f1faf41b87dd576e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a6cfdc5e0e8db13ee7f424b91d126ea" id="r_a5a6cfdc5e0e8db13ee7f424b91d126ea"><td class="memItemLeft" align="right" valign="top">static constexpr size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00776.html#a5a6cfdc5e0e8db13ee7f424b91d126ea">line1</a> = __LINE__</td></tr>
+<tr class="separator:a5a6cfdc5e0e8db13ee7f424b91d126ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1d445559b13ae3616d007ad503b52b4" id="r_ac1d445559b13ae3616d007ad503b52b4"><td class="memItemLeft" align="right" valign="top">static constexpr size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00776.html#ac1d445559b13ae3616d007ad503b52b4">normal_api_count</a> = <a class="el" href="a00776.html#a5a6cfdc5e0e8db13ee7f424b91d126ea">line1</a> - <a class="el" href="a00776.html#aa70a27332a8eec24f1faf41b87dd576e">line0</a> - 1</td></tr>
+<tr class="separator:ac1d445559b13ae3616d007ad503b52b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ea95a8f2fc0655fa35b96f854fae7f5" id="r_a1ea95a8f2fc0655fa35b96f854fae7f5"><td class="memItemLeft" align="right" valign="top">static constexpr size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00776.html#a1ea95a8f2fc0655fa35b96f854fae7f5">adminline0</a> = __LINE__</td></tr>
+<tr class="separator:a1ea95a8f2fc0655fa35b96f854fae7f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3612ae5c5af0ef69032ea549f3ff61c" id="r_ae3612ae5c5af0ef69032ea549f3ff61c"><td class="memItemLeft" align="right" valign="top">static constexpr size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00776.html#ae3612ae5c5af0ef69032ea549f3ff61c">adminline1</a> = __LINE__</td></tr>
+<tr class="separator:ae3612ae5c5af0ef69032ea549f3ff61c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69a202baf085417bb62180563a87eef5" id="r_a69a202baf085417bb62180563a87eef5"><td class="memItemLeft" align="right" valign="top">static constexpr size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00776.html#a69a202baf085417bb62180563a87eef5">admin_api_count</a> = <a class="el" href="a00776.html#ae3612ae5c5af0ef69032ea549f3ff61c">adminline1</a> - <a class="el" href="a00776.html#a1ea95a8f2fc0655fa35b96f854fae7f5">adminline0</a> - 1</td></tr>
+<tr class="separator:a69a202baf085417bb62180563a87eef5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a384fb81c54e4e33f3ede859104524f" id="r_a1a384fb81c54e4e33f3ede859104524f"><td class="memItemLeft" align="right" valign="top">static constexpr size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00776.html#a1a384fb81c54e4e33f3ede859104524f">api_count</a> = <a class="el" href="a00776.html#ac1d445559b13ae3616d007ad503b52b4">normal_api_count</a> + <a class="el" href="a00776.html#a69a202baf085417bb62180563a87eef5">admin_api_count</a></td></tr>
+<tr class="separator:a1a384fb81c54e4e33f3ede859104524f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
-<div class="textblock"><div class="compoundTemplParams">template&lt;class T&gt;<br />
-interface LibLoader::LoaderExceptionCRTP&lt; T &gt;</div><p >总异常CRTP抽象类，不要直接抛出该类，不知道抛出什么的时候请抛出 LoaderException。 该类是用于继承的基类，需要新的异常类型时，继承该类并以子类作为模板参数。 子类需要实现的方法： </p>
-<ol type="1">
-<li>构造函数，要求必须委托 <a class="el" href="a00776.html" title="总异常CRTP抽象类，不要直接抛出该类，不知道抛出什么的时候请抛出 LoaderException。 该类是用于继承的基类，需要新的异常类型时，继承该类并以子类作为模板参数。 子类需要实现的方法：">LoaderExceptionCRTP</a> 构造。</li>
-<li><code>static std::string <a class="el" href="a00772.html#a256993d5a0b22f6057ddd19a50bdc872" title="返回异常的类型，该静态方法无法正确实现多态，请使用 getExceptionType">exceptionType()</a></code> 返回一个字符串表示异常类型。 继承该类后异常类能正确实现多态。</li>
-</ol>
-<dl class="section note"><dt>注解</dt><dd>请勿给该类增加新的属性。如果要增加属性应在 <a class="el" href="a00772.html">LoaderBaseException</a> 中增加 </dd></dl>
-
-<p class="definition">在文件 <a class="el" href="a00230_source.html">LoaderExceptions.h</a> 第 <a class="el" href="a00230_source.html#l00078">78</a> 行定义.</p>
-</div><h2 class="groupheader">构造及析构函数说明</h2>
-<a id="a569816ed3d22d644f7935ec745d03bd8" name="a569816ed3d22d644f7935ec745d03bd8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a569816ed3d22d644f7935ec745d03bd8">&#9670;&nbsp;</a></span>LoaderExceptionCRTP()</h2>
+<div class="textblock">
+<p class="definition">在文件 <a class="el" href="a00179_source.html">loaderApiInternal.h</a> 第 <a class="el" href="a00179_source.html#l00086">86</a> 行定义.</p>
+</div><h2 class="groupheader">成员函数说明</h2>
+<a id="a5f59004aa2a2bb981ec02529c14b88f0" name="a5f59004aa2a2bb981ec02529c14b88f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f59004aa2a2bb981ec02529c14b88f0">&#9670;&#160;</a></span>DECL_API() <span class="overload">[1/13]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;class T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a00776.html">LibLoader::LoaderExceptionCRTP</a>&lt; T &gt;::<a class="el" href="a00776.html">LoaderExceptionCRTP</a> </td>
+          <td class="memname">LibLoader::LoaderApi::interface_funcs::DECL_API </td>
           <td>(</td>
-          <td class="paramtype">std::string&#160;</td>
-          <td class="paramname"><em>_re</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="a00772.html#a426a5f32b7a2a56205d68c118579c216">string</a>&#160;</td>
-          <td class="paramname"><em>_filename</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>_lineNum</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>委托构造函数 </p>
-
-<p class="definition">在文件 <a class="el" href="a00230_source.html">LoaderExceptions.h</a> 第 <a class="el" href="a00230_source.html#l00081">81</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>            : <a class="code hl_function" href="a00772.html#a60617c64dab00d3d3c64d012ba6dda9f">LoaderBaseException</a>(std::move(_re), std::move(_filename), _lineNum) {}</div>
-<div class="ttc" id="aa00772_html_a60617c64dab00d3d3c64d012ba6dda9f"><div class="ttname"><a href="a00772.html#a60617c64dab00d3d3c64d012ba6dda9f">LibLoader::LoaderBaseException::LoaderBaseException</a></div><div class="ttdeci">LoaderBaseException(string info, string _filename, int _lineNum)</div><div class="ttdoc">受保护构造函数，供子类调用</div><div class="ttdef"><b>Definition:</b> <a href="a00227_source.html#l00022">LoaderExceptions.cpp:22</a></div></div>
-</div><!-- fragment -->
-</div>
-</div>
-<h2 class="groupheader">成员函数说明</h2>
-<a id="a2922c4bc8a26626dad74f11ec9bf6df0" name="a2922c4bc8a26626dad74f11ec9bf6df0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2922c4bc8a26626dad74f11ec9bf6df0">&#9670;&nbsp;</a></span>getExceptionType()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00772.html#a426a5f32b7a2a56205d68c118579c216">string</a> <a class="el" href="a00776.html">LibLoader::LoaderExceptionCRTP</a>&lt; T &gt;::getExceptionType </td>
-          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00426.html#a9fed350b41c9fb052ca061e3866a66a4">disableAllPlugins</a>&#160;</td>
           <td class="paramname"></td><td>)</td>
-          <td> const</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af021205c3b4b99514dd567179504f45a" name="af021205c3b4b99514dd567179504f45a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af021205c3b4b99514dd567179504f45a">&#9670;&#160;</a></span>DECL_API() <span class="overload">[2/13]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">LibLoader::LoaderApi::interface_funcs::DECL_API </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00426.html#a08a6725cb4a33402962f2b67130e8bac">disablePluginById</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a46f48abae8f98dff7ca8599c48cb7193" name="a46f48abae8f98dff7ca8599c48cb7193"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a46f48abae8f98dff7ca8599c48cb7193">&#9670;&#160;</a></span>DECL_API() <span class="overload">[3/13]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">LibLoader::LoaderApi::interface_funcs::DECL_API </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00426.html#a2a1eb02235baa6f86d8e8176b4364a72">enableAllPlugins</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa3cfd3c6e38b9536dd773d24ff401c8b" name="aa3cfd3c6e38b9536dd773d24ff401c8b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3cfd3c6e38b9536dd773d24ff401c8b">&#9670;&#160;</a></span>DECL_API() <span class="overload">[4/13]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">LibLoader::LoaderApi::interface_funcs::DECL_API </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00426.html#a65331125b91df8d475fd7b74bf1bb8e9">enablePluginById</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2d75d4ff9bcf01d554146410596827e2" name="a2d75d4ff9bcf01d554146410596827e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d75d4ff9bcf01d554146410596827e2">&#9670;&#160;</a></span>DECL_API() <span class="overload">[5/13]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">LibLoader::LoaderApi::interface_funcs::DECL_API </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00426.html#aff28b2ad21b60cabc3c735a4b9562df9">loadNewPlugin</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad707a52555ef28272480ede9e229946b" name="ad707a52555ef28272480ede9e229946b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad707a52555ef28272480ede9e229946b">&#9670;&#160;</a></span>DECL_API() <span class="overload">[6/13]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">LibLoader::LoaderApi::interface_funcs::DECL_API </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00426.html#a4def9f25b87d48d142d6752184aadc92">loggerInterface</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac937330fc25c0d6ad018c7091650c261" name="ac937330fc25c0d6ad018c7091650c261"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac937330fc25c0d6ad018c7091650c261">&#9670;&#160;</a></span>DECL_API() <span class="overload">[7/13]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">LibLoader::LoaderApi::interface_funcs::DECL_API </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00426.html#a4c6ac4cf4ba5ff0adb7656708bbb67d0">pluginOperation</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afdb5c4798f7f4d427a59bdbfc0637f02" name="afdb5c4798f7f4d427a59bdbfc0637f02"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afdb5c4798f7f4d427a59bdbfc0637f02">&#9670;&#160;</a></span>DECL_API() <span class="overload">[8/13]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">LibLoader::LoaderApi::interface_funcs::DECL_API </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00426.html#a4dc4ecd3d86eb509647b3130a5239ecf">pushTask</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adeb8ee9c92ca094b907b8c13c155f849" name="adeb8ee9c92ca094b907b8c13c155f849"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adeb8ee9c92ca094b907b8c13c155f849">&#9670;&#160;</a></span>DECL_API() <span class="overload">[9/13]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">LibLoader::LoaderApi::interface_funcs::DECL_API </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00426.html#ae86871d4f062f45edee7501e0596cd3d">pushTaskWithId</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad4fe8efce4ed0d28c8587fed57e374fd" name="ad4fe8efce4ed0d28c8587fed57e374fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4fe8efce4ed0d28c8587fed57e374fd">&#9670;&#160;</a></span>DECL_API() <span class="overload">[10/13]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">LibLoader::LoaderApi::interface_funcs::DECL_API </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00426.html#ad038612c1e2a43498411f0b77240e20b">reloadPluginById</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3cecebbd87c028f330bb92a5440bff83" name="a3cecebbd87c028f330bb92a5440bff83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3cecebbd87c028f330bb92a5440bff83">&#9670;&#160;</a></span>DECL_API() <span class="overload">[11/13]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">LibLoader::LoaderApi::interface_funcs::DECL_API </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00426.html#a1dc2ed7eb6845af70bc796bb347b74ef">showAllPluginId</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afcacf8988303c4341917baae0a31d976" name="afcacf8988303c4341917baae0a31d976"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afcacf8988303c4341917baae0a31d976">&#9670;&#160;</a></span>DECL_API() <span class="overload">[12/13]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">LibLoader::LoaderApi::interface_funcs::DECL_API </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00426.html#a05f1524120bb7a5a65abbde063d9e557">timer</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8365c67a2016c47b0984ccd2a7cb9a7c" name="a8365c67a2016c47b0984ccd2a7cb9a7c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8365c67a2016c47b0984ccd2a7cb9a7c">&#9670;&#160;</a></span>DECL_API() <span class="overload">[13/13]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">LibLoader::LoaderApi::interface_funcs::DECL_API </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00426.html#ace6aa7d8b5baf1f2be8908a5e103c92a">unloadPluginById</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="a69a202baf085417bb62180563a87eef5" name="a69a202baf085417bb62180563a87eef5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69a202baf085417bb62180563a87eef5">&#9670;&#160;</a></span>admin_api_count</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr size_t LibLoader::LoaderApi::interface_funcs::admin_api_count = <a class="el" href="a00776.html#ae3612ae5c5af0ef69032ea549f3ff61c">adminline1</a> - <a class="el" href="a00776.html#a1ea95a8f2fc0655fa35b96f854fae7f5">adminline0</a> - 1</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>获取异常类型，通用接口 </p>
+<p class="definition">在文件 <a class="el" href="a00179_source.html">loaderApiInternal.h</a> 第 <a class="el" href="a00179_source.html#l00106">106</a> 行定义.</p>
 
-<p>实现了 <a class="el" href="a00772.html#a0c228099ad2d23da15b72123bb255f67">LibLoader::LoaderBaseException</a>.</p>
-
-<p class="definition">在文件 <a class="el" href="a00230_source.html">LoaderExceptions.h</a> 第 <a class="el" href="a00230_source.html#l00086">86</a> 行定义.</p>
-<div class="fragment"><div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>{ <span class="keywordflow">return</span> T::exceptionType(); }</div>
-</div><!-- fragment -->
 </div>
 </div>
-<hr/>该接口的文档由以下文件生成:<ul>
-<li><a class="el" href="a00230_source.html">LoaderExceptions.h</a></li>
+<a id="a1ea95a8f2fc0655fa35b96f854fae7f5" name="a1ea95a8f2fc0655fa35b96f854fae7f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ea95a8f2fc0655fa35b96f854fae7f5">&#9670;&#160;</a></span>adminline0</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr size_t LibLoader::LoaderApi::interface_funcs::adminline0 = __LINE__</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="a00179_source.html">loaderApiInternal.h</a> 第 <a class="el" href="a00179_source.html#l00097">97</a> 行定义.</p>
+
+</div>
+</div>
+<a id="ae3612ae5c5af0ef69032ea549f3ff61c" name="ae3612ae5c5af0ef69032ea549f3ff61c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3612ae5c5af0ef69032ea549f3ff61c">&#9670;&#160;</a></span>adminline1</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr size_t LibLoader::LoaderApi::interface_funcs::adminline1 = __LINE__</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="a00179_source.html">loaderApiInternal.h</a> 第 <a class="el" href="a00179_source.html#l00105">105</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a1a384fb81c54e4e33f3ede859104524f" name="a1a384fb81c54e4e33f3ede859104524f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a384fb81c54e4e33f3ede859104524f">&#9670;&#160;</a></span>api_count</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr size_t LibLoader::LoaderApi::interface_funcs::api_count = <a class="el" href="a00776.html#ac1d445559b13ae3616d007ad503b52b4">normal_api_count</a> + <a class="el" href="a00776.html#a69a202baf085417bb62180563a87eef5">admin_api_count</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="a00179_source.html">loaderApiInternal.h</a> 第 <a class="el" href="a00179_source.html#l00107">107</a> 行定义.</p>
+
+</div>
+</div>
+<a id="aa70a27332a8eec24f1faf41b87dd576e" name="aa70a27332a8eec24f1faf41b87dd576e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa70a27332a8eec24f1faf41b87dd576e">&#9670;&#160;</a></span>line0</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr size_t LibLoader::LoaderApi::interface_funcs::line0 = __LINE__</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="a00179_source.html">loaderApiInternal.h</a> 第 <a class="el" href="a00179_source.html#l00087">87</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a5a6cfdc5e0e8db13ee7f424b91d126ea" name="a5a6cfdc5e0e8db13ee7f424b91d126ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a6cfdc5e0e8db13ee7f424b91d126ea">&#9670;&#160;</a></span>line1</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr size_t LibLoader::LoaderApi::interface_funcs::line1 = __LINE__</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="a00179_source.html">loaderApiInternal.h</a> 第 <a class="el" href="a00179_source.html#l00094">94</a> 行定义.</p>
+
+</div>
+</div>
+<a id="ac1d445559b13ae3616d007ad503b52b4" name="ac1d445559b13ae3616d007ad503b52b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1d445559b13ae3616d007ad503b52b4">&#9670;&#160;</a></span>normal_api_count</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr size_t LibLoader::LoaderApi::interface_funcs::normal_api_count = <a class="el" href="a00776.html#a5a6cfdc5e0e8db13ee7f424b91d126ea">line1</a> - <a class="el" href="a00776.html#aa70a27332a8eec24f1faf41b87dd576e">line0</a> - 1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="a00179_source.html">loaderApiInternal.h</a> 第 <a class="el" href="a00179_source.html#l00095">95</a> 行定义.</p>
+
+</div>
+</div>
+<hr/>该结构体的文档由以下文件生成:<ul>
+<li><a class="el" href="a00179_source.html">loaderApiInternal.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -268,8 +579,8 @@ template&lt;class T &gt; </div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="a00407.html">LibLoader</a></li><li class="navelem"><a class="el" href="a00776.html">LoaderExceptionCRTP</a></li>
-    <li class="footer">生成于 2023年 四月 10日 星期一 00:26:34 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="navelem"><a class="el" href="a00425.html">LibLoader</a></li><li class="navelem"><a class="el" href="a00426.html">LoaderApi</a></li><li class="navelem"><a class="el" href="a00776.html">interface_funcs</a></li>
+    <li class="footer">生成于 2023年 十月 26日 星期四 01:16:24 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
     </body>

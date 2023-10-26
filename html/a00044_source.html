@@ -4,9 +4,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiraiCP: MiraiCPMacros.h 源文件</title>
+<title>MiraiCP: PluginConfig.h 源文件</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -35,7 +35,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MiraiCP
-   &#160;<span id="projectnumber">v2.15.0-RC2</span>
+   &#160;<span id="projectnumber">v2.16.0</span>
    </div>
    <div id="projectbrief">MiraiCP api document</div>
   </td>
@@ -44,10 +44,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.9.2 -->
+<!-- 制作者 Doxygen 1.9.8 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search",'搜索','.html');
+var searchBox = new SearchBox("searchBox", "search/",'.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -61,6 +61,11 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -87,16 +92,23 @@ $(document).ready(function(){initNavTree('a00044_source.html',''); initResizable
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">MiraiCPMacros.h</div></div>
+  <div class="headertitle"><div class="title">PluginConfig.h</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="a00044.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// Copyright (c) 2022. Eritque arcus and contributors.</span></div>
+<a href="a00044.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// Copyright (c) 2020 - 2022. Eritque arcus and contributors.</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">//</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">// This program is free software: you can redistribute it and/or modify</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">// it under the terms of the GNU Affero General Public License as</span></div>
@@ -112,235 +124,98 @@ $(document).ready(function(){initNavTree('a00044_source.html',''); initResizable
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">// along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</span></div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">//</span></div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#pragma clang diagnostic push</span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#pragma ide diagnostic ignored &quot;bugprone-macro-parentheses&quot;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#ifndef MIRAICP_PRO_PLUGINCONFIG_H</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#define MIRAICP_PRO_PLUGINCONFIG_H</span></div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#ifndef MIRAICP_PRO_MIRAICPMACROS_H</span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#define MIRAICP_PRO_MIRAICPMACROS_H</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &lt;string&gt;</span></div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment">// This file contains static assertions and macros.</span></div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="comment">// If any macro is used, one should always include this file directly or indirectly.</span></div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="comment">// Dev: any new macro(s) should be added here since we have to ensure the &quot;single&quot; target</span></div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="comment">// behaves just the same as &quot;multi&quot;. If any macro infected the pre-compilation in &quot;single&quot;,</span></div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="comment">// we will know immediately in &quot;multi&quot;.</span></div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="keyword">static_assert</span>(<span class="keyword">sizeof</span>(<span class="keywordtype">void</span> *) == 8, <span class="stringliteral">&quot;Only 64-bit platforms are supported&quot;</span>);</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="keyword">static_assert</span>(<span class="keyword">sizeof</span>(char) == 1, <span class="stringliteral">&quot;Please make sure the size of char is 1&quot;</span>);</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="comment">// detect platform, pre-define default value</span></div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="a00044.html#ae77e84ac8ed5405a64218ccf55f50323">   36</a></span><span class="preprocessor">#define MIRAICP_WINDOWS 0</span></div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="a00044.html#ae88c5ce1eaa60e875b164d420af4f12b">   37</a></span><span class="preprocessor">#define MIRAICP_LINUX 0</span></div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="a00044.html#ab5b6dac9e32602961daefead6015bb89">   38</a></span><span class="preprocessor">#define MIRAICP_UNIX 0</span></div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="a00044.html#a1d68cb8f2e943376575be26ad3e92415">   39</a></span><span class="preprocessor">#define MIRAICP_IOS 0</span></div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="a00044.html#aaf85a340e7f4e271bcdda974ad69e1e0">   40</a></span><span class="preprocessor">#define MIRAICP_MACOS 0</span></div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="a00044.html#a2ecb1edf5540e04cd5f3fbb5d9feff07">   41</a></span><span class="preprocessor">#define MIRAICP_ANDROID 0</span></div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="a00044.html#a349a0fde5cfa105826641a603ea7cafd">   42</a></span><span class="preprocessor">#define MIRAICP_TERMUX 0</span></div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="comment">// detect platform</span></div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="comment">// ref: https://stackoverflow.com/questions/5919996/how-to-detect-reliably-mac-os-x-ios-linux-windows-in-c-preprocessor</span></div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="preprocessor">#if defined(WIN32) || defined(_WIN32) || defined(__WIN32__) || defined(__NT__)</span></div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="preprocessor">#undef MIRAICP_WINDOWS</span></div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="preprocessor">#define MIRAICP_WINDOWS 1</span></div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="preprocessor">#elif __APPLE__</span></div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="preprocessor">#include &lt;TargetConditionals.h&gt;</span></div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="preprocessor">#if TARGET_IPHONE_SIMULATOR || TARGET_OS_MACCATALYST || TARGET_OS_IPHONE</span></div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="preprocessor">#undef MIRAICP_IOS</span></div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="preprocessor">#define MIRAICP_IOS 1</span></div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="preprocessor">#elif TARGET_OS_MAC</span></div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="preprocessor">#undef MIRAICP_MACOS</span></div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="preprocessor">#define MIRAICP_MACOS 1</span></div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="preprocessor">#else</span></div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="keyword">static_assert</span>(<span class="keyword">false</span>, <span class="stringliteral">&quot;Unknown apple platform&quot;</span>);</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="preprocessor">#elif __ANDROID__</span></div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="preprocessor">#ifdef __TERMUX__</span></div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="preprocessor">#undef MIRAICP_TERMUX</span></div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="preprocessor">#define MIRAICP_TERMUX 1</span></div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="preprocessor">#else</span></div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="preprocessor">#undef MIRAICP_ANDROID</span></div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="preprocessor">#define MIRAICP_ANDROID 1</span></div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="preprocessor">#elif __linux__</span></div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="preprocessor">#undef MIRAICP_LINUX</span></div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="preprocessor">#define MIRAICP_LINUX 1</span></div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="preprocessor">#elif __unix__</span></div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="preprocessor">#undef MIRAICP_UNIX</span></div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="preprocessor">#define MIRAICP_UNIX 1</span></div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="preprocessor">#else</span></div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="keyword">static_assert</span>(<span class="keyword">false</span>, <span class="stringliteral">&quot;Unsupported platform&quot;</span>);</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span><span class="comment">// compiler</span></div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="a00044.html#ae5f800c38ea99aae261a3073da2d3bd9">   81</a></span><span class="preprocessor">#define MIRAICP_MSVC 0</span></div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="a00044.html#a3a3650c8f6b9f484752ee9c0fc3db1ca">   82</a></span><span class="preprocessor">#define MIRAICP_CLANG 0</span></div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno"><a class="line" href="a00044.html#af233daf4569ac557e6615301b224ecb0">   83</a></span><span class="preprocessor">#define MIRAICP_GCC 0</span></div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span><span class="preprocessor">#define MIRAICP_COMPILER_OTHER 0</span></div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span><span class="preprocessor">#if defined(_MSC_VER) </span><span class="comment">// MSVC</span></div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span><span class="preprocessor">#undef MIRAICP_MSVC</span></div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span><span class="preprocessor">#define MIRAICP_MSVC 1</span></div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="preprocessor">#elif defined(__clang__) </span><span class="comment">// clang</span></div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span><span class="preprocessor">#undef MIRAICP_CLANG</span></div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span><span class="preprocessor">#define MIRAICP_CLANG 1</span></div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span><span class="preprocessor">#elif defined(__GNUC__) </span><span class="comment">// GNUC, MinGW</span></div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span><span class="preprocessor">#undef MIRAICP_GCC</span></div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span><span class="preprocessor">#define MIRAICP_GCC 1</span></div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span><span class="preprocessor">#else</span></div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span><span class="preprocessor">#undef MIRAICP_COMPILER_OTHER</span></div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno"><a class="line" href="a00044.html#a36ecaac4a9e848888ce9dfe7fed015c3">   97</a></span><span class="preprocessor">#define MIRAICP_COMPILER_OTHER 1</span></div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span><span class="comment">// ShouldNotUse</span></div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span><span class="preprocessor">#if MIRAICP_MSVC</span></div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span><span class="preprocessor">#pragma warning(error : 4996)</span></div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span><span class="preprocessor">#define ShouldNotUse(msg) [[deprecated(msg)]]</span></div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span><span class="preprocessor">#elif MIRAICP_GCC</span></div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span><span class="preprocessor">#define ShouldNotUse(msg) [[deprecated(msg)]] __attribute__((error(msg)))</span></div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span><span class="preprocessor">#else</span></div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno"><a class="line" href="a00044.html#ae1d03b516481fc8bce7d91943b41aaad">  108</a></span><span class="preprocessor">#define ShouldNotUse(msg)</span></div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span> </div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span> </div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span><span class="comment">// assert</span></div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span><span class="preprocessor">#include &lt;cassert&gt;</span></div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span><span class="preprocessor">#ifndef assert</span></div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno"><a class="line" href="a00044.html#ae90784e7cdd9af82802f90079c4e64e8">  115</a></span><span class="preprocessor">#define assert(ignore) ((void) 0)</span></div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span> </div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span> </div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span><span class="comment">// exceptions</span></div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno"><a class="line" href="a00044.html#a64a15c1bd1292eb8eb8b5874281372c6">  120</a></span><span class="preprocessor">#define MIRAICP_EXCEPTION_WHERE __FILE__, __LINE__</span></div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno"><a class="line" href="a00044.html#a0cb8d31be366ba6e083f879387b56bb9">  121</a></span><span class="preprocessor">#define MIRAICP_THROW(T, ...) throw T(__VA_ARGS__, MIRAICP_EXCEPTION_WHERE)</span></div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span> </div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span> </div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span><span class="comment">// status codes</span></div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno"><a class="line" href="a00044.html#a5ef35c73710d7e1047bf83809e40d2c8">  125</a></span><span class="preprocessor">#define PLUGIN_NORMAL 0</span></div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno"><a class="line" href="a00044.html#a65f3816ccdd5cca99d33252c804602a9">  126</a></span><span class="preprocessor">#define PLUGIN_ERROR 1</span></div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span> </div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span> </div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span><span class="comment">// noexcept statements block</span></div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno"><a class="line" href="a00044.html#a3671e76be883be26f67b4764e520ed83">  130</a></span><span class="preprocessor">#define MIRAICP_CRITICAL_NOEXCEPT_BLOCK(statements) \</span></div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span><span class="preprocessor">    try {                                           \</span></div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span><span class="preprocessor">        statements                                  \</span></div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span><span class="preprocessor">    } catch (...) { return PLUGIN_ERROR; }</span></div>
-<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span> </div>
-<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span> </div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span><span class="comment">// token paste and stringify</span></div>
-<div class="line"><a id="l00137" name="l00137"></a><span class="lineno"><a class="line" href="a00044.html#a560afe6425907e31c77cc1ed4803cdac">  137</a></span><span class="preprocessor">#define TOKEN_PASTE_INNER(X, Y) X##Y</span></div>
-<div class="line"><a id="l00138" name="l00138"></a><span class="lineno"><a class="line" href="a00044.html#a57e68cabe5dc57561ba82a435a1a0017">  138</a></span><span class="preprocessor">#define TOKEN_PASTE(X, Y) TOKEN_PASTE_INNER(X, Y)</span></div>
-<div class="line"><a id="l00139" name="l00139"></a><span class="lineno"><a class="line" href="a00044.html#ab06e1eb2e9bf38e0d452b1f796aed208">  139</a></span><span class="preprocessor">#define STRINGIFY(A) __STRINGIFY(A)</span></div>
-<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span><span class="preprocessor">#ifndef __STRINGIFY</span></div>
-<div class="line"><a id="l00141" name="l00141"></a><span class="lineno"><a class="line" href="a00044.html#a3fcf1da9a27b2524f6912b3aed4434bd">  141</a></span><span class="preprocessor">#define __STRINGIFY(A) #A </span><span class="comment">// NOLINT(bugprone-reserved-identifier)</span></div>
-<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span> </div>
-<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span> </div>
-<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span><span class="comment">// defer tool, works like the defer key word in Golang.</span></div>
-<div class="line"><a id="l00146" name="l00146"></a><span class="lineno"><a class="line" href="a00044.html#aa05206ce52ebadc805b64d69749a63d3">  146</a></span><span class="preprocessor">#define MIRAICP_DEFER(code)                                                   \</span></div>
-<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span><span class="preprocessor">    auto TOKEN_PASTE(_defered_statement_wrapper_, __LINE__) = [&amp;]() { code }; \</span></div>
-<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span><span class="preprocessor">    CommonTools::MiraiCPDefer TOKEN_PASTE(_defered_object_, __LINE__)(std::move(TOKEN_PASTE(_defered_statement_wrapper_, __LINE__)))</span></div>
-<div class="line"><a id="l00149" name="l00149"></a><span class="lineno"><a class="line" href="a00044.html#ac54623efc038ebe5e36e3d7a0103805f">  149</a></span><span class="preprocessor">#define MIRAICP_DEFER_LAMBDA(lambda)                                  \</span></div>
-<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span><span class="preprocessor">    auto TOKEN_PASTE(_defered_statement_wrapper_, __LINE__) = lambda; \</span></div>
-<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span><span class="preprocessor">    CommonTools::MiraiCPDefer TOKEN_PASTE(_defered_object_, __LINE__)(std::move(TOKEN_PASTE(_defered_statement_wrapper_, __LINE__)))</span></div>
-<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span> </div>
-<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span> </div>
-<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span><span class="comment">// names of plugin entry points</span></div>
-<div class="line"><a id="l00155" name="l00155"></a><span class="lineno"><a class="line" href="a00044.html#a530f8aa8a579c0ec728d5e7a46515ba4">  155</a></span><span class="preprocessor">#define FUNC_ENTRANCE FUNC_ENTRANCE</span></div>
-<div class="line"><a id="l00156" name="l00156"></a><span class="lineno"><a class="line" href="a00044.html#a06af3829abc05f3902ed69ee480b66fa">  156</a></span><span class="preprocessor">#define FUNC_EVENT FUNC_EVENT</span></div>
-<div class="line"><a id="l00157" name="l00157"></a><span class="lineno"><a class="line" href="a00044.html#a6505e9c7b381013fa532556439fb8bd0">  157</a></span><span class="preprocessor">#define FUNC_EXIT FUNC_EXIT</span></div>
-<div class="line"><a id="l00158" name="l00158"></a><span class="lineno"><a class="line" href="a00044.html#ac4ea748794ca932109fca8a936954720">  158</a></span><span class="preprocessor">#define PLUGIN_INFO PLUGIN_INFO</span></div>
-<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span> </div>
-<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span> </div>
-<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span><span class="comment">// error handling</span></div>
-<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span><span class="preprocessor">#ifdef MIRAICP_LIB_SDK</span></div>
-<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span><span class="preprocessor">#define MIRAICP_ERROR_HANDLE(x, y) ErrorHandle0(__FILE__, __LINE__, (x), (y))</span></div>
-<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span> </div>
-<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span> </div>
-<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span><span class="comment">// export</span></div>
-<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span><span class="preprocessor">#define MIRAICP_EXPORT</span></div>
-<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span><span class="preprocessor">#if MIRAICP_WINDOWS</span></div>
-<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span><span class="preprocessor">#ifdef GOOGLE_TEST</span></div>
-<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span><span class="preprocessor">#undef MIRAICP_EXPORT</span></div>
-<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span><span class="preprocessor">#define MIRAICP_EXPORT __declspec(dllimport)</span></div>
-<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span><span class="preprocessor">#else</span></div>
-<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span><span class="preprocessor">#undef MIRAICP_EXPORT</span></div>
-<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span><span class="preprocessor">#define MIRAICP_EXPORT __declspec(dllexport)</span></div>
-<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span><span class="preprocessor">#else</span></div>
-<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span><span class="preprocessor">#ifndef GOOGLE_TEST</span></div>
-<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span><span class="preprocessor">#undef MIRAICP_EXPORT</span></div>
-<div class="line"><a id="l00180" name="l00180"></a><span class="lineno"><a class="line" href="a00044.html#aa40df2b825bdde9207f3e87b140235c3">  180</a></span><span class="preprocessor">#define MIRAICP_EXPORT __attribute__((visibility(&quot;default&quot;</span>)))</div>
-<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span> </div>
-<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span> </div>
-<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span><span class="comment">// data locker</span></div>
-<div class="line"><a id="l00186" name="l00186"></a><span class="lineno"><a class="line" href="a00044.html#a0a7b7ea28b74799d356ca908c1a65b3e">  186</a></span><span class="preprocessor">#define MIRAICP_DATALOCK std::shared_lock&lt;std::shared_mutex&gt; TOKEN_PASTE(local_lck_, __LINE__)(InternalData-&gt;getMutex())</span></div>
-<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span> </div>
-<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span> </div>
-<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span><span class="comment">// getter</span></div>
-<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span><span class="comment">// need to define macro LOC_CLASS_NAMESPACE to the class first!</span></div>
-<div class="line"><a id="l00191" name="l00191"></a><span class="lineno"><a class="line" href="a00044.html#a4d1610a82ea971fe34e8bbc3a8e4482f">  191</a></span><span class="preprocessor">#define DECL_GETTER(type, attr) type attr();</span></div>
-<div class="line"><a id="l00192" name="l00192"></a><span class="lineno"><a class="line" href="a00044.html#ad4170428a925927fbb2312a07e19810d">  192</a></span><span class="preprocessor">#define IMPL_GETTER(attr)                                                          \</span></div>
-<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span><span class="preprocessor">    decltype(LOC_CLASS_NAMESPACE::DataType::_##attr) LOC_CLASS_NAMESPACE::attr() { \</span></div>
-<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span><span class="preprocessor">        InternalData-&gt;requestRefresh();                                            \</span></div>
-<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span><span class="preprocessor">        MIRAICP_DATALOCK;                                                          \</span></div>
-<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span><span class="preprocessor">        return GetDataInternal()-&gt;_##attr;                                         \</span></div>
-<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span><span class="preprocessor">    }</span></div>
-<div class="line"><a id="l00198" name="l00198"></a><span class="lineno"><a class="line" href="a00044.html#a108e06b136ffee3da2c3843952152586">  198</a></span><span class="preprocessor">#define NOLOCK_IMPL_GETTER(attr)                                                   \</span></div>
-<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span><span class="preprocessor">    decltype(LOC_CLASS_NAMESPACE::DataType::_##attr) LOC_CLASS_NAMESPACE::attr() { \</span></div>
-<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span><span class="preprocessor">        return GetDataInternal()-&gt;_##attr;                                         \</span></div>
-<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span><span class="preprocessor">    }</span></div>
-<div class="line"><a id="l00202" name="l00202"></a><span class="lineno"><a class="line" href="a00044.html#a17be62d7e0b9ec5a41fd88613e49f027">  202</a></span><span class="preprocessor">#define INLINE_GETTER(attr) \</span></div>
-<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span><span class="preprocessor">    auto attr() { return GetDataInternal()-&gt;_##attr; }</span></div>
-<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span> </div>
-<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span> </div>
-<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span><span class="comment">// api declarer</span></div>
-<div class="line"><a id="l00207" name="l00207"></a><span class="lineno"><a class="line" href="a00044.html#aef488f0ca9d4f56bcbe0d56fec3f4eba">  207</a></span><span class="preprocessor">#define DECL_API(x) decltype(&amp;x) _##x</span></div>
-<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span> </div>
-<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span> </div>
-<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span><span class="comment">// operator++ of iterable enum</span></div>
-<div class="line"><a id="l00211" name="l00211"></a><span class="lineno"><a class="line" href="a00044.html#a2f94bc6361f734dcaf4b045e253f12b4">  211</a></span><span class="preprocessor">#define MIRAICP_ITERABLE_ENUM_OPERATOR_PLUSPLUS \</span></div>
-<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span><span class="preprocessor">    inline Type &amp;operator++(Type &amp;value) {      \</span></div>
-<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span><span class="preprocessor">        value = (Type) ((int) value + 1);       \</span></div>
-<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span><span class="preprocessor">        return value;                           \</span></div>
-<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span><span class="preprocessor">    }                                           \</span></div>
-<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span><span class="preprocessor">    inline Type operator++(Type &amp;value, int) {  \</span></div>
-<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span><span class="preprocessor">        Type result = value;                    \</span></div>
-<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span><span class="preprocessor">        value = (Type) ((int) value + 1);       \</span></div>
-<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span><span class="preprocessor">        return result;                          \</span></div>
-<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span><span class="preprocessor">    }</span></div>
-<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span> </div>
-<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span> </div>
-<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span><span class="comment">// iterable enum</span></div>
-<div class="line"><a id="l00224" name="l00224"></a><span class="lineno"><a class="line" href="a00044.html#a319e05adbf3646676ebdf2dbdbe2a016">  224</a></span><span class="preprocessor">#define MIRAICP_ITERABLE_ENUM(BeginAt, First, ...) \</span></div>
-<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span><span class="preprocessor">    enum Type : int {                              \</span></div>
-<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span><span class="preprocessor">        First = BeginAt,                           \</span></div>
-<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span><span class="preprocessor">        ##__VA_ARGS__,                             \</span></div>
-<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span><span class="preprocessor">        Count,                                     \</span></div>
-<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span><span class="preprocessor">        Begin = BeginAt,                           \</span></div>
-<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span><span class="preprocessor">        End = Count,                               \</span></div>
-<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span><span class="preprocessor">    };                                             \</span></div>
-<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span><span class="preprocessor">    MIRAICP_ITERABLE_ENUM_OPERATOR_PLUSPLUS</span></div>
-<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span> </div>
-<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span> </div>
-<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span><span class="preprocessor">#endif </span><span class="comment">//MIRAICP_PRO_MIRAICPMACROS_H</span></div>
-<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span> </div>
-<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span><span class="preprocessor">#pragma clang diagnostic pop</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keyword">namespace </span><a class="code hl_namespace" href="a00412.html">MiraiCP</a> {</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="a00412.html#a5e92a4c931c8d67dcc35b7b9d5de0f4e">   25</a></span>    <span class="keyword">constexpr</span> <span class="keyword">const</span> <span class="keywordtype">char</span> *<a class="code hl_variable" href="a00412.html#a5e92a4c931c8d67dcc35b7b9d5de0f4e">m_MiraiCPVersion</a> = <span class="stringliteral">&quot;v2.16.0&quot;</span>;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="a00412.html#ae471c96f73a019b792a82629b6bdfdf5">   26</a></span>    <span class="keyword">inline</span> <span class="keyword">const</span> std::string <a class="code hl_variable" href="a00412.html#ae471c96f73a019b792a82629b6bdfdf5">MiraiCPVersion</a> = <a class="code hl_variable" href="a00412.html#a5e92a4c931c8d67dcc35b7b9d5de0f4e">m_MiraiCPVersion</a>;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="foldopen" id="foldopen00028" data-start="{" data-end="};">
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="a00444.html">   28</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="a00444.html">PluginConfig</a> {</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="a00444.html#a2c5e718b4b8ceb1cb2b5b8bbb876146a">   30</a></span>        <span class="keyword">const</span> <span class="keywordtype">char</span> *<span class="keywordtype">id</span> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="a00444.html#a2b542fc65ab1b1d6720bfcc1a9ce1602">   32</a></span>        <span class="keyword">const</span> <span class="keywordtype">char</span> *<a class="code hl_variable" href="a00444.html#a2b542fc65ab1b1d6720bfcc1a9ce1602">name</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="a00444.html#a5754922ee11dbea499f6454b86357d16">   34</a></span>        <span class="keyword">const</span> <span class="keywordtype">char</span> *<a class="code hl_variable" href="a00444.html#a5754922ee11dbea499f6454b86357d16">version</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="a00444.html#a6e9f61e66186687264c2020b1d6c3afe">   36</a></span>        <span class="keyword">const</span> <span class="keywordtype">char</span> *<a class="code hl_variable" href="a00444.html#a6e9f61e66186687264c2020b1d6c3afe">author</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="a00444.html#a6912f54ff186c8903ce5b55000bcbc6f">   38</a></span>        <span class="keyword">const</span> <span class="keywordtype">char</span> *<a class="code hl_variable" href="a00444.html#a6912f54ff186c8903ce5b55000bcbc6f">description</a> = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="a00444.html#a72f4752e10dc44b50911e80e37c924c2">   40</a></span>        <span class="keyword">const</span> <span class="keywordtype">char</span> *<a class="code hl_variable" href="a00444.html#a72f4752e10dc44b50911e80e37c924c2">time</a> = __DATE__;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="a00444.html#a3c74ed2b89e386c82452f1b510d99c57">   41</a></span>        <span class="keyword">const</span> <span class="keywordtype">char</span> *<a class="code hl_variable" href="a00444.html#a3c74ed2b89e386c82452f1b510d99c57">mversion</a> = <a class="code hl_variable" href="a00412.html#a5e92a4c931c8d67dcc35b7b9d5de0f4e">m_MiraiCPVersion</a>;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="foldopen" id="foldopen00043" data-start="{" data-end="}">
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="a00444.html#a812cdc9b9e9c46af8980f1aea9a4233c">   43</a></span>        [[nodiscard]] std::string <a class="code hl_function" href="a00444.html#a812cdc9b9e9c46af8980f1aea9a4233c">getId</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>            <span class="keywordflow">return</span> {<span class="keywordtype">id</span>};</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        }</div>
+</div>
+<div class="foldopen" id="foldopen00046" data-start="{" data-end="}">
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="a00444.html#a75b62773306f64d5de37fc60f700b534">   46</a></span>        [[nodiscard]] std::string <a class="code hl_function" href="a00444.html#a75b62773306f64d5de37fc60f700b534">getName</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>            <span class="keywordflow">return</span> {<a class="code hl_variable" href="a00444.html#a2b542fc65ab1b1d6720bfcc1a9ce1602">name</a>};</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        }</div>
+</div>
+<div class="foldopen" id="foldopen00049" data-start="{" data-end="}">
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="a00444.html#a8f0131520e982b41e3c62364b9eaf2fa">   49</a></span>        [[nodiscard]] std::string <a class="code hl_function" href="a00444.html#a8f0131520e982b41e3c62364b9eaf2fa">getVersion</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            <span class="keywordflow">return</span> {<a class="code hl_variable" href="a00444.html#a5754922ee11dbea499f6454b86357d16">version</a>};</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        }</div>
+</div>
+<div class="foldopen" id="foldopen00052" data-start="{" data-end="}">
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="a00444.html#abfdf0bbad2700204a5deced1ff272ff2">   52</a></span>        [[nodiscard]] std::string <a class="code hl_function" href="a00444.html#abfdf0bbad2700204a5deced1ff272ff2">getAuthor</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>            <span class="keywordflow">return</span> {<a class="code hl_variable" href="a00444.html#a6e9f61e66186687264c2020b1d6c3afe">author</a>};</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        }</div>
+</div>
+<div class="foldopen" id="foldopen00055" data-start="{" data-end="}">
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="a00444.html#a7164279987822e9aab5a2dd15e017de3">   55</a></span>        [[nodiscard]] std::string <a class="code hl_function" href="a00444.html#a7164279987822e9aab5a2dd15e017de3">getDescription</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>            <span class="keywordflow">return</span> {<a class="code hl_variable" href="a00444.html#a6912f54ff186c8903ce5b55000bcbc6f">description</a>};</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        }</div>
+</div>
+<div class="foldopen" id="foldopen00058" data-start="{" data-end="}">
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="a00444.html#aa9519385a55e29fa632d31d97b734ac4">   58</a></span>        [[nodiscard]] std::string <a class="code hl_function" href="a00444.html#aa9519385a55e29fa632d31d97b734ac4">getTime</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>            <span class="keywordflow">return</span> {<a class="code hl_variable" href="a00444.html#a72f4752e10dc44b50911e80e37c924c2">time</a>};</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        }</div>
+</div>
+<div class="foldopen" id="foldopen00061" data-start="{" data-end="}">
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="a00444.html#a89f1f77ffc39dfa0481e7c1ddc318b23">   61</a></span>        [[nodiscard]] std::string <a class="code hl_function" href="a00444.html#a89f1f77ffc39dfa0481e7c1ddc318b23">getMVersion</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>            <span class="keywordflow">return</span> {<a class="code hl_variable" href="a00444.html#a3c74ed2b89e386c82452f1b510d99c57">mversion</a>};</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        }</div>
+</div>
+<div class="foldopen" id="foldopen00064" data-start="{" data-end="}">
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="a00444.html#a37c32e82eb4c921a9f66db00cc7a0010">   64</a></span>        [[nodiscard]] <span class="keywordtype">bool</span> <a class="code hl_function" href="a00444.html#a37c32e82eb4c921a9f66db00cc7a0010">isValid</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>            <span class="keywordflow">return</span> <span class="keywordtype">id</span> &amp;&amp; <a class="code hl_variable" href="a00444.html#a2b542fc65ab1b1d6720bfcc1a9ce1602">name</a> &amp;&amp; <a class="code hl_variable" href="a00444.html#a5754922ee11dbea499f6454b86357d16">version</a> &amp;&amp; <a class="code hl_variable" href="a00444.html#a6e9f61e66186687264c2020b1d6c3afe">author</a>;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        }</div>
+</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    };</div>
+</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>} <span class="comment">// namespace MiraiCP</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="preprocessor">#endif </span><span class="comment">//MIRAICP_PRO_PLUGINCONFIG_H</span></div>
+<div class="ttc" id="aa00412_html"><div class="ttname"><a href="a00412.html">MiraiCP</a></div><div class="ttdef"><b>Definition</b> <a href="a00050_source.html#l00021">JsonTools.h:21</a></div></div>
+<div class="ttc" id="aa00412_html_a5e92a4c931c8d67dcc35b7b9d5de0f4e"><div class="ttname"><a href="a00412.html#a5e92a4c931c8d67dcc35b7b9d5de0f4e">MiraiCP::m_MiraiCPVersion</a></div><div class="ttdeci">constexpr const char * m_MiraiCPVersion</div><div class="ttdef"><b>Definition</b> <a href="a00044_source.html#l00025">PluginConfig.h:25</a></div></div>
+<div class="ttc" id="aa00412_html_ae471c96f73a019b792a82629b6bdfdf5"><div class="ttname"><a href="a00412.html#ae471c96f73a019b792a82629b6bdfdf5">MiraiCP::MiraiCPVersion</a></div><div class="ttdeci">const std::string MiraiCPVersion</div><div class="ttdef"><b>Definition</b> <a href="a00044_source.html#l00026">PluginConfig.h:26</a></div></div>
+<div class="ttc" id="aa00444_html"><div class="ttname"><a href="a00444.html">MiraiCP::PluginConfig</a></div><div class="ttdef"><b>Definition</b> <a href="a00044_source.html#l00028">PluginConfig.h:28</a></div></div>
+<div class="ttc" id="aa00444_html_a2b542fc65ab1b1d6720bfcc1a9ce1602"><div class="ttname"><a href="a00444.html#a2b542fc65ab1b1d6720bfcc1a9ce1602">MiraiCP::PluginConfig::name</a></div><div class="ttdeci">const char * name</div><div class="ttdoc">插件名称</div><div class="ttdef"><b>Definition</b> <a href="a00044_source.html#l00032">PluginConfig.h:32</a></div></div>
+<div class="ttc" id="aa00444_html_a37c32e82eb4c921a9f66db00cc7a0010"><div class="ttname"><a href="a00444.html#a37c32e82eb4c921a9f66db00cc7a0010">MiraiCP::PluginConfig::isValid</a></div><div class="ttdeci">bool isValid() const</div><div class="ttdef"><b>Definition</b> <a href="a00044_source.html#l00064">PluginConfig.h:64</a></div></div>
+<div class="ttc" id="aa00444_html_a3c74ed2b89e386c82452f1b510d99c57"><div class="ttname"><a href="a00444.html#a3c74ed2b89e386c82452f1b510d99c57">MiraiCP::PluginConfig::mversion</a></div><div class="ttdeci">const char * mversion</div><div class="ttdef"><b>Definition</b> <a href="a00044_source.html#l00041">PluginConfig.h:41</a></div></div>
+<div class="ttc" id="aa00444_html_a5754922ee11dbea499f6454b86357d16"><div class="ttname"><a href="a00444.html#a5754922ee11dbea499f6454b86357d16">MiraiCP::PluginConfig::version</a></div><div class="ttdeci">const char * version</div><div class="ttdoc">插件版本</div><div class="ttdef"><b>Definition</b> <a href="a00044_source.html#l00034">PluginConfig.h:34</a></div></div>
+<div class="ttc" id="aa00444_html_a6912f54ff186c8903ce5b55000bcbc6f"><div class="ttname"><a href="a00444.html#a6912f54ff186c8903ce5b55000bcbc6f">MiraiCP::PluginConfig::description</a></div><div class="ttdeci">const char * description</div><div class="ttdoc">[optional]插件描述</div><div class="ttdef"><b>Definition</b> <a href="a00044_source.html#l00038">PluginConfig.h:38</a></div></div>
+<div class="ttc" id="aa00444_html_a6e9f61e66186687264c2020b1d6c3afe"><div class="ttname"><a href="a00444.html#a6e9f61e66186687264c2020b1d6c3afe">MiraiCP::PluginConfig::author</a></div><div class="ttdeci">const char * author</div><div class="ttdoc">插件作者(及联系方式)</div><div class="ttdef"><b>Definition</b> <a href="a00044_source.html#l00036">PluginConfig.h:36</a></div></div>
+<div class="ttc" id="aa00444_html_a7164279987822e9aab5a2dd15e017de3"><div class="ttname"><a href="a00444.html#a7164279987822e9aab5a2dd15e017de3">MiraiCP::PluginConfig::getDescription</a></div><div class="ttdeci">std::string getDescription() const</div><div class="ttdef"><b>Definition</b> <a href="a00044_source.html#l00055">PluginConfig.h:55</a></div></div>
+<div class="ttc" id="aa00444_html_a72f4752e10dc44b50911e80e37c924c2"><div class="ttname"><a href="a00444.html#a72f4752e10dc44b50911e80e37c924c2">MiraiCP::PluginConfig::time</a></div><div class="ttdeci">const char * time</div><div class="ttdoc">[optional]构建时间, 默认为__DATE__宏</div><div class="ttdef"><b>Definition</b> <a href="a00044_source.html#l00040">PluginConfig.h:40</a></div></div>
+<div class="ttc" id="aa00444_html_a75b62773306f64d5de37fc60f700b534"><div class="ttname"><a href="a00444.html#a75b62773306f64d5de37fc60f700b534">MiraiCP::PluginConfig::getName</a></div><div class="ttdeci">std::string getName() const</div><div class="ttdef"><b>Definition</b> <a href="a00044_source.html#l00046">PluginConfig.h:46</a></div></div>
+<div class="ttc" id="aa00444_html_a812cdc9b9e9c46af8980f1aea9a4233c"><div class="ttname"><a href="a00444.html#a812cdc9b9e9c46af8980f1aea9a4233c">MiraiCP::PluginConfig::getId</a></div><div class="ttdeci">std::string getId() const</div><div class="ttdef"><b>Definition</b> <a href="a00044_source.html#l00043">PluginConfig.h:43</a></div></div>
+<div class="ttc" id="aa00444_html_a89f1f77ffc39dfa0481e7c1ddc318b23"><div class="ttname"><a href="a00444.html#a89f1f77ffc39dfa0481e7c1ddc318b23">MiraiCP::PluginConfig::getMVersion</a></div><div class="ttdeci">std::string getMVersion() const</div><div class="ttdef"><b>Definition</b> <a href="a00044_source.html#l00061">PluginConfig.h:61</a></div></div>
+<div class="ttc" id="aa00444_html_a8f0131520e982b41e3c62364b9eaf2fa"><div class="ttname"><a href="a00444.html#a8f0131520e982b41e3c62364b9eaf2fa">MiraiCP::PluginConfig::getVersion</a></div><div class="ttdeci">std::string getVersion() const</div><div class="ttdef"><b>Definition</b> <a href="a00044_source.html#l00049">PluginConfig.h:49</a></div></div>
+<div class="ttc" id="aa00444_html_aa9519385a55e29fa632d31d97b734ac4"><div class="ttname"><a href="a00444.html#aa9519385a55e29fa632d31d97b734ac4">MiraiCP::PluginConfig::getTime</a></div><div class="ttdeci">std::string getTime() const</div><div class="ttdef"><b>Definition</b> <a href="a00044_source.html#l00058">PluginConfig.h:58</a></div></div>
+<div class="ttc" id="aa00444_html_abfdf0bbad2700204a5deced1ff272ff2"><div class="ttname"><a href="a00444.html#abfdf0bbad2700204a5deced1ff272ff2">MiraiCP::PluginConfig::getAuthor</a></div><div class="ttdeci">std::string getAuthor() const</div><div class="ttdef"><b>Definition</b> <a href="a00044_source.html#l00052">PluginConfig.h:52</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_0966d06610f72609fd9aa4979c2b5a92.html">common</a></li><li class="navelem"><a class="el" href="a00044.html">MiraiCPMacros.h</a></li>
-    <li class="footer">生成于 2023年 四月 10日 星期一 00:26:27 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_0966d06610f72609fd9aa4979c2b5a92.html">common</a></li><li class="navelem"><a class="el" href="a00044.html">PluginConfig.h</a></li>
+    <li class="footer">生成于 2023年 十月 26日 星期四 01:16:24 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
     </body>

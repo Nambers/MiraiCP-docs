@@ -1,19 +1,9 @@
 var a00612 =
 [
-    [ "Handler", "a00616.html", "a00616" ],
-    [ "Action", "a00612.html#ac8323ef8b0f1c81161e08c4fded239a3", null ],
-    [ "string", "a00612.html#a22429d5974d2c062b424e0c0297cb897", null ],
-    [ "constructString", "a00612.html#a98af60f864a0446e23a7a27a3419d9b8", null ],
-    [ "constructString", "a00612.html#a6fc013dec8ee317a216c45f93a2d9982", null ],
-    [ "constructString", "a00612.html#a4f54713cf68074f61904f8b448c6343b", null ],
-    [ "constructString", "a00612.html#a10c521c602773c530f954f89c5a902e5", null ],
-    [ "create_loggerhandler", "a00612.html#a441ed3ac3e378e79b62361e083bf3685", null ],
-    [ "error", "a00612.html#af14d39efa300da183070784bc86d3f23", null ],
-    [ "handler_trigger", "a00612.html#a38fe440d115714de3600d804eed00d99", null ],
-    [ "info", "a00612.html#ade15a5c23198ffcb4454a28356e78759", null ],
-    [ "log_interface", "a00612.html#a86ea9d57475a3004be2a32b2c4c76371", null ],
-    [ "registerHandle", "a00612.html#aa3e0ad0c5771cee4583b577981105114", null ],
-    [ "setHandleState", "a00612.html#a3ed1680508618b446c94ed004c211ea9", null ],
-    [ "warning", "a00612.html#a279a66d53b8b825f4a9ebc8fe30f20d6", null ],
-    [ "loggerhandler", "a00612.html#aa2cef9d88413bc71130c172b32a7bc25", null ]
+    [ "serializeToJson", "a00612.html#ac87021b1e71d8d3334c4d197813924bc", null ],
+    [ "pinned", "a00612.html#abfa445e7bc7a473d8087f777a94fbcff", null ],
+    [ "requireConfirm", "a00612.html#a702e717f3086f1ca822d349414fc8c8e", null ],
+    [ "send2new", "a00612.html#ab7a145bce1fe597160ee3d8eea47f3e4", null ],
+    [ "showEditCard", "a00612.html#a0c09d02f79d2e1dbb05b31766a50c421", null ],
+    [ "showPopup", "a00612.html#ab86441351cdabc0ce64f9a27cd4fb365", null ]
 ];

@@ -1,0 +1,909 @@
+<!-- HTML header for doxygen 1.9.1-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>MiraiCP: LibLoader::LoaderMain类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+ <script type="text/javascript">
+      DoxygenAwesomeDarkModeToggle.init()
+</script>
+</head>
+<body>
+<a href="https://github.com/Nambers/MiraiCP" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#64CEAA; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">MiraiCP
+   &#160;<span id="projectnumber">v2.16.0</span>
+   </div>
+   <div id="projectbrief">MiraiCP api document</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('a00880.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="#pri-methods">Private 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="a00877.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">LibLoader::LoaderMain类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="a00266_source.html">loaderMain.h</a>&gt;</code></p>
+<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> LibLoader::LoaderMain 的协作图:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00878.svg" width="510" height="523"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a6f64cf5a04eb79ed0e3080aed30aa711" id="r_a6f64cf5a04eb79ed0e3080aed30aa711"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00880.html#a6f64cf5a04eb79ed0e3080aed30aa711">is_loader_exited</a> () const</td></tr>
+<tr class="separator:a6f64cf5a04eb79ed0e3080aed30aa711"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec84fa3b93bdf0829d86415cf329ffe3" id="r_aec84fa3b93bdf0829d86415cf329ffe3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00880.html#aec84fa3b93bdf0829d86415cf329ffe3">loaderExit</a> ()</td></tr>
+<tr class="separator:aec84fa3b93bdf0829d86415cf329ffe3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79cbc18aabed7afe2c7ea30f989ffc8c" id="r_a79cbc18aabed7afe2c7ea30f989ffc8c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00880.html#a79cbc18aabed7afe2c7ea30f989ffc8c">loaderMain</a> ()</td></tr>
+<tr class="memdesc:a79cbc18aabed7afe2c7ea30f989ffc8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">LoaderMain实现开始  <br /></td></tr>
+<tr class="separator:a79cbc18aabed7afe2c7ea30f989ffc8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f17320f76d8e70d493deb075fc532d7" id="r_a7f17320f76d8e70d493deb075fc532d7"><td class="memItemLeft" align="right" valign="top">auto &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00880.html#a7f17320f76d8e70d493deb075fc532d7">get_cv</a> ()</td></tr>
+<tr class="separator:a7f17320f76d8e70d493deb075fc532d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8fb1a9402e7d723e6294ee6750ce11f8" id="r_a8fb1a9402e7d723e6294ee6750ce11f8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00880.html#a8fb1a9402e7d723e6294ee6750ce11f8">setConfigPath</a> (const std::string &amp;in_config_path)</td></tr>
+<tr class="separator:a8fb1a9402e7d723e6294ee6750ce11f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:a22eacbd6aa585f32d0fccce0a69ab642" id="r_a22eacbd6aa585f32d0fccce0a69ab642"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="a00880.html">LoaderMain</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00880.html#a22eacbd6aa585f32d0fccce0a69ab642">get</a> ()</td></tr>
+<tr class="separator:a22eacbd6aa585f32d0fccce0a69ab642"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:a9ca8ba2c9fcbfade9adf4a0a2bb47eaa" id="r_a9ca8ba2c9fcbfade9adf4a0a2bb47eaa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00880.html#a9ca8ba2c9fcbfade9adf4a0a2bb47eaa">mainloop</a> () const noexcept</td></tr>
+<tr class="separator:a9ca8ba2c9fcbfade9adf4a0a2bb47eaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d477440277d3907b96261db3a222d96" id="r_a6d477440277d3907b96261db3a222d96"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00880.html#a6d477440277d3907b96261db3a222d96">shutdownLoader</a> ()</td></tr>
+<tr class="separator:a6d477440277d3907b96261db3a222d96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2dac3324ec614040340dcb2a5c76110" id="r_aa2dac3324ec614040340dcb2a5c76110"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00880.html#aa2dac3324ec614040340dcb2a5c76110">tick</a> () const noexcept</td></tr>
+<tr class="separator:aa2dac3324ec614040340dcb2a5c76110"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb67a1dbb48fb151a7f581fcd2afa2e5" id="r_adb67a1dbb48fb151a7f581fcd2afa2e5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00880.html#adb67a1dbb48fb151a7f581fcd2afa2e5">process_task_queue</a> () const</td></tr>
+<tr class="separator:adb67a1dbb48fb151a7f581fcd2afa2e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e92ea42b2356d4e4c1e5b000ae31c1c" id="r_a6e92ea42b2356d4e4c1e5b000ae31c1c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00880.html#a6e92ea42b2356d4e4c1e5b000ae31c1c">readConfig</a> ()</td></tr>
+<tr class="separator:a6e92ea42b2356d4e4c1e5b000ae31c1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a348439e27d1a976dd143da7a8b8b0de9" id="r_a348439e27d1a976dd143da7a8b8b0de9"><td class="memItemLeft" align="right" valign="top">volatile bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00880.html#a348439e27d1a976dd143da7a8b8b0de9">loader_exit</a> = false</td></tr>
+<tr class="separator:a348439e27d1a976dd143da7a8b8b0de9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade323ba8f9e6d1fd184346fdd88227d6" id="r_ade323ba8f9e6d1fd184346fdd88227d6"><td class="memItemLeft" align="right" valign="top">std::condition_variable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00880.html#ade323ba8f9e6d1fd184346fdd88227d6">cv</a></td></tr>
+<tr class="separator:ade323ba8f9e6d1fd184346fdd88227d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73f97e660db4d60fd257ccc4b4dac522" id="r_a73f97e660db4d60fd257ccc4b4dac522"><td class="memItemLeft" align="right" valign="top">std::mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00880.html#a73f97e660db4d60fd257ccc4b4dac522">loaderCVLock</a></td></tr>
+<tr class="separator:a73f97e660db4d60fd257ccc4b4dac522"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ca3ba0c79f091eb5c390f623f618f71" id="r_a8ca3ba0c79f091eb5c390f623f618f71"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00880.html#a8ca3ba0c79f091eb5c390f623f618f71">config_path</a></td></tr>
+<tr class="separator:a8ca3ba0c79f091eb5c390f623f618f71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72091c85e213a8ee55fb2dd9128907b7" id="r_a72091c85e213a8ee55fb2dd9128907b7"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00880.html#a72091c85e213a8ee55fb2dd9128907b7">tickRate</a> = 100</td></tr>
+<tr class="separator:a72091c85e213a8ee55fb2dd9128907b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock">
+<p class="definition">在文件 <a class="el" href="a00266_source.html">loaderMain.h</a> 第 <a class="el" href="a00266_source.html#l00026">26</a> 行定义.</p>
+</div><h2 class="groupheader">成员函数说明</h2>
+<a id="a22eacbd6aa585f32d0fccce0a69ab642" name="a22eacbd6aa585f32d0fccce0a69ab642"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22eacbd6aa585f32d0fccce0a69ab642">&#9670;&#160;</a></span>get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00880.html">LoaderMain</a> &amp; LibLoader::LoaderMain::get </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="a00281_source.html">loaderMain.cpp</a> 第 <a class="el" href="a00281_source.html#l00051">51</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">   51</span>                                {</div>
+<div class="line"><span class="lineno">   52</span>        <span class="keyword">static</span> LoaderMain <a class="code hl_function" href="a00880.html#a79cbc18aabed7afe2c7ea30f989ffc8c">loaderMain</a>;</div>
+<div class="line"><span class="lineno">   53</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="a00880.html#a79cbc18aabed7afe2c7ea30f989ffc8c">loaderMain</a>;</div>
+<div class="line"><span class="lineno">   54</span>    }</div>
+<div class="ttc" id="aa00880_html_a79cbc18aabed7afe2c7ea30f989ffc8c"><div class="ttname"><a href="a00880.html#a79cbc18aabed7afe2c7ea30f989ffc8c">LibLoader::LoaderMain::loaderMain</a></div><div class="ttdeci">void loaderMain()</div><div class="ttdoc">LoaderMain实现开始</div><div class="ttdef"><b>Definition</b> <a href="a00281_source.html#l00062">loaderMain.cpp:62</a></div></div>
+</div><!-- fragment --><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> 函数调用图:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00880_a22eacbd6aa585f32d0fccce0a69ab642_cgraph.svg" width="4246" height="2055"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-2-trigger" src="closed.png" alt="+"/> 这是这个函数的调用关系图:</div>
+<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-2-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00880_a22eacbd6aa585f32d0fccce0a69ab642_icgraph.svg" width="2011" height="478"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a7f17320f76d8e70d493deb075fc532d7" name="a7f17320f76d8e70d493deb075fc532d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f17320f76d8e70d493deb075fc532d7">&#9670;&#160;</a></span>get_cv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto &amp; LibLoader::LoaderMain::get_cv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="a00266_source.html">loaderMain.h</a> 第 <a class="el" href="a00266_source.html#l00053">53</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">   53</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="a00880.html#ade323ba8f9e6d1fd184346fdd88227d6">cv</a>; }</div>
+<div class="ttc" id="aa00880_html_ade323ba8f9e6d1fd184346fdd88227d6"><div class="ttname"><a href="a00880.html#ade323ba8f9e6d1fd184346fdd88227d6">LibLoader::LoaderMain::cv</a></div><div class="ttdeci">std::condition_variable cv</div><div class="ttdef"><b>Definition</b> <a href="a00266_source.html#l00028">loaderMain.h:28</a></div></div>
+</div><!-- fragment --><div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-3-trigger" src="closed.png" alt="+"/> 这是这个函数的调用关系图:</div>
+<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-3-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00880_a7f17320f76d8e70d493deb075fc532d7_icgraph.svg" width="2306" height="363"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a6f64cf5a04eb79ed0e3080aed30aa711" name="a6f64cf5a04eb79ed0e3080aed30aa711"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f64cf5a04eb79ed0e3080aed30aa711">&#9670;&#160;</a></span>is_loader_exited()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool LibLoader::LoaderMain::is_loader_exited </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="a00266_source.html">loaderMain.h</a> 第 <a class="el" href="a00266_source.html#l00047">47</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">   47</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="a00880.html#a348439e27d1a976dd143da7a8b8b0de9">loader_exit</a>; }</div>
+<div class="ttc" id="aa00880_html_a348439e27d1a976dd143da7a8b8b0de9"><div class="ttname"><a href="a00880.html#a348439e27d1a976dd143da7a8b8b0de9">LibLoader::LoaderMain::loader_exit</a></div><div class="ttdeci">volatile bool loader_exit</div><div class="ttdef"><b>Definition</b> <a href="a00266_source.html#l00027">loaderMain.h:27</a></div></div>
+</div><!-- fragment --><div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-4-trigger" src="closed.png" alt="+"/> 这是这个函数的调用关系图:</div>
+<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-4-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00880_a6f64cf5a04eb79ed0e3080aed30aa711_icgraph.svg" width="1982" height="410"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="aec84fa3b93bdf0829d86415cf329ffe3" name="aec84fa3b93bdf0829d86415cf329ffe3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec84fa3b93bdf0829d86415cf329ffe3">&#9670;&#160;</a></span>loaderExit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LibLoader::LoaderMain::loaderExit </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="a00266_source.html">loaderMain.h</a> 第 <a class="el" href="a00266_source.html#l00049">49</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">   49</span>{ <a class="code hl_variable" href="a00880.html#a348439e27d1a976dd143da7a8b8b0de9">loader_exit</a> = <span class="keyword">true</span>; }</div>
+</div><!-- fragment --><div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-5-trigger" src="closed.png" alt="+"/> 这是这个函数的调用关系图:</div>
+<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-5-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00880_aec84fa3b93bdf0829d86415cf329ffe3_icgraph.svg" width="487" height="54"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a79cbc18aabed7afe2c7ea30f989ffc8c" name="a79cbc18aabed7afe2c7ea30f989ffc8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79cbc18aabed7afe2c7ea30f989ffc8c">&#9670;&#160;</a></span>loaderMain()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LibLoader::LoaderMain::loaderMain </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>LoaderMain实现开始 </p>
+
+<p class="definition">在文件 <a class="el" href="a00281_source.html">loaderMain.cpp</a> 第 <a class="el" href="a00281_source.html#l00062">62</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">   62</span>                                {</div>
+<div class="line"><span class="lineno">   63</span>        <a class="code hl_function" href="a00433.html#ad607328dd0f3a6cb59e4805057a406e4">ThreadIdentify::IAmLoaderThread</a>();</div>
+<div class="line"><span class="lineno">   64</span>        <a class="code hl_variable" href="a00425.html#af1031cef14711c6b7ed3805fe6d17d81">logger</a>.<a class="code hl_function" href="a00872.html#a0d34d5ca7783c370ec08dbbb44876c1b">info</a>(<span class="stringliteral">&quot;libLoader thread start&quot;</span>);</div>
+<div class="line"><span class="lineno">   65</span>        <a class="code hl_function" href="a00880.html#a6e92ea42b2356d4e4c1e5b000ae31c1c">readConfig</a>();</div>
+<div class="line"><span class="lineno">   66</span>        <span class="keywordflow">if</span> (!<a class="code hl_variable" href="a00434.html#a343ec36721fc4bf72fd64e712c71ad1d">Antares::pool</a>) <a class="code hl_variable" href="a00434.html#a343ec36721fc4bf72fd64e712c71ad1d">Antares::pool</a> = std::make_unique&lt;Antares::ThreadPool&lt;&gt;&gt;();</div>
+<div class="line"><span class="lineno">   67</span> </div>
+<div class="line"><span class="lineno">   68</span> </div>
+<div class="line"><span class="lineno">   69</span>        <a class="code hl_function" href="a00928.html#a39ce5601eee168a69cab158349412c3e">PluginManager::Get</a>().<a class="code hl_function" href="a00928.html#a30717b50a1c2847e4990f2883dd2ba11">enableAll</a>();</div>
+<div class="line"><span class="lineno">   70</span> </div>
+<div class="line"><span class="lineno">   71</span>        <a class="code hl_function" href="a00884.html#a4b6579b6241cbd61f0c2cdbb30686168">MessageManager::get</a>().<a class="code hl_function" href="a00884.html#ac95c9bf6b208cbeab2e9b1cdfcb7c3d6">init</a>(&amp;<a class="code hl_function" href="a00892.html#a8866b7806c1c5254aff739338a8a398b">MessageProcessor::get</a>());</div>
+<div class="line"><span class="lineno">   72</span> </div>
+<div class="line"><span class="lineno">   73</span>        <span class="keywordflow">while</span> (!<a class="code hl_function" href="a00880.html#a6f64cf5a04eb79ed0e3080aed30aa711">is_loader_exited</a>()) <a class="code hl_function" href="a00880.html#a9ca8ba2c9fcbfade9adf4a0a2bb47eaa">mainloop</a>();</div>
+<div class="line"><span class="lineno">   74</span> </div>
+<div class="line"><span class="lineno">   75</span>        <a class="code hl_function" href="a00880.html#a6d477440277d3907b96261db3a222d96">shutdownLoader</a>();</div>
+<div class="line"><span class="lineno">   76</span> </div>
+<div class="line"><span class="lineno">   77</span>        <a class="code hl_variable" href="a00434.html#a343ec36721fc4bf72fd64e712c71ad1d">Antares::pool</a>.reset();</div>
+<div class="line"><span class="lineno">   78</span>    }</div>
+<div class="ttc" id="aa00425_html_af1031cef14711c6b7ed3805fe6d17d81"><div class="ttname"><a href="a00425.html#af1031cef14711c6b7ed3805fe6d17d81">LibLoader::logger</a></div><div class="ttdeci">LibLoader::LoaderLogger logger</div><div class="ttdef"><b>Definition</b> <a href="a00221_source.html#l00028">LoaderLogger.cpp:28</a></div></div>
+<div class="ttc" id="aa00433_html_ad607328dd0f3a6cb59e4805057a406e4"><div class="ttname"><a href="a00433.html#ad607328dd0f3a6cb59e4805057a406e4">ThreadIdentify::IAmLoaderThread</a></div><div class="ttdeci">void IAmLoaderThread()</div><div class="ttdef"><b>Definition</b> <a href="a00236_source.html#l00073">ThreadIdentify.cpp:73</a></div></div>
+<div class="ttc" id="aa00434_html_a343ec36721fc4bf72fd64e712c71ad1d"><div class="ttname"><a href="a00434.html#a343ec36721fc4bf72fd64e712c71ad1d">Antares::pool</a></div><div class="ttdeci">std::unique_ptr&lt; ThreadPool&lt;&gt; &gt; pool</div><div class="ttdef"><b>Definition</b> <a href="a00212_source.html#l00246">ThreadPool.h:246</a></div></div>
+<div class="ttc" id="aa00872_html_a0d34d5ca7783c370ec08dbbb44876c1b"><div class="ttname"><a href="a00872.html#a0d34d5ca7783c370ec08dbbb44876c1b">LibLoader::LoaderLogger::info</a></div><div class="ttdeci">void info(const string &amp;) const</div><div class="ttdef"><b>Definition</b> <a href="a00221_source.html#l00034">LoaderLogger.cpp:34</a></div></div>
+<div class="ttc" id="aa00880_html_a6d477440277d3907b96261db3a222d96"><div class="ttname"><a href="a00880.html#a6d477440277d3907b96261db3a222d96">LibLoader::LoaderMain::shutdownLoader</a></div><div class="ttdeci">void shutdownLoader()</div><div class="ttdef"><b>Definition</b> <a href="a00281_source.html#l00152">loaderMain.cpp:152</a></div></div>
+<div class="ttc" id="aa00880_html_a6e92ea42b2356d4e4c1e5b000ae31c1c"><div class="ttname"><a href="a00880.html#a6e92ea42b2356d4e4c1e5b000ae31c1c">LibLoader::LoaderMain::readConfig</a></div><div class="ttdeci">void readConfig()</div><div class="ttdef"><b>Definition</b> <a href="a00281_source.html#l00210">loaderMain.cpp:210</a></div></div>
+<div class="ttc" id="aa00880_html_a6f64cf5a04eb79ed0e3080aed30aa711"><div class="ttname"><a href="a00880.html#a6f64cf5a04eb79ed0e3080aed30aa711">LibLoader::LoaderMain::is_loader_exited</a></div><div class="ttdeci">bool is_loader_exited() const</div><div class="ttdef"><b>Definition</b> <a href="a00266_source.html#l00047">loaderMain.h:47</a></div></div>
+<div class="ttc" id="aa00880_html_a9ca8ba2c9fcbfade9adf4a0a2bb47eaa"><div class="ttname"><a href="a00880.html#a9ca8ba2c9fcbfade9adf4a0a2bb47eaa">LibLoader::LoaderMain::mainloop</a></div><div class="ttdeci">void mainloop() const noexcept</div><div class="ttdef"><b>Definition</b> <a href="a00281_source.html#l00132">loaderMain.cpp:132</a></div></div>
+<div class="ttc" id="aa00884_html_a4b6579b6241cbd61f0c2cdbb30686168"><div class="ttname"><a href="a00884.html#a4b6579b6241cbd61f0c2cdbb30686168">LibLoader::MessageManager::get</a></div><div class="ttdeci">static MessageManager &amp; get()</div><div class="ttdef"><b>Definition</b> <a href="a00308_source.html#l00024">MessageManager.cpp:24</a></div></div>
+<div class="ttc" id="aa00884_html_ac95c9bf6b208cbeab2e9b1cdfcb7c3d6"><div class="ttname"><a href="a00884.html#ac95c9bf6b208cbeab2e9b1cdfcb7c3d6">LibLoader::MessageManager::init</a></div><div class="ttdeci">void init(MessageProcessor *in_processor)</div><div class="ttdef"><b>Definition</b> <a href="a00308_source.html#l00040">MessageManager.cpp:40</a></div></div>
+<div class="ttc" id="aa00892_html_a8866b7806c1c5254aff739338a8a398b"><div class="ttname"><a href="a00892.html#a8866b7806c1c5254aff739338a8a398b">LibLoader::MessageProcessor::get</a></div><div class="ttdeci">static MessageProcessor &amp; get()</div><div class="ttdoc">MessageProcessor</div><div class="ttdef"><b>Definition</b> <a href="a00302_source.html#l00031">MessageProcessor.cpp:31</a></div></div>
+<div class="ttc" id="aa00928_html_a30717b50a1c2847e4990f2883dd2ba11"><div class="ttname"><a href="a00928.html#a30717b50a1c2847e4990f2883dd2ba11">LibLoader::PluginManager::enableAll</a></div><div class="ttdeci">void enableAll()</div><div class="ttdef"><b>Definition</b> <a href="a00263_source.html#l00189">PluginManager.cpp:189</a></div></div>
+<div class="ttc" id="aa00928_html_a39ce5601eee168a69cab158349412c3e"><div class="ttname"><a href="a00928.html#a39ce5601eee168a69cab158349412c3e">LibLoader::PluginManager::Get</a></div><div class="ttdeci">static PluginManager &amp; Get()</div><div class="ttdef"><b>Definition</b> <a href="a00284_source.html#l00042">PluginManager.h:42</a></div></div>
+</div><!-- fragment --><div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-6-trigger" src="closed.png" alt="+"/> 函数调用图:</div>
+<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-6-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00880_a79cbc18aabed7afe2c7ea30f989ffc8c_cgraph.svg" width="4026" height="2115"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-7-trigger" src="closed.png" alt="+"/> 这是这个函数的调用关系图:</div>
+<div id="dynsection-7-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-7-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00880_a79cbc18aabed7afe2c7ea30f989ffc8c_icgraph.svg" width="1782" height="376"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a9ca8ba2c9fcbfade9adf4a0a2bb47eaa" name="a9ca8ba2c9fcbfade9adf4a0a2bb47eaa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ca8ba2c9fcbfade9adf4a0a2bb47eaa">&#9670;&#160;</a></span>mainloop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LibLoader::LoaderMain::mainloop </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="a00281_source.html">loaderMain.cpp</a> 第 <a class="el" href="a00281_source.html#l00132">132</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  132</span>                                             {</div>
+<div class="line"><span class="lineno">  133</span>        <span class="keyword">auto</span> tick_time = std::chrono::microseconds(<a class="code hl_variable" href="a00281.html#afab67516ca0a1569c9c6a978e874c5fc">US_IN_SEC</a> / <a class="code hl_variable" href="a00880.html#a72091c85e213a8ee55fb2dd9128907b7">tickRate</a>);</div>
+<div class="line"><span class="lineno">  134</span>        <span class="keyword">using </span>Clock = std::chrono::steady_clock;</div>
+<div class="line"><span class="lineno">  135</span>        <span class="keyword">auto</span> loop_start = Clock::now();</div>
+<div class="line"><span class="lineno">  136</span> </div>
+<div class="line"><span class="lineno">  137</span>        <a class="code hl_function" href="a00880.html#aa2dac3324ec614040340dcb2a5c76110">tick</a>();</div>
+<div class="line"><span class="lineno">  138</span> </div>
+<div class="line"><span class="lineno">  139</span>        <span class="keyword">auto</span> loop_end = Clock::now();</div>
+<div class="line"><span class="lineno">  140</span>        <span class="keyword">auto</span> loop_duration = std::chrono::duration_cast&lt;std::chrono::milliseconds&gt;(loop_end - loop_start);</div>
+<div class="line"><span class="lineno">  141</span>        <span class="keywordflow">if</span> (loop_duration &gt;= tick_time) {</div>
+<div class="line"><span class="lineno">  142</span>            <a class="code hl_variable" href="a00425.html#af1031cef14711c6b7ed3805fe6d17d81">logger</a>.<a class="code hl_function" href="a00872.html#af50d0545fe7d683e54fcd03453a423e3">warning</a>(<span class="stringliteral">&quot;libLoader线程运行时间过长：&quot;</span> + std::to_string(loop_duration.count()) + <span class="stringliteral">&quot;ms&quot;</span>);</div>
+<div class="line"><span class="lineno">  143</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  144</span>            std::unique_lock cvUniqueLock(<a class="code hl_variable" href="a00880.html#a73f97e660db4d60fd257ccc4b4dac522">loaderCVLock</a>);</div>
+<div class="line"><span class="lineno">  145</span>            <span class="keyword">auto</span> diff_time = tick_time - loop_duration;</div>
+<div class="line"><span class="lineno">  146</span>            <a class="code hl_function" href="a00425.html#a46f4ab12479d61956e7dc81cfb19fef5">loaderWakeCV</a>().wait_for(cvUniqueLock, diff_time,</div>
+<div class="line"><span class="lineno">  147</span>                                    [<span class="keyword">this</span>]() { <span class="keywordflow">return</span> <a class="code hl_function" href="a00880.html#a6f64cf5a04eb79ed0e3080aed30aa711">is_loader_exited</a>() || <a class="code hl_function" href="a00432.html#a2d56b79ef43f183c0fc95d733f81906b">Scheduler::timeup</a>() || !<a class="code hl_variable" href="a00425.html#a0c277357f066f384f6b2a05a472a47c6">loader_thread_task_queue</a>.empty(); });</div>
+<div class="line"><span class="lineno">  148</span>            cvUniqueLock.unlock();</div>
+<div class="line"><span class="lineno">  149</span>        }</div>
+<div class="line"><span class="lineno">  150</span>    }</div>
+<div class="ttc" id="aa00281_html_afab67516ca0a1569c9c6a978e874c5fc"><div class="ttname"><a href="a00281.html#afab67516ca0a1569c9c6a978e874c5fc">US_IN_SEC</a></div><div class="ttdeci">constexpr size_t US_IN_SEC</div><div class="ttdef"><b>Definition</b> <a href="a00281_source.html#l00041">loaderMain.cpp:41</a></div></div>
+<div class="ttc" id="aa00425_html_a0c277357f066f384f6b2a05a472a47c6"><div class="ttname"><a href="a00425.html#a0c277357f066f384f6b2a05a472a47c6">LibLoader::loader_thread_task_queue</a></div><div class="ttdeci">std::queue&lt; loadertask &gt; loader_thread_task_queue</div><div class="ttdef"><b>Definition</b> <a href="a01461_source.html#l00032">libloader/loaderApi.cpp:32</a></div></div>
+<div class="ttc" id="aa00425_html_a46f4ab12479d61956e7dc81cfb19fef5"><div class="ttname"><a href="a00425.html#a46f4ab12479d61956e7dc81cfb19fef5">LibLoader::loaderWakeCV</a></div><div class="ttdeci">std::condition_variable &amp; loaderWakeCV()</div><div class="ttdef"><b>Definition</b> <a href="a00281_source.html#l00056">loaderMain.cpp:56</a></div></div>
+<div class="ttc" id="aa00432_html_a2d56b79ef43f183c0fc95d733f81906b"><div class="ttname"><a href="a00432.html#a2d56b79ef43f183c0fc95d733f81906b">LibLoader::Scheduler::timeup</a></div><div class="ttdeci">bool timeup() noexcept</div><div class="ttdoc">获取schduler是否空</div><div class="ttdef"><b>Definition</b> <a href="a00311_source.html#l00090">Scheduler.cpp:90</a></div></div>
+<div class="ttc" id="aa00872_html_af50d0545fe7d683e54fcd03453a423e3"><div class="ttname"><a href="a00872.html#af50d0545fe7d683e54fcd03453a423e3">LibLoader::LoaderLogger::warning</a></div><div class="ttdeci">void warning(const string &amp;) const</div><div class="ttdef"><b>Definition</b> <a href="a00221_source.html#l00038">LoaderLogger.cpp:38</a></div></div>
+<div class="ttc" id="aa00880_html_a72091c85e213a8ee55fb2dd9128907b7"><div class="ttname"><a href="a00880.html#a72091c85e213a8ee55fb2dd9128907b7">LibLoader::LoaderMain::tickRate</a></div><div class="ttdeci">size_t tickRate</div><div class="ttdef"><b>Definition</b> <a href="a00266_source.html#l00031">loaderMain.h:31</a></div></div>
+<div class="ttc" id="aa00880_html_a73f97e660db4d60fd257ccc4b4dac522"><div class="ttname"><a href="a00880.html#a73f97e660db4d60fd257ccc4b4dac522">LibLoader::LoaderMain::loaderCVLock</a></div><div class="ttdeci">std::mutex loaderCVLock</div><div class="ttdef"><b>Definition</b> <a href="a00266_source.html#l00029">loaderMain.h:29</a></div></div>
+<div class="ttc" id="aa00880_html_aa2dac3324ec614040340dcb2a5c76110"><div class="ttname"><a href="a00880.html#aa2dac3324ec614040340dcb2a5c76110">LibLoader::LoaderMain::tick</a></div><div class="ttdeci">void tick() const noexcept</div><div class="ttdef"><b>Definition</b> <a href="a00281_source.html#l00124">loaderMain.cpp:124</a></div></div>
+</div><!-- fragment --><div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-8-trigger" src="closed.png" alt="+"/> 函数调用图:</div>
+<div id="dynsection-8-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-8-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00880_a9ca8ba2c9fcbfade9adf4a0a2bb47eaa_cgraph.svg" width="4666" height="1936"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div id="dynsection-9" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-9-trigger" src="closed.png" alt="+"/> 这是这个函数的调用关系图:</div>
+<div id="dynsection-9-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-9-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00880_a9ca8ba2c9fcbfade9adf4a0a2bb47eaa_icgraph.svg" width="1982" height="374"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="adb67a1dbb48fb151a7f581fcd2afa2e5" name="adb67a1dbb48fb151a7f581fcd2afa2e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb67a1dbb48fb151a7f581fcd2afa2e5">&#9670;&#160;</a></span>process_task_queue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LibLoader::LoaderMain::process_task_queue </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="a00281_source.html">loaderMain.cpp</a> 第 <a class="el" href="a00281_source.html#l00159">159</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  159</span>                                              { <span class="comment">// NOLINT(*-convert-member-functions-to-static)</span></div>
+<div class="line"><span class="lineno">  160</span>        <span class="keywordflow">if</span> (!<a class="code hl_variable" href="a00425.html#a0c277357f066f384f6b2a05a472a47c6">loader_thread_task_queue</a>.empty()) {</div>
+<div class="line"><span class="lineno">  161</span>            <a class="code hl_typedef" href="a00425.html#a7d3f947f188b83a2b84f3c7e009d4e1a">loadertask</a> task;</div>
+<div class="line"><span class="lineno">  162</span>            {</div>
+<div class="line"><span class="lineno">  163</span>                std::lock_guard lk(<a class="code hl_variable" href="a00425.html#af93aa0663e3f029f87f90ab64f7f8c19">task_mtx</a>);</div>
+<div class="line"><span class="lineno">  164</span>                std::swap(task, <a class="code hl_variable" href="a00425.html#a0c277357f066f384f6b2a05a472a47c6">loader_thread_task_queue</a>.front());</div>
+<div class="line"><span class="lineno">  165</span>                <a class="code hl_variable" href="a00425.html#a0c277357f066f384f6b2a05a472a47c6">loader_thread_task_queue</a>.pop();</div>
+<div class="line"><span class="lineno">  166</span>            }</div>
+<div class="line"><span class="lineno">  167</span>            <span class="keywordflow">try</span> {</div>
+<div class="line"><span class="lineno">  168</span>                <span class="keywordflow">switch</span> (task.first) {</div>
+<div class="line"><span class="lineno">  169</span>                    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="a00425.html#a30aa31bdebda65b5dc09459f065cf482a445daa5b99398472138b7322b561fb27">LOADER_TASKS::ADD_THREAD</a>:</div>
+<div class="line"><span class="lineno">  170</span>                        <a class="code hl_function" href="a00425.html#a3f1b6298effea4f44e85e20b0a915c1d">loader_enablePluginById</a>(task.second);</div>
+<div class="line"><span class="lineno">  171</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  172</span>                    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="a00425.html#a30aa31bdebda65b5dc09459f065cf482a9f868a91fcfde74e1293e5c89498b376">LOADER_TASKS::END_THREAD</a>:</div>
+<div class="line"><span class="lineno">  173</span>                        <a class="code hl_function" href="a00425.html#a04edf8e3eda892a478591ac18c05d9b5">loader_disablePluginById</a>(task.second);</div>
+<div class="line"><span class="lineno">  174</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  175</span>                    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="a00425.html#a30aa31bdebda65b5dc09459f065cf482af7642b9b513ebc4d2d35907325564f6a">LOADER_TASKS::ENABLE_ALL</a>:</div>
+<div class="line"><span class="lineno">  176</span>                        <a class="code hl_function" href="a00425.html#a6cd5117c0adf23ed373edca65148a4fd">loader_enableAllPlugins</a>();</div>
+<div class="line"><span class="lineno">  177</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  178</span>                    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="a00425.html#a30aa31bdebda65b5dc09459f065cf482aa4f23572e2e2fcd98c6396ea9d77312e">LOADER_TASKS::DISABLE_ALL</a>:</div>
+<div class="line"><span class="lineno">  179</span>                        <a class="code hl_function" href="a00425.html#ad3da09d6c8c2db437e3169b96ddb2ae9">loader_disableAllPlugins</a>();</div>
+<div class="line"><span class="lineno">  180</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  181</span>                    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="a00425.html#a30aa31bdebda65b5dc09459f065cf482a97392091ce14839af90239bab1cc6b08">LOADER_TASKS::LOAD_NEW_ACTIVATENOW</a>:</div>
+<div class="line"><span class="lineno">  182</span>                        <a class="code hl_function" href="a00425.html#a8eada9f54700edf5a2aa262e5d006691">loader_loadNewPlugin</a>(task.second, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  183</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  184</span>                    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="a00425.html#a30aa31bdebda65b5dc09459f065cf482a2ec891fb94aefae87f6effc99b18e8d0">LOADER_TASKS::LOAD_NEW_DONTACTIVATE</a>:</div>
+<div class="line"><span class="lineno">  185</span>                        <a class="code hl_function" href="a00425.html#a8eada9f54700edf5a2aa262e5d006691">loader_loadNewPlugin</a>(task.second, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  186</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  187</span>                    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="a00425.html#a30aa31bdebda65b5dc09459f065cf482a4fd5807b5d875b53ba16d14054cdfaad">LOADER_TASKS::UNLOAD</a>:</div>
+<div class="line"><span class="lineno">  188</span>                        <a class="code hl_function" href="a00425.html#a52292cf621eb6c36b43047ee054c411d">loader_unloadPluginById</a>(task.second);</div>
+<div class="line"><span class="lineno">  189</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  190</span>                    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="a00425.html#a30aa31bdebda65b5dc09459f065cf482a07d14e40a82f0a38be9b2d0e4f5f8278">LOADER_TASKS::RELOAD</a>:</div>
+<div class="line"><span class="lineno">  191</span>                        <a class="code hl_function" href="a00425.html#ae2bf46cd649bb6979dd268bbc428e14c">loader_reloadPluginById</a>(task.second);</div>
+<div class="line"><span class="lineno">  192</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  193</span>                    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="a00425.html#a30aa31bdebda65b5dc09459f065cf482a7092e85ca968b7860da2894c65d3132e">LOADER_TASKS::EXCEPTION_PLUGINEND</a>:</div>
+<div class="line"><span class="lineno">  194</span>                        <a class="code hl_function" href="a00425.html#abc4b73a1b14010cd0c6e713d6579ef8b">loader_pluginEndByException</a>(task.second);</div>
+<div class="line"><span class="lineno">  195</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  196</span>                    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="a00425.html#a30aa31bdebda65b5dc09459f065cf482a582cbc208af43808f67f4c736fc431fb">LOADER_TASKS::RESET_THREAD</a>:</div>
+<div class="line"><span class="lineno">  197</span>                        <a class="code hl_function" href="a00425.html#ae437cb8e58f9ddab116aa54e71d3891a">loader_resetThreadByIndex</a>(task.second);</div>
+<div class="line"><span class="lineno">  198</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  199</span>                    <span class="keywordflow">default</span>:</div>
+<div class="line"><span class="lineno">  200</span>                        <span class="keywordflow">throw</span> std::exception();</div>
+<div class="line"><span class="lineno">  201</span>                }</div>
+<div class="line"><span class="lineno">  202</span>            } <span class="keywordflow">catch</span> (LoaderBaseException &amp;e) {</div>
+<div class="line"><span class="lineno">  203</span>                e.raise();</div>
+<div class="line"><span class="lineno">  204</span>            } <span class="keywordflow">catch</span> (std::exception &amp;e) {</div>
+<div class="line"><span class="lineno">  205</span>                <a class="code hl_variable" href="a00425.html#af1031cef14711c6b7ed3805fe6d17d81">logger</a>.<a class="code hl_function" href="a00872.html#ae735f16b20f681d29d4e5d28ad248dbe">error</a>(<span class="stringliteral">&quot;libLoader线程遇到无法预料的错误：&quot;</span> + std::string(e.what()) + <span class="stringliteral">&quot;，程序将继续执行，如果发生意料之外的状况，请提交issue&quot;</span>);</div>
+<div class="line"><span class="lineno">  206</span>            }</div>
+<div class="line"><span class="lineno">  207</span>        }</div>
+<div class="line"><span class="lineno">  208</span>    }</div>
+<div class="ttc" id="aa00425_html_a04edf8e3eda892a478591ac18c05d9b5"><div class="ttname"><a href="a00425.html#a04edf8e3eda892a478591ac18c05d9b5">LibLoader::loader_disablePluginById</a></div><div class="ttdeci">void loader_disablePluginById(const std::string &amp;id)</div><div class="ttdef"><b>Definition</b> <a href="a00281_source.html#l00105">loaderMain.cpp:105</a></div></div>
+<div class="ttc" id="aa00425_html_a30aa31bdebda65b5dc09459f065cf482a07d14e40a82f0a38be9b2d0e4f5f8278"><div class="ttname"><a href="a00425.html#a30aa31bdebda65b5dc09459f065cf482a07d14e40a82f0a38be9b2d0e4f5f8278">LibLoader::LOADER_TASKS::RELOAD</a></div><div class="ttdeci">@ RELOAD</div></div>
+<div class="ttc" id="aa00425_html_a30aa31bdebda65b5dc09459f065cf482a2ec891fb94aefae87f6effc99b18e8d0"><div class="ttname"><a href="a00425.html#a30aa31bdebda65b5dc09459f065cf482a2ec891fb94aefae87f6effc99b18e8d0">LibLoader::LOADER_TASKS::LOAD_NEW_DONTACTIVATE</a></div><div class="ttdeci">@ LOAD_NEW_DONTACTIVATE</div></div>
+<div class="ttc" id="aa00425_html_a30aa31bdebda65b5dc09459f065cf482a445daa5b99398472138b7322b561fb27"><div class="ttname"><a href="a00425.html#a30aa31bdebda65b5dc09459f065cf482a445daa5b99398472138b7322b561fb27">LibLoader::LOADER_TASKS::ADD_THREAD</a></div><div class="ttdeci">@ ADD_THREAD</div></div>
+<div class="ttc" id="aa00425_html_a30aa31bdebda65b5dc09459f065cf482a4fd5807b5d875b53ba16d14054cdfaad"><div class="ttname"><a href="a00425.html#a30aa31bdebda65b5dc09459f065cf482a4fd5807b5d875b53ba16d14054cdfaad">LibLoader::LOADER_TASKS::UNLOAD</a></div><div class="ttdeci">@ UNLOAD</div></div>
+<div class="ttc" id="aa00425_html_a30aa31bdebda65b5dc09459f065cf482a582cbc208af43808f67f4c736fc431fb"><div class="ttname"><a href="a00425.html#a30aa31bdebda65b5dc09459f065cf482a582cbc208af43808f67f4c736fc431fb">LibLoader::LOADER_TASKS::RESET_THREAD</a></div><div class="ttdeci">@ RESET_THREAD</div></div>
+<div class="ttc" id="aa00425_html_a30aa31bdebda65b5dc09459f065cf482a7092e85ca968b7860da2894c65d3132e"><div class="ttname"><a href="a00425.html#a30aa31bdebda65b5dc09459f065cf482a7092e85ca968b7860da2894c65d3132e">LibLoader::LOADER_TASKS::EXCEPTION_PLUGINEND</a></div><div class="ttdeci">@ EXCEPTION_PLUGINEND</div></div>
+<div class="ttc" id="aa00425_html_a30aa31bdebda65b5dc09459f065cf482a97392091ce14839af90239bab1cc6b08"><div class="ttname"><a href="a00425.html#a30aa31bdebda65b5dc09459f065cf482a97392091ce14839af90239bab1cc6b08">LibLoader::LOADER_TASKS::LOAD_NEW_ACTIVATENOW</a></div><div class="ttdeci">@ LOAD_NEW_ACTIVATENOW</div></div>
+<div class="ttc" id="aa00425_html_a30aa31bdebda65b5dc09459f065cf482a9f868a91fcfde74e1293e5c89498b376"><div class="ttname"><a href="a00425.html#a30aa31bdebda65b5dc09459f065cf482a9f868a91fcfde74e1293e5c89498b376">LibLoader::LOADER_TASKS::END_THREAD</a></div><div class="ttdeci">@ END_THREAD</div></div>
+<div class="ttc" id="aa00425_html_a30aa31bdebda65b5dc09459f065cf482aa4f23572e2e2fcd98c6396ea9d77312e"><div class="ttname"><a href="a00425.html#a30aa31bdebda65b5dc09459f065cf482aa4f23572e2e2fcd98c6396ea9d77312e">LibLoader::LOADER_TASKS::DISABLE_ALL</a></div><div class="ttdeci">@ DISABLE_ALL</div></div>
+<div class="ttc" id="aa00425_html_a30aa31bdebda65b5dc09459f065cf482af7642b9b513ebc4d2d35907325564f6a"><div class="ttname"><a href="a00425.html#a30aa31bdebda65b5dc09459f065cf482af7642b9b513ebc4d2d35907325564f6a">LibLoader::LOADER_TASKS::ENABLE_ALL</a></div><div class="ttdeci">@ ENABLE_ALL</div></div>
+<div class="ttc" id="aa00425_html_a3f1b6298effea4f44e85e20b0a915c1d"><div class="ttname"><a href="a00425.html#a3f1b6298effea4f44e85e20b0a915c1d">LibLoader::loader_enablePluginById</a></div><div class="ttdeci">void loader_enablePluginById(const std::string &amp;id)</div><div class="ttdef"><b>Definition</b> <a href="a00281_source.html#l00101">loaderMain.cpp:101</a></div></div>
+<div class="ttc" id="aa00425_html_a52292cf621eb6c36b43047ee054c411d"><div class="ttname"><a href="a00425.html#a52292cf621eb6c36b43047ee054c411d">LibLoader::loader_unloadPluginById</a></div><div class="ttdeci">void loader_unloadPluginById(const std::string &amp;id)</div><div class="ttdef"><b>Definition</b> <a href="a00281_source.html#l00097">loaderMain.cpp:97</a></div></div>
+<div class="ttc" id="aa00425_html_a6cd5117c0adf23ed373edca65148a4fd"><div class="ttname"><a href="a00425.html#a6cd5117c0adf23ed373edca65148a4fd">LibLoader::loader_enableAllPlugins</a></div><div class="ttdeci">void loader_enableAllPlugins()</div><div class="ttdef"><b>Definition</b> <a href="a00281_source.html#l00085">loaderMain.cpp:85</a></div></div>
+<div class="ttc" id="aa00425_html_a7d3f947f188b83a2b84f3c7e009d4e1a"><div class="ttname"><a href="a00425.html#a7d3f947f188b83a2b84f3c7e009d4e1a">LibLoader::loadertask</a></div><div class="ttdeci">std::pair&lt; LOADER_TASKS, std::string &gt; loadertask</div><div class="ttdef"><b>Definition</b> <a href="a00239_source.html#l00043">LoaderTaskQueue.h:43</a></div></div>
+<div class="ttc" id="aa00425_html_a8eada9f54700edf5a2aa262e5d006691"><div class="ttname"><a href="a00425.html#a8eada9f54700edf5a2aa262e5d006691">LibLoader::loader_loadNewPlugin</a></div><div class="ttdeci">void loader_loadNewPlugin(const std::string &amp;path, bool activateNow)</div><div class="ttdef"><b>Definition</b> <a href="a00281_source.html#l00093">loaderMain.cpp:93</a></div></div>
+<div class="ttc" id="aa00425_html_abc4b73a1b14010cd0c6e713d6579ef8b"><div class="ttname"><a href="a00425.html#abc4b73a1b14010cd0c6e713d6579ef8b">LibLoader::loader_pluginEndByException</a></div><div class="ttdeci">void loader_pluginEndByException(const std::string &amp;id)</div><div class="ttdef"><b>Definition</b> <a href="a00281_source.html#l00113">loaderMain.cpp:113</a></div></div>
+<div class="ttc" id="aa00425_html_ad3da09d6c8c2db437e3169b96ddb2ae9"><div class="ttname"><a href="a00425.html#ad3da09d6c8c2db437e3169b96ddb2ae9">LibLoader::loader_disableAllPlugins</a></div><div class="ttdeci">void loader_disableAllPlugins()</div><div class="ttdef"><b>Definition</b> <a href="a00281_source.html#l00089">loaderMain.cpp:89</a></div></div>
+<div class="ttc" id="aa00425_html_ae2bf46cd649bb6979dd268bbc428e14c"><div class="ttname"><a href="a00425.html#ae2bf46cd649bb6979dd268bbc428e14c">LibLoader::loader_reloadPluginById</a></div><div class="ttdeci">void loader_reloadPluginById(const std::string &amp;id)</div><div class="ttdef"><b>Definition</b> <a href="a00281_source.html#l00109">loaderMain.cpp:109</a></div></div>
+<div class="ttc" id="aa00425_html_ae437cb8e58f9ddab116aa54e71d3891a"><div class="ttname"><a href="a00425.html#ae437cb8e58f9ddab116aa54e71d3891a">LibLoader::loader_resetThreadByIndex</a></div><div class="ttdeci">void loader_resetThreadByIndex(const std::string &amp;index)</div><div class="ttdef"><b>Definition</b> <a href="a00281_source.html#l00117">loaderMain.cpp:117</a></div></div>
+<div class="ttc" id="aa00425_html_af93aa0663e3f029f87f90ab64f7f8c19"><div class="ttname"><a href="a00425.html#af93aa0663e3f029f87f90ab64f7f8c19">LibLoader::task_mtx</a></div><div class="ttdeci">std::recursive_mutex task_mtx</div><div class="ttdef"><b>Definition</b> <a href="a01461_source.html#l00033">libloader/loaderApi.cpp:33</a></div></div>
+<div class="ttc" id="aa00872_html_ae735f16b20f681d29d4e5d28ad248dbe"><div class="ttname"><a href="a00872.html#ae735f16b20f681d29d4e5d28ad248dbe">LibLoader::LoaderLogger::error</a></div><div class="ttdeci">void error(const string &amp;) const</div><div class="ttdef"><b>Definition</b> <a href="a00221_source.html#l00042">LoaderLogger.cpp:42</a></div></div>
+</div><!-- fragment --><div id="dynsection-10" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-10-trigger" src="closed.png" alt="+"/> 函数调用图:</div>
+<div id="dynsection-10-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-10-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00880_adb67a1dbb48fb151a7f581fcd2afa2e5_cgraph.svg" width="3028" height="1282"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div id="dynsection-11" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-11-trigger" src="closed.png" alt="+"/> 这是这个函数的调用关系图:</div>
+<div id="dynsection-11-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-11-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00880_adb67a1dbb48fb151a7f581fcd2afa2e5_icgraph.svg" width="2383" height="374"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a6e92ea42b2356d4e4c1e5b000ae31c1c" name="a6e92ea42b2356d4e4c1e5b000ae31c1c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e92ea42b2356d4e4c1e5b000ae31c1c">&#9670;&#160;</a></span>readConfig()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LibLoader::LoaderMain::readConfig </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="a00281_source.html">loaderMain.cpp</a> 第 <a class="el" href="a00281_source.html#l00210">210</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  210</span>                                {</div>
+<div class="line"><span class="lineno">  211</span>        nlohmann::json j = <a class="code hl_function" href="a00425.html#abfdb74b9db3801a388ab185bbc550550">readJsonFile</a>(<a class="code hl_variable" href="a00880.html#a8ca3ba0c79f091eb5c390f623f618f71">config_path</a>);</div>
+<div class="line"><span class="lineno">  212</span>        <span class="keywordflow">if</span> (j.contains(<span class="stringliteral">&quot;loaderConfigs&quot;</span>)) {</div>
+<div class="line"><span class="lineno">  213</span>            <span class="keyword">auto</span> &amp;loader_conf = j[<span class="stringliteral">&quot;loaderConfigs&quot;</span>];</div>
+<div class="line"><span class="lineno">  214</span>            <span class="keywordflow">if</span> (loader_conf.contains(<span class="stringliteral">&quot;threadPoolSize&quot;</span>)) {</div>
+<div class="line"><span class="lineno">  215</span>                <span class="keywordtype">size_t</span> thread_pool_size = loader_conf[<span class="stringliteral">&quot;threadPoolSize&quot;</span>];</div>
+<div class="line"><span class="lineno">  216</span>                <a class="code hl_variable" href="a00434.html#a343ec36721fc4bf72fd64e712c71ad1d">Antares::pool</a> = std::make_unique&lt;Antares::ThreadPool&lt;&gt;&gt;(thread_pool_size);</div>
+<div class="line"><span class="lineno">  217</span>            }</div>
+<div class="line"><span class="lineno">  218</span>            <span class="keywordflow">if</span> (loader_conf.contains(<span class="stringliteral">&quot;tickRate&quot;</span>)) {</div>
+<div class="line"><span class="lineno">  219</span>                <span class="keywordtype">size_t</span> _tickRate = loader_conf[<span class="stringliteral">&quot;tickRate&quot;</span>];</div>
+<div class="line"><span class="lineno">  220</span>                <span class="keywordflow">if</span> (_tickRate &gt; <a class="code hl_variable" href="a00281.html#afab67516ca0a1569c9c6a978e874c5fc">US_IN_SEC</a>) {</div>
+<div class="line"><span class="lineno">  221</span>                    <span class="keywordflow">throw</span> InvalidConfException(<span class="stringliteral">&quot;tickRate&quot;</span>, <a class="code hl_define" href="a00041.html#a64a15c1bd1292eb8eb8b5874281372c6">MIRAICP_EXCEPTION_WHERE</a>);</div>
+<div class="line"><span class="lineno">  222</span>                }</div>
+<div class="line"><span class="lineno">  223</span>                <span class="keywordflow">if</span> (_tickRate == 0) {</div>
+<div class="line"><span class="lineno">  224</span>                    <a class="code hl_variable" href="a00880.html#a72091c85e213a8ee55fb2dd9128907b7">tickRate</a> = 100;</div>
+<div class="line"><span class="lineno">  225</span>                } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  226</span>                    <a class="code hl_variable" href="a00880.html#a72091c85e213a8ee55fb2dd9128907b7">tickRate</a> = _tickRate;</div>
+<div class="line"><span class="lineno">  227</span>                }</div>
+<div class="line"><span class="lineno">  228</span>            }</div>
+<div class="line"><span class="lineno">  229</span>        }</div>
+<div class="line"><span class="lineno">  230</span>    }</div>
+<div class="ttc" id="aa00041_html_a64a15c1bd1292eb8eb8b5874281372c6"><div class="ttname"><a href="a00041.html#a64a15c1bd1292eb8eb8b5874281372c6">MIRAICP_EXCEPTION_WHERE</a></div><div class="ttdeci">#define MIRAICP_EXCEPTION_WHERE</div><div class="ttdef"><b>Definition</b> <a href="a00041_source.html#l00120">MiraiCPMacros.h:120</a></div></div>
+<div class="ttc" id="aa00425_html_abfdb74b9db3801a388ab185bbc550550"><div class="ttname"><a href="a00425.html#abfdb74b9db3801a388ab185bbc550550">LibLoader::readJsonFile</a></div><div class="ttdeci">nlohmann::json readJsonFile(const std::string &amp;path)</div><div class="ttdef"><b>Definition</b> <a href="a00305_source.html#l00032">loaderTools.h:32</a></div></div>
+<div class="ttc" id="aa00880_html_a8ca3ba0c79f091eb5c390f623f618f71"><div class="ttname"><a href="a00880.html#a8ca3ba0c79f091eb5c390f623f618f71">LibLoader::LoaderMain::config_path</a></div><div class="ttdeci">std::string config_path</div><div class="ttdef"><b>Definition</b> <a href="a00266_source.html#l00030">loaderMain.h:30</a></div></div>
+</div><!-- fragment --><div id="dynsection-12" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-12-trigger" src="closed.png" alt="+"/> 函数调用图:</div>
+<div id="dynsection-12-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-12-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00880_a6e92ea42b2356d4e4c1e5b000ae31c1c_cgraph.svg" width="1742" height="128"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div id="dynsection-13" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-13-trigger" src="closed.png" alt="+"/> 这是这个函数的调用关系图:</div>
+<div id="dynsection-13-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-13-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00880_a6e92ea42b2356d4e4c1e5b000ae31c1c_icgraph.svg" width="1982" height="376"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a8fb1a9402e7d723e6294ee6750ce11f8" name="a8fb1a9402e7d723e6294ee6750ce11f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8fb1a9402e7d723e6294ee6750ce11f8">&#9670;&#160;</a></span>setConfigPath()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LibLoader::LoaderMain::setConfigPath </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>in_config_path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="a00266_source.html">loaderMain.h</a> 第 <a class="el" href="a00266_source.html#l00055">55</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">   55</span>                                                            {</div>
+<div class="line"><span class="lineno">   56</span>            <a class="code hl_variable" href="a00880.html#a8ca3ba0c79f091eb5c390f623f618f71">config_path</a> = in_config_path;</div>
+<div class="line"><span class="lineno">   57</span>        }</div>
+</div><!-- fragment --><div id="dynsection-14" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-14-trigger" src="closed.png" alt="+"/> 这是这个函数的调用关系图:</div>
+<div id="dynsection-14-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-14-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00880_a8fb1a9402e7d723e6294ee6750ce11f8_icgraph.svg" width="394" height="54"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a6d477440277d3907b96261db3a222d96" name="a6d477440277d3907b96261db3a222d96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d477440277d3907b96261db3a222d96">&#9670;&#160;</a></span>shutdownLoader()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LibLoader::LoaderMain::shutdownLoader </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="a00281_source.html">loaderMain.cpp</a> 第 <a class="el" href="a00281_source.html#l00152">152</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  152</span>                                    { <span class="comment">// NOLINT(*-convert-member-functions-to-static)</span></div>
+<div class="line"><span class="lineno">  153</span>        <a class="code hl_function" href="a00425.html#ad3da09d6c8c2db437e3169b96ddb2ae9">loader_disableAllPlugins</a>();</div>
+<div class="line"><span class="lineno">  154</span>        <a class="code hl_function" href="a00428.html#a2f7aa94ac874600ec7b20a833dd467cc">MiraiCP::Redirector::reset</a>();</div>
+<div class="line"><span class="lineno">  155</span>        <span class="comment">// 为了删除 Win 下复制的缓存</span></div>
+<div class="line"><span class="lineno">  156</span>        <a class="code hl_function" href="a00928.html#a39ce5601eee168a69cab158349412c3e">PluginManager::Get</a>().<a class="code hl_function" href="a00928.html#aa3bbd30b114b1ea8c883ec7f844cf372">unloadAll</a>();</div>
+<div class="line"><span class="lineno">  157</span>    }</div>
+<div class="ttc" id="aa00428_html_a2f7aa94ac874600ec7b20a833dd467cc"><div class="ttname"><a href="a00428.html#a2f7aa94ac874600ec7b20a833dd467cc">MiraiCP::Redirector::reset</a></div><div class="ttdeci">MIRAICP_EXPORT void reset()</div><div class="ttdoc">reset all redirecting</div><div class="ttdef"><b>Definition</b> <a href="a00203_source.html#l00149">redirectCout.cpp:149</a></div></div>
+<div class="ttc" id="aa00928_html_aa3bbd30b114b1ea8c883ec7f844cf372"><div class="ttname"><a href="a00928.html#aa3bbd30b114b1ea8c883ec7f844cf372">LibLoader::PluginManager::unloadAll</a></div><div class="ttdeci">void unloadAll()</div><div class="ttdoc">unload全部插件，但不会修改任何key</div><div class="ttdef"><b>Definition</b> <a href="a00263_source.html#l00115">PluginManager.cpp:115</a></div></div>
+</div><!-- fragment --><div id="dynsection-15" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-15-trigger" src="closed.png" alt="+"/> 函数调用图:</div>
+<div id="dynsection-15-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-15-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00880_a6d477440277d3907b96261db3a222d96_cgraph.svg" width="631" height="238"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div id="dynsection-16" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-16-trigger" src="closed.png" alt="+"/> 这是这个函数的调用关系图:</div>
+<div id="dynsection-16-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-16-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00880_a6d477440277d3907b96261db3a222d96_icgraph.svg" width="1982" height="376"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="aa2dac3324ec614040340dcb2a5c76110" name="aa2dac3324ec614040340dcb2a5c76110"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2dac3324ec614040340dcb2a5c76110">&#9670;&#160;</a></span>tick()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LibLoader::LoaderMain::tick </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="a00281_source.html">loaderMain.cpp</a> 第 <a class="el" href="a00281_source.html#l00124">124</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  124</span>                                         {</div>
+<div class="line"><span class="lineno">  125</span>        <a class="code hl_function" href="a00432.html#a60264799b74fbe2b0466d1de609cf95b">Scheduler::popSchedule</a>();</div>
+<div class="line"><span class="lineno">  126</span> </div>
+<div class="line"><span class="lineno">  127</span>        <a class="code hl_function" href="a00884.html#a4b6579b6241cbd61f0c2cdbb30686168">MessageManager::get</a>().<a class="code hl_function" href="a00884.html#a176e21673ee4dda0363971c3b3a447aa">tick</a>();</div>
+<div class="line"><span class="lineno">  128</span> </div>
+<div class="line"><span class="lineno">  129</span>        <a class="code hl_function" href="a00880.html#adb67a1dbb48fb151a7f581fcd2afa2e5">process_task_queue</a>();</div>
+<div class="line"><span class="lineno">  130</span>    }</div>
+<div class="ttc" id="aa00432_html_a60264799b74fbe2b0466d1de609cf95b"><div class="ttname"><a href="a00432.html#a60264799b74fbe2b0466d1de609cf95b">LibLoader::Scheduler::popSchedule</a></div><div class="ttdeci">void popSchedule() noexcept</div><div class="ttdoc">libLoader线程tick调用，弹出所有计时器</div><div class="ttdef"><b>Definition</b> <a href="a00311_source.html#l00074">Scheduler.cpp:74</a></div></div>
+<div class="ttc" id="aa00880_html_adb67a1dbb48fb151a7f581fcd2afa2e5"><div class="ttname"><a href="a00880.html#adb67a1dbb48fb151a7f581fcd2afa2e5">LibLoader::LoaderMain::process_task_queue</a></div><div class="ttdeci">void process_task_queue() const</div><div class="ttdef"><b>Definition</b> <a href="a00281_source.html#l00159">loaderMain.cpp:159</a></div></div>
+<div class="ttc" id="aa00884_html_a176e21673ee4dda0363971c3b3a447aa"><div class="ttname"><a href="a00884.html#a176e21673ee4dda0363971c3b3a447aa">LibLoader::MessageManager::tick</a></div><div class="ttdeci">void tick()</div><div class="ttdef"><b>Definition</b> <a href="a00308_source.html#l00029">MessageManager.cpp:29</a></div></div>
+</div><!-- fragment --><div id="dynsection-17" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-17-trigger" src="closed.png" alt="+"/> 函数调用图:</div>
+<div id="dynsection-17-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-17-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00880_aa2dac3324ec614040340dcb2a5c76110_cgraph.svg" width="3292" height="1675"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div id="dynsection-18" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-18-trigger" src="closed.png" alt="+"/> 这是这个函数的调用关系图:</div>
+<div id="dynsection-18-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-18-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00880_aa2dac3324ec614040340dcb2a5c76110_icgraph.svg" width="2183" height="374"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="a8ca3ba0c79f091eb5c390f623f618f71" name="a8ca3ba0c79f091eb5c390f623f618f71"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ca3ba0c79f091eb5c390f623f618f71">&#9670;&#160;</a></span>config_path</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string LibLoader::LoaderMain::config_path</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="a00266_source.html">loaderMain.h</a> 第 <a class="el" href="a00266_source.html#l00030">30</a> 行定义.</p>
+
+</div>
+</div>
+<a id="ade323ba8f9e6d1fd184346fdd88227d6" name="ade323ba8f9e6d1fd184346fdd88227d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade323ba8f9e6d1fd184346fdd88227d6">&#9670;&#160;</a></span>cv</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::condition_variable LibLoader::LoaderMain::cv</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="a00266_source.html">loaderMain.h</a> 第 <a class="el" href="a00266_source.html#l00028">28</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a348439e27d1a976dd143da7a8b8b0de9" name="a348439e27d1a976dd143da7a8b8b0de9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a348439e27d1a976dd143da7a8b8b0de9">&#9670;&#160;</a></span>loader_exit</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">volatile bool LibLoader::LoaderMain::loader_exit = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="a00266_source.html">loaderMain.h</a> 第 <a class="el" href="a00266_source.html#l00027">27</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a73f97e660db4d60fd257ccc4b4dac522" name="a73f97e660db4d60fd257ccc4b4dac522"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73f97e660db4d60fd257ccc4b4dac522">&#9670;&#160;</a></span>loaderCVLock</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::mutex LibLoader::LoaderMain::loaderCVLock</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">mutable</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="a00266_source.html">loaderMain.h</a> 第 <a class="el" href="a00266_source.html#l00029">29</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a72091c85e213a8ee55fb2dd9128907b7" name="a72091c85e213a8ee55fb2dd9128907b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72091c85e213a8ee55fb2dd9128907b7">&#9670;&#160;</a></span>tickRate</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t LibLoader::LoaderMain::tickRate = 100</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="a00266_source.html">loaderMain.h</a> 第 <a class="el" href="a00266_source.html#l00031">31</a> 行定义.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li><a class="el" href="a00266_source.html">loaderMain.h</a></li>
+<li><a class="el" href="a00281_source.html">loaderMain.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="a00425.html">LibLoader</a></li><li class="navelem"><a class="el" href="a00880.html">LoaderMain</a></li>
+    <li class="footer">生成于 2023年 十月 26日 星期四 01:16:24 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+    </body>
+</html>

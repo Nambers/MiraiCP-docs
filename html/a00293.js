@@ -1,5 +1,9 @@
 var a00293 =
 [
-    [ "get_bot", "a00293.html#a6418acda5a5a017ac553dc273b57c612", null ],
-    [ "queryList", "a00293.html#af9ded1af6d3b5b7e3b556d52484d56b8", null ]
+    [ "LibLoader::PluginFuncAddrData", "a00920.html", "a00920" ],
+    [ "LibLoader::PluginData", "a00924.html", "a00924" ],
+    [ "PluginAuthority", "a00293.html#a25dcf37316806dd07a4e960c5eb537a4", [
+      [ "PLUGIN_AUTHORITY_NORMAL", "a00293.html#a25dcf37316806dd07a4e960c5eb537a4a37a69db536daf1ceabf89dc14346092d", null ],
+      [ "PLUGIN_AUTHORITY_ADMIN", "a00293.html#a25dcf37316806dd07a4e960c5eb537a4a94365761d42a1db02c02bce01be06220", null ]
+    ] ]
 ];

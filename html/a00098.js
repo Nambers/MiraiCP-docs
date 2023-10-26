@@ -1,9 +1,7 @@
 var a00098 =
 [
-    [ "LibLoader::PluginFuncAddrData", "a00393.html", "a00393" ],
-    [ "LibLoader::PluginData", "a00397.html", "a00397" ],
-    [ "PluginAuthority", "a00098.html#a25dcf37316806dd07a4e960c5eb537a4", [
-      [ "PLUGIN_AUTHORITY_NORMAL", "a00098.html#a25dcf37316806dd07a4e960c5eb537a4a37a69db536daf1ceabf89dc14346092d", null ],
-      [ "PLUGIN_AUTHORITY_ADMIN", "a00098.html#a25dcf37316806dd07a4e960c5eb537a4a94365761d42a1db02c02bce01be06220", null ]
-    ] ]
+    [ "MiraiCP::IRawCommand", "a00452.html", "a00452" ],
+    [ "MiraiCP::IRawCommand::Config", "a00456.html", "a00456" ],
+    [ "commandRegister", "a00098.html#a9c4f605303f4ffc836c1978d9b1e89c5", null ],
+    [ "registerCommand", "a00098.html#ade2058acff33a4c43d5c7820a1828faa", null ]
 ];

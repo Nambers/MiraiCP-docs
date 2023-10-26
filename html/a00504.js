@@ -1,9 +1,10 @@
 var a00504 =
 [
-    [ "chat", "a00504.html#afc868fb91c60975d5862d0691c80ec54", null ],
-    [ "chat", "a00504.html#a240d9d0df62738e43f8de576c6b26acf", null ],
-    [ "from", "a00504.html#ace8d5250eaff54abb3631cccf37b4b49", null ],
-    [ "from", "a00504.html#a77875102a2c9021981c942d16e15435a", null ],
-    [ "getMessageChain", "a00504.html#a40be4514c0111359a8388cb0c079ec76", null ],
-    [ "getMessageChain", "a00504.html#ab05db28ad76f89f09b38ad345f557803", null ]
+    [ "BuiltInContact", "a00508.html", "a00508" ],
+    [ "BaseEventData", "a00504.html#add7fec6ff79d938ab121f57d10ffa1a7", null ],
+    [ "toString", "a00504.html#a06e4113ea70bd6e536fac95b1e58cad1", null ],
+    [ "botId", "a00504.html#a0ef2979d2f7e44318fcc251026a7b109", null ],
+    [ "eventData", "a00504.html#abd44451921253c4eb235eff3fa3fb857", null ],
+    [ "object", "a00504.html#a9d1c4b300f7c6602c21aff985e9f1757", null ],
+    [ "subject", "a00504.html#a7afa1ecf74f25007146b46f4381c736d", null ]
 ];

@@ -1,0 +1,448 @@
+<!-- HTML header for doxygen 1.9.1-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>MiraiCP: LibLoader::MessageProxy类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+ <script type="text/javascript">
+      DoxygenAwesomeDarkModeToggle.init()
+</script>
+</head>
+<body>
+<a href="https://github.com/Nambers/MiraiCP" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#64CEAA; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">MiraiCP
+   &#160;<span id="projectnumber">v2.16.0</span>
+   </div>
+   <div id="projectbrief">MiraiCP api document</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('a00888.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="a00885.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">LibLoader::MessageProxy类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="a00215_source.html">MessageProcessor.h</a>&gt;</code></p>
+<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> LibLoader::MessageProxy 的协作图:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00886.svg" width="368" height="608"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a46972e011a525729e0be01cf1f465d15" id="r_a46972e011a525729e0be01cf1f465d15"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00888.html#a46972e011a525729e0be01cf1f465d15">MessageProxy</a> ()=delete</td></tr>
+<tr class="separator:a46972e011a525729e0be01cf1f465d15"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa40aab1e738a9ee658ba38ed1b898a08" id="r_aa40aab1e738a9ee658ba38ed1b898a08"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00888.html#aa40aab1e738a9ee658ba38ed1b898a08">MessageProxy</a> (const <a class="el" href="a00888.html">MessageProxy</a> &amp;)=delete</td></tr>
+<tr class="separator:aa40aab1e738a9ee658ba38ed1b898a08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc8c7d737f8804b0df2b25948def30ca" id="r_adc8c7d737f8804b0df2b25948def30ca"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00888.html#adc8c7d737f8804b0df2b25948def30ca">MessageProxy</a> (<a class="el" href="a00888.html">MessageProxy</a> &amp;&amp;)=default</td></tr>
+<tr class="separator:adc8c7d737f8804b0df2b25948def30ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a339bfb170b7cd0542132e8bb138c8251" id="r_a339bfb170b7cd0542132e8bb138c8251"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00888.html#a339bfb170b7cd0542132e8bb138c8251">MessageProxy</a> (<a class="el" href="a00768.html">MiraiCP::PluginInterface::PayLoadInfo</a> <a class="el" href="a00888.html#a62cfc944716bf1f5d4498cfec1eba7c6">payload</a>, std::shared_ptr&lt; const <a class="el" href="a00916.html">Plugin</a> &gt; <a class="el" href="a00888.html#a1214455da62f9ba479c83aa51f98dead">plugin</a>)</td></tr>
+<tr class="separator:a339bfb170b7cd0542132e8bb138c8251"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19fed62745a8cc34e407209a6180d56e" id="r_a19fed62745a8cc34e407209a6180d56e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00888.html#a19fed62745a8cc34e407209a6180d56e">~MessageProxy</a> ()</td></tr>
+<tr class="memdesc:a19fed62745a8cc34e407209a6180d56e"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00888.html">MessageProxy</a>  <br /></td></tr>
+<tr class="separator:a19fed62745a8cc34e407209a6180d56e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ceab0a91e94b5701be4b559d297f789" id="r_a9ceab0a91e94b5701be4b559d297f789"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00888.html#a9ceab0a91e94b5701be4b559d297f789">getPayload</a> () const</td></tr>
+<tr class="separator:a9ceab0a91e94b5701be4b559d297f789"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa85564cff0453865c7139ae80fe419f3" id="r_aa85564cff0453865c7139ae80fe419f3"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; const <a class="el" href="a00916.html">Plugin</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00888.html#aa85564cff0453865c7139ae80fe419f3">getPlugin</a> () const</td></tr>
+<tr class="separator:aa85564cff0453865c7139ae80fe419f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acbe279830c1a53cf74f51b1d372cae01" id="r_acbe279830c1a53cf74f51b1d372cae01"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00888.html#acbe279830c1a53cf74f51b1d372cae01">operator bool</a> () const</td></tr>
+<tr class="separator:acbe279830c1a53cf74f51b1d372cae01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a62cfc944716bf1f5d4498cfec1eba7c6" id="r_a62cfc944716bf1f5d4498cfec1eba7c6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00768.html">MiraiCP::PluginInterface::PayLoadInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00888.html#a62cfc944716bf1f5d4498cfec1eba7c6">payload</a></td></tr>
+<tr class="separator:a62cfc944716bf1f5d4498cfec1eba7c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1214455da62f9ba479c83aa51f98dead" id="r_a1214455da62f9ba479c83aa51f98dead"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; const <a class="el" href="a00916.html">Plugin</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00888.html#a1214455da62f9ba479c83aa51f98dead">plugin</a></td></tr>
+<tr class="separator:a1214455da62f9ba479c83aa51f98dead"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock">
+<p class="definition">在文件 <a class="el" href="a00215_source.html">MessageProcessor.h</a> 第 <a class="el" href="a00215_source.html#l00018">18</a> 行定义.</p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a46972e011a525729e0be01cf1f465d15" name="a46972e011a525729e0be01cf1f465d15"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a46972e011a525729e0be01cf1f465d15">&#9670;&#160;</a></span>MessageProxy() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">LibLoader::MessageProxy::MessageProxy </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa40aab1e738a9ee658ba38ed1b898a08" name="aa40aab1e738a9ee658ba38ed1b898a08"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa40aab1e738a9ee658ba38ed1b898a08">&#9670;&#160;</a></span>MessageProxy() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">LibLoader::MessageProxy::MessageProxy </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="a00888.html">MessageProxy</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adc8c7d737f8804b0df2b25948def30ca" name="adc8c7d737f8804b0df2b25948def30ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc8c7d737f8804b0df2b25948def30ca">&#9670;&#160;</a></span>MessageProxy() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">LibLoader::MessageProxy::MessageProxy </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00888.html">MessageProxy</a> &amp;&amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a339bfb170b7cd0542132e8bb138c8251" name="a339bfb170b7cd0542132e8bb138c8251"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a339bfb170b7cd0542132e8bb138c8251">&#9670;&#160;</a></span>MessageProxy() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">LibLoader::MessageProxy::MessageProxy </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00768.html">MiraiCP::PluginInterface::PayLoadInfo</a>&#160;</td>
+          <td class="paramname"><em>payload</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::shared_ptr&lt; const <a class="el" href="a00916.html">Plugin</a> &gt;&#160;</td>
+          <td class="paramname"><em>plugin</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="a00302_source.html">MessageProcessor.cpp</a> 第 <a class="el" href="a00302_source.html#l00019">19</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">   19</span>                                                                                                            : <a class="code hl_variable" href="a00888.html#a62cfc944716bf1f5d4498cfec1eba7c6">payload</a>(<a class="code hl_variable" href="a00888.html#a62cfc944716bf1f5d4498cfec1eba7c6">payload</a>), <a class="code hl_variable" href="a00888.html#a1214455da62f9ba479c83aa51f98dead">plugin</a>(std::move(<a class="code hl_variable" href="a00888.html#a1214455da62f9ba479c83aa51f98dead">plugin</a>)) {</div>
+<div class="line"><span class="lineno">   20</span>    }</div>
+<div class="ttc" id="aa00888_html_a1214455da62f9ba479c83aa51f98dead"><div class="ttname"><a href="a00888.html#a1214455da62f9ba479c83aa51f98dead">LibLoader::MessageProxy::plugin</a></div><div class="ttdeci">std::shared_ptr&lt; const Plugin &gt; plugin</div><div class="ttdef"><b>Definition</b> <a href="a00215_source.html#l00020">MessageProcessor.h:20</a></div></div>
+<div class="ttc" id="aa00888_html_a62cfc944716bf1f5d4498cfec1eba7c6"><div class="ttname"><a href="a00888.html#a62cfc944716bf1f5d4498cfec1eba7c6">LibLoader::MessageProxy::payload</a></div><div class="ttdeci">MiraiCP::PluginInterface::PayLoadInfo payload</div><div class="ttdef"><b>Definition</b> <a href="a00215_source.html#l00019">MessageProcessor.h:19</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a19fed62745a8cc34e407209a6180d56e" name="a19fed62745a8cc34e407209a6180d56e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19fed62745a8cc34e407209a6180d56e">&#9670;&#160;</a></span>~MessageProxy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">LibLoader::MessageProxy::~MessageProxy </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="a00888.html">MessageProxy</a> </p>
+
+<p class="definition">在文件 <a class="el" href="a00302_source.html">MessageProcessor.cpp</a> 第 <a class="el" href="a00302_source.html#l00013">13</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">   13</span>                                {</div>
+<div class="line"><span class="lineno">   14</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="a00888.html#a62cfc944716bf1f5d4498cfec1eba7c6">payload</a>.<a class="code hl_variable" href="a00768.html#a41ed1122d41c2eb3e85a9e148c3f719b">payload</a> &amp;&amp; <a class="code hl_variable" href="a00888.html#a1214455da62f9ba479c83aa51f98dead">plugin</a> != <span class="keyword">nullptr</span> &amp;&amp; <a class="code hl_variable" href="a00888.html#a1214455da62f9ba479c83aa51f98dead">plugin</a>-&gt;checkValid()) {</div>
+<div class="line"><span class="lineno">   15</span>            <a class="code hl_variable" href="a00888.html#a1214455da62f9ba479c83aa51f98dead">plugin</a>-&gt;delete_message();</div>
+<div class="line"><span class="lineno">   16</span>        }</div>
+<div class="line"><span class="lineno">   17</span>    }</div>
+<div class="ttc" id="aa00768_html_a41ed1122d41c2eb3e85a9e148c3f719b"><div class="ttname"><a href="a00768.html#a41ed1122d41c2eb3e85a9e148c3f719b">MiraiCP::PluginInterface::PayLoadInfo::payload</a></div><div class="ttdeci">void * payload</div><div class="ttdef"><b>Definition</b> <a href="a00182_source.html#l00044">commonTypes.h:44</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a9ceab0a91e94b5701be4b559d297f789" name="a9ceab0a91e94b5701be4b559d297f789"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ceab0a91e94b5701be4b559d297f789">&#9670;&#160;</a></span>getPayload()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto LibLoader::MessageProxy::getPayload </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="a00215_source.html">MessageProcessor.h</a> 第 <a class="el" href="a00215_source.html#l00031">31</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">   31</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="a00888.html#a62cfc944716bf1f5d4498cfec1eba7c6">payload</a>; }</div>
+</div><!-- fragment --><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> 这是这个函数的调用关系图:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00888_a9ceab0a91e94b5701be4b559d297f789_icgraph.svg" width="2884" height="374"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="aa85564cff0453865c7139ae80fe419f3" name="aa85564cff0453865c7139ae80fe419f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa85564cff0453865c7139ae80fe419f3">&#9670;&#160;</a></span>getPlugin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt; const <a class="el" href="a00916.html">Plugin</a> &gt; LibLoader::MessageProxy::getPlugin </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="a00302_source.html">MessageProcessor.cpp</a> 第 <a class="el" href="a00302_source.html#l00026">26</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">   26</span>                                                              {</div>
+<div class="line"><span class="lineno">   27</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="a00888.html#a1214455da62f9ba479c83aa51f98dead">plugin</a>;</div>
+<div class="line"><span class="lineno">   28</span>    }</div>
+</div><!-- fragment --><div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-2-trigger" src="closed.png" alt="+"/> 这是这个函数的调用关系图:</div>
+<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-2-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00888_aa85564cff0453865c7139ae80fe419f3_icgraph.svg" width="2884" height="374"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="acbe279830c1a53cf74f51b1d372cae01" name="acbe279830c1a53cf74f51b1d372cae01"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acbe279830c1a53cf74f51b1d372cae01">&#9670;&#160;</a></span>operator bool()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">LibLoader::MessageProxy::operator bool </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="a00302_source.html">MessageProcessor.cpp</a> 第 <a class="el" href="a00302_source.html#l00022">22</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">   22</span>                                      {</div>
+<div class="line"><span class="lineno">   23</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="a00888.html#a62cfc944716bf1f5d4498cfec1eba7c6">payload</a>.<a class="code hl_variable" href="a00768.html#a41ed1122d41c2eb3e85a9e148c3f719b">payload</a> != <span class="keyword">nullptr</span> &amp;&amp; <a class="code hl_variable" href="a00888.html#a1214455da62f9ba479c83aa51f98dead">plugin</a> != <span class="keyword">nullptr</span>;</div>
+<div class="line"><span class="lineno">   24</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="a62cfc944716bf1f5d4498cfec1eba7c6" name="a62cfc944716bf1f5d4498cfec1eba7c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62cfc944716bf1f5d4498cfec1eba7c6">&#9670;&#160;</a></span>payload</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00768.html">MiraiCP::PluginInterface::PayLoadInfo</a> LibLoader::MessageProxy::payload</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="a00215_source.html">MessageProcessor.h</a> 第 <a class="el" href="a00215_source.html#l00019">19</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a1214455da62f9ba479c83aa51f98dead" name="a1214455da62f9ba479c83aa51f98dead"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1214455da62f9ba479c83aa51f98dead">&#9670;&#160;</a></span>plugin</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt;const <a class="el" href="a00916.html">Plugin</a>&gt; LibLoader::MessageProxy::plugin</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="a00215_source.html">MessageProcessor.h</a> 第 <a class="el" href="a00215_source.html#l00020">20</a> 行定义.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li><a class="el" href="a00215_source.html">MessageProcessor.h</a></li>
+<li><a class="el" href="a00302_source.html">MessageProcessor.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="a00425.html">LibLoader</a></li><li class="navelem"><a class="el" href="a00888.html">MessageProxy</a></li>
+    <li class="footer">生成于 2023年 十月 26日 星期四 01:16:24 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+    </body>
+</html>

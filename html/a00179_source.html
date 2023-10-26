@@ -4,9 +4,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiraiCP: MiraiCPStringInternal.cpp 源文件</title>
+<title>MiraiCP: loaderApiInternal.h 源文件</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -35,7 +35,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MiraiCP
-   &#160;<span id="projectnumber">v2.15.0-RC2</span>
+   &#160;<span id="projectnumber">v2.16.0</span>
    </div>
    <div id="projectbrief">MiraiCP api document</div>
   </td>
@@ -44,10 +44,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.9.2 -->
+<!-- 制作者 Doxygen 1.9.8 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search",'搜索','.html');
+var searchBox = new SearchBox("searchBox", "search/",'.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -61,6 +61,11 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -87,13 +92,20 @@ $(document).ready(function(){initNavTree('a00179_source.html',''); initResizable
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">MiraiCPStringInternal.cpp</div></div>
+  <div class="headertitle"><div class="title">loaderApiInternal.h</div></div>
 </div><!--header-->
 <div class="contents">
 <a href="a00179.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// Copyright (c) 2022. Eritque arcus and contributors.</span></div>
@@ -112,142 +124,199 @@ $(document).ready(function(){initNavTree('a00179_source.html',''); initResizable
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">// along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</span></div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">//</span></div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &quot;<a class="code" href="a00044.html">MiraiCPMacros.h</a>&quot;</span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">// -----------------------</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &quot;<a class="code" href="a00182.html">MiraiCPStringInternal.h</a>&quot;</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &lt;cstring&gt;</span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#ifndef MIRAICP_PRO_LOADERAPIINTERNAL_H</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#define MIRAICP_PRO_LOADERAPIINTERNAL_H</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &quot;<a class="code" href="a00191.html">MiraiCPStringInternal.h</a>&quot;</span></div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keyword">namespace </span><a class="code hl_namespace" href="a00397.html">MiraiCP</a> {</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="a00740.html#ab4e1cada35f0d6b19b95e91141b9f8f7">   24</a></span>    <a class="code hl_function" href="a00740.html#a02f42c8676dac0fcaa20fd6de0e8cbe7">MiraiCPStringview::MiraiCPStringview</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *char_str) : str(char_str) {</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        <span class="keywordflow">if</span> (char_str == <span class="keyword">nullptr</span>) <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        <a class="code hl_variable" href="a00740.html#a729cb8ab61ef2dd5b03bbb4df0a31455">_size</a> = strlen(char_str);</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    }</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="a00740.html#a7bc0ce48841fb8d547da30d312296b1e">   29</a></span>    <a class="code hl_function" href="a00740.html#a02f42c8676dac0fcaa20fd6de0e8cbe7">MiraiCPStringview::MiraiCPStringview</a>(<span class="keyword">const</span> std::string &amp;string_str)</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        : str(string_str.c_str()), _size(string_str.size()) {}</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="a00740.html#abff5cb150dae77c542aed9a914d233c6">   32</a></span>    <a class="code hl_function" href="a00740.html#a02f42c8676dac0fcaa20fd6de0e8cbe7">MiraiCPStringview::MiraiCPStringview</a>(<span class="keyword">const</span> <a class="code hl_class" href="a00744.html">MiraiCPString</a> &amp;miraiCPString)</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        : str(miraiCPString.c_str()), _size(miraiCPString.size()) {}</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="comment">// avoid calling this if _size == 0</span></div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="a00744.html#a7f26a980ae47d177825250f973336e39">   36</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="a00744.html#a7f26a980ae47d177825250f973336e39">MiraiCPString::construction</a>() {</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        <a class="code hl_variable" href="a00744.html#ae296eb86d0acfd5b1a5b1264f5a01a33">str</a> = (<span class="keywordtype">char</span> *) ::std::malloc(<span class="keyword">sizeof</span>(<span class="keywordtype">char</span>) * (<a class="code hl_variable" href="a00744.html#ab6bb3947d9db2fd407b8c20f0a768183">_size</a> + 1));</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="a00744.html#ae296eb86d0acfd5b1a5b1264f5a01a33">str</a> == <span class="keyword">nullptr</span>) {</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>            <span class="keywordflow">throw</span> std::bad_alloc();</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        }</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    }</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="a00744.html#a249117e24f8c29889bb0c1a278c3d3ae">   43</a></span>    <a class="code hl_function" href="a00744.html#a249117e24f8c29889bb0c1a278c3d3ae">MiraiCPString::~MiraiCPString</a>() { <span class="comment">// do not inherit MiraiCPString!!</span></div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="a00744.html#ae296eb86d0acfd5b1a5b1264f5a01a33">str</a> != <span class="keyword">nullptr</span>) {</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>            <span class="comment">// ensure deconstruction is paired to construction</span></div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>            <a class="code hl_variable" href="a00744.html#a411445a053abae2778bd0347523a670d">free_this</a>(<a class="code hl_variable" href="a00744.html#ae296eb86d0acfd5b1a5b1264f5a01a33">str</a>);</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>            <a class="code hl_variable" href="a00744.html#ae296eb86d0acfd5b1a5b1264f5a01a33">str</a> = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        }</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    }</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#ifdef MIRAICP_LIB_LOADER</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keyword">constexpr</span> <span class="keywordtype">size_t</span> LOADERAPI_H_COUNTER_BASE = __COUNTER__ + 1;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#define LOADERAPI_H_NOTHING(X)</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#define LOADERAPI_H_LOADER_API_INNER(X) LOADERAPI_H_NOTHING(X)</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#define LOADER_API_COUNT LOADERAPI_H_LOADER_API_INNER(__COUNTER__)</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#define LOADERAPI_H_GET_COUNTER (__COUNTER__ - LOADERAPI_H_COUNTER_BASE)</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#else</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="a00179.html#acbac5e7c5f4941a592808414fe5caada">   30</a></span><span class="preprocessor">#define LOADER_API_COUNT</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="comment">// the API defs to be exposed</span></div>
+<div class="foldopen" id="foldopen00035" data-start="{" data-end="}">
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="a00426.html">   35</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="a00426.html">LibLoader::LoaderApi</a> {</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="a00426.html#a495bf58ac891b805834e2cc7fa49f2f9">   36</a></span>    <span class="keyword">typedef</span> void (*<a class="code hl_typedef" href="a00426.html#a495bf58ac891b805834e2cc7fa49f2f9">task_func</a>)();</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="a00426.html#a78fdbf75bfb384856ebf9ffb28b21b1f">   37</a></span>    <span class="keyword">typedef</span> void (*<a class="code hl_typedef" href="a00426.html#a78fdbf75bfb384856ebf9ffb28b21b1f">task_func_with_id</a>)(size_t);</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keyword">using </span><a class="code hl_class" href="a00784.html">MiraiCP::MiraiCPString</a>;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keyword">using </span><a class="code hl_class" href="a00780.html">MiraiCP::MiraiCPStringview</a>;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <a class="code hl_define" href="a00179.html#acbac5e7c5f4941a592808414fe5caada">LOADER_API_COUNT</a></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <a class="code hl_class" href="a00784.html">MiraiCPString</a> <a class="code hl_function" href="a00426.html#a4c6ac4cf4ba5ff0adb7656708bbb67d0">pluginOperation</a>(<a class="code hl_class" href="a00780.html">MiraiCPStringview</a> view);</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <a class="code hl_define" href="a00179.html#acbac5e7c5f4941a592808414fe5caada">LOADER_API_COUNT</a></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="a00426.html#a4def9f25b87d48d142d6752184aadc92">loggerInterface</a>(<span class="keyword">const</span> <a class="code hl_class" href="a00784.html">MiraiCPString</a> &amp;content, <span class="keyword">const</span> <a class="code hl_class" href="a00784.html">MiraiCPString</a> &amp;name, <span class="keywordtype">long</span> <span class="keywordtype">long</span> <span class="keywordtype">id</span>, <span class="keywordtype">int</span> level);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <a class="code hl_define" href="a00179.html#acbac5e7c5f4941a592808414fe5caada">LOADER_API_COUNT</a></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <a class="code hl_class" href="a00784.html">MiraiCPString</a> <a class="code hl_function" href="a00426.html#a1dc2ed7eb6845af70bc796bb347b74ef">showAllPluginId</a>();</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="a00744.html#aa1fda8f92269bd871c94c56e793373f1">   51</a></span>    <a class="code hl_function" href="a00744.html#a10535c2483c0959b0997c2514d4932e4">MiraiCPString::MiraiCPString</a>(<span class="keyword">const</span> <a class="code hl_class" href="a00744.html">MiraiCPString</a> &amp;other) {</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        <a class="code hl_variable" href="a00744.html#ab6bb3947d9db2fd407b8c20f0a768183">_size</a> = other.<a class="code hl_variable" href="a00744.html#ab6bb3947d9db2fd407b8c20f0a768183">_size</a>;</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="a00744.html#ab6bb3947d9db2fd407b8c20f0a768183">_size</a> == 0) <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        <a class="code hl_function" href="a00744.html#a7f26a980ae47d177825250f973336e39">construction</a>();</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        <a class="code hl_define" href="a00044.html#ae90784e7cdd9af82802f90079c4e64e8">assert</a>(<a class="code hl_variable" href="a00744.html#ae296eb86d0acfd5b1a5b1264f5a01a33">str</a> != <span class="keyword">nullptr</span>);</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        memcpy(<a class="code hl_variable" href="a00744.html#ae296eb86d0acfd5b1a5b1264f5a01a33">str</a>, other.<a class="code hl_variable" href="a00744.html#ae296eb86d0acfd5b1a5b1264f5a01a33">str</a>, <a class="code hl_variable" href="a00744.html#ab6bb3947d9db2fd407b8c20f0a768183">_size</a> * <span class="keyword">sizeof</span>(<span class="keywordtype">char</span>));</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        <a class="code hl_variable" href="a00744.html#ae296eb86d0acfd5b1a5b1264f5a01a33">str</a>[<a class="code hl_variable" href="a00744.html#ab6bb3947d9db2fd407b8c20f0a768183">_size</a>] = 0;</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    }</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <a class="code hl_define" href="a00179.html#acbac5e7c5f4941a592808414fe5caada">LOADER_API_COUNT</a></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="a00426.html#a4dc4ecd3d86eb509647b3130a5239ecf">pushTask</a>(<a class="code hl_typedef" href="a00426.html#a495bf58ac891b805834e2cc7fa49f2f9">task_func</a>);</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <a class="code hl_define" href="a00179.html#acbac5e7c5f4941a592808414fe5caada">LOADER_API_COUNT</a></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="a00426.html#ae86871d4f062f45edee7501e0596cd3d">pushTaskWithId</a>(<a class="code hl_typedef" href="a00426.html#a78fdbf75bfb384856ebf9ffb28b21b1f">task_func_with_id</a>, <span class="keywordtype">size_t</span>);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <a class="code hl_define" href="a00179.html#acbac5e7c5f4941a592808414fe5caada">LOADER_API_COUNT</a></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="a00426.html#a05f1524120bb7a5a65abbde063d9e557">timer</a>(<span class="keyword">const</span> <a class="code hl_class" href="a00784.html">MiraiCPString</a> &amp;, <span class="keyword">const</span> <a class="code hl_class" href="a00784.html">MiraiCPString</a> &amp;, <span class="keywordtype">size_t</span>);</div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="a00744.html#aa22e9e3bf45ad23003f5f44c964bd546">   60</a></span>    <a class="code hl_function" href="a00744.html#a10535c2483c0959b0997c2514d4932e4">MiraiCPString::MiraiCPString</a>(<a class="code hl_class" href="a00744.html">MiraiCPString</a> &amp;&amp;temp) <span class="keyword">noexcept</span> {</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        swap(temp);</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    }</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="a00744.html#a5e97ad52cb215cb213026ce45e355dfe">   64</a></span>    <a class="code hl_function" href="a00744.html#a10535c2483c0959b0997c2514d4932e4">MiraiCPString::MiraiCPString</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *char_str) {</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        <span class="keywordflow">if</span> (char_str == <span class="keyword">nullptr</span>) <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        <a class="code hl_variable" href="a00744.html#ab6bb3947d9db2fd407b8c20f0a768183">_size</a> = strlen(char_str);</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        <span class="keywordflow">if</span> (0 == <a class="code hl_variable" href="a00744.html#ab6bb3947d9db2fd407b8c20f0a768183">_size</a>) <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        <a class="code hl_function" href="a00744.html#a7f26a980ae47d177825250f973336e39">construction</a>();</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        <a class="code hl_define" href="a00044.html#ae90784e7cdd9af82802f90079c4e64e8">assert</a>(<a class="code hl_variable" href="a00744.html#ae296eb86d0acfd5b1a5b1264f5a01a33">str</a> != <span class="keyword">nullptr</span>);</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        memcpy(<a class="code hl_variable" href="a00744.html#ae296eb86d0acfd5b1a5b1264f5a01a33">str</a>, char_str, <a class="code hl_variable" href="a00744.html#ab6bb3947d9db2fd407b8c20f0a768183">_size</a> * <span class="keyword">sizeof</span>(<span class="keywordtype">char</span>));</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        <a class="code hl_variable" href="a00744.html#ae296eb86d0acfd5b1a5b1264f5a01a33">str</a>[<a class="code hl_variable" href="a00744.html#ab6bb3947d9db2fd407b8c20f0a768183">_size</a>] = 0;</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    }</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="a00744.html#a2f46607eea7c6f093e385bb9e70a3ae6">   74</a></span>    <a class="code hl_function" href="a00744.html#a10535c2483c0959b0997c2514d4932e4">MiraiCPString::MiraiCPString</a>(<span class="keyword">const</span> std::string &amp;string_str) {</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        <a class="code hl_variable" href="a00744.html#ab6bb3947d9db2fd407b8c20f0a768183">_size</a> = string_str.size();</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        <span class="keywordflow">if</span> (!<a class="code hl_variable" href="a00744.html#ab6bb3947d9db2fd407b8c20f0a768183">_size</a>) <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        <a class="code hl_function" href="a00744.html#a7f26a980ae47d177825250f973336e39">construction</a>();</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        <a class="code hl_define" href="a00044.html#ae90784e7cdd9af82802f90079c4e64e8">assert</a>(<a class="code hl_variable" href="a00744.html#ae296eb86d0acfd5b1a5b1264f5a01a33">str</a> != <span class="keyword">nullptr</span>);</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        memcpy(<a class="code hl_variable" href="a00744.html#ae296eb86d0acfd5b1a5b1264f5a01a33">str</a>, string_str.c_str(), <a class="code hl_variable" href="a00744.html#ab6bb3947d9db2fd407b8c20f0a768183">_size</a> * <span class="keyword">sizeof</span>(<span class="keywordtype">char</span>));</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        <a class="code hl_variable" href="a00744.html#ae296eb86d0acfd5b1a5b1264f5a01a33">str</a>[<a class="code hl_variable" href="a00744.html#ab6bb3947d9db2fd407b8c20f0a768183">_size</a>] = 0;</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    }</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno"><a class="line" href="a00744.html#ab263deade385e7b5de856d061c6027e9">   83</a></span>    <span class="keyword">const</span> <span class="keywordtype">char</span> *<a class="code hl_function" href="a00744.html#ab263deade385e7b5de856d061c6027e9">MiraiCPString::copyToCharPtr</a>()<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="a00744.html#ae296eb86d0acfd5b1a5b1264f5a01a33">str</a> == <span class="keyword">nullptr</span> || <a class="code hl_variable" href="a00744.html#ab6bb3947d9db2fd407b8c20f0a768183">_size</a> == 0) <span class="keywordflow">return</span> <span class="keyword">new</span> <span class="keywordtype">char</span>[1]{0};</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        <span class="keywordtype">char</span> *t = <span class="keyword">new</span> <span class="keywordtype">char</span>[<a class="code hl_variable" href="a00744.html#ab6bb3947d9db2fd407b8c20f0a768183">_size</a> + 1];</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        memcpy(t, <a class="code hl_variable" href="a00744.html#ae296eb86d0acfd5b1a5b1264f5a01a33">str</a>, (<a class="code hl_variable" href="a00744.html#ab6bb3947d9db2fd407b8c20f0a768183">_size</a> + 1) * <span class="keyword">sizeof</span>(<span class="keywordtype">char</span>));</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        <span class="keywordflow">return</span> t;</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    }</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno"><a class="line" href="a00744.html#ae6cd9e6cde61c7bb722368d7b37121b1">   90</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="a00744.html#ae6cd9e6cde61c7bb722368d7b37121b1">MiraiCPString::reserve</a>(<span class="keywordtype">size_t</span> inSize) {</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        <span class="keywordflow">if</span> (inSize &lt;= <a class="code hl_variable" href="a00744.html#ab6bb3947d9db2fd407b8c20f0a768183">_size</a>) <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        <span class="keywordtype">char</span> *t = (<span class="keywordtype">char</span> *) ::std::malloc(<span class="keyword">sizeof</span>(<span class="keywordtype">char</span>) * (inSize + 1));</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        <span class="keywordflow">if</span> (t == <span class="keyword">nullptr</span>) {</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>            <span class="keywordflow">throw</span> std::bad_alloc();</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        }</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="a00744.html#ae296eb86d0acfd5b1a5b1264f5a01a33">str</a> != <span class="keyword">nullptr</span>) {</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>            memcpy(t, <a class="code hl_variable" href="a00744.html#ae296eb86d0acfd5b1a5b1264f5a01a33">str</a>, <a class="code hl_variable" href="a00744.html#ab6bb3947d9db2fd407b8c20f0a768183">_size</a> * <span class="keyword">sizeof</span>(<span class="keywordtype">char</span>));</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>            <a class="code hl_variable" href="a00744.html#a411445a053abae2778bd0347523a670d">free_this</a>(<a class="code hl_variable" href="a00744.html#ae296eb86d0acfd5b1a5b1264f5a01a33">str</a>);</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        }</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        <a class="code hl_variable" href="a00744.html#ae296eb86d0acfd5b1a5b1264f5a01a33">str</a> = t;</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        <a class="code hl_variable" href="a00744.html#ab6bb3947d9db2fd407b8c20f0a768183">_size</a> = inSize;</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        <a class="code hl_variable" href="a00744.html#ae296eb86d0acfd5b1a5b1264f5a01a33">str</a>[<a class="code hl_variable" href="a00744.html#ab6bb3947d9db2fd407b8c20f0a768183">_size</a>] = 0;</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        <a class="code hl_variable" href="a00744.html#a411445a053abae2778bd0347523a670d">free_this</a> = ::std::free; <span class="comment">// make sure to update the free_this to ::std::free, since the original free_this may not be paired with ::std::malloc</span></div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    }</div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno"><a class="line" href="a00744.html#a76a02c783ddea33e9ba3b90d4ec7ece4">  106</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="a00744.html#a76a02c783ddea33e9ba3b90d4ec7ece4">MiraiCPString::operator==</a>(<span class="keyword">const</span> <a class="code hl_class" href="a00744.html">MiraiCPString</a> &amp;another)<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        <span class="keywordflow">return</span> another.<a class="code hl_variable" href="a00744.html#ab6bb3947d9db2fd407b8c20f0a768183">_size</a> == <a class="code hl_variable" href="a00744.html#ab6bb3947d9db2fd407b8c20f0a768183">_size</a> &amp;&amp; (<a class="code hl_variable" href="a00744.html#ab6bb3947d9db2fd407b8c20f0a768183">_size</a> == 0 || strcmp(another.<a class="code hl_variable" href="a00744.html#ae296eb86d0acfd5b1a5b1264f5a01a33">str</a>, <a class="code hl_variable" href="a00744.html#ae296eb86d0acfd5b1a5b1264f5a01a33">str</a>) == 0);</div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    }</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="comment">// Admin api</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <a class="code hl_define" href="a00179.html#acbac5e7c5f4941a592808414fe5caada">LOADER_API_COUNT</a></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="a00426.html#a65331125b91df8d475fd7b74bf1bb8e9">enablePluginById</a>(<span class="keyword">const</span> <a class="code hl_class" href="a00784.html">MiraiCPString</a> &amp;);</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <a class="code hl_define" href="a00179.html#acbac5e7c5f4941a592808414fe5caada">LOADER_API_COUNT</a></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="a00426.html#a08a6725cb4a33402962f2b67130e8bac">disablePluginById</a>(<span class="keyword">const</span> <a class="code hl_class" href="a00784.html">MiraiCPString</a> &amp;);</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <a class="code hl_define" href="a00179.html#acbac5e7c5f4941a592808414fe5caada">LOADER_API_COUNT</a></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="a00426.html#a2a1eb02235baa6f86d8e8176b4364a72">enableAllPlugins</a>();</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <a class="code hl_define" href="a00179.html#acbac5e7c5f4941a592808414fe5caada">LOADER_API_COUNT</a></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="a00426.html#a9fed350b41c9fb052ca061e3866a66a4">disableAllPlugins</a>();</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    <a class="code hl_define" href="a00179.html#acbac5e7c5f4941a592808414fe5caada">LOADER_API_COUNT</a></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="a00426.html#aff28b2ad21b60cabc3c735a4b9562df9">loadNewPlugin</a>(<span class="keyword">const</span> <a class="code hl_class" href="a00784.html">MiraiCPString</a> &amp;, <span class="keywordtype">bool</span>);</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <a class="code hl_define" href="a00179.html#acbac5e7c5f4941a592808414fe5caada">LOADER_API_COUNT</a></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="a00426.html#ace6aa7d8b5baf1f2be8908a5e103c92a">unloadPluginById</a>(<span class="keyword">const</span> <a class="code hl_class" href="a00784.html">MiraiCPString</a> &amp;);</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <a class="code hl_define" href="a00179.html#acbac5e7c5f4941a592808414fe5caada">LOADER_API_COUNT</a></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="a00426.html#ad038612c1e2a43498411f0b77240e20b">reloadPluginById</a>(<span class="keyword">const</span> <a class="code hl_class" href="a00784.html">MiraiCPString</a> &amp;);</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <span class="comment">// internal usage. do not call this directly in plugins.</span></div>
+<div class="foldopen" id="foldopen00086" data-start="{" data-end="};">
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno"><a class="line" href="a00776.html">   86</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="a00776.html">interface_funcs</a> {</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno"><a class="line" href="a00776.html#aa70a27332a8eec24f1faf41b87dd576e">   87</a></span>        <span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keywordtype">size_t</span> <a class="code hl_variable" href="a00776.html#aa70a27332a8eec24f1faf41b87dd576e">line0</a> = __LINE__;</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno"><a class="line" href="a00776.html#ac937330fc25c0d6ad018c7091650c261">   88</a></span>        <a class="code hl_function" href="a00776.html#ac937330fc25c0d6ad018c7091650c261">DECL_API</a>(<a class="code hl_function" href="a00426.html#a4c6ac4cf4ba5ff0adb7656708bbb67d0">pluginOperation</a>);</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno"><a class="line" href="a00776.html#ad707a52555ef28272480ede9e229946b">   89</a></span>        <a class="code hl_function" href="a00776.html#ad707a52555ef28272480ede9e229946b">DECL_API</a>(<a class="code hl_function" href="a00426.html#a4def9f25b87d48d142d6752184aadc92">loggerInterface</a>);</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno"><a class="line" href="a00776.html#a3cecebbd87c028f330bb92a5440bff83">   90</a></span>        <a class="code hl_function" href="a00776.html#a3cecebbd87c028f330bb92a5440bff83">DECL_API</a>(<a class="code hl_function" href="a00426.html#a1dc2ed7eb6845af70bc796bb347b74ef">showAllPluginId</a>);</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno"><a class="line" href="a00776.html#afdb5c4798f7f4d427a59bdbfc0637f02">   91</a></span>        <a class="code hl_function" href="a00776.html#afdb5c4798f7f4d427a59bdbfc0637f02">DECL_API</a>(<a class="code hl_function" href="a00426.html#a4dc4ecd3d86eb509647b3130a5239ecf">pushTask</a>);</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno"><a class="line" href="a00776.html#adeb8ee9c92ca094b907b8c13c155f849">   92</a></span>        <a class="code hl_function" href="a00776.html#adeb8ee9c92ca094b907b8c13c155f849">DECL_API</a>(<a class="code hl_function" href="a00426.html#ae86871d4f062f45edee7501e0596cd3d">pushTaskWithId</a>);</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno"><a class="line" href="a00776.html#afcacf8988303c4341917baae0a31d976">   93</a></span>        <a class="code hl_function" href="a00776.html#afcacf8988303c4341917baae0a31d976">DECL_API</a>(<a class="code hl_function" href="a00426.html#a05f1524120bb7a5a65abbde063d9e557">timer</a>);</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno"><a class="line" href="a00776.html#a5a6cfdc5e0e8db13ee7f424b91d126ea">   94</a></span>        <span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keywordtype">size_t</span> <a class="code hl_variable" href="a00776.html#a5a6cfdc5e0e8db13ee7f424b91d126ea">line1</a> = __LINE__;</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno"><a class="line" href="a00776.html#ac1d445559b13ae3616d007ad503b52b4">   95</a></span>        <span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keywordtype">size_t</span> <a class="code hl_variable" href="a00776.html#ac1d445559b13ae3616d007ad503b52b4">normal_api_count</a> = <a class="code hl_variable" href="a00776.html#a5a6cfdc5e0e8db13ee7f424b91d126ea">line1</a> - <a class="code hl_variable" href="a00776.html#aa70a27332a8eec24f1faf41b87dd576e">line0</a> - 1;</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        <span class="comment">// apis below can only be called by admin plugins</span></div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno"><a class="line" href="a00776.html#a1ea95a8f2fc0655fa35b96f854fae7f5">   97</a></span>        <span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keywordtype">size_t</span> <a class="code hl_variable" href="a00776.html#a1ea95a8f2fc0655fa35b96f854fae7f5">adminline0</a> = __LINE__;</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno"><a class="line" href="a00776.html#aa3cfd3c6e38b9536dd773d24ff401c8b">   98</a></span>        <a class="code hl_function" href="a00776.html#aa3cfd3c6e38b9536dd773d24ff401c8b">DECL_API</a>(<a class="code hl_function" href="a00426.html#a65331125b91df8d475fd7b74bf1bb8e9">enablePluginById</a>) = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno"><a class="line" href="a00776.html#af021205c3b4b99514dd567179504f45a">   99</a></span>        <a class="code hl_function" href="a00776.html#af021205c3b4b99514dd567179504f45a">DECL_API</a>(<a class="code hl_function" href="a00426.html#a08a6725cb4a33402962f2b67130e8bac">disablePluginById</a>) = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno"><a class="line" href="a00776.html#a46f48abae8f98dff7ca8599c48cb7193">  100</a></span>        <a class="code hl_function" href="a00776.html#a46f48abae8f98dff7ca8599c48cb7193">DECL_API</a>(<a class="code hl_function" href="a00426.html#a2a1eb02235baa6f86d8e8176b4364a72">enableAllPlugins</a>) = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno"><a class="line" href="a00776.html#a5f59004aa2a2bb981ec02529c14b88f0">  101</a></span>        <a class="code hl_function" href="a00776.html#a5f59004aa2a2bb981ec02529c14b88f0">DECL_API</a>(<a class="code hl_function" href="a00426.html#a9fed350b41c9fb052ca061e3866a66a4">disableAllPlugins</a>) = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno"><a class="line" href="a00776.html#a2d75d4ff9bcf01d554146410596827e2">  102</a></span>        <a class="code hl_function" href="a00776.html#a2d75d4ff9bcf01d554146410596827e2">DECL_API</a>(<a class="code hl_function" href="a00426.html#aff28b2ad21b60cabc3c735a4b9562df9">loadNewPlugin</a>) = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno"><a class="line" href="a00776.html#a8365c67a2016c47b0984ccd2a7cb9a7c">  103</a></span>        <a class="code hl_function" href="a00776.html#a8365c67a2016c47b0984ccd2a7cb9a7c">DECL_API</a>(<a class="code hl_function" href="a00426.html#ace6aa7d8b5baf1f2be8908a5e103c92a">unloadPluginById</a>) = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno"><a class="line" href="a00776.html#ad4fe8efce4ed0d28c8587fed57e374fd">  104</a></span>        <a class="code hl_function" href="a00776.html#ad4fe8efce4ed0d28c8587fed57e374fd">DECL_API</a>(<a class="code hl_function" href="a00426.html#ad038612c1e2a43498411f0b77240e20b">reloadPluginById</a>) = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno"><a class="line" href="a00776.html#ae3612ae5c5af0ef69032ea549f3ff61c">  105</a></span>        <span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keywordtype">size_t</span> <a class="code hl_variable" href="a00776.html#ae3612ae5c5af0ef69032ea549f3ff61c">adminline1</a> = __LINE__;</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno"><a class="line" href="a00776.html#a69a202baf085417bb62180563a87eef5">  106</a></span>        <span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keywordtype">size_t</span> <a class="code hl_variable" href="a00776.html#a69a202baf085417bb62180563a87eef5">admin_api_count</a> = <a class="code hl_variable" href="a00776.html#ae3612ae5c5af0ef69032ea549f3ff61c">adminline1</a> - <a class="code hl_variable" href="a00776.html#a1ea95a8f2fc0655fa35b96f854fae7f5">adminline0</a> - 1;</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno"><a class="line" href="a00776.html#a1a384fb81c54e4e33f3ede859104524f">  107</a></span>        <span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keywordtype">size_t</span> <a class="code hl_variable" href="a00776.html#a1a384fb81c54e4e33f3ede859104524f">api_count</a> = <a class="code hl_variable" href="a00776.html#ac1d445559b13ae3616d007ad503b52b4">normal_api_count</a> + <a class="code hl_variable" href="a00776.html#a69a202baf085417bb62180563a87eef5">admin_api_count</a>;</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    };</div>
+</div>
 <div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span> </div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno"><a class="line" href="a00744.html#a7107d4a5b065d0c20529ee9a8a3e05a6">  110</a></span>    <a class="code hl_class" href="a00744.html">MiraiCPString</a> &amp;<a class="code hl_function" href="a00744.html#a7107d4a5b065d0c20529ee9a8a3e05a6">MiraiCPString::operator=</a>(<span class="keyword">const</span> <a class="code hl_class" href="a00744.html">MiraiCPString</a> &amp;another) {</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>        <a class="code hl_class" href="a00744.html">MiraiCPString</a> temp(another);</div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>        <a class="code hl_function" href="a00744.html#a5b277cdf16466e26268574cb17662d20">swap</a>(temp);</div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    }</div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span> </div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno"><a class="line" href="a00744.html#a4e4f57d00b444ce690bc004d2d054523">  116</a></span>    <a class="code hl_class" href="a00744.html">MiraiCPString</a> &amp;<a class="code hl_function" href="a00744.html#a7107d4a5b065d0c20529ee9a8a3e05a6">MiraiCPString::operator=</a>(<a class="code hl_class" href="a00744.html">MiraiCPString</a> &amp;&amp;another) <span class="keyword">noexcept</span> {</div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>        swap(another);</div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    }</div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span> </div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno"><a class="line" href="a00744.html#a5b277cdf16466e26268574cb17662d20">  121</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="a00744.html#a5b277cdf16466e26268574cb17662d20">MiraiCPString::swap</a>(<a class="code hl_class" href="a00744.html">MiraiCPString</a> &amp;other) <span class="keyword">noexcept</span> {</div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>        std::swap(str, other.str);</div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>        std::swap(_size, other._size);</div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>        std::swap(free_this, other.free_this);</div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    }</div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>} <span class="comment">// namespace MiraiCP</span></div>
-<div class="ttc" id="aa00044_html"><div class="ttname"><a href="a00044.html">MiraiCPMacros.h</a></div></div>
-<div class="ttc" id="aa00044_html_ae90784e7cdd9af82802f90079c4e64e8"><div class="ttname"><a href="a00044.html#ae90784e7cdd9af82802f90079c4e64e8">assert</a></div><div class="ttdeci">#define assert(ignore)</div><div class="ttdef"><b>Definition:</b> <a href="a00044_source.html#l00115">MiraiCPMacros.h:115</a></div></div>
-<div class="ttc" id="aa00182_html"><div class="ttname"><a href="a00182.html">MiraiCPStringInternal.h</a></div></div>
-<div class="ttc" id="aa00397_html"><div class="ttname"><a href="a00397.html">MiraiCP</a></div><div class="ttdef"><b>Definition:</b> <a href="a00041_source.html#l00021">JsonTools.h:21</a></div></div>
-<div class="ttc" id="aa00740_html_a02f42c8676dac0fcaa20fd6de0e8cbe7"><div class="ttname"><a href="a00740.html#a02f42c8676dac0fcaa20fd6de0e8cbe7">MiraiCP::MiraiCPStringview::MiraiCPStringview</a></div><div class="ttdeci">MiraiCPStringview()=delete</div></div>
-<div class="ttc" id="aa00740_html_a729cb8ab61ef2dd5b03bbb4df0a31455"><div class="ttname"><a href="a00740.html#a729cb8ab61ef2dd5b03bbb4df0a31455">MiraiCP::MiraiCPStringview::_size</a></div><div class="ttdeci">size_t _size</div><div class="ttdef"><b>Definition:</b> <a href="a00182_source.html#l00037">MiraiCPStringInternal.h:37</a></div></div>
-<div class="ttc" id="aa00744_html"><div class="ttname"><a href="a00744.html">MiraiCP::MiraiCPString</a></div><div class="ttdoc">MiraiCP内部传递string数据用</div><div class="ttdef"><b>Definition:</b> <a href="a00182_source.html#l00069">MiraiCPStringInternal.h:69</a></div></div>
-<div class="ttc" id="aa00744_html_a10535c2483c0959b0997c2514d4932e4"><div class="ttname"><a href="a00744.html#a10535c2483c0959b0997c2514d4932e4">MiraiCP::MiraiCPString::MiraiCPString</a></div><div class="ttdeci">MiraiCPString()=default</div></div>
-<div class="ttc" id="aa00744_html_a249117e24f8c29889bb0c1a278c3d3ae"><div class="ttname"><a href="a00744.html#a249117e24f8c29889bb0c1a278c3d3ae">MiraiCP::MiraiCPString::~MiraiCPString</a></div><div class="ttdeci">~MiraiCPString()</div><div class="ttdef"><b>Definition:</b> <a href="a00179_source.html#l00043">MiraiCPStringInternal.cpp:43</a></div></div>
-<div class="ttc" id="aa00744_html_a411445a053abae2778bd0347523a670d"><div class="ttname"><a href="a00744.html#a411445a053abae2778bd0347523a670d">MiraiCP::MiraiCPString::free_this</a></div><div class="ttdeci">decltype(&amp;::std::free) free_this</div><div class="ttdef"><b>Definition:</b> <a href="a00182_source.html#l00079">MiraiCPStringInternal.h:79</a></div></div>
-<div class="ttc" id="aa00744_html_a5b277cdf16466e26268574cb17662d20"><div class="ttname"><a href="a00744.html#a5b277cdf16466e26268574cb17662d20">MiraiCP::MiraiCPString::swap</a></div><div class="ttdeci">void swap(MiraiCPString &amp;other) noexcept</div><div class="ttdef"><b>Definition:</b> <a href="a00179_source.html#l00121">MiraiCPStringInternal.cpp:121</a></div></div>
-<div class="ttc" id="aa00744_html_a7107d4a5b065d0c20529ee9a8a3e05a6"><div class="ttname"><a href="a00744.html#a7107d4a5b065d0c20529ee9a8a3e05a6">MiraiCP::MiraiCPString::operator=</a></div><div class="ttdeci">MiraiCPString &amp; operator=(const MiraiCPString &amp;another)</div><div class="ttdef"><b>Definition:</b> <a href="a00179_source.html#l00110">MiraiCPStringInternal.cpp:110</a></div></div>
-<div class="ttc" id="aa00744_html_a76a02c783ddea33e9ba3b90d4ec7ece4"><div class="ttname"><a href="a00744.html#a76a02c783ddea33e9ba3b90d4ec7ece4">MiraiCP::MiraiCPString::operator==</a></div><div class="ttdeci">bool operator==(const MiraiCPString &amp;another) const</div><div class="ttdef"><b>Definition:</b> <a href="a00179_source.html#l00106">MiraiCPStringInternal.cpp:106</a></div></div>
-<div class="ttc" id="aa00744_html_a7f26a980ae47d177825250f973336e39"><div class="ttname"><a href="a00744.html#a7f26a980ae47d177825250f973336e39">MiraiCP::MiraiCPString::construction</a></div><div class="ttdeci">void construction()</div><div class="ttdef"><b>Definition:</b> <a href="a00179_source.html#l00036">MiraiCPStringInternal.cpp:36</a></div></div>
-<div class="ttc" id="aa00744_html_ab263deade385e7b5de856d061c6027e9"><div class="ttname"><a href="a00744.html#ab263deade385e7b5de856d061c6027e9">MiraiCP::MiraiCPString::copyToCharPtr</a></div><div class="ttdeci">const char * copyToCharPtr() const</div><div class="ttdef"><b>Definition:</b> <a href="a00179_source.html#l00083">MiraiCPStringInternal.cpp:83</a></div></div>
-<div class="ttc" id="aa00744_html_ab6bb3947d9db2fd407b8c20f0a768183"><div class="ttname"><a href="a00744.html#ab6bb3947d9db2fd407b8c20f0a768183">MiraiCP::MiraiCPString::_size</a></div><div class="ttdeci">size_t _size</div><div class="ttdef"><b>Definition:</b> <a href="a00182_source.html#l00078">MiraiCPStringInternal.h:78</a></div></div>
-<div class="ttc" id="aa00744_html_ae296eb86d0acfd5b1a5b1264f5a01a33"><div class="ttname"><a href="a00744.html#ae296eb86d0acfd5b1a5b1264f5a01a33">MiraiCP::MiraiCPString::str</a></div><div class="ttdeci">char * str</div><div class="ttdef"><b>Definition:</b> <a href="a00182_source.html#l00077">MiraiCPStringInternal.h:77</a></div></div>
-<div class="ttc" id="aa00744_html_ae6cd9e6cde61c7bb722368d7b37121b1"><div class="ttname"><a href="a00744.html#ae6cd9e6cde61c7bb722368d7b37121b1">MiraiCP::MiraiCPString::reserve</a></div><div class="ttdeci">void reserve(size_t inSize)</div><div class="ttdef"><b>Definition:</b> <a href="a00179_source.html#l00090">MiraiCPStringInternal.cpp:90</a></div></div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span><span class="preprocessor">#ifdef MIRAICP_LIB_LOADER</span></div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    <span class="keyword">constexpr</span> <span class="keyword">inline</span> <a class="code hl_struct" href="a00776.html">interface_funcs</a> collect_interface_functions(<span class="keywordtype">bool</span> admin) {</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>        <span class="keyword">constexpr</span> <span class="keywordtype">size_t</span> counter = LOADERAPI_H_GET_COUNTER;</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>        <span class="keyword">static_assert</span>(<a class="code hl_variable" href="a00776.html#a1a384fb81c54e4e33f3ede859104524f">interface_funcs::api_count</a> == counter);</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        <span class="keyword">static_assert</span>(<span class="keyword">sizeof</span>(<a class="code hl_struct" href="a00776.html">interface_funcs</a>) == <span class="keyword">sizeof</span>(<span class="keywordtype">void</span> *) * counter); <span class="comment">// also check pointer size</span></div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>        <span class="keywordflow">if</span> (admin) {</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>            <span class="keyword">constexpr</span> <span class="keywordtype">size_t</span> line0 = __LINE__;</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>            <a class="code hl_struct" href="a00776.html">interface_funcs</a> t = {</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>                    <a class="code hl_function" href="a00426.html#a4c6ac4cf4ba5ff0adb7656708bbb67d0">pluginOperation</a>,</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>                    <a class="code hl_function" href="a00426.html#a4def9f25b87d48d142d6752184aadc92">loggerInterface</a>,</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>                    <a class="code hl_function" href="a00426.html#a1dc2ed7eb6845af70bc796bb347b74ef">showAllPluginId</a>,</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>                    <a class="code hl_function" href="a00426.html#a4dc4ecd3d86eb509647b3130a5239ecf">pushTask</a>,</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>                    <a class="code hl_function" href="a00426.html#ae86871d4f062f45edee7501e0596cd3d">pushTaskWithId</a>,</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>                    <a class="code hl_function" href="a00426.html#a05f1524120bb7a5a65abbde063d9e557">timer</a>, </div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>                    <a class="code hl_function" href="a00426.html#a65331125b91df8d475fd7b74bf1bb8e9">enablePluginById</a>,</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>                    <a class="code hl_function" href="a00426.html#a08a6725cb4a33402962f2b67130e8bac">disablePluginById</a>,</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>                    <a class="code hl_function" href="a00426.html#a2a1eb02235baa6f86d8e8176b4364a72">enableAllPlugins</a>,</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>                    <a class="code hl_function" href="a00426.html#a9fed350b41c9fb052ca061e3866a66a4">disableAllPlugins</a>,</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>                    <a class="code hl_function" href="a00426.html#aff28b2ad21b60cabc3c735a4b9562df9">loadNewPlugin</a>,</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>                    <a class="code hl_function" href="a00426.html#ace6aa7d8b5baf1f2be8908a5e103c92a">unloadPluginById</a>,</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>                    <a class="code hl_function" href="a00426.html#ad038612c1e2a43498411f0b77240e20b">reloadPluginById</a>,</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>            };</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>            <span class="keyword">constexpr</span> <span class="keywordtype">size_t</span> line1 = __LINE__;</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>            <span class="keyword">constexpr</span> <span class="keywordtype">size_t</span> allapi_construct_number = line1 - line0 - 3;</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>            <span class="keyword">static_assert</span>(allapi_construct_number == counter);</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>            <span class="keywordflow">return</span> t;</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>            <span class="keyword">constexpr</span> <span class="keywordtype">size_t</span> line0 = __LINE__;</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>            interface_funcs t2 = {</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>                    <a class="code hl_function" href="a00426.html#a4c6ac4cf4ba5ff0adb7656708bbb67d0">pluginOperation</a>,</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>                    <a class="code hl_function" href="a00426.html#a4def9f25b87d48d142d6752184aadc92">loggerInterface</a>,</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>                    <a class="code hl_function" href="a00426.html#a1dc2ed7eb6845af70bc796bb347b74ef">showAllPluginId</a>,</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>                    <a class="code hl_function" href="a00426.html#a4dc4ecd3d86eb509647b3130a5239ecf">pushTask</a>,</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>                    <a class="code hl_function" href="a00426.html#ae86871d4f062f45edee7501e0596cd3d">pushTaskWithId</a>,</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>                    <a class="code hl_function" href="a00426.html#a05f1524120bb7a5a65abbde063d9e557">timer</a>,</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>            }; <span class="comment">// no admin functions</span></div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>            <span class="keyword">constexpr</span> <span class="keywordtype">size_t</span> line1 = __LINE__;</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>            <span class="keyword">constexpr</span> <span class="keywordtype">size_t</span> adminapi_construct_number = line1 - line0 - 3;</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>            <span class="keyword">static_assert</span>(adminapi_construct_number == <a class="code hl_variable" href="a00776.html#ac1d445559b13ae3616d007ad503b52b4">interface_funcs::normal_api_count</a>);</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>            <span class="keywordflow">return</span> t2;</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>        }</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>    }</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>} <span class="comment">// namespace LibLoader::LoaderApi</span></div>
+</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span> </div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span> </div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span><span class="preprocessor">#endif </span><span class="comment">//MIRAICP_PRO_LOADERAPIINTERNAL_H</span></div>
+<div class="ttc" id="aa00179_html_acbac5e7c5f4941a592808414fe5caada"><div class="ttname"><a href="a00179.html#acbac5e7c5f4941a592808414fe5caada">LOADER_API_COUNT</a></div><div class="ttdeci">#define LOADER_API_COUNT</div><div class="ttdef"><b>Definition</b> <a href="a00179_source.html#l00030">loaderApiInternal.h:30</a></div></div>
+<div class="ttc" id="aa00191_html"><div class="ttname"><a href="a00191.html">MiraiCPStringInternal.h</a></div></div>
+<div class="ttc" id="aa00426_html"><div class="ttname"><a href="a00426.html">LibLoader::LoaderApi</a></div><div class="ttdef"><b>Definition</b> <a href="a00179_source.html#l00035">loaderApiInternal.h:35</a></div></div>
+<div class="ttc" id="aa00426_html_a05f1524120bb7a5a65abbde063d9e557"><div class="ttname"><a href="a00426.html#a05f1524120bb7a5a65abbde063d9e557">LibLoader::LoaderApi::timer</a></div><div class="ttdeci">LOADER_API_COUNT void timer(const MiraiCPString &amp;, const MiraiCPString &amp;, size_t)</div><div class="ttdef"><b>Definition</b> <a href="a01461_source.html#l00073">libloader/loaderApi.cpp:73</a></div></div>
+<div class="ttc" id="aa00426_html_a08a6725cb4a33402962f2b67130e8bac"><div class="ttname"><a href="a00426.html#a08a6725cb4a33402962f2b67130e8bac">LibLoader::LoaderApi::disablePluginById</a></div><div class="ttdeci">LOADER_API_COUNT void disablePluginById(const MiraiCPString &amp;)</div><div class="ttdef"><b>Definition</b> <a href="a01461_source.html#l00081">libloader/loaderApi.cpp:81</a></div></div>
+<div class="ttc" id="aa00426_html_a1dc2ed7eb6845af70bc796bb347b74ef"><div class="ttname"><a href="a00426.html#a1dc2ed7eb6845af70bc796bb347b74ef">LibLoader::LoaderApi::showAllPluginId</a></div><div class="ttdeci">LOADER_API_COUNT MiraiCPString showAllPluginId()</div><div class="ttdef"><b>Definition</b> <a href="a01461_source.html#l00061">libloader/loaderApi.cpp:61</a></div></div>
+<div class="ttc" id="aa00426_html_a2a1eb02235baa6f86d8e8176b4364a72"><div class="ttname"><a href="a00426.html#a2a1eb02235baa6f86d8e8176b4364a72">LibLoader::LoaderApi::enableAllPlugins</a></div><div class="ttdeci">LOADER_API_COUNT void enableAllPlugins()</div><div class="ttdef"><b>Definition</b> <a href="a01461_source.html#l00085">libloader/loaderApi.cpp:85</a></div></div>
+<div class="ttc" id="aa00426_html_a495bf58ac891b805834e2cc7fa49f2f9"><div class="ttname"><a href="a00426.html#a495bf58ac891b805834e2cc7fa49f2f9">LibLoader::LoaderApi::task_func</a></div><div class="ttdeci">void(* task_func)()</div><div class="ttdef"><b>Definition</b> <a href="a00179_source.html#l00036">loaderApiInternal.h:36</a></div></div>
+<div class="ttc" id="aa00426_html_a4c6ac4cf4ba5ff0adb7656708bbb67d0"><div class="ttname"><a href="a00426.html#a4c6ac4cf4ba5ff0adb7656708bbb67d0">LibLoader::LoaderApi::pluginOperation</a></div><div class="ttdeci">LOADER_API_COUNT MiraiCPString pluginOperation(MiraiCPStringview view)</div><div class="ttdoc">interfaces for plugins</div><div class="ttdef"><b>Definition</b> <a href="a01461_source.html#l00049">libloader/loaderApi.cpp:49</a></div></div>
+<div class="ttc" id="aa00426_html_a4dc4ecd3d86eb509647b3130a5239ecf"><div class="ttname"><a href="a00426.html#a4dc4ecd3d86eb509647b3130a5239ecf">LibLoader::LoaderApi::pushTask</a></div><div class="ttdeci">LOADER_API_COUNT void pushTask(task_func)</div><div class="ttdef"><b>Definition</b> <a href="a01461_source.html#l00065">libloader/loaderApi.cpp:65</a></div></div>
+<div class="ttc" id="aa00426_html_a4def9f25b87d48d142d6752184aadc92"><div class="ttname"><a href="a00426.html#a4def9f25b87d48d142d6752184aadc92">LibLoader::LoaderApi::loggerInterface</a></div><div class="ttdeci">LOADER_API_COUNT void loggerInterface(const MiraiCPString &amp;content, const MiraiCPString &amp;name, long long id, int level)</div><div class="ttdef"><b>Definition</b> <a href="a01461_source.html#l00057">libloader/loaderApi.cpp:57</a></div></div>
+<div class="ttc" id="aa00426_html_a65331125b91df8d475fd7b74bf1bb8e9"><div class="ttname"><a href="a00426.html#a65331125b91df8d475fd7b74bf1bb8e9">LibLoader::LoaderApi::enablePluginById</a></div><div class="ttdeci">LOADER_API_COUNT void enablePluginById(const MiraiCPString &amp;)</div><div class="ttdef"><b>Definition</b> <a href="a01461_source.html#l00077">libloader/loaderApi.cpp:77</a></div></div>
+<div class="ttc" id="aa00426_html_a78fdbf75bfb384856ebf9ffb28b21b1f"><div class="ttname"><a href="a00426.html#a78fdbf75bfb384856ebf9ffb28b21b1f">LibLoader::LoaderApi::task_func_with_id</a></div><div class="ttdeci">void(* task_func_with_id)(size_t)</div><div class="ttdef"><b>Definition</b> <a href="a00179_source.html#l00037">loaderApiInternal.h:37</a></div></div>
+<div class="ttc" id="aa00426_html_a9fed350b41c9fb052ca061e3866a66a4"><div class="ttname"><a href="a00426.html#a9fed350b41c9fb052ca061e3866a66a4">LibLoader::LoaderApi::disableAllPlugins</a></div><div class="ttdeci">LOADER_API_COUNT void disableAllPlugins()</div><div class="ttdef"><b>Definition</b> <a href="a01461_source.html#l00089">libloader/loaderApi.cpp:89</a></div></div>
+<div class="ttc" id="aa00426_html_ace6aa7d8b5baf1f2be8908a5e103c92a"><div class="ttname"><a href="a00426.html#ace6aa7d8b5baf1f2be8908a5e103c92a">LibLoader::LoaderApi::unloadPluginById</a></div><div class="ttdeci">LOADER_API_COUNT void unloadPluginById(const MiraiCPString &amp;)</div><div class="ttdef"><b>Definition</b> <a href="a01461_source.html#l00097">libloader/loaderApi.cpp:97</a></div></div>
+<div class="ttc" id="aa00426_html_ad038612c1e2a43498411f0b77240e20b"><div class="ttname"><a href="a00426.html#ad038612c1e2a43498411f0b77240e20b">LibLoader::LoaderApi::reloadPluginById</a></div><div class="ttdeci">LOADER_API_COUNT void reloadPluginById(const MiraiCPString &amp;)</div><div class="ttdef"><b>Definition</b> <a href="a01461_source.html#l00101">libloader/loaderApi.cpp:101</a></div></div>
+<div class="ttc" id="aa00426_html_ae86871d4f062f45edee7501e0596cd3d"><div class="ttname"><a href="a00426.html#ae86871d4f062f45edee7501e0596cd3d">LibLoader::LoaderApi::pushTaskWithId</a></div><div class="ttdeci">LOADER_API_COUNT void pushTaskWithId(task_func_with_id, size_t)</div><div class="ttdef"><b>Definition</b> <a href="a01461_source.html#l00069">libloader/loaderApi.cpp:69</a></div></div>
+<div class="ttc" id="aa00426_html_aff28b2ad21b60cabc3c735a4b9562df9"><div class="ttname"><a href="a00426.html#aff28b2ad21b60cabc3c735a4b9562df9">LibLoader::LoaderApi::loadNewPlugin</a></div><div class="ttdeci">LOADER_API_COUNT void loadNewPlugin(const MiraiCPString &amp;, bool)</div><div class="ttdef"><b>Definition</b> <a href="a01461_source.html#l00093">libloader/loaderApi.cpp:93</a></div></div>
+<div class="ttc" id="aa00776_html"><div class="ttname"><a href="a00776.html">LibLoader::LoaderApi::interface_funcs</a></div><div class="ttdef"><b>Definition</b> <a href="a00179_source.html#l00086">loaderApiInternal.h:86</a></div></div>
+<div class="ttc" id="aa00776_html_a1a384fb81c54e4e33f3ede859104524f"><div class="ttname"><a href="a00776.html#a1a384fb81c54e4e33f3ede859104524f">LibLoader::LoaderApi::interface_funcs::api_count</a></div><div class="ttdeci">static constexpr size_t api_count</div><div class="ttdef"><b>Definition</b> <a href="a00179_source.html#l00107">loaderApiInternal.h:107</a></div></div>
+<div class="ttc" id="aa00776_html_a1ea95a8f2fc0655fa35b96f854fae7f5"><div class="ttname"><a href="a00776.html#a1ea95a8f2fc0655fa35b96f854fae7f5">LibLoader::LoaderApi::interface_funcs::adminline0</a></div><div class="ttdeci">static constexpr size_t adminline0</div><div class="ttdef"><b>Definition</b> <a href="a00179_source.html#l00097">loaderApiInternal.h:97</a></div></div>
+<div class="ttc" id="aa00776_html_a2d75d4ff9bcf01d554146410596827e2"><div class="ttname"><a href="a00776.html#a2d75d4ff9bcf01d554146410596827e2">LibLoader::LoaderApi::interface_funcs::DECL_API</a></div><div class="ttdeci">DECL_API(loadNewPlugin)</div></div>
+<div class="ttc" id="aa00776_html_a3cecebbd87c028f330bb92a5440bff83"><div class="ttname"><a href="a00776.html#a3cecebbd87c028f330bb92a5440bff83">LibLoader::LoaderApi::interface_funcs::DECL_API</a></div><div class="ttdeci">DECL_API(showAllPluginId)</div></div>
+<div class="ttc" id="aa00776_html_a46f48abae8f98dff7ca8599c48cb7193"><div class="ttname"><a href="a00776.html#a46f48abae8f98dff7ca8599c48cb7193">LibLoader::LoaderApi::interface_funcs::DECL_API</a></div><div class="ttdeci">DECL_API(enableAllPlugins)</div></div>
+<div class="ttc" id="aa00776_html_a5a6cfdc5e0e8db13ee7f424b91d126ea"><div class="ttname"><a href="a00776.html#a5a6cfdc5e0e8db13ee7f424b91d126ea">LibLoader::LoaderApi::interface_funcs::line1</a></div><div class="ttdeci">static constexpr size_t line1</div><div class="ttdef"><b>Definition</b> <a href="a00179_source.html#l00094">loaderApiInternal.h:94</a></div></div>
+<div class="ttc" id="aa00776_html_a5f59004aa2a2bb981ec02529c14b88f0"><div class="ttname"><a href="a00776.html#a5f59004aa2a2bb981ec02529c14b88f0">LibLoader::LoaderApi::interface_funcs::DECL_API</a></div><div class="ttdeci">DECL_API(disableAllPlugins)</div></div>
+<div class="ttc" id="aa00776_html_a69a202baf085417bb62180563a87eef5"><div class="ttname"><a href="a00776.html#a69a202baf085417bb62180563a87eef5">LibLoader::LoaderApi::interface_funcs::admin_api_count</a></div><div class="ttdeci">static constexpr size_t admin_api_count</div><div class="ttdef"><b>Definition</b> <a href="a00179_source.html#l00106">loaderApiInternal.h:106</a></div></div>
+<div class="ttc" id="aa00776_html_a8365c67a2016c47b0984ccd2a7cb9a7c"><div class="ttname"><a href="a00776.html#a8365c67a2016c47b0984ccd2a7cb9a7c">LibLoader::LoaderApi::interface_funcs::DECL_API</a></div><div class="ttdeci">DECL_API(unloadPluginById)</div></div>
+<div class="ttc" id="aa00776_html_aa3cfd3c6e38b9536dd773d24ff401c8b"><div class="ttname"><a href="a00776.html#aa3cfd3c6e38b9536dd773d24ff401c8b">LibLoader::LoaderApi::interface_funcs::DECL_API</a></div><div class="ttdeci">DECL_API(enablePluginById)</div></div>
+<div class="ttc" id="aa00776_html_aa70a27332a8eec24f1faf41b87dd576e"><div class="ttname"><a href="a00776.html#aa70a27332a8eec24f1faf41b87dd576e">LibLoader::LoaderApi::interface_funcs::line0</a></div><div class="ttdeci">static constexpr size_t line0</div><div class="ttdef"><b>Definition</b> <a href="a00179_source.html#l00087">loaderApiInternal.h:87</a></div></div>
+<div class="ttc" id="aa00776_html_ac1d445559b13ae3616d007ad503b52b4"><div class="ttname"><a href="a00776.html#ac1d445559b13ae3616d007ad503b52b4">LibLoader::LoaderApi::interface_funcs::normal_api_count</a></div><div class="ttdeci">static constexpr size_t normal_api_count</div><div class="ttdef"><b>Definition</b> <a href="a00179_source.html#l00095">loaderApiInternal.h:95</a></div></div>
+<div class="ttc" id="aa00776_html_ac937330fc25c0d6ad018c7091650c261"><div class="ttname"><a href="a00776.html#ac937330fc25c0d6ad018c7091650c261">LibLoader::LoaderApi::interface_funcs::DECL_API</a></div><div class="ttdeci">DECL_API(pluginOperation)</div></div>
+<div class="ttc" id="aa00776_html_ad4fe8efce4ed0d28c8587fed57e374fd"><div class="ttname"><a href="a00776.html#ad4fe8efce4ed0d28c8587fed57e374fd">LibLoader::LoaderApi::interface_funcs::DECL_API</a></div><div class="ttdeci">DECL_API(reloadPluginById)</div></div>
+<div class="ttc" id="aa00776_html_ad707a52555ef28272480ede9e229946b"><div class="ttname"><a href="a00776.html#ad707a52555ef28272480ede9e229946b">LibLoader::LoaderApi::interface_funcs::DECL_API</a></div><div class="ttdeci">DECL_API(loggerInterface)</div></div>
+<div class="ttc" id="aa00776_html_adeb8ee9c92ca094b907b8c13c155f849"><div class="ttname"><a href="a00776.html#adeb8ee9c92ca094b907b8c13c155f849">LibLoader::LoaderApi::interface_funcs::DECL_API</a></div><div class="ttdeci">DECL_API(pushTaskWithId)</div></div>
+<div class="ttc" id="aa00776_html_ae3612ae5c5af0ef69032ea549f3ff61c"><div class="ttname"><a href="a00776.html#ae3612ae5c5af0ef69032ea549f3ff61c">LibLoader::LoaderApi::interface_funcs::adminline1</a></div><div class="ttdeci">static constexpr size_t adminline1</div><div class="ttdef"><b>Definition</b> <a href="a00179_source.html#l00105">loaderApiInternal.h:105</a></div></div>
+<div class="ttc" id="aa00776_html_af021205c3b4b99514dd567179504f45a"><div class="ttname"><a href="a00776.html#af021205c3b4b99514dd567179504f45a">LibLoader::LoaderApi::interface_funcs::DECL_API</a></div><div class="ttdeci">DECL_API(disablePluginById)</div></div>
+<div class="ttc" id="aa00776_html_afcacf8988303c4341917baae0a31d976"><div class="ttname"><a href="a00776.html#afcacf8988303c4341917baae0a31d976">LibLoader::LoaderApi::interface_funcs::DECL_API</a></div><div class="ttdeci">DECL_API(timer)</div></div>
+<div class="ttc" id="aa00776_html_afdb5c4798f7f4d427a59bdbfc0637f02"><div class="ttname"><a href="a00776.html#afdb5c4798f7f4d427a59bdbfc0637f02">LibLoader::LoaderApi::interface_funcs::DECL_API</a></div><div class="ttdeci">DECL_API(pushTask)</div></div>
+<div class="ttc" id="aa00780_html"><div class="ttname"><a href="a00780.html">MiraiCP::MiraiCPStringview</a></div><div class="ttdoc">stringview的类似实现</div><div class="ttdef"><b>Definition</b> <a href="a00191_source.html#l00032">MiraiCPStringInternal.h:32</a></div></div>
+<div class="ttc" id="aa00784_html"><div class="ttname"><a href="a00784.html">MiraiCP::MiraiCPString</a></div><div class="ttdoc">MiraiCP内部传递string数据用</div><div class="ttdef"><b>Definition</b> <a href="a00191_source.html#l00070">MiraiCPStringInternal.h:70</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_fdedb0aba14d44ce9d99bc100e026e6a.html">common</a></li><li class="navelem"><a class="el" href="a00179.html">MiraiCPStringInternal.cpp</a></li>
-    <li class="footer">生成于 2023年 四月 10日 星期一 00:26:29 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_fdedb0aba14d44ce9d99bc100e026e6a.html">common</a></li><li class="navelem"><a class="el" href="a00179.html">loaderApiInternal.h</a></li>
+    <li class="footer">生成于 2023年 十月 26日 星期四 01:16:24 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
     </body>

@@ -1,14 +1,10 @@
 var a00520 =
 [
-    [ "GroupTempMessageEvent", "a00520.html#abfddc2db81d57ac0cc5735da826b409d", null ],
-    [ "chat", "a00520.html#a55718d1fe9883ea24c47c8ebb503d807", null ],
-    [ "chat", "a00520.html#ac9bee0cbf3838fa62837e62110e67067", null ],
-    [ "from", "a00520.html#a40e9c959f267452a60b2d5e6549dd5bb", null ],
-    [ "from", "a00520.html#adf2a7d962bf5daba13db488d48f0da5d", null ],
-    [ "get_event_type", "a00520.html#aab7402e84e7d27152ee337a20d70233a", null ],
-    [ "getMessageChain", "a00520.html#af08cf89e9ec68ea7a71f491bac7af023", null ],
-    [ "getMessageChain", "a00520.html#af4a3409f72b9feba0671804763390592", null ],
-    [ "group", "a00520.html#a29c18056652c7d36248f70f359f01e74", null ],
-    [ "message", "a00520.html#a2405f8a309e3b2de0d7cba313d795cee", null ],
-    [ "sender", "a00520.html#ac0252e17c1cb9a0d4f2ebf37720951db", null ]
+    [ "FriendRecallEvent", "a00520.html#a4935324294a7723c3401c58fb1d09a97", null ],
+    [ "get_event_type", "a00520.html#a83537ccdbd2e454525697559827df57e", null ],
+    [ "author", "a00520.html#adb145915b7e4edcc461a7c7db2823b05", null ],
+    [ "ids", "a00520.html#a426a11bf2f5d57e80082546588abc464", null ],
+    [ "internalIds", "a00520.html#a46217bf3eabccabc4b4358d8c69e71f6", null ],
+    [ "operater", "a00520.html#a4502b63cdd39bb1574a3bfc3d18828d4", null ],
+    [ "time", "a00520.html#ab22df1619e6ad420c6166d0f3877dc74", null ]
 ];

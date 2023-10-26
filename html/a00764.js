@@ -1,6 +1,4 @@
 var a00764 =
 [
-    [ "md5", "a00764.html#ad0293f9419de31e1debe34fe84a38efc", null ],
-    [ "sha1", "a00764.html#a028dd19b1da21857fec0a606c4370427", null ],
-    [ "url", "a00764.html#ae5ef128eb690329fceda096ddb1d3004", null ]
+    [ "wake_loader", "a00764.html#a4016b48b027aa8aa09ae1166cc6bd88d", null ]
 ];

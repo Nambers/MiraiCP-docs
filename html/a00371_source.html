@@ -4,9 +4,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiraiCP: MessageSource.cpp 源文件</title>
+<title>MiraiCP: LowLevelAPI.cpp 源文件</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -35,7 +35,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MiraiCP
-   &#160;<span id="projectnumber">v2.15.0-RC2</span>
+   &#160;<span id="projectnumber">v2.16.0</span>
    </div>
    <div id="projectbrief">MiraiCP api document</div>
   </td>
@@ -44,10 +44,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.9.2 -->
+<!-- 制作者 Doxygen 1.9.8 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search",'搜索','.html');
+var searchBox = new SearchBox("searchBox", "search/",'.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -61,6 +61,11 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -87,13 +92,20 @@ $(document).ready(function(){initNavTree('a00371_source.html',''); initResizable
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">MessageSource.cpp</div></div>
+  <div class="headertitle"><div class="title">LowLevelAPI.cpp</div></div>
 </div><!--header-->
 <div class="contents">
 <a href="a00371.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// Copyright (c) 2020 - 2022. Eritque arcus and contributors.</span></div>
@@ -112,88 +124,64 @@ $(document).ready(function(){initNavTree('a00371_source.html',''); initResizable
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">// along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</span></div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">//</span></div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &quot;<a class="code" href="a00146.html">MessageSource.h</a>&quot;</span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &quot;<a class="code" href="a00323.html">Exceptions/IllegalArgument.h</a>&quot;</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &quot;<a class="code" href="a00353.html">KtOperation.h</a>&quot;</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &quot;<a class="code" href="a00137.html">Logger.h</a>&quot;</span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &quot;<a class="code" href="a00038.html">commonTools.h</a>&quot;</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &lt;json.hpp&gt;</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &quot;<a class="code" href="a00374.html">LowLevelAPI.h</a>&quot;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &quot;<a class="code" href="a00389.html">ExceptionHandle.h</a>&quot;</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &quot;<a class="code" href="a00050.html">JsonTools.h</a>&quot;</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &quot;<a class="code" href="a00362.html">KtOperation.h</a>&quot;</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &quot;<a class="code" href="a00083.html">Tools.h</a>&quot;</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &quot;<a class="code" href="a00182.html">commonTypes.h</a>&quot;</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &lt;utility&gt;</span></div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keyword">namespace </span><a class="code hl_namespace" href="a00397.html">MiraiCP</a> {</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keyword">using</span> <a class="code hl_typedef" href="a00392.html#ab701e3ac61a85b337ec5c1abaad6742d">json</a> = <a class="code hl_typedef" href="a00392.html#ab701e3ac61a85b337ec5c1abaad6742d">nlohmann::json</a>;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keyword">namespace </span><a class="code hl_namespace" href="a00412.html">MiraiCP</a> {</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keyword">using </span><a class="code hl_typedef" href="a00412.html#ac0a8a1bade77a57eeb1d94cfacfb75ce">json</a> = nlohmann::json;</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keyword">class </span><a class="code hl_define" href="a00044.html#aa40df2b825bdde9207f3e87b140235c3">MIRAICP_EXPORT</a> RecallException : <span class="keyword">public</span> MiraiCPExceptionCRTP&lt;RecallException&gt; {</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        RecallException(<span class="keywordtype">string</span> _filename, <span class="keywordtype">int</span> _lineNum) : MiraiCPExceptionCRTP(<span class="stringliteral">&quot;该消息已经被撤回&quot;</span>, std::move(_filename), _lineNum) {}</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        <span class="keyword">static</span> <span class="keywordtype">string</span> exceptionType() { <span class="keywordflow">return</span> <span class="stringliteral">&quot;RecallException&quot;</span>; }</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    };</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="a00640.html#ac51d78c18a249ff92c6d7056db57f8d7">   37</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="a00640.html#ac51d78c18a249ff92c6d7056db57f8d7">MessageSource::recall</a>()<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        std::string re = <a class="code hl_function" href="a00415.html#a1e1e498928eeaa1d7107033ff5fa881a">KtOperation::ktOperationStr</a>(<a class="code hl_enumvalue" href="a00415.html#a80a8ec1c1ed6fd9db32d9a878405d412adf0c989f1aec4e71c3bf15c539da30f2">KtOperation::Recall</a>, <a class="code hl_function" href="a00640.html#aca51487498128b420019182e1331a282">serializeToString</a>());</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        <span class="keywordflow">if</span> (re == <span class="stringliteral">&quot;E2&quot;</span>) <span class="keywordflow">throw</span> RecallException(<a class="code hl_define" href="a00044.html#a64a15c1bd1292eb8eb8b5874281372c6">MIRAICP_EXCEPTION_WHERE</a>);</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    }</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="a00640.html#a17c32c44e0af14a5f23f15ca56e527ae">   42</a></span>    <a class="code hl_function" href="a00640.html#a49210b1a4c711d50ab0acc17d0dae88d">MessageSource::MessageSource</a>(std::string ids,</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>                                 std::string internalids,</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>                                 std::string source)</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        : ids(std::move(ids)),</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>          internalids(std::move(internalids)),</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>          source(std::move(source)) {}</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="a00640.html#aca51487498128b420019182e1331a282">   49</a></span>    std::string <a class="code hl_function" href="a00640.html#aca51487498128b420019182e1331a282">MessageSource::serializeToString</a>()<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="a00640.html#afc51041bfb7cc7cb0915b5131ee05805">source</a>;</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    }</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="a00640.html#a1f98db6bbdf6b7d178bf92f55fd2e4dc">   53</a></span>    <a class="code hl_class" href="a00640.html">MessageSource</a> <a class="code hl_function" href="a00640.html#a1f98db6bbdf6b7d178bf92f55fd2e4dc">MessageSource::deserializeFromString</a>(<span class="keyword">const</span> std::string &amp;source) {</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        <a class="code hl_typedef" href="a00397.html#ac0a8a1bade77a57eeb1d94cfacfb75ce">json</a> j = json::parse(<a class="code hl_variable" href="a00640.html#afc51041bfb7cc7cb0915b5131ee05805">source</a>);</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        <span class="keywordflow">try</span> {</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>            <span class="keywordflow">return</span> {j[<span class="stringliteral">&quot;ids&quot;</span>].dump(), j[<span class="stringliteral">&quot;internalIds&quot;</span>].dump(), <a class="code hl_variable" href="a00640.html#afc51041bfb7cc7cb0915b5131ee05805">source</a>};</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        } <span class="keywordflow">catch</span> (json::type_error &amp;e) {</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>            <a class="code hl_variable" href="a00620.html#a268fd602157c3fa49616a8872c82bfb1">Logger::logger</a>.<a class="code hl_function" href="a00612.html#af14d39efa300da183070784bc86d3f23">error</a>(<span class="stringliteral">&quot;消息源序列化出错，格式不符合(MessageSource::deserializeFromString)&quot;</span>);</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>            <a class="code hl_variable" href="a00620.html#a268fd602157c3fa49616a8872c82bfb1">Logger::logger</a>.<a class="code hl_function" href="a00612.html#af14d39efa300da183070784bc86d3f23">error</a>(<a class="code hl_variable" href="a00640.html#afc51041bfb7cc7cb0915b5131ee05805">source</a>);</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>            <a class="code hl_variable" href="a00620.html#a268fd602157c3fa49616a8872c82bfb1">Logger::logger</a>.<a class="code hl_function" href="a00612.html#af14d39efa300da183070784bc86d3f23">error</a>(e.what());</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>            <span class="keywordflow">throw</span> <a class="code hl_class" href="a00908.html">IllegalArgumentException</a>(std::string(<span class="stringliteral">&quot;消息源序列化出错，格式不符合(MessageSource::deserializeFromString), &quot;</span>) + e.what(), <a class="code hl_define" href="a00044.html#a64a15c1bd1292eb8eb8b5874281372c6">MIRAICP_EXCEPTION_WHERE</a>);</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        }</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    }</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="a00640.html#a2d08aa9b079abe268966313e12a3496b">   65</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="a00640.html#a2d08aa9b079abe268966313e12a3496b">MessageSource::operator==</a>(<span class="keyword">const</span> <a class="code hl_class" href="a00640.html">MessageSource</a> &amp;ms)<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        <span class="keywordflow">return</span> this-&gt;<a class="code hl_variable" href="a00640.html#a4b5fd176a16871dbb39e5be15b2b6c15">ids</a> == ms.<a class="code hl_variable" href="a00640.html#a4b5fd176a16871dbb39e5be15b2b6c15">ids</a> &amp;&amp; this-&gt;<a class="code hl_variable" href="a00640.html#a358ba0250715b1c4692554995750675e">internalids</a> == ms.<a class="code hl_variable" href="a00640.html#a358ba0250715b1c4692554995750675e">internalids</a>;</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    }</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>} <span class="comment">// namespace MiraiCP</span></div>
-<div class="ttc" id="aa00038_html"><div class="ttname"><a href="a00038.html">commonTools.h</a></div></div>
-<div class="ttc" id="aa00044_html_a64a15c1bd1292eb8eb8b5874281372c6"><div class="ttname"><a href="a00044.html#a64a15c1bd1292eb8eb8b5874281372c6">MIRAICP_EXCEPTION_WHERE</a></div><div class="ttdeci">#define MIRAICP_EXCEPTION_WHERE</div><div class="ttdef"><b>Definition:</b> <a href="a00044_source.html#l00120">MiraiCPMacros.h:120</a></div></div>
-<div class="ttc" id="aa00044_html_aa40df2b825bdde9207f3e87b140235c3"><div class="ttname"><a href="a00044.html#aa40df2b825bdde9207f3e87b140235c3">MIRAICP_EXPORT</a></div><div class="ttdeci">#define MIRAICP_EXPORT</div><div class="ttdef"><b>Definition:</b> <a href="a00044_source.html#l00180">MiraiCPMacros.h:180</a></div></div>
-<div class="ttc" id="aa00137_html"><div class="ttname"><a href="a00137.html">Logger.h</a></div></div>
-<div class="ttc" id="aa00146_html"><div class="ttname"><a href="a00146.html">MessageSource.h</a></div></div>
-<div class="ttc" id="aa00323_html"><div class="ttname"><a href="a00323.html">IllegalArgument.h</a></div></div>
-<div class="ttc" id="aa00353_html"><div class="ttname"><a href="a00353.html">KtOperation.h</a></div></div>
-<div class="ttc" id="aa00392_html_ab701e3ac61a85b337ec5c1abaad6742d"><div class="ttname"><a href="a00392.html#ab701e3ac61a85b337ec5c1abaad6742d">json</a></div><div class="ttdeci">nlohmann::json json</div><div class="ttdef"><b>Definition:</b> <a href="a00392_source.html#l00033">utils.cpp:33</a></div></div>
-<div class="ttc" id="aa00397_html"><div class="ttname"><a href="a00397.html">MiraiCP</a></div><div class="ttdef"><b>Definition:</b> <a href="a00041_source.html#l00021">JsonTools.h:21</a></div></div>
-<div class="ttc" id="aa00397_html_ac0a8a1bade77a57eeb1d94cfacfb75ce"><div class="ttname"><a href="a00397.html#ac0a8a1bade77a57eeb1d94cfacfb75ce">MiraiCP::json</a></div><div class="ttdeci">nlohmann::json json</div><div class="ttdef"><b>Definition:</b> <a href="a00299_source.html#l00032">Contact.cpp:32</a></div></div>
-<div class="ttc" id="aa00415_html_a1e1e498928eeaa1d7107033ff5fa881a"><div class="ttname"><a href="a00415.html#a1e1e498928eeaa1d7107033ff5fa881a">MiraiCP::KtOperation::ktOperationStr</a></div><div class="ttdeci">std::string ktOperationStr(operation_set type, const std::string &amp;data, bool catchErr, const std::string &amp;errorInfo)</div><div class="ttdoc">调用 Mirai 操作</div><div class="ttdef"><b>Definition:</b> <a href="a00350_source.html#l00030">KtOperation.cpp:30</a></div></div>
-<div class="ttc" id="aa00415_html_a80a8ec1c1ed6fd9db32d9a878405d412adf0c989f1aec4e71c3bf15c539da30f2"><div class="ttname"><a href="a00415.html#a80a8ec1c1ed6fd9db32d9a878405d412adf0c989f1aec4e71c3bf15c539da30f2">MiraiCP::KtOperation::Recall</a></div><div class="ttdeci">@ Recall</div><div class="ttdoc">撤回信息</div><div class="ttdef"><b>Definition:</b> <a href="a00353_source.html#l00030">KtOperation.h:30</a></div></div>
-<div class="ttc" id="aa00612_html_af14d39efa300da183070784bc86d3f23"><div class="ttname"><a href="a00612.html#af14d39efa300da183070784bc86d3f23">MiraiCP::Logger_interface::error</a></div><div class="ttdeci">void error(T &amp;&amp;...val)</div><div class="ttdoc">发送错误(error级日志)</div><div class="ttdef"><b>Definition:</b> <a href="a00137_source.html#l00117">Logger.h:117</a></div></div>
-<div class="ttc" id="aa00620_html_a268fd602157c3fa49616a8872c82bfb1"><div class="ttname"><a href="a00620.html#a268fd602157c3fa49616a8872c82bfb1">MiraiCP::Logger::logger</a></div><div class="ttdeci">static Logger logger</div><div class="ttdef"><b>Definition:</b> <a href="a00137_source.html#l00143">Logger.h:143</a></div></div>
-<div class="ttc" id="aa00640_html"><div class="ttname"><a href="a00640.html">MiraiCP::MessageSource</a></div><div class="ttdef"><b>Definition:</b> <a href="a00146_source.html#l00031">MessageSource.h:31</a></div></div>
-<div class="ttc" id="aa00640_html_a1f98db6bbdf6b7d178bf92f55fd2e4dc"><div class="ttname"><a href="a00640.html#a1f98db6bbdf6b7d178bf92f55fd2e4dc">MiraiCP::MessageSource::deserializeFromString</a></div><div class="ttdeci">static MessageSource deserializeFromString(const std::string &amp;source)</div><div class="ttdoc">从json字符串反序列化到MessageSource对象</div><div class="ttdef"><b>Definition:</b> <a href="a00371_source.html#l00053">MessageSource.cpp:53</a></div></div>
-<div class="ttc" id="aa00640_html_a2d08aa9b079abe268966313e12a3496b"><div class="ttname"><a href="a00640.html#a2d08aa9b079abe268966313e12a3496b">MiraiCP::MessageSource::operator==</a></div><div class="ttdeci">bool operator==(const MessageSource &amp;ms) const</div><div class="ttdef"><b>Definition:</b> <a href="a00371_source.html#l00065">MessageSource.cpp:65</a></div></div>
-<div class="ttc" id="aa00640_html_a358ba0250715b1c4692554995750675e"><div class="ttname"><a href="a00640.html#a358ba0250715b1c4692554995750675e">MiraiCP::MessageSource::internalids</a></div><div class="ttdeci">std::string internalids</div><div class="ttdoc">消息的internalids</div><div class="ttdef"><b>Definition:</b> <a href="a00146_source.html#l00036">MessageSource.h:36</a></div></div>
-<div class="ttc" id="aa00640_html_a49210b1a4c711d50ab0acc17d0dae88d"><div class="ttname"><a href="a00640.html#a49210b1a4c711d50ab0acc17d0dae88d">MiraiCP::MessageSource::MessageSource</a></div><div class="ttdeci">MessageSource()=default</div></div>
-<div class="ttc" id="aa00640_html_a4b5fd176a16871dbb39e5be15b2b6c15"><div class="ttname"><a href="a00640.html#a4b5fd176a16871dbb39e5be15b2b6c15">MiraiCP::MessageSource::ids</a></div><div class="ttdeci">std::string ids</div><div class="ttdoc">消息的ids</div><div class="ttdef"><b>Definition:</b> <a href="a00146_source.html#l00034">MessageSource.h:34</a></div></div>
-<div class="ttc" id="aa00640_html_ac51d78c18a249ff92c6d7056db57f8d7"><div class="ttname"><a href="a00640.html#ac51d78c18a249ff92c6d7056db57f8d7">MiraiCP::MessageSource::recall</a></div><div class="ttdeci">void recall() const</div><div class="ttdoc">撤回该信息</div><div class="ttdef"><b>Definition:</b> <a href="a00371_source.html#l00037">MessageSource.cpp:37</a></div></div>
-<div class="ttc" id="aa00640_html_aca51487498128b420019182e1331a282"><div class="ttname"><a href="a00640.html#aca51487498128b420019182e1331a282">MiraiCP::MessageSource::serializeToString</a></div><div class="ttdeci">std::string serializeToString() const</div><div class="ttdef"><b>Definition:</b> <a href="a00371_source.html#l00049">MessageSource.cpp:49</a></div></div>
-<div class="ttc" id="aa00640_html_afc51041bfb7cc7cb0915b5131ee05805"><div class="ttname"><a href="a00640.html#afc51041bfb7cc7cb0915b5131ee05805">MiraiCP::MessageSource::source</a></div><div class="ttdeci">std::string source</div><div class="ttdoc">消息源序列化</div><div class="ttdef"><b>Definition:</b> <a href="a00146_source.html#l00038">MessageSource.h:38</a></div></div>
-<div class="ttc" id="aa00908_html"><div class="ttname"><a href="a00908.html">MiraiCP::IllegalArgumentException</a></div><div class="ttdef"><b>Definition:</b> <a href="a00323_source.html#l00026">IllegalArgument.h:26</a></div></div>
+<div class="foldopen" id="foldopen00028" data-start="{" data-end="}">
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="a00980.html#a39064f9c2b148b3a3061f818bf237215">   28</a></span>    <a class="code hl_struct" href="a00984.html">LowLevelAPI::info</a> <a class="code hl_function" href="a00980.html#a39064f9c2b148b3a3061f818bf237215">LowLevelAPI::info0</a>(<span class="keyword">const</span> std::string &amp;source) {</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        MIRAICP_ERROR_HANDLE(source, <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        <span class="keyword">auto</span> j = nlohmann::json::parse(source);</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        <a class="code hl_struct" href="a00984.html">info</a> re{<a class="code hl_function" href="a00412.html#a4208a634d81d0263c1079debe2ab58fa">json_stringmover</a>(j, <span class="stringliteral">&quot;nickOrNameCard&quot;</span>), <a class="code hl_function" href="a00412.html#a4208a634d81d0263c1079debe2ab58fa">json_stringmover</a>(j, <span class="stringliteral">&quot;avatarUrl&quot;</span>)};</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <span class="keywordflow">return</span> re;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    }</div>
+</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="foldopen" id="foldopen00035" data-start="{" data-end="}">
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="a00980.html#ad104b6f94628a14cf351ae7da993c770">   35</a></span>    std::string <a class="code hl_function" href="a00980.html#ad104b6f94628a14cf351ae7da993c770">LowLevelAPI::getInfoSource</a>(nlohmann::json c) {</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        nlohmann::json j{{<span class="stringliteral">&quot;contact&quot;</span>, std::move(c)}};</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="a00435.html#a309e8d7f316e8b5e947ea3bcddeb84a8">KtOperation::ktOperation</a>(<a class="code hl_enumvalue" href="a00435.html#a80a8ec1c1ed6fd9db32d9a878405d412a1c1f12c6ba67788e4fa35854ba398262">KtOperation::RefreshInfo</a>, j);</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    }</div>
+</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="foldopen" id="foldopen00040" data-start="{" data-end="}">
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="a00980.html#ad74021eeded7e621fddaae159f2b8387">   40</a></span>    std::string <a class="code hl_function" href="a00980.html#ad74021eeded7e621fddaae159f2b8387">LowLevelAPI::uploadImg0</a>(std::string path, nlohmann::json c) {</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        nlohmann::json j{{<span class="stringliteral">&quot;filePath&quot;</span>, std::move(path)}, {<span class="stringliteral">&quot;contact&quot;</span>, c}};</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="a00435.html#a309e8d7f316e8b5e947ea3bcddeb84a8">KtOperation::ktOperation</a>(<a class="code hl_enumvalue" href="a00435.html#a80a8ec1c1ed6fd9db32d9a878405d412a46ac938377bea3e99fd597903c2dec05">KtOperation::UploadImg</a>, j);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    }</div>
+</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>} <span class="comment">// namespace MiraiCP</span></div>
+<div class="ttc" id="aa00050_html"><div class="ttname"><a href="a00050.html">JsonTools.h</a></div></div>
+<div class="ttc" id="aa00083_html"><div class="ttname"><a href="a00083.html">Tools.h</a></div></div>
+<div class="ttc" id="aa00182_html"><div class="ttname"><a href="a00182.html">commonTypes.h</a></div></div>
+<div class="ttc" id="aa00362_html"><div class="ttname"><a href="a00362.html">KtOperation.h</a></div></div>
+<div class="ttc" id="aa00374_html"><div class="ttname"><a href="a00374.html">LowLevelAPI.h</a></div></div>
+<div class="ttc" id="aa00389_html"><div class="ttname"><a href="a00389.html">ExceptionHandle.h</a></div></div>
+<div class="ttc" id="aa00412_html"><div class="ttname"><a href="a00412.html">MiraiCP</a></div><div class="ttdef"><b>Definition</b> <a href="a00050_source.html#l00021">JsonTools.h:21</a></div></div>
+<div class="ttc" id="aa00412_html_a4208a634d81d0263c1079debe2ab58fa"><div class="ttname"><a href="a00412.html#a4208a634d81d0263c1079debe2ab58fa">MiraiCP::json_stringmover</a></div><div class="ttdeci">std::string json_stringmover(nlohmann::json &amp;j, const std::string &amp;key)</div><div class="ttdef"><b>Definition</b> <a href="a00050_source.html#l00034">JsonTools.h:34</a></div></div>
+<div class="ttc" id="aa00412_html_ac0a8a1bade77a57eeb1d94cfacfb75ce"><div class="ttname"><a href="a00412.html#ac0a8a1bade77a57eeb1d94cfacfb75ce">MiraiCP::json</a></div><div class="ttdeci">nlohmann::json json</div><div class="ttdef"><b>Definition</b> <a href="a00380_source.html#l00031">Contact.cpp:31</a></div></div>
+<div class="ttc" id="aa00435_html_a309e8d7f316e8b5e947ea3bcddeb84a8"><div class="ttname"><a href="a00435.html#a309e8d7f316e8b5e947ea3bcddeb84a8">MiraiCP::KtOperation::ktOperation</a></div><div class="ttdeci">std::string ktOperation(operation_set type, const nlohmann::json &amp;data, bool catchErr, const std::string &amp;errorInfo)</div><div class="ttdoc">调用 Mirai 操作</div><div class="ttdef"><b>Definition</b> <a href="a00350_source.html#l00026">KtOperation.cpp:26</a></div></div>
+<div class="ttc" id="aa00435_html_a80a8ec1c1ed6fd9db32d9a878405d412a1c1f12c6ba67788e4fa35854ba398262"><div class="ttname"><a href="a00435.html#a80a8ec1c1ed6fd9db32d9a878405d412a1c1f12c6ba67788e4fa35854ba398262">MiraiCP::KtOperation::RefreshInfo</a></div><div class="ttdeci">@ RefreshInfo</div><div class="ttdoc">查询信息接口</div><div class="ttdef"><b>Definition</b> <a href="a00362_source.html#l00034">KtOperation.h:34</a></div></div>
+<div class="ttc" id="aa00435_html_a80a8ec1c1ed6fd9db32d9a878405d412a46ac938377bea3e99fd597903c2dec05"><div class="ttname"><a href="a00435.html#a80a8ec1c1ed6fd9db32d9a878405d412a46ac938377bea3e99fd597903c2dec05">MiraiCP::KtOperation::UploadImg</a></div><div class="ttdeci">@ UploadImg</div><div class="ttdoc">上传图片</div><div class="ttdef"><b>Definition</b> <a href="a00362_source.html#l00036">KtOperation.h:36</a></div></div>
+<div class="ttc" id="aa00980_html_a39064f9c2b148b3a3061f818bf237215"><div class="ttname"><a href="a00980.html#a39064f9c2b148b3a3061f818bf237215">MiraiCP::LowLevelAPI::info0</a></div><div class="ttdeci">static info info0(const std::string &amp;source)</div><div class="ttdef"><b>Definition</b> <a href="a00371_source.html#l00028">LowLevelAPI.cpp:28</a></div></div>
+<div class="ttc" id="aa00980_html_ad104b6f94628a14cf351ae7da993c770"><div class="ttname"><a href="a00980.html#ad104b6f94628a14cf351ae7da993c770">MiraiCP::LowLevelAPI::getInfoSource</a></div><div class="ttdeci">static std::string getInfoSource(nlohmann::json c)</div><div class="ttdoc">取该联系人的一些信息</div><div class="ttdef"><b>Definition</b> <a href="a00371_source.html#l00035">LowLevelAPI.cpp:35</a></div></div>
+<div class="ttc" id="aa00980_html_ad74021eeded7e621fddaae159f2b8387"><div class="ttname"><a href="a00980.html#ad74021eeded7e621fddaae159f2b8387">MiraiCP::LowLevelAPI::uploadImg0</a></div><div class="ttdeci">static std::string uploadImg0(std::string, nlohmann::json)</div><div class="ttdoc">上传图片</div><div class="ttdef"><b>Definition</b> <a href="a00371_source.html#l00040">LowLevelAPI.cpp:40</a></div></div>
+<div class="ttc" id="aa00984_html"><div class="ttname"><a href="a00984.html">MiraiCP::LowLevelAPI::info</a></div><div class="ttdoc">每个对象的必有信息</div><div class="ttdef"><b>Definition</b> <a href="a00374_source.html#l00041">LowLevelAPI.h:41</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_fef842b25f8adae1261920890dd101a4.html">sdk</a></li><li class="navelem"><a class="el" href="a00371.html">MessageSource.cpp</a></li>
-    <li class="footer">生成于 2023年 四月 10日 星期一 00:26:31 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_fef842b25f8adae1261920890dd101a4.html">sdk</a></li><li class="navelem"><a class="el" href="a00371.html">LowLevelAPI.cpp</a></li>
+    <li class="footer">生成于 2023年 十月 26日 星期四 01:16:24 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
     </body>

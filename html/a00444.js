@@ -1,10 +1,18 @@
 var a00444 =
 [
-    [ "string", "a00444.html#a40264477acbe1fada19b45463ba39f5a", null ],
-    [ "description", "a00444.html#ae924c02b04ee3fec68c0838ee34bd45d", null ],
-    [ "overrideOrigin", "a00444.html#acb9a0a0c0b1933c9aa28bb361f284489", null ],
-    [ "preFixOption", "a00444.html#af40c74e212dd165a72e7b2e8769e0dcb", null ],
-    [ "primaryName", "a00444.html#a21a4c0a9fe2032ce10efbd76c5388dce", null ],
-    [ "secondNames", "a00444.html#a5211c63986e404f8edc7b36cbd0c3618", null ],
-    [ "usage", "a00444.html#a3f604db6531d4956520cf813d57aa544", null ]
+    [ "getAuthor", "a00444.html#abfdf0bbad2700204a5deced1ff272ff2", null ],
+    [ "getDescription", "a00444.html#a7164279987822e9aab5a2dd15e017de3", null ],
+    [ "getId", "a00444.html#a812cdc9b9e9c46af8980f1aea9a4233c", null ],
+    [ "getMVersion", "a00444.html#a89f1f77ffc39dfa0481e7c1ddc318b23", null ],
+    [ "getName", "a00444.html#a75b62773306f64d5de37fc60f700b534", null ],
+    [ "getTime", "a00444.html#aa9519385a55e29fa632d31d97b734ac4", null ],
+    [ "getVersion", "a00444.html#a8f0131520e982b41e3c62364b9eaf2fa", null ],
+    [ "isValid", "a00444.html#a37c32e82eb4c921a9f66db00cc7a0010", null ],
+    [ "author", "a00444.html#a6e9f61e66186687264c2020b1d6c3afe", null ],
+    [ "description", "a00444.html#a6912f54ff186c8903ce5b55000bcbc6f", null ],
+    [ "id", "a00444.html#a2c5e718b4b8ceb1cb2b5b8bbb876146a", null ],
+    [ "mversion", "a00444.html#a3c74ed2b89e386c82452f1b510d99c57", null ],
+    [ "name", "a00444.html#a2b542fc65ab1b1d6720bfcc1a9ce1602", null ],
+    [ "time", "a00444.html#a72f4752e10dc44b50911e80e37c924c2", null ],
+    [ "version", "a00444.html#a5754922ee11dbea499f6454b86357d16", null ]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['pluginauthority_0',['PluginAuthority',['../a00407.html#a25dcf37316806dd07a4e960c5eb537a4',1,'LibLoader']]]
+  ['querybotlistcode_0',['QueryBotListCode',['../a00435.html#a61a85abb353bc8cd9f7715938014d86e',1,'MiraiCP::KtOperation']]]
 ];

@@ -4,9 +4,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiraiCP: Exception.h 源文件</title>
+<title>MiraiCP: GroupTempMessageEvent.h 源文件</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -35,7 +35,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MiraiCP
-   &#160;<span id="projectnumber">v2.15.0-RC2</span>
+   &#160;<span id="projectnumber">v2.16.0</span>
    </div>
    <div id="projectbrief">MiraiCP api document</div>
   </td>
@@ -44,10 +44,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.9.2 -->
+<!-- 制作者 Doxygen 1.9.8 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search",'搜索','.html');
+var searchBox = new SearchBox("searchBox", "search/",'.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -61,6 +61,11 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -87,16 +92,23 @@ $(document).ready(function(){initNavTree('a00122_source.html',''); initResizable
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">Exception.h</div></div>
+  <div class="headertitle"><div class="title">GroupTempMessageEvent.h</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="a00122.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// Copyright (c) 2020 - 2022. Eritque arcus and contributors.</span></div>
+<a href="a00122.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// Copyright (c) 2020 - 2023. Eritque arcus and contributors.</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">//</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">// This program is free software: you can redistribute it and/or modify</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">// it under the terms of the GNU Affero General Public License as</span></div>
@@ -112,91 +124,99 @@ $(document).ready(function(){initNavTree('a00122_source.html',''); initResizable
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">// along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</span></div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">//</span></div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#ifndef MIRAICP_PRO_EXCEPTION_H</span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#define MIRAICP_PRO_EXCEPTION_H</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#ifndef MIRAICP_PRO_GROUPTEMPMESSAGEEVENT_H</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#define MIRAICP_PRO_GROUPTEMPMESSAGEEVENT_H</span></div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &quot;<a class="code" href="a00044.html">MiraiCPMacros.h</a>&quot;</span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">// -----------------------</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &lt;exception&gt;</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#include &lt;thread&gt;</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &quot;../Group.h&quot;</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &quot;../Member.h&quot;</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &quot;<a class="code" href="a00164.html">BotEvent.h</a>&quot;</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="keyword">namespace </span><a class="code hl_namespace" href="a00397.html">MiraiCP</a> {</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="a00564.html">   30</a></span>    <span class="keyword">class </span><a class="code hl_define" href="a00044.html#aa40df2b825bdde9207f3e87b140235c3">MIRAICP_EXPORT</a> <a class="code hl_interface" href="a00564.html">MiraiCPExceptionBase</a> : <span class="keyword">public</span> ::std::exception {</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keyword">protected</span>:</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="a00564.html#ae7cf7e3913c2067517d3f40ff1c9a14d">   32</a></span>        <span class="keyword">using</span> <span class="keywordtype">string</span> = std::string;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="keyword">namespace </span><a class="code hl_namespace" href="a00412.html">MiraiCP</a> {</div>
+<div class="foldopen" id="foldopen00028" data-start="{" data-end="};">
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="a00532.html">   28</a></span>    <span class="keyword">class </span><a class="code hl_class" href="a00532.html">GroupTempMessageEvent</a> : <span class="keyword">public</span> <a class="code hl_class" href="a00488.html">BotEvent</a>&lt;GroupTempMessageEvent&gt;, <span class="keyword">public</span> <a class="code hl_class" href="a00516.html">IMessageEvent</a> {</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keyword">public</span>:</div>
+<div class="foldopen" id="foldopen00030" data-start="{" data-end="}">
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="a00532.html#aab7402e84e7d27152ee337a20d70233a">   30</a></span>        <span class="keyword">static</span> <a class="code hl_enumeration" href="a00416.html#abe9e9d8212ea8f23717b72db64393cab">eventTypes::Types</a> <a class="code hl_function" href="a00532.html#aab7402e84e7d27152ee337a20d70233a">get_event_type</a>() {</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>            <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="a00416.html#abe9e9d8212ea8f23717b72db64393caba82138ba7d5017c9976f29de9213836dd">eventTypes::Types::GroupTempMessageEvent</a>;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        }</div>
+</div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="keyword">protected</span>:</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="a00564.html#a2eb4b42c95d1ecbc6333129ecf8c5592">   36</a></span>        <span class="keywordtype">string</span> <a class="code hl_variable" href="a00564.html#a2eb4b42c95d1ecbc6333129ecf8c5592">re</a>;</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="a00564.html#a5d5876720c98c5c3ef2fcd2a20a0cb72">   40</a></span>        <span class="keywordtype">string</span> <a class="code hl_variable" href="a00564.html#a5d5876720c98c5c3ef2fcd2a20a0cb72">filename</a>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="a00532.html#a29c18056652c7d36248f70f359f01e74">   36</a></span>        <a class="code hl_class" href="a00624.html">Group</a> <a class="code hl_variable" href="a00532.html#a29c18056652c7d36248f70f359f01e74">group</a>;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="a00532.html#ac0252e17c1cb9a0d4f2ebf37720951db">   38</a></span>        <a class="code hl_class" href="a00644.html">Member</a> <a class="code hl_variable" href="a00532.html#ac0252e17c1cb9a0d4f2ebf37720951db">sender</a>;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="a00532.html#a2405f8a309e3b2de0d7cba313d795cee">   40</a></span>        <a class="code hl_class" href="a00652.html">MessageChain</a> <a class="code hl_variable" href="a00532.html#a2405f8a309e3b2de0d7cba313d795cee">message</a>;</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="a00564.html#a8724c76817d0af9f3f8fef9a6ca7f60a">   43</a></span>        <span class="keywordtype">int</span> lineNum = 0;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        <span class="keyword">explicit</span> <a class="code hl_class" href="a00532.html">GroupTempMessageEvent</a>(<a class="code hl_class" href="a00504.html">BaseEventData</a> j);</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keyword">protected</span>:</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="a00564.html#a055eb6e4a0899678793b0e4106fbf493">   47</a></span>        <a class="code hl_function" href="a00564.html#a055eb6e4a0899678793b0e4106fbf493">MiraiCPExceptionBase</a>(<span class="keywordtype">string</span> info, <span class="keywordtype">string</span> _filename, <span class="keywordtype">int</span> _lineNum) : re(std::move(info)), filename(std::move(_filename)), lineNum(_lineNum) {}</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="a00564.html#ac7fe834dc2b81b3c0d44dde55b796ac6">   50</a></span>        <a class="code hl_function" href="a00564.html#ac7fe834dc2b81b3c0d44dde55b796ac6">~MiraiCPExceptionBase</a>() <span class="keyword">override</span> = <span class="keywordflow">default</span>;</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="a00564.html#aaac831e38c70fa529b8894b825dba04c">   54</a></span>        <span class="keyword">const</span> <span class="keywordtype">char</span> *<a class="code hl_function" href="a00564.html#aaac831e38c70fa529b8894b825dba04c">what</a>() const noexcept<span class="keyword"> override </span>{ <span class="keywordflow">return</span> re.c_str(); }</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="a00564.html#a68c0d665c09da7144da6a63fd26f2dd0">   57</a></span>        <span class="keywordtype">string</span> <a class="code hl_function" href="a00564.html#a68c0d665c09da7144da6a63fd26f2dd0">getError</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> re; }</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        <span class="keywordtype">void</span> <span class="keyword">raise</span>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="keyword">public</span>: <span class="comment">// 暴露的接口</span></div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="comment"></span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> basicRaise() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        <span class="comment">// CRTP实现一次，调用静态的exceptionType</span></div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="a00564.html#a55544c06d6fea1a7696421383e155f13">   68</a></span><span class="comment"></span>        <span class="keyword">virtual</span> <span class="keywordtype">string</span> <a class="code hl_function" href="a00564.html#a55544c06d6fea1a7696421383e155f13">getExceptionType</a>() <span class="keyword">const</span> = 0;</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        <span class="comment">// 每个子类需要单独实现该静态方法</span></div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="a00564.html#a62ccfc566b59f882d0623f8e24757809">   73</a></span><span class="comment"></span>        <span class="keyword">static</span> <span class="keywordtype">string</span> <a class="code hl_function" href="a00564.html#a62ccfc566b59f882d0623f8e24757809">exceptionType</a>() { <span class="keywordflow">return</span> <span class="stringliteral">&quot;MiraiCPException&quot;</span>; }</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    };</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="a00568.html">   85</a></span>    <span class="keyword">class </span><a class="code hl_define" href="a00044.html#aa40df2b825bdde9207f3e87b140235c3">MIRAICP_EXPORT</a> <a class="code hl_interface" href="a00568.html">MiraiCPExceptionCRTP</a> : <span class="keyword">public</span> <a class="code hl_interface" href="a00564.html">MiraiCPExceptionBase</a> {</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno"><a class="line" href="a00568.html#a221340d3ff17b5dddda9aff9a161756e">   88</a></span>        <span class="keyword">explicit</span> <a class="code hl_function" href="a00568.html#a221340d3ff17b5dddda9aff9a161756e">MiraiCPExceptionCRTP</a>(<span class="keywordtype">string</span> _re, <span class="keywordtype">string</span> _filename, <span class="keywordtype">int</span> _lineNum) : <a class="code hl_interface" href="a00564.html">MiraiCPExceptionBase</a>(std::move(_re), std::move(_filename), _lineNum) {</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        }</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        <span class="comment">// CRTP类型获取实现</span></div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno"><a class="line" href="a00568.html#a959de8110940940b1b354def276e9923">   93</a></span>        <span class="keywordtype">string</span> <a class="code hl_function" href="a00568.html#a959de8110940940b1b354def276e9923">getExceptionType</a>()<span class="keyword"> const override </span>{ <span class="keywordflow">return</span> T::exceptionType(); }</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    };</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno"><a class="line" href="a00572.html">   99</a></span>    <span class="keyword">class </span><a class="code hl_define" href="a00044.html#aa40df2b825bdde9207f3e87b140235c3">MIRAICP_EXPORT</a> <a class="code hl_class" href="a00572.html">MiraiCPException</a> : <span class="keyword">public</span> <a class="code hl_interface" href="a00568.html">MiraiCPExceptionCRTP</a>&lt;MiraiCPExceptionBase&gt; {};</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>} <span class="comment">// namespace MiraiCP</span></div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span><span class="preprocessor">#endif </span><span class="comment">//MIRAICP_PRO_EXCEPTION_H</span></div>
-<div class="ttc" id="aa00044_html"><div class="ttname"><a href="a00044.html">MiraiCPMacros.h</a></div></div>
-<div class="ttc" id="aa00044_html_aa40df2b825bdde9207f3e87b140235c3"><div class="ttname"><a href="a00044.html#aa40df2b825bdde9207f3e87b140235c3">MIRAICP_EXPORT</a></div><div class="ttdeci">#define MIRAICP_EXPORT</div><div class="ttdef"><b>Definition:</b> <a href="a00044_source.html#l00180">MiraiCPMacros.h:180</a></div></div>
-<div class="ttc" id="aa00397_html"><div class="ttname"><a href="a00397.html">MiraiCP</a></div><div class="ttdef"><b>Definition:</b> <a href="a00041_source.html#l00021">JsonTools.h:21</a></div></div>
-<div class="ttc" id="aa00564_html"><div class="ttname"><a href="a00564.html">MiraiCP::MiraiCPExceptionBase</a></div><div class="ttdoc">总异常抽象类，用于一般捕获，不要直接抛出该类，不知道抛出什么的时候请抛出 MiraiCPException</div><div class="ttdef"><b>Definition:</b> <a href="a00122_source.html#l00030">Exception.h:30</a></div></div>
-<div class="ttc" id="aa00564_html_a055eb6e4a0899678793b0e4106fbf493"><div class="ttname"><a href="a00564.html#a055eb6e4a0899678793b0e4106fbf493">MiraiCP::MiraiCPExceptionBase::MiraiCPExceptionBase</a></div><div class="ttdeci">MiraiCPExceptionBase(string info, string _filename, int _lineNum)</div><div class="ttdoc">受保护构造函数，供子类调用</div><div class="ttdef"><b>Definition:</b> <a href="a00122_source.html#l00047">Exception.h:47</a></div></div>
-<div class="ttc" id="aa00564_html_a2eb4b42c95d1ecbc6333129ecf8c5592"><div class="ttname"><a href="a00564.html#a2eb4b42c95d1ecbc6333129ecf8c5592">MiraiCP::MiraiCPExceptionBase::re</a></div><div class="ttdeci">string re</div><div class="ttdoc">异常内容</div><div class="ttdef"><b>Definition:</b> <a href="a00122_source.html#l00036">Exception.h:36</a></div></div>
-<div class="ttc" id="aa00564_html_a55544c06d6fea1a7696421383e155f13"><div class="ttname"><a href="a00564.html#a55544c06d6fea1a7696421383e155f13">MiraiCP::MiraiCPExceptionBase::getExceptionType</a></div><div class="ttdeci">virtual string getExceptionType() const =0</div><div class="ttdoc">获取异常类型，通用接口</div></div>
-<div class="ttc" id="aa00564_html_a5d5876720c98c5c3ef2fcd2a20a0cb72"><div class="ttname"><a href="a00564.html#a5d5876720c98c5c3ef2fcd2a20a0cb72">MiraiCP::MiraiCPExceptionBase::filename</a></div><div class="ttdeci">string filename</div><div class="ttdoc">发生异常的文件名</div><div class="ttdef"><b>Definition:</b> <a href="a00122_source.html#l00040">Exception.h:40</a></div></div>
-<div class="ttc" id="aa00564_html_a62ccfc566b59f882d0623f8e24757809"><div class="ttname"><a href="a00564.html#a62ccfc566b59f882d0623f8e24757809">MiraiCP::MiraiCPExceptionBase::exceptionType</a></div><div class="ttdeci">static string exceptionType()</div><div class="ttdef"><b>Definition:</b> <a href="a00122_source.html#l00073">Exception.h:73</a></div></div>
-<div class="ttc" id="aa00564_html_a68c0d665c09da7144da6a63fd26f2dd0"><div class="ttname"><a href="a00564.html#a68c0d665c09da7144da6a63fd26f2dd0">MiraiCP::MiraiCPExceptionBase::getError</a></div><div class="ttdeci">string getError() const</div><div class="ttdoc">返回std::string的异常信息</div><div class="ttdef"><b>Definition:</b> <a href="a00122_source.html#l00057">Exception.h:57</a></div></div>
-<div class="ttc" id="aa00564_html_aaac831e38c70fa529b8894b825dba04c"><div class="ttname"><a href="a00564.html#aaac831e38c70fa529b8894b825dba04c">MiraiCP::MiraiCPExceptionBase::what</a></div><div class="ttdeci">const char * what() const noexcept override</div><div class="ttdoc">异常信息</div><div class="ttdef"><b>Definition:</b> <a href="a00122_source.html#l00054">Exception.h:54</a></div></div>
-<div class="ttc" id="aa00564_html_ac7fe834dc2b81b3c0d44dde55b796ac6"><div class="ttname"><a href="a00564.html#ac7fe834dc2b81b3c0d44dde55b796ac6">MiraiCP::MiraiCPExceptionBase::~MiraiCPExceptionBase</a></div><div class="ttdeci">~MiraiCPExceptionBase() override=default</div></div>
-<div class="ttc" id="aa00568_html"><div class="ttname"><a href="a00568.html">MiraiCP::MiraiCPExceptionCRTP</a></div><div class="ttdoc">总异常CRTP抽象类，不要直接抛出该类，不知道抛出什么的时候请抛出 MiraiCPException。 该类是用于继承的基类，需要新的异常类型时，继承该类并以子类作为模板参数。 子类需要实现的方法：</div><div class="ttdef"><b>Definition:</b> <a href="a00122_source.html#l00085">Exception.h:85</a></div></div>
-<div class="ttc" id="aa00568_html_a221340d3ff17b5dddda9aff9a161756e"><div class="ttname"><a href="a00568.html#a221340d3ff17b5dddda9aff9a161756e">MiraiCP::MiraiCPExceptionCRTP::MiraiCPExceptionCRTP</a></div><div class="ttdeci">MiraiCPExceptionCRTP(string _re, string _filename, int _lineNum)</div><div class="ttdoc">委托构造函数</div><div class="ttdef"><b>Definition:</b> <a href="a00122_source.html#l00088">Exception.h:88</a></div></div>
-<div class="ttc" id="aa00568_html_a959de8110940940b1b354def276e9923"><div class="ttname"><a href="a00568.html#a959de8110940940b1b354def276e9923">MiraiCP::MiraiCPExceptionCRTP::getExceptionType</a></div><div class="ttdeci">string getExceptionType() const override</div><div class="ttdoc">获取异常类型，通用接口</div><div class="ttdef"><b>Definition:</b> <a href="a00122_source.html#l00093">Exception.h:93</a></div></div>
-<div class="ttc" id="aa00572_html"><div class="ttname"><a href="a00572.html">MiraiCP::MiraiCPException</a></div><div class="ttdoc">通用MiraiCP异常</div><div class="ttdef"><b>Definition:</b> <a href="a00122_source.html#l00099">Exception.h:99</a></div></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keyword">public</span>:</div>
+<div class="foldopen" id="foldopen00046" data-start="{" data-end="}">
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="a00532.html#ac9bee0cbf3838fa62837e62110e67067">   46</a></span>        <a class="code hl_class" href="a00460.html">Contact</a> *<a class="code hl_function" href="a00532.html#ac9bee0cbf3838fa62837e62110e67067">chat</a>()<span class="keyword"> override </span>{</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>            <span class="keywordflow">return</span> &amp;<a class="code hl_variable" href="a00532.html#ac0252e17c1cb9a0d4f2ebf37720951db">sender</a>;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        }</div>
+</div>
+<div class="foldopen" id="foldopen00049" data-start="{" data-end="}">
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="a00532.html#a55718d1fe9883ea24c47c8ebb503d807">   49</a></span>        <span class="keyword">const</span> <a class="code hl_class" href="a00460.html">Contact</a> *<a class="code hl_function" href="a00532.html#a55718d1fe9883ea24c47c8ebb503d807">chat</a>()<span class="keyword"> const override </span>{</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            <span class="keywordflow">return</span> &amp;<a class="code hl_variable" href="a00532.html#ac0252e17c1cb9a0d4f2ebf37720951db">sender</a>;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        }</div>
+</div>
+<div class="foldopen" id="foldopen00052" data-start="{" data-end="}">
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="a00532.html#adf2a7d962bf5daba13db488d48f0da5d">   52</a></span>        <a class="code hl_class" href="a00460.html">Contact</a> *<a class="code hl_function" href="a00532.html#adf2a7d962bf5daba13db488d48f0da5d">from</a>()<span class="keyword"> override </span>{</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>            <span class="keywordflow">return</span> &amp;<a class="code hl_variable" href="a00532.html#ac0252e17c1cb9a0d4f2ebf37720951db">sender</a>;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        }</div>
+</div>
+<div class="foldopen" id="foldopen00055" data-start="{" data-end="}">
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="a00532.html#a40e9c959f267452a60b2d5e6549dd5bb">   55</a></span>        <span class="keyword">const</span> <a class="code hl_class" href="a00460.html">Contact</a> *<a class="code hl_function" href="a00532.html#a40e9c959f267452a60b2d5e6549dd5bb">from</a>()<span class="keyword"> const override </span>{</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>            <span class="keywordflow">return</span> &amp;<a class="code hl_variable" href="a00532.html#ac0252e17c1cb9a0d4f2ebf37720951db">sender</a>;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        }</div>
+</div>
+<div class="foldopen" id="foldopen00058" data-start="{" data-end="}">
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="a00532.html#af4a3409f72b9feba0671804763390592">   58</a></span>        <a class="code hl_class" href="a00652.html">MessageChain</a> *<a class="code hl_function" href="a00532.html#af4a3409f72b9feba0671804763390592">getMessageChain</a>()<span class="keyword"> override </span>{</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>            <span class="keywordflow">return</span> &amp;<a class="code hl_variable" href="a00532.html#a2405f8a309e3b2de0d7cba313d795cee">message</a>;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        }</div>
+</div>
+<div class="foldopen" id="foldopen00061" data-start="{" data-end="}">
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="a00532.html#af08cf89e9ec68ea7a71f491bac7af023">   61</a></span>        <span class="keyword">const</span> <a class="code hl_class" href="a00652.html">MessageChain</a> *<a class="code hl_function" href="a00532.html#af08cf89e9ec68ea7a71f491bac7af023">getMessageChain</a>()<span class="keyword"> const override </span>{</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>            <span class="keywordflow">return</span> &amp;<a class="code hl_variable" href="a00532.html#a2405f8a309e3b2de0d7cba313d795cee">message</a>;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        }</div>
+</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    };</div>
+</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>} <span class="comment">// namespace MiraiCP</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="preprocessor">#endif </span><span class="comment">//MIRAICP_PRO_GROUPTEMPMESSAGEEVENT_H</span></div>
+<div class="ttc" id="aa00164_html"><div class="ttname"><a href="a00164.html">BotEvent.h</a></div></div>
+<div class="ttc" id="aa00412_html"><div class="ttname"><a href="a00412.html">MiraiCP</a></div><div class="ttdef"><b>Definition</b> <a href="a00050_source.html#l00021">JsonTools.h:21</a></div></div>
+<div class="ttc" id="aa00416_html_abe9e9d8212ea8f23717b72db64393cab"><div class="ttname"><a href="a00416.html#abe9e9d8212ea8f23717b72db64393cab">MiraiCP::eventTypes::Types</a></div><div class="ttdeci">Types</div><div class="ttdef"><b>Definition</b> <a href="a00149_source.html#l00033">EventBase.h:33</a></div></div>
+<div class="ttc" id="aa00416_html_abe9e9d8212ea8f23717b72db64393caba82138ba7d5017c9976f29de9213836dd"><div class="ttname"><a href="a00416.html#abe9e9d8212ea8f23717b72db64393caba82138ba7d5017c9976f29de9213836dd">MiraiCP::eventTypes::GroupTempMessageEvent</a></div><div class="ttdeci">@ GroupTempMessageEvent</div><div class="ttdef"><b>Definition</b> <a href="a00149_source.html#l00041">EventBase.h:41</a></div></div>
+<div class="ttc" id="aa00460_html"><div class="ttname"><a href="a00460.html">MiraiCP::Contact</a></div><div class="ttdoc">group, friend, member的父类</div><div class="ttdef"><b>Definition</b> <a href="a00095_source.html#l00053">Contact.h:53</a></div></div>
+<div class="ttc" id="aa00488_html"><div class="ttname"><a href="a00488.html">MiraiCP::BotEvent</a></div><div class="ttdoc">所有事件处理timeoutevent都是机器人事件，指都有机器人实例</div><div class="ttdef"><b>Definition</b> <a href="a00164_source.html#l00029">BotEvent.h:29</a></div></div>
+<div class="ttc" id="aa00504_html"><div class="ttname"><a href="a00504.html">MiraiCP::BaseEventData</a></div><div class="ttdef"><b>Definition</b> <a href="a00149_source.html#l00058">EventBase.h:58</a></div></div>
+<div class="ttc" id="aa00516_html"><div class="ttname"><a href="a00516.html">MiraiCP::IMessageEvent</a></div><div class="ttdoc">MessageEvent类型的抽象接口，用于Message类型多态实现</div><div class="ttdef"><b>Definition</b> <a href="a00149_source.html#l00106">EventBase.h:106</a></div></div>
+<div class="ttc" id="aa00532_html"><div class="ttname"><a href="a00532.html">MiraiCP::GroupTempMessageEvent</a></div><div class="ttdoc">群临时会话</div><div class="ttdef"><b>Definition</b> <a href="a00122_source.html#l00028">GroupTempMessageEvent.h:28</a></div></div>
+<div class="ttc" id="aa00532_html_a2405f8a309e3b2de0d7cba313d795cee"><div class="ttname"><a href="a00532.html#a2405f8a309e3b2de0d7cba313d795cee">MiraiCP::GroupTempMessageEvent::message</a></div><div class="ttdeci">MessageChain message</div><div class="ttdoc">信息</div><div class="ttdef"><b>Definition</b> <a href="a00122_source.html#l00040">GroupTempMessageEvent.h:40</a></div></div>
+<div class="ttc" id="aa00532_html_a29c18056652c7d36248f70f359f01e74"><div class="ttname"><a href="a00532.html#a29c18056652c7d36248f70f359f01e74">MiraiCP::GroupTempMessageEvent::group</a></div><div class="ttdeci">Group group</div><div class="ttdoc">来源群</div><div class="ttdef"><b>Definition</b> <a href="a00122_source.html#l00036">GroupTempMessageEvent.h:36</a></div></div>
+<div class="ttc" id="aa00532_html_a40e9c959f267452a60b2d5e6549dd5bb"><div class="ttname"><a href="a00532.html#a40e9c959f267452a60b2d5e6549dd5bb">MiraiCP::GroupTempMessageEvent::from</a></div><div class="ttdeci">const Contact * from() const override</div><div class="ttdef"><b>Definition</b> <a href="a00122_source.html#l00055">GroupTempMessageEvent.h:55</a></div></div>
+<div class="ttc" id="aa00532_html_a55718d1fe9883ea24c47c8ebb503d807"><div class="ttname"><a href="a00532.html#a55718d1fe9883ea24c47c8ebb503d807">MiraiCP::GroupTempMessageEvent::chat</a></div><div class="ttdeci">const Contact * chat() const override</div><div class="ttdef"><b>Definition</b> <a href="a00122_source.html#l00049">GroupTempMessageEvent.h:49</a></div></div>
+<div class="ttc" id="aa00532_html_aab7402e84e7d27152ee337a20d70233a"><div class="ttname"><a href="a00532.html#aab7402e84e7d27152ee337a20d70233a">MiraiCP::GroupTempMessageEvent::get_event_type</a></div><div class="ttdeci">static eventTypes::Types get_event_type()</div><div class="ttdef"><b>Definition</b> <a href="a00122_source.html#l00030">GroupTempMessageEvent.h:30</a></div></div>
+<div class="ttc" id="aa00532_html_ac0252e17c1cb9a0d4f2ebf37720951db"><div class="ttname"><a href="a00532.html#ac0252e17c1cb9a0d4f2ebf37720951db">MiraiCP::GroupTempMessageEvent::sender</a></div><div class="ttdeci">Member sender</div><div class="ttdoc">发送人</div><div class="ttdef"><b>Definition</b> <a href="a00122_source.html#l00038">GroupTempMessageEvent.h:38</a></div></div>
+<div class="ttc" id="aa00532_html_ac9bee0cbf3838fa62837e62110e67067"><div class="ttname"><a href="a00532.html#ac9bee0cbf3838fa62837e62110e67067">MiraiCP::GroupTempMessageEvent::chat</a></div><div class="ttdeci">Contact * chat() override</div><div class="ttdoc">获取当前聊天，可能是群，私聊，或群临时会话</div><div class="ttdef"><b>Definition</b> <a href="a00122_source.html#l00046">GroupTempMessageEvent.h:46</a></div></div>
+<div class="ttc" id="aa00532_html_adf2a7d962bf5daba13db488d48f0da5d"><div class="ttname"><a href="a00532.html#adf2a7d962bf5daba13db488d48f0da5d">MiraiCP::GroupTempMessageEvent::from</a></div><div class="ttdeci">Contact * from() override</div><div class="ttdoc">获取当前聊天的发送人，可能是群成员，私聊的好友，或群临时会话对应的群成员</div><div class="ttdef"><b>Definition</b> <a href="a00122_source.html#l00052">GroupTempMessageEvent.h:52</a></div></div>
+<div class="ttc" id="aa00532_html_af08cf89e9ec68ea7a71f491bac7af023"><div class="ttname"><a href="a00532.html#af08cf89e9ec68ea7a71f491bac7af023">MiraiCP::GroupTempMessageEvent::getMessageChain</a></div><div class="ttdeci">const MessageChain * getMessageChain() const override</div><div class="ttdef"><b>Definition</b> <a href="a00122_source.html#l00061">GroupTempMessageEvent.h:61</a></div></div>
+<div class="ttc" id="aa00532_html_af4a3409f72b9feba0671804763390592"><div class="ttname"><a href="a00532.html#af4a3409f72b9feba0671804763390592">MiraiCP::GroupTempMessageEvent::getMessageChain</a></div><div class="ttdeci">MessageChain * getMessageChain() override</div><div class="ttdef"><b>Definition</b> <a href="a00122_source.html#l00058">GroupTempMessageEvent.h:58</a></div></div>
+<div class="ttc" id="aa00624_html"><div class="ttname"><a href="a00624.html">MiraiCP::Group</a></div><div class="ttdoc">forward declaration</div><div class="ttdef"><b>Definition</b> <a href="a00056_source.html#l00100">Group.h:100</a></div></div>
+<div class="ttc" id="aa00644_html"><div class="ttname"><a href="a00644.html">MiraiCP::Member</a></div><div class="ttdoc">群成员类声明</div><div class="ttdef"><b>Definition</b> <a href="a00065_source.html#l00032">Member.h:32</a></div></div>
+<div class="ttc" id="aa00652_html"><div class="ttname"><a href="a00652.html">MiraiCP::MessageChain</a></div><div class="ttdoc">消息链, 一般由SingleMessage组成</div><div class="ttdef"><b>Definition</b> <a href="a00092_source.html#l00086">MessageChain.h:86</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_1ede18532ce6284c46efe733029b594d.html">sdk</a></li><li class="navelem"><a class="el" href="a00122.html">Exception.h</a></li>
-    <li class="footer">生成于 2023年 四月 10日 星期一 00:26:29 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_1ede18532ce6284c46efe733029b594d.html">sdk</a></li><li class="navelem"><a class="el" href="dir_f83dc716b95661d1ef88f368581b25fb.html">Events</a></li><li class="navelem"><a class="el" href="a00122.html">GroupTempMessageEvent.h</a></li>
+    <li class="footer">生成于 2023年 十月 26日 星期四 01:16:24 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
     </body>

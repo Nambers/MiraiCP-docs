@@ -1,7 +1,13 @@
 var a00560 =
 [
-    [ "TimeOutEvent", "a00560.html#abcaf0a409f7f3a66e0da48ada27a6820", null ],
-    [ "get_event_type", "a00560.html#a3f8c12581718bf6c1fe9d6b75ef76b7e", null ],
-    [ "getEventType", "a00560.html#aece701e59d0c95f0fde7680fe0265543", null ],
-    [ "msg", "a00560.html#ad6869868495ecef440a6d4b909188b77", null ]
+    [ "NewFriendRequestEvent", "a00560.html#a9d4028d4cc5c401c0065ae73a39647d0", null ],
+    [ "accept", "a00560.html#a460bb7fc7e69cf313e3902ae0101b459", null ],
+    [ "get_event_type", "a00560.html#a53ffb1428471bb194297d75715d964cf", null ],
+    [ "reject", "a00560.html#a887c0777813d171d8fd4241e5d6c7357", null ],
+    [ "from", "a00560.html#abb45902bd266d56fba5af99a6426c520", null ],
+    [ "fromGroup", "a00560.html#ab134e9ec9f86cdef6e02a7ce71fa57ce", null ],
+    [ "message", "a00560.html#a914502cfd8ab0db7ea570240f0bb56e5", null ],
+    [ "nick", "a00560.html#aac9936ee444a019ef2c988a4ed369b55", null ],
+    [ "requestEventId", "a00560.html#af25c77fb53186b00c3267e0f12d41c23", null ],
+    [ "source", "a00560.html#a4b48f29f9ac4443abf0a76590690a897", null ]
 ];

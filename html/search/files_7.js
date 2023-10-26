@@ -1,8 +1,7 @@
 var searchData=
 [
-  ['jnienvmanager_2ecpp_0',['JNIEnvManager.cpp',['../a00200.html',1,'']]],
-  ['jnienvmanager_2eh_1',['JNIEnvManager.h',['../a00203.html',1,'']]],
-  ['jnienvs_2ecpp_2',['JNIEnvs.cpp',['../a00206.html',1,'']]],
-  ['jnienvs_2eh_3',['JNIEnvs.h',['../a00209.html',1,'']]],
-  ['jsontools_2eh_4',['JsonTools.h',['../a00041.html',1,'']]]
+  ['ktinterface_2ecpp_0',['ktInterface.cpp',['../a00314.html',1,'']]],
+  ['ktinterface_2eh_1',['ktInterface.h',['../a00269.html',1,'']]],
+  ['ktoperation_2ecpp_2',['KtOperation.cpp',['../a00350.html',1,'']]],
+  ['ktoperation_2eh_3',['KtOperation.h',['../a00362.html',1,'']]]
 ];

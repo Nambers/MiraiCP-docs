@@ -4,9 +4,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiraiCP: loaderMain.cpp 文件参考</title>
+<title>MiraiCP: libOpen.cpp 文件参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -35,7 +35,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MiraiCP
-   &#160;<span id="projectnumber">v2.15.0-RC2</span>
+   &#160;<span id="projectnumber">v2.16.0</span>
    </div>
    <div id="projectbrief">MiraiCP api document</div>
   </td>
@@ -44,10 +44,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.9.2 -->
+<!-- 制作者 Doxygen 1.9.8 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search",'搜索','.html');
+var searchBox = new SearchBox("searchBox", "search/",'.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -87,80 +87,144 @@ $(document).ready(function(){initNavTree('a00242.html',''); initResizable(); });
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
 </div>
 
 <div class="header">
   <div class="summary">
 <a href="#namespaces">命名空间</a> &#124;
+<a href="#define-members">宏定义</a> &#124;
 <a href="#func-members">函数</a>  </div>
-  <div class="headertitle"><div class="title">loaderMain.cpp 文件参考</div></div>
+  <div class="headertitle"><div class="title">libOpen.cpp 文件参考</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="a00245_source.html">loaderMain.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00290_source.html">ThreadPool.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00230_source.html">LoaderExceptions.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00236_source.html">LoaderLogger.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00248_source.html">LoaderTaskQueue.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00263_source.html">Plugin.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00272_source.html">PluginListManager.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00278_source.html">Scheduler.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00284_source.html">ThreadIdentify.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00188_source.html">redirectCout.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="a00287_source.html">libOpen.h</a>&quot;</code><br />
+<code>#include &lt;dlfcn.h&gt;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> loaderMain.cpp 的引用(Include)关系图:</div>
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> libOpen.cpp 的引用(Include)关系图:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="a00243.svg" width="2035" height="560"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00243.svg" width="483" height="486"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 <p><a href="a00242_source.html">浏览源代码.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
 命名空间</h2></td></tr>
-<tr class="memitem:a00407"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00407.html">LibLoader</a></td></tr>
+<tr class="memitem:a00425" id="r_a00425"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00425.html">LibLoader</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00426" id="r_a00426"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00426.html">LibLoader::LoaderApi</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+宏定义</h2></td></tr>
+<tr class="memitem:a8d9660e662b6e570295b95769dc5bf32" id="r_a8d9660e662b6e570295b95769dc5bf32"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00242.html#a8d9660e662b6e570295b95769dc5bf32">OPEN_LIBRARY</a>(path)&#160;&#160;&#160;dlopen(path.c_str(), RTLD_LAZY)</td></tr>
+<tr class="separator:a8d9660e662b6e570295b95769dc5bf32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a071a5a9d769c6e787e4101850fff1a54" id="r_a071a5a9d769c6e787e4101850fff1a54"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00242.html#a071a5a9d769c6e787e4101850fff1a54">CLOSE_LIBRARY</a>(handle)&#160;&#160;&#160;dlclose(handle)</td></tr>
+<tr class="separator:a071a5a9d769c6e787e4101850fff1a54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59a1df0cff1ee36d72e98032ab2594ff" id="r_a59a1df0cff1ee36d72e98032ab2594ff"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00242.html#a59a1df0cff1ee36d72e98032ab2594ff">GET_SYMBOL</a>(handle,  symbol)&#160;&#160;&#160;dlsym(handle, symbol)</td></tr>
+<tr class="separator:a59a1df0cff1ee36d72e98032ab2594ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 函数</h2></td></tr>
-<tr class="memitem:acadd04359cbcb7b046e3fdcf6e442ba9"><td class="memItemLeft" align="right" valign="top">std::mutex &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00407.html#acadd04359cbcb7b046e3fdcf6e442ba9">LibLoader::loaderCVLock</a> ()</td></tr>
-<tr class="separator:acadd04359cbcb7b046e3fdcf6e442ba9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a46f4ab12479d61956e7dc81cfb19fef5"><td class="memItemLeft" align="right" valign="top">std::condition_variable &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00407.html#a46f4ab12479d61956e7dc81cfb19fef5">LibLoader::loaderWakeCV</a> ()</td></tr>
-<tr class="separator:a46f4ab12479d61956e7dc81cfb19fef5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6cd5117c0adf23ed373edca65148a4fd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00407.html#a6cd5117c0adf23ed373edca65148a4fd">LibLoader::loader_enableAllPlugins</a> ()</td></tr>
-<tr class="separator:a6cd5117c0adf23ed373edca65148a4fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad3da09d6c8c2db437e3169b96ddb2ae9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00407.html#ad3da09d6c8c2db437e3169b96ddb2ae9">LibLoader::loader_disableAllPlugins</a> ()</td></tr>
-<tr class="separator:ad3da09d6c8c2db437e3169b96ddb2ae9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8eada9f54700edf5a2aa262e5d006691"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00407.html#a8eada9f54700edf5a2aa262e5d006691">LibLoader::loader_loadNewPlugin</a> (const std::string &amp;path, bool activateNow)</td></tr>
-<tr class="separator:a8eada9f54700edf5a2aa262e5d006691"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a52292cf621eb6c36b43047ee054c411d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00407.html#a52292cf621eb6c36b43047ee054c411d">LibLoader::loader_unloadPluginById</a> (const std::string &amp;id)</td></tr>
-<tr class="separator:a52292cf621eb6c36b43047ee054c411d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3f1b6298effea4f44e85e20b0a915c1d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00407.html#a3f1b6298effea4f44e85e20b0a915c1d">LibLoader::loader_enablePluginById</a> (const std::string &amp;id)</td></tr>
-<tr class="separator:a3f1b6298effea4f44e85e20b0a915c1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a04edf8e3eda892a478591ac18c05d9b5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00407.html#a04edf8e3eda892a478591ac18c05d9b5">LibLoader::loader_disablePluginById</a> (const std::string &amp;id)</td></tr>
-<tr class="separator:a04edf8e3eda892a478591ac18c05d9b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae2bf46cd649bb6979dd268bbc428e14c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00407.html#ae2bf46cd649bb6979dd268bbc428e14c">LibLoader::loader_reloadPluginById</a> (const std::string &amp;id)</td></tr>
-<tr class="separator:ae2bf46cd649bb6979dd268bbc428e14c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abc4b73a1b14010cd0c6e713d6579ef8b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00407.html#abc4b73a1b14010cd0c6e713d6579ef8b">LibLoader::loader_pluginEndByException</a> (const std::string &amp;id)</td></tr>
-<tr class="separator:abc4b73a1b14010cd0c6e713d6579ef8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae437cb8e58f9ddab116aa54e71d3891a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00407.html#ae437cb8e58f9ddab116aa54e71d3891a">LibLoader::loader_resetThreadByIndex</a> (const std::string &amp;index)</td></tr>
-<tr class="separator:ae437cb8e58f9ddab116aa54e71d3891a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a77243f9ea0159dbbb040b5eaf14113e2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00407.html#a77243f9ea0159dbbb040b5eaf14113e2">LibLoader::tick</a> () noexcept</td></tr>
-<tr class="separator:a77243f9ea0159dbbb040b5eaf14113e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a404a95877baaa83650de382c8896d80f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00407.html#a404a95877baaa83650de382c8896d80f">LibLoader::shouldTick</a> () noexcept</td></tr>
-<tr class="separator:a404a95877baaa83650de382c8896d80f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7765f4c313a98cf08466f0a6ed291aac" id="r_a7765f4c313a98cf08466f0a6ed291aac"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00425.html#a927f212ce2db84cca1f02ec95aa62322">plugin_handle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00426.html#a7765f4c313a98cf08466f0a6ed291aac">LibLoader::LoaderApi::libOpen</a> (const std::string &amp;path)</td></tr>
+<tr class="separator:a7765f4c313a98cf08466f0a6ed291aac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96701ab7dcebb86755310b5c9c434842" id="r_a96701ab7dcebb86755310b5c9c434842"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00425.html#afc631e11894f5d4eedc3e3ea550795fd">plugin_func_ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00426.html#a96701ab7dcebb86755310b5c9c434842">LibLoader::LoaderApi::libSymbolLookup</a> (void *handle, const char *symbol)</td></tr>
+<tr class="separator:a96701ab7dcebb86755310b5c9c434842"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a830b51c74068e1461e1baf677dd10ac2" id="r_a830b51c74068e1461e1baf677dd10ac2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00426.html#a830b51c74068e1461e1baf677dd10ac2">LibLoader::LoaderApi::libClose</a> (void *handle)</td></tr>
+<tr class="separator:a830b51c74068e1461e1baf677dd10ac2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56d03468b20e6187b1af71750a9f815d" id="r_a56d03468b20e6187b1af71750a9f815d"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00426.html#a56d03468b20e6187b1af71750a9f815d">LibLoader::LoaderApi::libError</a> ()</td></tr>
+<tr class="separator:a56d03468b20e6187b1af71750a9f815d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">宏定义说明</h2>
+<a id="a071a5a9d769c6e787e4101850fff1a54" name="a071a5a9d769c6e787e4101850fff1a54"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a071a5a9d769c6e787e4101850fff1a54">&#9670;&#160;</a></span>CLOSE_LIBRARY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CLOSE_LIBRARY</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">handle</td><td>)</td>
+          <td>&#160;&#160;&#160;dlclose(handle)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="a00242_source.html">libOpen.cpp</a> 第 <a class="el" href="a00242_source.html#l00030">30</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a59a1df0cff1ee36d72e98032ab2594ff" name="a59a1df0cff1ee36d72e98032ab2594ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59a1df0cff1ee36d72e98032ab2594ff">&#9670;&#160;</a></span>GET_SYMBOL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GET_SYMBOL</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">handle, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">symbol&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;dlsym(handle, symbol)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="a00242_source.html">libOpen.cpp</a> 第 <a class="el" href="a00242_source.html#l00031">31</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a8d9660e662b6e570295b95769dc5bf32" name="a8d9660e662b6e570295b95769dc5bf32"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d9660e662b6e570295b95769dc5bf32">&#9670;&#160;</a></span>OPEN_LIBRARY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OPEN_LIBRARY</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">path</td><td>)</td>
+          <td>&#160;&#160;&#160;dlopen(path.c_str(), RTLD_LAZY)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="a00242_source.html">libOpen.cpp</a> 第 <a class="el" href="a00242_source.html#l00029">29</a> 行定义.</p>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_23c80554d3059e776f1fa3b42eea10c0.html">libloader</a></li><li class="navelem"><a class="el" href="a00242.html">loaderMain.cpp</a></li>
-    <li class="footer">生成于 2023年 四月 10日 星期一 00:26:32 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_23c80554d3059e776f1fa3b42eea10c0.html">libloader</a></li><li class="navelem"><a class="el" href="a00242.html">libOpen.cpp</a></li>
+    <li class="footer">生成于 2023年 十月 26日 星期四 01:16:24 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
     </body>

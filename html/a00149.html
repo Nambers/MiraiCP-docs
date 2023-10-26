@@ -4,9 +4,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiraiCP: MiraiCode.h 文件参考</title>
+<title>MiraiCP: EventBase.h 文件参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -35,7 +35,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MiraiCP
-   &#160;<span id="projectnumber">v2.15.0-RC2</span>
+   &#160;<span id="projectnumber">v2.16.0</span>
    </div>
    <div id="projectbrief">MiraiCP api document</div>
   </td>
@@ -44,10 +44,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.9.2 -->
+<!-- 制作者 Doxygen 1.9.8 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search",'搜索','.html');
+var searchBox = new SearchBox("searchBox", "search/",'.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -87,50 +87,100 @@ $(document).ready(function(){initNavTree('a00149.html',''); initResizable(); });
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
 </div>
 
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">类</a> &#124;
-<a href="#namespaces">命名空间</a>  </div>
-  <div class="headertitle"><div class="title">MiraiCode.h 文件参考</div></div>
+<a href="#namespaces">命名空间</a> &#124;
+<a href="#enum-members">枚举</a>  </div>
+  <div class="headertitle"><div class="title">EventBase.h 文件参考</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;string&gt;</code><br />
-<code>#include &quot;<a class="el" href="a00044_source.html">MiraiCPMacros.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="a00062_source.html">../SdkType.h</a>&quot;</code><br />
+<code>#include &lt;nlohmann/json.hpp&gt;</code><br />
+<code>#include &lt;memory&gt;</code><br />
+<code>#include &lt;optional&gt;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> MiraiCode.h 的引用(Include)关系图:</div>
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> EventBase.h 的引用(Include)关系图:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="a00150.svg" width="214" height="187"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00150.svg" width="446" height="112"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div><div class="textblock"><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-1-trigger" src="closed.png" alt="+"/> 此图展示该文件直接或间接的被哪些文件引用了:</div>
 <div id="dynsection-1-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="a00151.svg" width="3163" height="560"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00151.svg" width="3203" height="262"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 <p><a href="a00149_source.html">浏览源代码.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 类</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00644.html">MiraiCP::MiraiCodeable</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">MiraiCode父类, 指可以被转换成miraicode的类型  <a href="a00644.html#details">更多...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00504.html">MiraiCP::BaseEventData</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00648.html">MiraiCP::MiraiCode</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">miraicode字符串  <a href="a00648.html#details">更多...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00508.html">MiraiCP::BaseEventData::BuiltInContact</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00512.html">MiraiCP::MiraiCPEvent</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event抽象父类  <a href="a00512.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00516.html">MiraiCP::IMessageEvent</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">MessageEvent类型的抽象接口，用于Message类型多态实现  <a href="a00516.html#details">更多...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
 命名空间</h2></td></tr>
-<tr class="memitem:a00397"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00397.html">MiraiCP</a></td></tr>
+<tr class="memitem:a00412" id="r_a00412"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00412.html">MiraiCP</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00416" id="r_a00416"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00416.html">MiraiCP::eventTypes</a></td></tr>
+<tr class="memdesc:a00416"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00480.html">Event</a> 工厂 <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+枚举</h2></td></tr>
+<tr class="memitem:abe9e9d8212ea8f23717b72db64393cab" id="r_abe9e9d8212ea8f23717b72db64393cab"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00416.html#abe9e9d8212ea8f23717b72db64393cab">MiraiCP::eventTypes::Types</a> { <br />
+&#160;&#160;<a class="el" href="a00416.html#abe9e9d8212ea8f23717b72db64393caba497dd3a8c7ae19e8a6a5e16e5e546e32">MiraiCP::eventTypes::BaseEvent</a> = -1
+, <a class="el" href="a00416.html#abe9e9d8212ea8f23717b72db64393cabac9323a42c3ef5f080ec21384295543f5">MiraiCP::eventTypes::BotOnlineEvent</a>
+, <a class="el" href="a00416.html#abe9e9d8212ea8f23717b72db64393cabadc958c860c6a02731d1f2aaf73935643">MiraiCP::eventTypes::BotJoinGroupEvent</a>
+, <a class="el" href="a00416.html#abe9e9d8212ea8f23717b72db64393cabaa0c1608d4d5428440a6880a212510e8e">MiraiCP::eventTypes::GroupInviteEvent</a>
+, <br />
+&#160;&#160;<a class="el" href="a00416.html#abe9e9d8212ea8f23717b72db64393cabab9a57352711dc24a722df5dc49b41807">MiraiCP::eventTypes::BotLeaveEvent</a>
+, <a class="el" href="a00416.html#abe9e9d8212ea8f23717b72db64393caba8e6bc9ebd9275c097d20c428d8f97fe9">MiraiCP::eventTypes::FriendMessageEvent</a>
+, <a class="el" href="a00416.html#abe9e9d8212ea8f23717b72db64393cabaca8073196614a985e9fcc7d2f964473c">MiraiCP::eventTypes::GroupMessageEvent</a>
+, <a class="el" href="a00416.html#abe9e9d8212ea8f23717b72db64393caba82138ba7d5017c9976f29de9213836dd">MiraiCP::eventTypes::GroupTempMessageEvent</a>
+, <br />
+&#160;&#160;<a class="el" href="a00416.html#abe9e9d8212ea8f23717b72db64393cabad0495f71a0d3c4228f2a5508f74f2cdb">MiraiCP::eventTypes::FriendRecallEvent</a>
+, <a class="el" href="a00416.html#abe9e9d8212ea8f23717b72db64393caba90080ec61703f479ca69d73d71f9ffe9">MiraiCP::eventTypes::MemberRecallEvent</a>
+, <a class="el" href="a00416.html#abe9e9d8212ea8f23717b72db64393cabaa46d082c80e10281a6f1f0ca942f0a1b">MiraiCP::eventTypes::MessagePreSendEvent</a>
+, <a class="el" href="a00416.html#abe9e9d8212ea8f23717b72db64393cabac32189a68a5af3a5c766f1a66d3b6e9f">MiraiCP::eventTypes::NudgeEvent</a>
+, <br />
+&#160;&#160;<a class="el" href="a00416.html#abe9e9d8212ea8f23717b72db64393caba8a554c168e28786de2f8f8991085ebd4">MiraiCP::eventTypes::NewFriendRequestEvent</a>
+, <a class="el" href="a00416.html#abe9e9d8212ea8f23717b72db64393cabae02e88376bb6d48bad1e5bcd1da1e581">MiraiCP::eventTypes::MemberLeaveEvent</a>
+, <a class="el" href="a00416.html#abe9e9d8212ea8f23717b72db64393cabaf84be9f6031b8901001ee5c3d880d3ce">MiraiCP::eventTypes::MemberJoinEvent</a>
+, <a class="el" href="a00416.html#abe9e9d8212ea8f23717b72db64393cabaa4feb188b3065acdf14ff19265a4ddb6">MiraiCP::eventTypes::MemberJoinRequestEvent</a>
+, <br />
+&#160;&#160;<a class="el" href="a00416.html#abe9e9d8212ea8f23717b72db64393caba8a7946c3deb653b0fa55009d6373403c">MiraiCP::eventTypes::TimeOutEvent</a>
+, <a class="el" href="a00416.html#abe9e9d8212ea8f23717b72db64393cabae45271795e11748f69a8762e52630d6e">MiraiCP::eventTypes::MiraiCPExceptionEvent</a> = 16
+, <a class="el" href="a00416.html#abe9e9d8212ea8f23717b72db64393caba5c5efe6fe256e4eb53a217cac3a84233">MiraiCP::eventTypes::Command</a> = 17
+, <a class="el" href="a00416.html#abe9e9d8212ea8f23717b72db64393caba19263cbf330b3b5fac1b6dbd09ccc34b">MiraiCP::eventTypes::count</a>
+, <br />
+&#160;&#160;<a class="el" href="a00416.html#abe9e9d8212ea8f23717b72db64393caba9b91a91250df41da2b9434cca56ada58">MiraiCP::eventTypes::error</a>
+<br />
+ }</td></tr>
+<tr class="separator:abe9e9d8212ea8f23717b72db64393cab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -138,8 +188,8 @@ $(document).ready(function(){initNavTree('a00149.html',''); initResizable(); });
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_1ede18532ce6284c46efe733029b594d.html">sdk</a></li><li class="navelem"><a class="el" href="a00149.html">MiraiCode.h</a></li>
-    <li class="footer">生成于 2023年 四月 10日 星期一 00:26:32 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_1ede18532ce6284c46efe733029b594d.html">sdk</a></li><li class="navelem"><a class="el" href="dir_f83dc716b95661d1ef88f368581b25fb.html">Events</a></li><li class="navelem"><a class="el" href="a00149.html">EventBase.h</a></li>
+    <li class="footer">生成于 2023年 十月 26日 星期四 01:16:24 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
     </body>

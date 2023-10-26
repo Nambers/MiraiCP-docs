@@ -1,16 +1,10 @@
 var a00242 =
 [
-    [ "loader_disableAllPlugins", "a00242.html#ad3da09d6c8c2db437e3169b96ddb2ae9", null ],
-    [ "loader_disablePluginById", "a00242.html#a04edf8e3eda892a478591ac18c05d9b5", null ],
-    [ "loader_enableAllPlugins", "a00242.html#a6cd5117c0adf23ed373edca65148a4fd", null ],
-    [ "loader_enablePluginById", "a00242.html#a3f1b6298effea4f44e85e20b0a915c1d", null ],
-    [ "loader_loadNewPlugin", "a00242.html#a8eada9f54700edf5a2aa262e5d006691", null ],
-    [ "loader_pluginEndByException", "a00242.html#abc4b73a1b14010cd0c6e713d6579ef8b", null ],
-    [ "loader_reloadPluginById", "a00242.html#ae2bf46cd649bb6979dd268bbc428e14c", null ],
-    [ "loader_resetThreadByIndex", "a00242.html#ae437cb8e58f9ddab116aa54e71d3891a", null ],
-    [ "loader_unloadPluginById", "a00242.html#a52292cf621eb6c36b43047ee054c411d", null ],
-    [ "loaderCVLock", "a00242.html#acadd04359cbcb7b046e3fdcf6e442ba9", null ],
-    [ "loaderWakeCV", "a00242.html#a46f4ab12479d61956e7dc81cfb19fef5", null ],
-    [ "shouldTick", "a00242.html#a404a95877baaa83650de382c8896d80f", null ],
-    [ "tick", "a00242.html#a77243f9ea0159dbbb040b5eaf14113e2", null ]
+    [ "CLOSE_LIBRARY", "a00242.html#a071a5a9d769c6e787e4101850fff1a54", null ],
+    [ "GET_SYMBOL", "a00242.html#a59a1df0cff1ee36d72e98032ab2594ff", null ],
+    [ "OPEN_LIBRARY", "a00242.html#a8d9660e662b6e570295b95769dc5bf32", null ],
+    [ "libClose", "a00242.html#a830b51c74068e1461e1baf677dd10ac2", null ],
+    [ "libError", "a00242.html#a56d03468b20e6187b1af71750a9f815d", null ],
+    [ "libOpen", "a00242.html#a7765f4c313a98cf08466f0a6ed291aac", null ],
+    [ "libSymbolLookup", "a00242.html#a96701ab7dcebb86755310b5c9c434842", null ]
 ];

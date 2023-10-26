@@ -4,9 +4,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MiraiCP: MiraiCPStringInternal.h 文件参考</title>
+<title>MiraiCP: commonTypes.h 文件参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -35,7 +35,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MiraiCP
-   &#160;<span id="projectnumber">v2.15.0-RC2</span>
+   &#160;<span id="projectnumber">v2.16.0</span>
    </div>
    <div id="projectbrief">MiraiCP api document</div>
   </td>
@@ -44,10 +44,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.9.2 -->
+<!-- 制作者 Doxygen 1.9.8 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search",'搜索','.html');
+var searchBox = new SearchBox("searchBox", "search/",'.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -87,51 +87,85 @@ $(document).ready(function(){initNavTree('a00182.html',''); initResizable(); });
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
 </div>
 
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">类</a> &#124;
-<a href="#namespaces">命名空间</a>  </div>
-  <div class="headertitle"><div class="title">MiraiCPStringInternal.h 文件参考</div></div>
+<a href="#namespaces">命名空间</a> &#124;
+<a href="#typedef-members">类型定义</a>  </div>
+  <div class="headertitle"><div class="title">commonTypes.h 文件参考</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="a00044_source.html">MiraiCPMacros.h</a>&quot;</code><br />
-<code>#include &lt;cassert&gt;</code><br />
-<code>#include &lt;string&gt;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="a00041_source.html">MiraiCPMacros.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00044_source.html">PluginConfig.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00179_source.html">loaderApiInternal.h</a>&quot;</code><br />
+<code>#include &quot;polym/Msg.hpp&quot;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> MiraiCPStringInternal.h 的引用(Include)关系图:</div>
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> commonTypes.h 的引用(Include)关系图:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="a00183.svg" width="264" height="187"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00183.svg" width="483" height="336"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div><div class="textblock"><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-1-trigger" src="closed.png" alt="+"/> 此图展示该文件直接或间接的被哪些文件引用了:</div>
 <div id="dynsection-1-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="a00184.svg" width="1598" height="411"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00184.svg" width="1899" height="262"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 <p><a href="a00182_source.html">浏览源代码.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 类</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00740.html">MiraiCP::MiraiCPStringview</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">stringview的类似实现  <a href="a00740.html#details">更多...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00760.html">PluginMessageHandles_C</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00744.html">MiraiCP::MiraiCPString</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">MiraiCP内部传递string数据用  <a href="a00744.html#details">更多...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00764.html">PluginArgv_C</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00768.html">MiraiCP::PluginInterface::PayLoadInfo</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00772.html">MiraiCP::PluginInterface::PluginMessageHandles</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
 命名空间</h2></td></tr>
-<tr class="memitem:a00397"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00397.html">MiraiCP</a></td></tr>
+<tr class="memitem:a00412" id="r_a00412"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00412.html">MiraiCP</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00424" id="r_a00424"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00424.html">MiraiCP::PluginInterface</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00425" id="r_a00425"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00425.html">LibLoader</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+类型定义</h2></td></tr>
+<tr class="memitem:a40272b4bfc79023eed93de263751364b" id="r_a40272b4bfc79023eed93de263751364b"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="a00768.html">MiraiCP::PluginInterface::PayLoadInfo</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00424.html#a40272b4bfc79023eed93de263751364b">MiraiCP::PluginInterface::message_queue_handle</a>) ()</td></tr>
+<tr class="separator:a40272b4bfc79023eed93de263751364b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab534007973470b0fee5e3ed32c59da23" id="r_ab534007973470b0fee5e3ed32c59da23"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00424.html#ab534007973470b0fee5e3ed32c59da23">MiraiCP::PluginInterface::message_delete_handle</a>) ()</td></tr>
+<tr class="separator:ab534007973470b0fee5e3ed32c59da23"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1ae927cd07b9029ffd8697e38ec27df" id="r_aa1ae927cd07b9029ffd8697e38ec27df"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00424.html#aa1ae927cd07b9029ffd8697e38ec27df">MiraiCP::PluginInterface::message_ret_handle</a>) (PolyM::MsgUID, <a class="el" href="a00784.html">MiraiCPString</a>)</td></tr>
+<tr class="separator:aa1ae927cd07b9029ffd8697e38ec27df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a927f212ce2db84cca1f02ec95aa62322" id="r_a927f212ce2db84cca1f02ec95aa62322"><td class="memItemLeft" align="right" valign="top">typedef void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00425.html#a927f212ce2db84cca1f02ec95aa62322">LibLoader::plugin_handle</a></td></tr>
+<tr class="separator:a927f212ce2db84cca1f02ec95aa62322"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03f4f966e06582e099eeda25f7f83f8d" id="r_a03f4f966e06582e099eeda25f7f83f8d"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="a00760.html">PluginMessageHandles_C</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00425.html#a03f4f966e06582e099eeda25f7f83f8d">LibLoader::plugin_entrance_func_ptr</a>) (<a class="el" href="a00764.html">PluginArgv_C</a>)</td></tr>
+<tr class="separator:a03f4f966e06582e099eeda25f7f83f8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add2feb317221acb4f979e61d5e96d37f" id="r_add2feb317221acb4f979e61d5e96d37f"><td class="memItemLeft" align="right" valign="top">typedef int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00425.html#add2feb317221acb4f979e61d5e96d37f">LibLoader::plugin_event_func_ptr</a>) (const <a class="el" href="a00784.html">MiraiCP::MiraiCPString</a> &amp;)</td></tr>
+<tr class="separator:add2feb317221acb4f979e61d5e96d37f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc631e11894f5d4eedc3e3ea550795fd" id="r_afc631e11894f5d4eedc3e3ea550795fd"><td class="memItemLeft" align="right" valign="top">typedef int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00425.html#afc631e11894f5d4eedc3e3ea550795fd">LibLoader::plugin_func_ptr</a>) ()</td></tr>
+<tr class="separator:afc631e11894f5d4eedc3e3ea550795fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a776f4f6bb745b814e23461c7742b9682" id="r_a776f4f6bb745b814e23461c7742b9682"><td class="memItemLeft" align="right" valign="top">typedef const <a class="el" href="a00444.html">MiraiCP::PluginConfig</a> *(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00425.html#a776f4f6bb745b814e23461c7742b9682">LibLoader::plugin_info_func_ptr</a>) ()</td></tr>
+<tr class="separator:a776f4f6bb745b814e23461c7742b9682"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -139,8 +173,8 @@ $(document).ready(function(){initNavTree('a00182.html',''); initResizable(); });
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_fdedb0aba14d44ce9d99bc100e026e6a.html">common</a></li><li class="navelem"><a class="el" href="a00182.html">MiraiCPStringInternal.h</a></li>
-    <li class="footer">生成于 2023年 四月 10日 星期一 00:26:32 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_fdedb0aba14d44ce9d99bc100e026e6a.html">common</a></li><li class="navelem"><a class="el" href="a00182.html">commonTypes.h</a></li>
+    <li class="footer">生成于 2023年 十月 26日 星期四 01:16:24 , 为 MiraiCP使用  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
     </body>

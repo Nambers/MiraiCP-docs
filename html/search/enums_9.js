@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['querybotlistcode_0',['QueryBotListCode',['../a00415.html#a61a85abb353bc8cd9f7715938014d86e',1,'MiraiCP::KtOperation']]]
+  ['type_0',['Type',['../a00427.html#af76683b14290aaf91c64ac12113776e1',1,'MiraiCP::MessageType']]],
+  ['types_1',['Types',['../a00416.html#abe9e9d8212ea8f23717b72db64393cab',1,'MiraiCP::eventTypes']]]
 ];

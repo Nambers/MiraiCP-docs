@@ -1,10 +1,8 @@
 var a00588 =
 [
-    [ "Friend", "a00588.html#a95275c6705e24eb4a7e5060158f36167", null ],
-    [ "Friend", "a00588.html#a6a761113b704cd93a836df23ca742bd2", null ],
-    [ "Friend", "a00588.html#a9b43bb817cb19d335cfd9b6e317894a0", null ],
-    [ "~Friend", "a00588.html#a77d2f79429228629354a6f29190ef19a", null ],
-    [ "deleteFriend", "a00588.html#ad21c4f5d158162f49bb008e6c37f7df9", null ],
-    [ "sendNudge", "a00588.html#a0321140e76255aadcd1a23c92b0d5031", null ],
-    [ "Contact", "a00588.html#a76d4b1c8c6040df20040808941b7e764", null ]
+    [ "MiraiCPThreadException", "a00588.html#a4b4c5caac34747b3ecb483f4deed965f", null ],
+    [ "exceptionType", "a00588.html#aad0c4ccc8e691b6d4a078b1ea85c3207", null ],
+    [ "getThreadIdStr", "a00588.html#ae296a1ee1626dd34c9028ae8a33179a5", null ],
+    [ "getThreadIdStr", "a00588.html#a202c30a4d2762c873c10628388b6b4fc", null ],
+    [ "threadId", "a00588.html#aabed0e9baac6e2c9164c5b606b04bc97", null ]
 ];
